@@ -1,0 +1,11 @@
+use_frameworks!
+
+workspace '../FlexLayout.xcworkspace'
+
+target 'PinLayoutSample' do
+  project 'FlexLayoutExample.xcodeproj'
+
+  # Debug only
+  pod 'Reveal-SDK', :configurations => ['Debug']
+  pod 'SwiftLint'
+end
