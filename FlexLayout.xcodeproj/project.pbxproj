@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA375A1EF843C500D1AB2F /* FlexLayout.framework */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
-		24DA376B1EF843C500D1AB2F /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA375D1EF843C500D1AB2F /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24DA377B1EF8498D00D1AB2F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA377A1EF8498D00D1AB2F /* Test.swift */; };
+		24DA377E1EF84A1800D1AB2F /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA377C1EF84A1800D1AB2F /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA377D1EF84A1800D1AB2F /* Test.swift */; };
+		24DA37811EF84A4500D1AB2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA37801EF84A4500D1AB2F /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +26,12 @@
 
 /* Begin PBXFileReference section */
 		24DA375A1EF843C500D1AB2F /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24DA375D1EF843C500D1AB2F /* FlexLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexLayout.h; sourceTree = "<group>"; };
-		24DA375E1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
 		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24DA377A1EF8498D00D1AB2F /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		24DA377C1EF84A1800D1AB2F /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/FlexLayout.h; sourceTree = SOURCE_ROOT; };
+		24DA377D1EF84A1800D1AB2F /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Test.swift; path = Sources/Test.swift; sourceTree = SOURCE_ROOT; };
+		24DA37801EF84A4500D1AB2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +56,7 @@
 		24DA37501EF843C500D1AB2F = {
 			isa = PBXGroup;
 			children = (
-				24DA375C1EF843C500D1AB2F /* FlexLayout */,
+				24DA375C1EF843C500D1AB2F /* Sources */,
 				24DA37671EF843C500D1AB2F /* FlexLayoutTests */,
 				24DA375B1EF843C500D1AB2F /* Products */,
 			);
@@ -70,13 +71,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		24DA375C1EF843C500D1AB2F /* FlexLayout */ = {
+		24DA375C1EF843C500D1AB2F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				24DA375D1EF843C500D1AB2F /* FlexLayout.h */,
-				24DA375E1EF843C500D1AB2F /* Info.plist */,
-				24DA377A1EF8498D00D1AB2F /* Test.swift */,
+				24DA37801EF84A4500D1AB2F /* Info.plist */,
+				24DA377C1EF84A1800D1AB2F /* FlexLayout.h */,
+				24DA377D1EF84A1800D1AB2F /* Test.swift */,
 			);
+			name = Sources;
 			path = FlexLayout;
 			sourceTree = "<group>";
 		};
@@ -96,7 +98,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DA376B1EF843C500D1AB2F /* FlexLayout.h in Headers */,
+				24DA377E1EF84A1800D1AB2F /* FlexLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA37811EF84A4500D1AB2F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DA377B1EF8498D00D1AB2F /* Test.swift in Sources */,
+				24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +339,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FlexLayout/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.FlexLayout;
@@ -357,7 +360,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FlexLayout/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.FlexLayout;
