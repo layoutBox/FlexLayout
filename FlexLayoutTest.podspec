@@ -16,18 +16,17 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FlexLayoutTest"
-  s.version      = "0.0.0"
-  s.summary      = ""
+  s.version      = "0.0.1"
+  s.summary      = "FlexLayoutTest"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC 
-  Bla bla bla....
-
-  # s.homepage     = "https://mirego.github.io/PinLayout/"
+  # s.description  = <<-DESC 
+  
+  s.homepage     = "https://github.com/lucmirego/FlexLayout.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   s.license      = "BSD 3-clause"
@@ -35,7 +34,7 @@ Pod::Spec.new do |s|
 
   s.author             = { 
     "Luc Dion" => "ldion@mirego.com"
-     }
+  }
   
   s.platform     = :ios, "8.0"
   s.tvos.deployment_target = '9.0'

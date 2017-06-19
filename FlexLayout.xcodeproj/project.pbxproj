@@ -10,6 +10,7 @@
 		24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA375A1EF843C500D1AB2F /* FlexLayout.framework */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24DA376B1EF843C500D1AB2F /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA375D1EF843C500D1AB2F /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24DA377B1EF8498D00D1AB2F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA377A1EF8498D00D1AB2F /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
 		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24DA377A1EF8498D00D1AB2F /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				24DA375D1EF843C500D1AB2F /* FlexLayout.h */,
 				24DA375E1EF843C500D1AB2F /* Info.plist */,
+				24DA377A1EF8498D00D1AB2F /* Test.swift */,
 			);
 			path = FlexLayout;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					24DA37591EF843C500D1AB2F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4Q596JWQC5;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					24DA37621EF843C500D1AB2F = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA377B1EF8498D00D1AB2F /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +329,7 @@
 		24DA376F1EF843C500D1AB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;
@@ -336,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.FlexLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +350,7 @@
 		24DA37701EF843C500D1AB2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;
@@ -362,6 +370,7 @@
 		24DA37721EF843C500D1AB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;
 				INFOPLIST_FILE = FlexLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +383,7 @@
 		24DA37731EF843C500D1AB2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;
 				INFOPLIST_FILE = FlexLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +412,7 @@
 				24DA37701EF843C500D1AB2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24DA37711EF843C500D1AB2F /* Build configuration list for PBXNativeTarget "FlexLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +421,7 @@
 				24DA37731EF843C500D1AB2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
