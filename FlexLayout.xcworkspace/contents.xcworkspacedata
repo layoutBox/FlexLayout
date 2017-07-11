@@ -5,7 +5,7 @@
       location = "group:FlexLayout.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Example/FlexLayoutExample.xcodeproj">
+      location = "group:Example/PinLayoutSample.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Example/Pods/Pods.xcodeproj">

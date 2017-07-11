@@ -3,9 +3,11 @@ use_frameworks!
 workspace '../FlexLayout.xcworkspace'
 
 target 'PinLayoutSample' do
-  project 'FlexLayoutExample.xcodeproj'
+  project 'PinLayoutSample.xcodeproj'
 
-  pod 'FlexLayoutTest'
+  #pod 'FlexLayoutTest'
+  pod 'FlexLayoutTest', :path => '../'
+  pod 'PinLayout'
 
   # Debug only
   pod 'Reveal-SDK', :configurations => ['Debug']

@@ -12,6 +12,7 @@
 		24DA377E1EF84A1800D1AB2F /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA377C1EF84A1800D1AB2F /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA377D1EF84A1800D1AB2F /* Test.swift */; };
 		24DA37811EF84A4500D1AB2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA37801EF84A4500D1AB2F /* Info.plist */; };
+		24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* Flexbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		24DA377C1EF84A1800D1AB2F /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/FlexLayout.h; sourceTree = SOURCE_ROOT; };
 		24DA377D1EF84A1800D1AB2F /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Test.swift; path = Sources/Test.swift; sourceTree = SOURCE_ROOT; };
 		24DA37801EF84A4500D1AB2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		24DA37871EF8610400D1AB2F /* Flexbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flexbox.swift; path = Sources/Flexbox.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		24DA375C1EF843C500D1AB2F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				24DA37871EF8610400D1AB2F /* Flexbox.swift */,
 				24DA37801EF84A4500D1AB2F /* Info.plist */,
 				24DA377C1EF84A1800D1AB2F /* FlexLayout.h */,
 				24DA377D1EF84A1800D1AB2F /* Test.swift */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */,
 				24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
