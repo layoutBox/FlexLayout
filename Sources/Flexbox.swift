@@ -106,7 +106,51 @@ enum FlexboxDirection { // should use react native name
 
 public class Flexbox {
     public let view: UIView
-    
+
+
+    public enum Direction {
+        case column
+        case columnReverse
+        case row
+        case rowReverse
+    }
+
+    public enum Overflow {
+        case visible
+        case hidden
+        case scroll
+    }
+
+    public enum Justify {
+        case flexStart
+        case center
+        case flexEnd
+        case spaceBetween
+        case spaceAround
+    }
+
+    public enum Align {
+        case auto
+        case flexStart
+        case center
+        case flexEnd
+        case stretch
+        case baseline
+        case spaceBetween
+        case spaceAround
+    }
+
+    public enum Wrap {
+        case noWrap
+        case wrap
+        case wrapReverse
+    }
+
+    public enum Position {
+        case relative
+        case absolute
+    }
+
     init(view: UIView) {
         self.view = view
         view.yoga.isEnabled = true
@@ -138,50 +182,50 @@ public class Flexbox {
     // Direction, justity, alignment / position
     //
     @discardableResult
-    public func direction(_ flexDirection: YGFlexDirection) -> Flexbox {
-        view.yoga.flexDirection = flexDirection
+    public func direction(_ direction: Direction) -> Flexbox {
+        view.yoga.flexDirection = direction.yogaValue
         return self
     }
     
     @discardableResult
-    public func justify(_ value: YGJustify) -> Flexbox {
-        view.yoga.justifyContent = value
+    public func justify(_ value: Justify) -> Flexbox {
+        view.yoga.justifyContent = value.yogaValue
         return self
     }
     
     @discardableResult
-    public func alignContent(_ value: YGAlign) -> Flexbox {
-        view.yoga.alignContent = value
+    public func alignContent(_ value: Align) -> Flexbox {
+        view.yoga.alignContent = value.yogaValue
         return self
     }
     
     @discardableResult
-    public func alignItems(_ value: YGAlign) -> Flexbox {
-        view.yoga.alignItems = value
+    public func alignItems(_ value: Align) -> Flexbox {
+        view.yoga.alignItems = value.yogaValue
         return self
     }
 
     @discardableResult
-    public func alignSelf(_ value: YGAlign) -> Flexbox {
-        view.yoga.alignSelf = value
+    public func alignSelf(_ value: Align) -> Flexbox {
+        view.yoga.alignSelf = value.yogaValue
         return self
     }
 
     @discardableResult
-    public func position(_ value: YGPositionType) -> Flexbox {
-        view.yoga.position = value
+    public func position(_ value: Position) -> Flexbox {
+        view.yoga.position = value.yogaValue
         return self
     }
 
     @discardableResult
-    public func flexWrap(_ value: YGWrap) -> Flexbox {
-        view.yoga.flexWrap = value
+    public func flexWrap(_ value: Wrap) -> Flexbox {
+        view.yoga.flexWrap = value.yogaValue
         return self
     }
 
     @discardableResult
-    public func overflow(_ value: YGOverflow) -> Flexbox {
-        view.yoga.overflow = value
+    public func overflow(_ value: Overflow) -> Flexbox {
+        view.yoga.overflow = value.yogaValue
         return self
     }
 
@@ -205,6 +249,22 @@ public class Flexbox {
         view.yoga.flexBasis = YGValue(value)
         return self
     }
+
+    @discardableResult
+    public func flex(_ grow: CGFloat, shrink: CGFloat? = nil, basis: CGFloat? = nil) -> Flexbox {
+        view.yoga.flexGrow = grow
+
+        if let shrink = shrink {
+            view.yoga.flexShrink = shrink
+        }
+
+        if let basis = basis {
+            view.yoga.flexBasis = YGValue(basis)
+        }
+
+        return self
+    }
+//    This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto
 
 
     //
@@ -430,46 +490,46 @@ public class Flexbox {
     // Border
     //
     @discardableResult
-    public func borderLeftWidth(_ value: CGFloat) -> Flexbox {
-        view.yoga.borderLeftWidth = value
+    public func borderLeft(_ width: CGFloat) -> Flexbox {
+        view.yoga.borderLeftWidth = width
         return self
     }
 
-    public func borderTopWidth(_ value: CGFloat) -> Flexbox {
-        view.yoga.borderTopWidth = value
+    public func borderTop(_ width: CGFloat) -> Flexbox {
+        view.yoga.borderTopWidth = width
         return self
     }
 
-    public func borderRightWidth(_ value: CGFloat) -> Flexbox {
-        view.yoga.borderRightWidth = value
+    public func borderRight(_ width: CGFloat) -> Flexbox {
+        view.yoga.borderRightWidth = width
         return self
     }
 
-    public func borderBottomWidth(_ value: CGFloat) -> Flexbox {
-        view.yoga.borderBottomWidth = value
+    public func borderBottom(_ width: CGFloat) -> Flexbox {
+        view.yoga.borderBottomWidth = width
         return self
     }
 
-    public func borderStartWidth(_ value: CGFloat) -> Flexbox {
-        view.yoga.borderStartWidth = value
+    public func borderStart(_ width: CGFloat) -> Flexbox {
+        view.yoga.borderStartWidth = width
         return self
     }
 
-    public func borderEndWidth(_ value: CGFloat) -> Flexbox {
-        view.yoga.borderEndWidth = value
+    public func borderEnd(_ width: CGFloat) -> Flexbox {
+        view.yoga.borderEndWidth = width
         return self
     }
 
-    public func borderWidth(_ value: CGFloat) -> Flexbox {
-        view.yoga.borderWidth = value
+    public func border(_ width: CGFloat) -> Flexbox {
+        view.yoga.borderWidth = width
         return self
     }
 
     //
     // Layout
     //
-    public func layout() {
-        view.yoga.applyLayout(preservingOrigin: false)
+    public func layout(preservingOrigin: Bool = true) {
+        view.yoga.applyLayout(preservingOrigin: preservingOrigin)
     }
 }
 
@@ -481,6 +541,72 @@ public extension UIView {
         }
         set {
             objc_setAssociatedObject(self, &fbLayoutAssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
+
+extension Flexbox.Direction {
+    var yogaValue: YGFlexDirection {
+        switch self {
+        case .column:        return YGFlexDirection.column
+        case .columnReverse: return YGFlexDirection.columnReverse
+        case .row:           return YGFlexDirection.row
+        case .rowReverse:    return YGFlexDirection.rowReverse
+        }
+    }
+}
+extension Flexbox.Overflow {
+    var yogaValue: YGOverflow {
+        switch self {
+        case .visible: return YGOverflow.visible
+        case .hidden:  return YGOverflow.hidden
+        case .scroll:  return YGOverflow.scroll
+        }
+    }
+}
+
+extension Flexbox.Justify {
+    var yogaValue: YGJustify {
+        switch self {
+        case .flexStart:        return YGJustify.flexStart
+        case .center:       return YGJustify.center
+        case .flexEnd:          return YGJustify.flexEnd
+        case .spaceBetween: return YGJustify.spaceBetween
+        case .spaceAround:  return YGJustify.spaceAround
+        }
+    }
+}
+
+extension Flexbox.Align {
+    var yogaValue: YGAlign {
+        switch self {
+        case .auto:         return YGAlign.auto
+        case .flexStart:    return YGAlign.flexStart
+        case .center:       return YGAlign.center
+        case .flexEnd:      return YGAlign.flexEnd
+        case .stretch:      return YGAlign.stretch
+        case .baseline:     return YGAlign.baseline
+        case .spaceBetween: return YGAlign.spaceBetween
+        case .spaceAround:  return YGAlign.spaceAround
+        }
+    }
+}
+
+extension Flexbox.Wrap {
+    var yogaValue: YGWrap {
+        switch self {
+        case .noWrap:      return YGWrap.noWrap
+        case .wrap:        return YGWrap.wrap
+        case .wrapReverse: return YGWrap.wrapReverse
+        }
+    }
+}
+
+extension Flexbox.Position {
+    var yogaValue: YGPositionType {
+        switch self {
+        case .relative: return YGPositionType.relative
+        case .absolute: return YGPositionType.absolute
         }
     }
 }

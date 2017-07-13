@@ -76,12 +76,13 @@ class MyTestView: BaseView {
 //        }
 
         // Android
-        flexbox.addChild(rootFlexbox).define { (flexbox) in
+//        flexbox.addChild(rootFlexbox).define { (flexbox) in
+        flexbox.define { (flexbox) in
             let imageView = UIView()
             imageView.backgroundColor = .flexLayoutColor
             flexbox.addChild(imageView).grow(1)
 
-            flexbox.createBox().direction(.row).padding(20).define({ (flexbox) in
+            flexbox.createBox().direction(.row).padding(20).alignItems(.center).define({ (flexbox) in
                 flexbox.createBox().width(50).height(50).define({ (flexbox) in
                     flexbox.view.backgroundColor = .flexLayoutColor
                 })
@@ -90,6 +91,11 @@ class MyTestView: BaseView {
                     flexbox.view.backgroundColor = .black
                 })
             })
+
+            let label = UILabel()
+            label.text = "This is a string This is a string This is a st ri ng Th is is a string This is a string"
+            label.numberOfLines = 0
+            flexbox.addChild(label).marginHorizontal(20)
         }
     }
     
@@ -110,8 +116,10 @@ class MyTestView: BaseView {
         //rootFlexbox.pin.topLeft().right().height(300).marginTop(topLayoutGuide)
 
         // C#
-        rootFlexbox.pin.topLeft().width(100%).height(300).marginTop(topLayoutGuide)
-
-        rootFlexbox.flexbox.layout()
+//        rootFlexbox.pin.topLeft().width(100%).height(300).marginTop(topLayoutGuide)
+        
+        flexbox.width(bounds.width).height(300).layout()
+        
+//        rootFlexbox.flexbox.layout()
     }
 }
