@@ -1,0 +1,8 @@
+# Xcode
+#
+
+.build/
+build/
+Carthage/
+xcuserdata
+data/
