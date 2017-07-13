@@ -60,7 +60,6 @@
 		AAD69688AA2A3F0994F3074E /* Pods_PinLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1AC885E7E94C351C33E134 /* Pods-FlexLayoutSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.release.xcconfig"; sourceTree = "<group>"; };
 		DF1F2A221F17D11700BA1B97 /* FlexLayoutSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF1F2A231F17D11700BA1B97 /* FlexLayoutSample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FlexLayoutSample copy-Info.plist"; path = "/Users/lucdion/Dropbox (Personal)/devluc2/FlexLayout/Example/FlexLayoutSample copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +151,6 @@
 				249EFE411E64FAFE00165E39 /* FlexLayoutSample */,
 				F143180314A617EFD07C5709 /* Pods */,
 				249EFE401E64FAFE00165E39 /* Products */,
-				DF1F2A231F17D11700BA1B97 /* FlexLayoutSample copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -459,7 +457,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;
-				INFOPLIST_FILE = "FlexLayoutSample copy-Info.plist";
+				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,7 +472,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;
-				INFOPLIST_FILE = "FlexLayoutSample copy-Info.plist";
+				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
