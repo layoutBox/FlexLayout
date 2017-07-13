@@ -533,7 +533,7 @@ public class Flexbox {
     }
 }
 
-var fbLayoutAssociatedObjectHandle = 0x8723AACC23
+var fbLayoutAssociatedObjectHandle = 0x723AACC23
 public extension UIView {
     public var flexbox: Flexbox {
         get {
