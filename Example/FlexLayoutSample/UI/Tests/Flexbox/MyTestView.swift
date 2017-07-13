@@ -77,9 +77,15 @@ class MyTestView: BaseView {
 
         // Android
 //        flexbox.addChild(rootFlexbox).define { (flexbox) in
+        
+        let imageView = UIView()
+        imageView.backgroundColor = .flexLayoutColor
+        
+        let label = UILabel()
+        label.text = "This is a string This is a string This is a st ri ng Th is is a string This is a string"
+        label.numberOfLines = 0
+        
         flexbox.define { (flexbox) in
-            let imageView = UIView()
-            imageView.backgroundColor = .flexLayoutColor
             flexbox.addChild(imageView).grow(1)
 
             flexbox.createBox().direction(.row).padding(20).alignItems(.center).define({ (flexbox) in
@@ -92,9 +98,6 @@ class MyTestView: BaseView {
                 })
             })
 
-            let label = UILabel()
-            label.text = "This is a string This is a string This is a st ri ng Th is is a string This is a string"
-            label.numberOfLines = 0
             flexbox.addChild(label).marginHorizontal(20)
         }
     }

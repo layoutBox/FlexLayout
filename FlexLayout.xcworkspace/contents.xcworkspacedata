@@ -2,10 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FlexLayout.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Example/FlexLayoutSample.xcodeproj">
+      location = "group:Example/FlexLayoutSample.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Example/Pods/Pods.xcodeproj">

@@ -2,8 +2,8 @@ use_frameworks!
 
 workspace '../FlexLayout.xcworkspace'
 
-target 'PinLayoutSample' do
-  project 'PinLayoutSample.xcodeproj'
+target 'FlexLayoutSample' do
+  project 'FlexLayoutSample.xcodeproj'
 
   #pod 'FlexLayoutTest'
   pod 'FlexLayoutTest', :path => '../'
