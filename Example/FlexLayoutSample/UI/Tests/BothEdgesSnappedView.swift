@@ -666,8 +666,6 @@ class BothEdgesSnappedView: UIView {
 //        bViewChild.pin.right(of: aView, bView, aligned: .center).margin(10)
 //        expect(bViewChild.frame).to(equal(CGRect(x: 120.0, y: 15.0, width: 60.0, height: 20.0)))
 
-        
-        
 //        bViewChild.pin.above(of: aViewChild, aView, aligned: .left)
 //        expect(bViewChild.frame).to(equal(CGRect(x: 40.0, y: -120.0, width: 60.0, height: 20.0)))
 //        bViewChild.pin.above(of: bView)

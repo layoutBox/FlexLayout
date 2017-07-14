@@ -151,9 +151,24 @@ public class Flexbox {
         case absolute
     }
 
+    var isEnabled: Bool {
+        set {
+            view.yoga.isEnabled = isEnabled
+        }
+        get {
+            return view.yoga.isEnabled
+        }
+    }
+
     init(view: UIView) {
         self.view = view
         view.yoga.isEnabled = true
+    }
+
+    @discardableResult
+    public func enabled(_ isEnabled: Bool) -> Flexbox {
+        view.yoga.isEnabled = isEnabled
+        return self
     }
     
     //

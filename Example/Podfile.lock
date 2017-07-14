@@ -1,5 +1,5 @@
 PODS:
-  - FlexLayoutTest (0.0.4):
+  - FlexLayoutTest (0.0.11):
     - YogaKit (~> 1.5)
   - PinLayout (1.1.4)
   - Reveal-SDK (9)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FlexLayoutTest: ab88d83aaff409b092318af051f491d0b35ddd26
+  FlexLayoutTest: 4787e7b631dc1da1726cc2b3a98f2cd15d60624f
   PinLayout: 35ee47b46f7a5b37100bb80661b3175c422c9853
   Reveal-SDK: d977a1ec41e7c076025c1005da6e6d7c1b8ed254
   SwiftLint: f60095dc173a3f3ec505bb34f5229c3dfd779a54
