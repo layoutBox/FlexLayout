@@ -11,7 +11,6 @@
 		24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA375A1EF843C500D1AB2F /* FlexLayout.framework */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24DA377E1EF84A1800D1AB2F /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA377C1EF84A1800D1AB2F /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA377D1EF84A1800D1AB2F /* Test.swift */; };
 		24DA37811EF84A4500D1AB2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA37801EF84A4500D1AB2F /* Info.plist */; };
 		24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* Flexbox.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +31,6 @@
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
 		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DA377C1EF84A1800D1AB2F /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/FlexLayout.h; sourceTree = SOURCE_ROOT; };
-		24DA377D1EF84A1800D1AB2F /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Test.swift; path = Sources/Test.swift; sourceTree = SOURCE_ROOT; };
 		24DA37801EF84A4500D1AB2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
 		24DA37871EF8610400D1AB2F /* Flexbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flexbox.swift; path = Sources/Flexbox.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -56,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2429E4BD1F19181F00BBC032 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24DA377C1EF84A1800D1AB2F /* FlexLayout.h */,
+				24DA37801EF84A4500D1AB2F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		24DA37501EF843C500D1AB2F = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				24DA37871EF8610400D1AB2F /* Flexbox.swift */,
-				24DA37801EF84A4500D1AB2F /* Info.plist */,
-				24DA377C1EF84A1800D1AB2F /* FlexLayout.h */,
-				24DA377D1EF84A1800D1AB2F /* Test.swift */,
+				2429E4BD1F19181F00BBC032 /* Supporting Files */,
 			);
 			name = Sources;
 			path = FlexLayout;
@@ -211,7 +216,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */,
-				24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
