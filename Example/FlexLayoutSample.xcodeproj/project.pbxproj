@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0526D1ADA598B8B88EC6EA27 /* Pods_FlexLayoutSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F9D12C63B6A173F9F13192 /* Pods_FlexLayoutSample.framework */; };
 		DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */; };
 		DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC331E665BF6003326FB /* MenuView.swift */; };
 		DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493268B1EEEEFF100BCB814 /* BaseViewController.swift */; };
@@ -20,7 +19,6 @@
 		DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249326881EEEEE3D00BCB814 /* Stylesheet.swift */; };
 		DF1F2A121F17D11700BA1B97 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456B5B71EF8640E00E62071 /* CheckBox.swift */; };
 		DF1F2A131F17D11700BA1B97 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493268D1EEEF02700BCB814 /* BaseView.swift */; };
-		DF1F2A151F17D11700BA1B97 /* FlexLayoutTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA37891EF8613800D1AB2F /* FlexLayoutTest.framework */; };
 		DF1F2A191F17D11700BA1B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE4B1E64FAFE00165E39 /* LaunchScreen.storyboard */; };
 		DF1F2A1A1F17D11700BA1B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE491E64FAFE00165E39 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -53,10 +51,7 @@
 		249EFE4C1E64FAFE00165E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		249EFE4E1E64FAFE00165E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFormView.swift; sourceTree = "<group>"; };
-		24DA37891EF8613800D1AB2F /* FlexLayoutTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayoutTest.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FlexLayout-ewruemxnnwxdkvcvulgjqmlfqkwm/Build/Products/Debug-iphoneos/FlexLayoutTest/FlexLayoutTest.framework"; sourceTree = "<group>"; };
 		24E654811E69041B00A72A8B /* Expect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expect.swift; sourceTree = "<group>"; };
-		64F9D12C63B6A173F9F13192 /* Pods_FlexLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAD69688AA2A3F0994F3074E /* Pods_PinLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1F2A221F17D11700BA1B97 /* FlexLayoutSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8176EC2F9B0BA7E0AF44AE4 /* Pods-FlexLayoutSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1AB22EC4C6A9415BFBD097 /* Pods-FlexLayoutSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,24 +62,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF1F2A151F17D11700BA1B97 /* FlexLayoutTest.framework in Frameworks */,
-				0526D1ADA598B8B88EC6EA27 /* Pods_FlexLayoutSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		160FB83905049FCEDD18DC8A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				24DA37891EF8613800D1AB2F /* FlexLayoutTest.framework */,
-				AAD69688AA2A3F0994F3074E /* Pods_PinLayoutSample.framework */,
-				64F9D12C63B6A173F9F13192 /* Pods_FlexLayoutSample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2439CC321E665BE3003326FB /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +130,6 @@
 		249EFE361E64FAFE00165E39 = {
 			isa = PBXGroup;
 			children = (
-				160FB83905049FCEDD18DC8A /* Frameworks */,
 				249EFE411E64FAFE00165E39 /* FlexLayoutSample */,
 				249EFE401E64FAFE00165E39 /* Products */,
 				85CAAE97812075333AF3E88F /* Pods */,
@@ -397,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

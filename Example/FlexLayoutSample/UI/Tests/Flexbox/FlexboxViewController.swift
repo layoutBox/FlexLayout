@@ -6,7 +6,7 @@
 //  Copyright (c) 2017 Mirego. All rights reserved.
 //
 import UIKit
-import FlexLayoutTest
+import FlexLayout
 
 class FlexboxViewController: BaseViewController {
     fileprivate var mainView: MyTestView {

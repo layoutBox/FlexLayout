@@ -5,7 +5,7 @@ workspace '../FlexLayout.xcworkspace'
 target 'FlexLayoutSample' do
   project 'FlexLayoutSample.xcodeproj'
 
-  pod 'FlexLayoutTest', :path => '../'
+  pod 'FlexLayout', :path => '../'
   pod 'PinLayout'
 
   # Debug only

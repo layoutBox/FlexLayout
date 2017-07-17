@@ -1,6 +1,5 @@
 //
 //  Flexbox.swift
-//  MinceAVie
 //
 //  Created by DION, Luc (MTL) on 2017-03-04.
 //  Copyright © 2017 Mirego. All rights reserved.
@@ -39,8 +38,8 @@ public class Flexbox {
         case flexEnd
         case stretch
         case baseline
-        case spaceBetween
-        case spaceAround
+//        case spaceBetween
+//        case spaceAround
     }
 
     public enum Wrap {
@@ -58,40 +57,23 @@ public class Flexbox {
         self.view = view
         view.yoga.isEnabled = true
     }
-    
-    //
-    // Enabled / Visibility
-    //
-    public var isEnabled: Bool {
-        set {
-            view.yoga.isEnabled = newValue
-        }
-        get {
-            return view.yoga.isEnabled
-        }
+
+    public var intrinsicSize: CGSize {
+        return view.yoga.intrinsicSize
     }
     
-    public var isVisible: Bool = false {
+    public var isIncludedInLayout: Bool = true {
         didSet {
-            view.isHidden = !isVisible
-//            view.yoga.isEnabled = isVisible
-            view.yoga.isIncludedInLayout = isVisible
-//            view.yoga.markDirty()
+            view.yoga.isIncludedInLayout = isIncludedInLayout
         }
     }
-    
+
     @discardableResult
-    public func isEnabled(_ isEnabled: Bool) -> Flexbox {
-        self.isEnabled = isEnabled
+    public func isIncludedInLayout(_ included: Bool) -> Flexbox {
+        self.isIncludedInLayout = included
         return self
     }
-    
-    @discardableResult
-    public func isVisible(_ isVisible: Bool) -> Flexbox {
-        self.isVisible = isVisible
-        return self
-    }
-    
+
     //
     // Creation / definition
     //
@@ -112,7 +94,14 @@ public class Flexbox {
         closure(self)
         return self
     }
-    
+
+    //
+    // Layout
+    //
+    public func layout(preservingOrigin: Bool = true) {
+        view.yoga.applyLayout(preservingOrigin: preservingOrigin)
+    }
+
     //
     // Direction, justity, alignment / position
     //
@@ -168,13 +157,13 @@ public class Flexbox {
     // flexGrow / flexShrink / flexBasis
     //
     @discardableResult
-    public func grow(_ value: CGFloat) -> Flexbox {
+    public func flexGrow(_ value: CGFloat) -> Flexbox {
         view.yoga.flexGrow = value
        return self
     }
     
     @discardableResult
-    public func shrink(_ value: CGFloat) -> Flexbox {
+    public func flexShrink(_ value: CGFloat) -> Flexbox {
         view.yoga.flexShrink = value
         return self
     }
@@ -493,13 +482,6 @@ public class Flexbox {
         view.yoga.borderWidth = value
         return self
     }
-
-    //
-    // Layout
-    //
-    public func layout(preservingOrigin: Bool = true) {
-        view.yoga.applyLayout(preservingOrigin: preservingOrigin)
-    }
 }
 
 var fbLayoutAssociatedObjectHandle = 72399923
@@ -555,8 +537,8 @@ extension Flexbox.Align {
         case .flexEnd:      return YGAlign.flexEnd
         case .stretch:      return YGAlign.stretch
         case .baseline:     return YGAlign.baseline
-        case .spaceBetween: return YGAlign.spaceBetween
-        case .spaceAround:  return YGAlign.spaceAround
+//        case .spaceBetween: return YGAlign.spaceBetween
+//        case .spaceAround:  return YGAlign.spaceAround
         }
     }
 }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2FE8061FBEA35DD9041E45BF0834BE76C96388C3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2FE8061FBEA35DD9041E45BF0834BE76C96388C3" : 9223372036854775807,
+    "EF4E0D78BD66D72DA5A8D5BC350B60E01C5A9EF4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9A2BB70E-29E4-42DF-9840-D239C60C6F4B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2FE8061FBEA35DD9041E45BF0834BE76C96388C3" : "FlexLayout\/",
+    "EF4E0D78BD66D72DA5A8D5BC350B60E01C5A9EF4" : "FlexLayout\/Carthage\/Checkouts\/yoga\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FlexLayout",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FlexLayout.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:lucmirego\/FlexLayout.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2FE8061FBEA35DD9041E45BF0834BE76C96388C3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/facebook\/yoga.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EF4E0D78BD66D72DA5A8D5BC350B60E01C5A9EF4"
+    }
+  ]
+}

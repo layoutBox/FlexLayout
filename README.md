@@ -1,20 +1,22 @@
 <p align="center">
-  <a href="https://github.com/luc-dion/FlexLayout"><img src="docs/FlexboxLayout-logo-small.png" alt="FlexboxLayout" /></a>
+  <a href="https://github.com/luc-dion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
 </p>
 
-<h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexboxLayout</h1>
+<h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
  
 <p align="center">
   <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
   <a href="https://travis-ci.org/luc-dion/FlexLayout"><img src="https://travis-ci.org/luc-dion/FlexLayout.svg?branch=master" /></a>
   <a href="https://codecov.io/gh/luc-dion/FlexLayout"><img src="https://codecov.io/gh/luc-dion/FlexLayout/branch/master/graph/badge.svg"/></a>
-  <a href='https://img.shields.io/cocoapods/v/FlexboxLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexboxLayout.svg" /></a>
+  <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
   <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
   <a href="https://raw.githubusercontent.com/luc-dion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
   <!--a href="https://github.com/luc-dion/FlexLayout/issues"><img src="https://img.shields.io/github/issues/luc-dion/FlexLayout.svg?style=flat" /></a-->
 </p>
 
 <br>
+
+FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
 
 <br>
 
@@ -25,7 +27,7 @@
 
 ### Content
 
-* [FlexboxLayout principles and philosophy](#introduction)
+* [FlexLayout principles and philosophy](#introduction)
 * [Performance](#performance)
 * [Usage example](#intro_usage_example)
 * [Documentation](#documentation)
@@ -47,26 +49,37 @@
 
 <br>
 
-FlexboxLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
-
-## FlexboxLayout principles and philosophy <a name="introduction"></a>
+## FlexLayout principles and philosophy <a name="introduction"></a>
 
 * Flexbox layouting is simple, powerfull and fast.
-* FlexboxLayout syntax is concise and chainable.
+* FlexLayout syntax is concise and chainable.
 * The syntax looks similar to HTML, where a container is defined on one line, and its children are imbricated.
 * Moving a view from one flexbox container to another its just a problem of moving a block of code.
-* FlexboxLayout/yoga incredibly fast, its even faster than manual layout. See performances below.
-* FlexboxLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share the same type of syntax and methods name (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, justify, ...). PinLayout is particularly usefull to position and animates views. 
+* FlexLayout/yoga incredibly fast, its even faster than manual layout. See performances below.
+* FlexLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share the same type of syntax and methods name (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, justify, ...). PinLayout is particularly usefull to position and animates views. 
 
 
 ## Variation from CSS flexbox
-FlexboxLayout default properties are different from CSS flexbox. FlexboxLayout use the same default properties as Yoka and ReactNative flexbox.
+FlexLayout default properties are different from CSS flexbox. FlexLayout use the same default properties as Yoka and ReactNative flexbox.
 ....
+
+* justify-content -> justify
+* align-items -> align
+//* align-content -> alignContent / alignWrap?
+* flex-direction -> direction
+* flex-wrap -> wrap
+* flex-start -> start
+* flex-end -> end
 
 
 ## Creation / definition : createBox / addChild/ define
 
-## Direction, justity, alignment / position
+# flex container
+
+# flex items
+
+
+## Direction, justity, align / alignContent / alignSelf / position
     public func direction(_ direction: Direction) -> Flexbox {
     public func justify(_ value: Justify) -> Flexbox {
     public func alignContent(_ value: Align) -> Flexbox {
@@ -99,7 +112,7 @@ FlexboxLayout default properties are different from CSS flexbox. FlexboxLayout u
 ## Width, height and size <a name="width_height_size"></a>
 
 ### Adjust view width, height and size
-FlexboxLayout has methods to set the view’s height and width.
+FlexLayout has methods to set the view’s height and width.
 
 **Methods:**
 
@@ -131,7 +144,7 @@ The value specifies the width and the height of the view in pixels, creating a s
 
 ## minWidth, maxWidth, minHeight, maxHeight <a name="minmax_width_height_size"></a>
 
-FlexboxLayout has methods to set the view’s minimum and maximum width, and minimum and maximum height. 
+FlexLayout has methods to set the view’s minimum and maximum width, and minimum and maximum height. 
 
 **Methods:**
 
@@ -157,7 +170,7 @@ The value specifies the view's maximum height of the view in pixels. Value must 
 ```
 
 ## Margins <a name="margins"></a>
-FlexboxLayout ....
+FlexLayout ....
 
 **Methods:**
 
@@ -183,7 +196,7 @@ FlexboxLayout ....
 <br>
 
 ## Paddings <a name="margins"></a>
-FlexboxLayout ...
+FlexLayout ...
 
 **Methods:**
 
@@ -281,19 +294,19 @@ FlexLayout enable flexbox when:
 
 ## isIncludedInLayout ???
 
-# FlexboxLayout's Performance <a name="performance"></a>
+# FlexLayout's Performance <a name="performance"></a>
 
-FlexboxLayout's performance has been measured using the nice and simple LayoutKit benchmark. FlexboxLayout has been added to this benchmark to compare its performance. 
+FlexLayout's performance has been measured using the nice and simple LayoutKit benchmark. FlexLayout has been added to this benchmark to compare its performance. 
 
-As you can see in the following chart, FlexboxLayout's performance is as fast as manual layouting, and **between 12x and 16x faster than auto layout**, for all types of iPhone (5/6/6S/7)
+As you can see in the following chart, FlexLayout's performance is as fast as manual layouting, and **between 12x and 16x faster than auto layout**, for all types of iPhone (5/6/6S/7)
 
-These results also means that **FlexboxLayout is faster than any layout frameworks that is built over auto layout**. 
+These results also means that ** FlexLayout is faster than any layout frameworks that is built over auto layout**. 
 
 [See here more complete details, results and explanation of the benchmark](docs/Benchmark.md).
 
 <p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
 <p align="center">
-  <img src="docs/Benchmark/Benchmark-iPhone6.png" alt="FlexboxLayout Performance" width=600/>
+  <img src="docs/Benchmark/Benchmark-iPhone6.png" alt="FlexLayout Performance" width=600/>
 </p>
 
 
@@ -303,7 +316,7 @@ These results also means that **FlexboxLayout is faster than any layout framewor
 ### Contributing, comments, ideas, suggestions, issues, .... <a name="comments"></a>
 For any **comments**, **ideas**, **suggestions**, **issues**, simply open an [issue](https://github.com/luc-dion/FlexLayout/issues).
 
-If you find FlexboxLayout interresting, thanks to **Star** it. You'll be able to retrieve it easily later.
+If you find FlexLayout interresting, thanks to **Star** it. You'll be able to retrieve it easily later.
 
 If you'd like to contribute, you're welcome!
 
@@ -311,7 +324,7 @@ If you'd like to contribute, you're welcome!
 
 
 ## Changelog
-FlexboxLayout recent history is available in the are documented in the [CHANGELOG](CHANGELOG.md).
+FlexLayout recent history is available in the are documented in the [CHANGELOG](CHANGELOG.md).
 
 <br>
 
