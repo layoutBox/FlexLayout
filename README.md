@@ -33,21 +33,6 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 * [FlexLayout principles and philosophy](#introduction)
 * [Performance](#performance)
-* [Usage example](#intro_usage_example)
-* [Documentation](#documentation)
-  * [Layout using distances from superview’s edges](#distance_from_superview_edge) 	  
-  * [Anchors](#anchors)
-  * [Edges](#edges)
-  * [Relative positionning](#relative_positionning)
-  * [Width, height and size](#width_height_size)
-  * [minWidth, maxWidth, minHeight, maxHeight](#minmax_width_height_size)
-  * [justify, align](#justify_align)
-  * [Margins](#margins)
-  * [Warnings](#warnings)
-  * [More examples](#more_examples)
-* [Examples App](#examples_app)
-* [Installation](#installation)
-* [FAQ](#faq)
 * [Comments, ideas, suggestions, issues, ....](#comments)
 
 
@@ -69,11 +54,8 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 * justify-content -> justify
 * align-items -> align
-//* align-content -> alignContent / alignWrap?
 * flex-direction -> direction
 * flex-wrap -> wrap
-* flex-start -> start
-* flex-end -> end
 
 
 ## Creation / definition : createBox / addChild/ define
@@ -95,8 +77,8 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
     
 
 ## flexGrow / flexShrink / flexBasis
-    public func grow(_ value: CGFloat) -> Flexbox {
-    public func shrink(_ value: CGFloat) -> Flexbox {
+    public func flexGrow(_ value: CGFloat) -> Flexbox {
+    public func flexShrink(_ value: CGFloat) -> Flexbox {
     public func flexBasis(_ value: CGFloat) -> Flexbox {
     public func flex(_ grow: CGFloat, shrink: CGFloat? = nil, basis: CGFloat? = nil) -> Flexbox {
     This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto
@@ -271,32 +253,25 @@ Another possible solution:
 
 <br>
 
-## isEnabled
-It is possible to control dynamically if a flexbox container is enabled or not. 
-When a flexbox container's is disabled, FlexLayout won't layout its children, but note that its padding will be applied. If you want to completely hide the container, you should use `flexbox.isVisible`. 
+## isIncludedInLayout
+It is possible to control dynamically if a flexbox's UIView is included or not in the flexbox layouting. 
+When a flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
 
 ** Property & Method:**
 
-* `isEnabled: Bool`
-* `isEnabled(: Bool)`
+* `isIncludedInLayout: Bool`
+* `isIncludedInLayout(: Bool)`
 
-FlexLayout enable flexbox when:
+FlexLayout automatically includes the UIView when:
 * The first time `UIView.flexbox` property is accessed
 * When a child view is added to a flexbox container using `addChild(:UIView)`
 * When a flexbox container is created using `createBox()`
 
-<br>
-
-## isVisible
-
-** Property & Method:**
-
-* `isVisible: Bool`
-* `isVisible(: Bool)`
 
 <br>
 
-## isIncludedInLayout ???
+## intrinsicSize
+
 
 # FlexLayout's Performance <a name="performance"></a>
 
