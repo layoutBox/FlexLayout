@@ -12,7 +12,9 @@
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24DA377E1EF84A1800D1AB2F /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA377C1EF84A1800D1AB2F /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24DA37811EF84A4500D1AB2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA37801EF84A4500D1AB2F /* Info.plist */; };
-		24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* Flexbox.swift */; };
+		24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* FlexLayout.swift */; };
+		DF9174771F1D6DC00034632D /* FixLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174761F1D6DC00034632D /* FixLayout+Enum.swift */; };
+		DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,9 @@
 		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DA377C1EF84A1800D1AB2F /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/FlexLayout.h; sourceTree = SOURCE_ROOT; };
 		24DA37801EF84A4500D1AB2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
-		24DA37871EF8610400D1AB2F /* Flexbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flexbox.swift; path = Sources/Flexbox.swift; sourceTree = SOURCE_ROOT; };
+		24DA37871EF8610400D1AB2F /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = SOURCE_ROOT; };
+		DF9174761F1D6DC00034632D /* FixLayout+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FixLayout+Enum.swift"; path = "Sources/Impl/FixLayout+Enum.swift"; sourceTree = SOURCE_ROOT; };
+		DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,8 @@
 		24DA375C1EF843C500D1AB2F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				24DA37871EF8610400D1AB2F /* Flexbox.swift */,
+				24DA37871EF8610400D1AB2F /* FlexLayout.swift */,
+				DF9174751F1D6DA20034632D /* Impl */,
 				2429E4BD1F19181F00BBC032 /* Supporting Files */,
 			);
 			name = Sources;
@@ -98,6 +103,15 @@
 				24DA376A1EF843C500D1AB2F /* Info.plist */,
 			);
 			path = FlexLayoutTests;
+			sourceTree = "<group>";
+		};
+		DF9174751F1D6DA20034632D /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				DF9174761F1D6DC00034632D /* FixLayout+Enum.swift */,
+				DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */,
+			);
+			name = Impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */,
+				DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */,
+				DF9174771F1D6DC00034632D /* FixLayout+Enum.swift in Sources */,
+				24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

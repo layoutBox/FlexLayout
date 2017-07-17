@@ -90,7 +90,7 @@ class MyTestView: BaseView {
         container.backgroundColor = .blue
         
         flexbox.define { (flexbox) in
-            flexbox.addChild(imageView).grow(1)
+            flexbox.addChild(imageView).flexGrow(1)
             
             flexbox.addChild(container).width(100).height(100)
 
