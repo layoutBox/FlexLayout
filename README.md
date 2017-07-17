@@ -20,6 +20,10 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <br>
 
+### WARNING: This project is not ready yet and its still under development. Thanks for coming back later. 
+
+<br>
+
 ### Requirements
 * iOS 8.0+
 * Xcode 8.0+
