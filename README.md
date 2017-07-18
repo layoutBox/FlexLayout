@@ -102,6 +102,8 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 ### alignItems()
 
+`alignItems` is only applied when wrap mode is enabled.
+
 |                     	| direction(.column) (default) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
 | **flexStart** (default) 	| <img src="docs/images/flexlayout-alignItems-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexStart.png" width="160"/>|

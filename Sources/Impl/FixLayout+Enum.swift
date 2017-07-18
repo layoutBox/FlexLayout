@@ -44,14 +44,14 @@ extension Flexbox.Justify {
 extension Flexbox.Align {
     var yogaValue: YGAlign {
         switch self {
-        case .auto:         return YGAlign.auto
+        //case .auto:         return YGAlign.auto
         case .flexStart:    return YGAlign.flexStart
         case .center:       return YGAlign.center
         case .flexEnd:      return YGAlign.flexEnd
         case .stretch:      return YGAlign.stretch
         case .baseline:     return YGAlign.baseline
-            //        case .spaceBetween: return YGAlign.spaceBetween
-            //        case .spaceAround:  return YGAlign.spaceAround
+        //case .spaceBetween: return YGAlign.spaceBetween
+        //case .spaceAround:  return YGAlign.spaceAround
         }
     }
 }

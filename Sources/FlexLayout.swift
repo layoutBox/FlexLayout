@@ -26,21 +26,21 @@ public class Flexbox {
 
     public enum Justify {
         case flexStart
-        case center
         case flexEnd
+        case center
         case spaceBetween
         case spaceAround
     }
 
     public enum Align {
-        case auto
+        //case auto
         case flexStart
-        case center
         case flexEnd
+        case center
         case stretch
         case baseline
-//        case spaceBetween
-//        case spaceAround
+        //case spaceBetween
+        //case spaceAround
     }
 
     public enum Wrap {
@@ -125,17 +125,17 @@ public class Flexbox {
     }
     
     @discardableResult
-    public func alignItems(_ value: Align) -> Flexbox {
-        view.yoga.alignItems = value.yogaValue
-        return self
-    }
-
-    @discardableResult
     public func alignSelf(_ value: Align) -> Flexbox {
         view.yoga.alignSelf = value.yogaValue
         return self
     }
 
+    @discardableResult
+    public func alignItems(_ value: Align) -> Flexbox {
+        view.yoga.alignItems = value.yogaValue
+        return self
+    }
+    
     @discardableResult
     public func position(_ value: Position) -> Flexbox {
         view.yoga.position = value.yogaValue
@@ -143,7 +143,7 @@ public class Flexbox {
     }
 
     @discardableResult
-    public func flexWrap(_ value: Wrap) -> Flexbox {
+    public func wrap(_ value: Wrap) -> Flexbox {
         view.yoga.flexWrap = value.yogaValue
         return self
     }
