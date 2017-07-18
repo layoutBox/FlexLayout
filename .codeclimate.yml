@@ -1,0 +1,15 @@
+engines:
+  tailor:
+    enabled: true
+
+ratings:
+  paths:
+  - "**.swift"
+
+exclude_paths:
+    - FlexLayoutTests
+    - Example
+    - Pods
+    - data
+    - scripts
+    

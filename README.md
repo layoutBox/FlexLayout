@@ -60,9 +60,8 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 ## Creation / definition : createBox / addChild/ define
 
-# flex container
-
-# flex items
+# flex container properties
+This section describe flex container's properties. 
 
 
 ## Direction, justity, align / alignContent / alignSelf / position
@@ -74,10 +73,32 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
     public func position(_ value: Position) -> Flexbox {
     public func flexWrap(_ value: Wrap) -> Flexbox {
     public func overflow(_ value: Overflow) -> Flexbox {
-    
-### justify()
+   
+### direction()
 
-|                     	| direction(.column) (default) | direction(.row) |
+| **column** (default) 	| <img src="docs/images/flexlayout-direction-column.png" width="100"/>|
+|---------------------|:------------------:|
+| **columnReverse** | <img src="docs/images/flexlayout-direction-columnReverse.png" width="100"/>|
+| **row** | <img src="docs/images/flexlayout-direction-row.png" width="190"/>|
+| **rowReverse** | <img src="docs/images/flexlayout-direction-rowReverse.png" width="190"/>|
+
+<br/>
+ 
+### wrap()
+
+|                     	| direction(.column) | direction(.row) |
+|---------------------	|:------------------:|:---------------:|
+| **nowrap** (default) 	| <img src="docs/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-nowrap.png" width="180"/>|
+| **wrap** | <img src="docs/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-wrap.png" width="180"/>|
+| **wrapReverse**	| <img src="docs/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>|
+
+<br/>
+
+
+### justify()
+In CSS this property is named `justifyContent`.
+
+|                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
 | **flexStart** (default) 	| <img src="docs/images/flexlayout-justify-column-flexstart.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-flexstart.png" width="160"/>|
 | **flexEnd**	| <img src="docs/images/flexlayout-justify-column-flexend.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-flexend.png" width="160"/>|
@@ -87,9 +108,9 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 <br/>
 
-### alignContent()
+### alignItems()
 
-|                     	| direction(.column) (default) | direction(.row) |
+|                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
 | **stretch** (default) 	| <img src="docs/images/flexlayout-align-column-stretch.png" width="140"/>| <img src="docs/images/flexlayout-align-row-stretch.png" width="160"/>|
 | **flexStart**	| <img src="docs/images/flexlayout-align-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-align-row-flexStart.png" width="160"/>|
@@ -99,21 +120,11 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 <br/>
 
-### wrap()
+### alignContent()
 
-|                     	| direction(.column) (default) | direction(.row) |
-|---------------------	|:------------------:|:---------------:|
-| **nowrap** (default) 	| <img src="docs/images/flexlayout-wrap-column-nowrap.png" width="140"/>| <img src="docs/images/flexlayout-wrap-row-nowrap.png" width="160"/>|
-| **wrap** | <img src="docs/images/flexlayout-wrap-column-wrap.png" width="140"/>| <img src="docs/images/flexlayout-wrap-row-wrap.png" width="160"/>|
-| **wrapReverse**	| <img src="docs/images/flexlayout-wrap-column-wrapReverse.png" width="140"/>| <img src="docs/images/flexlayout-wrap-row-wrapReverse.png" width="160"/>|
+`alignContent` is only applied when wrap mode is enabled (`wrap` / `wrapReverse`).
 
-<br/>
-
-### alignItems()
-
-`alignItems` is only applied when wrap mode is enabled.
-
-|                     	| direction(.column) (default) | direction(.row) |
+|                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
 | **flexStart** (default) 	| <img src="docs/images/flexlayout-alignItems-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexStart.png" width="160"/>|
 | **flexEnd**	| <img src="docs/images/flexlayout-alignItems-column-flexEnd.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexEnd.png" width="160"/>|
@@ -125,12 +136,17 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 <br/>
 
 
+# flex children properties
+This section describe flex children's properties.
+
 ## flexGrow / flexShrink / flexBasis
     public func flexGrow(_ value: CGFloat) -> Flexbox {
     public func flexShrink(_ value: CGFloat) -> Flexbox {
     public func flexBasis(_ value: CGFloat) -> Flexbox {
     public func flex(_ grow: CGFloat, shrink: CGFloat? = nil, basis: CGFloat? = nil) -> Flexbox {
     This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto
+
+## order
 
 ## Absolute positionning: left / top / right / bottom / start / end
     public func left(_ value: CGFloat) -> Flexbox {
