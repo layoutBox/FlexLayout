@@ -99,6 +99,21 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 <br/>
 
+
+### alignItems()
+
+|                     	| direction(.column) (default) | direction(.row) |
+|---------------------	|:------------------:|:---------------:|
+| **flexStart** (default) 	| <img src="docs/images/flexlayout-alignItems-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexStart.png" width="160"/>|
+| **flexEnd**	| <img src="docs/images/flexlayout-alignItems-column-flexEnd.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexEnd.png" width="160"/>|
+| **center** 	| <img src="docs/images/flexlayout-alignItems-column-center.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-center.png" width="160"/>|
+| **stretch**	| <img src="docs/images/flexlayout-alignItems-column-stretch.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-stretch.png" width="160"/>|
+| **spaceBetween** | <img src="docs/images/flexlayout-alignItems-column-spaceBetween.png" width="160"/> | <img src="docs/images/flexlayout-alignItems-row-spaceBetween.png" width="160"/>|
+| **spaceAround** | <img src="docs/images/flexlayout-alignItems-column-spaceAround.png" width="160"/> | <img src="docs/images/flexlayout-alignItems-row-spaceAround.png" width="160"/>|
+
+<br/>
+
+
 ## flexGrow / flexShrink / flexBasis
     public func flexGrow(_ value: CGFloat) -> Flexbox {
     public func flexShrink(_ value: CGFloat) -> Flexbox {
