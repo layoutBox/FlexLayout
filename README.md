@@ -79,11 +79,11 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 |                     	| direction(.column) (default) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
-| **flexStart** (default) 	| <img src="docs/images/flexlayout-justify-column-flexstart.png" width="120"/>| <img src="docs/images/flexlayout-justify-row-flexstart.png" width="150"/>|
-| **flexEnd**	| <img src="docs/images/flexlayout-justify-column-flexend.png" width="120"/>| <img src="docs/images/flexlayout-justify-row-flexend.png" width="150"/>|
-| **center** 	| <img src="docs/images/flexlayout-justify-column-center.png" width="120"/>| <img src="docs/images/flexlayout-justify-row-center.png" width="150"/>|
-| **spaceBetween** 	| <img src="docs/images/flexlayout-justify-column-spacebetween.png" width="120"/>| <img src="docs/images/flexlayout-justify-row-spacebetween.png" width="150"/>|
-| **spaceAround** 	| <img src="docs/images/flexlayout-justify-column-spacearound.png" width="120"/>| <img src="docs/images/flexlayout-justify-row-spacearound.png" width="150"/>|
+| **flexStart** (default) 	| <img src="docs/images/flexlayout-justify-column-flexstart.png" width="140"width="140"width="140"/>| <img src="docs/images/flexlayout-justify-row-flexstart.png" width="160"/>|
+| **flexEnd**	| <img src="docs/images/flexlayout-justify-column-flexend.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-flexend.png" width="160"/>|
+| **center** 	| <img src="docs/images/flexlayout-justify-column-center.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-center.png" width="160"/>|
+| **spaceBetween** 	| <img src="docs/images/flexlayout-justify-column-spacebetween.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-spacebetween.png" width="160"/>|
+| **spaceAround** 	| <img src="docs/images/flexlayout-justify-column-spacearound.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-spacearound.png" width="160"/>|
 
 <br/>
 
@@ -91,11 +91,11 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 |                     	| direction(.column) (default) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
-| **stretch** (default) 	| <img src="docs/images/flexlayout-align-column-stretch.png" width="120"/>| <img src="docs/images/flexlayout-align-row-stretch.png" width="150"/>|
-| **flexStart**	| <img src="docs/images/flexlayout-align-column-flexStart.png" width="120"/>| <img src="docs/images/flexlayout-align-row-flexStart.png" width="150"/>|
-| **flexEnd**	| <img src="docs/images/flexlayout-align-column-flexEnd.png" width="120"/>| <img src="docs/images/flexlayout-align-row-flexEnd.png" width="150"/>|
-| **center** 	| <img src="docs/images/flexlayout-align-column-center.png" width="120"/>| <img src="docs/images/flexlayout-align-row-center.png" width="150"/>|
-| **baseline** 	| | <img src="docs/images/flexlayout-align-row-baseline.png" width="150"/>|
+| **stretch** (default) 	| <img src="docs/images/flexlayout-align-column-stretch.png" width="140"/>| <img src="docs/images/flexlayout-align-row-stretch.png" width="160"/>|
+| **flexStart**	| <img src="docs/images/flexlayout-align-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-align-row-flexStart.png" width="160"/>|
+| **flexEnd**	| <img src="docs/images/flexlayout-align-column-flexEnd.png" width="140"/>| <img src="docs/images/flexlayout-align-row-flexEnd.png" width="160"/>|
+| **center** 	| <img src="docs/images/flexlayout-align-column-center.png" width="140"/>| <img src="docs/images/flexlayout-align-row-center.png" width="160"/>|
+| **baseline** 	| | <img src="docs/images/flexlayout-align-row-baseline.png" width="160"/>|
 
 <br/>
 
