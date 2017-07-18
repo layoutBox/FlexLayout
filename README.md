@@ -99,6 +99,15 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 
 <br/>
 
+### wrap()
+
+|                     	| direction(.column) (default) | direction(.row) |
+|---------------------	|:------------------:|:---------------:|
+| **nowrap** (default) 	| <img src="docs/images/flexlayout-wrap-column-nowrap.png" width="140"/>| <img src="docs/images/flexlayout-wrap-row-nowrap.png" width="160"/>|
+| **wrap** | <img src="docs/images/flexlayout-wrap-column-wrap.png" width="140"/>| <img src="docs/images/flexlayout-wrap-row-wrap.png" width="160"/>|
+| **wrapReverse**	| <img src="docs/images/flexlayout-wrap-column-wrapReverse.png" width="140"/>| <img src="docs/images/flexlayout-wrap-row-wrapReverse.png" width="160"/>|
+
+<br/>
 
 ### alignItems()
 
