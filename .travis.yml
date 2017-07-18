@@ -1,0 +1,24 @@
+language: objective-c
+osx_image: xcode8.3
+xcode_project: FlexLayout.xcodeproj
+xcode_scheme: FlexLayout
+xcode_sdk: iphonesimulator9.3
+env:
+  global: 
+before_install:
+  #- brew update
+  #- brew install tailor
+  - gem install xcpretty-travis-formatter
+  - pod install
+  
+script: xcodebuild
+  -project  FlexLayout.xcodeproj
+  -scheme "FlexLayout"
+  -sdk iphonesimulator
+  -destination 'platform=iOS Simulator,name=iPhone 6'
+  -enableCodeCoverage YES 
+  test
+ | xcpretty -f `xcpretty-travis-formatter`
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J 'FlexLayout' -J 'FlexLayoutTests'
