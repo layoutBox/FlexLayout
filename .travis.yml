@@ -9,7 +9,7 @@ before_install:
   #- brew update
   #- brew install tailor
   - gem install xcpretty-travis-formatter
-  - pod install
+  - pod install --repo-update
   
 script: xcodebuild
   -project  FlexLayout.xcodeproj
