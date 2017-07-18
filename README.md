@@ -44,7 +44,7 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 * FlexLayout syntax is concise and chainable.
 * The syntax looks similar to HTML, where a container is defined on one line, and its children are imbricated.
 * Moving a view from one flexbox container to another its just a problem of moving a block of code.
-* FlexLayout/yoga incredibly fast, its even faster than manual layout. See performances below.
+* FlexLayout/yoga is incredibly fast, its even faster than manual layout. See performances below.
 * FlexLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share the same type of syntax and methods name (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, justify, ...). PinLayout is particularly usefull to position and animates views. 
 
 
@@ -75,6 +75,29 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
     public func flexWrap(_ value: Wrap) -> Flexbox {
     public func overflow(_ value: Overflow) -> Flexbox {
     
+### justify()
+
+|                     	| direction(.column) (default) | direction(.row) |
+|---------------------	|:------------------:|:---------------:|
+| **flexStart** (default) 	| <img src="docs/images/flexlayout-justify-column-flexstart.png"/ width="120">| <img src="docs/images/flexlayout-justify-row-flexstart.png"/ width="150">|
+| **flexEnd**	| <img src="docs/images/flexlayout-justify-column-flexend.png"/ width="120">| <img src="docs/images/flexlayout-justify-row-flexend.png"/ width="150">|
+| **center** 	| <img src="docs/images/flexlayout-justify-column-center.png"/ width="120">| <img src="docs/images/flexlayout-justify-row-center.png"/ width="150">|
+| **spaceBetween** 	| <img src="docs/images/flexlayout-justify-column-spacebetween.png"/ width="120">| <img src="docs/images/flexlayout-justify-row-spacebetween.png"/ width="150">|
+| **spaceAround** 	| <img src="docs/images/flexlayout-justify-column-spacearound.png"/ width="120">| <img src="docs/images/flexlayout-justify-row-spacearound.png"/ width="150">|
+
+<br/>
+
+### alignContent()
+
+|                     	| direction(.column) (default) | direction(.row) |
+|---------------------	|:------------------:|:---------------:|
+| **stretch** (default) 	| <img src="docs/images/flexlayout-align-column-stretch.png"/ width="120">| <img src="docs/images/flexlayout-align-row-stretch.png"/ width="150">|
+| **flexStart**	| <img src="docs/images/flexlayout-align-column-flexStart.png"/ width="120">| <img src="docs/images/flexlayout-align-row-flexStart.png"/ width="150">|
+| **flexEnd**	| <img src="docs/images/flexlayout-align-column-flexEnd.png"/ width="120">| <img src="docs/images/flexlayout-align-row-flexEnd.png"/ width="150">|
+| **center** 	| <img src="docs/images/flexlayout-align-column-center.png"/ width="120">| <img src="docs/images/flexlayout-align-row-center.png"/ width="150">|
+| **baseline** 	| | <img src="docs/images/flexlayout-align-row-baseline.png"/ width="150">|
+
+<br/>
 
 ## flexGrow / flexShrink / flexBasis
     public func flexGrow(_ value: CGFloat) -> Flexbox {
