@@ -8,6 +8,8 @@ ratings:
 
 exclude_paths:
     - FlexLayoutTests
+    - Pods_FlexLayout
+    - Pods_FlexLayoutTests
     - Example
     - Pods
     - data
