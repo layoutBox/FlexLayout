@@ -57,6 +57,10 @@ public class Flexbox {
     init(view: UIView) {
         self.view = view
         view.yoga.isEnabled = true
+        
+//        
+//        if ([UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
+//        }
     }
 
     public var intrinsicSize: CGSize {

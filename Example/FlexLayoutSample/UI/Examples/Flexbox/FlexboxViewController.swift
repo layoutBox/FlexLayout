@@ -15,7 +15,6 @@ class FlexboxViewController: BaseViewController {
 
     init(pageType: PageType) {
         super.init(nibName: nil, bundle: nil)
-        
         title = pageType.text
     }
 

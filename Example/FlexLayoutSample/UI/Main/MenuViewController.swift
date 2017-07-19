@@ -39,25 +39,25 @@ enum PageType: Int {
     
     var text: String {
         switch self {
-        case .yogaExampleA:              return "Example A - C"
-        case .yogaExampleB:              return "Example B - Obj-C"
-        case .yogaExampleC:              return "Example C - Java"
-        case .yogaExampleD:              return "Example D - C#"
-        case .yogaExampleE:              return "Example E - Android"
-        case .flex:                       return "Flexbox"
-        case .count:                      return ""
+        case .yogaExampleA:   return "Yoga C Example"
+        case .yogaExampleB:   return "Yoga Obj-C Example"
+        case .yogaExampleC:   return "Yoga Java Example"
+        case .yogaExampleD:   return "Yoga C# Example"
+        case .yogaExampleE:   return "Yoga Android Example"
+        case .flex:           return "Flexbox"
+        case .count:          return ""
         }
     }
 
     var viewController: UIViewController {
         switch self {
-        case .yogaExampleA:               return YogaExampleAViewController(pageType: self)
-        case .yogaExampleB:               return YogaExampleBViewController(pageType: self)
-        case .yogaExampleC:               return YogaExampleCViewController(pageType: self)
-        case .yogaExampleD:               return YogaExampleDViewController(pageType: self)
-        case .yogaExampleE:               return YogaExampleEViewController(pageType: self)
-        case .flex:                       return FlexboxViewController(pageType: self)
-        case .count:                      return UIViewController()
+        case .yogaExampleA:   return YogaExampleAViewController(pageType: self)
+        case .yogaExampleB:   return YogaExampleBViewController(pageType: self)
+        case .yogaExampleC:   return YogaExampleCViewController(pageType: self)
+        case .yogaExampleD:   return YogaExampleDViewController(pageType: self)
+        case .yogaExampleE:   return YogaExampleEViewController(pageType: self)
+        case .flex:           return FlexboxViewController(pageType: self)
+        case .count:          return UIViewController()
         }
     }
 }
