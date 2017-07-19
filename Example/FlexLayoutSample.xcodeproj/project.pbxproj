@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		2245F067A40DB6A13F97F202 /* Pods_FlexLayoutSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */; };
+		24875E611F1F929600BB1C09 /* YogaExampleCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E601F1F929600BB1C09 /* YogaExampleCView.swift */; };
+		24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */; };
+		24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E641F1F92B500BB1C09 /* YogaExampleDView.swift */; };
+		24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */; };
+		24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */; };
+		24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */; };
+		24875E6F1F1F92CD00BB1C09 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6C1F1F92CD00BB1C09 /* CheckBox.swift */; };
+		24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */; };
+		24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */; };
+		DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
+		DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
 		DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */; };
 		DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC331E665BF6003326FB /* MenuView.swift */; };
 		DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493268B1EEEEFF100BCB814 /* BaseViewController.swift */; };
-		DF1F2A0B1F17D11700BA1B97 /* MyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456B5B31EF8623200E62071 /* MyTestView.swift */; };
 		DF1F2A0C1F17D11700BA1B97 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC381E665C6B003326FB /* BasicView.swift */; };
-		DF1F2A0D1F17D11700BA1B97 /* FlexboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456B5B41EF8623200E62071 /* FlexboxViewController.swift */; };
 		DF1F2A0E1F17D11700BA1B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EFE421E64FAFE00165E39 /* AppDelegate.swift */; };
 		DF1F2A0F1F17D11700BA1B97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC341E665BF6003326FB /* MenuViewController.swift */; };
 		DF1F2A101F17D11700BA1B97 /* Expect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E654811E69041B00A72A8B /* Expect.swift */; };
 		DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249326881EEEEE3D00BCB814 /* Stylesheet.swift */; };
-		DF1F2A121F17D11700BA1B97 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456B5B71EF8640E00E62071 /* CheckBox.swift */; };
 		DF1F2A131F17D11700BA1B97 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493268D1EEEF02700BCB814 /* BaseView.swift */; };
 		DF1F2A191F17D11700BA1B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE4B1E64FAFE00165E39 /* LaunchScreen.storyboard */; };
 		DF1F2A1A1F17D11700BA1B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE491E64FAFE00165E39 /* Assets.xcassets */; };
+		DF91747F1F1F6F9A0034632D /* YogaExampleAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91747D1F1F6F9A0034632D /* YogaExampleAView.swift */; };
+		DF9174801F1F6F9A0034632D /* YogaExampleAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91747E1F1F6F9A0034632D /* YogaExampleAViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,9 +52,15 @@
 		2439CC331E665BF6003326FB /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2439CC341E665BF6003326FB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2439CC381E665C6B003326FB /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
-		2456B5B31EF8623200E62071 /* MyTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTestView.swift; path = Flexbox/MyTestView.swift; sourceTree = "<group>"; };
-		2456B5B41EF8623200E62071 /* FlexboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexboxViewController.swift; path = Flexbox/FlexboxViewController.swift; sourceTree = "<group>"; };
-		2456B5B71EF8640E00E62071 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckBox.swift; path = Flexbox/CheckBox.swift; sourceTree = "<group>"; };
+		24875E601F1F929600BB1C09 /* YogaExampleCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleCView.swift; path = FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift; sourceTree = SOURCE_ROOT; };
+		24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleCViewController.swift; path = FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCViewController.swift; sourceTree = SOURCE_ROOT; };
+		24875E641F1F92B500BB1C09 /* YogaExampleDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleDView.swift; path = FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift; sourceTree = SOURCE_ROOT; };
+		24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleDViewController.swift; path = FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDViewController.swift; sourceTree = SOURCE_ROOT; };
+		24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleEView.swift; path = FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift; sourceTree = SOURCE_ROOT; };
+		24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleEViewController.swift; path = FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEViewController.swift; sourceTree = SOURCE_ROOT; };
+		24875E6C1F1F92CD00BB1C09 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckBox.swift; path = FlexLayoutSample/UI/Examples/Flexbox/CheckBox.swift; sourceTree = SOURCE_ROOT; };
+		24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexboxViewController.swift; path = FlexLayoutSample/UI/Examples/Flexbox/FlexboxViewController.swift; sourceTree = SOURCE_ROOT; };
+		24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTestView.swift; path = FlexLayoutSample/UI/Examples/Flexbox/MyTestView.swift; sourceTree = SOURCE_ROOT; };
 		249326881EEEEE3D00BCB814 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		2493268B1EEEEFF100BCB814 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2493268D1EEEF02700BCB814 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -56,7 +72,11 @@
 		24E654811E69041B00A72A8B /* Expect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expect.swift; sourceTree = "<group>"; };
 		82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8561ACDBCFFA1B4B9ABEAB16 /* Pods-FlexLayoutSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.debug.xcconfig"; sourceTree = "<group>"; };
+		DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleBView.swift; path = FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift; sourceTree = SOURCE_ROOT; };
+		DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleBViewController.swift; path = FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBViewController.swift; sourceTree = SOURCE_ROOT; };
 		DF1F2A221F17D11700BA1B97 /* FlexLayoutSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF91747D1F1F6F9A0034632D /* YogaExampleAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleAView.swift; path = FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift; sourceTree = SOURCE_ROOT; };
+		DF91747E1F1F6F9A0034632D /* YogaExampleAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleAViewController.swift; path = FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,16 +96,22 @@
 			children = (
 				2439CC5E1E665C71003326FB /* Common */,
 				2439CC661E666128003326FB /* Main */,
-				2439CC371E665C5E003326FB /* Tests */,
+				2439CC371E665C5E003326FB /* Examples */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		2439CC371E665C5E003326FB /* Tests */ = {
+		2439CC371E665C5E003326FB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				DF91747C1F1F6F8B0034632D /* YogaExampleA */,
+				DF0E85281F1F742C00AB1956 /* YogaExampleB */,
+				24CD0D121F1F8D1100D56FC3 /* YogaExampleC */,
+				24CD0D171F1F8E3D00D56FC3 /* YogaExampleD */,
+				24CD0D1C1F1F90AF00D56FC3 /* YogaExampleE */,
 				2456B5B21EF8622500E62071 /* Flexbox */,
 			);
+			name = Examples;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -123,9 +149,9 @@
 		2456B5B21EF8622500E62071 /* Flexbox */ = {
 			isa = PBXGroup;
 			children = (
-				2456B5B71EF8640E00E62071 /* CheckBox.swift */,
-				2456B5B31EF8623200E62071 /* MyTestView.swift */,
-				2456B5B41EF8623200E62071 /* FlexboxViewController.swift */,
+				24875E6C1F1F92CD00BB1C09 /* CheckBox.swift */,
+				24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */,
+				24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */,
 			);
 			name = Flexbox;
 			sourceTree = "<group>";
@@ -159,6 +185,33 @@
 			path = FlexLayoutSample;
 			sourceTree = "<group>";
 		};
+		24CD0D121F1F8D1100D56FC3 /* YogaExampleC */ = {
+			isa = PBXGroup;
+			children = (
+				24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */,
+				24875E601F1F929600BB1C09 /* YogaExampleCView.swift */,
+			);
+			name = YogaExampleC;
+			sourceTree = "<group>";
+		};
+		24CD0D171F1F8E3D00D56FC3 /* YogaExampleD */ = {
+			isa = PBXGroup;
+			children = (
+				24875E641F1F92B500BB1C09 /* YogaExampleDView.swift */,
+				24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */,
+			);
+			name = YogaExampleD;
+			sourceTree = "<group>";
+		};
+		24CD0D1C1F1F90AF00D56FC3 /* YogaExampleE */ = {
+			isa = PBXGroup;
+			children = (
+				24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */,
+				24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */,
+			);
+			name = YogaExampleE;
+			sourceTree = "<group>";
+		};
 		24E654801E69040000A72A8B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +235,24 @@
 				0D0595B5E0950936D037ECF2 /* Pods-FlexLayoutSample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF0E85281F1F742C00AB1956 /* YogaExampleB */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */,
+				DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */,
+			);
+			name = YogaExampleB;
+			sourceTree = "<group>";
+		};
+		DF91747C1F1F6F8B0034632D /* YogaExampleA */ = {
+			isa = PBXGroup;
+			children = (
+				DF91747D1F1F6F9A0034632D /* YogaExampleAView.swift */,
+				DF91747E1F1F6F9A0034632D /* YogaExampleAViewController.swift */,
+			);
+			name = YogaExampleA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,17 +392,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */,
 				DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */,
+				24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */,
 				DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */,
 				DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */,
-				DF1F2A0B1F17D11700BA1B97 /* MyTestView.swift in Sources */,
+				24875E6F1F1F92CD00BB1C09 /* CheckBox.swift in Sources */,
+				DF91747F1F1F6F9A0034632D /* YogaExampleAView.swift in Sources */,
 				DF1F2A0C1F17D11700BA1B97 /* BasicView.swift in Sources */,
-				DF1F2A0D1F17D11700BA1B97 /* FlexboxViewController.swift in Sources */,
+				DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */,
+				DF9174801F1F6F9A0034632D /* YogaExampleAViewController.swift in Sources */,
+				24875E611F1F929600BB1C09 /* YogaExampleCView.swift in Sources */,
 				DF1F2A0E1F17D11700BA1B97 /* AppDelegate.swift in Sources */,
 				DF1F2A0F1F17D11700BA1B97 /* MenuViewController.swift in Sources */,
+				24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */,
+				24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */,
+				24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */,
+				24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */,
+				24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */,
+				24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */,
 				DF1F2A101F17D11700BA1B97 /* Expect.swift in Sources */,
 				DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */,
-				DF1F2A121F17D11700BA1B97 /* CheckBox.swift in Sources */,
 				DF1F2A131F17D11700BA1B97 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

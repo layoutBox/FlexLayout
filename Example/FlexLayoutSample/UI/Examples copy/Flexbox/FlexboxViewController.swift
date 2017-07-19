@@ -1,6 +1,6 @@
 //
 //  FlexboxViewController.swift
-//  PinLayoutSample
+//  FlexLayoutSample
 //
 //  Created by DION, Luc (MTL) on 2017-06-19.
 //  Copyright (c) 2017 Mirego. All rights reserved.

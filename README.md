@@ -337,6 +337,9 @@ FlexLayout automatically includes the UIView when:
 
 <br>
 
+## markAsDirty
+In the event that you need to another layout pass on a view you can mark it dirty via `flex.markAsDirty()`
+
 ## intrinsicSize
 
 

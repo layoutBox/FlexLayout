@@ -99,9 +99,27 @@ public class Flexbox {
     //
     // Layout
     //
-    public func layout(preservingOrigin: Bool = true) {
-        view.yoga.applyLayout(preservingOrigin: preservingOrigin)
+    public func layout(useViewFrame: Bool = true) {
+        if useViewFrame {
+            view.yoga.top = YGValue(view.frame.origin.y)
+            view.yoga.left = YGValue(view.frame.origin.x)
+            view.yoga.width = YGValue(view.frame.width)
+            view.yoga.height = YGValue(view.frame.height)
+        }
+        
+        view.yoga.applyLayout(preservingOrigin: false)
     }
+    
+//    public func layout(preservingOrigin: Bool = true) {
+////        if let parentFrame = view.superview?.frame {
+////            view.yoga.top = YGValue(view.frame.origin.y)
+////            view.yoga.left = YGValue(view.frame.origin.x)
+////            view.yoga.width = YGValue(view.frame.width)
+////            view.yoga.height = YGValue(view.frame.height)
+////        }
+//        
+//        view.yoga.applyLayout(preservingOrigin: preservingOrigin)
+//    }
 
     //
     // Direction, justity, alignment / position
@@ -245,13 +263,15 @@ public class Flexbox {
         return self
     }
     
-    @discardableResult func size(_ size: CGSize) -> Flexbox {
+    @discardableResult
+    public func size(_ size: CGSize) -> Flexbox {
         self.view.yoga.width = YGValue(size.width)
         self.view.yoga.height = YGValue(size.height)
         return self
     }
     
-    @discardableResult func size(_ sideLength: CGFloat) -> Flexbox{
+    @discardableResult
+    public func size(_ sideLength: CGFloat) -> Flexbox{
         self.view.yoga.width = YGValue(sideLength)
         self.view.yoga.height = YGValue(sideLength)
         return self
