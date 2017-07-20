@@ -74,3 +74,13 @@ extension Flexbox.Position {
         }
     }
 }
+
+extension Flexbox.LayoutDirection {
+    var yogaValue: YGDirection {
+        switch self {
+        case .LTR: return YGDirection.LTR
+        case .RTL: return YGDirection.RTL
+        default:   return YGDirection.inherit
+        }
+    }
+}

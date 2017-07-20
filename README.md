@@ -6,8 +6,8 @@
  
 <p align="center">
   <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
-  <a href="https://travis-ci.org/luc-dion/FlexLayout"><img src="https://travis-ci.org/luc-dion/FlexLayout.svg?branch=master" /></a>
-  <a href="https://codecov.io/gh/luc-dion/FlexLayout"><img src="https://codecov.io/gh/luc-dion/FlexLayout/branch/master/graph/badge.svg"/></a>
+  <a href="https://travis-ci.org/luc-dion/FlexLayout"><img src="https://travis-ci.org/luc-dion/FlexLayout.svg?branch=dev" /></a>
+  <a href="https://codecov.io/gh/luc-dion/FlexLayout"><img src="https://codecov.io/gh/luc-dion/FlexLayout/branch/dev/graph/badge.svg"/></a>
   <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
   <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
   <a href="https://raw.githubusercontent.com/luc-dion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
@@ -66,9 +66,8 @@ FlexLayout/Yoga support Right-to-Left (RTL) layout. RTL is supported for margins
 
 ## Creation / definition : createBox / addChild/ define
 
-# flex container
-
-# flex items
+# flex container properties
+This section describe flex container's properties. 
 
 
 ## Direction, justity, align / alignContent / alignSelf / position
@@ -80,10 +79,32 @@ FlexLayout/Yoga support Right-to-Left (RTL) layout. RTL is supported for margins
     public func position(_ value: Position) -> Flexbox {
     public func flexWrap(_ value: Wrap) -> Flexbox {
     public func overflow(_ value: Overflow) -> Flexbox {
-    
-### justify()
+   
+### direction()
 
-|                     	| direction(.column) (default) | direction(.row) |
+| **column** (default) 	| <img src="docs/images/flexlayout-direction-column.png" width="100"/>|
+|---------------------|:------------------:|
+| **columnReverse** | <img src="docs/images/flexlayout-direction-columnReverse.png" width="100"/>|
+| **row** | <img src="docs/images/flexlayout-direction-row.png" width="190"/>|
+| **rowReverse** | <img src="docs/images/flexlayout-direction-rowReverse.png" width="190"/>|
+
+<br/>
+ 
+### wrap()
+
+|                     	| direction(.column) | direction(.row) |
+|---------------------	|:------------------:|:---------------:|
+| **nowrap** (default) 	| <img src="docs/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-nowrap.png" width="180"/>|
+| **wrap** | <img src="docs/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-wrap.png" width="180"/>|
+| **wrapReverse**	| <img src="docs/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>|
+
+<br/>
+
+
+### justify()
+In CSS this property is named `justifyContent`.
+
+|                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
 | **flexStart** (default) 	| <img src="docs/images/flexlayout-justify-column-flexstart.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-flexstart.png" width="160"/>|
 | **flexEnd**	| <img src="docs/images/flexlayout-justify-column-flexend.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-flexend.png" width="160"/>|
@@ -93,9 +114,9 @@ FlexLayout/Yoga support Right-to-Left (RTL) layout. RTL is supported for margins
 
 <br/>
 
-### alignContent()
+### alignItems()
 
-|                     	| direction(.column) (default) | direction(.row) |
+|                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
 | **stretch** (default) 	| <img src="docs/images/flexlayout-align-column-stretch.png" width="140"/>| <img src="docs/images/flexlayout-align-row-stretch.png" width="160"/>|
 | **flexStart**	| <img src="docs/images/flexlayout-align-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-align-row-flexStart.png" width="160"/>|
@@ -105,12 +126,11 @@ FlexLayout/Yoga support Right-to-Left (RTL) layout. RTL is supported for margins
 
 <br/>
 
+### alignContent()
 
-### alignItems()
+`alignContent` is only applied when wrap mode is enabled (`wrap` / `wrapReverse`).
 
-`alignItems` is only applied when wrap mode is enabled.
-
-|                     	| direction(.column) (default) | direction(.row) |
+|                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
 | **flexStart** (default) 	| <img src="docs/images/flexlayout-alignItems-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexStart.png" width="160"/>|
 | **flexEnd**	| <img src="docs/images/flexlayout-alignItems-column-flexEnd.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexEnd.png" width="160"/>|
@@ -122,12 +142,19 @@ FlexLayout/Yoga support Right-to-Left (RTL) layout. RTL is supported for margins
 <br/>
 
 
+# flex children properties
+This section describe flex children's properties.
+
 ## flexGrow / flexShrink / flexBasis
     public func flexGrow(_ value: CGFloat) -> Flexbox {
     public func flexShrink(_ value: CGFloat) -> Flexbox {
     public func flexBasis(_ value: CGFloat) -> Flexbox {
     public func flex(_ grow: CGFloat, shrink: CGFloat? = nil, basis: CGFloat? = nil) -> Flexbox {
     This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto
+
+## order
+
+## alignSelf
 
 ## Absolute positionning: left / top / right / bottom / start / end
     public func left(_ value: CGFloat) -> Flexbox {
@@ -313,10 +340,14 @@ FlexLayout automatically includes the UIView when:
 * When a child view is added to a flexbox container using `addChild(:UIView)`
 * When a flexbox container is created using `createBox()`
 
-
 <br>
 
+## markAsDirty
+In the event that you need to another layout pass on a view you can mark it dirty via `flex.markAsDirty()`
+
 ## intrinsicSize
+
+## sizeThatFits
 
 
 # FlexLayout's Performance <a name="performance"></a>

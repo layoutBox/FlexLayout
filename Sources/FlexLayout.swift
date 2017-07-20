@@ -53,14 +53,17 @@ public class Flexbox {
         case relative
         case absolute
     }
+    
+    public enum LayoutDirection {
+        case inherit    // default
+        case auto       // Detected automatically
+        case LTR        // Left to right
+        case RTL        // Right to right
+    }
 
     init(view: UIView) {
         self.view = view
         view.yoga.isEnabled = true
-        
-//        
-//        if ([UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-//        }
     }
 
     public var intrinsicSize: CGSize {
@@ -101,32 +104,27 @@ public class Flexbox {
     }
 
     //
-    // Layout
+    // Layout / sizeThatFits
     //
-    public func layout(useViewFrame: Bool = true) {
-        if useViewFrame {
-            view.yoga.top = YGValue(view.frame.origin.y)
-            view.yoga.left = YGValue(view.frame.origin.x)
-            view.yoga.width = YGValue(view.frame.width)
-            view.yoga.height = YGValue(view.frame.height)
+    public enum LayoutOptions {
+        case adjustWidth
+        case adjustHeight
+    }
+
+    public func layout(options: LayoutOptions? = nil) {
+        if let options = options {
+            view.yoga.applyLayout(preservingOrigin: true, dimensionFlexibility: options == .adjustWidth ? YGDimensionFlexibility.flexibleWidth : YGDimensionFlexibility.flexibleHeigth)
+        } else {
+            view.yoga.applyLayout(preservingOrigin: true)
         }
-        
-        view.yoga.applyLayout(preservingOrigin: false)
     }
     
-//    public func layout(preservingOrigin: Bool = true) {
-////        if let parentFrame = view.superview?.frame {
-////            view.yoga.top = YGValue(view.frame.origin.y)
-////            view.yoga.left = YGValue(view.frame.origin.x)
-////            view.yoga.width = YGValue(view.frame.width)
-////            view.yoga.height = YGValue(view.frame.height)
-////        }
-//        
-//        view.yoga.applyLayout(preservingOrigin: preservingOrigin)
-//    }
-
+    public func sizeThatFits(size: CGSize) -> CGSize {
+        return view.yoga.calculateLayout(with: size)
+    }
+    
     //
-    // Direction, justity, alignment / position
+    // direction, justity, alignment / position
     //
     @discardableResult
     public func direction(_ direction: Direction) -> Flexbox {
@@ -175,7 +173,25 @@ public class Flexbox {
         view.yoga.overflow = value.yogaValue
         return self
     }
+    
+    @discardableResult
+    public func layoutDirection(_ value: LayoutDirection) -> Flexbox {
+        switch value {
+        case .auto:
+            let userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection
+            if #available(iOS 9.0, *) {
+                userInterfaceLayoutDirection = UIView.userInterfaceLayoutDirection(for: view.semanticContentAttribute)
+            } else {
+                userInterfaceLayoutDirection = UIApplication.shared.userInterfaceLayoutDirection
+            }
+            view.yoga.direction = userInterfaceLayoutDirection == UIUserInterfaceLayoutDirection.leftToRight ? YGDirection.LTR : YGDirection.RTL
 
+        default:
+            view.yoga.direction = value.yogaValue
+        }
+        return self
+    }
+    
     //
     // flexGrow / flexShrink / flexBasis
     //
