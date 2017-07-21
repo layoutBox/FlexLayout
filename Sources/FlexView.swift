@@ -14,6 +14,7 @@ class FlexView: UIView {
         case none
         case layoutOnFrameChange
     }
+    
     var layoutMode: LayoutMode = .none {
         didSet {
 
