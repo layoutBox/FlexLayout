@@ -24,14 +24,14 @@ class YogaExampleEView: BaseView {
         
         // Yoga's Android example
         rootFlexbox.flexbox.define { (flexbox) in
-            flexbox.addChild(imageView).flexGrow(1)
+            flexbox.addItem(imageView).grow(1)
             
-            flexbox.createBox().direction(.row).padding(20).alignItems(.center).define({ (flexbox) in
-                flexbox.createBox().size(50).define({ (flexbox) in
+            flexbox.addContainer().direction(.row).padding(20).alignItems(.center).define({ (flexbox) in
+                flexbox.addContainer().size(50).define({ (flexbox) in
                     flexbox.view.backgroundColor = .flexLayoutColor
                 })
 
-                flexbox.createBox().height(25).marginStart(20).flexGrow(1).define({ (flexbox) in
+                flexbox.addContainer().height(25).marginStart(20).grow(1).define({ (flexbox) in
                     flexbox.view.backgroundColor = .black
                 })
             })

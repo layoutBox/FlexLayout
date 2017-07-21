@@ -1,4 +1,3 @@
-
 //  FlexboxView.swift
 //  FlexLayoutSample
 //
@@ -17,21 +16,16 @@ class MyTestView: BaseView {
     override init() {
         super.init()
 
-            /*flexbox.addChild(flexboxContentView).direction(.row).justify(.flexStart).alignItems(.center).marginHorizontal(10).define { (fbContainer) in
-            let rowLabel = UILabel()
-            rowLabel.text = "Hello my friend"
-            fbContainer.addChild(rowLabel).grow(1).shrink(1)
-            
-            fbContainer.addChild(CheckBox())
-            fbContainer.addChild(CheckBox())
-            fbContainer.addChild(CheckBox())
-            fbContainer.addChild(CheckBox())*/
+        /*flexbox.addChild(flexboxContentView).direction(.row).justify(.flexStart).alignItems(.center).marginHorizontal(10).define { (fbContainer) in
+        let rowLabel = UILabel()
+        rowLabel.text = "Hello my friend"
+        fbContainer.addChild(rowLabel).grow(1).shrink(1)
+        
+        fbContainer.addChild(CheckBox())
+        fbContainer.addChild(CheckBox())
+        fbContainer.addChild(CheckBox())
+        fbContainer.addChild(CheckBox())*/
 
-
-        // Java
-
-//        
-        // Android
 //        flexbox.addChild(rootFlexbox).define { (flexbox) in
         
         let imageView = UIView()
@@ -71,7 +65,6 @@ class MyTestView: BaseView {
 //            })
 //        }
 
-        
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
 //            UIView.animate(withDuration: 0.5, animations: {
                 container.flexbox.isIncludedInLayout(false)

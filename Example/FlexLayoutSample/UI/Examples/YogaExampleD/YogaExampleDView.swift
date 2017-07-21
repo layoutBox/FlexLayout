@@ -22,9 +22,9 @@ class YogaExampleDView: BaseView {
         label.backgroundColor = .black
         
         // Yoga's C# example
-        rootFlexbox.flexbox.justify(.flexStart).alignItems(.flexStart).define { (flexbox) in
-            flexbox.addChild(imageView).alignSelf(.stretch).flexGrow(1)
-            flexbox.addChild(label).width(300).height(25).margin(20)
+        rootFlexbox.flexbox.justifyContent(.start).alignItems(.start).define { (flexbox) in
+            flexbox.addItem(imageView).alignSelf(.stretch).grow(1)
+            flexbox.addItem(label).width(300).height(25).margin(20)
         }
         addSubview(rootFlexbox)
     }

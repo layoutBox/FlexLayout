@@ -9,7 +9,7 @@
 import UIKit
 import YogaKit
 
-extension Flexbox.Direction {
+extension FlexLayout.Direction {
     var yogaValue: YGFlexDirection {
         switch self {
         case .column:        return YGFlexDirection.column
@@ -19,7 +19,7 @@ extension Flexbox.Direction {
         }
     }
 }
-extension Flexbox.Overflow {
+extension FlexLayout.Overflow {
     var yogaValue: YGOverflow {
         switch self {
         case .visible: return YGOverflow.visible
@@ -29,34 +29,34 @@ extension Flexbox.Overflow {
     }
 }
 
-extension Flexbox.Justify {
+extension FlexLayout.Justify {
     var yogaValue: YGJustify {
         switch self {
-        case .flexStart:        return YGJustify.flexStart
+        case .start:        return YGJustify.flexStart
         case .center:       return YGJustify.center
-        case .flexEnd:          return YGJustify.flexEnd
+        case .end:          return YGJustify.flexEnd
         case .spaceBetween: return YGJustify.spaceBetween
         case .spaceAround:  return YGJustify.spaceAround
         }
     }
 }
 
-extension Flexbox.Align {
+extension FlexLayout.Align {
     var yogaValue: YGAlign {
         switch self {
-        //case .auto:         return YGAlign.auto
-        case .flexStart:    return YGAlign.flexStart
+        case .start:        return YGAlign.flexStart
         case .center:       return YGAlign.center
-        case .flexEnd:      return YGAlign.flexEnd
+        case .end:          return YGAlign.flexEnd
         case .stretch:      return YGAlign.stretch
         case .baseline:     return YGAlign.baseline
+        case .auto:         return YGAlign.auto
         //case .spaceBetween: return YGAlign.spaceBetween
         //case .spaceAround:  return YGAlign.spaceAround
         }
     }
 }
 
-extension Flexbox.Wrap {
+extension FlexLayout.Wrap {
     var yogaValue: YGWrap {
         switch self {
         case .noWrap:      return YGWrap.noWrap
@@ -66,7 +66,7 @@ extension Flexbox.Wrap {
     }
 }
 
-extension Flexbox.Position {
+extension FlexLayout.Position {
     var yogaValue: YGPositionType {
         switch self {
         case .relative: return YGPositionType.relative
@@ -75,7 +75,7 @@ extension Flexbox.Position {
     }
 }
 
-extension Flexbox.LayoutDirection {
+extension FlexLayout.LayoutDirection {
     var yogaValue: YGDirection {
         switch self {
         case .LTR: return YGDirection.LTR

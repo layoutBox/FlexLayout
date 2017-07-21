@@ -22,9 +22,9 @@ class YogaExampleBView: BaseView {
         label.backgroundColor = .black
 
         // Yoga's Objective-C Example
-        rootFlexbox.flexbox.alignItems(.center).justify(.center).padding(20).define { (flexbox) in
-            flexbox.addChild(imageView).size(150).aspectRatio(1).marginBottom(20)
-            flexbox.addChild(label).width(100).height(25)
+        rootFlexbox.flexbox.alignItems(.center).justifyContent(.center).padding(20).define { (flexbox) in
+            flexbox.addItem(imageView).size(150).aspectRatio(1).marginBottom(20)
+            flexbox.addItem(label).width(100).height(25)
         }
         addSubview(rootFlexbox)
     }

@@ -22,9 +22,9 @@ class YogaExampleCView: BaseView {
         imageView.backgroundColor = .flexLayoutColor
         
         // Yoga's Java Example
-        rootFlexbox.flexbox.alignItems(.center).justify(.center).padding(20).define { (flexbox) in
-            flexbox.addChild(label).width(200).height(25)
-            flexbox.addChild(imageView).position(.absolute).top(20).end(20).size(50)
+        rootFlexbox.flexbox.alignItems(.center).justifyContent(.center).padding(20).define { (flexbox) in
+            flexbox.addItem(label).width(200).height(25)
+            flexbox.addItem(imageView).position(.absolute).top(20).end(20).size(50)
         }
         addSubview(rootFlexbox)
     }

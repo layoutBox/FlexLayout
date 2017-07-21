@@ -1,4 +1,3 @@
-
 //  FlexboxView.swift
 //  FlexLayoutSample
 //
@@ -17,17 +16,17 @@ class MyTestView: BaseView {
     override init() {
         super.init()
 
-            /*flexbox.addChild(flexboxContentView).direction(.row).justify(.flexStart).alignItems(.center).marginHorizontal(10).define { (fbContainer) in
+            /*flexbox.addItem(flexboxContentView).direction(.row).justify(.flexStart).alignItems(.center).marginHorizontal(10).define { (fbContainer) in
             let rowLabel = UILabel()
             rowLabel.text = "Hello my friend"
-            fbContainer.addChild(rowLabel).grow(1).shrink(1)
+            fbContainer.addItem(rowLabel).grow(1).shrink(1)
             
-            fbContainer.addChild(CheckBox())
-            fbContainer.addChild(CheckBox())
-            fbContainer.addChild(CheckBox())
-            fbContainer.addChild(CheckBox())*/
+            fbContainer.addItem(CheckBox())
+            fbContainer.addItem(CheckBox())
+            fbContainer.addItem(CheckBox())
+            fbContainer.addItem(CheckBox())*/
 
-//        flexbox.addChild(rootFlexbox).define { (flexbox) in
+//        flexbox.addItem(rootFlexbox).define { (flexbox) in
         
         let imageView = UIView()
         imageView.backgroundColor = .flexLayoutColor
@@ -40,11 +39,11 @@ class MyTestView: BaseView {
         container.backgroundColor = .blue
         
         flexbox.define { (flexbox) in
-            flexbox.addChild(imageView).flexGrow(1)
+            flexbox.addItem(imageView).grow(1)
             
-            flexbox.addChild(container).width(100).height(100)
+            flexbox.addItem(container).width(100).height(100)
 
-//            flexbox.addChild(container).direction(.row).marginVertical(4).isVisible(false).alignItems(.center).define({ (flexbox) in
+//            flexbox.addItem(container).direction(.row).marginVertical(4).isVisible(false).alignItems(.center).define({ (flexbox) in
 ////                flexbox.createBox().width(50).height(50).define({ (flexbox) in
 ////                    flexbox.view.backgroundColor = .flexLayoutColor
 ////                })
@@ -55,7 +54,7 @@ class MyTestView: BaseView {
 ////                })
 //            })
 
-//            flexbox.addChild(label).marginHorizontal(20)
+//            flexbox.addItem(label).marginHorizontal(20)
         }
         
 //        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (_) in
@@ -66,10 +65,10 @@ class MyTestView: BaseView {
 //            })
 //        }
 
-        
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
 //            UIView.animate(withDuration: 0.5, animations: {
                 container.flexbox.isIncludedInLayout(false)
+                container.isHidden = true
                 self.relayoutFlexbox()
 //            })
         }

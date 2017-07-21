@@ -17,11 +17,11 @@ class YogaExampleAView: BaseView {
 
         // Yoga's C Example
         rootFlexbox.flexbox.direction(.row).padding(20).define { (flexbox) in
-            flexbox.createBox().width(80).marginEnd(20).define({ (flexbox) in
+            flexbox.addContainer().width(80).marginEnd(20).define({ (flexbox) in
                 flexbox.view.backgroundColor = .flexLayoutColor
             })
 
-            flexbox.createBox().height(25).alignSelf(.center).flexGrow(1).define({ (flexbox) in
+            flexbox.addContainer().height(25).alignSelf(.center).grow(1).define({ (flexbox) in
                 flexbox.view.backgroundColor = .black
             })
         }
