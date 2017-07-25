@@ -70,18 +70,7 @@ public class FlexLayout {
         return view.yoga.intrinsicSize
     }
     
-    public var isIncludedInLayout: Bool = true {
-        didSet {
-            view.yoga.isIncludedInLayout = isIncludedInLayout
-        }
-    }
-
-    @discardableResult
-    public func isIncludedInLayout(_ included: Bool) -> FlexLayout {
-        self.isIncludedInLayout = included
-        return self
-    }
-
+    
     //
     // Creation / definition
     //
@@ -106,19 +95,32 @@ public class FlexLayout {
     //
     // Layout / sizeThatFits
     //
-    public enum LayoutOptions {
-        case adjustWidth
+    public enum LayoutMode {
+        case fitContainer
         case adjustHeight
+        case adjustWidth
     }
 
-    public func layout(options: LayoutOptions? = nil) {
-        if let options = options {
-            view.yoga.applyLayout(preservingOrigin: true, dimensionFlexibility: options == .adjustWidth ? YGDimensionFlexibility.flexibleWidth : YGDimensionFlexibility.flexibleHeigth)
-        } else {
+    public func layout(mode: LayoutMode = .fitContainer) {
+        if case .fitContainer = mode {
             view.yoga.applyLayout(preservingOrigin: true)
+        } else {
+            view.yoga.applyLayout(preservingOrigin: true, dimensionFlexibility: mode == .adjustWidth ? YGDimensionFlexibility.flexibleWidth : YGDimensionFlexibility.flexibleHeigth)
         }
     }
     
+    public var isIncludedInLayout: Bool = true {
+        didSet {
+            view.yoga.isIncludedInLayout = isIncludedInLayout
+        }
+    }
+    
+    @discardableResult
+    public func isIncludedInLayout(_ included: Bool) -> FlexLayout {
+        self.isIncludedInLayout = included
+        return self
+    }
+
     public func sizeThatFits(size: CGSize) -> CGSize {
         return view.yoga.calculateLayout(with: size)
     }
