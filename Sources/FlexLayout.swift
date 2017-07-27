@@ -63,7 +63,9 @@ public class FlexLayout {
 
     init(view: UIView) {
         self.view = view
+        // Enable flexbox and overwrite Yoga default values.
         view.yoga.isEnabled = true
+        view.yoga.flexShrink = 1
     }
 
     public var intrinsicSize: CGSize {
@@ -317,6 +319,14 @@ public class FlexLayout {
     @discardableResult
     public func aspectRatio(_ value: CGFloat) -> FlexLayout {
         view.yoga.aspectRatio = value
+        return self
+    }
+    
+    @discardableResult
+    public func aspectRatio(of imageView: UIImageView) -> FlexLayout {
+        if let imageSize = imageView.image?.size {
+            view.yoga.aspectRatio = imageSize.width / imageSize.height
+        }
         return self
     }
     

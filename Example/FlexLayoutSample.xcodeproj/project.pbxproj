@@ -17,6 +17,8 @@
 		24875E6F1F1F92CD00BB1C09 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6C1F1F92CD00BB1C09 /* CheckBox.swift */; };
 		24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */; };
 		24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */; };
+		24B14C5B1F278CCE00C90490 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B14C591F278CCE00C90490 /* IntroView.swift */; };
+		24B14C5C1F278CCE00C90490 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B14C5A1F278CCE00C90490 /* IntroViewController.swift */; };
 		DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
 		DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
 		DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */; };
@@ -68,6 +70,8 @@
 		249EFE491E64FAFE00165E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		249EFE4C1E64FAFE00165E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		249EFE4E1E64FAFE00165E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24B14C591F278CCE00C90490 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroView.swift; path = FlexLayoutSample/UI/Examples/Intro/IntroView.swift; sourceTree = SOURCE_ROOT; };
+		24B14C5A1F278CCE00C90490 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = FlexLayoutSample/UI/Examples/Intro/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
 		24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFormView.swift; sourceTree = "<group>"; };
 		24E654811E69041B00A72A8B /* Expect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expect.swift; sourceTree = "<group>"; };
 		82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 		2439CC371E665C5E003326FB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				24B14C581F278CB400C90490 /* Intro */,
 				DF91747C1F1F6F8B0034632D /* YogaExampleA */,
 				DF0E85281F1F742C00AB1956 /* YogaExampleB */,
 				24CD0D121F1F8D1100D56FC3 /* YogaExampleC */,
@@ -183,6 +188,15 @@
 				249EFE421E64FAFE00165E39 /* AppDelegate.swift */,
 			);
 			path = FlexLayoutSample;
+			sourceTree = "<group>";
+		};
+		24B14C581F278CB400C90490 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				24B14C591F278CCE00C90490 /* IntroView.swift */,
+				24B14C5A1F278CCE00C90490 /* IntroViewController.swift */,
+			);
+			name = Intro;
 			sourceTree = "<group>";
 		};
 		24CD0D121F1F8D1100D56FC3 /* YogaExampleC */ = {
@@ -407,10 +421,12 @@
 				DF1F2A0F1F17D11700BA1B97 /* MenuViewController.swift in Sources */,
 				24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */,
 				24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */,
+				24B14C5C1F278CCE00C90490 /* IntroViewController.swift in Sources */,
 				24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */,
 				24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */,
 				24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */,
 				24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */,
+				24B14C5B1F278CCE00C90490 /* IntroView.swift in Sources */,
 				DF1F2A101F17D11700BA1B97 /* Expect.swift in Sources */,
 				DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */,
 				DF1F2A131F17D11700BA1B97 /* BaseView.swift in Sources */,

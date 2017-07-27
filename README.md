@@ -9,9 +9,11 @@
   <a href="https://travis-ci.org/luc-dion/FlexLayout"><img src="https://travis-ci.org/luc-dion/FlexLayout.svg?branch=dev" /></a>
   <a href="https://codecov.io/gh/luc-dion/FlexLayout"><img src="https://codecov.io/gh/luc-dion/FlexLayout/branch/dev/graph/badge.svg"/></a>
   <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
+  
   <!--a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a-->
   <a href="https://raw.githubusercontent.com/luc-dion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
   <!--a href="https://github.com/luc-dion/FlexLayout/issues"><img src="https://img.shields.io/github/issues/luc-dion/FlexLayout.svg?style=flat" /></a-->
+  <a href='https://dashboard.buddybuild.com/apps/5978e7ec5aa5ac00019e8e87/build/latest?branch=dev'><img src="https://dashboard.buddybuild.com/api/statusImage?appID=5978e7ec5aa5ac00019e8e87&branch=dev&build=latest"/></a>
 </p>
 
 <br>
@@ -42,11 +44,11 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 		* [Width, height and size](#width_height_size)
 		* [minWidth, maxWidth, minHeight, maxHeight](#minmax_width_height_size)
 		* [Aspect Ratio](#aspect_ratio)
-	* 6. Margins <a name="margins"></a>
-	* 7. Paddings <a name="paddings"></a>
-	* 8. Borders <a name="borders"></a>
-	* Accessing flexbox's UIView  <a name="accessing_flexbox_view"></a
+	* [Margins](#margins)
+	* [Paddings](#paddings)
+	* [Borders](#borders)
 * [Performance](#performance)
+* [FAQ](#faq)
 * [Comments, ideas, suggestions, issues, ....](#comments)
 * [Installation](#installation)
 
@@ -101,21 +103,33 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 	| **`basis`** | `flex-basis` | `flexBasis` |
 	| **`start`** | `flex-start` | `flexStart` |
 	| **`end`** | `flex-end` | `flexEnd` |
+	
+	
+* Default properties:
 
+	| Property     | FlexLayout default value | CSS default value | React Native default value |
+	|--------------|--------------------------|-------------------|----------------------------|
+	| **`direction`** | column | row | column |
+	| **`justifyContent`** | start | start | start |
+	| **`alignItems`** | stretch | stretch | stretch |
+	| **`alignSelf`** | auto | auto | auto |
+	| **`alignContent`** | start | stretch | start |
+	| **`grow`** | 0 | 0 | 0 |
+	| **`shrink`** | 1 | 1 | ???? |
+	| **`basis`** | 0 | auto | 0 |
 
+* **FlexLayout additions**: 
+	* addItem()
+	* addContainer()
+	* define()
+	* layout()
+	* isIncludedInLayout()
+	* markAsDirty()
+	* intrinsicSize
+	* sizeThatFits()
+
+	
 NOTE: **FlexLayout** doesn't support the flexbox `order` property**. The order is  determined by the flex container's `UIView.subviews` array. 
-
-
-**FlexLayout additions**: 
-
-* addItem()
-* addContainer()
-* define()
-* layout()
-* isIncludedInLayout()
-* markAsDirty()
-* intrinsicSize
-* sizeThatFits()
 
 <br>
 
@@ -174,14 +188,14 @@ This method is used to structure your code so that it matches the flexbox struct
 
 ###### Usage examples:
 ```swift
-	view.flexbox.addContainer().define { (flexbox) in
-		flexbox.addItem(imageView).grow(1)
+  view.flexbox.addContainer().define { (flexbox) in
+      flexbox.addItem(imageView).grow(1)
 		
-		flexbox.addContainer().direction(.row).define { (flexbox) in
-			flexbox.addItem(titleLabel).grow(1)
-			flexbox.addItem(priceLabel)
-		}
-	}
+      flexbox.addContainer().direction(.row).define { (flexbox) in
+          flexbox.addItem(titleLabel).grow(1)
+          flexbox.addItem(priceLabel)
+      }
+  }
 ```
 
 The same results can also be obtained without using the `define()` method, but the results is not as elegant:
@@ -250,50 +264,6 @@ The method layout the flex container's children.
 1. fitContainer: This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height). 
 2. adjustHeight: In this mode children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
 3. adjustWidth: In this mode children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
-
-
-### isIncludedInLayout()
-- Applies to: `flex items`
-- Parameter: Bool
-
-It is possible to control dynamically if a flexbox's UIView is included or not in the flexbox layouting. 
-When a flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
-
-**Property & Method:**
-
-* `isIncludedInLayout(: Bool)`
-
-FlexLayout automatically includes the UIView when:
-* The first time `UIView.flexbox` property is accessed
-* When a child view is added to a flexbox container using `addChild(:UIView)`
-* When a flexbox container is created using `createBox()`
-
-<br>
-
-### markAsDirty()
-- Applies to: `flex items`
-- Parameter: Bool
-
-In the event that you need to another layout pass on a view you can mark it dirty via `flex.markAsDirty()`
-
-### sizeThatFits()
-- Applies to: `flex items`
-- Parameter: CGSize
-
-Returns the item size when layouted in the specified frame size.
-
-###### Usage Example:
-Get the size of view when layouted in a container with a width of 200 pixels.
-
-```swift
-    let layoutSize = viewA.flexbox.sizeThatFits(CGSize(width: 200, height: CGFloat.greatestFiniteMagnitude)
-```
-
-### intrinsicSize
-- Applies to: `flex items`
-- Parameter: None
-
-Item natural size, considering only properties of the view itself. Independent of the item frame.
 
 <br>
 
@@ -437,10 +407,25 @@ NEW: The align-content property aligns a flex container’s lines within the fle
 
 <br/>
 
-# 3. Flexbox items properties <a name="intems_properties"></a>
+
+### layoutDirection()
+
+YOGA DOC: The web has limited support for Right-to-Left (RTL) layouts. It does a pretty good job when it comes to text alignment and text rendering, but lacks the features needed to build fully RTL compatible UIs. Therefore, Yoga has adopted Start and End values for Margin, Padding, Border, and Position properties.
+
+klayoutDirection
+
+With Start and End, you can specify these properties in your UI without having to think about whether your item will show up on the left or the right side of the screen (depending on the person’s language setting). Yoga automatically handles this for you.
+
+The Direction property controls this behavior. Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the root of your layout tree.
+
+
+
+## 3. Flexbox items properties <a name="intems_properties"></a>
 This section describe all flex items's properties.
 
-## grow 
+:pushpin: Remembers that flex containers are also flex items, so all these properties also applies to containers.
+
+### grow 
 - Applies to: `flex items`
 - Value type: CGFloat
 - Default value: 0
@@ -448,12 +433,14 @@ This section describe all flex items's properties.
 
 The `grow` property defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
 
+A grow value of 0 (default value) keeps the view's size in the main-axis direction. If you want the view to use the available space set a grow value > 0.
+
 For example, if all items have `grow` set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.
 
 NEW: This property specifies the flex grow factor, which determines how much the flex item will grow relative to the rest of the flex items.
+<br>
 
-
-## shrink
+### shrink
 - Applies to: `flex items`
 - Value type: CGFloat
 - Default value: 1
@@ -463,9 +450,14 @@ It specifies the "flex shrink factor", which determines how much the flex item w
 
 When omitted, it is set to 1 and the flex shrink factor is multiplied by the flex `basis` when distributing negative space.
 
+A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to overflow its flex container.
+
 NEW: The flex-shrink specifies the flex shrink factor, which determines how much the flex item will shrink relative to the rest of the flex items
 
-## basis
+
+<br>
+
+### basis
 - Applies to: `flex items `
 - Value type: CGFloat
 - Default value: 0
@@ -475,9 +467,75 @@ This property takes the same values as the width and height properties, and spec
 
 NEW: This property takes the same values as the width and height properties, and specifies the initial main size of the flex item
 
+YOGA DOC: The FlexBasis property is an axis-independent way of providing the default size of an item on the main axis. Setting the FlexBasis of a child is similar to setting the Width of that child if its parent is a container with FlexDirection = row or setting the Height of a child if its parent is a container with FlexDirection = column. The FlexBasis of an item is the default size of that item, the size of the item before any FlexGrow and FlexShrink calculations are performed.
+
+
+<br>
+
+### isIncludedInLayout()
+- Applies to: `flex items`
+- Parameter: Bool
+
+It is possible to control dynamically if a flexbox's UIView is included or not in the flexbox layouting. 
+When a flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
+
+**Property & Method:**
+
+* `isIncludedInLayout(: Bool)`
+
+FlexLayout automatically includes the UIView when:
+* The first time `UIView.flexbox` property is accessed
+* When a child view is added to a flexbox container using `addChild(:UIView)`
+* When a flexbox container is created using `createBox()`
+
+<br>
+
+### markAsDirty()
+- Applies to: `flex items`
+- Parameter: Bool
+
+In the event that you need to another layout pass on a view you can mark it dirty via `flex.markAsDirty()`
+
+Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated
+
+### sizeThatFits()
+- Applies to: `flex items`
+- Parameter: CGSize
+
+Returns the item size when layouted in the specified frame size.
+
+###### Usage Example:
+Get the size of view when layouted in a container with a width of 200 pixels.
+
+```swift
+    let layoutSize = viewA.flexbox.sizeThatFits(CGSize(width: 200, height: CGFloat.greatestFiniteMagnitude)
+```
+
+### intrinsicSize
+- Applies to: `flex items`
+- Parameter: None
+
+Item natural size, considering only properties of the view itself. Independent of the item frame.
+
 ## 4. Absolute positionning: left / top / right / bottom / start / end  <a name="absolute_positionning"></a>
 - Applies to: `flex items`
 - Parameter: CGFloat
+
+YOGA DOC: The Position property tells Flexbox how you want your item to be positioned within its parent. There are 2 options:
+* Relative (default)
+* Absolute
+
+An item marked with Position = Absolute is positioned absolutely in regards to its parent. This is done through 6 properties:
+
+* Left - controls the distance a child’s left edge is from the parent’s left edge
+* Top - controls the distance a child’s top edge is from the parent’s top edge
+* Right - controls the distance a child’s right edge is from the parent’s right edge
+* Bottom - controls the distance a child’s bottom edge is from the parent’s bottom edge
+* Start - controls the distance a child’s start edge is from the parent’s start edge
+* End - controls the distance a child’s end edge is from the parent’s end edge
+
+Using these options you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t effect their siblings layout Position = Absolute can be used to create overlays and stack children in the Z axis.
+
 
     public func left(_ value: CGFloat) -> Flexbox {
     public func top(_ value: CGFloat) -> Flexbox {
@@ -486,6 +544,7 @@ NEW: This property takes the same values as the width and height properties, and
     public func start(_ value: CGFloat) -> Flexbox {
     public func end(_ value: CGFloat) -> Flexbox {
     
+<br>
 
 ## 5. Adjusting the size  <a name="adjusting_size"></a> 
 
@@ -515,10 +574,20 @@ The value specifies the width and the height of the view in pixels, creating a s
 	view.flexbox.size(of: view1)
 	view.flexbox.size(250)
 ```
+<br>
 
 ### minWidth, maxWidth, minHeight, maxHeight <a name="minmax_width_height_size"></a>
 
 FlexLayout has methods to set the view’s minimum and maximum width, and minimum and maximum height. 
+
+YOGA DOC: Using MinWidth, MinHeight, MaxWidth, and MaxHeight gives you increased control over the final size of items in a layout. By mixing these properties with FlexGrow, FlexShrink, and AlignItems = Stretch, you are able to have items with dynamic size within a range which you control.
+
+An example of when Max properties can be useful is if you are using AlignItems = Stretch but you know that your item won’t look good after it increases past a certain point. In this case, your item will stretch to the size of its parent or until it is as big as specified in the Max property.
+
+Same goes for the Min properties when using FlexShrink. For example, you may want children of a container to shrink to fit on one row, but if you specify a minimum width, they will break to the next line after a certain point (if you are using FlexWrap = Wrap).
+
+Another case where Min and Max dimension constraints are useful is when using AspectRatio.
+
 
 **Methods:**
 
@@ -542,15 +611,26 @@ The value specifies the view's maximum height of the view in pixels. Value must 
 	view.flexbox.maxHeight(100)
 	view.flexbox.height(of: view1).maxHeight(200)
 ```
+<br>
 
 ### Aspect Ratio <a name="aspect_ratio"></a>
 ...
+
+YOGA DOC: AspectRatio is a property introduced by Yoga. AspectRatio solves the problem of knowing one dimension of an element and an aspect ratio, this is very common when it comes to videos, images, and other media types. AspectRatio accepts any floating point value > 0, the default is undefined.
+
+* AspectRatio is defined as the ratio between the width and the height of a node e.g. if a node has an aspect ratio of 2 then its width is twice the size of its height.
+* AspectRatio respects the Min and Max dimensions of an item.
+* AspectRatio has higher priority than FlexGrow
+* If AspectRatio, Width, and Height are set then the cross dimension is overridden
 
 <br/>
 
 
 ## 6. Margins <a name="margins"></a>
 FlexLayout ....
+
+YOGA DOC: Margin, Padding are similar but have some important differences. By applying Margin to an item you specify the offset a certain edge of the item should have from it’s closest sibling or parent. With Padding on the other hand you specify the offset children should have from a certain edge on the parent. Border behaves nearly identically to Padding and is only separate from Padding to make it easier to implement border effect such as color. In the below illustrations the green box is a child of the dark gray box.
+
 
 **Methods:**
 
@@ -617,6 +697,7 @@ FlexLayout ...
 <br>
 
 
+
 # FlexLayout's Performance <a name="performance"></a>
 
 FlexLayout's performance has been measured using the nice and simple LayoutKit benchmark. FlexLayout has been added to this benchmark to compare its performance. 
@@ -655,7 +736,15 @@ Then, run `pod install`.
 
 <br/>
 
-### Contributing, comments, ideas, suggestions, issues, .... <a name="comments"></a>
+
+## FAQ <a name="faq"></a>
+
+*  **Q: How to keep the view size (width/height)?**  
+   **R:** By default view's flex shrink value is set to 1, which reduce the size of the view if the view is bigger than its flex container in the main-axis direction. If the direction is column, the height is adjusted, if the direction is row, the width is adjusted. Setting this value to 0 will keep the view size in the main-axis direction.
+
+<br/>
+
+## Contributing, comments, ideas, suggestions, issues, .... <a name="comments"></a>
 For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/luc-dion/FlexLayout/issues). 
 
 For **issues**, please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. If not, it may be a FlexLayout issue. In this case open an issue and we'll let you know if the issue is related to Yoga's implementation. 

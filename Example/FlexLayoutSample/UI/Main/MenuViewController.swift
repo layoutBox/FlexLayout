@@ -28,6 +28,7 @@
 import UIKit
 
 enum PageType: Int {
+    case intro
     case yogaExampleA
     case yogaExampleB
     case yogaExampleC
@@ -39,6 +40,7 @@ enum PageType: Int {
     
     var text: String {
         switch self {
+        case .intro:          return "Intro Example"
         case .yogaExampleA:   return "Yoga C Example"
         case .yogaExampleB:   return "Yoga Obj-C Example"
         case .yogaExampleC:   return "Yoga Java Example"
@@ -51,6 +53,7 @@ enum PageType: Int {
 
     var viewController: UIViewController {
         switch self {
+        case .intro:          return IntroViewController(pageType: self)
         case .yogaExampleA:   return YogaExampleAViewController(pageType: self)
         case .yogaExampleB:   return YogaExampleBViewController(pageType: self)
         case .yogaExampleC:   return YogaExampleCViewController(pageType: self)
