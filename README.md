@@ -156,7 +156,7 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 	* sizeThatFits()
 
 	
-NOTE: **FlexLayout** doesn't support the flexbox `order` property**. The order is  determined by the flex container's `UIView.subviews` array. 
+NOTE: **FlexLayout** doesn't support the flexbox `order` property. The order is  determined by the flex container's `UIView.subviews` array. 
 
 <br>
 
