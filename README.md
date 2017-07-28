@@ -142,7 +142,7 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 	| **`alignSelf`** | auto | auto | auto |
 	| **`alignContent`** | start | stretch | start |
 	| **`grow`** | 0 | 0 | 0 |
-	| **`shrink`** | 1 | 1 | ???? |
+	| **`shrink`** | 1 | 1 | 0 |
 	| **`basis`** | 0 | auto | 0 |
 
 * **FlexLayout additions**: 
