@@ -1,5 +1,5 @@
 //
-//  FlexLayout.swift
+//  Flex.swift
 //
 //  Created by DION, Luc (MTL) on 2017-03-04.
 //  Copyright © 2017 Mirego. All rights reserved.
@@ -8,7 +8,7 @@
 import UIKit
 import YogaKit
 
-public class FlexLayout {
+public class Flex {
     public let view: UIView
 
     public enum Direction {
@@ -77,19 +77,19 @@ public class FlexLayout {
     // Creation / definition
     //
     @discardableResult
-    public func addContainer() -> FlexLayout {
+    public func addContainer() -> Flex {
         let view = FlexView()
         return addItem(view)
     }
     
     @discardableResult
-    public func addItem(_ view: UIView) -> FlexLayout {
+    public func addItem(_ view: UIView) -> Flex {
         self.view.addSubview(view)
-        return view.flexbox
+        return view.flex
     }
 
     @discardableResult
-    public func define(_ closure: (_ FlexLayoutContainer: FlexLayout) -> Void) -> FlexLayout {
+    public func define(_ closure: (_ flexContainer: Flex) -> Void) -> Flex {
         closure(self)
         return self
     }
@@ -118,7 +118,7 @@ public class FlexLayout {
     }
     
     @discardableResult
-    public func isIncludedInLayout(_ included: Bool) -> FlexLayout {
+    public func isIncludedInLayout(_ included: Bool) -> Flex {
         self.isIncludedInLayout = included
         return self
     }
@@ -131,19 +131,19 @@ public class FlexLayout {
     // direction, wrap, flow
     //
     @discardableResult
-    public func direction(_ value: Direction) -> FlexLayout {
+    public func direction(_ value: Direction) -> Flex {
         view.yoga.flexDirection = value.yogaValue
         return self
     }
     
     @discardableResult
-    public func wrap(_ value: Wrap) -> FlexLayout {
+    public func wrap(_ value: Wrap) -> Flex {
         view.yoga.flexWrap = value.yogaValue
         return self
     }
     
     @discardableResult
-    public func layoutDirection(_ value: LayoutDirection) -> FlexLayout {
+    public func layoutDirection(_ value: LayoutDirection) -> Flex {
         switch value {
         case .auto:
             let userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection
@@ -164,37 +164,37 @@ public class FlexLayout {
     // justity, alignment / position
     //
     @discardableResult
-    public func justifyContent(_ value: Justify) -> FlexLayout {
+    public func justifyContent(_ value: Justify) -> Flex {
         view.yoga.justifyContent = value.yogaValue
         return self
     }
     
     @discardableResult
-    public func alignContent(_ value: Align) -> FlexLayout {
+    public func alignContent(_ value: Align) -> Flex {
         view.yoga.alignContent = value.yogaValue
         return self
     }
     
     @discardableResult
-    public func alignSelf(_ value: Align) -> FlexLayout {
+    public func alignSelf(_ value: Align) -> Flex {
         view.yoga.alignSelf = value.yogaValue
         return self
     }
 
     @discardableResult
-    public func alignItems(_ value: Align) -> FlexLayout {
+    public func alignItems(_ value: Align) -> Flex {
         view.yoga.alignItems = value.yogaValue
         return self
     }
     
     @discardableResult
-    public func position(_ value: Position) -> FlexLayout {
+    public func position(_ value: Position) -> Flex {
         view.yoga.position = value.yogaValue
         return self
     }
 
     @discardableResult
-    public func overflow(_ value: Overflow) -> FlexLayout {
+    public func overflow(_ value: Overflow) -> Flex {
         view.yoga.overflow = value.yogaValue
         return self
     }
@@ -203,19 +203,19 @@ public class FlexLayout {
     // grow / shrink / basis
     //
     @discardableResult
-    public func grow(_ value: CGFloat) -> FlexLayout {
+    public func grow(_ value: CGFloat) -> Flex {
         view.yoga.flexGrow = value
        return self
     }
     
     @discardableResult
-    public func shrink(_ value: CGFloat) -> FlexLayout {
+    public func shrink(_ value: CGFloat) -> Flex {
         view.yoga.flexShrink = value
         return self
     }
 
     @discardableResult
-    public func basis(_ value: CGFloat?) -> FlexLayout {
+    public func basis(_ value: CGFloat?) -> Flex {
         if let value = value {
             view.yoga.flexBasis = YGValue(value)
         } else {
@@ -228,37 +228,37 @@ public class FlexLayout {
     // left / top / right / bottom / start / end
     //
     @discardableResult
-    public func left(_ value: CGFloat) -> FlexLayout {
+    public func left(_ value: CGFloat) -> Flex {
         view.yoga.left = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func top(_ value: CGFloat) -> FlexLayout {
+    public func top(_ value: CGFloat) -> Flex {
         view.yoga.top = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func right(_ value: CGFloat) -> FlexLayout {
+    public func right(_ value: CGFloat) -> Flex {
         view.yoga.right = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func bottom(_ value: CGFloat) -> FlexLayout {
+    public func bottom(_ value: CGFloat) -> Flex {
         view.yoga.bottom = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func start(_ value: CGFloat) -> FlexLayout {
+    public func start(_ value: CGFloat) -> Flex {
         view.yoga.start = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func end(_ value: CGFloat) -> FlexLayout {
+    public func end(_ value: CGFloat) -> Flex {
         view.yoga.end = YGValue(value)
         return self
     }
@@ -267,63 +267,63 @@ public class FlexLayout {
     // Width / height / height
     //
     @discardableResult
-    public func width(_ value: CGFloat) -> FlexLayout {
+    public func width(_ value: CGFloat) -> Flex {
         view.yoga.width = YGValue(value)
         return self
     }
     
     @discardableResult
-    public func height(_ value: CGFloat) -> FlexLayout {
+    public func height(_ value: CGFloat) -> Flex {
         view.yoga.height = YGValue(value)
         return self
     }
     
     @discardableResult
-    public func size(_ size: CGSize) -> FlexLayout {
+    public func size(_ size: CGSize) -> Flex {
         self.view.yoga.width = YGValue(size.width)
         self.view.yoga.height = YGValue(size.height)
         return self
     }
     
     @discardableResult
-    public func size(_ sideLength: CGFloat) -> FlexLayout{
+    public func size(_ sideLength: CGFloat) -> Flex{
         self.view.yoga.width = YGValue(sideLength)
         self.view.yoga.height = YGValue(sideLength)
         return self
     }
 
     @discardableResult
-    public func minWidth(_ value: CGFloat) -> FlexLayout {
+    public func minWidth(_ value: CGFloat) -> Flex {
         view.yoga.minWidth = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func minHeight(_ value: CGFloat) -> FlexLayout {
+    public func minHeight(_ value: CGFloat) -> Flex {
         view.yoga.minHeight = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func maxWidth(_ value: CGFloat) -> FlexLayout {
+    public func maxWidth(_ value: CGFloat) -> Flex {
         view.yoga.maxWidth = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func maxHeight(_ value: CGFloat) -> FlexLayout {
+    public func maxHeight(_ value: CGFloat) -> Flex {
         view.yoga.maxHeight = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func aspectRatio(_ value: CGFloat) -> FlexLayout {
+    public func aspectRatio(_ value: CGFloat) -> Flex {
         view.yoga.aspectRatio = value
         return self
     }
     
     @discardableResult
-    public func aspectRatio(of imageView: UIImageView) -> FlexLayout {
+    public func aspectRatio(of imageView: UIImageView) -> Flex {
         if let imageSize = imageView.image?.size {
             view.yoga.aspectRatio = imageSize.width / imageSize.height
         }
@@ -334,66 +334,66 @@ public class FlexLayout {
     // Margins
     //
     @discardableResult
-    public func marginTop(_ value: CGFloat) -> FlexLayout {
+    public func marginTop(_ value: CGFloat) -> Flex {
         view.yoga.marginTop = YGValue(value)
         return self
     }
     
     @discardableResult
-    public func marginLeft(_ value: CGFloat) -> FlexLayout {
+    public func marginLeft(_ value: CGFloat) -> Flex {
         view.yoga.marginLeft = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func marginStart(_ value: CGFloat) -> FlexLayout {
+    public func marginStart(_ value: CGFloat) -> Flex {
         view.yoga.marginStart = YGValue(value)
         return self
     }
     
     @discardableResult
-    public func marginBottom(_ value: CGFloat) -> FlexLayout {
+    public func marginBottom(_ value: CGFloat) -> Flex {
         view.yoga.marginBottom = YGValue(value)
         return self
     }
     
     @discardableResult
-    public func marginRight(_ value: CGFloat) -> FlexLayout {
+    public func marginRight(_ value: CGFloat) -> Flex {
         view.yoga.marginRight = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func marginEnd(_ value: CGFloat) -> FlexLayout {
+    public func marginEnd(_ value: CGFloat) -> Flex {
         view.yoga.marginEnd = YGValue(value)
         return self
     }
     
     @discardableResult
-    public func marginHorizontal(_ value: CGFloat) -> FlexLayout {
+    public func marginHorizontal(_ value: CGFloat) -> Flex {
         view.yoga.marginHorizontal = YGValue(value)
         return self
     }
     
     @discardableResult
-    public func marginVertical(_ value: CGFloat) -> FlexLayout {
+    public func marginVertical(_ value: CGFloat) -> Flex {
         view.yoga.marginVertical = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func margin(_ value: CGFloat) -> FlexLayout {
+    public func margin(_ value: CGFloat) -> Flex {
         view.yoga.margin = YGValue(value)
         return self
     }
     
-    @discardableResult func margin(_ vertical: CGFloat, _ horizontal: CGFloat) -> FlexLayout {
+    @discardableResult func margin(_ vertical: CGFloat, _ horizontal: CGFloat) -> Flex {
         view.yoga.marginVertical = YGValue(vertical)
         view.yoga.marginHorizontal = YGValue(horizontal)
         return self
     }
     
-    @discardableResult func margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat) -> FlexLayout {
+    @discardableResult func margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat) -> Flex {
         view.yoga.marginTop = YGValue(top)
         view.yoga.marginHorizontal = YGValue(horizontal)
         view.yoga.marginBottom = YGValue(bottom)
@@ -401,7 +401,7 @@ public class FlexLayout {
     }
 
     @discardableResult
-    public func margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> FlexLayout {
+    public func margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> Flex {
         view.yoga.marginTop = YGValue(top)
         view.yoga.marginLeft = YGValue(left)
         view.yoga.marginBottom = YGValue(bottom)
@@ -413,66 +413,66 @@ public class FlexLayout {
     // Padding
     //
     @discardableResult
-    public func paddingTop(_ value: CGFloat) -> FlexLayout {
+    public func paddingTop(_ value: CGFloat) -> Flex {
         view.yoga.paddingTop = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func paddingLeft(_ value: CGFloat) -> FlexLayout {
+    public func paddingLeft(_ value: CGFloat) -> Flex {
         view.yoga.paddingLeft = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func paddingBottom(_ value: CGFloat) -> FlexLayout {
+    public func paddingBottom(_ value: CGFloat) -> Flex {
         view.yoga.paddingBottom = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func paddingRight(_ value: CGFloat) -> FlexLayout {
+    public func paddingRight(_ value: CGFloat) -> Flex {
         view.yoga.paddingRight = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func paddingStart(_ value: CGFloat) -> FlexLayout {
+    public func paddingStart(_ value: CGFloat) -> Flex {
         view.yoga.paddingStart = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func paddingEnd(_ value: CGFloat) -> FlexLayout {
+    public func paddingEnd(_ value: CGFloat) -> Flex {
         view.yoga.paddingEnd = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func paddingHorizontal(_ value: CGFloat) -> FlexLayout {
+    public func paddingHorizontal(_ value: CGFloat) -> Flex {
         view.yoga.paddingHorizontal = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func paddingVertical(_ value: CGFloat) -> FlexLayout {
+    public func paddingVertical(_ value: CGFloat) -> Flex {
         view.yoga.paddingVertical = YGValue(value)
         return self
     }
 
     @discardableResult
-    public func padding(_ value: CGFloat) -> FlexLayout {
+    public func padding(_ value: CGFloat) -> Flex {
         view.yoga.padding = YGValue(value)
         return self
     }
 
-    @discardableResult func padding(_ vertical: CGFloat, _ horizontal: CGFloat) -> FlexLayout {
+    @discardableResult func padding(_ vertical: CGFloat, _ horizontal: CGFloat) -> Flex {
         view.yoga.paddingVertical = YGValue(vertical)
         view.yoga.paddingHorizontal = YGValue(horizontal)
         return self
     }
     
-    @discardableResult func padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat) -> FlexLayout {
+    @discardableResult func padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat) -> Flex {
         view.yoga.paddingTop = YGValue(top)
         view.yoga.paddingHorizontal = YGValue(horizontal)
         view.yoga.paddingBottom = YGValue(bottom)
@@ -480,7 +480,7 @@ public class FlexLayout {
     }
     
     @discardableResult
-    public func padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> FlexLayout {
+    public func padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> Flex {
         view.yoga.padding = YGValue(top)
         view.yoga.paddingLeft = YGValue(left)
         view.yoga.paddingBottom = YGValue(bottom)
@@ -492,38 +492,47 @@ public class FlexLayout {
     // Border
     //
     @discardableResult
-    public func borderLeft(_ value: CGFloat) -> FlexLayout {
+    public func borderLeft(_ value: CGFloat) -> Flex {
         view.yoga.borderLeftWidth = value
         return self
     }
 
-    public func borderTop(_ value: CGFloat) -> FlexLayout {
+    public func borderTop(_ value: CGFloat) -> Flex {
         view.yoga.borderTopWidth = value
         return self
     }
 
-    public func borderRight(_ value: CGFloat) -> FlexLayout {
+    public func borderRight(_ value: CGFloat) -> Flex {
         view.yoga.borderRightWidth = value
         return self
     }
 
-    public func borderBottom(_ value: CGFloat) -> FlexLayout {
+    public func borderBottom(_ value: CGFloat) -> Flex {
         view.yoga.borderBottomWidth = value
         return self
     }
 
-    public func borderStart(_ value: CGFloat) -> FlexLayout {
+    public func borderStart(_ value: CGFloat) -> Flex {
         view.yoga.borderStartWidth = value
         return self
     }
 
-    public func borderEnd(_ value: CGFloat) -> FlexLayout {
+    public func borderEnd(_ value: CGFloat) -> Flex {
         view.yoga.borderEndWidth = value
         return self
     }
 
-    public func border(_ value: CGFloat) -> FlexLayout {
+    public func border(_ value: CGFloat) -> Flex {
         view.yoga.borderWidth = value
+        return self
+    }
+    
+    //
+    // Visual properties
+    //
+    @discardableResult
+    public func backgroundColor(_ color: UIColor) -> Flex {
+        view.backgroundColor = color
         return self
     }
 }

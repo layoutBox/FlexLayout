@@ -10,7 +10,7 @@ import FlexLayout
 import PinLayout
 
 class YogaExampleDView: BaseView {
-    fileprivate let rootFlexbox = UIView()
+    fileprivate let rootFlexContainer = UIView()
 
     override init() {
         super.init()
@@ -22,11 +22,11 @@ class YogaExampleDView: BaseView {
         label.backgroundColor = .black
         
         // Yoga's C# example
-        rootFlexbox.flexbox.justifyContent(.start).alignItems(.start).define { (flexbox) in
-            flexbox.addItem(imageView).alignSelf(.stretch).grow(1)
-            flexbox.addItem(label).width(300).height(25).margin(20)
+        rootFlexContainer.flex.justifyContent(.start).alignItems(.start).define { (flex) in
+            flex.addItem(imageView).alignSelf(.stretch).grow(1)
+            flex.addItem(label).width(300).height(25).margin(20)
         }
-        addSubview(rootFlexbox)
+        addSubview(rootFlexContainer)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,10 +37,10 @@ class YogaExampleDView: BaseView {
         super.layoutSubviews()
 
         // Layout the flexbox container using PinLayout
-        // NOTE: Could be also layouted by setting directly rootFlexbox.frame
-        rootFlexbox.pin.topLeft().width(100%).height(300).marginTop(topLayoutGuide)
+        // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
+        rootFlexContainer.pin.top(topLayoutGuide).left().width(100%).height(300)
 
         // Then let the flexbox container layout itself
-        rootFlexbox.flexbox.layout()
+        rootFlexContainer.flex.layout()
     }
 }

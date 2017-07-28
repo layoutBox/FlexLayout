@@ -9,7 +9,7 @@
 import UIKit
 import YogaKit
 
-extension FlexLayout.Direction {
+extension Flex.Direction {
     var yogaValue: YGFlexDirection {
         switch self {
         case .column:        return YGFlexDirection.column
@@ -19,7 +19,7 @@ extension FlexLayout.Direction {
         }
     }
 }
-extension FlexLayout.Overflow {
+extension Flex.Overflow {
     var yogaValue: YGOverflow {
         switch self {
         case .visible: return YGOverflow.visible
@@ -29,7 +29,7 @@ extension FlexLayout.Overflow {
     }
 }
 
-extension FlexLayout.Justify {
+extension Flex.Justify {
     var yogaValue: YGJustify {
         switch self {
         case .start:        return YGJustify.flexStart
@@ -41,7 +41,7 @@ extension FlexLayout.Justify {
     }
 }
 
-extension FlexLayout.Align {
+extension Flex.Align {
     var yogaValue: YGAlign {
         switch self {
         case .start:        return YGAlign.flexStart
@@ -56,7 +56,7 @@ extension FlexLayout.Align {
     }
 }
 
-extension FlexLayout.Wrap {
+extension Flex.Wrap {
     var yogaValue: YGWrap {
         switch self {
         case .noWrap:      return YGWrap.noWrap
@@ -66,7 +66,7 @@ extension FlexLayout.Wrap {
     }
 }
 
-extension FlexLayout.Position {
+extension Flex.Position {
     var yogaValue: YGPositionType {
         switch self {
         case .relative: return YGPositionType.relative
@@ -75,7 +75,7 @@ extension FlexLayout.Position {
     }
 }
 
-extension FlexLayout.LayoutDirection {
+extension Flex.LayoutDirection {
     var yogaValue: YGDirection {
         switch self {
         case .LTR: return YGDirection.LTR

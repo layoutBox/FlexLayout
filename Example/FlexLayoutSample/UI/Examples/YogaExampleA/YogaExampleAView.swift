@@ -10,22 +10,22 @@ import FlexLayout
 import PinLayout
 
 class YogaExampleAView: BaseView {
-    fileprivate let rootFlexbox = UIView()
+    fileprivate let rootFlexContainer = UIView()
 
     override init() {
         super.init()
 
         // Yoga's C Example
-        rootFlexbox.flexbox.direction(.row).padding(20).define { (flexbox) in
-            flexbox.addContainer().width(80).marginEnd(20).define({ (flexbox) in
-                flexbox.view.backgroundColor = .flexLayoutColor
+        rootFlexContainer.flex.direction(.row).padding(20).define { (flex) in
+            flex.addContainer().width(80).marginEnd(20).define({ (flex) in
+                flex.view.backgroundColor = .flexLayoutColor
             })
 
-            flexbox.addContainer().height(25).alignSelf(.center).grow(1).define({ (flexbox) in
-                flexbox.view.backgroundColor = .black
+            flex.addContainer().height(25).alignSelf(.center).grow(1).define({ (flex) in
+                flex.view.backgroundColor = .black
             })
         }
-        addSubview(rootFlexbox)
+        addSubview(rootFlexContainer)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,10 +36,10 @@ class YogaExampleAView: BaseView {
         super.layoutSubviews()
 
         // Layout the flexbox container using PinLayout
-        // NOTE: Could be also layouted by setting directly rootFlexbox.frame
-        rootFlexbox.pin.topLeft().width(100%).height(120).marginTop(topLayoutGuide)
+        // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
+        rootFlexContainer.pin.top(topLayoutGuide).left().width(100%).height(120)
 
         // Then let the flexbox container layout itself
-        rootFlexbox.flexbox.layout()
+        rootFlexContainer.flex.layout()
     }
 }

@@ -10,7 +10,7 @@ import FlexLayout
 import PinLayout
 
 class YogaExampleEView: BaseView {
-    fileprivate let rootFlexbox = UIView()
+    fileprivate let rootFlexContainer = UIView()
 
     override init() {
         super.init()
@@ -23,20 +23,20 @@ class YogaExampleEView: BaseView {
         label.numberOfLines = 0
         
         // Yoga's Android example
-        rootFlexbox.flexbox.define { (flexbox) in
-            flexbox.addItem(imageView).grow(1)
+        rootFlexContainer.flex.define { (flex) in
+            flex.addItem(imageView).grow(1)
             
-            flexbox.addContainer().direction(.row).padding(20).alignItems(.center).define({ (flexbox) in
-                flexbox.addContainer().size(50).define({ (flexbox) in
-                    flexbox.view.backgroundColor = .flexLayoutColor
+            flex.addContainer().direction(.row).padding(20).alignItems(.center).define({ (flex) in
+                flex.addContainer().size(50).define({ (flex) in
+                    flex.view.backgroundColor = .flexLayoutColor
                 })
 
-                flexbox.addContainer().height(25).marginStart(20).grow(1).define({ (flexbox) in
-                    flexbox.view.backgroundColor = .black
+                flex.addContainer().height(25).marginStart(20).grow(1).define({ (flex) in
+                    flex.view.backgroundColor = .black
                 })
             })
         }
-        addSubview(rootFlexbox)
+        addSubview(rootFlexContainer)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,10 +47,10 @@ class YogaExampleEView: BaseView {
         super.layoutSubviews()
 
         // Layout the flexbox container using PinLayout 
-        // NOTE: Could be also layouted by setting directly rootFlexbox.frame
-        rootFlexbox.pin.topLeft().width(100%).height(300).marginTop(topLayoutGuide)
+        // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
+        rootFlexContainer.pin.top(topLayoutGuide).left().width(100%).height(300)
 
         // Then let the flexbox container layout itself
-        rootFlexbox.flexbox.layout()
+        rootFlexContainer.flex.layout()
     }
 }

@@ -13,7 +13,7 @@ class YogaExampleCViewController: BaseViewController {
     }
 
     init(pageType: PageType) {
-        super.init(nibName: nil, bundle: nil)
+        super.init()
         title = pageType.text
     }
     

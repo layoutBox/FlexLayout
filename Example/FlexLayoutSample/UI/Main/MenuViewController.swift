@@ -70,8 +70,8 @@ class MenuViewController: BaseViewController {
         return self.view as! MenuView
     }
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         title = "FlexLayout Examples"
     }
 

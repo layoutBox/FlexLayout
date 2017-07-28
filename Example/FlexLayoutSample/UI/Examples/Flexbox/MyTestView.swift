@@ -11,7 +11,7 @@ import PinLayout
 
 class MyTestView: BaseView {
     
-    fileprivate let rootFlexbox = UIView()
+    fileprivate let rootFlexContainer = UIView()
 
     override init() {
         super.init()
@@ -26,7 +26,7 @@ class MyTestView: BaseView {
             fbContainer.addItem(CheckBox())
             fbContainer.addItem(CheckBox())*/
 
-//        flexbox.addItem(rootFlexbox).define { (flexbox) in
+//        flexbox.addItem(rootFlexContainer).define { (flexbox) in
         
         let imageView = UIView()
         imageView.backgroundColor = .flexLayoutColor
@@ -38,36 +38,36 @@ class MyTestView: BaseView {
         let container = UIView()
         container.backgroundColor = .blue
         
-        flexbox.define { (flexbox) in
-            flexbox.addItem(imageView).grow(1)
+        flex.define { (flex) in
+            flex.addItem(imageView).grow(1)
             
-            flexbox.addItem(container).width(100).height(100)
+            flex.addItem(container).width(100).height(100)
 
-//            flexbox.addItem(container).direction(.row).marginVertical(4).isVisible(false).alignItems(.center).define({ (flexbox) in
-////                flexbox.createBox().width(50).height(50).define({ (flexbox) in
-////                    flexbox.view.backgroundColor = .flexLayoutColor
+//            flex.addItem(container).direction(.row).marginVertical(4).isVisible(false).alignItems(.center).define({ (flex) in
+////                flex.createBox().width(50).height(50).define({ (flex) in
+////                    flex.view.backgroundColor = .flexLayoutColor
 ////                })
-//                flexbox.view.backgroundColor = .red
+//                flex.view.backgroundColor = .red
 //
-////                flexbox.createBox().height(25).marginStart(20).grow(1).define({ (flexbox) in
-////                    flexbox.view.backgroundColor = .black
+////                flex.createBox().height(25).marginStart(20).grow(1).define({ (flex) in
+////                    flex.view.backgroundColor = .black
 ////                })
 //            })
 
-//            flexbox.addItem(label).marginHorizontal(20)
+//            flex.addItem(label).marginHorizontal(20)
         }
         
 //        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (_) in
 //            UIView.animate(withDuration: 0.5, animations: {
-//                container.flexbox.isVisible(false)
-////                container.flexbox.setNeedsLayout()
+//                container.flex.isVisible(false)
+////                container.flex.setNeedsLayout()
 //                self.relayoutFlexbox()
 //            })
 //        }
 
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
 //            UIView.animate(withDuration: 0.5, animations: {
-                container.flexbox.isIncludedInLayout(false)
+                container.flex.isIncludedInLayout(false)
                 container.isHidden = true
                 self.relayoutFlexbox()
 //            })
@@ -81,28 +81,13 @@ class MyTestView: BaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        // C
-        //rootFlexbox.pin.topLeft().right().height(120).marginTop(topLayoutGuide)
+        flex.width(bounds.width).height(300).layout()
 
-        // Obj-c
-        //rootFlexbox.pin.topLeft().right().height(300).marginTop(topLayoutGuide)
-
-        // Java
-        //rootFlexbox.pin.topLeft().right().height(300).marginTop(topLayoutGuide)
-
-        // C#
-//        rootFlexbox.pin.topLeft().width(100%).height(300).marginTop(topLayoutGuide)
-        
-        flexbox.width(bounds.width).height(300).layout()
-        
-        let toto = flexbox
-        print("toto: \(toto)")
-        
-//        rootFlexbox.flexbox.layout()
+//        rootFlexContainer.flex.layout()
     }
     
     fileprivate func relayoutFlexbox() {
 //        yoga.markDirty()
-        flexbox.width(bounds.width).height(300).layout()
+        flex.width(bounds.width).height(300).layout()
     }
 }

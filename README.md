@@ -33,8 +33,8 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 ### Content
 
+* [Introduction example](#intro_usage_example)
 * [FlexLayout principles and philosophy](#introduction)
-* [Usage example](#intro_usage_example)
 * [Documentation](#documentation)
 	* [Creation, modification and definition of flexbox containers](#create_modify_define_containers)
 	* [Flexbox containers properties](#containers_properties)
@@ -54,39 +54,69 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <br>
 
+:pushpin: FlexLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share a similar syntax and method names (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, ...). PinLayout is a lower level layout framework, it is particularly useful for absolute positionning and animations. 
+
+## Introduction example <a name="intro_usage_example"></a>
+###### Example:
+This example layout multiples views using column and row flexboxes inside a flex container.
+
+Two steps to use a flexbox container:
+
+1. **Setup the container**: Initialize your flexbox structure. Note that it is also possible to alter it later. 
+2. **Layout the container**: The layout of the container should be done from `layoutSubviews()` (or `willTransition(to: UITraitCollection, ...)` and `viewWillTransition(to: CGSize, ...)`). 
+	1. First you must layout the flexbox container, i.e. position it and optionnaly set its size. 
+	2. Then layout the flexbox children using Flex method `layout()`.
+
+![](docs/images/examples/flexlayout-intro-example.png)
+
+```swift
+init() {
+   super.init(frame: .zero)
+
+   // Column flex container
+   rootFlexContainer.flex.padding(12).define { (flex) in
+        // Row flex container
+        flex.addContainer().direction(.row).define { (flex) in
+            flex.addItem(imageView).width(100).aspectRatio(of: imageView)
+            
+            // Column flex container
+            flex.addContainer().paddingLeft(12).grow(1).define { (flex) in
+                flex.addItem(segmentedControl).marginBottom(12).grow(1)
+                flex.addItem(label)
+            }
+        }
+        
+        flex.addContainer().height(1).marginTop(12).backgroundColor(.lightGray)
+        flex.addItem(bottomLabel).marginTop(12)
+    }
+}
+
+override func layoutSubviews() {
+    super.layoutSubviews() 
+
+    // 1) Layout the flex container. This example use PinLayout for that purpose, but it could be done 
+    //    also by setting the rootFlexContainer's frame:
+    //       rootFlexContainer.frame = CGRect(x: 0, y: topLayoutGuide, 
+    //                                        width: frame.width, height: rootFlexContainer.height)
+    rootFlexContainer.pin.top().left().width(100%).marginTop(topLayoutGuide)
+
+    // 2) Then let the flexbox container layout itself. Here the container's height will be adjusted automatically.
+    rootFlexContainer.flex.layout(mode: .adjustHeight)
+}
+``` 
+
+<br>
+
 ## FlexLayout principles and philosophy <a name="introduction"></a>
 
 * Flexbox layouting is simple, powerfull and fast.
 * FlexLayout syntax is concise and chainable.
 * FlexLayout/yoga is incredibly fast, its even faster than manual layout. See performances below.
 * The source code structure matches the flexbox structure, making it easier to understand and modify. Flex containers are defined on one line, and its items (children) are imbricated. This makes the flexbox structure much more visual and easy to understand.
-* FlexLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share a similar syntax and method names (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, ...). PinLayout is a lower level layout framework, it is particularly useful for absolute positionning and animations. 
 
 NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) implementation and expose all its features. So note that on this documentation we will refer to FlexLayout, but this also applies to Yoga.
 
 <br>
-
-## Usage sample <a name="intro_usage_example"></a>
-###### Example:
-
-![](docs/pinlayout-intro-example.png)
-
-Two steps to use a flexbox container:
-
-1. **Setup**: Initialize your flexbox structure. This need to be done once, probably in your UIView initializer.
-2. **Layout**: The layout of the flexbox should be done from layoutSubviews() (or `willTransition(to: UITraitCollection, ...)` and `viewWillTransition(to: CGSize, ...)`). First layout your root flexbox container, then layout the flexbox children using FlexLayout method `layout()`.
-
-```swift
-init() {
-   super.init(frame: .zero)
-}
-
-override func layoutSubviews() {
-   super.layoutSubviews() 
-    ...
-    rootFlexboxView.layout()
-}
-``` 
 
 ## Variation from CSS flexbox
 FlexLayout default properties are different from CSS flexbox. FlexLayout use the same default properties as Yoga/ReactNative flexbox.
@@ -164,7 +194,7 @@ This methods adds a flex item (UIView) to a flex container. Internally the metho
 
 ###### Usage examples:
 ```swift
-   view.flexbox.addItem(imageView).width(100).aspectRatio(1)
+   view.flex.addItem(imageView).width(100).aspectRatio(1)
 ```
 <br>
 
@@ -176,24 +206,24 @@ This method is similar to `addItem()` except that it also creates the flex conta
 
 ###### Usage examples:
 ```swift
-	view.flexbox.addContainer().direction(.row).padding(10)
+	view.flex.addContainer().direction(.row).padding(10)
 ```
 <br>
 
 ### define()
 - Applies to: `flex containers`
-- Parameter: Closure of type `(flexbox: FlexLayout) -> Void`
+- Parameter: Closure of type `(flex: Flex) -> Void`
 
-This method is used to structure your code so that it matches the flexbox structure. The method takes as parameter a closure with a single parameter called `flexbox`. This parameter is in fact the view's flexbox interface, it can be used to adds other flex items and containers. 
+This method is used to structure your code so that it matches the flexbox structure. The method takes as parameter a closure with a single parameter called `flex`. This parameter is in fact the view's flex interface, it can be used to adds other flex items and containers. 
 
 ###### Usage examples:
 ```swift
-  view.flexbox.addContainer().define { (flexbox) in
-      flexbox.addItem(imageView).grow(1)
+  view.flex.addContainer().define { (flex) in
+      flex.addItem(imageView).grow(1)
 		
-      flexbox.addContainer().direction(.row).define { (flexbox) in
-          flexbox.addItem(titleLabel).grow(1)
-          flexbox.addItem(priceLabel)
+      flex.addContainer().direction(.row).define { (flex) in
+          flex.addItem(titleLabel).grow(1)
+          flex.addItem(priceLabel)
       }
   }
 ```
@@ -202,14 +232,14 @@ The same results can also be obtained without using the `define()` method, but t
 
 ```swift
    let columnContainer = UIView()
-   columnContainer.flexbox.addItem(imageView).grow(1)
-   view.flexbox.addItem(columnContainer)
+   columnContainer.flex.addItem(imageView).grow(1)
+   view.flex.addItem(columnContainer)
 		
    let rowContainer = UIView()
-   rowContainer.flexbox.direction(.row)
-   rowContainer.flexbox.addItem(titleLabel).grow(1)
-   rowContainer.flexbox.addItem(priceLabel)
-   columnContainer.flexbox.addItem(rowContainer)
+   rowContainer.flex.direction(.row)
+   rowContainer.flex.addItem(titleLabel).grow(1)
+   rowContainer.flex.addItem(priceLabel)
+   columnContainer.flex.addItem(rowContainer)
 ```
 
 **Avantages of using `define()`**:
@@ -222,17 +252,17 @@ The same results can also be obtained without using the `define()` method, but t
  
  
 ### Accessing flex items UIView <a name="accessing_flexbox_view"></a>
-It is possible to access the flex items's UIView using `flexbox.view`. This is particularly usefull when using `Flexbox.define()` method.
+It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `Flex.define()` method.
 
 ###### Example:
 This example creates a flexbox container and sets its background color and add rounded corners.
 ![Flowers](docs/01-example-distance-superview-edge.png)
 
 ```swift
-    flexbox.createBox().direction(.row).padding(20).alignItems(.center).define({ (flexbox) in
-        flexbox.createBox().width(50).height(50).define({ (flexbox) in
-            flexbox.view.backgroundColor = UIColor.red
-            flexbox.view.layer.cornerRadius = 10
+    flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
+        flex.createBox().width(50).height(50).define({ (flex) in
+            flex.view.backgroundColor = UIColor.red
+            flex.view.layer.cornerRadius = 10
         }}
     })
 ``` 
@@ -240,12 +270,12 @@ This example creates a flexbox container and sets its background color and add r
 Another possible solution:
 
 ```swift
-    flexbox.createBox().direction(.row).padding(20).alignItems(.center).define({ (flexbox) in
+    flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
         let container = UIView()
         container.backgroundColor = UIColor.red
         container.layer.cornerRadius = 10
         
-        flexbox.addChild(container).width(50).height(50)
+        flex.addChild(container).width(50).height(50)
     })
 ``` 
 <br>
@@ -295,8 +325,8 @@ NEW: This property is used to specify the direction of the flex container’s ma
 
 ###### Usage examples:
 ```swift
-	view.flexbox.direction(.column)  // Not required, defaut value. 
-	view.flexbox.direction(.row)
+	view.flex.direction(.column)  // Not required, defaut value. 
+	view.flex.direction(.row)
 ```
 <br/>
 
@@ -320,8 +350,8 @@ NEW: By default the flex container fits all flex items into one line. Using this
 
 ###### Usage examples:
 ```swift
-	view.flexbox.wrap(.nowrap)  // Not required, defaut value. 
-	view.flexbox.wrap(.wrap)
+	view.flex.wrap(.nowrap)  // Not required, defaut value. 
+	view.flex.wrap(.wrap)
 ```
 <br/>
 
@@ -345,8 +375,8 @@ NEW: justify-content property aligns flex items along the main axis of the curre
 
 ###### Usage examples:
 ```swift
-	view.flexbox. justifyContent(.start)  // defaut value. 
-	view.flexbox. justifyContent(.center)
+	view.flex.justifyContent(.start)  // defaut value. 
+	view.flex.justifyContent(.center)
 ```
 <br/>
 
@@ -438,6 +468,7 @@ A grow value of 0 (default value) keeps the view's size in the main-axis directi
 For example, if all items have `grow` set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.
 
 NEW: This property specifies the flex grow factor, which determines how much the flex item will grow relative to the rest of the flex items.
+
 <br>
 
 ### shrink
@@ -453,7 +484,6 @@ When omitted, it is set to 1 and the flex shrink factor is multiplied by the fle
 A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to overflow its flex container.
 
 NEW: The flex-shrink specifies the flex shrink factor, which determines how much the flex item will shrink relative to the rest of the flex items
-
 
 <br>
 
@@ -484,9 +514,9 @@ When a flexbox's UIView is excluded, FlexLayout won't layout the view and its ch
 * `isIncludedInLayout(: Bool)`
 
 FlexLayout automatically includes the UIView when:
-* The first time `UIView.flexbox` property is accessed
+* The first time `UIView.flex` property is accessed
 * When a child view is added to a flexbox container using `addChild(:UIView)`
-* When a flexbox container is created using `createBox()`
+* When a flexbox container is created using `addContainer()`
 
 <br>
 
@@ -508,7 +538,7 @@ Returns the item size when layouted in the specified frame size.
 Get the size of view when layouted in a container with a width of 200 pixels.
 
 ```swift
-    let layoutSize = viewA.flexbox.sizeThatFits(CGSize(width: 200, height: CGFloat.greatestFiniteMagnitude)
+    let layoutSize = viewA.flex.sizeThatFits(CGSize(width: 200, height: CGFloat.greatestFiniteMagnitude)
 ```
 
 ### intrinsicSize
@@ -537,12 +567,12 @@ An item marked with Position = Absolute is positioned absolutely in regards to i
 Using these options you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t effect their siblings layout Position = Absolute can be used to create overlays and stack children in the Z axis.
 
 
-    public func left(_ value: CGFloat) -> Flexbox {
-    public func top(_ value: CGFloat) -> Flexbox {
-    public func right(_ value: CGFloat) -> Flexbox {
-    public func bottom(_ value: CGFloat) -> Flexbox {
-    public func start(_ value: CGFloat) -> Flexbox {
-    public func end(_ value: CGFloat) -> Flexbox {
+    public func left(_ value: CGFloat) -> Flex {
+    public func top(_ value: CGFloat) -> Flex {
+    public func right(_ value: CGFloat) -> Flex {
+    public func bottom(_ value: CGFloat) -> Flex {
+    public func start(_ value: CGFloat) -> Flex {
+    public func end(_ value: CGFloat) -> Flex {
     
 <br>
 
@@ -566,13 +596,13 @@ The value specifies the width and the height of the view in pixels, creating a s
 
 ###### Usage examples:
 ```swift
-	view.flexbox.width(100)
-	view.flexbox.width(of: view1)
+	view.flex.width(100)
+	view.flex.width(of: view1)
 	
-	view.flexbox.height(200)
+	view.flex.height(200)
 	
-	view.flexbox.size(of: view1)
-	view.flexbox.size(250)
+	view.flex.size(of: view1)
+	view.flex.size(250)
 ```
 <br>
 
@@ -605,11 +635,11 @@ The value specifies the view's maximum height of the view in pixels. Value must 
    
 ###### Usage examples:
 ```swift
-	view.flexbox.maxWidth(200)
-	view.flexbox.width(of: view1).maxWidth(250)
+	view.flex.maxWidth(200)
+	view.flex.width(of: view1).maxWidth(250)
 	
-	view.flexbox.maxHeight(100)
-	view.flexbox.height(of: view1).maxHeight(200)
+	view.flex.maxHeight(100)
+	view.flex.height(of: view1).maxHeight(200)
 ```
 <br>
 
@@ -647,10 +677,10 @@ YOGA DOC: Margin, Padding are similar but have some important differences. By ap
 
 ###### Usage examples:
 ```swift
-	view.flexbox.margin(20)
-	view.flexbox.marginBottom(20)
-	view.flexbox.marginHorizontal(20)
-	view.flexbox.margin(10, 12, 0, 12)
+	view.flex.margin(20)
+	view.flex.marginBottom(20)
+	view.flex.marginHorizontal(20)
+	view.flex.margin(10, 12, 0, 12)
 ```
 
 <br>
@@ -674,10 +704,10 @@ FlexLayout ...
 
 ###### Usage examples:
 ```swift
-	view.flexbox.padding(20)
-	view.flexbox.paddingBottom(20)
-	view.flexbox.paddingHorizontal(20)
-	view.flexbox.padding(10, 12, 0, 12)
+	view.flex.padding(20)
+	view.flex.paddingBottom(20)
+	view.flex.paddingHorizontal(20)
+	view.flex.padding(10, 12, 0, 12)
 ```
 
 <br>

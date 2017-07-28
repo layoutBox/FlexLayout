@@ -1,26 +1,30 @@
 language: objective-c
 osx_image: xcode8.3
-xcode_project: FlexLayout.xcodeproj
-xcode_scheme: FlexLayout
-xcode_sdk: iphonesimulator9.3
-env:
-  global: 
-before_install:
-  #- brew update
-  #- brew install tailor
-  #- pod install
-  - gem install xcpretty-travis-formatter
-  - pod install --repo-update
 
-script: xcodebuild
-  -workspace FlexLayout.xcworkspace
-  -scheme "FlexLayout"
-  -sdk iphonesimulator
-  -destination 'platform=iOS Simulator,name=iPhone 6'
-  -enableCodeCoverage YES 
-  test
- | xcpretty -f `xcpretty-travis-formatter`
+env:
+  matrix:
+    - SCHEME=FlexLayout       SDK=iphonesimulator10.3
+#   - SCHEME=FlexLayoutSample SDK=iphonesimulator10.3
+
+before_install:
+#  - brew outdated xctool || brew upgrade xctool;
+  - gem install xcpretty-travis-formatter;
+  - gem install cocoapods --no-document --quiet;
+#  - pod repo update --silent;
+  - pod install --repo-update;
+
+script:
+  - |
+    if [[ $SCHEME = "FlexLayout" ]]; then
+      set -o pipefail && xcodebuild -workspace FlexLayout.xcworkspace -scheme "$SCHEME" -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone 6' -enableCodeCoverage YES build test | xcpretty -f `xcpretty-travis-formatter`
+    fi
+
+    if [[ $SCHEME = "FlexLayoutSample" ]]; then
+      set -o pipefail && xcodebuild -workspace FlexLayout.xcworkspace -scheme "$SCHEME" -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone 6' build | xcpretty -f `xcpretty-travis-formatter`
+    fi
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J 'FlexLayout' -J 'FlexLayoutTests'
-  
+  - |
+    if [[ $SCHEME = "FlexLayout" ]]; then
+      bash <(curl -s https://codecov.io/bash) -J 'FlexLayout' -J 'FlexLayoutTests'
+    fi
