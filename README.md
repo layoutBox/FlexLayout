@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/luc-dion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
+  <a href="https://github.com/luc-dion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="240"/></a>
 </p>
 
 <h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
@@ -17,11 +17,8 @@
 
 FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
 
-<br>
-
 ### WARNING: This project is not ready yet and its still under development. Thanks for coming back later. 
 
-<br>
 
 ### Requirements
 * iOS 8.0+
@@ -38,12 +35,10 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 	* [Flexbox items properties](#intems_properties)
 	* [Absolute positionning](#absolute_positionning)
 	* [Adjusting the size](#adjusting_size)
-		* [Width, height and size](#width_height_size)
+		* [Width, height and size](#width_height_size), 
 		* [minWidth, maxWidth, minHeight, maxHeight](#minmax_width_height_size)
 		* [Aspect Ratio](#aspect_ratio)
-	* [Margins](#margins)
-	* [Paddings](#paddings)
-	* [Borders](#borders)
+	* [Margins](#margins), [Paddings](#paddings), [Borders](#borders)
 * [Performance](#performance)
 * [FAQ](#faq)
 * [Comments, ideas, suggestions, issues, ....](#comments)
@@ -51,9 +46,15 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <br>
 
-:pushpin: FlexLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share a similar syntax and method names (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, ...). PinLayout is a lower level layout framework, it is particularly useful for absolute positionning and animations. 
+**FlexLayout + PinLayout**
 
-## Introduction example <a name="intro_usage_example"></a>
+<a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
+
+:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, ...). PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater control and animations. PinLayout can layout anything, but for many situations FlexLayout is even more simple.
+
+<br>
+
+## FlexLayout Introduction example <a name="intro_usage_example"></a>
 ###### Example:
 This example layout multiples views using column and row flexboxes inside a flex container.
 
@@ -168,8 +169,8 @@ The flex layout is constituted of parent container referred as **flex container*
 
 | Flexbox term     | Definition |
 |---------------------|----------|-------------------|
-| **`main-axis`** | The main axis of a flex container is the primary axis along which flex items are laid out.|
-| **`cross-axis`** | The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction
+| **`main-axis`** | The main axis of a flex container is the primary axis along which flex items are laid out. The main-axis direction is set using the `direction()` property. |
+| **`cross-axis`** | The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction |
 	
 In the following sections we will see:
 
