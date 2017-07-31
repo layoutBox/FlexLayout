@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/luc-dion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="240"/></a>
+  <a href="https://github.com/luc-dion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
 </p>
 
 <h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
@@ -17,8 +17,11 @@
 
 FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
 
+<br>
+
 ### WARNING: This project is not ready yet and its still under development. Thanks for coming back later. 
 
+<br>
 
 ### Requirements
 * iOS 8.0+
@@ -35,10 +38,12 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 	* [Flexbox items properties](#intems_properties)
 	* [Absolute positionning](#absolute_positionning)
 	* [Adjusting the size](#adjusting_size)
-		* [Width, height and size](#width_height_size), 
+		* [Width, height and size](#width_height_size)
 		* [minWidth, maxWidth, minHeight, maxHeight](#minmax_width_height_size)
 		* [Aspect Ratio](#aspect_ratio)
-	* [Margins](#margins), [Paddings](#paddings), [Borders](#borders)
+	* [Margins](#margins)
+	* [Paddings](#paddings)
+	* [Borders](#borders)
 * [Performance](#performance)
 * [FAQ](#faq)
 * [Comments, ideas, suggestions, issues, ....](#comments)
@@ -46,15 +51,9 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <br>
 
-**FlexLayout + PinLayout**
+:pushpin: FlexLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share a similar syntax and method names (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, ...). PinLayout is a lower level layout framework, it is particularly useful for absolute positionning and animations. 
 
-<a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
-
-:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, ...). PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater control and animations. PinLayout can layout anything, but for many situations FlexLayout is even more simple.
-
-<br>
-
-## FlexLayout Introduction example <a name="intro_usage_example"></a>
+## Introduction example <a name="intro_usage_example"></a>
 ###### Example:
 This example layout multiples views using column and row flexboxes inside a flex container.
 
@@ -666,6 +665,8 @@ YOGA DOC: Margin, Padding are similar but have some important differences. By ap
 * `marginLeft(_ value: CGFloat)`
 * `marginBottom(_ value: CGFloat)`
 * `marginRight(_ value: CGFloat)`
+* `marginStart(_ value: CGFloat)`
+* `marginEnd(_ value: CGFloat)`
 * `marginHorizontal(_ value: CGFloat)`
 * `marginVertical(_ value: CGFloat)`
 * `margin(_ value: CGFloat) `
@@ -692,6 +693,8 @@ FlexLayout ...
 * `paddingLeft(_ value: CGFloat)`
 * `paddingBottom(_ value: CGFloat)`
 * `paddingRight(_ value: CGFloat)`
+* `paddingStart(_ value: CGFloat)`
+* `paddingEnd(_ value: CGFloat)`
 * `paddingHorizontal(_ value: CGFloat)`
 * `paddingVertical(_ value: CGFloat)`
 * `padding(_ value: CGFloat) `
@@ -728,9 +731,9 @@ FlexLayout ...
 
 # FlexLayout's Performance <a name="performance"></a>
 
-FlexLayout's performance has been measured using the nice and simple LayoutKit benchmark. FlexLayout has been added to this benchmark to compare its performance. 
+FlexLayout's performance has been measured using the nice LayoutKit benchmark. FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare its performance. 
 
-As you can see in the following chart, FlexLayout's performance is as fast as manual layouting, and **between 12x and 16x faster than auto layout**, for all types of iPhone (5/6/6S/7)
+As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout**.
 
 These results also means that ** FlexLayout is faster than any layout frameworks that is built over auto layout**. 
 
@@ -738,7 +741,7 @@ These results also means that ** FlexLayout is faster than any layout frameworks
 
 <p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
 <p align="center">
-  <img src="docs/Benchmark/Benchmark-iPhone6.png" alt="FlexLayout Performance" width=600/>
+  <img src="docs/images/benchmark/benchmark-iPhone6.png" alt="FlexLayout Performance" width=600/>
 </p>
 
 
