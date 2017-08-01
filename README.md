@@ -17,11 +17,8 @@
 
 FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
 
-<br>
-
 ### WARNING: This project is not ready yet and its still under development. Thanks for coming back later. 
 
-<br>
 
 ### Requirements
 * iOS 8.0+
@@ -51,9 +48,15 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <br>
 
-:pushpin: FlexLayout is a companion of [PinLayout](https://github.com/mirego/PinLayout). They share a similar syntax and method names (ex: width, height, minWidth, maxWidth, marginTop, marginHorizontal, ...). PinLayout is a lower level layout framework, it is particularly useful for absolute positionning and animations. 
+**FlexLayout + PinLayout**
 
-## Introduction example <a name="intro_usage_example"></a>
+<a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
+
+:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater fine control and animations. PinLayout can layout anything, but for some type of situations involving many views, FlexLayout is even more simple.
+
+<br>
+
+## FlexLayout Introduction examples <a name="intro_usage_example"></a>
 ###### Example:
 This example layout multiples views using column and row flexboxes inside a flex container.
 
@@ -641,23 +644,23 @@ The value specifies the view's maximum height of the view in pixels. Value must 
 <br>
 
 ### Aspect Ratio <a name="aspect_ratio"></a>
-...
-
-YOGA DOC: AspectRatio is a property introduced by Yoga. AspectRatio solves the problem of knowing one dimension of an element and an aspect ratio, this is very common when it comes to videos, images, and other media types. AspectRatio accepts any floating point value > 0, the default is undefined.
+AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other media types. AspectRatio accepts any floating point value > 0, the default is undefined.
 
 * AspectRatio is defined as the ratio between the width and the height of a node e.g. if a node has an aspect ratio of 2 then its width is twice the size of its height.
 * AspectRatio respects the Min and Max dimensions of an item.
-* AspectRatio has higher priority than FlexGrow
+* AspectRatio has higher priority than `grow`.
 * If AspectRatio, Width, and Height are set then the cross dimension is overridden
 
+   
+###### Usage examples:
+```swift
+	imageView.flex.aspectRatio(16/9)
+```
 <br/>
 
 
 ## 6. Margins <a name="margins"></a>
-FlexLayout ....
-
-YOGA DOC: Margin, Padding are similar but have some important differences. By applying Margin to an item you specify the offset a certain edge of the item should have from it’s closest sibling or parent. With Padding on the other hand you specify the offset children should have from a certain edge on the parent. Border behaves nearly identically to Padding and is only separate from Padding to make it easier to implement border effect such as color. In the below illustrations the green box is a child of the dark gray box.
-
+By applying Margin to an item you specify the offset a certain edge of the item should have from it’s closest sibling or parent.
 
 **Methods:**
 
@@ -685,7 +688,8 @@ YOGA DOC: Margin, Padding are similar but have some important differences. By ap
 <br>
 
 ## 7. Paddings <a name="paddings"></a>
-FlexLayout ...
+
+Padding specify the **offset children should have** from a certain edge on the parent. 
 
 **Methods:**
 
@@ -714,6 +718,7 @@ FlexLayout ...
 <br>
 
 ## 8. Borders <a name="borders"></a>
+Border behaves nearly identically to Padding and is only separate from Padding to make it easier to implement border effect such as color.
 
 **Methods:**
 
@@ -731,17 +736,17 @@ FlexLayout ...
 
 # FlexLayout's Performance <a name="performance"></a>
 
-FlexLayout's performance has been measured using the nice LayoutKit benchmark. FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare its performance. 
+FlexLayout's performance has been measured using the nice and simple LayoutKit benchmark. FlexLayout has been added to this benchmark to compare its performance. 
 
-As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout**.
+As you can see in the following chart, FlexLayout's performance is as fast as manual layouting, and **between 12x and 16x faster than auto layout**, for all types of iPhone (5/6/6S/7)
 
-These results also means that ** FlexLayout is faster than any layout frameworks that is built over auto layout**. 
+These results also means that **FlexLayout is faster than any layout frameworks that is built over auto layout**. 
 
 [See here more complete details, results and explanation of the benchmark](docs/Benchmark.md).
 
 <p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
 <p align="center">
-  <img src="docs/images/benchmark/benchmark-iPhone6.png" alt="FlexLayout Performance" width=600/>
+  <img src="docs/images/benchmark/Benchmark-iPhone6.png" alt="FlexLayout Performance" width=600/>
 </p>
 
 
@@ -793,4 +798,4 @@ FlexLayout recent history is available in the are documented in the [CHANGELOG](
 <br>
 
 ## License
-BSD 3-Clause License
+BSD 3-Clause License 
