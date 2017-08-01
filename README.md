@@ -740,7 +740,7 @@ FlexLayout's performance has been measured using the nice LayoutKit benchmark. F
 
 As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
 
-These results also means that ** FlexLayout and PinLayout are faster than any layout frameworks that is built over auto layout**. 
+These results also means that **FlexLayout and PinLayout are faster than any layout frameworks that is built over auto layout**. 
 
 [See here more complete details, results and explanation of the benchmark](docs/Benchmark.md).
 
