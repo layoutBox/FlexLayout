@@ -736,11 +736,11 @@ Border behaves nearly identically to Padding and is only separate from Padding t
 
 # FlexLayout's Performance <a name="performance"></a>
 
-FlexLayout's performance has been measured using the nice and simple LayoutKit benchmark. FlexLayout has been added to this benchmark to compare its performance. 
+FlexLayout's performance has been measured using the nice LayoutKit benchmark. FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare its performance. 
 
-As you can see in the following chart, FlexLayout's performance is as fast as manual layouting, and **between 12x and 16x faster than auto layout**, for all types of iPhone (5/6/6S/7)
+As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
 
-These results also means that **FlexLayout is faster than any layout frameworks that is built over auto layout**. 
+These results also means that ** FlexLayout and PinLayout are faster than any layout frameworks that is built over auto layout**. 
 
 [See here more complete details, results and explanation of the benchmark](docs/Benchmark.md).
 
