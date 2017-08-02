@@ -14,10 +14,9 @@
 ## Methodology  <a name="methodology"></a>
 
 ##### LayoutKit Benchmark
-FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) performance has been tested using a fork of [LayoutKit](https://github.com/mirego/LayoutKit). LayoutKit include an example app with a really nice and simple benchmark. It is used to compare LayoutKit with Auto layout, UIStackViews and manual layouting. 
+FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) performance has been tested using a [fork of LayoutKit](https://github.com/mirego/LayoutKit). LayoutKit include an example app with a really nice and simple benchmark. It is used to compare LayoutKit with Auto layout, UIStackViews and manual layouting. 
 
-The benchmark has been modified to also include [FlexLayout](https://github.com/lucdion/FlexLayout) and [PinLayout](https://github.com/mirego/LayoutKit/blob/master/LayoutKitSampleApp/Benchmarks/FeedItemPinLayoutView.swift). Remark how FlexLayout and PinLayout code is concise, clean and doesn't contain any computation [compared to Manual Layouting source code](#source_code_compare).
-
+The benchmark has been modified to also include [FlexLayout](https://github.com/lucdion/FlexLayout) and [PinLayout](https://github.com/mirego/LayoutKit/blob/master/LayoutKitSampleApp/Benchmarks/FeedItemPinLayoutView.swift). 
 
 The benchmark include tests for the following layout systems:
 
@@ -83,6 +82,9 @@ The table shows that FlexLayout took 23 miliseconds to render 100 UICollectionVi
 
 ## Code source comparison <a name="code_source_comparison"></a>
 This section shows the benchmark layout code for each type of layout framework.
+
+Remark how FlexLayout and PinLayout code is concise and clean compared to Manual Layout and Auto layout source code.
+
 
 
 ### FlexLayout source code
