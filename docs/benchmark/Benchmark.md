@@ -37,7 +37,7 @@ The LayoutKit benchmark layout UICollectionView and UITableView cells in multipl
 Here are the benchmark rendering results to compare visual results:
  
 * [Auto layout rendering result](benchmark_result_Autolayout.png)
-* FlexLayout rendering result
+* [FlexLayout rendering result](benchmark_result_FlexLayout.png)
 * [PinLayout rendering result](benchmark_result_PinLayout.png)
 * [LayoutKit rendering result](benchmark_result_LayoutKit.png)
 
@@ -71,13 +71,13 @@ The table shows that FlexLayout took 23 miliseconds to render 100 UICollectionVi
 :pushpin: You can see the benchmark raw data in this [spreadsheet](benchmark.xlsx).
 
 <p align="center">
-  <a href=""><img src="benchmark_iphone5.png" alt="PinLayout Performance"/></a>
+  <a href=""><img src="benchmark_iphone5.png" alt="PinLayout Performance" width="500"/></a>
   
 <p align="center">
-  <a href=""><img src="benchmark_iphone6.png" alt="PinLayout Performance"/></a>
+  <a href=""><img src="benchmark_iphone6.png" alt="PinLayout Performance" width="500"/></a>
 
 <p align="center">
-  <a href=""><img src="benchmark_iphone7.png" alt="PinLayout Performance"/></a>
+  <a href=""><img src="benchmark_iphone7.png" alt="PinLayout Performance" width="500"/></a>
 
 <br>
 
@@ -90,37 +90,37 @@ This section shows the benchmark layout code for each type of layout framework.
 [See FlexLayout source code on GitHub](https://github.com/mirego/LayoutKit/blob/master/LayoutKitSampleApp/Benchmarks/FeedItemFlexLayoutView.swift)
 
 ```swift
-flexbox.addChild(contentView).padding(8).define { (flexbox) in
-   flexbox.createBox().direction(.row).justify(.spaceBetween).define { (flexbox) in
-        flexbox.addChild(actionLabel)
-        flexbox.addChild(optionsLabel)
+flex.addItem(contentView).padding(8).define { (flex) in
+    flex.addContainer().direction(.row).justifyContent(.spaceBetween).define { (flex) in
+        flex.addItem(actionLabel)
+        flex.addItem(optionsLabel)
     }
     
-    flexbox.createBox().direction(.row).alignItems(.center).define({ (flexbox) in
-        flexbox.addChild(posterImageView).width(50).height(50).marginRight(8)
+    flex.addContainer().direction(.row).alignItems(.center).define({ (flex) in
+        flex.addItem(posterImageView).width(50).height(50).marginRight(8)
 
-        flexbox.createBox().grow(1).define({ (flexbox) in
-            flexbox.addChild(posterNameLabel)
-            flexbox.addChild(posterHeadlineLabel)
-            flexbox.addChild(posterTimeLabel)
+        flex.addContainer().grow(1).define({ (flex) in
+            flex.addItem(posterNameLabel)
+            flex.addItem(posterHeadlineLabel)
+            flex.addItem(posterTimeLabel)
         })
     })
 
-    flexbox.addChild(posterCommentLabel)
+    flex.addItem(posterCommentLabel)
 
-    flexbox.addChild(contentImageView).aspectRatio(350 / 200)
-    flexbox.addChild(contentTitleLabel)
-    flexbox.addChild(contentDomainLabel)
+    flex.addItem(contentImageView).aspectRatio(350 / 200)
+    flex.addItem(contentTitleLabel)
+    flex.addItem(contentDomainLabel)
 
-    flexbox.createBox().direction(.row).justify(.spaceBetween).marginTop(4).define({ (flexbox) in
-        flexbox.addChild(likeLabel)
-        flexbox.addChild(commentLabel)
-        flexbox.addChild(shareLabel)
+    flex.addContainer().direction(.row).justifyContent(.spaceBetween).marginTop(4).define({ (flex) in
+        flex.addItem(likeLabel)
+        flex.addItem(commentLabel)
+        flex.addItem(shareLabel)
     })
 
-    flexbox.createBox().direction(.row).marginTop(2).define({ (flexbox) in
-        flexbox.addChild(actorImageView).width(50).height(50).marginRight(8)
-        flexbox.addChild(actorCommentLabel).grow(1)
+    flex.addContainer().direction(.row).marginTop(2).define({ (flex) in
+        flex.addItem(actorImageView).width(50).height(50).marginRight(8)
+        flex.addItem(actorCommentLabel).grow(1)
     })
 }
 ```
