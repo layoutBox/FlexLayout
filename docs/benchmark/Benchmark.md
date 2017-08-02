@@ -22,10 +22,10 @@ The benchmark include tests for the following layout systems:
 
 * Auto layout
 * Auto layout using UIStackViews
-* LayoutKit
 * Manual layout (i.e. set UIView's frame directly)
 * [FlexLayout](https://github.com/lucdion/FlexLayout)
 * [PinLayout](https://github.com/mirego/PinLayout)
+* [LayoutKit](https://github.com/linkedin/LayoutKit)
 
 Anyone who would like to integrate any other layout frameworks to this GitHub repository is welcome.
 
@@ -44,7 +44,7 @@ Here are the benchmark rendering results to compare visual results:
 
 ## Results <a name="results"></a>
 
-As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
+As you can see in the following charts (see below), FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
 
 These results means that FlexLayout and PinLayout are faster than any layout frameworks that is built over auto layout (SnapKit, Stevia, PureLayout, ...). 
 
@@ -54,7 +54,7 @@ These results means that FlexLayout and PinLayout are faster than any layout fra
 
 This table shows FlexLayout and PinLayout performance compared to  Auto layout when layouting UICollectionView's cells.
 
-The table shows that FlexLayout took 23 miliseconds to render 100 UICollectionView's cells on a iPhone 6 compared to 53 miliseconds for PinLayout and 611 ms for Auto layout. Its 26 time faster for FlexLayout and 12 time faster for PinLayout.
+The table shows that **FlexLayout took 23 miliseconds** to render 100 UICollectionView's cells on a iPhone 6 compared to **53 miliseconds for PinLayout** and **611 ms for Auto layout**. Its 26 time faster for FlexLayout and 12 time faster for PinLayout.
 
 |           | Auto layout time  (seconds) | FlexLayout time  (seconds) | Flex performance compared to  Auto layout |  PinLayout time  (seconds) | PinLayout performance compared to  Auto layout  |
 |:---------:|:---------:|:---------:|:-----------------------------------------------------------------------:|:---------------------------:|:-------------------------:|
