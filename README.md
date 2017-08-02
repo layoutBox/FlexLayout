@@ -742,11 +742,11 @@ As you can see in the following chart, FlexLayout and PinLayout's performance ar
 
 These results also means that **FlexLayout and PinLayout are faster than any layout frameworks that is built over auto layout**. 
 
-[See here more complete details, results and explanation of the benchmark](docs/Benchmark.md).
+[See here more complete details, results and explanation of the benchmark](docs/benchmark/Benchmark.md).
 
 <p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
 <p align="center">
-  <img src="docs/images/benchmark/benchmark-iPhone6.png" alt="FlexLayout Performance" width=600/>
+  <img src="docs/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
 </p>
 
 
