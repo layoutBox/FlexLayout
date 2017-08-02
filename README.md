@@ -17,7 +17,7 @@
 
 FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
 
-### WARNING: This project is not ready yet and its still under development. Thanks for coming back later. 
+### NOTE: This project is still under heavy development. Thanks for coming back later. 
 
 
 ### Requirements
@@ -506,8 +506,7 @@ YOGA DOC: The FlexBasis property is an axis-independent way of providing the def
 - Applies to: `flex items`
 - Parameter: Bool
 
-It is possible to control dynamically if a flexbox's UIView is included or not in the flexbox layouting. 
-When a flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
+It is possible to control dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
 
 **Property & Method:**
 
@@ -524,9 +523,20 @@ FlexLayout automatically includes the UIView when:
 - Applies to: `flex items`
 - Parameter: Bool
 
-In the event that you need to another layout pass on a view you can mark it dirty via `flex.markAsDirty()`
+Yoga is so highly optimized, that flex items are layouted only when its flex container size change. In the event that you want to force FlexLayout to do a layout of a flex items, you can mark it as dirty using `markAsDirty()`.
 
-Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated
+Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated.
+
+###### Usage examples:
+```swift
+    // 1) Mark a view as dirty
+    childFlexContainer.flex.markAsDirty()
+    
+    // 2) Then layout the flex container.
+    rootFlexContainer.flex.layout(mode: .adjustHeight)
+```
+
+<br>
 
 ### sizeThatFits()
 - Applies to: `flex items`
@@ -541,39 +551,48 @@ Get the size of view when layouted in a container with a width of 200 pixels.
     let layoutSize = viewA.flex.sizeThatFits(CGSize(width: 200, height: CGFloat.greatestFiniteMagnitude)
 ```
 
+<br>
+
 ### intrinsicSize
 - Applies to: `flex items`
 - Parameter: None
 
 Item natural size, considering only properties of the view itself. Independent of the item frame.
 
-## 4. Absolute positionning: left / top / right / bottom / start / end  <a name="absolute_positionning"></a>
+<br>
+
+## 4. Absolute positionning  <a name="absolute_positionning"></a>
 - Applies to: `flex items`
 - Parameter: CGFloat
 
-YOGA DOC: The Position property tells Flexbox how you want your item to be positioned within its parent. There are 2 options:
-* Relative (default)
-* Absolute
+### position()
+The Position property tells Flexbox how you want your item to be positioned within its parent. There are 2 options:
 
-An item marked with Position = Absolute is positioned absolutely in regards to its parent. This is done through 6 properties:
+* relative (default)
+* absolute
 
-* Left - controls the distance a child’s left edge is from the parent’s left edge
-* Top - controls the distance a child’s top edge is from the parent’s top edge
-* Right - controls the distance a child’s right edge is from the parent’s right edge
-* Bottom - controls the distance a child’s bottom edge is from the parent’s bottom edge
-* Start - controls the distance a child’s start edge is from the parent’s start edge
-* End - controls the distance a child’s end edge is from the parent’s end edge
+###### Usage examples:
+```swift
+  view.flex.position(.absolute).top(10).left(10).size(50)
+```
 
-Using these options you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t effect their siblings layout Position = Absolute can be used to create overlays and stack children in the Z axis.
+### top(), bottom(), left(), right(), start(), end()
+A flex item which is `position` is set to `.absolute` is positioned absolutely in regards to its parent. This is done through 6 properties:
 
+* `top( value: CGFloat)`: Controls the distance a child’s top edge is from the parent’s top edge
+* `bottom( value: CGFloat)`: Controls the distance a child’s bottom edge is from the parent’s bottom edge
+* `left( value: CGFloat)`: Controls the distance a child’s left edge is from the parent’s left edge
+* `right( value: CGFloat)`: Controls the distance a child’s right edge is from the parent’s right edge
+* `start( value: CGFloat)`: Controls the distance a child’s start edge is from the parent’s start edge. In left-to-right direction (LTR), it corresponds to the `left()` property and in RTL to `right()` property.
+* `end( value: CGFloat)`: Controls the distance a child’s end edge is from the parent’s end edge. In left-to-right direction (LTR), it corresponds to the `right()` property and in RTL to `left()` property.
 
-    public func left(_ value: CGFloat) -> Flex {
-    public func top(_ value: CGFloat) -> Flex {
-    public func right(_ value: CGFloat) -> Flex {
-    public func bottom(_ value: CGFloat) -> Flex {
-    public func start(_ value: CGFloat) -> Flex {
-    public func end(_ value: CGFloat) -> Flex {
-    
+Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t effect their siblings layout with absolute position can be used to create overlays and stack children in the Z axis.
+
+###### Usage examples:
+```swift
+  view.flex.position(.absolute).top(10).right(10).width(100).height(50)
+```
+
 <br>
 
 ## 5. Adjusting the size  <a name="adjusting_size"></a> 
@@ -610,13 +629,13 @@ The value specifies the width and the height of the view in pixels, creating a s
 
 FlexLayout has methods to set the view’s minimum and maximum width, and minimum and maximum height. 
 
-YOGA DOC: Using MinWidth, MinHeight, MaxWidth, and MaxHeight gives you increased control over the final size of items in a layout. By mixing these properties with FlexGrow, FlexShrink, and AlignItems = Stretch, you are able to have items with dynamic size within a range which you control.
+Using minWidth, minHeight, maxWidth, and maxHeight gives you increased control over the final size of items in a layout. By mixing these properties with `grow`, `shrink`, and `alignItems(.stretch)`, you are able to have items with dynamic size within a range which you control.
 
-An example of when Max properties can be useful is if you are using AlignItems = Stretch but you know that your item won’t look good after it increases past a certain point. In this case, your item will stretch to the size of its parent or until it is as big as specified in the Max property.
+An example of when Max properties can be useful is if you are using `alignItems(.stretch)` but you know that your item won’t look good after it increases past a certain point. In this case, your item will stretch to the size of its parent or until it is as big as specified in the Max property.
 
-Same goes for the Min properties when using FlexShrink. For example, you may want children of a container to shrink to fit on one row, but if you specify a minimum width, they will break to the next line after a certain point (if you are using FlexWrap = Wrap).
+Same goes for the Min properties when using `shrink`. For example, you may want children of a container to shrink to fit on one row, but if you specify a minimum width, they will break to the next line after a certain point (if you are using `wrap(.wrap)`.
 
-Another case where Min and Max dimension constraints are useful is when using AspectRatio.
+Another case where Min and Max dimension constraints are useful is when using `aspectRatio`.
 
 
 **Methods:**
@@ -749,14 +768,15 @@ These results also means that **FlexLayout and PinLayout are faster than any lay
   <img src="docs/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
 </p>
 
-
 <br/>
 
-# Links
-* THE flexbox CSS reference: [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+# Flexbox external links
+* [THE flexbox CSS reference: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Interresting Yoga tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine?utm_source=raywenderlich.com+Weekly&utm_campaign=e7e557ef6a-raywenderlich_com_Weekly_Issue_125&utm_medium=email&utm_term=0_83b6edc87f-e7e557ef6a-414921561)
-* https://yoksel.github.io/flex-cheatsheet
-* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox
+* [Flex Cheatsheet: Test flexbox properties using CSS](https://yoksel.github.io/flex-cheatsheet)
+* [Mozialla: Advanced layouts with flexbox using CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox)
+
+<br/>
 
 # Installation <a name="installation"></a>
 
