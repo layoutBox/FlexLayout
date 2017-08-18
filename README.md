@@ -70,16 +70,21 @@ Two steps to use a flexbox container:
 ![](docs/images/examples/flexlayout-intro-example.png)
 
 ```swift
+fileprivate let rootFlexContainer = UIView()
+
 init() {
    super.init(frame: .zero)
+   
+   addSubview(rootFlexContainer)
+   ...
 
-   // Column flex container
+   // Column container
    rootFlexContainer.flex.padding(12).define { (flex) in
-        // Row flex container
+        // Row container
         flex.addContainer().direction(.row).define { (flex) in
             flex.addItem(imageView).width(100).aspectRatio(of: imageView)
             
-            // Column flex container
+            // Column container
             flex.addContainer().paddingLeft(12).grow(1).define { (flex) in
                 flex.addItem(segmentedControl).marginBottom(12).grow(1)
                 flex.addItem(label)
@@ -105,13 +110,15 @@ override func layoutSubviews() {
 }
 ``` 
 
+:pushpin: This example is available in the project Sample App. 
+
 <br>
 
 ## FlexLayout principles and philosophy <a name="introduction"></a>
 
 * Flexbox layouting is simple, powerfull and fast.
 * FlexLayout syntax is concise and chainable.
-* FlexLayout/yoga is incredibly fast, its even faster than manual layout. See performances below.
+* FlexLayout/yoga is incredibly fast, its even faster than manual layout. See [Performance](#performance).
 * The source code structure matches the flexbox structure, making it easier to understand and modify. Flex containers are defined on one line, and its items (children) are imbricated. This makes the flexbox structure much more visual and easy to understand.
 
 NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) implementation and expose all its features. So note that on this documentation we will refer to FlexLayout, but this also applies to Yoga.
@@ -119,8 +126,6 @@ NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) impleme
 <br>
 
 ## Variation from CSS flexbox
-FlexLayout default properties are different from CSS flexbox. FlexLayout use the same default properties as Yoga/ReactNative flexbox.
-....
 
 * In many CSS methods and properties name, the keyword `flex` was added to control name conflicts. FlexLayout removed this keyword for being more concise and removed this unecessary keyword:
 
@@ -135,7 +140,7 @@ FlexLayout default properties are different from CSS flexbox. FlexLayout use the
 	| **`end`** | `flex-end` | `flexEnd` |
 	
 	
-* Default properties:
+* FlexLayout default properties are sligthly different from CSS flexbox. This table resume these difference:
 
 	| Property     | FlexLayout default value | CSS default value | React Native default value |
 	|--------------|--------------------------|-------------------|----------------------------|
@@ -523,17 +528,21 @@ FlexLayout automatically includes the UIView when:
 - Applies to: `flex items`
 - Parameter: Bool
 
-Yoga is so highly optimized, that flex items are layouted only when its flex container size change. In the event that you want to force FlexLayout to do a layout of a flex items, you can mark it as dirty using `markAsDirty()`.
+Yoga is so highly optimized, that flex items are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex items, you can mark it as dirty using `markAsDirty()`.
 
 Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated.
 
 ###### Usage examples:
+In the case where a UILabel's text is updated, it is needed to mark the label as dirty and relayout the flex container.
 ```swift
-    // 1) Mark a view as dirty
-    childFlexContainer.flex.markAsDirty()
+    // 1) Update UILabel's text
+    label.text = "I love FlexLayout"
+     
+    // 2) Mark the UILabel as dirty
+    label.flex.markAsDirty()
     
-    // 2) Then layout the flex container.
-    rootFlexContainer.flex.layout(mode: .adjustHeight)
+    // 2) Then relayout the flex container.
+    rootFlexContainer.flex.layout()
 ```
 
 <br>
@@ -625,7 +634,7 @@ The value specifies the width and the height of the view in pixels, creating a s
 ```
 <br>
 
-### minWidth, maxWidth, minHeight, maxHeight <a name="minmax_width_height_size"></a>
+### minWidth(), maxWidth(), minHeight(), maxHeight() <a name="minmax_width_height_size"></a>
 
 FlexLayout has methods to set the view’s minimum and maximum width, and minimum and maximum height. 
 
@@ -662,7 +671,7 @@ The value specifies the view's maximum height of the view in pixels. Value must 
 ```
 <br>
 
-### Aspect Ratio <a name="aspect_ratio"></a>
+### aspectRatio() <a name="aspect_ratio"></a>
 AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other media types. AspectRatio accepts any floating point value > 0, the default is undefined.
 
 * AspectRatio is defined as the ratio between the width and the height of a node e.g. if a node has an aspect ratio of 2 then its width is twice the size of its height.

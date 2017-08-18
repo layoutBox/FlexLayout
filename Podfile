@@ -11,6 +11,9 @@ target 'FlexLayoutTests' do
   project 'FlexLayout.xcodeproj'
   pod 'FlexLayout', :path => './'
   pod 'YogaKit', '~> 1.6'
+
+  pod 'Quick'
+  pod 'Nimble', :inhibit_warnings => true
 end
 
 target 'FlexLayoutSample' do

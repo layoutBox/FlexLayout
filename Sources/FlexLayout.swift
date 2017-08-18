@@ -39,8 +39,6 @@ public class Flex {
         case stretch
         case baseline
         case auto       // Used only by alignSelf
-        //case spaceBetween ?
-        //case spaceAround ?
     }
 
     public enum Wrap {
@@ -57,8 +55,8 @@ public class Flex {
     public enum LayoutDirection {
         case inherit    // default
         case auto       // Detected automatically
-        case LTR        // Left to right
-        case RTL        // Right to right
+        case ltr        // Left to right
+        case rtl        // Right to right
     }
 
     init(view: UIView) {
@@ -152,8 +150,7 @@ public class Flex {
             } else {
                 userInterfaceLayoutDirection = UIApplication.shared.userInterfaceLayoutDirection
             }
-            view.yoga.direction = userInterfaceLayoutDirection == UIUserInterfaceLayoutDirection.leftToRight ? YGDirection.LTR : YGDirection.RTL
-            
+            view.yoga.direction = userInterfaceLayoutDirection == .leftToRight ? YGDirection.LTR : YGDirection.RTL
         default:
             view.yoga.direction = value.yogaValue
         }

@@ -78,8 +78,8 @@ extension Flex.Position {
 extension Flex.LayoutDirection {
     var yogaValue: YGDirection {
         switch self {
-        case .LTR: return YGDirection.LTR
-        case .RTL: return YGDirection.RTL
+        case .ltr: return YGDirection.LTR
+        case .rtl: return YGDirection.RTL
         default:   return YGDirection.inherit
         }
     }
