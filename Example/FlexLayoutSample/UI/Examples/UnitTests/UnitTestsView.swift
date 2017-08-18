@@ -79,7 +79,7 @@ class UnitTestsView: BaseView {
         rootFlexContainer.flex.define { (flex) in
             flex.addItem(aView).grow(1).marginLeft(10)
         }
-        expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
+//        expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
 
         
         rootFlexContainer.flex.layout()

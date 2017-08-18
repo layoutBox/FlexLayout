@@ -86,7 +86,7 @@ class MenuViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-//        didSelect(pageType: .flex)
+//        didSelect(pageType: .intro)
     }
 }
 
