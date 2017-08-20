@@ -54,9 +54,9 @@ public class Flex {
     
     public enum LayoutDirection {
         case inherit    // default
-        case auto       // Detected automatically
         case ltr        // Left to right
         case rtl        // Right to right
+        //case auto       // Detected automatically
     }
 
     init(view: UIView) {
@@ -87,7 +87,7 @@ public class Flex {
     }
 
     @discardableResult
-    public func define(_ closure: (_ flexContainer: Flex) -> Void) -> Flex {
+    public func define(_ closure: (_ flex: Flex) -> Void) -> Flex {
         closure(self)
         return self
     }
@@ -142,7 +142,7 @@ public class Flex {
     
     @discardableResult
     public func layoutDirection(_ value: LayoutDirection) -> Flex {
-        switch value {
+        /*switch value {
         case .auto:
             let userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection
             if #available(iOS 9.0, *) {
@@ -151,9 +151,9 @@ public class Flex {
                 userInterfaceLayoutDirection = UIApplication.shared.userInterfaceLayoutDirection
             }
             view.yoga.direction = userInterfaceLayoutDirection == .leftToRight ? YGDirection.LTR : YGDirection.RTL
-        default:
+        default:*/
             view.yoga.direction = value.yogaValue
-        }
+        //}
         return self
     }
     

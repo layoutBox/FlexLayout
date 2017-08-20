@@ -17,7 +17,8 @@ class AdjustSizeSpec: QuickSpec {
     override func spec() {
         var viewController: UIViewController!
         var rootFlexContainer: UIView!
-        
+        var aView: UIView!
+
         beforeSuite {
         }
         
@@ -25,14 +26,106 @@ class AdjustSizeSpec: QuickSpec {
             viewController = UIViewController()
             
             rootFlexContainer = UIView()
-            rootFlexContainer.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+            rootFlexContainer.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
             viewController.view.addSubview(rootFlexContainer)
+            
+            aView = UIView()
         }
         
         describe("") {
-            it("") {
-                
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                }
                 rootFlexContainer.flex.layout()
+                expect(rootFlexContainer.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginLeft(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginLeft(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginTop(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 10.0, width: 400.0, height: 390.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginBottom(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 390.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginStart(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginEnd(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).margin(10, 20, 30, 40)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 20.0, y: 10.0, width: 340.0, height: 360.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).margin(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 10.0, y: 10.0, width: 380.0, height: 380.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginVertical(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 10.0, width: 400.0, height: 380.0)))
+            }
+            
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).grow(1).marginHorizontal(10)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 380.0, height: 400.0)))
             }
         }
     }

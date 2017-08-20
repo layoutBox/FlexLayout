@@ -17,9 +17,6 @@
 
 FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
 
-### NOTE: This project is still under heavy development. Thanks for coming back later. 
-
-
 ### Requirements
 * iOS 8.0+
 * Xcode 8.0+
@@ -52,7 +49,7 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
 
-:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater fine control and animations. PinLayout can layout anything, but for some type of situations involving many views, FlexLayout is even more simple.
+:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater fine control and animations. PinLayout can layout anything, but for some type of situations FlexLayout is best fitted. A view layouted using PinLayout can be embedded inside a view layouted using FlexLayout and reversely PinLayout can layout a FlexLayout view.  
 
 <br>
 
@@ -120,6 +117,7 @@ override func layoutSubviews() {
 * FlexLayout syntax is concise and chainable.
 * FlexLayout/yoga is incredibly fast, its even faster than manual layout. See [Performance](#performance).
 * The source code structure matches the flexbox structure, making it easier to understand and modify. Flex containers are defined on one line, and its items (children) are imbricated. This makes the flexbox structure much more visual and easy to understand.
+* Supports left-to-right (LTR) and right-to-left (RTL) languages.
 
 NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) implementation and expose all its features. So note that on this documentation we will refer to FlexLayout, but this also applies to Yoga.
 
@@ -187,15 +185,17 @@ In the following sections we will see:
 
 <br>
 
-## 1. Creation, modification and definition of flexbox containers <a name=" <a name="intro_usage_example"></a>
+## 1. Creation, modification and definition of flexbox items <a name=" <a name="create_modify_define_containers"></a>
 
 ### addItem(:UIView)
 - Applies to: `flex containers`
 - Parameter: UIView
 - Returns: FlexLayout interface of the newly added flex item.
 
-This methods adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has a subviews and enables flexbox.
+**Method:**
 
+* **`addItem(_: UIView)`**  
+This methods adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has a subviews and enables flexbox.
 
 ###### Usage examples:
 ```swift
@@ -207,6 +207,9 @@ This methods adds a flex item (UIView) to a flex container. Internally the metho
 - Applies to: `flex containers`
 - Returns: FlexLayout interface of the newly created flex item.
 
+**Method:**
+
+* **`addContainer()`**  
 This method is similar to `addItem()` except that it also creates the flex container's UIView. Internally the method creates a UIView, adds it has a subviews and finaly enables flexbox. This is useful to add a flex container easily when you don't need to refered to it later.
 
 ###### Usage examples:
@@ -219,6 +222,9 @@ This method is similar to `addItem()` except that it also creates the flex conta
 - Applies to: `flex containers`
 - Parameter: Closure of type `(flex: Flex) -> Void`
 
+**Method:**
+
+* **`define(_ closure: (_ flex: Flex) -> Void)`**  
 This method is used to structure your code so that it matches the flexbox structure. The method takes as parameter a closure with a single parameter called `flex`. This parameter is in fact the view's flex interface, it can be used to adds other flex items and containers. 
 
 ###### Usage examples:
@@ -257,7 +263,7 @@ The same results can also be obtained without using the `define()` method, but t
  
  
 ### Accessing flex items UIView <a name="accessing_flexbox_view"></a>
-It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `Flex.define()` method.
+It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `flex.define()` method.
 
 ###### Example:
 This example creates a flexbox container and sets its background color and add rounded corners.
@@ -266,7 +272,6 @@ This example creates a flexbox container and sets its background color and add r
 ```swift
     flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
         flex.createBox().width(50).height(50).define({ (flex) in
-            flex.view.backgroundColor = UIColor.red
             flex.view.layer.cornerRadius = 10
         }}
     })
@@ -290,15 +295,21 @@ Another possible solution:
 - Values: `fitContainer` / `adjustWidth` / `adjustHeight`
 - Default value: `fitContainer `
 
-`func layout(mode: LayoutMode = . fitContainer)`
+**Method:**
 
+* **`layout(mode: LayoutMode = . fitContainer)`**  
 The method layout the flex container's children.
 
-**Three different layout mode is available:**
+  Layout modes:
 
-1. fitContainer: This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height). 
-2. adjustHeight: In this mode children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
-3. adjustWidth: In this mode children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
+  * **`fitContainer`**: This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height). 
+  * **`adjustHeight `**: In this mode children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
+  * **`adjustWidth `**: In this mode children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
+
+###### Usage examples:
+```swift
+  rootFlexContainer.flex.layout(mode: .adjustHeight)
+```
 
 <br>
 
@@ -311,13 +322,14 @@ This section describe all flex container's properties.
 - Default value: `column`
 - CSS name: `flex-direction` 
 
+**Method:**
+
+* **`direction(_: Direction)`**  
 The `direction` property establishes the main-axis, thus defining the direction flex items are placed in the flex container.
 
-The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.
+  The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.
 
-Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container. If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse from right to left; if the direction is rtl, it's the opposite.
-
-NEW: This property is used to specify the direction of the flex container’s main axis, thus defining the direction flex items are placed in the flex container
+  Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container. If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse from right to left; if the direction is rtl, it's the opposite.
 
 
 | Value | Result | Description |
@@ -341,11 +353,15 @@ NEW: This property is used to specify the direction of the flex container’s ma
 - Default value: `noWrap`
 - CSS name: `flex-wrap` 
 
+**Method:**
+
+* **`wrap(_: Wrap)`**  
 The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
+
+  By default the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in
 
 Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.
 
-NEW: By default the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in.
 
 |                     	| direction(.column) | direction(.row) | Description|
 |---------------------	|:------------------:|:---------------:|--------------|
@@ -366,9 +382,10 @@ NEW: By default the flex container fits all flex items into one line. Using this
 - Default value: `start`
 - CSS name: `justify-content` 
 
-The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum size. For example, if children are flowing vertically, justifyContent controls how they align vertically. 
+**Method:**
 
-NEW: justify-content property aligns flex items along the main axis of the current line of the flex container. It helps distribute left free space when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size.
+* **`justifyContent(_: Justify)`**  
+The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum size. For example, if children are flowing vertically, justifyContent controls how they align vertically. 
 
 |                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
@@ -391,9 +408,11 @@ NEW: justify-content property aligns flex items along the main axis of the curre
 - Default value: `stretch `
 - CSS name: `align-items` 
 
+**Method:**
+
+* **`alignItems(_: Align)`**  
 The `alignItems` property defines how flex items are laid out along the cross axis on the current line. Similar to justifyContent but for the cross-axis (perpendicular to the main-axis). For example, if children are flowing vertically, alignItems controls how they align horizontally. 
 
-NEW: The align-items property defines how flex items are laid out along the cross axis on the current line. You can think of it as the justify-content version for the cross-axis.
 
 |                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
@@ -411,11 +430,12 @@ NEW: The align-items property defines how flex items are laid out along the cros
 - Default value: `auto`
 - CSS name: `align-self` 
 
+**Method:**
+
+* **`alignSelf(_: Align)`**  
 The `alignItems` property controls how a child aligns in the cross direction, overriding the alignItems of the parent. For example, if children are flowing vertically, alignSelf will control how the flex item will align horizontally. 
 
-The `auto` value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values.
-
-NEW: This align-self property allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. Refer to align-items explanation for flex container to understand the available values.
+  The `auto` value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values.
 
 <br/>
 
@@ -425,11 +445,13 @@ NEW: This align-self property allows the default alignment (or the one specified
 - Default value: `start`
 - CSS name: `align-content`  
 
+**Method:**
+
+* **`alignContent(_: Align)`**  
 The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.
 
 Note, `alignContent` has no effect when the flexbox has only a single line.
 
-NEW: The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis (similar to how justify-content aligns individual items within the main-axis)
 
 |                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
@@ -445,15 +467,22 @@ NEW: The align-content property aligns a flex container’s lines within the fle
 
 ### layoutDirection()
 
-YOGA DOC: The web has limited support for Right-to-Left (RTL) layouts. It does a pretty good job when it comes to text alignment and text rendering, but lacks the features needed to build fully RTL compatible UIs. Therefore, Yoga has adopted Start and End values for Margin, Padding, Border, and Position properties.
+FlexLayout (supports left-to-right (LTR) and right-to-left (RTL) languages.
 
-klayoutDirection
+Using `start` or `end` properties, you can position views without having to think about whether your item will show up on the left or the right side of the screen (depending on the person’s language 
 
-With Start and End, you can specify these properties in your UI without having to think about whether your item will show up on the left or the right side of the screen (depending on the person’s language setting). Yoga automatically handles this for you.
+**Method:**
 
-The Direction property controls this behavior. Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the root of your layout tree.
+* **`layoutDirection(_: layoutDirection)`**  
+The `layoutDirection` property controls the flex container layout direction. 
 
+  Values:
+  * **`.inherit`**  
+Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the root of your layout tree.
+  * **`.ltr`**: Layout views from left to right. (Default)
+  * **`.rtl`**: Layout views from right to left.
 
+<br>
 
 ## 3. Flexbox items properties <a name="intems_properties"></a>
 This section describe all flex items's properties.
@@ -462,60 +491,57 @@ This section describe all flex items's properties.
 
 ### grow 
 - Applies to: `flex items`
-- Value type: CGFloat
 - Default value: 0
 - CSS name: `flex-grow` 
 
+**Method:**
+
+* **`grow(_: CGFloat)`**  
 The `grow` property defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
 
-A grow value of 0 (default value) keeps the view's size in the main-axis direction. If you want the view to use the available space set a grow value > 0.
+  A grow value of 0 (default value) keeps the view's size in the main-axis direction. If you want the view to use the available space set a grow value > 0.
 
 For example, if all items have `grow` set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.
-
-NEW: This property specifies the flex grow factor, which determines how much the flex item will grow relative to the rest of the flex items.
 
 <br>
 
 ### shrink
 - Applies to: `flex items`
-- Value type: CGFloat
 - Default value: 1
 - CSS name: `flex-shrink` 
 
+**Method:**
+
+* **`shrink(_: CGFloat)`**  
 It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the main-axis.
 
-When omitted, it is set to 1 and the flex shrink factor is multiplied by the flex `basis` when distributing negative space.
+  When omitted, it is set to 1 and the flex shrink factor is multiplied by the flex `basis` when distributing negative space.
 
-A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to overflow its flex container.
-
-NEW: The flex-shrink specifies the flex shrink factor, which determines how much the flex item will shrink relative to the rest of the flex items
+  A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to overflow its flex container.
 
 <br>
 
 ### basis
 - Applies to: `flex items `
-- Value type: CGFloat
 - Default value: 0
 - CSS name: `flex-basis` 
 
-This property takes the same values as the width and height properties, and specifies the initial size of the flex item, before free space is distributed according to the grow and shrink factors.
+**Method:**
 
-NEW: This property takes the same values as the width and height properties, and specifies the initial main size of the flex item
+* **`basis(_ : CGFloat?)`**   
+This property takes the same values as the width and height properties, and specifies the initial size of the flex item, before free space is distributed according to the grow and shrink factors. 
 
-YOGA DOC: The FlexBasis property is an axis-independent way of providing the default size of an item on the main axis. Setting the FlexBasis of a child is similar to setting the Width of that child if its parent is a container with FlexDirection = row or setting the Height of a child if its parent is a container with FlexDirection = column. The FlexBasis of an item is the default size of that item, the size of the item before any FlexGrow and FlexShrink calculations are performed.
-
+  Specifying `nil` as value set the basis as `auto`, which means the length is equal to the length of the item. If the item has no length specified, the length will be according to its content 
 
 <br>
 
 ### isIncludedInLayout()
 - Applies to: `flex items`
-- Parameter: Bool
 
-It is possible to control dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
+**Method:**
 
-**Property & Method:**
-
-* `isIncludedInLayout(: Bool)`
+* **`isIncludedInLayout(_ value: Bool)`**  
+This property control dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
 
 FlexLayout automatically includes the UIView when:
 * The first time `UIView.flex` property is accessed
@@ -526,14 +552,17 @@ FlexLayout automatically includes the UIView when:
 
 ### markAsDirty()
 - Applies to: `flex items`
-- Parameter: Bool
 
-Yoga is so highly optimized, that flex items are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex items, you can mark it as dirty using `markAsDirty()`.
+**Method:**
 
-Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated.
+* **`markAsDirty()`**  
+Yoga is so highly optimized, that flex items are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex items, you can mark it as dirty using `markAsDirty()`. 
+
+  Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated.
 
 ###### Usage examples:
 In the case where a UILabel's text is updated, it is needed to mark the label as dirty and relayout the flex container.
+
 ```swift
     // 1) Update UILabel's text
     label.text = "I love FlexLayout"
@@ -549,8 +578,10 @@ In the case where a UILabel's text is updated, it is needed to mark the label as
 
 ### sizeThatFits()
 - Applies to: `flex items`
-- Parameter: CGSize
 
+**Method:**
+
+* **`sizeThatFits()`**  
 Returns the item size when layouted in the specified frame size.
 
 ###### Usage Example:
@@ -564,8 +595,10 @@ Get the size of view when layouted in a container with a width of 200 pixels.
 
 ### intrinsicSize
 - Applies to: `flex items`
-- Parameter: None
 
+**Property:**
+
+* **`intrinsicSize`**  
 Item natural size, considering only properties of the view itself. Independent of the item frame.
 
 <br>
@@ -574,11 +607,12 @@ Item natural size, considering only properties of the view itself. Independent o
 - Applies to: `flex items`
 - Parameter: CGFloat
 
-### position()
-The Position property tells Flexbox how you want your item to be positioned within its parent. There are 2 options:
+**Method:**
 
-* relative (default)
-* absolute
+* **`position(_: Position)`**   
+The position property tells Flexbox how you want your item to be positioned within its parent. Position values:
+  * **`relative (default)`**
+  * **`absolute`**: The view is positionned using properties: top(), bottom(), left(), right(), start(), end().
 
 ###### Usage examples:
 ```swift
@@ -588,12 +622,20 @@ The Position property tells Flexbox how you want your item to be positioned with
 ### top(), bottom(), left(), right(), start(), end()
 A flex item which is `position` is set to `.absolute` is positioned absolutely in regards to its parent. This is done through 6 properties:
 
-* `top( value: CGFloat)`: Controls the distance a child’s top edge is from the parent’s top edge
-* `bottom( value: CGFloat)`: Controls the distance a child’s bottom edge is from the parent’s bottom edge
-* `left( value: CGFloat)`: Controls the distance a child’s left edge is from the parent’s left edge
-* `right( value: CGFloat)`: Controls the distance a child’s right edge is from the parent’s right edge
-* `start( value: CGFloat)`: Controls the distance a child’s start edge is from the parent’s start edge. In left-to-right direction (LTR), it corresponds to the `left()` property and in RTL to `right()` property.
-* `end( value: CGFloat)`: Controls the distance a child’s end edge is from the parent’s end edge. In left-to-right direction (LTR), it corresponds to the `right()` property and in RTL to `left()` property.
+**Methods:**
+
+* **`top( value: CGFloat)`**:  
+Controls the distance a child’s top edge is from the parent’s top edge
+* **`bottom( value: CGFloat)`**:  
+Controls the distance a child’s bottom edge is from the parent’s bottom edge
+* **`left( value: CGFloat)`**:  
+Controls the distance a child’s left edge is from the parent’s left edge
+* **`right( value: CGFloat)`**:  
+Controls the distance a child’s right edge is from the parent’s right edge
+* **`start( value: CGFloat)`**:  
+Controls the distance a child’s start edge is from the parent’s start edge. In left-to-right direction (LTR), it corresponds to the `left()` property and in RTL to `right()` property.
+* **`end( value: CGFloat)`**:  
+Controls the distance a child’s end edge is from the parent’s end edge. In left-to-right direction (LTR), it corresponds to the `right()` property and in RTL to `left()` property.
 
 Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t effect their siblings layout with absolute position can be used to create overlays and stack children in the Z axis.
 
@@ -612,13 +654,19 @@ FlexLayout has methods to set the view’s height and width.
 
 **Methods:**
 
-* `width(_ width: CGFloat)` / `width(percent: Percent)`  
+* **`width(_ width: CGFloat)`**  
 The value specifies the view's width in pixels. Value must be non-negative.
-* `height(_ height: CGFloat)` / `height(percent: Percent)`  
+* **`width(percent: Percent)`**  
+The value specifies the view's width in percentage of its flex container's width. Value must be non-negative.
+* **`height(_ height: CGFloat)`**  
 The value specifies the view's height in pixels. Value must be non-negative.
-* `size(_ size: CGSize)` / `size(_ percent: Percent)`  
+* **`height(percent: Percent)`**  
+The value specifies the view's height in percentage of its flex container's height. Value must be non-negative.
+* **`size(_ size: CGSize)`**  
 The value specifies view's width and the height in pixels. Values must be non-negative.
-* `size(_ sideLength: CGFloat)`  
+* **`size(_ percent: Percent)`**
+The value specifies the view's size in percentage of its flex container's size. Value must be non-negative.
+* **`size(_ sideLength: CGFloat)`**  
 The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.
 
 
@@ -649,16 +697,16 @@ Another case where Min and Max dimension constraints are useful is when using `a
 
 **Methods:**
 
-* `minWidth(_ width: CGFloat)` 
+* **`minWidth(_ width: CGFloat)`** 
 The value specifies the view's minimum width of the view in pixels. Value must be non-negative.
 
-* `maxWidth(_ width: CGFloat)`  
+* **`maxWidth(_ width: CGFloat)`**  
 The value specifies the view's maximum width of the view in pixels. Value must be non-negative.
 
-* `minHeight(_ height: CGFloat)`
+* **`minHeight(_ height: CGFloat)`**
 The value specifies the view's minimum height of the view in pixels. Value must be non-negative.
 
-* `maxHeight(_ height: CGFloat)`
+* **`maxHeight(_ height: CGFloat)`**
 The value specifies the view's maximum height of the view in pixels. Value must be non-negative.
    
 ###### Usage examples:
@@ -761,6 +809,23 @@ Border behaves nearly identically to Padding and is only separate from Padding t
 <br>
 
 
+## 9. Extra UIView methods <a name="uiview_methods"></a>
+FlexLayout also adds methods to set common UIView properties.
+
+**Methods:**
+
+* **`backgroundColor(_ color: UIColor)`**  
+Set the flex item's UIView background color. 
+
+###### Usage examples:
+```swift
+	// Create a gray column container and add a black horizontal line separator 
+	flex.addContainer().backgroundColor(.gray).define { (flex) in
+        flex.addContainer().height(1).backgroundColor(.black)
+    } 
+```
+
+<br>
 
 # FlexLayout's Performance <a name="performance"></a>
 
