@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140A64699364036208549A1F /* Pods_FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCF8B1837EAE6F1067220EF /* Pods_FlexLayout.framework */; };
+		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
 		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
+		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
 		24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA375A1EF843C500D1AB2F /* FlexLayout.framework */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
-		24DA377E1EF84A1800D1AB2F /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA377C1EF84A1800D1AB2F /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA377D1EF84A1800D1AB2F /* Test.swift */; };
-		24DA37811EF84A4500D1AB2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA37801EF84A4500D1AB2F /* Info.plist */; };
-		24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* Flexbox.swift */; };
+		24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* FlexLayout.swift */; };
+		57402D39F89718CF69DD663E /* Pods_FlexLayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011BDC74307959310DB65496 /* Pods_FlexLayoutTests.framework */; };
+		DF9174771F1D6DC00034632D /* FixLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174761F1D6DC00034632D /* FixLayout+Enum.swift */; };
+		DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */; };
+		DF95D9BE1F20BCF0003073D5 /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF95D9BD1F20BCF0003073D5 /* FlexView.swift */; };
+		DF95D9C11F20BD06003073D5 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DF95D9BF1F20BD06003073D5 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF95D9C21F20BD06003073D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF95D9C01F20BD06003073D5 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,14 +33,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011BDC74307959310DB65496 /* Pods_FlexLayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02756E65A2457134EB1E5431 /* Pods-FlexLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2458137E1F4A21CF00CD676B /* PaddingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingSpec.swift; sourceTree = "<group>"; };
+		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
 		24DA375A1EF843C500D1AB2F /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
 		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24DA377C1EF84A1800D1AB2F /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/FlexLayout.h; sourceTree = SOURCE_ROOT; };
-		24DA377D1EF84A1800D1AB2F /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Test.swift; path = Sources/Test.swift; sourceTree = SOURCE_ROOT; };
-		24DA37801EF84A4500D1AB2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
-		24DA37871EF8610400D1AB2F /* Flexbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flexbox.swift; path = Sources/Flexbox.swift; sourceTree = SOURCE_ROOT; };
+		24DA37871EF8610400D1AB2F /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = SOURCE_ROOT; };
+		33658CCE389F24EFE38D18FD /* Pods-FlexLayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.release.xcconfig"; sourceTree = "<group>"; };
+		5FCF8B1837EAE6F1067220EF /* Pods_FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69C941FD46976BD81BF86CE5 /* Pods-FlexLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout/Pods-FlexLayout.release.xcconfig"; sourceTree = "<group>"; };
+		711533621307D4F854DD7D83 /* Pods-FlexLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout/Pods-FlexLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		DF9174761F1D6DC00034632D /* FixLayout+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FixLayout+Enum.swift"; path = "Sources/Impl/FixLayout+Enum.swift"; sourceTree = SOURCE_ROOT; };
+		DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = SOURCE_ROOT; };
+		DF95D9BD1F20BCF0003073D5 /* FlexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexView.swift; path = Sources/FlexView.swift; sourceTree = SOURCE_ROOT; };
+		DF95D9BF1F20BD06003073D5 /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/SupportingFiles/FlexLayout.h; sourceTree = SOURCE_ROOT; };
+		DF95D9C01F20BD06003073D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140A64699364036208549A1F /* Pods_FlexLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +67,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */,
+				57402D39F89718CF69DD663E /* Pods_FlexLayoutTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2429E4BD1F19181F00BBC032 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF95D9BF1F20BD06003073D5 /* FlexLayout.h */,
+				DF95D9C01F20BD06003073D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		24DA37501EF843C500D1AB2F = {
 			isa = PBXGroup;
 			children = (
 				24DA375C1EF843C500D1AB2F /* Sources */,
 				24DA37671EF843C500D1AB2F /* FlexLayoutTests */,
 				24DA375B1EF843C500D1AB2F /* Products */,
+				741F1C1020839DC56B7933D9 /* Pods */,
+				B5403C6F81C3814B69C05D0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +106,10 @@
 		24DA375C1EF843C500D1AB2F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				24DA37871EF8610400D1AB2F /* Flexbox.swift */,
-				24DA37801EF84A4500D1AB2F /* Info.plist */,
-				24DA377C1EF84A1800D1AB2F /* FlexLayout.h */,
-				24DA377D1EF84A1800D1AB2F /* Test.swift */,
+				24DA37871EF8610400D1AB2F /* FlexLayout.swift */,
+				DF95D9BD1F20BCF0003073D5 /* FlexView.swift */,
+				DF9174751F1D6DA20034632D /* Impl */,
+				2429E4BD1F19181F00BBC032 /* Supporting Files */,
 			);
 			name = Sources;
 			path = FlexLayout;
@@ -90,9 +119,40 @@
 			isa = PBXGroup;
 			children = (
 				24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */,
+				24A91B271F45E24B00AC8B3E /* MarginSpec.swift */,
+				2458137E1F4A21CF00CD676B /* PaddingSpec.swift */,
 				24DA376A1EF843C500D1AB2F /* Info.plist */,
 			);
 			path = FlexLayoutTests;
+			sourceTree = "<group>";
+		};
+		741F1C1020839DC56B7933D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02756E65A2457134EB1E5431 /* Pods-FlexLayoutTests.debug.xcconfig */,
+				33658CCE389F24EFE38D18FD /* Pods-FlexLayoutTests.release.xcconfig */,
+				711533621307D4F854DD7D83 /* Pods-FlexLayout.debug.xcconfig */,
+				69C941FD46976BD81BF86CE5 /* Pods-FlexLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5403C6F81C3814B69C05D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FCF8B1837EAE6F1067220EF /* Pods_FlexLayout.framework */,
+				011BDC74307959310DB65496 /* Pods_FlexLayoutTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF9174751F1D6DA20034632D /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				DF9174761F1D6DC00034632D /* FixLayout+Enum.swift */,
+				DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */,
+			);
+			name = Impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +162,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DA377E1EF84A1800D1AB2F /* FlexLayout.h in Headers */,
+				DF95D9C11F20BD06003073D5 /* FlexLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,10 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DA376E1EF843C500D1AB2F /* Build configuration list for PBXNativeTarget "FlexLayout" */;
 			buildPhases = (
+				6850E88D30235C33E59B38DA /* [CP] Check Pods Manifest.lock */,
 				24DA37551EF843C500D1AB2F /* Sources */,
 				24DA37561EF843C500D1AB2F /* Frameworks */,
 				24DA37571EF843C500D1AB2F /* Headers */,
 				24DA37581EF843C500D1AB2F /* Resources */,
+				E29068910D8E1C4488DAA7F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DA37711EF843C500D1AB2F /* Build configuration list for PBXNativeTarget "FlexLayoutTests" */;
 			buildPhases = (
+				45F4FA7F049C6E49A2113C11 /* [CP] Check Pods Manifest.lock */,
 				24DA375F1EF843C500D1AB2F /* Sources */,
 				24DA37601EF843C500D1AB2F /* Frameworks */,
 				24DA37611EF843C500D1AB2F /* Resources */,
+				E527B783D67BA341DA92D0A6 /* [CP] Embed Pods Frameworks */,
+				EC0DD2CF6C1A446C4A088198 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249008D41F165D4C00BBE9CD /* Info.plist in Resources */,
-				24DA37811EF84A4500D1AB2F /* Info.plist in Resources */,
+				DF95D9C21F20BD06003073D5 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,13 +270,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45F4FA7F049C6E49A2113C11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6850E88D30235C33E59B38DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E29068910D8E1C4488DAA7F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayout/Pods-FlexLayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E527B783D67BA341DA92D0A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC0DD2CF6C1A446C4A088198 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24DA37551EF843C500D1AB2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DA37881EF8610400D1AB2F /* Flexbox.swift in Sources */,
-				24DA377F1EF84A1800D1AB2F /* Test.swift in Sources */,
+				DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */,
+				DF9174771F1D6DC00034632D /* FixLayout+Enum.swift in Sources */,
+				24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */,
+				DF95D9BE1F20BCF0003073D5 /* FlexView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */,
 				24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */,
+				2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +484,7 @@
 		};
 		24DA376F1EF843C500D1AB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 711533621307D4F854DD7D83 /* Pods-FlexLayout.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -345,7 +493,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.FlexLayout;
@@ -358,6 +506,7 @@
 		};
 		24DA37701EF843C500D1AB2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C941FD46976BD81BF86CE5 /* Pods-FlexLayout.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -366,7 +515,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.FlexLayout;
@@ -378,6 +527,7 @@
 		};
 		24DA37721EF843C500D1AB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02756E65A2457134EB1E5431 /* Pods-FlexLayoutTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;
@@ -391,6 +541,7 @@
 		};
 		24DA37731EF843C500D1AB2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33658CCE389F24EFE38D18FD /* Pods-FlexLayoutTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4Q596JWQC5;

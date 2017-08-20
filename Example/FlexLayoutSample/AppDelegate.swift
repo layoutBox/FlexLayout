@@ -26,7 +26,6 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 import UIKit
-import PinLayout
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

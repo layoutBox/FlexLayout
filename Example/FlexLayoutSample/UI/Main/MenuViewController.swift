@@ -28,39 +28,39 @@
 import UIKit
 
 enum PageType: Int {
-//    case intro
-//    case tableView
-//    case form
-//    case relativePositions
-//    case multiRelativePositions
-//    case autoAdjustingSize
+    case intro
+    case yogaExampleA
+    case yogaExampleB
+    case yogaExampleC
+    case yogaExampleD
+    case yogaExampleE
     case flex
     
     case count
     
     var text: String {
         switch self {
-//        case .intro:                      return "PinLayout's Intro"
-//        case .tableView:                  return "TableView with variable cell's height"
-//        case .form:                       return "Form Example"
-//        case .relativePositions:          return "Relative Positionning"
-//        case .multiRelativePositions:     return "Multiple Relatives Positionning"
-//        case .autoAdjustingSize:          return "Auto adjusting size"
-        case .flex:                       return "Flexbox"
-        case .count:                      return ""
+        case .intro:          return "Intro Example"
+        case .yogaExampleA:   return "Yoga C Example"
+        case .yogaExampleB:   return "Yoga Obj-C Example"
+        case .yogaExampleC:   return "Yoga Java Example"
+        case .yogaExampleD:   return "Yoga C# Example"
+        case .yogaExampleE:   return "Yoga Android Example"
+        case .flex:           return "Flexbox"
+        case .count:          return ""
         }
     }
 
     var viewController: UIViewController {
         switch self {
-//        case .intro:                      return IntroViewController(pageType: self)
-//        case .tableView:                  return TableViewExampleViewController(pageType: self)
-//        case .form:                       return FormViewController(pageType: self)
-//        case .relativePositions:          return RelativeViewController(pageType: self)
-//        case .multiRelativePositions:     return MultiRelativeViewController(pageType: self)
-//        case .autoAdjustingSize:          return AutoAdjustingSizeViewController(pageType: self)
-        case .flex:                       return FlexboxViewController(pageType: self)
-        case .count:                      return UIViewController()
+        case .intro:          return IntroViewController(pageType: self)
+        case .yogaExampleA:   return YogaExampleAViewController(pageType: self)
+        case .yogaExampleB:   return YogaExampleBViewController(pageType: self)
+        case .yogaExampleC:   return YogaExampleCViewController(pageType: self)
+        case .yogaExampleD:   return YogaExampleDViewController(pageType: self)
+        case .yogaExampleE:   return YogaExampleEViewController(pageType: self)
+        case .flex:           return FlexboxViewController(pageType: self)
+        case .count:          return UIViewController()
         }
     }
 }
@@ -70,9 +70,9 @@ class MenuViewController: BaseViewController {
         return self.view as! MenuView
     }
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        title = "PinLayout Examples"
+    override init() {
+        super.init()
+        title = "FlexLayout Examples"
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -86,7 +86,7 @@ class MenuViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        didSelect(pageType: .flex)
+//        didSelect(pageType: .intro)
     }
 }
 
