@@ -185,21 +185,20 @@ In the following sections we will see:
 
 <br>
 
-## 1. Creation, modification and definition of flexbox items <a name=" <a name="create_modify_define_containers"></a>
+## 1. Creation, modification and definition of flexbox items <a name="create_modify_define_containers"></a>
 
 ### addItem(:UIView)
 - Applies to: `flex containers`
-- Parameter: UIView
 - Returns: FlexLayout interface of the newly added flex item.
 
 **Method:**
 
-* **`addItem(_: UIView)`**  
+* **`addItem(_: UIView) -> Flex`**  
 This methods adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has a subviews and enables flexbox.
 
 ###### Usage examples:
 ```swift
-   view.flex.addItem(imageView).width(100).aspectRatio(1)
+  view.flex.addItem(imageView).width(100).aspectRatio(1)
 ```
 <br>
 
@@ -209,12 +208,12 @@ This methods adds a flex item (UIView) to a flex container. Internally the metho
 
 **Method:**
 
-* **`addContainer()`**  
+* **`addContainer() -> Flex`**  
 This method is similar to `addItem()` except that it also creates the flex container's UIView. Internally the method creates a UIView, adds it has a subviews and finaly enables flexbox. This is useful to add a flex container easily when you don't need to refered to it later.
 
 ###### Usage examples:
 ```swift
-	view.flex.addContainer().direction(.row).padding(10)
+  view.flex.addContainer().direction(.row).padding(10)
 ```
 <br>
 
@@ -242,15 +241,15 @@ This method is used to structure your code so that it matches the flexbox struct
 The same results can also be obtained without using the `define()` method, but the results is not as elegant:
 
 ```swift
-   let columnContainer = UIView()
-   columnContainer.flex.addItem(imageView).grow(1)
-   view.flex.addItem(columnContainer)
+  let columnContainer = UIView()
+  columnContainer.flex.addItem(imageView).grow(1)
+  view.flex.addItem(columnContainer)
 		
-   let rowContainer = UIView()
-   rowContainer.flex.direction(.row)
-   rowContainer.flex.addItem(titleLabel).grow(1)
-   rowContainer.flex.addItem(priceLabel)
-   columnContainer.flex.addItem(rowContainer)
+  let rowContainer = UIView()
+  rowContainer.flex.direction(.row)
+  rowContainer.flex.addItem(titleLabel).grow(1)
+  rowContainer.flex.addItem(priceLabel)
+  columnContainer.flex.addItem(rowContainer)
 ```
 
 **Avantages of using `define()`**:
@@ -342,8 +341,8 @@ The `direction` property establishes the main-axis, thus defining the direction 
 
 ###### Usage examples:
 ```swift
-	view.flex.direction(.column)  // Not required, defaut value. 
-	view.flex.direction(.row)
+  view.flex.direction(.column)  // Not required, defaut value. 
+  view.flex.direction(.row)
 ```
 <br/>
 
@@ -371,8 +370,8 @@ Reminder: the cross axis is the axis perpendicular to the main axis. Its directi
 
 ###### Usage examples:
 ```swift
-	view.flex.wrap(.nowrap)  // Not required, defaut value. 
-	view.flex.wrap(.wrap)
+  view.flex.wrap(.nowrap)  // Not required, defaut value. 
+  view.flex.wrap(.wrap)
 ```
 <br/>
 
@@ -397,8 +396,8 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 
 ###### Usage examples:
 ```swift
-	view.flex.justifyContent(.start)  // defaut value. 
-	view.flex.justifyContent(.center)
+  view.flex.justifyContent(.start)  // defaut value. 
+  view.flex.justifyContent(.center)
 ```
 <br/>
 
@@ -467,7 +466,7 @@ Note, `alignContent` has no effect when the flexbox has only a single line.
 
 ### layoutDirection()
 
-FlexLayout (supports left-to-right (LTR) and right-to-left (RTL) languages.
+FlexLayout supports left-to-right (LTR) and right-to-left (RTL) languages.
 
 Using `start` or `end` properties, you can position views without having to think about whether your item will show up on the left or the right side of the screen (depending on the person’s language 
 
@@ -672,13 +671,13 @@ The value specifies the width and the height of the view in pixels, creating a s
 
 ###### Usage examples:
 ```swift
-	view.flex.width(100)
-	view.flex.width(of: view1)
+  view.flex.width(100)
+  view.flex.width(of: view1)
 	
-	view.flex.height(200)
+  view.flex.height(200)
 	
-	view.flex.size(of: view1)
-	view.flex.size(250)
+  view.flex.size(of: view1)
+  view.flex.size(250)
 ```
 <br>
 
@@ -711,11 +710,11 @@ The value specifies the view's maximum height of the view in pixels. Value must 
    
 ###### Usage examples:
 ```swift
-	view.flex.maxWidth(200)
-	view.flex.width(of: view1).maxWidth(250)
+  view.flex.maxWidth(200)
+  view.flex.width(of: view1).maxWidth(250)
 	
-	view.flex.maxHeight(100)
-	view.flex.height(of: view1).maxHeight(200)
+  view.flex.maxHeight(100)
+  view.flex.height(of: view1).maxHeight(200)
 ```
 <br>
 
@@ -730,7 +729,7 @@ AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRati
    
 ###### Usage examples:
 ```swift
-	imageView.flex.aspectRatio(16/9)
+  imageView.flex.aspectRatio(16/9)
 ```
 <br/>
 
@@ -755,10 +754,10 @@ By applying Margin to an item you specify the offset a certain edge of the item 
 
 ###### Usage examples:
 ```swift
-	view.flex.margin(20)
-	view.flex.marginBottom(20)
-	view.flex.marginHorizontal(20)
-	view.flex.margin(10, 12, 0, 12)
+  view.flex.margin(20)
+  view.flex.marginBottom(20)
+  view.flex.marginHorizontal(20)
+  view.flex.margin(10, 12, 0, 12)
 ```
 
 <br>
@@ -785,10 +784,10 @@ Padding specify the **offset children should have** from a certain edge on the p
 
 ###### Usage examples:
 ```swift
-	view.flex.padding(20)
-	view.flex.paddingBottom(20)
-	view.flex.paddingHorizontal(20)
-	view.flex.padding(10, 12, 0, 12)
+  view.flex.padding(20)
+  view.flex.paddingBottom(20)
+  view.flex.paddingHorizontal(20)
+  view.flex.padding(10, 12, 0, 12)
 ```
 
 <br>
@@ -819,10 +818,10 @@ Set the flex item's UIView background color.
 
 ###### Usage examples:
 ```swift
-	// Create a gray column container and add a black horizontal line separator 
-	flex.addContainer().backgroundColor(.gray).define { (flex) in
-        flex.addContainer().height(1).backgroundColor(.black)
-    } 
+  // Create a gray column container and add a black horizontal line separator 
+  flex.addContainer().backgroundColor(.gray).define { (flex) in
+      flex.addContainer().height(1).backgroundColor(.black)
+  } 
 ```
 
 <br>
@@ -859,7 +858,7 @@ These results also means that **FlexLayout and PinLayout are faster than any lay
 To integrate FlexLayout into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-    pod 'FlexLayout'
+  pod 'FlexLayout'
 ```
 
 Then, run `pod install`.
