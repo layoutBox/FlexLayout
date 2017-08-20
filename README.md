@@ -49,13 +49,13 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
 
-:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater fine control and animations. PinLayout can layout anything, but for some type of situations FlexLayout is best fitted. A view layouted using PinLayout can be embedded inside a view layouted using FlexLayout and reversely PinLayout can layout a FlexLayout view.  
+:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater fine control and animations. PinLayout can layout anything, but for some type of situations FlexLayout is best fitted. A view layouted using PinLayout can be embedded inside a flexbox container and reversely PinLayout can layout a FlexLayout view.  
 
 <br>
 
 ## FlexLayout Introduction examples <a name="intro_usage_example"></a>
 ###### Example:
-This example layout multiples views using column and row flexboxes inside a flex container.
+This example layout multiples views using column and row flexbox containers.
 
 Two steps to use a flexbox container:
 
@@ -172,8 +172,8 @@ Flexbox is pretty easy and straightforward to use. The defining aspect of the fl
 
 The flex layout is constituted of parent container referred as **flex container** and its immediate children which are called **flex items**. A flex item can also be a flex container, i.e. it is possible to add other flex items to it.
 
-| Flexbox term     | Definition |
-|---------------------|----------|-------------------|
+| Flexbox term        | Definition |
+|---------------------|------------|
 | **`main-axis`** | The main axis of a flex container is the primary axis along which flex items are laid out. The main-axis direction is set using the `direction()` property. |
 | **`cross-axis`** | The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction |
 	
