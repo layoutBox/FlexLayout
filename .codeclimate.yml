@@ -4,7 +4,7 @@ engines:
 
 ratings:
   paths:
-  - "Sources/**.swift"
+  - "**.swift"
 
 exclude_paths:
     - FlexLayoutTests

@@ -1,0 +1,21 @@
+include:
+    - FlexLayout
+
+exclude:
+    - FlexLayoutTests
+    - Example
+    - Pods
+    - data
+    - docs
+    - scripts
+    - Pods_FlexLayout
+    - Pods_FlexLayoutTests    
+
+except:
+    - trailing-whitespace
+    - brace-style
+    - function-whitespace
+    - terminating-semicolon
+    - lower-camel-case
+    - trailing-closure
+    - forced-type-cast
