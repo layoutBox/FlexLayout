@@ -16,7 +16,7 @@ before_install:
 script:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
-      set -o pipefail && xcodebuild -workspace FlexLayout.xcworkspace -scheme "$SCHEME" -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone 6' -enableCodeCoverage YES build test | xcpretty -f `xcpretty-travis-formatter`
+      set -o pipefail && xcodebuild -workspace FlexLayout.xcworkspace -scheme "$SCHEME" -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone 6' -enableCodeCoverage YES build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -f `xcpretty-travis-formatter`
     fi
 
     if [[ $SCHEME = "FlexLayoutSample" ]]; then
@@ -26,5 +26,5 @@ script:
 after_success:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
-      bash <(curl -s https://codecov.io/bash) -J 'FlexLayout' -J 'FlexLayoutTests'
+      bash <(curl -s https://codecov.io/bash) -J '^FlexLayout$'
     fi
