@@ -45,6 +45,8 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <br>
 
+:pushpin: FlexLayout is actively updated. So please come often to see latest changes. You can also **Star** it to be able to retrieve it easily later.
+
 **FlexLayout + PinLayout**
 
 <a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
@@ -53,7 +55,7 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 PinLayout can layout anything, but in situations where you need to layouts many views without requiring the finest control, FlexLayout is best fitted. 
 
-A view layouted using PinLayout can be embedded inside a FlexLayout's flexbox container and reversely PinLayout can layout a FlexLayout view.  
+A view layouted using PinLayout can be embedded inside a FlexLayout's flexbox container and reversely PinLayout can layout a FlexLayout view. You choose the best layout framework for your situation. 
 
 <br>
 
