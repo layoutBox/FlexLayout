@@ -26,5 +26,5 @@ script:
 after_success:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
-      bash <(curl -s https://codecov.io/bash) -J '^FlexLayout$'
+      bash <(curl -s https://codecov.io/bash) -J '^FlexLayoutTests$'
     fi
