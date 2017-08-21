@@ -49,7 +49,11 @@ FlexLayout gently wraps [facebook/yoga](https://github.com/facebook/yoga) flexbo
 
 <a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
 
-:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a lower level layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater fine control and animations. PinLayout can layout anything, but for some type of situations FlexLayout is best fitted. A view layouted using PinLayout can be embedded inside a flexbox container and reversely PinLayout can layout a FlexLayout view.  
+:pushpin: **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positionning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug). 
+
+PinLayout can layout anything, but in situations where you need to layouts many views without requiring the finest control, FlexLayout is best fitted. 
+
+A view layouted using PinLayout can be embedded inside a FlexLayout's flexbox container and reversely PinLayout can layout a FlexLayout view.  
 
 <br>
 
