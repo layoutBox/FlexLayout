@@ -4,7 +4,7 @@ engines:
 
 ratings:
   paths:
-  - "**.swift"
+  - "Sources/**.swift"
 
 exclude_paths:
     - FlexLayoutTests
@@ -13,5 +13,5 @@ exclude_paths:
     - Example
     - Pods
     - data
-    - scripts
+    - docs
     
