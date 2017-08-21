@@ -1,16 +1,16 @@
 <p align="center">
-  <a href="https://github.com/luc-dion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
+  <a href="https://github.com/lucdion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
 </p>
 
 <h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
  
 <p align="center">
   <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
-  <a href="https://travis-ci.org/lucdion/FlexLayout"><img src="https://travis-ci.org/luc-dion/FlexLayout.svg?branch=dev" /></a>
-  <a href="https://codecov.io/gh/lucdion/FlexLayout"><img src="https://codecov.io/gh/luc-dion/FlexLayout/branch/dev/graph/badge.svg"/></a>
+  <a href="https://travis-ci.org/lucdion/FlexLayout"><img src="https://travis-ci.org/lucdion/FlexLayout.svg?branch=master" /></a>
+  <a href="https://codecov.io/gh/lucdion/FlexLayout"><img src="https://codecov.io/gh/lucdion/FlexLayout/branch/master/graph/badge.svg"/></a>
   <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
   <a href="https://raw.githubusercontent.com/lucdion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
-  <!--<a href='https://dashboard.buddybuild.com/apps/5978e7ec5aa5ac00019e8e87/build/latest?branch=dev'><img src="https://dashboard.buddybuild.com/api/statusImage?appID=5978e7ec5aa5ac00019e8e87&branch=dev&build=latest"/></a>-->
+  <!--<a href='https://dashboard.buddybuild.com/apps/5978e7ec5aa5ac00019e8e87/build/latest?branch=master'><img src="https://dashboard.buddybuild.com/api/statusImage?appID=5978e7ec5aa5ac00019e8e87&branch=master&build=latest"/></a>-->
 </p>
 
 <br>
@@ -880,7 +880,7 @@ Then, run `pod install`.
 <br/>
 
 ## Contributing, comments, ideas, suggestions, issues, .... <a name="comments"></a>
-For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/luc-dion/FlexLayout/issues). 
+For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/lucdion/FlexLayout/issues). 
 
 For **issues**, please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. If not, it may be a FlexLayout issue. In this case open an issue and we'll let you know if the issue is related to Yoga's implementation. 
 
