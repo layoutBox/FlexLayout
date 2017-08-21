@@ -10,24 +10,24 @@ import UIKit
 
 class FlexView: UIView {
 
-    enum LayoutMode {
-        case none
-        case layoutOnFrameChange
-    }
-    
-    var layoutMode: LayoutMode = .none {
-        didSet {
+//    enum LayoutMode {
+//        case none
+//        case layoutOnFrameChange
+//    }
+//    
+//    var layoutMode: LayoutMode = .none {
+//        didSet {
+//
+//        }
+//    }
 
-        }
-    }
-
-    override var frame: CGRect {
-        didSet {
-            print("frame: \(frame)")
-        }
-    }
-
-    override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return super.sizeThatFits(size)
-    }
+//    override var frame: CGRect {
+//        didSet {
+//            print("frame: \(frame)")
+//        }
+//    }
+//
+//    override func sizeThatFits(_ size: CGSize) -> CGSize {
+//        return super.sizeThatFits(size)
+//    }
 }
