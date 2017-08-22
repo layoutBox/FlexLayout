@@ -57,6 +57,12 @@ PinLayout can layout anything, but in situations where you need to layouts many 
 A view layouted using PinLayout can be embedded inside a FlexLayout's flexbox container and reversely PinLayout can layout a FlexLayout view. You choose the best layout framework for your situation. 
 
 <br>
+ 
+### Yoga's layouting issues
+
+:warning:	FlexLayout is a light wrapper around [Yoga](https://github.com/facebook/yoga). Yoga is still in development, so it is possible that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. FlexLayout will always be up-to-date with the latest Yoga's version.
+
+<br>
 
 ## FlexLayout Introduction example <a name="intro_usage_example"></a>
 ###### Example:
