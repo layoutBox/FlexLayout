@@ -81,13 +81,13 @@ init() {
    ...
 
    // Column container
-   rootFlexContainer.flex.padding(12).define { (flex) in
+   rootFlexContainer.flex.direction(.column).padding(12).define { (flex) in
         // Row container
         flex.addContainer().direction(.row).define { (flex) in
             flex.addItem(imageView).width(100).aspectRatio(of: imageView)
             
             // Column container
-            flex.addContainer().paddingLeft(12).grow(1).define { (flex) in
+            flex.addContainer().direction(.column).paddingLeft(12).grow(1).define { (flex) in
                 flex.addItem(segmentedControl).marginBottom(12).grow(1)
                 flex.addItem(label)
             }
