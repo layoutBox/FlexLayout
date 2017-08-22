@@ -16,7 +16,7 @@
 ##### LayoutKit Benchmark
 FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) performance has been tested using a [fork of LayoutKit](https://github.com/mirego/LayoutKit). LayoutKit include an example app with a really nice and simple benchmark. It is used to compare LayoutKit with Auto layout, UIStackViews and manual layouting. 
 
-The benchmark has been modified to also include [FlexLayout](https://github.com/lucdion/FlexLayout) and [PinLayout](https://github.com/mirego/LayoutKit/blob/master/LayoutKitSampleApp/Benchmarks/FeedItemPinLayoutView.swift). 
+The benchmark has been modified to also include FlexLayout ([source code](https://github.com/mirego/LayoutKit/blob/master/LayoutKitSampleApp/Benchmarks/FeedItemFlexLayoutView.swift)) and PinLayout ([source code](https://github.com/mirego/LayoutKit/blob/master/LayoutKitSampleApp/Benchmarks/FeedItemPinLayoutView.swift)). 
 
 The benchmark include tests for the following layout systems:
 
@@ -50,13 +50,13 @@ These results means that FlexLayout and PinLayout are faster than any layout fra
 
 <br>
 
-### FlexLayout and PinLayout performance compared to  Auto layout 
+### FlexLayout and PinLayout performance compared to Auto layout 
 
 This table shows FlexLayout and PinLayout performance compared to  Auto layout when layouting UICollectionView's cells.
 
 The table shows that **FlexLayout took 23 miliseconds** to render 100 UICollectionView's cells on a iPhone 6 compared to **53 miliseconds for PinLayout** and **611 ms for Auto layout**. Its 26 time faster for FlexLayout and 12 time faster for PinLayout.
 
-|           | Auto layout time  (seconds) | FlexLayout time  (seconds) | Flex performance compared to  Auto layout |  PinLayout time  (seconds) | PinLayout performance compared to  Auto layout  |
+|           | Auto layout time  (seconds) | **FlexLayout** time  (seconds) | **FlexLayout** performance compared to Auto layout |  **PinLayout** time  (seconds) | **PinLayout** performance compared to Auto layout  |
 |:---------:|:---------:|:---------:|:-----------------------------------------------------------------------:|:---------------------------:|:-------------------------:|
 |  iPhone 5 | 2.074 | 0.067 | 31x Faster |  0.126 | 16x Faster | 
 |  iPhone 6 | 0.611 | 0.023 | 26x Faster |  0.053 | 12x Faster | 
@@ -93,40 +93,41 @@ Remark how FlexLayout and PinLayout code is concise and clean compared to Manual
 
 ```swift
 flex.addItem(contentView).padding(8).define { (flex) in
-    flex.addContainer().direction(.row).justifyContent(.spaceBetween).define { (flex) in
-        flex.addItem(actionLabel)
-        flex.addItem(optionsLabel)
-    }
-    
-    flex.addContainer().direction(.row).alignItems(.center).define({ (flex) in
-        flex.addItem(posterImageView).width(50).height(50).marginRight(8)
+    flex.addItem(contentView).padding(8).define { (flex) in
+        flex.addContainer().direction(.row).justifyContent(.spaceBetween).define { (flex) in
+            flex.addItem(actionLabel)
+            flex.addItem(optionsLabel)
+        }
+        
+        flex.addContainer().direction(.row).alignItems(.center).define({ (flex) in
+            flex.addItem(posterImageView).width(50).height(50).marginRight(8)
 
-        flex.addContainer().grow(1).define({ (flex) in
-            flex.addItem(posterNameLabel)
-            flex.addItem(posterHeadlineLabel)
-            flex.addItem(posterTimeLabel)
+            flex.addContainer().grow(1).define({ (flex) in
+                flex.addItem(posterNameLabel)
+                flex.addItem(posterHeadlineLabel)
+                flex.addItem(posterTimeLabel)
+            })
         })
-    })
 
-    flex.addItem(posterCommentLabel)
+        flex.addItem(posterCommentLabel)
 
-    flex.addItem(contentImageView).aspectRatio(350 / 200)
-    flex.addItem(contentTitleLabel)
-    flex.addItem(contentDomainLabel)
+        flex.addItem(contentImageView).aspectRatio(350 / 200)
+        flex.addItem(contentTitleLabel)
+        flex.addItem(contentDomainLabel)
 
-    flex.addContainer().direction(.row).justifyContent(.spaceBetween).marginTop(4).define({ (flex) in
-        flex.addItem(likeLabel)
-        flex.addItem(commentLabel)
-        flex.addItem(shareLabel)
-    })
+        flex.addContainer().direction(.row).justifyContent(.spaceBetween).marginTop(4).define({ (flex) in
+            flex.addItem(likeLabel)
+            flex.addItem(commentLabel)
+            flex.addItem(shareLabel)
+        })
 
-    flex.addContainer().direction(.row).marginTop(2).define({ (flex) in
-        flex.addItem(actorImageView).width(50).height(50).marginRight(8)
-        flex.addItem(actorCommentLabel).grow(1)
-    })
+        flex.addContainer().direction(.row).marginTop(2).define({ (flex) in
+            flex.addItem(actorImageView).width(50).height(50).marginRight(8)
+            flex.addItem(actorCommentLabel).grow(1)
+        })
+    }
 }
 ```
-
 
 ### PinLayout source code
 
