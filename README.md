@@ -25,6 +25,7 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 * [Introduction example](#intro_usage_example)
 * [FlexLayout principles and philosophy](#introduction)
+* [Performance](#performance)
 * [Documentation](#documentation)
 	* [Creation, modification and definition of flexbox containers](#create_modify_define_containers)
 	* [Flexbox containers properties](#containers_properties)
@@ -37,7 +38,6 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 	* [Margins](#margins)
 	* [Paddings](#paddings)
 	* [Borders](#borders)
-* [Performance](#performance)
 * [FAQ](#faq)
 * [Comments, ideas, suggestions, issues, ....](#comments)
 * [Installation](#installation)
@@ -58,7 +58,7 @@ A view layouted using PinLayout can be embedded inside a FlexLayout's flexbox co
 
 <br>
 
-## FlexLayout Introduction examples <a name="intro_usage_example"></a>
+## FlexLayout Introduction example <a name="intro_usage_example"></a>
 ###### Example:
 This example layout multiples views using column and row flexbox containers.
 
@@ -127,6 +127,23 @@ override func layoutSubviews() {
 NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) implementation and expose all its features. So note that on this documentation we will refer to FlexLayout, but this also applies to Yoga.
 
 <br>
+
+# FlexLayout's Performance <a name="performance"></a>
+
+FlexLayout's performance has been measured using the nice LayoutKit benchmark. FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
+
+As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
+
+These results also means that **FlexLayout and PinLayout are by far faster than any layout frameworks built over auto layout**. 
+
+[See here more complete details, results and explanation of the benchmark](docs/benchmark/Benchmark.md).
+
+<p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
+<p align="center">
+  <img src="docs/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
+</p>
+
+<br/>
 
 ## Variation from CSS flexbox
 
@@ -830,22 +847,6 @@ Set the flex item's UIView background color.
 
 <br>
 
-# FlexLayout's Performance <a name="performance"></a>
-
-FlexLayout's performance has been measured using the nice LayoutKit benchmark. FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
-
-As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
-
-These results also means that **FlexLayout and PinLayout are by far faster than any layout frameworks built over auto layout**. 
-
-[See here more complete details, results and explanation of the benchmark](docs/benchmark/Benchmark.md).
-
-<p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
-<p align="center">
-  <img src="docs/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
-</p>
-
-<br/>
 
 # Flexbox external links
 * [THE flexbox CSS reference: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
