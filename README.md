@@ -46,6 +46,10 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 :pushpin: FlexLayout is actively updated. So please come often to see latest changes. You can also **Star** it to be able to retrieve it easily later.
 
+:warning:	FlexLayout is a light wrapper around [Yoga](https://github.com/facebook/yoga). Yoga is still in development, so it is possible that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. FlexLayout will always be up-to-date with the latest Yoga's version.
+
+<br>
+
 **FlexLayout + PinLayout**
 
 <a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
@@ -58,12 +62,6 @@ A view layouted using PinLayout can be embedded inside a FlexLayout's flexbox co
 
 <br>
  
-### Yoga's layouting issues
-
-:warning:	FlexLayout is a light wrapper around [Yoga](https://github.com/facebook/yoga). Yoga is still in development, so it is possible that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. FlexLayout will always be up-to-date with the latest Yoga's version.
-
-<br>
-
 ## FlexLayout Introduction example <a name="intro_usage_example"></a>
 ###### Example:
 This example layout multiples views using column and row flexbox containers.
