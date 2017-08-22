@@ -265,6 +265,7 @@ The same results can also be obtained without using the `define()` method, but t
 - The structure looks more similar to how HTML and React Native defines it.
 - Inside the `define`'s closure, you can do whatever you want to fill the flexbox container, you can use `for` loops, iterates arrays of data, call functions, ...
  
+<br>
  
 ### Accessing flex items UIView <a name="accessing_flexbox_view"></a>
 It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `flex.define()` method.
