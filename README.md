@@ -271,13 +271,12 @@ The same results can also be obtained without using the `define()` method, but t
 It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `flex.define()` method.
 
 ###### Example:
-This example creates a flexbox container and sets its background color and add rounded corners.
-![Flowers](docs/01-example-distance-superview-edge.png)
+This example creates a flexbox container and sets its alpha to 0.8.
 
 ```swift
     flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
         flex.createBox().width(50).height(50).define({ (flex) in
-            flex.view.layer.cornerRadius = 10
+            flex.view.alpha = 0.8
         }}
     })
 ``` 
@@ -287,8 +286,7 @@ Another possible solution:
 ```swift
     flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
         let container = UIView()
-        container.backgroundColor = UIColor.red
-        container.layer.cornerRadius = 10
+        container.alpha = 0.8
         
         flex.addChild(container).width(50).height(50)
     })
