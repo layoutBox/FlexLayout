@@ -13,7 +13,7 @@ opt_in_rules: # some rules are only opt-in
   - redundant_nil_coalescing
 
 disabled_rules: # rule identifiers to exclude from running
-#  - function_body_length
+  - function_body_length
   - trailing_whitespace
   - force_cast
   - type_name

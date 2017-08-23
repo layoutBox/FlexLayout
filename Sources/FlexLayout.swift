@@ -88,6 +88,12 @@ public class Flex {
     }
     
     @discardableResult
+    public func addItem() -> Flex {
+        let view = UIView()
+        return addItem(view)
+    }
+    
+    @discardableResult
     public func addItem(_ view: UIView) -> Flex {
         self.view.addSubview(view)
         return view.flex
@@ -96,6 +102,12 @@ public class Flex {
     @discardableResult
     public func define(_ closure: (_ flex: Flex) -> Void) -> Flex {
         closure(self)
+        return self
+    }
+    
+    @discardableResult
+    public func markDirty() -> Flex {
+        view.yoga.markDirty()
         return self
     }
 
@@ -135,12 +147,18 @@ public class Flex {
     //
     // direction, wrap, flow
     //
+    ///
+    ///
+    /// - Parameter value: Default value is .column
     @discardableResult
     public func direction(_ value: Direction) -> Flex {
         view.yoga.flexDirection = value.yogaValue
         return self
     }
     
+    ///
+    ///
+    /// - Parameter value: Default value is .noWrap
     @discardableResult
     public func wrap(_ value: Wrap) -> Flex {
         view.yoga.flexWrap = value.yogaValue
@@ -149,6 +167,7 @@ public class Flex {
     
     @discardableResult
     public func layoutDirection(_ value: LayoutDirection) -> Flex {
+        // WORK IN PROGRESS :-)
         /*switch value {
         case .auto:
             let userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection
@@ -159,7 +178,7 @@ public class Flex {
             }
             view.yoga.direction = userInterfaceLayoutDirection == .leftToRight ? YGDirection.LTR : YGDirection.RTL
         default:*/
-            view.yoga.direction = value.yogaValue
+        view.yoga.direction = value.yogaValue
         //}
         return self
     }
@@ -167,36 +186,55 @@ public class Flex {
     //
     // justity, alignment / position
     //
+    
+    ///
+    ///
+    /// - Parameter value: Default value is .start
     @discardableResult
     public func justifyContent(_ value: Justify) -> Flex {
         view.yoga.justifyContent = value.yogaValue
         return self
     }
     
+    ///
+    ///
+    /// - Parameter value: Default value is .start
     @discardableResult
     public func alignContent(_ value: Align) -> Flex {
         view.yoga.alignContent = value.yogaValue
         return self
     }
     
+    ///
+    ///
+    /// - Parameter value: Default value is .auto
     @discardableResult
     public func alignSelf(_ value: Align) -> Flex {
         view.yoga.alignSelf = value.yogaValue
         return self
     }
 
+    ///
+    ///
+    /// - Parameter value: Default value is .stretch
     @discardableResult
     public func alignItems(_ value: Align) -> Flex {
         view.yoga.alignItems = value.yogaValue
         return self
     }
     
+    ///
+    ///
+    /// - Parameter value: Default value is .relative
     @discardableResult
     public func position(_ value: Position) -> Flex {
         view.yoga.position = value.yogaValue
         return self
     }
 
+    ///
+    ///
+    /// - Parameter value: Default value is .visible
     @discardableResult
     public func overflow(_ value: Overflow) -> Flex {
         view.yoga.overflow = value.yogaValue
@@ -206,18 +244,28 @@ public class Flex {
     //
     // grow / shrink / basis
     //
+    
+    ///
+    ///
+    /// - Parameter value: Default value is 0
     @discardableResult
     public func grow(_ value: CGFloat) -> Flex {
         view.yoga.flexGrow = value
        return self
     }
     
+    ///
+    ///
+    /// - Parameter value: Default value is 1
     @discardableResult
     public func shrink(_ value: CGFloat) -> Flex {
         view.yoga.flexShrink = value
         return self
     }
 
+    ///
+    ///
+    /// - Parameter value: Default value is 0
     @discardableResult
     public func basis(_ value: CGFloat?) -> Flex {
         if let value = value {
