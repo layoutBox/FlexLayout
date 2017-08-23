@@ -121,7 +121,7 @@ override func layoutSubviews() {
 
 </br>
 
-###### Example 2:
+###### Example 2: <a name="intro_usage_example_raywenderlich"></a>
 The example implements the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine) screen using FlexLayout. 
 
 <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=200/></a>
