@@ -210,8 +210,8 @@
 		24CD0D121F1F8D1100D56FC3 /* YogaExampleC */ = {
 			isa = PBXGroup;
 			children = (
-				24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */,
 				24875E601F1F929600BB1C09 /* YogaExampleCView.swift */,
+				24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */,
 			);
 			name = YogaExampleC;
 			sourceTree = "<group>";

@@ -25,10 +25,6 @@ class YogaExampleEView: BaseView {
         let imageView = UIView()
         imageView.backgroundColor = .flexLayoutColor
         
-        let label = UILabel()
-        label.text = "This is a string This is a string This is a st ri ng Th is is a string This is a string"
-        label.numberOfLines = 0
-        
         // Yoga's Android example
         rootFlexContainer.flex.define { (flex) in
             flex.addItem(imageView).grow(1)
