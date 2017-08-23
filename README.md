@@ -38,6 +38,7 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 	* [Margins](#margins)
 	* [Paddings](#paddings)
 	* [Borders](#borders)
+* [Examples App](#examples_app)
 * [FAQ](#faq)
 * [Comments, ideas, suggestions, issues, ....](#comments)
 * [Installation](#installation)
@@ -46,7 +47,7 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 :pushpin: FlexLayout is actively updated. So please come often to see latest changes. You can also **Star** it to be able to retrieve it easily later.
 
-:warning:	FlexLayout is a light wrapper around [Yoga](https://github.com/facebook/yoga). Yoga is still in development, so it is possible that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. FlexLayout will always be up-to-date with the latest Yoga's version.
+:warning:	FlexLayout is a light wrapper around [Yoga](https://github.com/facebook/yoga). Yoga has still some open issues, so it is possible that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. FlexLayout will always be up-to-date with the latest Yoga's version.
 
 <br>
 
@@ -73,7 +74,7 @@ Two steps to use a flexbox container:
 	1. First you must layout the flexbox container, i.e. position it and optionally set its size. 
 	2. Then layout the flexbox children using Flex method `layout()`.
 
-![](docs/images/examples/flexlayout-intro-example.png)
+![](docs/images/examples/flexlayout_exampleapp_intro_all.png)
 
 ```swift
 fileprivate let rootFlexContainer = UIView()
@@ -116,8 +117,7 @@ override func layoutSubviews() {
 }
 ``` 
 
-:pushpin: This example is available in the project Sample App. 
-
+:pushpin: This example is available in the [Examples App](#examples_app). 
 <br>
 
 ## FlexLayout principles and philosophy <a name="introduction"></a>
@@ -176,6 +176,7 @@ These results also means that **FlexLayout and PinLayout are by far faster than 
 	| **`grow`** | 0 | 0 | 0 |
 	| **`shrink`** | 0 | 1 | 0 |
 	| **`basis`** | 0 | auto | 0 |
+	| **`wrap`** | noWrap | nowrap | noWrap |
 
 * **FlexLayout additions**: 
 	* addItem()
@@ -183,7 +184,7 @@ These results also means that **FlexLayout and PinLayout are by far faster than 
 	* define()
 	* layout()
 	* isIncludedInLayout()
-	* markAsDirty()
+	* markDirty()
 	* intrinsicSize
 	* sizeThatFits()
 
@@ -531,7 +532,7 @@ For example, if all items have `grow` set to 1, every child will set to an equal
 
 ### shrink
 - Applies to: `flex items`
-- Default value: 1
+- Default value: 0
 - CSS name: `flex-shrink` 
 
 **Method:**
@@ -539,7 +540,7 @@ For example, if all items have `grow` set to 1, every child will set to an equal
 * **`shrink(_: CGFloat)`**  
 It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the main-axis.
 
-  When omitted, it is set to 1 and the flex shrink factor is multiplied by the flex `basis` when distributing negative space.
+  When omitted, it is set to 0 and the flex shrink factor is multiplied by the flex `basis` when distributing negative space.
 
   A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to overflow its flex container.
 
@@ -574,13 +575,13 @@ FlexLayout automatically includes the UIView when:
 
 <br>
 
-### markAsDirty()
+### markDirty()
 - Applies to: `flex items`
 
 **Method:**
 
-* **`markAsDirty()`**  
-Yoga is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty using `markAsDirty()`. 
+* **`markDirty()`**  
+Yoga is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty using `markDirty()`. 
 
   Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated.
 
@@ -592,10 +593,12 @@ In the case where a UILabel's text is updated, it is needed to mark the label as
     label.text = "I love FlexLayout"
      
     // 2) Mark the UILabel as dirty
-    label.flex.markAsDirty()
+    label.flex. markDirty()
     
-    // 2) Then relayout the flex container.
+    // 3) Then force a relayout of the flex container.
     rootFlexContainer.flex.layout()
+    OR
+    setNeedsLayout()
 ```
 
 <br>
@@ -874,8 +877,35 @@ Then, run `pod install`.
 
 <br/>
 
+## Examples App <a name="examples_app"></a>
+There is an Example app that expose some usage example on FlexLayout, including:
+
+* The [example](#intro_usage_example) presented priviously in this README.
+* An implementation of the [Ray Wenderlich Yoga Turorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.
+* Implementation of all [Yoga's examples](https://facebook.github.io/yoga/): C, Obj-C, Java, C#, Android
+
+<p align="center">
+  <img src="docs/images/examples/flexlayout_exampleapp_intro_portrait.png" alt="FlexLayout example" width=120/>
+  <img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=120/>
+  <img src="docs/images/examples/flexlayout_exampleapp_yoga_c.png" alt="FlexLayout example" width=120/>
+  <img src="docs/images/examples/flexlayout_exampleapp_yoga_objc.png" alt="FlexLayout example" width=120/>
+  <img src="docs/images/examples/flexlayout_exampleapp_yoga_java.png" alt="FlexLayout example" width=120/>
+  <img src="docs/images/examples/flexlayout_exampleapp_yoga_csharp.png" alt="FlexLayout example" width=120/>
+  <img src="docs/images/examples/flexlayout_exampleapp_yoga_android.png" alt="FlexLayout example" width=120/>
+</p>
+
+This app is available in the `Example` folder. Note that you must do a `pod install` before running the example project.
+
+<br>
 
 ## FAQ <a name="faq"></a>
+
+*  **Q: The flex item overflow or is bigger than its container?**  
+   **R:** By default the flex item's `shrink` value is 0, which keeps the item's current size in the main-axis direction. So that may cause the item to overflow its flex container. To fix that you just have to specify a `shrink` value bigger than 0:  
+```
+   view.flex.shrink(1)
+```
+
 
 *  **Q: How to keep the view size (width/height)?**  
    **R:** By default view's flex shrink value is set to 1, which reduce the size of the view if the view is bigger than its flex container in the main-axis direction. If the direction is column, the height is adjusted, if the direction is row, the width is adjusted. Setting this value to 0 will keep the view size in the main-axis direction.

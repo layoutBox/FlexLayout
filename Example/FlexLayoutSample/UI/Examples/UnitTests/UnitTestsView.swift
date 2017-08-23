@@ -86,7 +86,6 @@ class UnitTestsView: BaseView {
         }
 //        expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
 
-        
         rootFlexContainer.flex.layout()
 //        printViewFrame(rootFlexContainer, name: "rootFlexContainer")
         printViewFrame(aView, name: "aView")

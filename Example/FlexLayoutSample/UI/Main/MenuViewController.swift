@@ -14,24 +14,26 @@ import UIKit
 
 enum PageType: Int {
     case intro
+    case rayWenderlich
     case yogaExampleA
     case yogaExampleB
     case yogaExampleC
     case yogaExampleD
     case yogaExampleE
-    case flex
+    //case flex
     
     case count
     
     var text: String {
         switch self {
         case .intro:          return "Intro Example"
+        case .rayWenderlich:  return "Raywenderlich Tutorial"
         case .yogaExampleA:   return "Yoga C Example"
         case .yogaExampleB:   return "Yoga Obj-C Example"
         case .yogaExampleC:   return "Yoga Java Example"
         case .yogaExampleD:   return "Yoga C# Example"
         case .yogaExampleE:   return "Yoga Android Example"
-        case .flex:           return "Flexbox"
+        //case .flex:           return "Flexbox"
         case .count:          return ""
         }
     }
@@ -39,12 +41,13 @@ enum PageType: Int {
     var viewController: UIViewController {
         switch self {
         case .intro:          return IntroViewController(pageType: self)
+        case .rayWenderlich:  return RayWenderlichTutorialViewController(pageType: self)
         case .yogaExampleA:   return YogaExampleAViewController(pageType: self)
         case .yogaExampleB:   return YogaExampleBViewController(pageType: self)
         case .yogaExampleC:   return YogaExampleCViewController(pageType: self)
         case .yogaExampleD:   return YogaExampleDViewController(pageType: self)
         case .yogaExampleE:   return YogaExampleEViewController(pageType: self)
-        case .flex:           return FlexboxViewController(pageType: self)
+        //case .flex:           return FlexboxViewController(pageType: self)
         case .count:          return UIViewController()
         }
     }
@@ -71,7 +74,7 @@ class MenuViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-//        didSelect(pageType: .intro)
+//        didSelect(pageType: .yogaExampleE)
     }
 }
 
