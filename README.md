@@ -74,7 +74,7 @@ Two steps to use a flexbox container:
 	1. First you must layout the flexbox container, i.e. position it and optionally set its size. 
 	2. Then layout the flexbox children using Flex method `layout()`.
 
-![](docs/images/examples/flexlayout_exampleapp_intro_all.png)
+<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a>
 
 ```swift
 fileprivate let rootFlexContainer = UIView()
