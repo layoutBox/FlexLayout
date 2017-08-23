@@ -70,7 +70,7 @@ public class Flex {
         self.view = view
         // Enable flexbox and overwrite Yoga default values.
         view.yoga.isEnabled = true
-        view.yoga.flexShrink = 1
+        //view.yoga.flexShrink = 1 // Cause Yoga's issues?
     }
 
     public var intrinsicSize: CGSize {
