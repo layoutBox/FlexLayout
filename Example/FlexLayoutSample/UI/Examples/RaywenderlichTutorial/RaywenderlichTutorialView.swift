@@ -27,7 +27,7 @@ class RayWenderlichTutorialView: BaseView {
     let summaryPopularityLabel = UILabel()
     let episodeTitleLabel = UILabel()
     let descriptionLabel = UILabel()
-    let showsTableView = UITableView()
+    let showsTableView = ExpandedTableView()
     
     init(series: Series) {
         self.series = series
@@ -235,7 +235,7 @@ extension RayWenderlichTutorialView: UITableViewDataSource, UITableViewDelegate 
     }
     
     internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 100
     }
     
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

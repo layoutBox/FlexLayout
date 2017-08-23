@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2245F067A40DB6A13F97F202 /* Pods_FlexLayoutSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */; };
-		240BE2691F4DAE0C00C89596 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240BE2681F4DAE0C00C89596 /* ShowTableViewCell.swift */; };
 		24875E611F1F929600BB1C09 /* YogaExampleCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E601F1F929600BB1C09 /* YogaExampleCView.swift */; };
 		24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */; };
 		24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E641F1F92B500BB1C09 /* YogaExampleDView.swift */; };
@@ -17,12 +16,14 @@
 		24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */; };
 		24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */; };
 		24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */; };
+		24AADD481F4E176A00CB77E6 /* Shows.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AADD471F4E176A00CB77E6 /* Shows.plist */; };
+		24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */; };
+		24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */; };
+		24AADD4E1F4E17BF00CB77E6 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD4D1F4E17BF00CB77E6 /* Show.swift */; };
 		24B14C5B1F278CCE00C90490 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B14C591F278CCE00C90490 /* IntroView.swift */; };
 		24B14C5C1F278CCE00C90490 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B14C5A1F278CCE00C90490 /* IntroViewController.swift */; };
 		24E835161F4CC336009F95CC /* RaywenderlichTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E835141F4CC336009F95CC /* RaywenderlichTutorialView.swift */; };
 		24E835171F4CC336009F95CC /* RaywenderlichTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E835151F4CC336009F95CC /* RaywenderlichTutorialViewController.swift */; };
-		24E8351B1F4CC968009F95CC /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8351A1F4CC968009F95CC /* Show.swift */; };
-		24E8351D1F4CCA02009F95CC /* Shows.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E8351C1F4CCA02009F95CC /* Shows.plist */; };
 		DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
 		DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
 		DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */; };
@@ -55,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		0D0595B5E0950936D037ECF2 /* Pods-FlexLayoutSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.release.xcconfig"; sourceTree = "<group>"; };
-		240BE2681F4DAE0C00C89596 /* ShowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowTableViewCell.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/ShowTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		2439CC331E665BF6003326FB /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2439CC341E665BF6003326FB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2439CC381E665C6B003326FB /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
@@ -74,14 +74,16 @@
 		249EFE491E64FAFE00165E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		249EFE4C1E64FAFE00165E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		249EFE4E1E64FAFE00165E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24AADD471F4E176A00CB77E6 /* Shows.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Shows.plist; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/Data/Shows.plist; sourceTree = SOURCE_ROOT; };
+		24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowTableViewCell.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/Subviews/ShowTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandedTableView.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/Subviews/ExpandedTableView.swift; sourceTree = SOURCE_ROOT; };
+		24AADD4D1F4E17BF00CB77E6 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Show.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/Data/Show.swift; sourceTree = SOURCE_ROOT; };
 		24B14C591F278CCE00C90490 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroView.swift; path = FlexLayoutSample/UI/Examples/Intro/IntroView.swift; sourceTree = SOURCE_ROOT; };
 		24B14C5A1F278CCE00C90490 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = FlexLayoutSample/UI/Examples/Intro/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
 		24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFormView.swift; sourceTree = "<group>"; };
 		24E654811E69041B00A72A8B /* Expect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expect.swift; sourceTree = "<group>"; };
 		24E835141F4CC336009F95CC /* RaywenderlichTutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RaywenderlichTutorialView.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift; sourceTree = SOURCE_ROOT; };
 		24E835151F4CC336009F95CC /* RaywenderlichTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RaywenderlichTutorialViewController.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialViewController.swift; sourceTree = SOURCE_ROOT; };
-		24E8351A1F4CC968009F95CC /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Show.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/Show.swift; sourceTree = SOURCE_ROOT; };
-		24E8351C1F4CCA02009F95CC /* Shows.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Shows.plist; sourceTree = SOURCE_ROOT; };
 		82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8561ACDBCFFA1B4B9ABEAB16 /* Pods-FlexLayoutSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaExampleBView.swift; path = FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift; sourceTree = SOURCE_ROOT; };
@@ -198,6 +200,24 @@
 			path = FlexLayoutSample;
 			sourceTree = "<group>";
 		};
+		24AADD451F4E16ED00CB77E6 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */,
+				24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		24AADD461F4E173300CB77E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				24AADD4D1F4E17BF00CB77E6 /* Show.swift */,
+				24AADD471F4E176A00CB77E6 /* Shows.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		24B14C581F278CB400C90490 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,11 +265,10 @@
 		24E835131F4CC323009F95CC /* RaywenderlichTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				24AADD461F4E173300CB77E6 /* Data */,
+				24AADD451F4E16ED00CB77E6 /* Subviews */,
 				24E835141F4CC336009F95CC /* RaywenderlichTutorialView.swift */,
 				24E835151F4CC336009F95CC /* RaywenderlichTutorialViewController.swift */,
-				240BE2681F4DAE0C00C89596 /* ShowTableViewCell.swift */,
-				24E8351A1F4CC968009F95CC /* Show.swift */,
-				24E8351C1F4CCA02009F95CC /* Shows.plist */,
 			);
 			name = RaywenderlichTutorial;
 			sourceTree = "<group>";
@@ -348,7 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF1F2A191F17D11700BA1B97 /* LaunchScreen.storyboard in Resources */,
-				24E8351D1F4CCA02009F95CC /* Shows.plist in Resources */,
+				24AADD481F4E176A00CB77E6 /* Shows.plist in Resources */,
 				DF1F2A1A1F17D11700BA1B97 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,12 +456,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E835171F4CC336009F95CC /* RaywenderlichTutorialViewController.swift in Sources */,
-				240BE2691F4DAE0C00C89596 /* ShowTableViewCell.swift in Sources */,
+				24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */,
 				DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */,
 				DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */,
 				24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */,
 				DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */,
 				DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */,
+				24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */,
 				DF91747F1F1F6F9A0034632D /* YogaExampleAView.swift in Sources */,
 				DF1F2A0C1F17D11700BA1B97 /* BasicView.swift in Sources */,
 				DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */,
@@ -457,8 +477,8 @@
 				24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */,
 				24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */,
 				24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */,
+				24AADD4E1F4E17BF00CB77E6 /* Show.swift in Sources */,
 				24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */,
-				24E8351B1F4CC968009F95CC /* Show.swift in Sources */,
 				24B14C5B1F278CCE00C90490 /* IntroView.swift in Sources */,
 				DF1F2A101F17D11700BA1B97 /* Expect.swift in Sources */,
 				DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */,
