@@ -118,6 +118,7 @@ override func layoutSubviews() {
 ``` 
 
 :pushpin: This example is available in the [Examples App](#examples_app). 
+
 <br>
 
 ## FlexLayout principles and philosophy <a name="introduction"></a>
