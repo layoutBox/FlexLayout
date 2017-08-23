@@ -94,15 +94,15 @@ Remark how FlexLayout and PinLayout code is concise and clean compared to Manual
 ```swift
 flex.addItem(contentView).padding(8).define { (flex) in
     flex.addItem(contentView).padding(8).define { (flex) in
-        flex.addContainer().direction(.row).justifyContent(.spaceBetween).define { (flex) in
+        flex.addItem().direction(.row).justifyContent(.spaceBetween).define { (flex) in
             flex.addItem(actionLabel)
             flex.addItem(optionsLabel)
         }
         
-        flex.addContainer().direction(.row).alignItems(.center).define({ (flex) in
+        flex.addItem().direction(.row).alignItems(.center).define({ (flex) in
             flex.addItem(posterImageView).width(50).height(50).marginRight(8)
 
-            flex.addContainer().grow(1).define({ (flex) in
+            flex.addItem().grow(1).define({ (flex) in
                 flex.addItem(posterNameLabel)
                 flex.addItem(posterHeadlineLabel)
                 flex.addItem(posterTimeLabel)
@@ -115,13 +115,13 @@ flex.addItem(contentView).padding(8).define { (flex) in
         flex.addItem(contentTitleLabel)
         flex.addItem(contentDomainLabel)
 
-        flex.addContainer().direction(.row).justifyContent(.spaceBetween).marginTop(4).define({ (flex) in
+        flex.addItem().direction(.row).justifyContent(.spaceBetween).marginTop(4).define({ (flex) in
             flex.addItem(likeLabel)
             flex.addItem(commentLabel)
             flex.addItem(shareLabel)
         })
 
-        flex.addContainer().direction(.row).marginTop(2).define({ (flex) in
+        flex.addItem().direction(.row).marginTop(2).define({ (flex) in
             flex.addItem(actorImageView).width(50).height(50).marginRight(8)
             flex.addItem(actorCommentLabel).grow(1)
         })

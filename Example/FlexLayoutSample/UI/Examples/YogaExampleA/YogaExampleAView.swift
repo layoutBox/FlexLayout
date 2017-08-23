@@ -24,13 +24,8 @@ class YogaExampleAView: BaseView {
 
         // Yoga's C Example
         rootFlexContainer.flex.direction(.row).padding(20).define { (flex) in
-            flex.addContainer().width(80).marginEnd(20).define({ (flex) in
-                flex.view.backgroundColor = .flexLayoutColor
-            })
-
-            flex.addContainer().height(25).alignSelf(.center).grow(1).define({ (flex) in
-                flex.view.backgroundColor = .black
-            })
+            flex.addItem().width(80).marginEnd(20).backgroundColor(.flexLayoutColor)
+            flex.addItem().height(25).alignSelf(.center).grow(1).backgroundColor(.black)
         }
         addSubview(rootFlexContainer)
     }

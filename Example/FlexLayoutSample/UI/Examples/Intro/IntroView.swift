@@ -36,16 +36,16 @@ class IntroView: BaseView {
         bottomLabel.numberOfLines = 0
         
         rootFlexContainer.flex.direction(.column).padding(12).define { (flex) in
-            flex.addContainer().direction(.row).define { (flex) in
+            flex.addItem().direction(.row).define { (flex) in
                 flex.addItem(imageView).width(100).aspectRatio(of: imageView)
                 
-                flex.addContainer().direction(.column).paddingLeft(12).grow(1).shrink(1).define { (flex) in
+                flex.addItem().direction(.column).paddingLeft(12).grow(1).shrink(1).define { (flex) in
                     flex.addItem(segmentedControl).marginBottom(12).grow(1)
                     flex.addItem(label)
                 }
             }
             
-            flex.addContainer().height(1).marginTop(12).backgroundColor(.lightGray)
+            flex.addItem().height(1).marginTop(12).backgroundColor(.lightGray)
             flex.addItem(bottomLabel).marginTop(12)
         }
         
