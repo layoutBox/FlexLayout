@@ -39,7 +39,7 @@ class IntroView: BaseView {
             flex.addContainer().direction(.row).define { (flex) in
                 flex.addItem(imageView).width(100).aspectRatio(of: imageView)
                 
-                flex.addContainer().direction(.column).paddingLeft(12).grow(1).define { (flex) in
+                flex.addContainer().direction(.column).paddingLeft(12).grow(1).shrink(1).define { (flex) in
                     flex.addItem(segmentedControl).marginBottom(12).grow(1)
                     flex.addItem(label)
                 }
