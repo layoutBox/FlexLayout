@@ -147,14 +147,14 @@ class RayWenderlichTutorialView: BaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        // Layout the contentView & rootFlexContainer using PinLayout
+        // 1) Layout the contentView & rootFlexContainer using PinLayout
         contentView.pin.top().bottom().left().right()
         rootFlexContainer.pin.top().left().right()
 
-        // Then let the flexbox container layout itself and adjust the height
+        // 2) Let the flexbox container layout itself and adjust the height
         rootFlexContainer.flex.layout(mode: .adjustHeight)
         
-        // Then adjust the scrollview contentSize
+        // 3) Adjust the scrollview contentSize
         contentView.contentSize = rootFlexContainer.frame.size
     }
     

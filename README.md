@@ -23,7 +23,7 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 ### Content
 
-* [Introduction example](#intro_usage_example)
+* [Introduction examples](#intro_usage_example)
 * [FlexLayout principles and philosophy](#introduction)
 * [Performance](#performance)
 * [Documentation](#documentation)
@@ -63,8 +63,8 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 <br>
  
-## FlexLayout Introduction example <a name="intro_usage_example"></a>
-###### Example:
+## FlexLayout Introduction examples <a name="intro_usage_example"></a>
+###### Example 1:
 This example layout multiples views using column and row flexbox containers.
 
 Two steps to use a flexbox container:
@@ -117,7 +117,82 @@ override func layoutSubviews() {
 }
 ``` 
 
-:pushpin: This example is available in the [Examples App](#examples_app). 
+:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
+
+</br>
+
+###### Example 2:
+The example implements the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine) screen using FlexLayout. 
+
+<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=200/></a>
+
+```swift
+init() {
+   ...
+
+   rootFlexContainer.flex.define { (flex) in
+        // Image
+        flex.addItem(episodeImageView).grow(1).backgroundColor(.gray)
+        
+        // Summary row
+        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+            flex.addItem(summaryPopularityLabel).grow(1)
+            
+            flex.addItem().direction(.row).justifyContent(.spaceBetween).grow(2).define({ (flex) in
+                flex.addItem(yearLabel)
+                flex.addItem(ratingLabel)
+                flex.addItem(lengthLabel)
+            })
+            
+            flex.addItem().width(100).height(1).grow(1)
+        })
+        
+        // Title row
+        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+            flex.addItem(episodeIdLabel)
+            flex.addItem(episodeTitleLabel).marginLeft(20)
+        })
+        
+        // Description section
+        flex.addItem().paddingHorizontal(paddingHorizontal).define({ (flex) in
+            flex.addItem(descriptionLabel)
+            flex.addItem(castLabel)
+            flex.addItem(creatorsLabel)
+        })
+        
+        // Action row
+        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+            flex.addItem(addActionView)
+            flex.addItem(shareActionView)
+        })
+        
+        // Tabs row
+        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+            flex.addItem(episodesTabView)
+            flex.addItem(moreTabView)
+        })
+        
+        // Shows TableView
+        flex.addItem(showsTableView).grow(1)
+    }
+}
+
+override func layoutSubviews() {
+    super.layoutSubviews() 
+
+    // 1) Layout the contentView & rootFlexContainer using PinLayout
+    contentView.pin.top().bottom().left().right()
+    rootFlexContainer.pin.top().left().right()
+
+    // 2) Let the flexbox container layout itself and adjust the height
+    rootFlexContainer.flex.layout(mode: .adjustHeight)
+    
+    // 3) Adjust the scrollview contentSize
+    contentView.contentSize = rootFlexContainer.frame.size
+}
+``` 
+
+:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift)
 
 <br>
 
@@ -882,7 +957,7 @@ Then, run `pod install`.
 There is an Example app that expose some usage example on FlexLayout, including:
 
 * The [example](#intro_usage_example) presented priviously in this README.
-* An implementation of the [Ray Wenderlich Yoga Turorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.
+* An implementation of the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.
 * Implementation of all [Yoga's examples](https://facebook.github.io/yoga/): C, Obj-C, Java, C#, Android
 
 :pushpin: Tap on images to see the example's source code.
