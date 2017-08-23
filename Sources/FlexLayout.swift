@@ -73,11 +73,6 @@ public class Flex {
         //view.yoga.flexShrink = 1 // Cause Yoga's issues?
     }
 
-    public var intrinsicSize: CGSize {
-        return view.yoga.intrinsicSize
-    }
-    
-    
     //
     // Creation / definition
     //
@@ -112,7 +107,7 @@ public class Flex {
     }
 
     //
-    // Layout / sizeThatFits
+    // Layout / intrinsicSize/ sizeThatFits
     //
     public enum LayoutMode {
         case fitContainer
@@ -139,7 +134,11 @@ public class Flex {
         self.isIncludedInLayout = included
         return self
     }
-
+    
+    public var intrinsicSize: CGSize {
+        return view.yoga.intrinsicSize
+    }
+    
     public func sizeThatFits(size: CGSize) -> CGSize {
         return view.yoga.calculateLayout(with: size)
     }
