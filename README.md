@@ -55,11 +55,11 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 <a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
 
-**FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positioning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug). 
+**FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positioning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug).
 
-PinLayout can layout anything, but in situations where you need to layouts many views without requiring the finest control, FlexLayout is best fitted. 
-
-A view layouted using PinLayout can be embedded inside a FlexLayout's flexbox container and reversely PinLayout can layout a FlexLayout view. You choose the best layout framework for your situation. 
+* A view can be layouted using FlexLayout, PinLayout, or both!
+* PinLayout can layout anything, but in situations where you need to layouts many views but don't require the PinLayout's finest control nor complex animations, FlexLayout is best fitted. 
+* A view layouted using PinLayout can be embedded inside a FlexLayout's container and reversely. You choose the best layout framework for your situation. 
 
 <br>
  
@@ -884,14 +884,16 @@ There is an Example app that expose some usage example on FlexLayout, including:
 * An implementation of the [Ray Wenderlich Yoga Turorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.
 * Implementation of all [Yoga's examples](https://facebook.github.io/yoga/): C, Obj-C, Java, C#, Android
 
+:pushpin: Tap on the image to see the example's source code.
+
 <p align="center">
-  <img src="docs/images/examples/flexlayout_exampleapp_intro_portrait.png" alt="FlexLayout example" width=120/>
-  <img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=120/>
-  <img src="docs/images/examples/flexlayout_exampleapp_yoga_c.png" alt="FlexLayout example" width=120/>
-  <img src="docs/images/examples/flexlayout_exampleapp_yoga_objc.png" alt="FlexLayout example" width=120/>
-  <img src="docs/images/examples/flexlayout_exampleapp_yoga_java.png" alt="FlexLayout example" width=120/>
-  <img src="docs/images/examples/flexlayout_exampleapp_yoga_csharp.png" alt="FlexLayout example" width=120/>
-  <img src="docs/images/examples/flexlayout_exampleapp_yoga_android.png" alt="FlexLayout example" width=120/>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs/images/examples/flexlayout_exampleapp_intro_portrait.png" alt="FlexLayout example" width=120/></a>
+  <a href=""><img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_c.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_objc.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_java.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_csharp.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_android.png" alt="FlexLayout example" width=120/></a>
 </p>
 
 This app is available in the `Example` folder. Note that you must do a `pod install` before running the example project.
