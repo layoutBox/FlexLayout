@@ -26,7 +26,6 @@
 		24E835171F4CC336009F95CC /* RaywenderlichTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E835151F4CC336009F95CC /* RaywenderlichTutorialViewController.swift */; };
 		DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
 		DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
-		DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */; };
 		DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC331E665BF6003326FB /* MenuView.swift */; };
 		DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493268B1EEEEFF100BCB814 /* BaseViewController.swift */; };
 		DF1F2A0C1F17D11700BA1B97 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC381E665C6B003326FB /* BasicView.swift */; };
@@ -80,7 +79,6 @@
 		24AADD4D1F4E17BF00CB77E6 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Show.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/Data/Show.swift; sourceTree = SOURCE_ROOT; };
 		24B14C591F278CCE00C90490 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroView.swift; path = FlexLayoutSample/UI/Examples/Intro/IntroView.swift; sourceTree = SOURCE_ROOT; };
 		24B14C5A1F278CCE00C90490 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = FlexLayoutSample/UI/Examples/Intro/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
-		24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFormView.swift; sourceTree = "<group>"; };
 		24E654811E69041B00A72A8B /* Expect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expect.swift; sourceTree = "<group>"; };
 		24E835141F4CC336009F95CC /* RaywenderlichTutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RaywenderlichTutorialView.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift; sourceTree = SOURCE_ROOT; };
 		24E835151F4CC336009F95CC /* RaywenderlichTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RaywenderlichTutorialViewController.swift; path = FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -135,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				2493268B1EEEEFF100BCB814 /* BaseViewController.swift */,
-				24DA374A1EF7F90600D1AB2F /* BaseFormView.swift */,
 				2493268D1EEEF02700BCB814 /* BaseView.swift */,
 				2439CC381E665C6B003326FB /* BasicView.swift */,
 				249326881EEEEE3D00BCB814 /* Stylesheet.swift */,
@@ -458,7 +455,6 @@
 				24E835171F4CC336009F95CC /* RaywenderlichTutorialViewController.swift in Sources */,
 				24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */,
 				DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */,
-				DF1F2A081F17D11700BA1B97 /* BaseFormView.swift in Sources */,
 				24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */,
 				DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */,
 				DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */,

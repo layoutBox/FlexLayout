@@ -208,7 +208,12 @@ class RayWenderlichTutorialView: BaseView {
         tabView.flex.alignItems(.center).marginRight(20)
 
         let tabLabelFont = selected ? UIFont.boldSystemFont(ofSize: 14.0) : UIFont.systemFont(ofSize: 14.0)
+        
+        #if swift(>=4)
+        let fontSize = text.size(withAttributes: [NSAttributedStringKey.font: tabLabelFont])
+        #else
         let fontSize = text.size(attributes: [NSFontAttributeName: tabLabelFont])
+        #endif
         
         let tabSelectionView = UIView(frame: CGRect(x: 0, y: 0, width: fontSize.width, height: 3))
         tabSelectionView.flex.width(fontSize.width).marginBottom(5)

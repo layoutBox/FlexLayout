@@ -18,8 +18,8 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 ### Requirements
 * iOS 8.0+
-* Xcode 8.0+
-* Swift 3.0+
+* Xcode 8.0+ / Xcode 9.0
+* Swift 3.0+ / Swift 4.0
 
 ### Content
 
