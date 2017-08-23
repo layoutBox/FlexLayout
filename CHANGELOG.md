@@ -7,7 +7,22 @@
 
 # Change Log
 
+## [1.1.0](https://github.com/lucdion/FlexLayout/releases/tag/1.1.0)
+Released on 2017-08-23
+
+* Add missing markDirty() method
+* :warning: BREAKING CHANGE: Renamed the method `addContainer()` to `addItem(). It is clearer that the added view is in fact a flex item, and not just a flex container.
+  * Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#8](https://github.com/lucdion/FlexLayout/pull/8 ) 
+* Add an implementation of the Ray Wenderlich Yoga Tutorial  
+  * Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#7](https://github.com/lucdion/FlexLayout/pull/7) 
+
+## [1.0.0](https://github.com/lucdion/FlexLayout/releases/tag/1.0.0)
+Released on 2017-08-20
+
+* Initial official release.
+* Add unit tests 
+
 ## [0.1.1](https://github.com/lucdion/FlexLayout/releases/tag/0.1.1)
 Released on 2017-08-02
 
-* Initial official release.
+* Initial beta release.

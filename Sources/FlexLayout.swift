@@ -77,12 +77,6 @@ public class Flex {
     // Creation / definition
     //
     @discardableResult
-    public func addContainer() -> Flex {
-        let view = UIView()
-        return addItem(view)
-    }
-    
-    @discardableResult
     public func addItem() -> Flex {
         let view = UIView()
         return addItem(view)

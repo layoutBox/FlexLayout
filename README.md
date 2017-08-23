@@ -88,17 +88,17 @@ init() {
    // Column container
    rootFlexContainer.flex.direction(.column).padding(12).define { (flex) in
         // Row container
-        flex.addContainer().direction(.row).define { (flex) in
+        flex.addItem().direction(.row).define { (flex) in
             flex.addItem(imageView).width(100).aspectRatio(of: imageView)
             
             // Column container
-            flex.addContainer().direction(.column).paddingLeft(12).grow(1).define { (flex) in
+            flex.addItem().direction(.column).paddingLeft(12).grow(1).define { (flex) in
                 flex.addItem(segmentedControl).marginBottom(12).grow(1)
                 flex.addItem(label)
             }
         }
         
-        flex.addContainer().height(1).marginTop(12).backgroundColor(.lightGray)
+        flex.addItem().height(1).marginTop(12).backgroundColor(.lightGray)
         flex.addItem(bottomLabel).marginTop(12)
     }
 }
@@ -256,7 +256,6 @@ These results also means that **FlexLayout and PinLayout are by far faster than 
 
 * **FlexLayout additions**: 
 	* addItem()
-	* addContainer()
 	* define()
 	* layout()
 	* isIncludedInLayout()
@@ -305,18 +304,18 @@ This method adds a flex item (UIView) to a flex container. Internally the method
 ```
 <br>
 
-### addContainer()
+### addItem()
 - Applies to: `flex containers`
 - Returns: FlexLayout interface of the newly created flex item.
 
 **Method:**
 
-* **`addContainer() -> Flex`**  
-This method is similar to `addItem()` except that it also creates the flex container's UIView. Internally the method creates a UIView, adds it has subviews and finally enables flexbox. This is useful to add a flex container easily when you don't need to refer to it later.
+* **`addItem() -> Flex`**  
+This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates an UIView, adds it has subviews and enables flexbox. This is useful to add a flex item/container easily when you don't need to refer to it later.
 
 ###### Usage examples:
 ```swift
-  view.flex.addContainer().direction(.row).padding(10)
+  view.flex.addItem().direction(.row).padding(10)
 ```
 <br>
 
@@ -331,10 +330,10 @@ This method is used to structure your code so that it matches the flexbox struct
 
 ###### Usage examples:
 ```swift
-  view.flex.addContainer().define { (flex) in
+  view.flex.addItem().define { (flex) in
       flex.addItem(imageView).grow(1)
 		
-      flex.addContainer().direction(.row).define { (flex) in
+      flex.addItem().direction(.row).define { (flex) in
           flex.addItem(titleLabel).grow(1)
           flex.addItem(priceLabel)
       }
@@ -646,8 +645,7 @@ This property controls dynamically if a flexbox's UIView is included or not in t
 
 FlexLayout automatically includes the UIView when:
 * The first time `UIView.flex` property is accessed
-* When a child view is added to a flexbox container using `addChild(:UIView)`
-* When a flexbox container is created using `addContainer()`
+* When a child view is added to a flexbox container using `addItem(:UIView)` or `addItem()`
 
 <br>
 
@@ -746,6 +744,7 @@ Using these properties you can control the size and position of an absolute item
 ```swift
   view.flex.position(.absolute).top(10).right(10).width(100).height(50)
 ```
+:pushpin: See the "Yoga C" example in the [Examples App](#examples_app). [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift)
 
 <br>
 
@@ -923,8 +922,8 @@ Set the flex item's UIView background color.
 ###### Usage examples:
 ```swift
   // Create a gray column container and add a black horizontal line separator 
-  flex.addContainer().backgroundColor(.gray).define { (flex) in
-      flex.addContainer().height(1).backgroundColor(.black)
+  flex.addItem().backgroundColor(.gray).define { (flex) in
+      flex.addItem().height(1).backgroundColor(.black)
   } 
 ```
 
