@@ -533,7 +533,7 @@ The `alignItems` property defines how flex items are laid out along the cross ax
 **Method:**
 
 * **`alignSelf(_: Align)`**  
-The `alignItems` property controls how a child aligns in the cross direction, overriding the `alignItems` of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item will align horizontally. 
+The `alignSelf` property controls how a child aligns in the cross direction, overriding the `alignItems` of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item will align horizontally. 
 
   The `auto` value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values.
 
