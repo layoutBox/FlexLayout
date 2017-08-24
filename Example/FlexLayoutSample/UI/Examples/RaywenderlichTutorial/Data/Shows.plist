@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>The Empty Hearse</string>
+		<key>length</key>
+		<string>1h 26m</string>
+		<key>detail</key>
+		<string>Two years after Shelock&apos;s &quot;death&quot;. Watson has moved on. But when Long is threatened by a terrorrist attack, Sherlock decides it&apos;s time to return.</string>
+		<key>image</key>
+		<string>sherlock</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>The Sign of Three</string>
+		<key>length</key>
+		<string>1h 26m</string>
+		<key>detail</key>
+		<string>While mortal danger stalks Watson&apos;s wedding reception, Sherlock faces his biggest challenge of all: delivering a best man&apos;s speech!</string>
+		<key>image</key>
+		<string>sherlock</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>His Last Vow</string>
+		<key>length</key>
+		<string>1h 29m</string>
+		<key>detail</key>
+		<string>A case of stoeln letters leads Sherlock Holmes to engage in a long conflict with the powerful Chales Augustus Magnussen, the Napolean of blackmail.</string>
+		<key>image</key>
+		<string>sherlock</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>The Abominable Bride</string>
+		<key>length</key>
+		<string>1h 29m</string>
+		<key>detail</key>
+		<string>In this special set in 1895, Holmes and Watson investigate a vengeful apparition in a wedding dress, reportedly the ghost of a suicide victim.</string>
+		<key>image</key>
+		<string>sherlock</string>
+	</dict>
+</array>
+</plist>
