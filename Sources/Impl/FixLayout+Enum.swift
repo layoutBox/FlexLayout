@@ -25,17 +25,8 @@ extension Flex.Direction {
         }
     }
 }
-extension Flex.Overflow {
-    var yogaValue: YGOverflow {
-        switch self {
-        case .visible: return YGOverflow.visible
-        case .hidden:  return YGOverflow.hidden
-        case .scroll:  return YGOverflow.scroll
-        }
-    }
-}
 
-extension Flex.Justify {
+extension Flex.JustifyContent {
     var yogaValue: YGJustify {
         switch self {
         case .start:        return YGJustify.flexStart
@@ -47,17 +38,40 @@ extension Flex.Justify {
     }
 }
 
-extension Flex.Align {
+extension Flex.AlignContent {
     var yogaValue: YGAlign {
         switch self {
+        case .stretch:      return YGAlign.stretch
         case .start:        return YGAlign.flexStart
         case .center:       return YGAlign.center
         case .end:          return YGAlign.flexEnd
+        case .spaceBetween: return YGAlign.spaceBetween
+        case .spaceAround:  return YGAlign.spaceAround
+        }
+    }
+}
+
+extension Flex.AlignItems {
+    var yogaValue: YGAlign {
+        switch self {
         case .stretch:      return YGAlign.stretch
+        case .start:        return YGAlign.flexStart
+        case .center:       return YGAlign.center
+        case .end:          return YGAlign.flexEnd
         case .baseline:     return YGAlign.baseline
+        }
+    }
+}
+
+extension Flex.AlignSelf {
+    var yogaValue: YGAlign {
+        switch self {
         case .auto:         return YGAlign.auto
-        //case .spaceBetween: return YGAlign.spaceBetween
-        //case .spaceAround:  return YGAlign.spaceAround
+        case .stretch:      return YGAlign.stretch
+        case .start:        return YGAlign.flexStart
+        case .center:       return YGAlign.center
+        case .end:          return YGAlign.flexEnd
+        case .baseline:     return YGAlign.baseline
         }
     }
 }
@@ -90,3 +104,13 @@ extension Flex.LayoutDirection {
         }
     }
 }
+
+/*extension Flex.Overflow {
+    var yogaValue: YGOverflow {
+        switch self {
+        case .visible: return YGOverflow.visible
+        case .hidden:  return YGOverflow.hidden
+        case .scroll:  return YGOverflow.scroll
+        }
+    }
+}*/
