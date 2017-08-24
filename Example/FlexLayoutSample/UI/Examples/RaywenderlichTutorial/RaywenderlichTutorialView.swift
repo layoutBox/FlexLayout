@@ -189,39 +189,38 @@ class RayWenderlichTutorialView: BaseView {
     }
     
     fileprivate func showActionViewFor(imageName: String, text: String) -> UIView {
-        let actionView = UIView(frame: .zero)
-        actionView.flex.alignItems(.center).width(50).marginRight(20.0)
-
-        let actionButton = UIButton(type: .custom)
-        actionButton.setImage(UIImage(named: imageName), for: .normal)
-        actionButton.flex.padding(10)
-        actionView.addSubview(actionButton)
+        let actionView = UIView()
         
-        let actionLabel = showLabelFor(text: text)
-        actionView.addSubview(actionLabel)
+        actionView.flex.alignItems(.center).width(50).marginRight(20.0).define { (flex) in
+            let actionButton = UIButton(type: .custom)
+            actionButton.setImage(UIImage(named: imageName), for: .normal)
+            flex.addItem(actionButton).padding(10)
+            
+            let actionLabel = showLabelFor(text: text)
+            flex.addItem(actionLabel)
+        }
         
         return actionView
     }
     
     fileprivate func showTabBarFor(text: String, selected: Bool) -> UIView {
-        let tabView = UIView(frame: .zero)
-        tabView.flex.alignItems(.center).marginRight(20)
-
         let tabLabelFont = selected ? UIFont.boldSystemFont(ofSize: 14.0) : UIFont.systemFont(ofSize: 14.0)
         
         #if swift(>=4)
-        let fontSize = text.size(withAttributes: [NSAttributedStringKey.font: tabLabelFont])
+        let labelSize = text.size(withAttributes: [NSAttributedStringKey.font: tabLabelFont])
         #else
-        let fontSize = text.size(attributes: [NSFontAttributeName: tabLabelFont])
+        let labelSize = text.size(attributes: [NSFontAttributeName: tabLabelFont])
         #endif
         
-        let tabSelectionView = UIView(frame: CGRect(x: 0, y: 0, width: fontSize.width, height: 3))
-        tabSelectionView.flex.width(fontSize.width).marginBottom(5)
-        tabSelectionView.backgroundColor = selected ? .red : .clear
-        tabView.addSubview(tabSelectionView)
+        let tabView = UIView()
         
-        let tabLabel = showLabelFor(text: text, font: tabLabelFont)
-        tabView.addSubview(tabLabel)
+        tabView.flex.alignItems(.center).marginRight(20).define { (flex) in
+            let tabSelectionView = UIView()
+            flex.addItem(tabSelectionView).width(labelSize.width).height(3).marginBottom(5).backgroundColor(selected ? .red : .clear)
+       
+            let tabLabel = showLabelFor(text: text, font: tabLabelFont)
+            flex.addItem(tabLabel)
+        }
         
         return tabView
     }
