@@ -76,24 +76,49 @@ public class Flex {
     //
     // Creation / definition
     //
+    
+    /// This method adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has subviews and enables flexbox.
+    ///
+    /// - Returns: The added view flex interface
     @discardableResult
     public func addItem() -> Flex {
         let view = UIView()
         return addItem(view)
     }
     
+    
+    /// This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates an 
+    /// UIView, adds it has subviews and enables flexbox. This is useful to add a flex item/container easily when you don't need to refer to it later.
+    ///
+    /// - Parameter view: view to add to the flex container
+    /// - Returns: The added view flex interface
     @discardableResult
     public func addItem(_ view: UIView) -> Flex {
         self.view.addSubview(view)
         return view.flex
     }
 
+    
+    /// This method is used to structure your code so that it matches the flexbox structure. The method has a closure parameter with a 
+    /// single parameter called `flex`. This parameter is in fact, the view's flex interface, it can be used to adds other flex items 
+    /// and containers.
+    ///
+    /// - Parameter closure:
+    /// - Returns: Flex interface
     @discardableResult
     public func define(_ closure: (_ flex: Flex) -> Void) -> Flex {
         closure(self)
         return self
     }
     
+    
+    /// The framework is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container
+    /// size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty 
+    /// using `markDirty()`.
+    /// 
+    /// Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated
+    ///
+    /// - Returns: Flex interface
     @discardableResult
     public func markDirty() -> Flex {
         view.yoga.markDirty()
@@ -103,12 +128,20 @@ public class Flex {
     //
     // Layout / intrinsicSize/ sizeThatFits
     //
+    
     public enum LayoutMode {
+        /// This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height).
         case fitContainer
+        /// In this mode, children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
         case adjustHeight
+        /// In this mode, children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
         case adjustWidth
     }
 
+    
+    /// The method layout the flex container's children
+    ///
+    /// - Parameter mode: specify the layout mod (LayoutMode).
     public func layout(mode: LayoutMode = .fitContainer) {
         if case .fitContainer = mode {
             view.yoga.applyLayout(preservingOrigin: true)
@@ -117,22 +150,34 @@ public class Flex {
         }
     }
     
+    /// This property controls dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a 
+    /// flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
     public var isIncludedInLayout: Bool = true {
         didSet {
             view.yoga.isIncludedInLayout = isIncludedInLayout
         }
     }
     
+    /// This property controls dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a 
+    /// flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
+    ///
+    /// - Parameter included: true to layout the view
+    /// - Returns:
     @discardableResult
     public func isIncludedInLayout(_ included: Bool) -> Flex {
         self.isIncludedInLayout = included
         return self
     }
     
+    /// Item natural size, considering only properties of the view itself. Independent of the item frame.
     public var intrinsicSize: CGSize {
         return view.yoga.intrinsicSize
     }
     
+    /// Returns the item size when layouted in the specified frame size
+    ///
+    /// - Parameter size: frame size
+    /// - Returns: item size
     public func sizeThatFits(size: CGSize) -> CGSize {
         return view.yoga.calculateLayout(with: size)
     }
@@ -140,7 +185,15 @@ public class Flex {
     //
     // direction, wrap, flow
     //
+    
+    /// The `direction` property establishes the main-axis, thus defining the direction flex items are placed in the flex container.
     ///
+    /// The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex 
+    /// container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.
+    ///
+    /// Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container. 
+    /// If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse 
+    /// from right to left; if the direction is rtl, it's the opposite.
     ///
     /// - Parameter value: Default value is .column
     @discardableResult
@@ -149,7 +202,7 @@ public class Flex {
         return self
     }
     
-    ///
+    /// The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
     ///
     /// - Parameter value: Default value is .noWrap
     @discardableResult
@@ -158,6 +211,13 @@ public class Flex {
         return self
     }
     
+    
+    /// Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the 
+    /// user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the 
+    /// root of your layout tree.
+    ///
+    /// - Parameter value: new LayoutDirection
+    /// - Returns:
     @discardableResult
     public func layoutDirection(_ value: LayoutDirection) -> Flex {
         // WORK IN PROGRESS :-)
@@ -180,7 +240,9 @@ public class Flex {
     // justity, alignment / position
     //
     
-    ///
+    /// The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. 
+    /// It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum 
+    /// size. For example, if children are flowing vertically, `justifyContent` controls how they align vertically.
     ///
     /// - Parameter value: Default value is .start
     @discardableResult
@@ -189,7 +251,8 @@ public class Flex {
         return self
     }
     
-    ///
+    /// The align-content property aligns a flex container’s lines within the flex container when there is extra space 
+    /// in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.
     ///
     /// - Parameter value: Default value is .start
     @discardableResult
@@ -198,7 +261,9 @@ public class Flex {
         return self
     }
     
-    ///
+    /// The `alignItems` property controls how a child aligns in the cross direction, overriding the `alignItems` 
+    /// of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item 
+    /// will align horizontally.
     ///
     /// - Parameter value: Default value is .auto
     @discardableResult
@@ -207,7 +272,9 @@ public class Flex {
         return self
     }
 
-    ///
+    /// The `alignItems` property defines how flex items are laid out along the cross axis on the current line. 
+    /// Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis). For example, if 
+    /// children are flowing vertically, `alignItems` controls how they align horizontally.
     ///
     /// - Parameter value: Default value is .stretch
     @discardableResult
@@ -216,7 +283,7 @@ public class Flex {
         return self
     }
     
-    ///
+    /// The position property tells Flexbox how you want your item to be positioned within its parent.
     ///
     /// - Parameter value: Default value is .relative
     @discardableResult
@@ -238,7 +305,9 @@ public class Flex {
     // grow / shrink / basis
     //
     
-    ///
+    /// The `grow` property defines the ability for a flex item to grow if necessary. It accepts a unitless value 
+    /// that serves as a proportion. It dictates what amount of the available space inside the flex container the 
+    /// item should take up.
     ///
     /// - Parameter value: Default value is 0
     @discardableResult
@@ -247,7 +316,14 @@ public class Flex {
        return self
     }
     
+    /// It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the 
+    /// rest of the flex items in the flex container when there isn't enough space on the main-axis.
     ///
+    /// When omitted, it is set to 0 and the flex shrink factor is multiplied by the flex `basis` when distributing 
+    /// negative space.
+    ///
+    /// A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to 
+    /// overflow its flex container.
     ///
     /// - Parameter value: Default value is 1
     @discardableResult
@@ -256,7 +332,11 @@ public class Flex {
         return self
     }
 
+    /// This property takes the same values as the width and height properties, and specifies the initial size of the 
+    /// flex item, before free space is distributed according to the grow and shrink factors.
     ///
+    /// Specifying `nil` set the basis as `auto`, which means the length is equal to the length of the item. If the 
+    /// item has no length specified, the length will be according to its content.
     ///
     /// - Parameter value: Default value is 0
     @discardableResult
@@ -361,12 +441,25 @@ public class Flex {
         return self
     }
 
+    
+    /// AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing 
+    /// one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other
+    /// media types. AspectRatio accepts any floating point value > 0, the default is undefined.
+    ///
+    /// - Parameter value:
+    /// - Returns:
     @discardableResult
     public func aspectRatio(_ value: CGFloat) -> Flex {
         view.yoga.aspectRatio = value
         return self
     }
     
+    /// AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing
+    /// one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other
+    /// media types. AspectRatio accepts any floating point value > 0, the default is undefined.
+    ///
+    /// - Parameter value:
+    /// - Returns:
     @discardableResult
     public func aspectRatio(of imageView: UIImageView) -> Flex {
         if let imageSize = imageView.image?.size {
@@ -575,6 +668,12 @@ public class Flex {
     //
     // Visual properties
     //
+    
+    
+    /// Set the view background color.
+    ///
+    /// - Parameter color: new color
+    /// - Returns: flex interface
     @discardableResult
     public func backgroundColor(_ color: UIColor) -> Flex {
         view.backgroundColor = color
