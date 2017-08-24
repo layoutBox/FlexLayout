@@ -27,7 +27,7 @@ class RayWenderlichTutorialView: BaseView {
     let summaryPopularityLabel = UILabel()
     let episodeTitleLabel = UILabel()
     let descriptionLabel = UILabel()
-    let showsTableView = UITableView()
+    let showsTableView = ExpandedTableView()
     
     init(series: Series) {
         self.series = series
@@ -208,7 +208,12 @@ class RayWenderlichTutorialView: BaseView {
         tabView.flex.alignItems(.center).marginRight(20)
 
         let tabLabelFont = selected ? UIFont.boldSystemFont(ofSize: 14.0) : UIFont.systemFont(ofSize: 14.0)
+        
+        #if swift(>=4)
+        let fontSize = text.size(withAttributes: [NSAttributedStringKey.font: tabLabelFont])
+        #else
         let fontSize = text.size(attributes: [NSFontAttributeName: tabLabelFont])
+        #endif
         
         let tabSelectionView = UIView(frame: CGRect(x: 0, y: 0, width: fontSize.width, height: 3))
         tabSelectionView.flex.width(fontSize.width).marginBottom(5)
@@ -235,7 +240,7 @@ extension RayWenderlichTutorialView: UITableViewDataSource, UITableViewDelegate 
     }
     
     internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 100
     }
     
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

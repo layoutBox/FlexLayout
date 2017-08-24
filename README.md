@@ -18,8 +18,8 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 ### Requirements
 * iOS 8.0+
-* Xcode 8.0+
-* Swift 3.0+
+* Xcode 8.0+ / Xcode 9.0
+* Swift 3.0+ / Swift 4.0
 
 ### Content
 
@@ -47,7 +47,7 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 :pushpin: FlexLayout is actively updated. So please come often to see latest changes. You can also **Star** it to be able to retrieve it easily later.
 
-:warning:	FlexLayout is a light wrapper around [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation. Yoga has still some open issues, so it is possible that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. FlexLayout will always be up-to-date with the latest Yoga's version.
+:warning:	FlexLayout is a light wrapper around [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation. Yoga has some open issues, so there is a possibility that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. Note that FlexLayout will always be up-to-date with the latest Yoga's version.
 
 <br>
 
@@ -853,7 +853,7 @@ By applying Margin to an item you specify the offset a certain edge of the item 
 * `margin(_ value: CGFloat) `
 * `margin(_ vertical: CGFloat, _ horizontal: CGFloat)`
 * `margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`
-* `margin(_ top: CGFloat, _ right: CGFloat, _ bottom: CGFloat, _ left: CGFloat) `
+* `margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) `
 
 ###### Usage examples:
 ```swift
@@ -882,7 +882,7 @@ Padding specify the **offset children should have** from a certain edge on the p
 * `padding(_ value: CGFloat) `
 * `padding(_ vertical: CGFloat, _ horizontal: CGFloat)`
 * `padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`
-* `padding(_ top: CGFloat, _ right: CGFloat, _ bottom: CGFloat, _ left: CGFloat) `
+* `padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) `
 
 
 ###### Usage examples:

@@ -4,5 +4,5 @@
 .build/
 build/
 xcuserdata
-data/
+Data/
 Pods/

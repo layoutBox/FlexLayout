@@ -15,6 +15,7 @@ Released on 2017-08-23
   * Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#8](https://github.com/lucdion/FlexLayout/pull/8 ) 
 * Add an implementation of the Ray Wenderlich Yoga Tutorial  
   * Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#7](https://github.com/lucdion/FlexLayout/pull/7) 
+* Add Swift 4.0 support  
 
 ## [1.0.0](https://github.com/lucdion/FlexLayout/releases/tag/1.0.0)
 Released on 2017-08-20
