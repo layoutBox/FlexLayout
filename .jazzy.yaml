@@ -1,0 +1,14 @@
+clean: true
+output: docs_api/
+# framework_root: Sources/
+# podspec: FlexLayout.podspec
+author: lucdion
+author_url: https://github.com/lucdion
+module: FlexLayout
+readme: README.md
+# documentation: docs/benchmark/*.md
+github_url: https://github.com/lucdion/FlexLayout
+github_file_prefix: https://github.com/lucdion/FlexLayout/tree/master
+xcodebuild_arguments: [-scheme,FlexLayout]
+theme: apple
+# root_url:

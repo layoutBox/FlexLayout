@@ -1,0 +1,285 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 18,
+      "symbol": "Flex",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 329,
+      "symbol": "Flex.width(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 335,
+      "symbol": "Flex.height(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 341,
+      "symbol": "Flex.size(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 348,
+      "symbol": "Flex.size(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 355,
+      "symbol": "Flex.minWidth(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 361,
+      "symbol": "Flex.minHeight(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 367,
+      "symbol": "Flex.maxWidth(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 373,
+      "symbol": "Flex.maxHeight(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 481,
+      "symbol": "Flex.marginTop(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 487,
+      "symbol": "Flex.marginLeft(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 493,
+      "symbol": "Flex.marginStart(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 499,
+      "symbol": "Flex.marginBottom(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 505,
+      "symbol": "Flex.marginRight(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 511,
+      "symbol": "Flex.marginEnd(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 517,
+      "symbol": "Flex.marginHorizontal(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 523,
+      "symbol": "Flex.marginVertical(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 529,
+      "symbol": "Flex.margin(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 548,
+      "symbol": "Flex.margin(_:_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 560,
+      "symbol": "Flex.paddingTop(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 566,
+      "symbol": "Flex.paddingLeft(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 572,
+      "symbol": "Flex.paddingBottom(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 578,
+      "symbol": "Flex.paddingRight(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 584,
+      "symbol": "Flex.paddingStart(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 590,
+      "symbol": "Flex.paddingEnd(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 596,
+      "symbol": "Flex.paddingHorizontal(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 602,
+      "symbol": "Flex.paddingVertical(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 608,
+      "symbol": "Flex.padding(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 627,
+      "symbol": "Flex.padding(_:_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 639,
+      "symbol": "Flex.borderLeft(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 644,
+      "symbol": "Flex.borderTop(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 649,
+      "symbol": "Flex.borderRight(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 654,
+      "symbol": "Flex.borderBottom(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 659,
+      "symbol": "Flex.borderStart(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 664,
+      "symbol": "Flex.borderEnd(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 669,
+      "symbol": "Flex.border(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 698,
+      "symbol": "Flex.Direction.columnReverse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 700,
+      "symbol": "Flex.Direction.row",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 702,
+      "symbol": "Flex.Direction.rowReverse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/Impl/UIView+FlexLayout.swift",
+      "line": 20,
+      "symbol": "UIView.flex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout"
+}

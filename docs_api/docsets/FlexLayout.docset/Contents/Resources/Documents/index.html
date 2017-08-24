@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlexLayout  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="FlexLayout  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">FlexLayout Docs</a> (64% documented)</p>
+        <p class="header-right"><a href="https://github.com/lucdion/FlexLayout"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">FlexLayout Reference</a>
+        <img id="carat" src="img/carat.png" />
+        FlexLayout  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Flex.html">Flex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/Direction.html">– Direction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/JustifyContent.html">– JustifyContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/AlignContent.html">– AlignContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/AlignItems.html">– AlignItems</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/AlignSelf.html">– AlignSelf</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/Wrap.html">– Wrap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/LayoutDirection.html">– LayoutDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Flex/LayoutMode.html">– LayoutMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p align="center">
+  <a href="https://github.com/lucdion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
+</p>
+
+<h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
+ 
+
+<p align="center">
+  <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
+  <a href="https://travis-ci.org/lucdion/FlexLayout"><img src="https://travis-ci.org/lucdion/FlexLayout.svg?branch=master" /></a>
+  <a href="https://codecov.io/gh/lucdion/FlexLayout"><img src="https://codecov.io/gh/lucdion/FlexLayout/branch/master/graph/badge.svg"/></a>
+  <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
+  <a href="https://raw.githubusercontent.com/lucdion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
+</p>
+
+<p><br></p>
+
+<p>FlexLayout gently wraps the highly optimized <a href="https://github.com/facebook/yoga">facebook/yoga</a> flexbox implementation in a concise, and chainable syntax.</p>
+<h3 id='requirements' class='heading'>Requirements</h3>
+
+<ul>
+<li>iOS 8.0+</li>
+<li>Xcode 8.0+ / Xcode 9.0</li>
+<li>Swift 3.0+ / Swift 4.0</li>
+</ul>
+<h3 id='content' class='heading'>Content</h3>
+
+<ul>
+<li><a href="#intro_usage_example">Introduction examples</a></li>
+<li><a href="#introduction">FlexLayout principles and philosophy</a></li>
+<li><a href="#performance">Performance</a></li>
+<li><a href="#documentation">Documentation</a>
+
+<ul>
+<li><a href="#create_modify_define_containers">Creation, modification and definition of flexbox containers</a></li>
+<li><a href="#containers_properties">Flexbox containers properties</a></li>
+<li><a href="#intems_properties">Flexbox items properties</a></li>
+<li><a href="#absolute_positioning">Absolute positioning</a></li>
+<li><a href="#adjusting_size">Adjusting the size</a>
+
+<ul>
+<li><a href="#width_height_size">Width, height and size</a></li>
+<li><a href="#minmax_width_height_size">minWidth, maxWidth, minHeight, maxHeight</a></li>
+<li><a href="#aspect_ratio">Aspect Ratio</a></li>
+</ul></li>
+<li><a href="#margins">Margins</a></li>
+<li><a href="#paddings">Paddings</a></li>
+<li><a href="#borders">Borders</a></li>
+</ul></li>
+<li><a href="#examples_app">Examples App</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#comments">Comments, ideas, suggestions, issues, &hellip;.</a></li>
+<li><a href="#installation">Installation</a></li>
+</ul>
+
+<p><br></p>
+
+<p>:pushpin: FlexLayout is actively updated. So please come often to see latest changes. You can also <strong>Star</strong> it to be able to retrieve it easily later.</p>
+
+<p>:warning:   FlexLayout is a light wrapper around <a href="https://github.com/facebook/yoga">facebook/yoga</a> flexbox implementation. Yoga has some open issues, so there is a possibility that you encounter issues when layouting your views, in these situations please have a look at <a href="https://github.com/facebook/yoga/issues">Yoga&rsquo;s issues</a>. Your issue may have been already reported. Note that FlexLayout will always be up-to-date with the latest Yoga&rsquo;s version.</p>
+
+<p><br></p>
+<h3 id='flexlayout-pinlayout' class='heading'>FlexLayout + PinLayout</h3>
+
+<p><a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a></p>
+
+<p><strong>FlexLayout</strong> is a companion of <strong><a href="https://github.com/mirego/PinLayout">PinLayout</a></strong>. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positioning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug).</p>
+
+<ul>
+<li>A view can be layouted using FlexLayout, PinLayout, or both!</li>
+<li>PinLayout can layout anything, but in situations where you need to layouts many views but don&rsquo;t require the PinLayout&rsquo;s finest control nor complex animations, FlexLayout is best fitted.</li>
+<li>A view layouted using PinLayout can be embedded inside a FlexLayout&rsquo;s container and reversely. You choose the best layout framework for your situation.</li>
+</ul>
+
+<p><br></p>
+<h2 id='flexlayout-introduction-examples-a-name-intro_usage_example-a' class='heading'>FlexLayout Introduction examples <a name="intro_usage_example"></a></h2>
+<h6 id='example-1' class='heading'>Example 1:</h6>
+
+<p>This example layout multiples views using column and row flexbox containers.</p>
+
+<p>Two steps to use a flexbox container:</p>
+
+<ol>
+<li><strong>Setup the container</strong>: Initialize your flexbox structure. Note that it is also possible to alter it later.</li>
+<li><strong>Layout the container</strong>: The layout of the container should be done from <code>layoutSubviews()</code> (or <code>willTransition(to: UITraitCollection, ...)</code> and <code>viewWillTransition(to: CGSize, ...)</code>). 
+
+<ol>
+<li>First you must layout the flexbox container, i.e. position it and optionally set its size.</li>
+<li>Then layout the flexbox children using Flex method <code>layout()</code>.</li>
+</ol></li>
+</ol>
+
+<p><a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a></p>
+<pre class="highlight swift"><code><span class="n">fileprivate</span> <span class="k">let</span> <span class="nv">rootFlexContainer</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+
+<span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="o">.</span><span class="n">zero</span><span class="p">)</span>
+
+   <span class="nf">addSubview</span><span class="p">(</span><span class="n">rootFlexContainer</span><span class="p">)</span>
+   <span class="o">...</span>
+
+   <span class="c1">// Column container</span>
+   <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">column</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">define</span> <span class="p">{</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+        <span class="c1">// Row container</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="n">define</span> <span class="p">{</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">imageView</span><span class="p">)</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="nf">aspectRatio</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">imageView</span><span class="p">)</span>
+
+            <span class="c1">// Column container</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">column</span><span class="p">)</span><span class="o">.</span><span class="nf">paddingLeft</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">define</span> <span class="p">{</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+                <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">segmentedControl</span><span class="p">)</span><span class="o">.</span><span class="nf">marginBottom</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="nf">marginTop</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="nf">backgroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">lightGray</span><span class="p">)</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">bottomLabel</span><span class="p">)</span><span class="o">.</span><span class="nf">marginTop</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">layoutSubviews</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">layoutSubviews</span><span class="p">()</span> 
+
+    <span class="c1">// 1) Layout the flex container. This example use PinLayout for that purpose, but it could be done </span>
+    <span class="c1">//    also by setting the rootFlexContainer's frame:</span>
+    <span class="c1">//       rootFlexContainer.frame = CGRect(x: 0, y: topLayoutGuide, </span>
+    <span class="c1">//                                        width: frame.width, height: rootFlexContainer.height)</span>
+    <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">pin</span><span class="o">.</span><span class="nf">top</span><span class="p">()</span><span class="o">.</span><span class="nf">left</span><span class="p">()</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">100</span><span class="o">%</span><span class="p">)</span><span class="o">.</span><span class="nf">marginTop</span><span class="p">(</span><span class="n">topLayoutGuide</span><span class="p">)</span>
+
+    <span class="c1">// 2) Then let the flexbox container layout itself. Here the container's height will be adjusted automatically.</span>
+    <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">layout</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">adjustHeight</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>:pushpin: This example is available in the <a href="#examples_app">Examples App</a>. See complete <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift">source code</a></p>
+
+<p></br></p>
+<h6 id='example-2-a-name-intro_usage_example_raywenderlich-a' class='heading'>Example 2: <a name="intro_usage_example_raywenderlich"></a></h6>
+
+<p>The example implements the <a href="https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine">Ray Wenderlich Yoga Tutorial</a> screen using FlexLayout. </p>
+
+<p><a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=200/></a></p>
+<pre class="highlight swift"><code><span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+   <span class="o">...</span>
+
+   <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="n">define</span> <span class="p">{</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+        <span class="c1">// Image</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">episodeImageView</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="nf">backgroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+
+        <span class="c1">// Summary row</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="n">padding</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">summaryPopularityLabel</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">justifyContent</span><span class="p">(</span><span class="o">.</span><span class="n">spaceBetween</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+                <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">yearLabel</span><span class="p">)</span>
+                <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">ratingLabel</span><span class="p">)</span>
+                <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">lengthLabel</span><span class="p">)</span>
+            <span class="p">})</span>
+
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Title row</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="n">padding</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">episodeIdLabel</span><span class="p">)</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">episodeTitleLabel</span><span class="p">)</span><span class="o">.</span><span class="nf">marginLeft</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Description section</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">paddingHorizontal</span><span class="p">(</span><span class="n">paddingHorizontal</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">descriptionLabel</span><span class="p">)</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">castLabel</span><span class="p">)</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">creatorsLabel</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Action row</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="n">padding</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">addActionView</span><span class="p">)</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">shareActionView</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Tabs row</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="n">padding</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">episodesTabView</span><span class="p">)</span>
+            <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">moreTabView</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Shows TableView</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">showsTableView</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">layoutSubviews</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">layoutSubviews</span><span class="p">()</span> 
+
+    <span class="c1">// 1) Layout the contentView &amp; rootFlexContainer using PinLayout</span>
+    <span class="n">contentView</span><span class="o">.</span><span class="n">pin</span><span class="o">.</span><span class="nf">top</span><span class="p">()</span><span class="o">.</span><span class="nf">bottom</span><span class="p">()</span><span class="o">.</span><span class="nf">left</span><span class="p">()</span><span class="o">.</span><span class="nf">right</span><span class="p">()</span>
+    <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">pin</span><span class="o">.</span><span class="nf">top</span><span class="p">()</span><span class="o">.</span><span class="nf">left</span><span class="p">()</span><span class="o">.</span><span class="nf">right</span><span class="p">()</span>
+
+    <span class="c1">// 2) Let the flexbox container layout itself and adjust the height</span>
+    <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">layout</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">adjustHeight</span><span class="p">)</span>
+
+    <span class="c1">// 3) Adjust the scrollview contentSize</span>
+    <span class="n">contentView</span><span class="o">.</span><span class="n">contentSize</span> <span class="o">=</span> <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">size</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>:pushpin: This example is available in the <a href="#examples_app">Examples App</a>. See complete <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift">source code</a></p>
+
+<p><br></p>
+<h2 id='flexlayout-principles-and-philosophy-a-name-introduction-a' class='heading'>FlexLayout principles and philosophy <a name="introduction"></a></h2>
+
+<ul>
+<li>Flexbox layouting is simple, powerful and fast.</li>
+<li>FlexLayout syntax is concise and chainable.</li>
+<li>FlexLayout/yoga is incredibly fast, it&rsquo;s even faster than manual layout. See <a href="#performance">Performance</a>.</li>
+<li>The source code structure matches the flexbox structure, making it easier to understand and modify. Flex containers are defined on one line, and its items (children) are imbricated. This makes the flexbox structure much more visual and easy to understand.</li>
+<li>Supports left-to-right (LTR) and right-to-left (RTL) languages.</li>
+</ul>
+
+<p>NOTE: FlexLayout wraps <a href="https://github.com/facebook/yoga">facebook/yoga</a> implementation and expose all its features. So note that on this documentation we will refer to FlexLayout, but this also applies to Yoga.</p>
+
+<p><br></p>
+<h1 id='flexlayout-39-s-performance-a-name-performance-a' class='heading'>FlexLayout&rsquo;s Performance <a name="performance"></a></h1>
+
+<p>FlexLayout&rsquo;s performance has been measured using the nice LayoutKit benchmark. FlexLayout and <a href="https://github.com/mirego/PinLayout">PinLayout</a> has been added to this benchmark to compare their performance. </p>
+
+<p>As you can see in the following chart, FlexLayout and PinLayout&rsquo;s performance are faster or equal to manual layouting. FlexLayout is <strong>between 26x and 36x faster than auto layout</strong> and PinLayout <strong>between 12x and 16x faster than auto layout</strong>, and this for all types of iPhone (5/6/6S/7)</p>
+
+<p>These results also means that <strong>FlexLayout and PinLayout are by far faster than any layout frameworks built over auto layout</strong>. </p>
+
+<p><a href="docs/benchmark/Benchmark.md">See here more complete details, results and explanation of the benchmark</a>.</p>
+
+<p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
+
+<p align="center">
+  <img src="docs/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
+</p>
+
+<p><br/></p>
+<h2 id='variation-from-css-flexbox' class='heading'>Variation from CSS flexbox</h2>
+
+<ul>
+<li><p>In many CSS methods and properties name, the keyword <code>flex</code> was added to control name conflicts. FlexLayout removed this keyword for being more concise and removed this unecessary keyword:</p>
+
+<table><thead>
+<tr>
+<th>FlexLayout Name</th>
+<th>CSS Name</th>
+<th>React Native Name</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong><code>direction</code></strong></td>
+<td><code>flex-direction</code></td>
+<td><code>flexDirection</code></td>
+</tr>
+<tr>
+<td><strong><code>wrap</code></strong></td>
+<td><code>flex-wrap</code></td>
+<td><code>flexWrap</code></td>
+</tr>
+<tr>
+<td><strong><code>grow</code></strong></td>
+<td><code>flex-grow</code></td>
+<td><code>flexGrow</code></td>
+</tr>
+<tr>
+<td><strong><code>shrink</code></strong></td>
+<td><code>flex-shrink</code></td>
+<td><code>flexShrink</code></td>
+</tr>
+<tr>
+<td><strong><code>basis</code></strong></td>
+<td><code>flex-basis</code></td>
+<td><code>flexBasis</code></td>
+</tr>
+<tr>
+<td><strong><code>start</code></strong></td>
+<td><code>flex-start</code></td>
+<td><code>flexStart</code></td>
+</tr>
+<tr>
+<td><strong><code>end</code></strong></td>
+<td><code>flex-end</code></td>
+<td><code>flexEnd</code></td>
+</tr>
+</tbody></table></li>
+<li><p>FlexLayout default properties are sligthly different from CSS flexbox. This table resume these difference:</p>
+
+<table><thead>
+<tr>
+<th>Property</th>
+<th>FlexLayout default value</th>
+<th>CSS default value</th>
+<th>React Native default value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong><code>direction</code></strong></td>
+<td>column</td>
+<td>row</td>
+<td>column</td>
+</tr>
+<tr>
+<td><strong><code>justifyContent</code></strong></td>
+<td>start</td>
+<td>start</td>
+<td>start</td>
+</tr>
+<tr>
+<td><strong><code>alignItems</code></strong></td>
+<td>stretch</td>
+<td>stretch</td>
+<td>stretch</td>
+</tr>
+<tr>
+<td><strong><code>alignSelf</code></strong></td>
+<td>auto</td>
+<td>auto</td>
+<td>auto</td>
+</tr>
+<tr>
+<td><strong><code>alignContent</code></strong></td>
+<td>start</td>
+<td>stretch</td>
+<td>start</td>
+</tr>
+<tr>
+<td><strong><code>grow</code></strong></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong><code>shrink</code></strong></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong><code>basis</code></strong></td>
+<td>0</td>
+<td>auto</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong><code>wrap</code></strong></td>
+<td>noWrap</td>
+<td>nowrap</td>
+<td>noWrap</td>
+</tr>
+</tbody></table></li>
+<li><p><strong>FlexLayout additions</strong>: </p>
+
+<ul>
+<li>addItem()</li>
+<li>define()</li>
+<li>layout()</li>
+<li>isIncludedInLayout()</li>
+<li>markDirty()</li>
+<li>intrinsicSize</li>
+<li>sizeThatFits()</li>
+</ul></li>
+</ul>
+
+<p>NOTE: <strong>FlexLayout</strong> doesn&rsquo;t support the flexbox <code>order</code> property. The order is  determined by the flex container&rsquo;s <code>UIView.subviews</code> array. </p>
+
+<p><br></p>
+<h1 id='documentation-a-name-documentation-a' class='heading'>Documentation <a name="documentation"></a></h1>
+
+<p>Flexbox is pretty easy and straightforward to use. The defining aspect of the flexbox is the ability to alter its items, width, height to best fill the available space on any display device. A flex container expands its items to fill the available free space or shrinks them to prevent overflow.</p>
+
+<p>The flex layout is constituted of parent container referred as <strong>flex container</strong> and its immediate children which are called <strong>flex items</strong>. A flex item can also be a flex container, i.e. it is possible to add other flex items to it.</p>
+
+<table><thead>
+<tr>
+<th>Flexbox term</th>
+<th>Definition</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong><code>main-axis</code></strong></td>
+<td>The main axis of a flex container is the primary axis along which flex items are laid out. The main-axis direction is set using the <code>direction()</code> property.</td>
+</tr>
+<tr>
+<td><strong><code>cross-axis</code></strong></td>
+<td>The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction</td>
+</tr>
+</tbody></table>
+
+<p>In the following sections we will see:</p>
+
+<ol>
+<li>How to create, modify and defines flex containers and items.</li>
+<li>Flexbox container&rsquo;s properties</li>
+<li>Flexbox item&rsquo;s properties</li>
+</ol>
+
+<p><br></p>
+<h2 id='1-creation-modification-and-definition-of-flexbox-items-a-name-create_modify_define_containers-a' class='heading'>1. Creation, modification and definition of flexbox items <a name="create_modify_define_containers"></a></h2>
+<h3 id='additem-uiview' class='heading'>addItem(:UIView)</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>addItem(_: UIView) -&gt; Flex</code></strong><br>
+This method adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has subviews and enables flexbox.</li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">imageView</span><span class="p">)</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="nf">aspectRatio</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='additem' class='heading'>addItem()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>addItem() -&gt; Flex</code></strong><br>
+This method is similar to <code>addItem(: UIView)</code> except that it also creates the flex item&rsquo;s UIView. Internally the method creates an UIView, adds it has subviews and enables flexbox. This is useful to add a flex item/container easily when you don&rsquo;t need to refer to it later.</li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='define' class='heading'>define()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>define(_ closure: (_ flex: Flex) -&gt; Void)</code></strong><br>
+This method is used to structure your code so that it matches the flexbox structure. The method has a closure parameter with a single parameter called <code>flex</code>. This parameter is in fact, the view&rsquo;s flex interface, it can be used to adds other flex items and containers.</li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="n">define</span> <span class="p">{</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+      <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">imageView</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+      <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="n">define</span> <span class="p">{</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+          <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">titleLabel</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+          <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">priceLabel</span><span class="p">)</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>The same results can also be obtained without using the <code>define()</code> method, but the result is not as elegant:</p>
+<pre class="highlight swift"><code>  <span class="k">let</span> <span class="nv">columnContainer</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+  <span class="n">columnContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">imageView</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">columnContainer</span><span class="p">)</span>
+
+  <span class="k">let</span> <span class="nv">rowContainer</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+  <span class="n">rowContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span>
+  <span class="n">rowContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">titleLabel</span><span class="p">)</span><span class="o">.</span><span class="nf">grow</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">rowContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">priceLabel</span><span class="p">)</span>
+  <span class="n">columnContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">(</span><span class="n">rowContainer</span><span class="p">)</span>
+</code></pre>
+
+<p><strong>Advantages of using <code>define()</code></strong>:</p>
+
+<ul>
+<li>The source code structure matches the flexbox structure, making it easier to understand and modify.
+
+<ul>
+<li>Changing a flex item order, it&rsquo;s just moving up/down its line/block that defines it.</li>
+<li>Moving a flex item from one container to another is just moving line/block that defines it.</li>
+</ul></li>
+<li>The structure looks more similar to how HTML and React Native defines it.</li>
+<li>Inside the <code>define</code>&lsquo;s closure, you can do whatever you want to fill the flexbox container, you can use <code>for</code> loops, iterates arrays of data, call functions, &hellip;</li>
+</ul>
+
+<p><br></p>
+<h3 id='accessing-flex-items-uiview-a-name-accessing_flexbox_view-a' class='heading'>Accessing flex items UIView <a name="accessing_flexbox_view"></a></h3>
+
+<p>It is possible to access the flex items&rsquo;s UIView using <code>flex.view</code>. This is particularly usefull when using <code>flex.define()</code> method.</p>
+<h6 id='example' class='heading'>Example:</h6>
+
+<p>This example creates a flexbox container and sets its alpha to 0.8.</p>
+<pre class="highlight swift"><code>    <span class="n">flex</span><span class="o">.</span><span class="nf">createBox</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="nf">alignItems</span><span class="p">(</span><span class="o">.</span><span class="n">center</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+        <span class="n">flex</span><span class="o">.</span><span class="nf">createBox</span><span class="p">()</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">flex</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span>
+        <span class="p">}}</span>
+    <span class="p">})</span>
+</code></pre>
+
+<p>Another possible solution:</p>
+<pre class="highlight swift"><code>    <span class="n">flex</span><span class="o">.</span><span class="nf">createBox</span><span class="p">()</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="nf">alignItems</span><span class="p">(</span><span class="o">.</span><span class="n">center</span><span class="p">)</span><span class="o">.</span><span class="nf">define</span><span class="p">({</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">let</span> <span class="nv">container</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+        <span class="n">container</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span>
+
+        <span class="n">flex</span><span class="o">.</span><span class="nf">addChild</span><span class="p">(</span><span class="n">container</span><span class="p">)</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+    <span class="p">})</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='layout' class='heading'>layout()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+<li>Values: <code>fitContainer</code> / <code>adjustWidth</code> / <code>adjustHeight</code></li>
+<li>Default value: <code>fitContainer</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>layout(mode: LayoutMode = . fitContainer)</code></strong><br>
+The method layout the flex container&rsquo;s children.</li>
+</ul>
+
+<p>Layout modes:</p>
+
+<ul>
+<li><strong><code>fitContainer</code></strong>: This is the default mode when no parameter is specified. Children are layouted <strong>inside</strong> the container&rsquo;s size (width and height).</li>
+<li><strong><code>adjustHeight</code></strong>: In this mode, children are layouted <strong>using only the container&rsquo;s width</strong>. The container&rsquo;s height will be adjusted to fit the flexbox&rsquo;s children</li>
+<li><strong><code>adjustWidth</code></strong>: In this mode, children are layouted <strong>using only the container&rsquo;s height</strong>. The container&rsquo;s width will be adjusted to fit the flexbox&rsquo;s children</li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">layout</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">adjustHeight</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h2 id='2-flexbox-containers-properties-a-name-containers_properties-a' class='heading'>2. Flexbox containers properties  <a name="containers_properties"></a></h2>
+
+<p>This section describe all flex container&rsquo;s properties.</p>
+<h3 id='direction' class='heading'>direction()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+<li>Values: <code>column</code> / <code>columnReverse</code> / <code>row</code> / <code>rowReverse</code></li>
+<li>Default value: <code>column</code></li>
+<li>CSS name: <code>flex-direction</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>direction(_: Direction)</code></strong><br>
+The <code>direction</code> property establishes the main-axis, thus defining the direction flex items are placed in the flex container.</li>
+</ul>
+
+<p>The <code>direction</code> property specifies how flex items are laid out in the flex container, by setting the direction of the flex container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.</p>
+
+<p>Note that row and row-reverse are affected by the layout direction (see <code>layoutDirection</code> property) of the flex container. If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse from right to left; if the direction is rtl, it&rsquo;s the opposite.</p>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th style="text-align: center">Result</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>column</strong> (default)</td>
+<td style="text-align: center"><img src="docs/images/flexlayout-direction-column.png" width="100"/></td>
+<td>Top to bottom</td>
+</tr>
+<tr>
+<td><strong>columnReverse</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-direction-columnReverse.png" width="100"/></td>
+<td>Bottom to top</td>
+</tr>
+<tr>
+<td><strong>row</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-direction-row.png" width="190"/></td>
+<td>Same as text direction</td>
+</tr>
+<tr>
+<td><strong>rowReverse</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-direction-rowReverse.png" width="190"/></td>
+<td>opposite to text direction</td>
+</tr>
+</tbody></table>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">column</span><span class="p">)</span>  <span class="c1">// Not required, defaut value. </span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">direction</span><span class="p">(</span><span class="o">.</span><span class="n">row</span><span class="p">)</span>
+</code></pre>
+
+<p><br/></p>
+<h3 id='wrap' class='heading'>wrap()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+<li>Values: <code>noWrap</code> / <code>wrap</code> / <code>wrapReverse</code></li>
+<li>Default value: <code>noWrap</code></li>
+<li>CSS name: <code>flex-wrap</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>wrap(_: Wrap)</code></strong><br>
+The <code>wrap</code> property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.</li>
+</ul>
+
+<p>By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in</p>
+
+<p>Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th style="text-align: center">direction(.column)</th>
+<th style="text-align: center">direction(.row)</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>noWrap</strong> (default)</td>
+<td style="text-align: center"><img src="docs/images/flexlayout-wrap-column-nowrap.png" width="130"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-wrap-row-nowrap.png" width="180"/></td>
+<td>Single-line which may cause the container to overflow. NEW: Flex items are displayed in one row and by default they are shrunk to fit the flex container’s width</td>
+</tr>
+<tr>
+<td><strong>wrap</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-wrap-column-wrap.png" width="130"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-wrap-row-wrap.png" width="180"/></td>
+<td>Multi-lines, direction is defined by <code>direction()</code>. NEW: Flex items are displayed in multiple rows if needed from left-to-right and top-to-bottom</td>
+</tr>
+<tr>
+<td><strong>wrapReverse</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-wrap-column-wrapReverse.png" width="130"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-wrap-row-wrapReverse.png" width="180"/></td>
+<td>Multi-lines, opposite to direction defined by <code>direction()</code>. NEW: Flex items are displayed in multiple rows if needed from left-to-right and bottom-to-top</td>
+</tr>
+</tbody></table>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">wrap</span><span class="p">(</span><span class="o">.</span><span class="n">nowrap</span><span class="p">)</span>  <span class="c1">// Not required, defaut value. </span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">wrap</span><span class="p">(</span><span class="o">.</span><span class="n">wrap</span><span class="p">)</span>
+</code></pre>
+
+<p><br/></p>
+<h3 id='justifycontent' class='heading'>justifyContent()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+<li>Values: <code>start</code> / <code>end</code> / <code>center</code> / <code>spaceBetween</code> / <code>spaceAround</code></li>
+<li>Default value: <code>start</code></li>
+<li>CSS name: <code>justify-content</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>justifyContent(_: Justify)</code></strong><br>
+The <code>justifyContent</code> property defines the alignment along the main-axis of the current line of the flex container. It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum size. For example, if children are flowing vertically, <code>justifyContent</code> controls how they align vertically.</li>
+</ul>
+
+<table><thead>
+<tr>
+<th></th>
+<th style="text-align: center">direction(.column)</th>
+<th style="text-align: center">direction(.row)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>start</strong> (default)</td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-column-flexstart.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-row-flexstart.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>end</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-column-flexend.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-row-flexend.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>center</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-column-center.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-row-center.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>spaceBetween</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-column-spacebetween.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-row-spacebetween.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>spaceAround</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-column-spacearound.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-justify-row-spacearound.png" width="160"/></td>
+</tr>
+</tbody></table>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">justifyContent</span><span class="p">(</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>  <span class="c1">// defaut value. </span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">justifyContent</span><span class="p">(</span><span class="o">.</span><span class="n">center</span><span class="p">)</span>
+</code></pre>
+
+<p><br/></p>
+<h3 id='alignitems' class='heading'>alignItems()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+<li>Values: <code>stretch</code> / <code>start</code> / <code>end</code> / <code>center</code> / <code>baseline</code></li>
+<li>Default value: <code>stretch</code></li>
+<li>CSS name: <code>align-items</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>alignItems(_: Align)</code></strong><br>
+The <code>alignItems</code> property defines how flex items are laid out along the cross axis on the current line. Similar to <code>justifyContent</code> but for the cross-axis (perpendicular to the main-axis). For example, if children are flowing vertically, <code>alignItems</code> controls how they align horizontally.</li>
+</ul>
+
+<table><thead>
+<tr>
+<th></th>
+<th style="text-align: center">direction(.column)</th>
+<th style="text-align: center">direction(.row)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>stretch</strong> (default)</td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-column-stretch.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-row-stretch.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>start</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-column-flexStart.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-row-flexStart.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>end</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-column-flexEnd.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-row-flexEnd.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>center</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-column-center.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-row-center.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>baseline</strong></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-align-row-baseline.png" width="160"/></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+<h3 id='alignself' class='heading'>alignSelf()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+<li>Values: <code>auto</code> / <code>stretch</code> / <code>start</code> / <code>end</code> / <code>center</code> / <code>baseline</code></li>
+<li>Default value: <code>auto</code></li>
+<li>CSS name: <code>align-self</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>alignSelf(_: Align)</code></strong><br>
+The <code>alignSelf</code> property controls how a child aligns in the cross direction, overriding the <code>alignItems</code> of the parent. For example, if children are flowing vertically, <code>alignSelf</code> will control how the flex item will align horizontally.</li>
+</ul>
+
+<p>The <code>auto</code> value means use the flex container <code>alignItems</code> property. See <code>alignItems</code> for documentation of the other values.</p>
+
+<p><br/></p>
+<h3 id='aligncontent' class='heading'>alignContent()</h3>
+
+<ul>
+<li>Applies to: <code>flex containers</code></li>
+<li>Values: <code>start</code> / <code>end</code> / <code>center</code> / <code>stretch</code> / <code>spaceBetween</code> / <code>spaceAround</code></li>
+<li>Default value: <code>start</code></li>
+<li>CSS name: <code>align-content</code><br></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>alignContent(_: Align)</code></strong><br>
+The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.</li>
+</ul>
+
+<p>Note, <code>alignContent</code> has no effect when the flexbox has only a single line.</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th style="text-align: center">direction(.column)</th>
+<th style="text-align: center">direction(.row)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>start</strong> (default)</td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-column-flexStart.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-row-flexStart.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>end</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-column-flexEnd.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-row-flexEnd.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>center</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-column-center.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-row-center.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>stretch</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-column-stretch.png" width="140"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-row-stretch.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>spaceBetween</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-column-spaceBetween.png" width="160"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-row-spaceBetween.png" width="160"/></td>
+</tr>
+<tr>
+<td><strong>spaceAround</strong></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-column-spaceAround.png" width="160"/></td>
+<td style="text-align: center"><img src="docs/images/flexlayout-alignItems-row-spaceAround.png" width="160"/></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+<h3 id='layoutdirection' class='heading'>layoutDirection()</h3>
+
+<p>FlexLayout supports left-to-right (LTR) and right-to-left (RTL) languages.</p>
+
+<p>Using <code>start</code> or <code>end</code> properties, you can position views without having to think about whether your item will show up on the left or the right side of the screen (depending on the person’s language </p>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>layoutDirection(_: layoutDirection)</code></strong><br>
+The <code>layoutDirection</code> property controls the flex container layout direction.</li>
+</ul>
+
+<p>Values:</p>
+
+<ul>
+<li><strong><code>.inherit</code></strong><br>
+Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the root of your layout tree.</li>
+<li><strong><code>.ltr</code></strong>: Layout views from left to right. (Default)</li>
+<li><strong><code>.rtl</code></strong>: Layout views from right to left.</li>
+</ul>
+
+<p><br></p>
+<h2 id='3-flexbox-items-properties-a-name-intems_properties-a' class='heading'>3. Flexbox items properties <a name="intems_properties"></a></h2>
+
+<p>This section describe all flex items&rsquo;s properties.</p>
+
+<p>:pushpin: Remembers that flex containers are also flex items, so all these properties also apply to containers.</p>
+<h3 id='grow' class='heading'>grow</h3>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+<li>Default value: 0</li>
+<li>CSS name: <code>flex-grow</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>grow(_: CGFloat)</code></strong><br>
+The <code>grow</code> property defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</li>
+</ul>
+
+<p>A grow value of 0 (default value) keeps the view&rsquo;s size in the main-axis direction. If you want the view to use the available space set a grow value &gt; 0.</p>
+
+<p>For example, if all items have <code>grow</code> set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.</p>
+
+<p><br></p>
+<h3 id='shrink' class='heading'>shrink</h3>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+<li>Default value: 0</li>
+<li>CSS name: <code>flex-shrink</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>shrink(_: CGFloat)</code></strong><br>
+It specifies the <q>flex shrink factor</q>, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn&rsquo;t enough space on the main-axis.</li>
+</ul>
+
+<p>When omitted, it is set to 0 and the flex shrink factor is multiplied by the flex <code>basis</code> when distributing negative space.</p>
+
+<p>A shrink value of 0 keeps the view&rsquo;s size in the main-axis direction. Note that this may cause the view to overflow its flex container.</p>
+
+<p><br></p>
+<h3 id='basis' class='heading'>basis</h3>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+<li>Default value: 0</li>
+<li>CSS name: <code>flex-basis</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>basis(_ : CGFloat?)</code></strong><br>
+This property takes the same values as the width and height properties, and specifies the initial size of the flex item, before free space is distributed according to the grow and shrink factors.</li>
+</ul>
+
+<p>Specifying <code>nil</code> set the basis as <code>auto</code>, which means the length is equal to the length of the item. If the item has no length specified, the length will be according to its content </p>
+
+<p><br></p>
+<h3 id='isincludedinlayout' class='heading'>isIncludedInLayout()</h3>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>isIncludedInLayout(_ value: Bool)</code></strong><br>
+This property controls dynamically if a flexbox&rsquo;s UIView is included or not in the flexbox layouting. When a flexbox&rsquo;s UIView is excluded, FlexLayout won&rsquo;t layout the view and its children views.</li>
+</ul>
+
+<p>FlexLayout automatically includes the UIView when:</p>
+
+<ul>
+<li>The first time <code>UIView.flex</code> property is accessed</li>
+<li>When a child view is added to a flexbox container using <code>addItem(:UIView)</code> or <code>addItem()</code></li>
+</ul>
+
+<p><br></p>
+<h3 id='markdirty' class='heading'>markDirty()</h3>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>markDirty()</code></strong><br>
+The framework is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty using <code>markDirty()</code>.</li>
+</ul>
+
+<p>Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated.</p>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+
+<p>In the case where a UILabel&rsquo;s text is updated, it is needed to mark the label as dirty and relayout the flex container.</p>
+<pre class="highlight swift"><code>    <span class="c1">// 1) Update UILabel's text</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"I love FlexLayout"</span>
+
+    <span class="c1">// 2) Mark the UILabel as dirty</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span> <span class="nf">markDirty</span><span class="p">()</span>
+
+    <span class="c1">// 3) Then force a relayout of the flex container.</span>
+    <span class="n">rootFlexContainer</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">layout</span><span class="p">()</span>
+    <span class="kt">OR</span>
+    <span class="nf">setNeedsLayout</span><span class="p">()</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='sizethatfits' class='heading'>sizeThatFits()</h3>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>sizeThatFits()</code></strong><br>
+Returns the item size when layouted in the specified frame size.</li>
+</ul>
+<h6 id='usage-example' class='heading'>Usage Example:</h6>
+
+<p>Get the size of view when layouted in a container with a width of 200 pixels.</p>
+<pre class="highlight swift"><code>    <span class="k">let</span> <span class="nv">layoutSize</span> <span class="o">=</span> <span class="n">viewA</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">sizeThatFits</span><span class="p">(</span><span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="o">.</span><span class="n">greatestFiniteMagnitude</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='intrinsicsize' class='heading'>intrinsicSize</h3>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+</ul>
+
+<p><strong>Property:</strong></p>
+
+<ul>
+<li><strong><code>intrinsicSize</code></strong><br>
+Item natural size, considering only properties of the view itself. Independent of the item frame.</li>
+</ul>
+
+<p><br></p>
+<h2 id='4-absolute-positioning-a-name-absolute_positioning-a' class='heading'>4. Absolute positioning  <a name="absolute_positioning"></a></h2>
+
+<ul>
+<li>Applies to: <code>flex items</code></li>
+</ul>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+<li><strong><code>position(_: Position)</code></strong><br>
+The position property tells Flexbox how you want your item to be positioned within its parent. Position values:
+
+<ul>
+<li><strong><code>relative (default)</code></strong></li>
+<li><strong><code>absolute</code></strong>: The view is positionned using properties: top(), bottom(), left(), right(), start(), end().</li>
+</ul></li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">position</span><span class="p">(</span><span class="o">.</span><span class="n">absolute</span><span class="p">)</span><span class="o">.</span><span class="nf">top</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="nf">left</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="nf">size</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</code></pre>
+<h3 id='top-bottom-left-right-start-end' class='heading'>top(), bottom(), left(), right(), start(), end()</h3>
+
+<p>A flex item which is <code>position</code> is set to <code>.absolute</code> is positioned absolutely in regards to its parent. This is done through 6 properties:</p>
+
+<p><strong>Methods:</strong></p>
+
+<ul>
+<li><strong><code>top( value: CGFloat)</code></strong>:<br>
+Controls the distance a child’s top edge is from the parent’s top edge</li>
+<li><strong><code>bottom( value: CGFloat)</code></strong>:<br>
+Controls the distance a child’s bottom edge is from the parent’s bottom edge</li>
+<li><strong><code>left( value: CGFloat)</code></strong>:<br>
+Controls the distance a child’s left edge is from the parent’s left edge</li>
+<li><strong><code>right( value: CGFloat)</code></strong>:<br>
+Controls the distance a child’s right edge is from the parent’s right edge</li>
+<li><strong><code>start( value: CGFloat)</code></strong>:<br>
+Controls the distance a child’s start edge is from the parent’s start edge. In left-to-right direction (LTR), it corresponds to the <code>left()</code> property and in RTL to <code>right()</code> property.</li>
+<li><strong><code>end( value: CGFloat)</code></strong>:<br>
+Controls the distance a child’s end edge is from the parent’s end edge. In left-to-right direction (LTR), it corresponds to the <code>right()</code> property and in RTL to <code>left()</code> property.</li>
+</ul>
+
+<p>Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t effect their sibling&rsquo;s layout with absolute position can be used to create overlays and stack children in the Z axis.</p>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">position</span><span class="p">(</span><span class="o">.</span><span class="n">absolute</span><span class="p">)</span><span class="o">.</span><span class="nf">top</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="nf">right</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</code></pre>
+
+<p>:pushpin: See the <q>Yoga C</q> example in the <a href="#examples_app">Examples App</a>. <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift">Source code</a></p>
+
+<p><br></p>
+<h2 id='5-adjusting-the-size-a-name-adjusting_size-a' class='heading'>5. Adjusting the size  <a name="adjusting_size"></a></h2>
+<h3 id='width-and-height-and-size-a-name-width_height_size-a' class='heading'>Width and height and size <a name="width_height_size"></a></h3>
+
+<p>FlexLayout has methods to set the view’s height and width.</p>
+
+<p><strong>Methods:</strong></p>
+
+<ul>
+<li><strong><code>width(_ width: CGFloat)</code></strong><br>
+The value specifies the view&rsquo;s width in pixels. The value must be non-negative.</li>
+<li><strong><code>width(percent: Percent)</code></strong><br>
+The value specifies the view&rsquo;s width in percentage of its flex container&rsquo;s width. The value must be non-negative.</li>
+<li><strong><code>height(_ height: CGFloat)</code></strong><br>
+The value specifies the view&rsquo;s height in pixels. The value must be non-negative.</li>
+<li><strong><code>height(percent: Percent)</code></strong><br>
+The value specifies the view&rsquo;s height in percentage of its flex container&rsquo;s height. The value must be non-negative.</li>
+<li><strong><code>size(_ size: CGSize)</code></strong><br>
+The value specifies view&rsquo;s width and the height in pixels. Values must be non-negative.</li>
+<li><strong><code>size(_ percent: Percent)</code></strong>
+The value specifies the view&rsquo;s size in percentage of its flex container&rsquo;s size. The value must be non-negative.</li>
+<li><strong><code>size(_ sideLength: CGFloat)</code></strong><br>
+The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.</li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">view1</span><span class="p">)</span>
+
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">size</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">view1</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">size</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='minwidth-maxwidth-minheight-maxheight-a-name-minmax_width_height_size-a' class='heading'>minWidth(), maxWidth(), minHeight(), maxHeight() <a name="minmax_width_height_size"></a></h3>
+
+<p>FlexLayout has methods to set the view’s minimum and maximum width, and minimum and maximum height. </p>
+
+<p>Using minWidth, minHeight, maxWidth, and maxHeight gives you increased control over the final size of items in a layout. By mixing these properties with <code>grow</code>, <code>shrink</code>, and <code>alignItems(.stretch)</code>, you are able to have items with dynamic size within a range which you control.</p>
+
+<p>An example of when Max properties can be useful is if you are using <code>alignItems(.stretch)</code> but you know that your item won’t look good after it increases past a certain point. In this case, your item will stretch to the size of its parent or until it is as big as specified in the Max property.</p>
+
+<p>Same goes for the Min properties when using <code>shrink</code>. For example, you may want children of a container to shrink to fit on one row, but if you specify a minimum width, they will break to the next line after a certain point (if you are using <code>wrap(.wrap)</code>.</p>
+
+<p>Another case where Min and Max dimension constraints are useful is when using <code>aspectRatio</code>.</p>
+
+<p><strong>Methods:</strong></p>
+
+<ul>
+<li><p><strong><code>minWidth(_ width: CGFloat)</code></strong> 
+The value specifies the view&rsquo;s minimum width of the view in pixels. The value must be non-negative.</p></li>
+<li><p><strong><code>maxWidth(_ width: CGFloat)</code></strong><br>
+The value specifies the view&rsquo;s maximum width of the view in pixels. The value must be non-negative.</p></li>
+<li><p><strong><code>minHeight(_ height: CGFloat)</code></strong>
+The value specifies the view&rsquo;s minimum height of the view in pixels. The value must be non-negative.</p></li>
+<li><p><strong><code>maxHeight(_ height: CGFloat)</code></strong>
+The value specifies the view&rsquo;s maximum height of the view in pixels. The value must be non-negative.</p></li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">maxWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">view1</span><span class="p">)</span><span class="o">.</span><span class="nf">maxWidth</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
+
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">maxHeight</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">view1</span><span class="p">)</span><span class="o">.</span><span class="nf">maxHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='aspectratio-a-name-aspect_ratio-a' class='heading'>aspectRatio() <a name="aspect_ratio"></a></h3>
+
+<p>AspectRatio is a property introduced by Yoga that don&rsquo;t exist in CSS. AspectRatio solves the problem of knowing one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other media types. AspectRatio accepts any floating point value &gt; 0, the default is undefined.</p>
+
+<ul>
+<li>AspectRatio is defined as the ratio between the width and the height of a node e.g. if a node has an aspect ratio of 2 then its width is twice the size of its height.</li>
+<li>AspectRatio respects the Min and Max dimensions of an item.</li>
+<li>AspectRatio has higher priority than <code>grow</code>.</li>
+<li>If AspectRatio, Width, and Height are set then the cross dimension is overridden</li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">imageView</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">aspectRatio</span><span class="p">(</span><span class="mi">16</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span>
+</code></pre>
+
+<p><br/></p>
+<h2 id='6-margins-a-name-margins-a' class='heading'>6. Margins <a name="margins"></a></h2>
+
+<p>By applying Margin to an item you specify the offset a certain edge of the item should have from it’s closest sibling or parent.</p>
+
+<p><strong>Methods:</strong></p>
+
+<ul>
+<li><code>marginTop(_ value: CGFloat)</code></li>
+<li><code>marginLeft(_ value: CGFloat)</code></li>
+<li><code>marginBottom(_ value: CGFloat)</code></li>
+<li><code>marginRight(_ value: CGFloat)</code></li>
+<li><code>marginStart(_ value: CGFloat)</code></li>
+<li><code>marginEnd(_ value: CGFloat)</code></li>
+<li><code>marginHorizontal(_ value: CGFloat)</code></li>
+<li><code>marginVertical(_ value: CGFloat)</code></li>
+<li><code>margin(_ value: CGFloat)</code></li>
+<li><code>margin(_ vertical: CGFloat, _ horizontal: CGFloat)</code></li>
+<li><code>margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)</code></li>
+<li><code>margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat)</code></li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">margin</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">marginBottom</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">marginHorizontal</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">margin</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h2 id='7-paddings-a-name-paddings-a' class='heading'>7. Paddings <a name="paddings"></a></h2>
+
+<p>Padding specify the <strong>offset children should have</strong> from a certain edge on the parent. </p>
+
+<p><strong>Methods:</strong></p>
+
+<ul>
+<li><code>paddingTop(_ value: CGFloat)</code></li>
+<li><code>paddingLeft(_ value: CGFloat)</code></li>
+<li><code>paddingBottom(_ value: CGFloat)</code></li>
+<li><code>paddingRight(_ value: CGFloat)</code></li>
+<li><code>paddingStart(_ value: CGFloat)</code></li>
+<li><code>paddingEnd(_ value: CGFloat)</code></li>
+<li><code>paddingHorizontal(_ value: CGFloat)</code></li>
+<li><code>paddingVertical(_ value: CGFloat)</code></li>
+<li><code>padding(_ value: CGFloat)</code></li>
+<li><code>padding(_ vertical: CGFloat, _ horizontal: CGFloat)</code></li>
+<li><code>padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)</code></li>
+<li><code>padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat)</code></li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">paddingBottom</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">paddingHorizontal</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="n">view</span><span class="o">.</span><span class="n">flex</span><span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<h2 id='8-borders-a-name-borders-a' class='heading'>8. Borders <a name="borders"></a></h2>
+
+<p>Border behaves nearly identically to Padding and is only separate from Padding to make it easier to implement border effect such as color.</p>
+
+<p><strong>Methods:</strong></p>
+
+<ul>
+<li><code>borderLeft(_ value: CGFloat)</code></li>
+<li><code>borderTop(_ value: CGFloat)</code></li>
+<li><code>borderRight(_ value: CGFloat)</code></li>
+<li><code>borderBottom(_ value: CGFloat)</code></li>
+<li><code>borderStart(_ value: CGFloat)</code></li>
+<li><code>borderEnd(_ value: CGFloat)</code></li>
+<li><code>border(_ value: CGFloat)</code></li>
+</ul>
+
+<p><br></p>
+<h2 id='9-extra-uiview-methods-a-name-uiview_methods-a' class='heading'>9. Extra UIView methods <a name="uiview_methods"></a></h2>
+
+<p>FlexLayout also adds methods to set common UIView properties.</p>
+
+<p><strong>Methods:</strong></p>
+
+<ul>
+<li><strong><code>backgroundColor(_ color: UIColor)</code></strong><br>
+Set the flex item&rsquo;s UIView background color.</li>
+</ul>
+<h6 id='usage-examples' class='heading'>Usage examples:</h6>
+<pre class="highlight swift"><code>  <span class="c1">// Create a gray column container and add a black horizontal line separator </span>
+  <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">backgroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span><span class="o">.</span><span class="n">define</span> <span class="p">{</span> <span class="p">(</span><span class="n">flex</span><span class="p">)</span> <span class="k">in</span>
+      <span class="n">flex</span><span class="o">.</span><span class="nf">addItem</span><span class="p">()</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="nf">backgroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">black</span><span class="p">)</span>
+  <span class="p">}</span> 
+</code></pre>
+
+<p><br></p>
+<h1 id='flexbox-external-links' class='heading'>Flexbox external links</h1>
+
+<ul>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">THE flexbox CSS reference: A Complete Guide to Flexbox</a></li>
+<li><a href="https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine">Raywenderlich interesting Yoga tutorial</a></li>
+<li><a href="https://yoksel.github.io/flex-cheatsheet">Flex Cheatsheet: Test flexbox properties using CSS</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox">Mozialla: Advanced layouts with flexbox using CSS</a></li>
+</ul>
+
+<p><br/></p>
+<h1 id='installation-a-name-installation-a' class='heading'>Installation <a name="installation"></a></h1>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>To integrate FlexLayout into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code>  <span class="n">pod</span> <span class="s1">'FlexLayout'</span>
+</code></pre>
+
+<p>Then, run <code>pod install</code>.</p>
+
+<p><br/></p>
+<h2 id='examples-app-a-name-examples_app-a' class='heading'>Examples App <a name="examples_app"></a></h2>
+
+<p>There is an Example app that expose some usage example on FlexLayout, including:</p>
+
+<ul>
+<li>The <a href="#intro_usage_example">example</a> presented priviously in this README.</li>
+<li>An implementation of the <a href="https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine">Ray Wenderlich Yoga Tutorial</a>. This example is the most complete one.</li>
+<li>Implementation of all <a href="https://facebook.github.io/yoga/">Yoga&rsquo;s examples</a>: C, Obj-C, Java, C#, Android</li>
+</ul>
+
+<p>:pushpin: Tap on images to see the example&rsquo;s source code.</p>
+
+<p align="center">
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs/images/examples/flexlayout_exampleapp_intro_portrait.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_c.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_objc.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_java.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_csharp.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_android.png" alt="FlexLayout example" width=120/></a>
+</p>
+
+<p>This app is available in the <code>Example</code> folder. Note that you must do a <code>pod install</code> before running the example project.</p>
+
+<p><br></p>
+<h2 id='faq-a-name-faq-a' class='heading'>FAQ <a name="faq"></a></h2>
+
+<ul>
+<li><p><strong>Q: The flex item overflow or is bigger than its container?</strong><br>
+<strong>R:</strong> By default the flex item&rsquo;s <code>shrink</code> value is 0, which keeps the item&rsquo;s current size in the main-axis direction. So that may cause the item to overflow its flex container. To fix that you just have to specify a <code>shrink</code> value bigger than 0:  </p>
+<pre class="highlight plaintext"><code>view.flex.shrink(1)
+</code></pre></li>
+<li><p><strong>Q: How to keep the view size (width/height)?</strong><br>
+<strong>R:</strong> By default view&rsquo;s flex shrink value is set to 1, which reduce the size of the view if the view is bigger than its flex container in the main-axis direction. If the direction is column, the height is adjusted, if the direction is row, the width is adjusted. Setting this value to 0 will keep the view size in the main-axis direction.</p></li>
+</ul>
+
+<p><br/></p>
+<h2 id='contributing-comments-ideas-suggestions-issues-a-name-comments-a' class='heading'>Contributing, comments, ideas, suggestions, issues, &hellip;. <a name="comments"></a></h2>
+
+<p>For any <strong>comments</strong>, <strong>ideas</strong>, <strong>suggestions</strong>, simply open an <a href="https://github.com/lucdion/FlexLayout/issues">issue</a>. </p>
+
+<p>For <strong>issues</strong>, please have a look at <a href="https://github.com/facebook/yoga/issues">Yoga&rsquo;s issues</a>. Your issue may have been already reported. If not, it may be a FlexLayout issue. In this case open an issue and we&rsquo;ll let you know if the issue is related to Yoga&rsquo;s implementation. </p>
+
+<p>If you find FlexLayout interesting, thanks to <strong>Star</strong> it. You&rsquo;ll be able to retrieve it easily later.</p>
+
+<p>If you&rsquo;d like to contribute, you&rsquo;re welcome!</p>
+
+<p><br></p>
+<h2 id='changelog' class='heading'>Changelog</h2>
+
+<p>FlexLayout recent history is available in the are documented in the <a href="CHANGELOG.md">CHANGELOG</a>.</p>
+
+<p><br></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>BSD 3-Clause License </p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/lucdion" target="_blank" rel="external">lucdion</a>. All rights reserved. (Last updated: 2017-08-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
