@@ -16,132 +16,82 @@ import UIKit
 import YogaKit
 
 public class Flex {
+    
+    //
+    // MARK: Properties
+    //
+
+    /**
+     Flex items's UIView.
+    */
     public let view: UIView
-
-    public enum Direction {
-        case column
-        case columnReverse
-        case row
-        case rowReverse
-    }
-
-    public enum Overflow {
-        case visible
-        case hidden
-        case scroll
-    }
-
-    public enum Justify {
-        case start
-        case end
-        case center
-        case spaceBetween
-        case spaceAround
-    }
-
-    public enum Align {
-        case start
-        case end
-        case center
-        case stretch
-        case baseline
-        case auto       // Used only by alignSelf
-    }
-
-    public enum Wrap {
-        case noWrap
-        case wrap
-        case wrapReverse
-    }
-
-    public enum Position {
-        case relative
-        case absolute
+    
+    /**
+     Item natural size, considering only properties of the view itself. Independent of the item frame.
+     */
+    public var intrinsicSize: CGSize {
+        return view.yoga.intrinsicSize
     }
     
-    public enum LayoutDirection {
-        case inherit    // default
-        case ltr        // Left to right
-        case rtl        // Right to right
-        //case auto       // Detected automatically
-    }
+    
 
     init(view: UIView) {
         self.view = view
         // Enable flexbox and overwrite Yoga default values.
         view.yoga.isEnabled = true
-        //view.yoga.flexShrink = 1 // Cause Yoga's issues?
     }
 
     //
-    // Creation / definition
+    // MARK: Flex item addition and definition
     //
     
-    /// This method adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has subviews and enables flexbox.
-    ///
-    /// - Returns: The added view flex interface
+    /**
+     This method adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has subviews and enables flexbox.
+    
+     - Returns: The added view flex interface
+     */
     @discardableResult
     public func addItem() -> Flex {
         let view = UIView()
         return addItem(view)
     }
     
+    /**
+     This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates an
+     UIView, adds it has subviews and enables flexbox. This is useful to add a flex item/container easily when you don't need to refer to it later.
     
-    /// This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates an 
-    /// UIView, adds it has subviews and enables flexbox. This is useful to add a flex item/container easily when you don't need to refer to it later.
-    ///
-    /// - Parameter view: view to add to the flex container
-    /// - Returns: The added view flex interface
+     - Parameter view: view to add to the flex container
+     - Returns: The added view flex interface
+     */
     @discardableResult
     public func addItem(_ view: UIView) -> Flex {
         self.view.addSubview(view)
         return view.flex
     }
 
+    /**
+     This method is used to structure your code so that it matches the flexbox structure. The method has a closure parameter with a
+     single parameter called `flex`. This parameter is in fact, the view's flex interface, it can be used to adds other flex items
+     and containers.
     
-    /// This method is used to structure your code so that it matches the flexbox structure. The method has a closure parameter with a 
-    /// single parameter called `flex`. This parameter is in fact, the view's flex interface, it can be used to adds other flex items 
-    /// and containers.
-    ///
-    /// - Parameter closure:
-    /// - Returns: Flex interface
+     - Parameter closure:
+     - Returns: Flex interface
+    */
     @discardableResult
     public func define(_ closure: (_ flex: Flex) -> Void) -> Flex {
         closure(self)
         return self
     }
     
-    
-    /// The framework is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container
-    /// size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty 
-    /// using `markDirty()`.
-    /// 
-    /// Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated
-    ///
-    /// - Returns: Flex interface
-    @discardableResult
-    public func markDirty() -> Flex {
-        view.yoga.markDirty()
-        return self
-    }
-
     //
-    // Layout / intrinsicSize/ sizeThatFits
+    // MARK: Layout / intrinsicSize/ sizeThatFits
     //
     
-    public enum LayoutMode {
-        /// This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height).
-        case fitContainer
-        /// In this mode, children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
-        case adjustHeight
-        /// In this mode, children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
-        case adjustWidth
-    }
-
+    /**
+     The method layout the flex container's children
     
-    /// The method layout the flex container's children
-    ///
-    /// - Parameter mode: specify the layout mod (LayoutMode).
+     - Parameter mode: specify the layout mod (LayoutMode).
+    */
     public func layout(mode: LayoutMode = .fitContainer) {
         if case .fitContainer = mode {
             view.yoga.applyLayout(preservingOrigin: true)
@@ -150,74 +100,95 @@ public class Flex {
         }
     }
     
-    /// This property controls dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a 
-    /// flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
+    /**
+     This property controls dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a
+     flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
+    */
     public var isIncludedInLayout: Bool = true {
         didSet {
             view.yoga.isIncludedInLayout = isIncludedInLayout
         }
     }
     
-    /// This property controls dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a 
-    /// flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
-    ///
-    /// - Parameter included: true to layout the view
-    /// - Returns:
+    /**
+     This method controls dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a
+     flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
+    
+     - Parameter included: true to layout the view
+     - Returns:
+     */
     @discardableResult
     public func isIncludedInLayout(_ included: Bool) -> Flex {
         self.isIncludedInLayout = included
         return self
     }
+
+    /**
+     The framework is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container
+     size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty 
+     using `markDirty()`.
+     
+     Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated
     
-    /// Item natural size, considering only properties of the view itself. Independent of the item frame.
-    public var intrinsicSize: CGSize {
-        return view.yoga.intrinsicSize
+     - Returns: Flex interface
+    */
+    @discardableResult
+    public func markDirty() -> Flex {
+        view.yoga.markDirty()
+        return self
     }
     
-    /// Returns the item size when layouted in the specified frame size
-    ///
-    /// - Parameter size: frame size
-    /// - Returns: item size
+    /**
+     Returns the item size when layouted in the specified frame size
+    
+     - Parameter size: frame size
+     - Returns: item size
+    */
     public func sizeThatFits(size: CGSize) -> CGSize {
         return view.yoga.calculateLayout(with: size)
     }
     
     //
-    // direction, wrap, flow
+    // MARK: Direction, wrap, flow
     //
     
-    /// The `direction` property establishes the main-axis, thus defining the direction flex items are placed in the flex container.
-    ///
-    /// The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex 
-    /// container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.
-    ///
-    /// Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container. 
-    /// If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse 
-    /// from right to left; if the direction is rtl, it's the opposite.
-    ///
-    /// - Parameter value: Default value is .column
+    /**
+     The `direction` property establishes the main-axis, thus defining the direction flex items are placed in the flex container.
+    
+     The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex 
+     container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.
+    
+     Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container. 
+     If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse 
+     from right to left; if the direction is rtl, it's the opposite.
+    
+     - Parameter value: Default value is .column
+    */
     @discardableResult
     public func direction(_ value: Direction) -> Flex {
         view.yoga.flexDirection = value.yogaValue
         return self
     }
     
-    /// The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
-    ///
-    /// - Parameter value: Default value is .noWrap
+    /**
+     The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
+    
+     - Parameter value: Default value is .noWrap
+    */
     @discardableResult
     public func wrap(_ value: Wrap) -> Flex {
         view.yoga.flexWrap = value.yogaValue
         return self
     }
     
+    /**
+     Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the 
+     user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the 
+     root of your layout tree.
     
-    /// Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the 
-    /// user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the 
-    /// root of your layout tree.
-    ///
-    /// - Parameter value: new LayoutDirection
-    /// - Returns:
+     - Parameter value: new LayoutDirection
+     - Returns:
+    */
     @discardableResult
     public func layoutDirection(_ value: LayoutDirection) -> Flex {
         // WORK IN PROGRESS :-)
@@ -237,108 +208,110 @@ public class Flex {
     }
     
     //
-    // justity, alignment / position
+    // MARK: justity, alignment, position
     //
     
-    /// The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. 
-    /// It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum 
-    /// size. For example, if children are flowing vertically, `justifyContent` controls how they align vertically.
-    ///
-    /// - Parameter value: Default value is .start
+    /**
+     The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. 
+     It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum 
+     size. For example, if children are flowing vertically, `justifyContent` controls how they align vertically.
+    
+     - Parameter value: Default value is .start
+    */
     @discardableResult
-    public func justifyContent(_ value: Justify) -> Flex {
+    public func justifyContent(_ value: JustifyContent) -> Flex {
         view.yoga.justifyContent = value.yogaValue
         return self
     }
     
-    /// The align-content property aligns a flex container’s lines within the flex container when there is extra space 
-    /// in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.
-    ///
-    /// - Parameter value: Default value is .start
+    /**
+     The align-content property aligns a flex container’s lines within the flex container when there is extra space 
+     in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.
+    
+     - Parameter value: Default value is .start
+    */
     @discardableResult
-    public func alignContent(_ value: Align) -> Flex {
+    public func alignContent(_ value: AlignContent) -> Flex {
         view.yoga.alignContent = value.yogaValue
         return self
     }
     
-    /// The `alignItems` property controls how a child aligns in the cross direction, overriding the `alignItems` 
-    /// of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item 
-    /// will align horizontally.
-    ///
-    /// - Parameter value: Default value is .auto
+    /**
+     The `alignSelf` property controls how a child aligns in the cross direction, overriding the `alignItems`
+     of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item 
+     will align horizontally.
+    
+     - Parameter value: Default value is .auto
+    */
     @discardableResult
-    public func alignSelf(_ value: Align) -> Flex {
+    public func alignSelf(_ value: AlignSelf) -> Flex {
         view.yoga.alignSelf = value.yogaValue
         return self
     }
 
-    /// The `alignItems` property defines how flex items are laid out along the cross axis on the current line. 
-    /// Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis). For example, if 
-    /// children are flowing vertically, `alignItems` controls how they align horizontally.
-    ///
-    /// - Parameter value: Default value is .stretch
+    /**
+     The `alignItems` property defines how flex items are laid out along the cross axis on the current line. 
+     Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis). For example, if 
+     children are flowing vertically, `alignItems` controls how they align horizontally.
+    
+     - Parameter value: Default value is .stretch
+    */
     @discardableResult
-    public func alignItems(_ value: Align) -> Flex {
+    public func alignItems(_ value: AlignItems) -> Flex {
         view.yoga.alignItems = value.yogaValue
         return self
     }
     
-    /// The position property tells Flexbox how you want your item to be positioned within its parent.
-    ///
-    /// - Parameter value: Default value is .relative
-    @discardableResult
-    public func position(_ value: Position) -> Flex {
-        view.yoga.position = value.yogaValue
-        return self
-    }
-
-    ///
-    ///
-    /// - Parameter value: Default value is .visible
-    @discardableResult
+    /*@discardableResult
     public func overflow(_ value: Overflow) -> Flex {
         view.yoga.overflow = value.yogaValue
         return self
-    }
+    }*/
     
     //
-    // grow / shrink / basis
+    // MARK: grow / shrink / basis
     //
     
-    /// The `grow` property defines the ability for a flex item to grow if necessary. It accepts a unitless value 
-    /// that serves as a proportion. It dictates what amount of the available space inside the flex container the 
-    /// item should take up.
-    ///
-    /// - Parameter value: Default value is 0
+    /**
+     The `grow` property defines the ability for a flex item to grow if necessary. It accepts a unitless value 
+     that serves as a proportion. It dictates what amount of the available space inside the flex container the 
+     item should take up.
+    
+     - Parameter value: Default value is 0
+    */
     @discardableResult
     public func grow(_ value: CGFloat) -> Flex {
         view.yoga.flexGrow = value
        return self
     }
     
-    /// It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the 
-    /// rest of the flex items in the flex container when there isn't enough space on the main-axis.
-    ///
-    /// When omitted, it is set to 0 and the flex shrink factor is multiplied by the flex `basis` when distributing 
-    /// negative space.
-    ///
-    /// A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to 
-    /// overflow its flex container.
-    ///
-    /// - Parameter value: Default value is 1
+    /**
+     It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the 
+     rest of the flex items in the flex container when there isn't enough space on the main-axis.
+    
+     When omitted, it is set to 0 and the flex shrink factor is multiplied by the flex `basis` when distributing 
+     negative space.
+    
+     A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to 
+     overflow its flex container.
+    
+     - Parameter value: Default value is 1
+    */
     @discardableResult
     public func shrink(_ value: CGFloat) -> Flex {
         view.yoga.flexShrink = value
         return self
     }
 
-    /// This property takes the same values as the width and height properties, and specifies the initial size of the 
-    /// flex item, before free space is distributed according to the grow and shrink factors.
-    ///
-    /// Specifying `nil` set the basis as `auto`, which means the length is equal to the length of the item. If the 
-    /// item has no length specified, the length will be according to its content.
-    ///
-    /// - Parameter value: Default value is 0
+    /**
+     This property takes the same values as the width and height properties, and specifies the initial size of the
+     flex item, before free space is distributed according to the grow and shrink factors.
+    
+     Specifying `nil` set the basis as `auto`, which means the length is equal to the length of the item. If the 
+     item has no length specified, the length will be according to its content.
+    
+     - Parameter value: Default value is 0
+    */
     @discardableResult
     public func basis(_ value: CGFloat?) -> Flex {
         if let value = value {
@@ -350,46 +323,7 @@ public class Flex {
     }
 
     //
-    // left / top / right / bottom / start / end
-    //
-    @discardableResult
-    public func left(_ value: CGFloat) -> Flex {
-        view.yoga.left = YGValue(value)
-        return self
-    }
-
-    @discardableResult
-    public func top(_ value: CGFloat) -> Flex {
-        view.yoga.top = YGValue(value)
-        return self
-    }
-
-    @discardableResult
-    public func right(_ value: CGFloat) -> Flex {
-        view.yoga.right = YGValue(value)
-        return self
-    }
-
-    @discardableResult
-    public func bottom(_ value: CGFloat) -> Flex {
-        view.yoga.bottom = YGValue(value)
-        return self
-    }
-
-    @discardableResult
-    public func start(_ value: CGFloat) -> Flex {
-        view.yoga.start = YGValue(value)
-        return self
-    }
-
-    @discardableResult
-    public func end(_ value: CGFloat) -> Flex {
-        view.yoga.end = YGValue(value)
-        return self
-    }
-
-    //
-    // Width / height / height
+    // MARK: Width / height / height
     //
     @discardableResult
     public func width(_ value: CGFloat) -> Flex {
@@ -440,26 +374,29 @@ public class Flex {
         view.yoga.maxHeight = YGValue(value)
         return self
     }
-
     
-    /// AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing 
-    /// one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other
-    /// media types. AspectRatio accepts any floating point value > 0, the default is undefined.
-    ///
-    /// - Parameter value:
-    /// - Returns:
+    /**
+     AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing 
+     one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other
+     media types. AspectRatio accepts any floating point value > 0, the default is undefined.
+    
+     - Parameter value:
+     - Returns:
+    */
     @discardableResult
     public func aspectRatio(_ value: CGFloat) -> Flex {
         view.yoga.aspectRatio = value
         return self
     }
     
-    /// AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing
-    /// one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other
-    /// media types. AspectRatio accepts any floating point value > 0, the default is undefined.
-    ///
-    /// - Parameter value:
-    /// - Returns:
+    /**
+     AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing
+     one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other
+     media types. AspectRatio accepts any floating point value > 0, the default is undefined.
+    
+     - Parameter value:
+     - Returns:
+    */
     @discardableResult
     public func aspectRatio(of imageView: UIImageView) -> Flex {
         if let imageSize = imageView.image?.size {
@@ -469,7 +406,76 @@ public class Flex {
     }
     
     //
-    // Margins
+    // MARK: Absolute positionning
+    //
+    
+    /**
+     The position property tells Flexbox how you want your item to be positioned within its parent.
+     
+     - Parameter value: Default value is .relative
+     */
+    @discardableResult
+    public func position(_ value: Position) -> Flex {
+        view.yoga.position = value.yogaValue
+        return self
+    }
+    
+    /**
+     Set the left edge distance from the container left edge in pixels.
+     */
+    @discardableResult
+    public func left(_ value: CGFloat) -> Flex {
+        view.yoga.left = YGValue(value)
+        return self
+    }
+    
+    /**
+     Set the top edge distance from the container top edge in pixels.
+     */
+    @discardableResult
+    public func top(_ value: CGFloat) -> Flex {
+        view.yoga.top = YGValue(value)
+        return self
+    }
+    
+    /**
+     Set the right edge distance from the container right edge in pixels.
+     */
+    @discardableResult
+    public func right(_ value: CGFloat) -> Flex {
+        view.yoga.right = YGValue(value)
+        return self
+    }
+    
+    /**
+     Set the bottom edge distance from the container bottom edge in pixels.
+     */
+    @discardableResult
+    public func bottom(_ value: CGFloat) -> Flex {
+        view.yoga.bottom = YGValue(value)
+        return self
+    }
+    
+    /**
+     Set the start edge (LTR=left, RTL=right) distance from the container start edge in pixels.
+     */
+    @discardableResult
+    public func start(_ value: CGFloat) -> Flex {
+        view.yoga.start = YGValue(value)
+        return self
+    }
+    
+    /**
+     Set the end edge (LTR=right, RTL=left) distance from the container start edge in pixels.
+     */
+    @discardableResult
+    public func end(_ value: CGFloat) -> Flex {
+        view.yoga.end = YGValue(value)
+        return self
+    }
+    
+    //
+    // MARK: Margins
     //
     @discardableResult
     public func marginTop(_ value: CGFloat) -> Flex {
@@ -548,7 +554,7 @@ public class Flex {
     }
 
     //
-    // Padding
+    // MARK: Padding
     //
     @discardableResult
     public func paddingTop(_ value: CGFloat) -> Flex {
@@ -626,8 +632,8 @@ public class Flex {
         return self
     }
 
-    //
-    // Border
+    // 
+    // MARK: Border
     //
     @discardableResult
     public func borderLeft(_ value: CGFloat) -> Flex {
@@ -666,18 +672,149 @@ public class Flex {
     }
     
     //
-    // Visual properties
+    // MARK: UIView Visual properties
     //
+
+    /**
+     Set the view background color.
     
-    
-    /// Set the view background color.
-    ///
-    /// - Parameter color: new color
-    /// - Returns: flex interface
+     - Parameter color: new color
+     - Returns: flex interface
+    */
     @discardableResult
     public func backgroundColor(_ color: UIColor) -> Flex {
         view.backgroundColor = color
         return self
     }
+    
+    // MARK: Enums
+    
+    /**
+     */
+    public enum Direction {
+        /// Default value. The flexible items are displayed vertically, as a column.
+        case column
+        // Same as column, but in reverse order
+        case columnReverse
+        // The flexible items are displayed horizontally, as a row.
+        case row
+        // Same as row, but in reverse order
+        case rowReverse
+    }
+    
+    /**
+     */
+    public enum JustifyContent {
+        /// Default value. Items are positioned at the beginning of the container.
+        case start
+        /// Items are positioned at the center of the container
+        case center
+        /// Items are positioned at the end of the container
+        case end
+        /// Items are positioned with space between the lines
+        case spaceBetween
+        /// Items are positioned with space before, between, and after the lines
+        case spaceAround
+    }
+    
+    /**
+     */
+    public enum AlignContent {
+        /// Default value. Lines stretch to take up the remaining space
+        case stretch
+        /// Lines are packed toward the start of the flex container
+        case start
+        /// Lines are packed toward the center of the flex container
+        case center
+        /// Lines are packed toward the end of the flex container
+        case end
+        /// Lines are evenly distributed in the flex container
+        case spaceBetween
+        /// Lines are evenly distributed in the flex container, with half-size spaces on either end	Play it »
+        case spaceAround
+    }
+    
+    /**
+     */
+    public enum AlignItems {
+        /// Default. Items are stretched to fit the container
+        case stretch
+        /// Items are positioned at the beginning of the container
+        case start
+        /// Items are positioned at the center of the container
+        case center
+        /// Items are positioned at the end of the container
+        case end
+        /// Items are positioned at the baseline of the container
+        case baseline
+    }
+    
+    /**
+     */
+    public enum AlignSelf {
+        /// Default. The element inherits its parent container's align-items property, or "stretch" if it has no parent container
+        case auto
+        /// The element is positioned to fit the container
+        case stretch
+        /// The element is positioned at the beginning of the container
+        case start
+        /// The element is positioned at the center of the container
+        case center
+        /// The element is positioned at the end of the container
+        case end
+        /// The element is positioned at the baseline of the container
+        case baseline
+    }
+    
+    /**
+     */
+    public enum Wrap {
+        /// Default value. Specifies that the flexible items will not wrap
+        case noWrap
+        /// Specifies that the flexible items will wrap if necessary
+        case wrap
+        /// Specifies that the flexible items will wrap, if necessary, in reverse order
+        case wrapReverse
+    }
+    
+    /**
+     */
+    public enum Position {
+        /// Default value.
+        case relative
+        /// Positioned absolutely in regards to its container. The item is positionned using properties top, bottom, left, right, start, end.
+        case absolute
+    }
+    
+    /**
+     */
+    public enum LayoutDirection {
+        /// Default value.
+        case inherit
+        /// Left to right
+        case ltr
+        /// Right to right
+        case rtl
+        //case auto       // Detected automatically
+    }
+    
+    /**
+     Defines how the `layout(mode:)` method layout its flex items.
+     */
+    public enum LayoutMode {
+        /// This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height).
+        case fitContainer
+        /// In this mode, children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
+        case adjustHeight
+        /// In this mode, children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
+        case adjustWidth
+    }
+    
+    /*public enum Overflow {
+     /// Items that overflow
+        case visible
+        case hidden
+        case scroll
+    }*/
 }
 
