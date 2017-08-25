@@ -768,12 +768,9 @@ The value specifies the width and the height of the view in pixels, creating a s
 
 ###### Usage examples:
 ```swift
-  view.flex.width(100)
-  view.flex.width(of: view1)
-	
+  view.flex.width(100)	
   view.flex.height(200)
 	
-  view.flex.size(of: view1)
   view.flex.size(250)
 ```
 <br>
