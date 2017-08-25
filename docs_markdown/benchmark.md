@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="../images/flexlayout-logo-2.png" alt="FlexLayout and PinLayout Performance" width=100/>
+	<img src="images/flexlayout-logo-2.png" alt="FlexLayout and PinLayout Performance" width=100/>
 </p>
 
 
