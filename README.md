@@ -38,6 +38,7 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 	* [Margins](#margins)
 	* [Paddings](#paddings)
 	* [Borders](#borders)
+* [API Documentation](#api_documentation)
 * [Examples App](#examples_app)
 * [FAQ](#faq)
 * [Comments, ideas, suggestions, issues, ....](#comments)
@@ -284,6 +285,9 @@ In the following sections we will see:
 1. How to create, modify and defines flex containers and items.
 2. Flexbox container's properties
 3. Flexbox item's properties
+
+
+:pushpin: This document is a guide that explains how to use FlexLayout. You can also checks the [**FlexLayout's API documentation**](https://lucdion.github.io/FlexLayout/1.1/Classes/Flex.html).
 
 <br>
 
@@ -921,27 +925,10 @@ Set the flex item's UIView background color.
 <br>
 
 
-# Flexbox external links
-* [THE flexbox CSS reference: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [Raywenderlich interesting Yoga tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine)
-* [Flex Cheatsheet: Test flexbox properties using CSS](https://yoksel.github.io/flex-cheatsheet)
-* [Mozialla: Advanced layouts with flexbox using CSS](https://developer.mozilla.org/en-US/docs_markdown/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox)
+## FlexLayout API Documentation <a name="api_documentation"></a>
+The [**complete FlexLayout API is available here**](https://lucdion.github.io/FlexLayout/1.1/Classes/Flex.html). 
 
-<br/>
-
-# Installation <a name="installation"></a>
-
-### CocoaPods
-
-To integrate FlexLayout into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-  pod 'FlexLayout'
-```
-
-Then, run `pod install`.
-
-<br/>
+<br>
 
 ## Examples App <a name="examples_app"></a>
 There is an Example app that expose some usage example on FlexLayout, including:
@@ -966,6 +953,7 @@ This app is available in the `Example` folder. Note that you must do a `pod inst
 
 <br>
 
+
 ## FAQ <a name="faq"></a>
 
 *  **Q: The flex item overflow or is bigger than its container?**  
@@ -980,6 +968,15 @@ This app is available in the `Example` folder. Note that you must do a `pod inst
 
 <br/>
 
+## Flexbox interesting external links
+* [THE flexbox CSS reference: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Raywenderlich interesting Yoga tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine)
+* [Flex Cheatsheet: Test flexbox properties using CSS](https://yoksel.github.io/flex-cheatsheet)
+* [Mozialla: Advanced layouts with flexbox using CSS](https://developer.mozilla.org/en-US/docs_markdown/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox)
+
+<br/>
+
+
 ## Contributing, comments, ideas, suggestions, issues, .... <a name="comments"></a>
 For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/lucdion/FlexLayout/issues). 
 
@@ -991,6 +988,20 @@ If you'd like to contribute, you're welcome!
 
 <br>
 
+
+## Installation <a name="installation"></a>
+
+### CocoaPods
+
+To integrate FlexLayout into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+  pod 'FlexLayout'
+```
+
+Then, run `pod install`.
+
+<br/>
 
 ## Changelog
 FlexLayout recent history is available in the are documented in the [CHANGELOG](CHANGELOG.md).
