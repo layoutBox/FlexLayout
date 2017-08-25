@@ -758,16 +758,10 @@ FlexLayout has methods to set the view’s height and width.
 
 * **`width(_ width: CGFloat)`**  
 The value specifies the view's width in pixels. The value must be non-negative.
-* **`width(percent: Percent)`**  
-The value specifies the view's width in percentage of its flex container's width. The value must be non-negative.
 * **`height(_ height: CGFloat)`**  
 The value specifies the view's height in pixels. The value must be non-negative.
-* **`height(percent: Percent)`**  
-The value specifies the view's height in percentage of its flex container's height. The value must be non-negative.
 * **`size(_ size: CGSize)`**  
 The value specifies view's width and the height in pixels. Values must be non-negative.
-* **`size(_ percent: Percent)`**
-The value specifies the view's size in percentage of its flex container's size. The value must be non-negative.
 * **`size(_ sideLength: CGFloat)`**  
 The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.
 
@@ -867,7 +861,7 @@ By applying Margin to an item you specify the offset a certain edge of the item 
 
 ## 7. Paddings <a name="paddings"></a>
 
-Padding specify the **offset children should have** from a certain edge on the parent. 
+Padding specify the **offset children should have** from a certain edge on the container. 
 
 **Methods:**
 
