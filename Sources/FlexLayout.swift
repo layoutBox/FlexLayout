@@ -15,6 +15,14 @@
 import UIKit
 import YogaKit
 
+/**
+ FlexLayout interface.
+ 
+ The interface is accessible from any UIView class instance:
+ ``` 
+    label.flex.margin(10)
+ ```
+ */
 public class Flex {
     
     //
@@ -325,18 +333,28 @@ public class Flex {
     //
     // MARK: Width / height / height
     //
+    
+    /** 
+     The value specifies the view's width in pixels. The value must be non-negative.
+    */
     @discardableResult
     public func width(_ value: CGFloat) -> Flex {
         view.yoga.width = YGValue(value)
         return self
     }
     
+    /**
+     The value specifies the view's height in pixels. The value must be non-negative.
+     */
     @discardableResult
     public func height(_ value: CGFloat) -> Flex {
         view.yoga.height = YGValue(value)
         return self
     }
     
+    /**
+     The value specifies view's width and the height in pixels. Values must be non-negative.
+     */
     @discardableResult
     public func size(_ size: CGSize) -> Flex {
         self.view.yoga.width = YGValue(size.width)
@@ -344,6 +362,9 @@ public class Flex {
         return self
     }
     
+    /**
+     The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.
+     */
     @discardableResult
     public func size(_ sideLength: CGFloat) -> Flex{
         self.view.yoga.width = YGValue(sideLength)
@@ -351,24 +372,36 @@ public class Flex {
         return self
     }
 
+    /**
+     The value specifies the view's minimum width of the view in pixels. The value must be non-negative.
+     */
     @discardableResult
     public func minWidth(_ value: CGFloat) -> Flex {
         view.yoga.minWidth = YGValue(value)
         return self
     }
 
+    /**
+     The value specifies the view's maximum width of the view in pixels. The value must be non-negative.
+     */
+    @discardableResult
+    public func maxWidth(_ value: CGFloat) -> Flex {
+        view.yoga.maxWidth = YGValue(value)
+        return self
+    }
+    
+    /**
+     The value specifies the view's minimum height of the view in pixels. The value must be non-negative.
+     */
     @discardableResult
     public func minHeight(_ value: CGFloat) -> Flex {
         view.yoga.minHeight = YGValue(value)
         return self
     }
 
-    @discardableResult
-    public func maxWidth(_ value: CGFloat) -> Flex {
-        view.yoga.maxWidth = YGValue(value)
-        return self
-    }
-
+    /**
+     The value specifies the view's maximum height of the view in pixels. The value must be non-negative.
+     */
     @discardableResult
     public func maxHeight(_ value: CGFloat) -> Flex {
         view.yoga.maxHeight = YGValue(value)
@@ -477,66 +510,108 @@ public class Flex {
     //
     // MARK: Margins
     //
+    
+    /**
+     Set the top margin. Top margin specify the offset the top edge of the item should have from from it’s closest sibling (item) or parent (container).
+     */
     @discardableResult
     public func marginTop(_ value: CGFloat) -> Flex {
         view.yoga.marginTop = YGValue(value)
         return self
     }
     
+    /**
+     Set the left margin. Left margin specify the offset the left edge of the item should have from from it’s closest sibling (item) or parent (container).
+     */
     @discardableResult
     public func marginLeft(_ value: CGFloat) -> Flex {
         view.yoga.marginLeft = YGValue(value)
         return self
     }
 
-    @discardableResult
-    public func marginStart(_ value: CGFloat) -> Flex {
-        view.yoga.marginStart = YGValue(value)
-        return self
-    }
-    
+    /**
+     Set the bottom margin. Bottom margin specify the offset the bottom edge of the item should have from from it’s closest sibling (item) or parent (container).
+     */
     @discardableResult
     public func marginBottom(_ value: CGFloat) -> Flex {
         view.yoga.marginBottom = YGValue(value)
         return self
     }
     
+    /**
+     Set the right margin. Right margin specify the offset the right edge of the item should have from from it’s closest sibling (item) or parent (container).
+     */
     @discardableResult
     public func marginRight(_ value: CGFloat) -> Flex {
         view.yoga.marginRight = YGValue(value)
         return self
     }
 
+    /**
+     Set the start margin.
+     
+     Depends on the item `LayoutDirection`:
+     * In LTR direction, start margin specify the offset the **left** edge of the item should have from from it’s closest sibling (item) or parent (container).
+     * IN RTL direction, start margin specify the offset the **right** edge of the item should have from from it’s closest sibling (item) or parent (container).
+     */
+    @discardableResult
+    public func marginStart(_ value: CGFloat) -> Flex {
+        view.yoga.marginStart = YGValue(value)
+        return self
+    }
+    
+    /**
+     Set the end margin.
+     
+     Depends on the item `LayoutDirection`:
+     * In LTR direction, end margin specify the offset the **right** edge of the item should have from from it’s closest sibling (item) or parent (container).
+     * IN RTL direction, end margin specify the offset the **left** edge of the item should have from from it’s closest sibling (item) or parent (container).
+     */
     @discardableResult
     public func marginEnd(_ value: CGFloat) -> Flex {
         view.yoga.marginEnd = YGValue(value)
         return self
     }
     
+    /**
+     Set the left, right, start and end margins to the specified value.
+     */
     @discardableResult
     public func marginHorizontal(_ value: CGFloat) -> Flex {
         view.yoga.marginHorizontal = YGValue(value)
         return self
     }
     
+    /**
+     Set the top and bottom margins to the specified value.
+     */
     @discardableResult
     public func marginVertical(_ value: CGFloat) -> Flex {
         view.yoga.marginVertical = YGValue(value)
         return self
     }
 
+    /**
+     Set all margins to the specified value.
+     */
     @discardableResult
     public func margin(_ value: CGFloat) -> Flex {
         view.yoga.margin = YGValue(value)
         return self
     }
     
+    /**
+     Set the individually vertical margins (top, bottom) and horizontal margins (left, right, start, end).
+     */
     @discardableResult func margin(_ vertical: CGFloat, _ horizontal: CGFloat) -> Flex {
         view.yoga.marginVertical = YGValue(vertical)
         view.yoga.marginHorizontal = YGValue(horizontal)
         return self
     }
     
+    /**
+     Set the individually top, horizontal margins and bottom margin.
+     */
     @discardableResult func margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat) -> Flex {
         view.yoga.marginTop = YGValue(top)
         view.yoga.marginHorizontal = YGValue(horizontal)
@@ -544,6 +619,9 @@ public class Flex {
         return self
     }
 
+    /**
+     Set the individually top, left, bottom and right margins.
+     */
     @discardableResult
     public func margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> Flex {
         view.yoga.marginTop = YGValue(top)
@@ -556,66 +634,108 @@ public class Flex {
     //
     // MARK: Padding
     //
+    
+    /**
+     Set the top padding. Top padding specify the **offset children should have** from the container's top edge.
+     */
     @discardableResult
     public func paddingTop(_ value: CGFloat) -> Flex {
         view.yoga.paddingTop = YGValue(value)
         return self
     }
 
+    /**
+     Set the left padding. Left padding specify the **offset children should have** from the container's left edge.
+     */
     @discardableResult
     public func paddingLeft(_ value: CGFloat) -> Flex {
         view.yoga.paddingLeft = YGValue(value)
         return self
     }
 
+    /**
+     Set the bottom padding. Bottom padding specify the **offset children should have** from the container's bottom edge.
+     */
     @discardableResult
     public func paddingBottom(_ value: CGFloat) -> Flex {
         view.yoga.paddingBottom = YGValue(value)
         return self
     }
 
+    /**
+     Set the top padding. Top padding specify the **offset children should have** from the container's top edge.
+     */
     @discardableResult
     public func paddingRight(_ value: CGFloat) -> Flex {
         view.yoga.paddingRight = YGValue(value)
         return self
     }
 
+    /**
+     Set the start padding.
+     
+     Depends on the item `LayoutDirection`:
+     * In LTR direction, start padding specify the **offset children should have** from the container's left edge.
+     * IN RTL direction, start padding specify the **offset children should have** from the container's right edge.
+     */
     @discardableResult
     public func paddingStart(_ value: CGFloat) -> Flex {
         view.yoga.paddingStart = YGValue(value)
         return self
     }
 
+    /**
+     Set the end padding.
+     
+     Depends on the item `LayoutDirection`:
+     * In LTR direction, end padding specify the **offset children should have** from the container's right edge.
+     * IN RTL direction, end padding specify the **offset children should have** from the container's left edge.
+     */
     @discardableResult
     public func paddingEnd(_ value: CGFloat) -> Flex {
         view.yoga.paddingEnd = YGValue(value)
         return self
     }
 
+    /**
+     Set the left, right, start and end paddings to the specified value.
+     */
     @discardableResult
     public func paddingHorizontal(_ value: CGFloat) -> Flex {
         view.yoga.paddingHorizontal = YGValue(value)
         return self
     }
 
+    /**
+     Set the top and bottom paddings to the specified value.
+     */
     @discardableResult
     public func paddingVertical(_ value: CGFloat) -> Flex {
         view.yoga.paddingVertical = YGValue(value)
         return self
     }
 
+    /**
+     Set all paddings to the specified value.
+     */
     @discardableResult
     public func padding(_ value: CGFloat) -> Flex {
         view.yoga.padding = YGValue(value)
         return self
     }
 
+    /**
+     Set the individually vertical paddings (top, bottom) and horizontal paddings (left, right, start, end).
+     */
     @discardableResult func padding(_ vertical: CGFloat, _ horizontal: CGFloat) -> Flex {
         view.yoga.paddingVertical = YGValue(vertical)
         view.yoga.paddingHorizontal = YGValue(horizontal)
         return self
     }
     
+    /**
+     Set the individually top, horizontal paddings and bottom padding.
+     */
     @discardableResult func padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat) -> Flex {
         view.yoga.paddingTop = YGValue(top)
         view.yoga.paddingHorizontal = YGValue(horizontal)
@@ -623,51 +743,15 @@ public class Flex {
         return self
     }
     
+    /**
+     Set the individually top, left, bottom and right paddings.
+     */
     @discardableResult
     public func padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> Flex {
         view.yoga.padding = YGValue(top)
         view.yoga.paddingLeft = YGValue(left)
         view.yoga.paddingBottom = YGValue(bottom)
         view.yoga.paddingRight = YGValue(right)
-        return self
-    }
-
-    // 
-    // MARK: Border
-    //
-    @discardableResult
-    public func borderLeft(_ value: CGFloat) -> Flex {
-        view.yoga.borderLeftWidth = value
-        return self
-    }
-
-    public func borderTop(_ value: CGFloat) -> Flex {
-        view.yoga.borderTopWidth = value
-        return self
-    }
-
-    public func borderRight(_ value: CGFloat) -> Flex {
-        view.yoga.borderRightWidth = value
-        return self
-    }
-
-    public func borderBottom(_ value: CGFloat) -> Flex {
-        view.yoga.borderBottomWidth = value
-        return self
-    }
-
-    public func borderStart(_ value: CGFloat) -> Flex {
-        view.yoga.borderStartWidth = value
-        return self
-    }
-
-    public func borderEnd(_ value: CGFloat) -> Flex {
-        view.yoga.borderEndWidth = value
-        return self
-    }
-
-    public func border(_ value: CGFloat) -> Flex {
-        view.yoga.borderWidth = value
         return self
     }
     
@@ -694,11 +778,11 @@ public class Flex {
     public enum Direction {
         /// Default value. The flexible items are displayed vertically, as a column.
         case column
-        // Same as column, but in reverse order
+        /// Same as column, but in reverse order
         case columnReverse
-        // The flexible items are displayed horizontally, as a row.
+        /// The flexible items are displayed horizontally, as a row.
         case row
-        // Same as row, but in reverse order
+        /// Same as row, but in reverse order
         case rowReverse
     }
     
@@ -791,9 +875,9 @@ public class Flex {
     public enum LayoutDirection {
         /// Default value.
         case inherit
-        /// Left to right
+        /// Left to right layout direction
         case ltr
-        /// Right to right
+        /// Right to right layout direction
         case rtl
         //case auto       // Detected automatically
     }
