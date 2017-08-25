@@ -48,8 +48,6 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 :pushpin: FlexLayout is actively updated. So please come often to see latest changes. You can also **Star** it to be able to retrieve it easily later.
 
-:warning:	FlexLayout is a light wrapper around [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation. Yoga has some open issues, so there is a possibility that you encounter issues when layouting your views, in these situations please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. Note that FlexLayout will always be up-to-date with the latest Yoga's version.
-
 <br>
 
 ### FlexLayout + PinLayout

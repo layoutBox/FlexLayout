@@ -41,7 +41,6 @@ public class Flex {
         return view.yoga.intrinsicSize
     }
     
-    
 
     init(view: UIView) {
         self.view = view
@@ -92,7 +91,7 @@ public class Flex {
     }
     
     //
-    // MARK: Layout / intrinsicSize/ sizeThatFits
+    // MARK: Layout / intrinsicSize / sizeThatFits
     //
     
     /**
