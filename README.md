@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/lucdion/FlexLayout"><img src="docs/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
+  <a href="https://github.com/lucdion/FlexLayout"><img src="docs_markdown/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
 </p>
 
 <h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
@@ -53,7 +53,7 @@ FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/
 
 ### FlexLayout + PinLayout
 
-<a href="https://github.com/mirego/PinLayout"><img src="docs/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
+<a href="https://github.com/mirego/PinLayout"><img src="docs_markdown/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
 
 **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positioning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug).
 
@@ -74,7 +74,7 @@ Two steps to use a flexbox container:
 	1. First you must layout the flexbox container, i.e. position it and optionally set its size. 
 	2. Then layout the flexbox children using Flex method `layout()`.
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a>
+<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a>
 
 ```swift
 fileprivate let rootFlexContainer = UIView()
@@ -124,7 +124,7 @@ override func layoutSubviews() {
 ###### Example 2: <a name="intro_usage_example_raywenderlich"></a>
 The example implements the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine) screen using FlexLayout. 
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=200/></a>
+<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=200/></a>
 
 ```swift
 init() {
@@ -216,11 +216,11 @@ As you can see in the following chart, FlexLayout and PinLayout's performance ar
 
 These results also means that **FlexLayout and PinLayout are by far faster than any layout frameworks built over auto layout**. 
 
-[See here more complete details, results and explanation of the benchmark](docs/benchmark/Benchmark.md).
+[See here more complete details, results and explanation of the benchmark](docs_markdown/benchmark.md).
 
 <p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
 <p align="center">
-  <img src="docs/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
+  <img src="docs_markdown/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
 </p>
 
 <br/>
@@ -434,10 +434,10 @@ The `direction` property establishes the main-axis, thus defining the direction 
 
 | Value | Result | Description |
 |---------------------|:------------------:|---------|
-| **column** (default) 	| <img src="docs/images/flexlayout-direction-column.png" width="100"/>| Top to bottom |
-| **columnReverse** | <img src="docs/images/flexlayout-direction-columnReverse.png" width="100"/>| Bottom to top |
-| **row** | <img src="docs/images/flexlayout-direction-row.png" width="190"/>| Same as text direction |
-| **rowReverse** | <img src="docs/images/flexlayout-direction-rowReverse.png" width="190"/>| opposite to text direction |
+| **column** (default) 	| <img src="docs_markdown/images/flexlayout-direction-column.png" width="100"/>| Top to bottom |
+| **columnReverse** | <img src="docs_markdown/images/flexlayout-direction-columnReverse.png" width="100"/>| Bottom to top |
+| **row** | <img src="docs_markdown/images/flexlayout-direction-row.png" width="190"/>| Same as text direction |
+| **rowReverse** | <img src="docs_markdown/images/flexlayout-direction-rowReverse.png" width="190"/>| opposite to text direction |
 
 
 ###### Usage examples:
@@ -465,9 +465,9 @@ Reminder: the cross axis is the axis perpendicular to the main axis. Its directi
 
 |                     	| direction(.column) | direction(.row) | Description|
 |---------------------	|:------------------:|:---------------:|--------------|
-| **noWrap** (default) 	| <img src="docs/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-nowrap.png" width="180"/>| Single-line which may cause the container to overflow. NEW: Flex items are displayed in one row and by default they are shrunk to fit the flex container’s width |
-| **wrap** | <img src="docs/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-wrap.png" width="180"/>| Multi-lines, direction is defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and top-to-bottom  |
-| **wrapReverse**	| <img src="docs/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>| Multi-lines, opposite to direction defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and bottom-to-top |
+| **noWrap** (default) 	| <img src="docs_markdown/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-nowrap.png" width="180"/>| Single-line which may cause the container to overflow. NEW: Flex items are displayed in one row and by default they are shrunk to fit the flex container’s width |
+| **wrap** | <img src="docs_markdown/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrap.png" width="180"/>| Multi-lines, direction is defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and top-to-bottom  |
+| **wrapReverse**	| <img src="docs_markdown/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>| Multi-lines, opposite to direction defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and bottom-to-top |
 
 ###### Usage examples:
 ```swift
@@ -489,11 +489,11 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 
 |                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
-| **start** (default) 	| <img src="docs/images/flexlayout-justify-column-flexstart.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-flexstart.png" width="160"/>|
-| **end**	| <img src="docs/images/flexlayout-justify-column-flexend.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-flexend.png" width="160"/>|
-| **center** 	| <img src="docs/images/flexlayout-justify-column-center.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-center.png" width="160"/>|
-| **spaceBetween** 	| <img src="docs/images/flexlayout-justify-column-spacebetween.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-spacebetween.png" width="160"/>|
-| **spaceAround** 	| <img src="docs/images/flexlayout-justify-column-spacearound.png" width="140"/>| <img src="docs/images/flexlayout-justify-row-spacearound.png" width="160"/>|
+| **start** (default) 	| <img src="docs_markdown/images/flexlayout-justify-column-flexstart.png" width="140"/>| <img src="docs_markdown/images/flexlayout-justify-row-flexstart.png" width="160"/>|
+| **end**	| <img src="docs_markdown/images/flexlayout-justify-column-flexend.png" width="140"/>| <img src="docs_markdown/images/flexlayout-justify-row-flexend.png" width="160"/>|
+| **center** 	| <img src="docs_markdown/images/flexlayout-justify-column-center.png" width="140"/>| <img src="docs_markdown/images/flexlayout-justify-row-center.png" width="160"/>|
+| **spaceBetween** 	| <img src="docs_markdown/images/flexlayout-justify-column-spacebetween.png" width="140"/>| <img src="docs_markdown/images/flexlayout-justify-row-spacebetween.png" width="160"/>|
+| **spaceAround** 	| <img src="docs_markdown/images/flexlayout-justify-column-spacearound.png" width="140"/>| <img src="docs_markdown/images/flexlayout-justify-row-spacearound.png" width="160"/>|
 
 ###### Usage examples:
 ```swift
@@ -516,11 +516,11 @@ The `alignItems` property defines how flex items are laid out along the cross ax
 
 |                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
-| **stretch** (default) 	| <img src="docs/images/flexlayout-align-column-stretch.png" width="140"/>| <img src="docs/images/flexlayout-align-row-stretch.png" width="160"/>|
-| **start**	| <img src="docs/images/flexlayout-align-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-align-row-flexStart.png" width="160"/>|
-| **end**	| <img src="docs/images/flexlayout-align-column-flexEnd.png" width="140"/>| <img src="docs/images/flexlayout-align-row-flexEnd.png" width="160"/>|
-| **center** 	| <img src="docs/images/flexlayout-align-column-center.png" width="140"/>| <img src="docs/images/flexlayout-align-row-center.png" width="160"/>|
-| **baseline** 	| | <img src="docs/images/flexlayout-align-row-baseline.png" width="160"/>|
+| **stretch** (default) 	| <img src="docs_markdown/images/flexlayout-align-column-stretch.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-stretch.png" width="160"/>|
+| **start**	| <img src="docs_markdown/images/flexlayout-align-column-flexStart.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-flexStart.png" width="160"/>|
+| **end**	| <img src="docs_markdown/images/flexlayout-align-column-flexEnd.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-flexEnd.png" width="160"/>|
+| **center** 	| <img src="docs_markdown/images/flexlayout-align-column-center.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-center.png" width="160"/>|
+| **baseline** 	| | <img src="docs_markdown/images/flexlayout-align-row-baseline.png" width="160"/>|
 
 <br/>
 
@@ -555,12 +555,12 @@ Note, `alignContent` has no effect when the flexbox has only a single line.
 
 |                     	| direction(.column) | direction(.row) |
 |---------------------	|:------------------:|:---------------:|
-| **start** (default) 	| <img src="docs/images/flexlayout-alignItems-column-flexStart.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexStart.png" width="160"/>|
-| **end**	| <img src="docs/images/flexlayout-alignItems-column-flexEnd.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-flexEnd.png" width="160"/>|
-| **center** 	| <img src="docs/images/flexlayout-alignItems-column-center.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-center.png" width="160"/>|
-| **stretch**	| <img src="docs/images/flexlayout-alignItems-column-stretch.png" width="140"/>| <img src="docs/images/flexlayout-alignItems-row-stretch.png" width="160"/>|
-| **spaceBetween** | <img src="docs/images/flexlayout-alignItems-column-spaceBetween.png" width="160"/> | <img src="docs/images/flexlayout-alignItems-row-spaceBetween.png" width="160"/>|
-| **spaceAround** | <img src="docs/images/flexlayout-alignItems-column-spaceAround.png" width="160"/> | <img src="docs/images/flexlayout-alignItems-row-spaceAround.png" width="160"/>|
+| **start** (default) 	| <img src="docs_markdown/images/flexlayout-alignItems-column-flexStart.png" width="140"/>| <img src="docs_markdown/images/flexlayout-alignItems-row-flexStart.png" width="160"/>|
+| **end**	| <img src="docs_markdown/images/flexlayout-alignItems-column-flexEnd.png" width="140"/>| <img src="docs_markdown/images/flexlayout-alignItems-row-flexEnd.png" width="160"/>|
+| **center** 	| <img src="docs_markdown/images/flexlayout-alignItems-column-center.png" width="140"/>| <img src="docs_markdown/images/flexlayout-alignItems-row-center.png" width="160"/>|
+| **stretch**	| <img src="docs_markdown/images/flexlayout-alignItems-column-stretch.png" width="140"/>| <img src="docs_markdown/images/flexlayout-alignItems-row-stretch.png" width="160"/>|
+| **spaceBetween** | <img src="docs_markdown/images/flexlayout-alignItems-column-spaceBetween.png" width="160"/> | <img src="docs_markdown/images/flexlayout-alignItems-row-spaceBetween.png" width="160"/>|
+| **spaceAround** | <img src="docs_markdown/images/flexlayout-alignItems-column-spaceAround.png" width="160"/> | <img src="docs_markdown/images/flexlayout-alignItems-row-spaceAround.png" width="160"/>|
 
 <br/>
 
@@ -934,7 +934,7 @@ Set the flex item's UIView background color.
 * [THE flexbox CSS reference: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Raywenderlich interesting Yoga tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine)
 * [Flex Cheatsheet: Test flexbox properties using CSS](https://yoksel.github.io/flex-cheatsheet)
-* [Mozialla: Advanced layouts with flexbox using CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox)
+* [Mozialla: Advanced layouts with flexbox using CSS](https://developer.mozilla.org/en-US/docs_markdown/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox)
 
 <br/>
 
@@ -962,13 +962,13 @@ There is an Example app that expose some usage example on FlexLayout, including:
 :pushpin: Tap on images to see the example's source code.
 
 <p align="center">
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs/images/examples/flexlayout_exampleapp_intro_portrait.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_c.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_objc.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_java.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_csharp.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs/images/examples/flexlayout_exampleapp_yoga_android.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_portrait.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_c.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_objc.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_java.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_csharp.png" alt="FlexLayout example" width=120/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_android.png" alt="FlexLayout example" width=120/></a>
 </p>
 
 This app is available in the `Example` folder. Note that you must do a `pod install` before running the example project.

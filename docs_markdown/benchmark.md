@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="../images/flexlayout-logo-2.png" alt="FlexLayout and PinLayout Performance" width=100/>
+	<img src="images/flexlayout-logo-2.png" alt="FlexLayout and PinLayout Performance" width=100/>
 </p>
 
 
@@ -35,10 +35,10 @@ The LayoutKit benchmark layout UICollectionView and UITableView cells in multipl
 ##### Benchmark cell layout
 Here are the benchmark rendering results to compare visual results:
  
-* [Auto layout rendering result](benchmark_result_Autolayout.png)
-* [FlexLayout rendering result](benchmark_result_FlexLayout.png)
-* [PinLayout rendering result](benchmark_result_PinLayout.png)
-* [LayoutKit rendering result](benchmark_result_LayoutKit.png)
+* [Auto layout rendering result](benchmark/benchmark_result_Autolayout.png)
+* [FlexLayout rendering result](benchmark/benchmark_result_FlexLayout.png)
+* [PinLayout rendering result](benchmark/benchmark_result_PinLayout.png)
+* [LayoutKit rendering result](benchmark/benchmark_result_LayoutKit.png)
 
 <br>
 
@@ -67,16 +67,16 @@ The table shows that **FlexLayout took 23 miliseconds** to render 100 UICollecti
 
 #### Benchmark charts  
 
-:pushpin: You can see the benchmark raw data in this [spreadsheet](benchmark.xlsx).
+:pushpin: You can see the benchmark raw data in this [spreadsheet](benchmark/benchmark.xlsx).
 
 <p align="center">
-  <a href=""><img src="benchmark_iphone5.png" alt="PinLayout Performance" width="500"/></a>
+  <a href="benchmark/benchmark_iphone5.png"><img src="benchmark/benchmark_iphone5.png" alt="PinLayout Performance" width="500"/></a>
   
 <p align="center">
-  <a href=""><img src="benchmark_iphone6.png" alt="PinLayout Performance" width="500"/></a>
+  <a href="benchmark/benchmark_iphone6.png"><img src="benchmark/benchmark_iphone6.png" alt="PinLayout Performance" width="500"/></a>
 
 <p align="center">
-  <a href=""><img src="benchmark_iphone7.png" alt="PinLayout Performance" width="500"/></a>
+  <a href="benchmark/benchmark_iphone7.png"><img src="benchmark/benchmark_iphone7.png" alt="PinLayout Performance" width="500"/></a>
 
 <br>
 
