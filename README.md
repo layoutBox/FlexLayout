@@ -14,7 +14,10 @@
 
 <br>
 
-FlexLayout gently wraps the highly optimized [facebook/yoga](https://github.com/facebook/yoga) flexbox implementation in a concise, and chainable syntax.
+FlexLayout adds a nice Swift interface to the highly optimized [Yoga](https://github.com/facebook/yoga) flexbox implementation. Concise, intuitive & chainable syntax.
+
+> Yoga is a multiplatform CSS Flexbox implementation (iOS/Android/...). Yoga is also the layout engine of React Native.
+
 
 ### Requirements
 * iOS 8.0+
@@ -366,7 +369,7 @@ The same results can also be obtained without using the `define()` method, but t
  
 <br>
  
-### Accessing flex items UIView <a name="accessing_flexbox_view"></a>
+### Accessing flex item's UIView <a name="accessing_flexbox_view"></a>
 It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `flex.define()` method.
 
 ###### Example:
