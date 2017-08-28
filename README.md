@@ -16,6 +16,8 @@
 
 FlexLayout adds a nice Swift interface to the highly optimized [Yoga](https://github.com/facebook/yoga) flexbox implementation. Concise, intuitive & chainable syntax.
 
+Flexbox is an incredible improvement over UIStackView. It is simpler to use, much more flexible and amazingly performant.
+
 > Yoga is a multiplatform CSS Flexbox implementation (iOS/Android/...). Yoga is also the layout engine of React Native.
 
 
