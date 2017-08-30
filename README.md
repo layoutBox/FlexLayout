@@ -62,14 +62,14 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 **FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positioning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug).
 
 * A view can be layouted using FlexLayout, PinLayout, or both!
-* PinLayout can layout anything, but in situations where you need to layouts many views but don't require the PinLayout's finest control nor complex animations, FlexLayout is best fitted. 
+* PinLayout can layout anything, but in situations where you need to layout many views but don't require PinLayout's finest control nor complex animations, FlexLayout is best fitted. 
 * A view layouted using PinLayout can be embedded inside a FlexLayout's container and reversely. You choose the best layout framework for your situation. 
 
 <br>
  
 ## FlexLayout Introduction examples <a name="intro_usage_example"></a>
 ###### Example 1:
-This example layout multiples views using column and row flexbox containers.
+This example will layout multiples views using column and row flexbox containers.
 
 Two steps to use a flexbox container:
 
@@ -218,7 +218,7 @@ FlexLayout's performance has been measured using the nice LayoutKit benchmark. F
 
 As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
 
-These results also means that **FlexLayout and PinLayout are by far faster than any layout frameworks built over auto layout**. 
+These results also mean that **FlexLayout and PinLayout are by far faster than any layout frameworks built over auto layout**. 
 
 [See here more complete details, results and explanation of the benchmark](docs_markdown/benchmark.md).
 
@@ -303,7 +303,7 @@ In the following sections we will see:
 **Method:**
 
 * **`addItem(_: UIView) -> Flex`**  
-This method adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has subviews and enables flexbox.
+This method adds a flex item (UIView) to a flex container. Internally this method adds the UIView as a subview and enables flexbox.
 
 ###### Usage examples:
 ```swift
@@ -318,7 +318,7 @@ This method adds a flex item (UIView) to a flex container. Internally the method
 **Method:**
 
 * **`addItem() -> Flex`**  
-This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates an UIView, adds it has subviews and enables flexbox. This is useful to add a flex item/container easily when you don't need to refer to it later.
+This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates a UIView, adds it as a subview and enables flexbox. This is useful to add a flex item/container easily when you don't need to refer to it later.
 
 ###### Usage examples:
 ```swift
@@ -333,7 +333,7 @@ This method is similar to `addItem(: UIView)` except that it also creates the fl
 **Method:**
 
 * **`define(_ closure: (_ flex: Flex) -> Void)`**  
-This method is used to structure your code so that it matches the flexbox structure. The method has a closure parameter with a single parameter called `flex`. This parameter is in fact, the view's flex interface, it can be used to adds other flex items and containers. 
+This method is used to structure your code so that it matches the flexbox structure. The method has a closure parameter with a single parameter called `flex`. This parameter is in fact the view's flex interface. It can be used to adds other flex items and containers. 
 
 ###### Usage examples:
 ```swift
@@ -367,7 +367,7 @@ The same results can also be obtained without using the `define()` method, but t
 	- Changing a flex item order, it's just moving up/down its line/block that defines it.
 	- Moving a flex item from one container to another is just moving line/block that defines it.
 - The structure looks more similar to how HTML and React Native defines it.
-- Inside the `define`'s closure, you can do whatever you want to fill the flexbox container, you can use `for` loops, iterates arrays of data, call functions, ...
+- Inside the `define`'s closure, you can do whatever you want to fill the flexbox container. You can use `for` loops, iterate arrays of data, call functions, ...
  
 <br>
  
@@ -405,7 +405,7 @@ Another possible solution:
 **Method:**
 
 * **`layout(mode: LayoutMode = . fitContainer)`**  
-The method layout the flex container's children.
+The method will layout the flex container's children.
 
   Layout modes:
 
@@ -421,7 +421,7 @@ The method layout the flex container's children.
 <br>
 
 ## 2. Flexbox containers properties  <a name="containers_properties"></a>
-This section describe all flex container's properties.
+This section describes all flex container's properties.
 
 ### direction() 
 - Applies to: `flex containers`
@@ -720,7 +720,7 @@ Item natural size, considering only properties of the view itself. Independent o
 * **`position(_: Position)`**   
 The position property tells Flexbox how you want your item to be positioned within its parent. Position values:
   * **`relative (default)`**
-  * **`absolute`**: The view is positionned using properties: top(), bottom(), left(), right(), start(), end().
+  * **`absolute`**: The view is positioned using properties: top(), bottom(), left(), right(), start(), end().
 
 ###### Usage examples:
 ```swift
@@ -745,7 +745,7 @@ Controls the distance a child’s start edge is from the parent’s start edge. 
 * **`end( value: CGFloat)`**:  
 Controls the distance a child’s end edge is from the parent’s end edge. In left-to-right direction (LTR), it corresponds to the `right()` property and in RTL to `left()` property.
 
-Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t effect their sibling's layout with absolute position can be used to create overlays and stack children in the Z axis.
+Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t affect their sibling's layout. Absolute position can be used to create overlays and stack children in the Z axis.
 
 ###### Usage examples:
 ```swift
@@ -934,9 +934,9 @@ The [**complete FlexLayout API is available here**](https://lucdion.github.io/Fl
 <br>
 
 ## Examples App <a name="examples_app"></a>
-There is an Example app that expose some usage example on FlexLayout, including:
+There is an Example app that exposes some usage example on FlexLayout, including:
 
-* The [example](#intro_usage_example) presented priviously in this README.
+* The [example](#intro_usage_example) presented previously in this README.
 * An implementation of the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.
 * Implementation of all [Yoga's examples](https://facebook.github.io/yoga/): C, Obj-C, Java, C#, Android
 
@@ -959,15 +959,15 @@ This app is available in the `Example` folder. Note that you must do a `pod inst
 
 ## FAQ <a name="faq"></a>
 
-*  **Q: The flex item overflow or is bigger than its container?**  
-   **R:** By default the flex item's `shrink` value is 0, which keeps the item's current size in the main-axis direction. So that may cause the item to overflow its flex container. To fix that you just have to specify a `shrink` value bigger than 0:  
+*  **Q: The flex item overflows or is bigger than its container?**  
+   **A:** By default the flex item's `shrink` value is 0, which keeps the item's current size in the main-axis direction. So that may cause the item to overflow its flex container. To fix that you just have to specify a `shrink` value bigger than 0:  
 ```
    view.flex.shrink(1)
 ```
 
 
 *  **Q: How to keep the view size (width/height)?**  
-   **R:** By default view's flex shrink value is set to 1, which reduce the size of the view if the view is bigger than its flex container in the main-axis direction. If the direction is column, the height is adjusted, if the direction is row, the width is adjusted. Setting this value to 0 will keep the view size in the main-axis direction.
+   **A:** By default view's flex shrink value is set to 1, which reduce the size of the view if the view is bigger than its flex container in the main-axis direction. If the direction is column, the height is adjusted, if the direction is row, the width is adjusted. Setting this value to 0 will keep the view size in the main-axis direction.
 
 <br/>
 
