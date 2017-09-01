@@ -214,7 +214,7 @@ NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) impleme
 
 # FlexLayout's Performance <a name="performance"></a>
 
-FlexLayout's performance has been measured using the nice LayoutKit benchmark. FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
+FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/lucdion/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
 
 As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 26x and 36x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
 
@@ -974,6 +974,7 @@ This app is available in the `Example` folder. Note that you must do a `pod inst
 ## Flexbox interesting external links
 * [THE flexbox CSS reference: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Raywenderlich interesting Yoga tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine)
+* [An Introduction to Flexbox CSS](https://slicejack.com/introduction-to-flexbox/)
 * [Flex Cheatsheet: Test flexbox properties using CSS](https://yoksel.github.io/flex-cheatsheet)
 * [Mozialla: Advanced layouts with flexbox using CSS](https://developer.mozilla.org/en-US/docs_markdown/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox)
 
