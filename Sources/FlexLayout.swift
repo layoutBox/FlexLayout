@@ -41,7 +41,6 @@ public class Flex {
         return view.yoga.intrinsicSize
     }
     
-
     init(view: UIView) {
         self.view = view
         // Enable flexbox and overwrite Yoga default values.
@@ -365,7 +364,7 @@ public class Flex {
      The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.
      */
     @discardableResult
-    public func size(_ sideLength: CGFloat) -> Flex{
+    public func size(_ sideLength: CGFloat) -> Flex {
         self.view.yoga.width = YGValue(sideLength)
         self.view.yoga.height = YGValue(sideLength)
         return self
@@ -900,4 +899,3 @@ public class Flex {
         case scroll
     }*/
 }
-

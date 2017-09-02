@@ -14,7 +14,7 @@
 
 import UIKit
 
-fileprivate var flexLayoutAssociatedObjectHandle = 72399923
+private var flexLayoutAssociatedObjectHandle = 72_399_923
 
 public extension UIView {
     public var flex: Flex {
