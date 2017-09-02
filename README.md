@@ -222,9 +222,9 @@ These results also mean that **FlexLayout and PinLayout are by far faster than a
 
 [See here more complete details, results and explanation of the benchmark](docs_markdown/benchmark.md).
 
-<p align="center"> Tested on a iPhone 6 iOS 10.3.2</p>
+<p align="center"> Tested on a iPhone 6S iOS 10.3.2</p>
 <p align="center">
-  <img src="docs_markdown/benchmark/benchmark_iphone6.png" alt="FlexLayout Performance" width=600/>
+  <img src="docs_markdown/benchmark/benchmark_iphone6s.png" alt="FlexLayout Performance" width=600/>
 </p>
 
 <br/>

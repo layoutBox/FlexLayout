@@ -62,11 +62,11 @@ The **X axis** in following charts indicates the **number of cells** contained f
 
 :pushpin: You can see the benchmark raw data in this [spreadsheet](benchmark/benchmark.xlsx).
 
-<p align="center">
-  <a href="benchmark/benchmark_iphone5.png"><img src="benchmark/benchmark_iphone5.png" alt="PinLayout Performance"/></a>
+<p align="center"><!--
+  <a href="benchmark/benchmark_iphone5.png"><img src="benchmark/benchmark_iphone5.-->png" alt="PinLayout Performance"/></a>
   
 <p align="center">
-  <a href="benchmark/benchmark_iphone6.png"><img src="benchmark/benchmark_iphone6.png" alt="PinLayout Performance"/></a>
+  <a href="benchmark/benchmark_iphone6s.png"><img src="benchmark/benchmark_iphone6s.png" alt="PinLayout Performance"/></a>
 
 <p align="center">
   <a href="benchmark/benchmark_iphone7.png"><img src="benchmark/benchmark_iphone7.png" alt="PinLayout Performance"/></a>
