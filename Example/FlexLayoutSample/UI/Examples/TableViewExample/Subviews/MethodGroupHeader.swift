@@ -17,7 +17,7 @@ class MethodGroupHeader: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
     
-        titleLabel.text = "PinLayout's methods"
+        titleLabel.text = "FlexLayout's few methods"
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         titleLabel.sizeToFit()
         addSubview(titleLabel)

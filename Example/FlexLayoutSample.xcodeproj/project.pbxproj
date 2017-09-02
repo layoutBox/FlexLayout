@@ -16,7 +16,6 @@
 		24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */; };
 		24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */; };
 		24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */; };
-		2498A0AC1F599A1D00410849 /* UnitTestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498A0AB1F599A1D00410849 /* UnitTestsView.swift */; };
 		24AADD481F4E176A00CB77E6 /* Shows.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AADD471F4E176A00CB77E6 /* Shows.plist */; };
 		24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */; };
 		24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */; };
@@ -73,7 +72,6 @@
 		249326881EEEEE3D00BCB814 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		2493268B1EEEEFF100BCB814 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2493268D1EEEF02700BCB814 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		2498A0AB1F599A1D00410849 /* UnitTestsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestsView.swift; sourceTree = "<group>"; };
 		249EFE421E64FAFE00165E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		249EFE491E64FAFE00165E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		249EFE4C1E64FAFE00165E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 			children = (
 				24B14C591F278CCE00C90490 /* IntroView.swift */,
 				24B14C5A1F278CCE00C90490 /* IntroViewController.swift */,
-				2498A0AB1F599A1D00410849 /* UnitTestsView.swift */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -497,7 +494,6 @@
 				24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */,
 				24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */,
 				24B14C5B1F278CCE00C90490 /* IntroView.swift in Sources */,
-				2498A0AC1F599A1D00410849 /* UnitTestsView.swift in Sources */,
 				24C0F2101F4EE9B20050BEE7 /* Show.swift in Sources */,
 				24FB883E1F59CA8B00615D33 /* TableViewExampleViewController.swift in Sources */,
 				DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */,

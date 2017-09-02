@@ -7,7 +7,7 @@
 //
 import UIKit
 
-struct PinLayoutMethod {
+struct Method {
     let name: String
     let description: String
 }
@@ -30,18 +30,20 @@ class TableViewExampleViewController: BaseViewController {
     override func loadView() {
         view = TableViewExampleView()
         mainView.configure(methods: [
-            PinLayoutMethod(name: "top(_ value: CGFloat)", description: "The value specifies the top edge distance from the superview's top edge in pixels."),
-            PinLayoutMethod(name: "top(_ percent: Percent)", description: "The value specifies the top edge distance from the superview's top edge in percentage of its superview's height."),
-            PinLayoutMethod(name: "left(_ value: CGFloat)", description: "The value specifies the left edge distance from the superview's left edge in pixels."),
-            PinLayoutMethod(name: "left(_ percent: Percent)", description: "The value specifies the left edge distance from the superview's left edge in percentage of its superview's width."),
-            PinLayoutMethod(name: "bottom(_ value: CGFloat)", description: "The value specifies the bottom edge distance from the superview's bottom edge in pixels."),
-            PinLayoutMethod(name: "bottom(_ percent: Percent)", description: "The value specifies the bottom edge distance from the superview's bottom edge in percentage of its superview's height."),
-            PinLayoutMethod(name: "right(_ value: CGFloat)", description: "The value specifies the right edge distance from the superview's right edge in pixels."),
-            PinLayoutMethod(name: "right(_ percent: Percent)", description: "The value specifies the right edge distance from the superview's right edge in percentage of its superview's width."),
-            PinLayoutMethod(name: "hCenter(_ value: CGFloat)", description: "The value specifies the horizontal center distance from the superview's left edge in pixels."),
-            PinLayoutMethod(name: "hCenter(_ percent: Percent)", description: "The value specifies the horizontal center distance from the superview's left edge in percentage of its superview's width."),
-            PinLayoutMethod(name: "vCenter(_ value: CGFloat)", description: "The value specifies the vertical center distance from the superview's top edge in pixels."),
-            PinLayoutMethod(name: "vCenter(_ percent: Percent)", description: "The value specifies the vertical center distance from the superview's top edge in percentage of its superview's height.")
+            Method(name: "direction(_: Direction)", description: "The direction property establishes the main-axis, thus defining the direction flex items are placed in the flex container."),
+            
+            Method(name: "wrap(_: Wrap)", description: "The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.\n\n By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in."),
+
+            Method(name: "justifyContent(_: JustifyContent)", description: "The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum size. "),
+            
+            Method(name: "alignItems(_: AlignItems)", description: "The `alignItems` property defines how flex items are laid out along the cross axis on the current line. Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis)."),
+            
+            Method(name: "alignSelf(_: AlignSelf)", description: "The `alignSelf` property controls how a child aligns in the cross direction, overriding the `alignItems` of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item will align horizontally.\n\n The \"auto\" value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values."),
+            
+            Method(name: "alignContent(_: AlignContent)", description: "The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.\n\nNote, `alignContent` has no effect when the flexbox has only a single line."),
+            
+            Method(name: "layoutDirection(_: LayoutDirection)", description: "The layoutDirection property controls the flex container layout direction.\n\nValues:\n-`.inherit`\n  Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the root of your layout tree.\n-.ltr: Layout views from left to right. (Default)\n-.rtl: Layout views from right to left.")
+            
         ])
     }
 }

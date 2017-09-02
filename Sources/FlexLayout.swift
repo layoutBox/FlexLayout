@@ -231,14 +231,15 @@ public class Flex {
     }
     
     /**
-     The align-content property aligns a flex container’s lines within the flex container when there is extra space 
-     in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.
-    
-     - Parameter value: Default value is .start
-    */
+     The `alignItems` property defines how flex items are laid out along the cross axis on the current line.
+     Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis). For example, if
+     children are flowing vertically, `alignItems` controls how they align horizontally.
+     
+     - Parameter value: Default value is .stretch
+     */
     @discardableResult
-    public func alignContent(_ value: AlignContent) -> Flex {
-        view.yoga.alignContent = value.yogaValue
+    public func alignItems(_ value: AlignItems) -> Flex {
+        view.yoga.alignItems = value.yogaValue
         return self
     }
     
@@ -254,20 +255,20 @@ public class Flex {
         view.yoga.alignSelf = value.yogaValue
         return self
     }
-
-    /**
-     The `alignItems` property defines how flex items are laid out along the cross axis on the current line. 
-     Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis). For example, if 
-     children are flowing vertically, `alignItems` controls how they align horizontally.
     
-     - Parameter value: Default value is .stretch
-    */
+    /**
+     The align-content property aligns a flex container’s lines within the flex container when there is extra space
+     in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.
+     
+     - Parameter value: Default value is .start
+     */
     @discardableResult
-    public func alignItems(_ value: AlignItems) -> Flex {
-        view.yoga.alignItems = value.yogaValue
+    public func alignContent(_ value: AlignContent) -> Flex {
+        view.yoga.alignContent = value.yogaValue
         return self
     }
-    
+
+
     /*@discardableResult
     public func overflow(_ value: Overflow) -> Flex {
         view.yoga.overflow = value.yogaValue
