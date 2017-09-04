@@ -16,14 +16,14 @@ The Example App is available in the `Example` folder. You must do a `pod install
 
 # Intro Example
 FlexLayout introduction example.  
-[Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
+:open_file_folder: [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
 
 <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="images/examples/flexlayout_exampleapp_intro_all.png" width=340/></a>
 
   
 # Ray Wenderlich Yoga Tutorial
 An implementation of the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.  
-[Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial)
+[:open_file_folder: Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial)
 
 <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial"><img src="images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=120/></a>
 
