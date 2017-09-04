@@ -1,10 +1,17 @@
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
 //
-//  TableViewExampleView.swift
-//  PinLayoutSample
-//
-//  Created by DION, Luc (MTL) on 2017-06-13.
-//  Copyright (c) 2017 Mirego. All rights reserved.
-//
+// Created by Luc Dion on 2017-07-17.
+
 import UIKit
 
 class TableViewExampleView: BaseView {
@@ -20,6 +27,7 @@ class TableViewExampleView: BaseView {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 10
         tableView.register(MethodCell.self, forCellReuseIdentifier: MethodCell.reuseIdentifier)
         tableView.register(MethodGroupHeader.self, forHeaderFooterViewReuseIdentifier: MethodGroupHeader.reuseIdentifier)
         addSubview(tableView)
@@ -47,7 +55,9 @@ extension TableViewExampleView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableHeaderFooterView(withIdentifier: MethodGroupHeader.reuseIdentifier)
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: MethodGroupHeader.reuseIdentifier) as! MethodGroupHeader
+        header.configure(title: "Flex container methods")
+        return header
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,9 +70,10 @@ extension TableViewExampleView: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        methodCellTemplate.configure(method: methods[indexPath.row])
-        return methodCellTemplate.sizeThatFits(CGSize(width: frame.width, height: .greatestFiniteMagnitude)).height
+        // The UITableView will call the cell's sizeThatFit() method to compute the height.
+        // WANRING: You must also set the UITableView.estimatedRowHeight for this to work.
+        return UITableViewAutomaticDimension
     }
 }

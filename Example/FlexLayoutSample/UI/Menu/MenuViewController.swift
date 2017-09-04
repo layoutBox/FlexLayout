@@ -29,7 +29,7 @@ enum PageType: Int {
         switch self {
         case .intro:          return "Intro Example"
         case .rayWenderlich:  return "Raywenderlich Tutorial"
-        case .tableview:      return "UITableView Example"
+        case .tableview:      return "UITableView with variable cell's height"
         case .yogaExampleA:   return "Yoga C Example"
         case .yogaExampleB:   return "Yoga Obj-C Example"
         case .yogaExampleC:   return "Yoga Java Example"

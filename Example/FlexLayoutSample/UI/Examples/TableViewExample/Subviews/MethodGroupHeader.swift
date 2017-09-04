@@ -1,10 +1,16 @@
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
 //
-//  MethodGroupHeader.swift
-//  PinLayoutSample
-//
-//  Created by DION, Luc (MTL) on 2017-06-13.
-//  Copyright © 2017 Mirego. All rights reserved.
-//
+// Created by Luc Dion on 2017-07-17.
 
 import UIKit
 
@@ -17,7 +23,6 @@ class MethodGroupHeader: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
     
-        titleLabel.text = "FlexLayout's few methods"
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         titleLabel.sizeToFit()
         addSubview(titleLabel)
@@ -27,10 +32,15 @@ class MethodGroupHeader: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(title: String) {
+        titleLabel.text = title
+        titleLabel.sizeToFit()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
         // Center the label vertically. Note that we don't need to specify the size, it has already be adjusted in init().
-        titleLabel.pin.left().vCenter().margin(10)
+        titleLabel.pin.left().right().vCenter().margin(10)
     }
 }
