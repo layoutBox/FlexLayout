@@ -37,9 +37,8 @@ This example show how FlexLayout can layout UITableView's cell with variable hei
 
 Implementation of all [Yoga's examples](https://facebook.github.io/yoga/)
 
-| Language example          |   | |
-|:---------:|:-:|:-:|
 |  C | <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="images/examples/flexlayout_exampleapp_yoga_c.png" width=120/></a> | [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift) |
+|---------|:-:|:-:|
 |  Obj-C | <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="images/examples/flexlayout_exampleapp_yoga_objc.png" width=120/></a> | [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift) |
 | Java | <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="images/examples/flexlayout_exampleapp_yoga_java.png" width=120/></a> | [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift) |
 |  C# | <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="images/examples/flexlayout_exampleapp_yoga_csharp.png" width=120/></a> | [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift) |
