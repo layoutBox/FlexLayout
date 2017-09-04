@@ -128,7 +128,7 @@ override func layoutSubviews() {
 ###### Example 2: <a name="intro_usage_example_raywenderlich"></a>
 The example implements the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine) screen using FlexLayout. 
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=200/></a>
+<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=200/></a>
 
 ```swift
 init() {
@@ -434,7 +434,7 @@ This section describes all flex container's properties.
 * **`direction(_: Direction)`**  
 The `direction` property establishes the main-axis, thus defining the direction flex items are placed in the flex container.
 
-  The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.
+  The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex container’s main axis. They can be laid out in two main directions, like columns vertically or like rows horizontally.
 
   Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container. If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse from right to left; if the direction is rtl, it's the opposite.
 
@@ -465,7 +465,7 @@ The `direction` property establishes the main-axis, thus defining the direction 
 * **`wrap(_: Wrap)`**  
 The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
 
-  By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in
+By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in
 
 Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.
 
@@ -491,7 +491,7 @@ Reminder: the cross axis is the axis perpendicular to the main axis. Its directi
 
 **Method:**
 
-* **`justifyContent(_: Justify)`**  
+* **`justifyContent(_: JustifyContent)`**  
 The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum size. For example, if children are flowing vertically, `justifyContent` controls how they align vertically. 
 
 |                     	| direction(.column) | direction(.row) |
@@ -517,7 +517,7 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 
 **Method:**
 
-* **`alignItems(_: Align)`**  
+* **`alignItems(_: AlignItems)`**  
 The `alignItems` property defines how flex items are laid out along the cross axis on the current line. Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis). For example, if children are flowing vertically, `alignItems` controls how they align horizontally. 
 
 
@@ -539,10 +539,10 @@ The `alignItems` property defines how flex items are laid out along the cross ax
 
 **Method:**
 
-* **`alignSelf(_: Align)`**  
+* **`alignSelf(_: AlignSelf)`**  
 The `alignSelf` property controls how a child aligns in the cross direction, overriding the `alignItems` of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item will align horizontally. 
 
-  The `auto` value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values.
+The `auto` value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values.
 
 <br/>
 
@@ -554,7 +554,7 @@ The `alignSelf` property controls how a child aligns in the cross direction, ove
 
 **Method:**
 
-* **`alignContent(_: Align)`**  
+* **`alignContent(_: AlignContent)`**  
 The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.
 
 Note, `alignContent` has no effect when the flexbox has only a single line.
@@ -580,7 +580,7 @@ Using `start` or `end` properties, you can position views without having to thin
 
 **Method:**
 
-* **`layoutDirection(_: layoutDirection)`**  
+* **`layoutDirection(_: LayoutDirection)`**  
 The `layoutDirection` property controls the flex container layout direction. 
 
   Values:
@@ -933,26 +933,21 @@ The [**complete FlexLayout API is available here**](https://lucdion.github.io/Fl
 
 <br>
 
-## Examples App <a name="examples_app"></a>
-There is an Example app that exposes some usage example on FlexLayout, including:
-
-* The [example](#intro_usage_example) presented previously in this README.
-* An implementation of the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.
-* Implementation of all [Yoga's examples](https://facebook.github.io/yoga/): C, Obj-C, Java, C#, Android
-
-:pushpin: Tap on images to see the example's source code.
+## Example App <a name="examples_app"></a>
+The FlexLayout's Example App exposes some usage example of FlexLayout.   
+[See the Example App section to get more information](docs_markdown/examples.md).
 
 <p align="center">
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_portrait.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_c.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_objc.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_java.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_csharp.png" alt="FlexLayout example" width=120/></a>
-  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_android.png" alt="FlexLayout example" width=120/></a>
-</p>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_portrait.png" width=90/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=90/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample"><img src="docs_markdown/images/examples/flexlayout_exampleapp_uitableview.png" width=90/></a>
 
-This app is available in the `Example` folder. Note that you must do a `pod install` before running the example project.
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_c.png" width=90/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_objc.png" width=90/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_java.png" width=90/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_csharp.png" width=90/></a>
+  <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_android.png" width=90/></a>
+</p>
 
 <br>
 

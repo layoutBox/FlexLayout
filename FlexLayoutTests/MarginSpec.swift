@@ -34,7 +34,7 @@ class MarginSpec: QuickSpec {
         
         describe("") {
             it("adjust the aView size and position") {
-                rootFlexContainer.flex.define { (flex) in
+                rootFlexContainer.flex.define { (_) in
                 }
                 rootFlexContainer.flex.layout()
                 expect(rootFlexContainer.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0)))
