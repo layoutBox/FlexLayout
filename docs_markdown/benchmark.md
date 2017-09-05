@@ -42,16 +42,16 @@ These results means that FlexLayout and PinLayout are faster than any layout fra
 
 ### FlexLayout and PinLayout performance compared to Auto layout 
 
-This table shows FlexLayout and PinLayout performance compared to  Auto layout when layouting UICollectionView's cells.
+This table shows FlexLayout and PinLayout performance compared to Auto layout when layouting UICollectionView's cells.
 
-The table shows that **FlexLayout took 23 miliseconds** to render 100 UICollectionView's cells on a iPhone 6 compared to **53 miliseconds for PinLayout** and **611 ms for Auto layout**. Its 26 time faster for FlexLayout and 12 time faster for PinLayout.
+The table shows that **FlexLayout took 28 miliseconds** to render 100 UICollectionView's cells on a iPhone 7 compared to **20 miliseconds for PinLayout** and **244 ms for Auto layout**. Its 9 time faster for FlexLayout and 12 time faster for PinLayout.
 
 |           | Auto layout time  (seconds) | **FlexLayout** time  (seconds) | **FlexLayout** performance compared to Auto layout |  **PinLayout** time  (seconds) | **PinLayout** performance compared to Auto layout  |
 |:---------:|:---------:|:---------:|:-----------------------------------------------------------------------:|:---------------------------:|:-------------------------:|
-|  iPhone 5 | 2.074 | 0.067 | 31x Faster |  0.126 | 16x Faster | 
-|  iPhone 6 | 0.611 | 0.023 | 26x Faster |  0.053 | 12x Faster | 
-| iPhone 6S | 0.344 | NA | NA |  0.029 | 12x Faster | 
-|  iPhone 7 | 0.293 | 0.008 | 37x Faster |  0.021 | 14x Faster | 
+|  iPhone 5 | 1.718 | 0.156 | 11x Faster |  0.116 | 15x Faster | 
+|  iPhone 6 | 0.588 | 0.74 | 8x Faster |  0.056 | 11x Faster | 
+| iPhone 6S | 0.368 | 0.039 | 9x Faster | 0.032 | 12x Faster | 
+|  iPhone 7 | 0.244 | 0.028 | 9x Faster |  0.02 | 12x Faster | 
 
 <br>
 
@@ -62,14 +62,9 @@ The **X axis** in following charts indicates the **number of cells** contained f
 
 :pushpin: You can see the benchmark raw data in this [spreadsheet](benchmark/benchmark.xlsx).
 
-<p align="center"><!--
-  <a href="benchmark/benchmark_iphone5.png"><img src="benchmark/benchmark_iphone5.-->png" alt="PinLayout Performance"/></a>
-  
-<p align="center">
-  <a href="benchmark/benchmark_iphone6s.png"><img src="benchmark/benchmark_iphone6s.png" alt="PinLayout Performance"/></a>
-
-<p align="center">
-  <a href="benchmark/benchmark_iphone7.png"><img src="benchmark/benchmark_iphone7.png" alt="PinLayout Performance"/></a>
+<a href="benchmark/benchmark_iphone5.png"><img src="benchmark/benchmark_iphone6.png" alt="PinLayout Performance"/></a>
+<!--<a href="benchmark/benchmark_iphone6s.png"><img src="benchmark/benchmark_iphone6s.png" alt="PinLayout Performance"/></a>-->
+<a href="benchmark/benchmark_iphone7.png"><img src="benchmark/benchmark_iphone7.png" alt="PinLayout Performance"/></a>
 
 <br>
 
