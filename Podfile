@@ -5,6 +5,7 @@ workspace 'FlexLayout.xcworkspace'
 target 'FlexLayout' do
   project 'FlexLayout.xcodeproj'
   pod 'YogaKit', '~> 1.6'
+  pod 'SwiftLint'
 end
 
 target 'FlexLayoutTests' do
