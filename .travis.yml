@@ -6,6 +6,11 @@ env:
     - SCHEME=FlexLayout       SDK=iphonesimulator10.3
     - SCHEME=FlexLayoutSample SDK=iphonesimulator10.3
 
+  global:
+    - CC_TEST_REPORTER_ID=80a18bf1969c912258c064635f702f40f691b764f8d7c419b8f5371a5fd425bf
+    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+
+
 before_install:
 #  - brew outdated xctool || brew upgrade xctool;
   - gem install xcpretty-travis-formatter;
@@ -13,7 +18,13 @@ before_install:
 #  - pod repo update --silent;
   - pod install --repo-update;
 
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
+  - bundle exec rspec
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
       set -o pipefail && xcodebuild -workspace FlexLayout.xcworkspace -scheme "$SCHEME" -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone 6' -enableCodeCoverage YES build test | xcpretty -f `xcpretty-travis-formatter`
@@ -23,8 +34,20 @@ script:
       set -o pipefail && xcodebuild -workspace FlexLayout.xcworkspace -scheme "$SCHEME" -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone 6' build | xcpretty -f `xcpretty-travis-formatter`
     fi
 
+after_script:
+  # Preferably you will run test-reporter on branch update events. But 
+  # if you setup travis to build PR updates only, you don't need to run 
+  # the line below
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  # In the case where travis is setup to build PR updates only, 
+  # uncomment the line below
+  # - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
 after_success:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
       bash <(curl -s https://codecov.io/bash) -J 'FlexLayout'  -J 'FlexLayoutTests' -t 46f78923-637c-4f93-ac67-d494ec3ff873
     fi
+
+
+
