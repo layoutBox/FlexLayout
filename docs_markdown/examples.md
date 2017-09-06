@@ -7,33 +7,30 @@
 
 The FlexLayout's Example exposes some usage example of FlexLayout.
 
-The Example App is available in the `Example` folder. You must do a `pod install` before running the project.
+The Example App is available in the [`Example`](https://github.com/lucdion/FlexLayout/tree/master/Example) folder. You must do a `pod install` before running the project.
 
+</br>
 
-:pushpin: Tap on images to see the example's source code.
-
-
-
-# Intro Example
+## Intro Example
 FlexLayout introduction example.  
 [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
 
 <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="images/examples/flexlayout_exampleapp_intro_all.png" width=340/></a>
 
   
-# Ray Wenderlich Yoga Tutorial
+## Ray Wenderlich Yoga Tutorial
 An implementation of the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine). This example is the most complete one.  
 [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial)
 
 <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial"><img src="images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=120/></a>
 
-# UITableView with variables cell's height
-This example show how FlexLayout can layout UITableView's cell with variable height.   
+## UITableView with variable size cells.
+This example show how FlexLayout can be used to layout UITableView cells that have variables sizes.  
 [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample)
 
 <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample"><img src="images/examples/flexlayout_exampleapp_uitableview.png" width=120/></a>
 
-# Yoga's examples Implementation 
+## Yoga's examples Implementation 
 
 Implementation of all [Yoga's examples](https://facebook.github.io/yoga/)
 
@@ -43,5 +40,3 @@ Implementation of all [Yoga's examples](https://facebook.github.io/yoga/)
 | Java | <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="images/examples/flexlayout_exampleapp_yoga_java.png" width=120/></a> | [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift) |
 |  C# | <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="images/examples/flexlayout_exampleapp_yoga_csharp.png" width=120/></a> | [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift) |
 |  Android | <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="images/examples/flexlayout_exampleapp_yoga_android.png" width=120/></a> | [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift) |
-
-</p>
