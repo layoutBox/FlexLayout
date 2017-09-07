@@ -12,17 +12,21 @@ env:
 
 
 before_install:
+  - rvm use $RVM_RUBY_VERSION
 #  - brew outdated xctool || brew upgrade xctool;
   - gem install xcpretty-travis-formatter;
   - gem install cocoapods --no-document --quiet;
 #  - pod repo update --silent;
   - pod install --repo-update;
 
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+install: 
+  - bundle install --without=documentation --path ../travis_bundle_dir
 
+#before_script:
+#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-0.2.2-darwin-amd64 > ./cc-test-reporter
+#  - chmod +x ./cc-test-reporter
+#  - ./cc-test-reporter before-build
+ 
 script:
   - bundle exec rspec
   - |
@@ -46,6 +50,7 @@ after_script:
 after_success:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
+      slather
       bash <(curl -s https://codecov.io/bash) -J 'FlexLayout'  -J 'FlexLayoutTests' -t 46f78923-637c-4f93-ac67-d494ec3ff873
     fi
 
