@@ -39,21 +39,10 @@ script:
       set -o pipefail && xcodebuild -workspace FlexLayout.xcworkspace -scheme "$SCHEME" -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone 6' build | xcpretty -f `xcpretty-travis-formatter`
     fi
 
-#after_script:
-  # Preferably you will run test-reporter on branch update events. But 
-  # if you setup travis to build PR updates only, you don't need to run 
-  # the line below
-  # - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
-  # In the case where travis is setup to build PR updates only, 
-  # uncomment the line below
-  # - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-
 after_success:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
       slather coverage -s --workspace FlexLayout.xcworkspace --scheme FlexLayout --coveralls --travis FlexLayout.xcodeproj
     fi
-
-# bash <(curl -s https://codecov.io/bash) -J 'FlexLayout'  -J 'FlexLayoutTests' -t 46f78923-637c-4f93-ac67-d494ec3ff873
 
 
