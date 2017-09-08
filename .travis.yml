@@ -6,29 +6,13 @@ env:
     - SCHEME=FlexLayout       SDK=iphonesimulator10.3
     - SCHEME=FlexLayoutSample SDK=iphonesimulator10.3
 
-  global:
-    - CC_TEST_REPORTER_ID=80a18bf1969c912258c064635f702f40f691b764f8d7c419b8f5371a5fd425bf
-    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
-
-
 before_install:
   - rvm use $RVM_RUBY_VERSION
-#  - brew outdated xctool || brew upgrade xctool;
   - gem install xcpretty-travis-formatter;
   - gem install cocoapods --no-document --quiet;
-  - gem install slather --no-document --quiet;
-  
-#  - pod repo update --silent;
+  - gem install slather --no-document --quiet;  
   - pod install --repo-update;
 
-#install: 
- # - bundle install --without=documentation --path ../travis_bundle_dir
-
-#before_script:
-#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-0.2.2-darwin-amd64 > ./cc-test-reporter
-#  - chmod +x ./cc-test-reporter
-#  - ./cc-test-reporter before-build
- 
 script:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
@@ -44,5 +28,4 @@ after_success:
     if [[ $SCHEME = "FlexLayout" ]]; then
       slather coverage -s --workspace FlexLayout.xcworkspace --scheme FlexLayout --coveralls --travis FlexLayout.xcodeproj
     fi
-
 
