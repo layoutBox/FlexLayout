@@ -7,10 +7,10 @@ env:
     - SCHEME=FlexLayoutSample SDK=iphonesimulator10.3
 
 before_install:
-#  - brew outdated xctool || brew upgrade xctool;
+  - rvm use $RVM_RUBY_VERSION
   - gem install xcpretty-travis-formatter;
   - gem install cocoapods --no-document --quiet;
-#  - pod repo update --silent;
+  - gem install slather --no-document --quiet;  
   - pod install --repo-update;
 
 script:
@@ -26,5 +26,6 @@ script:
 after_success:
   - |
     if [[ $SCHEME = "FlexLayout" ]]; then
-      bash <(curl -s https://codecov.io/bash) -J 'FlexLayout'  -J 'FlexLayoutTests' -t 46f78923-637c-4f93-ac67-d494ec3ff873
+      slather coverage -s --workspace FlexLayout.xcworkspace --scheme FlexLayout --coveralls --travis FlexLayout.xcodeproj
     fi
+
