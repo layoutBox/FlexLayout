@@ -16,6 +16,7 @@ enum PageType: Int {
     case intro
     case rayWenderlich
     case tableview
+    case exampleColumn
     case yogaExampleA
     case yogaExampleB
     case yogaExampleC
@@ -30,6 +31,7 @@ enum PageType: Int {
         case .intro:          return "Intro Example"
         case .rayWenderlich:  return "Raywenderlich Tutorial"
         case .tableview:      return "UITableView with variable cell's height"
+        case .exampleColumn:  return "Example 1 - Column"
         case .yogaExampleA:   return "Yoga C Example"
         case .yogaExampleB:   return "Yoga Obj-C Example"
         case .yogaExampleC:   return "Yoga Java Example"
@@ -45,6 +47,7 @@ enum PageType: Int {
         case .intro:          return IntroViewController(pageType: self)
         case .rayWenderlich:  return RayWenderlichTutorialViewController(pageType: self)
         case .tableview:      return TableViewExampleViewController(pageType: self)
+        case .exampleColumn:  return Example1ViewController(pageType: self)
         case .yogaExampleA:   return YogaExampleAViewController(pageType: self)
         case .yogaExampleB:   return YogaExampleBViewController(pageType: self)
         case .yogaExampleC:   return YogaExampleCViewController(pageType: self)
@@ -77,7 +80,7 @@ class MenuViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-//        didSelect(pageType: .yogaExampleE)
+//        didSelect(pageType: .intro)
     }
 }
 

@@ -9,33 +9,19 @@
 // CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
+//
+// Created by Luc Dion on 2017-07-17.
 
-import Foundation
 import UIKit
 import FlexLayout
 import PinLayout
 
-class MyTestView: BaseView {
-    
+class Example1View: BaseView {
     fileprivate let rootFlexContainer = UIView()
 
     override init() {
         super.init()
-        
-        backgroundColor = UIColor(red:0.90, green:0.97, blue:0.98, alpha:1.00)
-        
-        initCenteredButtons()
-        
-        rootFlexContainer.layer.borderWidth = 2
-        rootFlexContainer.layer.borderColor = UIColor(red:0.52, green:0.53, blue:0.55, alpha:1.00).cgColor
-        addSubview(rootFlexContainer)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    func initCenteredButtons() {
+
         let view1 = BasicView(text: "View 1")
         let view2 = BasicView(text: "View 2")
         let view3 = BasicView(text: "View 3")
@@ -45,13 +31,22 @@ class MyTestView: BaseView {
             flex.addItem(view2).height(40).marginTop(10)
             flex.addItem(view3).height(40).marginTop(10)
         }
+        
+        addSubview(rootFlexContainer)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        rootFlexContainer.pin.top(topLayoutGuide).width(300).height(400)
-//        rootFlexContainer.pin.top(topLayoutGuide).bottom().width(100%)
+        // Layout the flexbox container using PinLayout
+        // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
+        rootFlexContainer.pin.top().bottom().width(100%)
+        
+        // Then let the flexbox container layout itself
         rootFlexContainer.flex.layout()
     }
 }

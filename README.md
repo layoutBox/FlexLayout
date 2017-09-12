@@ -452,6 +452,21 @@ The `direction` property establishes the main-axis, thus defining the direction 
   view.flex.direction(.column)  // Not required, defaut value. 
   view.flex.direction(.row)
 ```
+
+###### Example 1:
+This example center three views of 40 pixels tall with a padding of 10 pixels.  
+[Example source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Example1/Example1View.swift)
+
+<img src="docs_markdown/images/flexlayout_example_column_center.png" width="160"/>
+
+```swift
+    rootFlexContainer.flex.justifyContent(.center).padding(10).define { (flex) in
+        flex.addItem(button1).height(40).marginTop(10)
+        flex.addItem(button2).height(40).marginTop(10)
+        flex.addItem(button3).height(40).marginTop(10)
+    }
+``` 
+
 <br/>
 
 ### wrap()
