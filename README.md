@@ -1021,3 +1021,5 @@ FlexLayout recent history is available in the are documented in the [CHANGELOG](
 
 ## License
 BSD 3-Clause License 
+
+[![analytics](http://www.google-analytics.com/collect?v=1&t=pageview&_s=1&dl=https%3A%2F%2Fgithub.com%2Flucdion%2FFlexLayout&tid=UA-106565693-1)]()
