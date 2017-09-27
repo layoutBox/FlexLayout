@@ -15,17 +15,18 @@ import UIKit
 class BasicView: UIView {
     fileprivate let label = UILabel()
     
-    init(text: String? = nil, color: UIColor) {
+    init(text: String? = nil) {
         super.init(frame: .zero)
 
-        backgroundColor = color
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.lightGray.cgColor
-        
+        backgroundColor = UIColor(red:0.58, green:0.78, blue:0.95, alpha:1.00)
+        layer.borderColor = UIColor(red:0.37, green:0.67, blue:0.94, alpha:1.00).cgColor
+        layer.borderWidth = 2
+               
         label.text = text
-        label.font = .systemFont(ofSize: 7)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .white
         label.numberOfLines = 0
+        label.sizeToFit()
         addSubview(label)
     }
 
@@ -36,7 +37,7 @@ class BasicView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
             
-        label.pin.top().left().right().margin(4).fitSize()
+        label.pin.center()
     }
     
     var sizeThatFitsExpectedArea: CGFloat = 40 * 40

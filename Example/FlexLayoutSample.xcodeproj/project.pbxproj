@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2245F067A40DB6A13F97F202 /* Pods_FlexLayoutSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */; };
+		247D73451F6757B00001AE2C /* Example1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D73431F6757B00001AE2C /* Example1View.swift */; };
+		247D73461F6757B00001AE2C /* Example1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D73441F6757B00001AE2C /* Example1ViewController.swift */; };
 		24875E611F1F929600BB1C09 /* YogaExampleCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E601F1F929600BB1C09 /* YogaExampleCView.swift */; };
 		24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */; };
 		24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E641F1F92B500BB1C09 /* YogaExampleDView.swift */; };
 		24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */; };
 		24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */; };
 		24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */; };
-		24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */; };
-		24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */; };
 		24AADD481F4E176A00CB77E6 /* Shows.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AADD471F4E176A00CB77E6 /* Shows.plist */; };
 		24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */; };
 		24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */; };
@@ -61,14 +61,14 @@
 		2439CC331E665BF6003326FB /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2439CC341E665BF6003326FB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2439CC381E665C6B003326FB /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
+		247D73431F6757B00001AE2C /* Example1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Example1View.swift; path = Example1/Example1View.swift; sourceTree = "<group>"; };
+		247D73441F6757B00001AE2C /* Example1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Example1ViewController.swift; path = Example1/Example1ViewController.swift; sourceTree = "<group>"; };
 		24875E601F1F929600BB1C09 /* YogaExampleCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleCView.swift; sourceTree = "<group>"; };
 		24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleCViewController.swift; sourceTree = "<group>"; };
 		24875E641F1F92B500BB1C09 /* YogaExampleDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleDView.swift; sourceTree = "<group>"; };
 		24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleDViewController.swift; sourceTree = "<group>"; };
 		24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleEView.swift; sourceTree = "<group>"; };
 		24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleEViewController.swift; sourceTree = "<group>"; };
-		24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexboxViewController.swift; sourceTree = "<group>"; };
-		24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestView.swift; sourceTree = "<group>"; };
 		249326881EEEEE3D00BCB814 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		2493268B1EEEEFF100BCB814 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2493268D1EEEF02700BCB814 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -122,10 +122,10 @@
 		2439CC371E665C5E003326FB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				2456B5B21EF8622500E62071 /* Flexbox */,
 				24B14C581F278CB400C90490 /* Intro */,
 				24E835131F4CC323009F95CC /* RaywenderlichTutorial */,
 				24FB883A1F59CA7800615D33 /* TableViewExample */,
+				247D73421F6757A00001AE2C /* Example1 */,
 				DF91747C1F1F6F8B0034632D /* YogaExampleA */,
 				DF0E85281F1F742C00AB1956 /* YogaExampleB */,
 				24CD0D121F1F8D1100D56FC3 /* YogaExampleC */,
@@ -165,13 +165,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2456B5B21EF8622500E62071 /* Flexbox */ = {
+		247D73421F6757A00001AE2C /* Example1 */ = {
 			isa = PBXGroup;
 			children = (
-				24875E6D1F1F92CD00BB1C09 /* FlexboxViewController.swift */,
-				24875E6E1F1F92CD00BB1C09 /* MyTestView.swift */,
+				247D73431F6757B00001AE2C /* Example1View.swift */,
+				247D73441F6757B00001AE2C /* Example1ViewController.swift */,
 			);
-			path = Flexbox;
+			name = Example1;
 			sourceTree = "<group>";
 		};
 		249EFE361E64FAFE00165E39 = {
@@ -472,7 +472,6 @@
 				24FB883D1F59CA8B00615D33 /* TableViewExampleView.swift in Sources */,
 				24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */,
 				DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */,
-				24875E711F1F92CD00BB1C09 /* MyTestView.swift in Sources */,
 				DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */,
 				DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */,
 				24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */,
@@ -487,12 +486,13 @@
 				24E835161F4CC336009F95CC /* RaywenderlichTutorialView.swift in Sources */,
 				24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */,
 				24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */,
+				247D73461F6757B00001AE2C /* Example1ViewController.swift in Sources */,
 				24B14C5C1F278CCE00C90490 /* IntroViewController.swift in Sources */,
-				24875E701F1F92CD00BB1C09 /* FlexboxViewController.swift in Sources */,
 				24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */,
 				24FB88411F59CA9A00615D33 /* MethodCell.swift in Sources */,
 				24875E661F1F92B500BB1C09 /* YogaExampleDView.swift in Sources */,
 				24875E631F1F92A100BB1C09 /* YogaExampleCViewController.swift in Sources */,
+				247D73451F6757B00001AE2C /* Example1View.swift in Sources */,
 				24B14C5B1F278CCE00C90490 /* IntroView.swift in Sources */,
 				24C0F2101F4EE9B20050BEE7 /* Show.swift in Sources */,
 				24FB883E1F59CA8B00615D33 /* TableViewExampleViewController.swift in Sources */,
