@@ -1012,6 +1012,20 @@ To integrate FlexLayout into your Xcode project using CocoaPods, specify it in y
 
 Then, run `pod install`.
 
+
+### Carthage
+
+To integrate FlexLayout into your Xcode project using Carthage:
+
+1. Specify in your `Cartfile`:  
+```
+github "lucdion/FlexLayout"
+```
+
+2. Run `carthage update` to build frameworks.
+3. Add built `FlexLayout.framework` and `YogaKit.framework` frameworks in your Xcode project.
+4. Add the preprocessor macro `USE_YOGAKIT_PACKAGE` in your Xcode project. Target > Build Settings > Preprocessor Macros. add `USE_YOGAKIT_PACKAGE` in the **Debug** and the **Release** entry.
+
 <br/>
 
 ## Changelog
