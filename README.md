@@ -7,8 +7,9 @@
 <p align="center">
   <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
   <a href="https://travis-ci.org/lucdion/FlexLayout"><img src="https://travis-ci.org/lucdion/FlexLayout.svg?branch=master" /></a>
-  <a href='https://coveralls.io/github/lucdion/FlexLayout?branch=add_codeclimate'><img src='https://coveralls.io/repos/github/lucdion/FlexLayout/badge.svg?branch=add_codeclimate' alt='Coverage Status' /></a>
+ <a href='https://coveralls.io/github/lucdion/FlexLayout?branch=master'><img src='https://coveralls.io/repos/github/lucdion/FlexLayout/badge.svg?branch=master' alt='Coverage Status' /></a>
   <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
+  <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
   <a href="https://raw.githubusercontent.com/lucdion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
 </p>
 
