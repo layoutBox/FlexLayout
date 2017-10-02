@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [1.1.3](https://github.com/lucdion/FlexLayout/releases/tag/1.1.3)
+Released on 2017-10-02
+
+* Add Carthage support
+  * Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#25](https://github.com/lucdion/FlexLayout/pull/25) 
+
+
 ## [1.1.0](https://github.com/lucdion/FlexLayout/releases/tag/1.1.0)
 Released on 2017-08-23
 
