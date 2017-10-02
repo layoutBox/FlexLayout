@@ -7,7 +7,13 @@
 
 The FlexLayout's Example exposes some usage example of FlexLayout.
 
-The Example App is available in the [`Example`](https://github.com/lucdion/FlexLayout/tree/master/Example) folder. You must do a `pod install` before running the project.
+The Example App is available in the [`Example`](https://github.com/lucdion/FlexLayout/tree/master/Example) folder. 
+
+### Running the Example app
+1. Do a `pod install` from the FlexLayout root directory.
+2. Open the newly generated `FlexLayout.xcworkspace` Xcode workspace.
+3. Select the `FlexLayoutSample` target.
+4. Run the app on your device or simulator.
 
 </br>
 

@@ -6,3 +6,4 @@ build/
 xcuserdata
 Data/
 Pods/
+Carthage/
