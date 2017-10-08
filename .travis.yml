@@ -9,6 +9,7 @@ env:
 
 before_install:
   - rvm use $RVM_RUBY_VERSION
+  - bundle install
   - gem install xcpretty-travis-formatter;
   - gem install cocoapods --no-document --quiet;
   - gem install slather --no-document --quiet;  
