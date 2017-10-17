@@ -24,7 +24,7 @@ target 'FlexLayoutSample' do
   pod 'PinLayout'
 
   # Debug only
-  pod 'Reveal-SDK', :configurations => ['Debug']
+  pod 'Reveal-SDK', '~> 10', :configurations => ['Debug']
   pod 'SwiftLint'
 end
 

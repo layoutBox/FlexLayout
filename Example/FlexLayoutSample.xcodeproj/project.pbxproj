@@ -16,6 +16,9 @@
 		24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */; };
 		24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */; };
 		24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */; };
+		24901F0C1F93D40F0025D11B /* CollectionViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */; };
+		24901F0D1F93D40F0025D11B /* CollectionViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */; };
+		24901F0E1F93D40F0025D11B /* MethodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901F0B1F93D40F0025D11B /* MethodCollectionViewCell.swift */; };
 		24AADD481F4E176A00CB77E6 /* Shows.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AADD471F4E176A00CB77E6 /* Shows.plist */; };
 		24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */; };
 		24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */; };
@@ -69,6 +72,9 @@
 		24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleDViewController.swift; sourceTree = "<group>"; };
 		24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleEView.swift; sourceTree = "<group>"; };
 		24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleEViewController.swift; sourceTree = "<group>"; };
+		24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExampleView.swift; sourceTree = "<group>"; };
+		24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExampleViewController.swift; sourceTree = "<group>"; };
+		24901F0B1F93D40F0025D11B /* MethodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodCollectionViewCell.swift; sourceTree = "<group>"; };
 		249326881EEEEE3D00BCB814 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		2493268B1EEEEFF100BCB814 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2493268D1EEEF02700BCB814 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 			children = (
 				24B14C581F278CB400C90490 /* Intro */,
 				24E835131F4CC323009F95CC /* RaywenderlichTutorial */,
+				24901F071F93D40F0025D11B /* CollectionViewExample */,
 				24FB883A1F59CA7800615D33 /* TableViewExample */,
 				247D73421F6757A00001AE2C /* Example1 */,
 				DF91747C1F1F6F8B0034632D /* YogaExampleA */,
@@ -172,6 +179,24 @@
 				247D73441F6757B00001AE2C /* Example1ViewController.swift */,
 			);
 			name = Example1;
+			sourceTree = "<group>";
+		};
+		24901F071F93D40F0025D11B /* CollectionViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */,
+				24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */,
+				24901F0A1F93D40F0025D11B /* Subviews */,
+			);
+			path = CollectionViewExample;
+			sourceTree = "<group>";
+		};
+		24901F0A1F93D40F0025D11B /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				24901F0B1F93D40F0025D11B /* MethodCollectionViewCell.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		249EFE361E64FAFE00165E39 = {
@@ -468,9 +493,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24901F0D1F93D40F0025D11B /* CollectionViewExampleViewController.swift in Sources */,
 				24E835171F4CC336009F95CC /* RaywenderlichTutorialViewController.swift in Sources */,
 				24FB883D1F59CA8B00615D33 /* TableViewExampleView.swift in Sources */,
 				24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */,
+				24901F0C1F93D40F0025D11B /* CollectionViewExampleView.swift in Sources */,
 				DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */,
 				DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */,
 				DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */,
@@ -487,6 +514,7 @@
 				24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */,
 				24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */,
 				247D73461F6757B00001AE2C /* Example1ViewController.swift in Sources */,
+				24901F0E1F93D40F0025D11B /* MethodCollectionViewCell.swift in Sources */,
 				24B14C5C1F278CCE00C90490 /* IntroViewController.swift in Sources */,
 				24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */,
 				24FB88411F59CA9A00615D33 /* MethodCell.swift in Sources */,
