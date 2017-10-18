@@ -7,6 +7,25 @@
 
 # Change Log
 
+## [1.1.4](https://github.com/lucdion/FlexLayout/releases/tag/1.1.4)
+Released on 2017-10-17
+
+* Add width/height methods taking percentage parameter
+	* width(_ percent: FPercent)
+	* height(_ percent: FPercent)
+	* minWidth(_ percent: FPercent)
+	* maxWidth(_ percent: FPercent)
+	* minHeight(_ percent: FPercent)
+	* maxHeight(_ percent: FPercent)
+	
+	Usage examples:
+	
+	* view.flex.width(50%)
+	* view.flex.height(25%)
+	
+	* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#28](https://github.com/lucdion/FlexLayout/pull/28) 
+
+
 ## [1.1.3](https://github.com/lucdion/FlexLayout/releases/tag/1.1.3)
 Released on 2017-10-02
 
