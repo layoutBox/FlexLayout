@@ -11,6 +11,7 @@
 		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
 		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
 		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
+		24CC0E401F96807400BEE2CF /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC0E3F1F96807400BEE2CF /* Percent.swift */; };
 		24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA375A1EF843C500D1AB2F /* FlexLayout.framework */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* FlexLayout.swift */; };
@@ -35,6 +36,7 @@
 		244F4ABD1F8196E900460B54 /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
 		2458137E1F4A21CF00CD676B /* PaddingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingSpec.swift; sourceTree = "<group>"; };
 		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
+		24CC0E3F1F96807400BEE2CF /* Percent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = Sources/Percent.swift; sourceTree = SOURCE_ROOT; };
 		24DA375A1EF843C500D1AB2F /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				24DA37871EF8610400D1AB2F /* FlexLayout.swift */,
+				24CC0E3F1F96807400BEE2CF /* Percent.swift */,
 				DF9174751F1D6DA20034632D /* Impl */,
 				2429E4BD1F19181F00BBC032 /* Supporting Files */,
 			);
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */,
+				24CC0E401F96807400BEE2CF /* Percent.swift in Sources */,
 				DF9174771F1D6DC00034632D /* FlexLayout+Enum.swift in Sources */,
 				24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */,
 			);
@@ -386,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -435,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

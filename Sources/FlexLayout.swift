@@ -342,11 +342,31 @@ public class Flex {
     }
     
     /**
+     The value specifies the view's width in percentage of its container width. The value must be non-negative.
+     Example: view.flex.width(20%)
+     */
+    @discardableResult
+    public func width(_ percent: FPercent) -> Flex {
+        view.yoga.width = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
+    /**
      The value specifies the view's height in pixels. The value must be non-negative.
      */
     @discardableResult
     public func height(_ value: CGFloat) -> Flex {
         view.yoga.height = YGValue(value)
+        return self
+    }
+    
+    /**
+     The value specifies the view's height in percentage of its container height. The value must be non-negative.
+     Example: view.flex.height(40%)
+     */
+    @discardableResult
+    public func height(_ percent: FPercent) -> Flex {
+        view.yoga.height = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
     
@@ -371,16 +391,25 @@ public class Flex {
     }
 
     /**
-     The value specifies the view's minimum width of the view in pixels. The value must be non-negative.
+     The value specifies the view's minimum width in pixels. The value must be non-negative.
      */
     @discardableResult
     public func minWidth(_ value: CGFloat) -> Flex {
         view.yoga.minWidth = YGValue(value)
         return self
     }
+    
+    /**
+     The value specifies the view's minimum width in percentage of its container width. The value must be non-negative.
+     */
+    @discardableResult
+    public func minWidth(_ percent: FPercent) -> Flex {
+        view.yoga.minWidth = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
 
     /**
-     The value specifies the view's maximum width of the view in pixels. The value must be non-negative.
+     The value specifies the view's maximum width in pixels. The value must be non-negative.
      */
     @discardableResult
     public func maxWidth(_ value: CGFloat) -> Flex {
@@ -389,20 +418,47 @@ public class Flex {
     }
     
     /**
-     The value specifies the view's minimum height of the view in pixels. The value must be non-negative.
+     The value specifies the view's maximum width in percentage of its container width. The value must be non-negative.
+     */
+    @discardableResult
+    public func maxWidth(_ percent: FPercent) -> Flex {
+        view.yoga.maxWidth = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
+    /**
+     The value specifies the view's minimum height in pixels. The value must be non-negative.
      */
     @discardableResult
     public func minHeight(_ value: CGFloat) -> Flex {
         view.yoga.minHeight = YGValue(value)
         return self
     }
+    
+    /**
+     The value specifies the view's minimum height in percentage of its container height. The value must be non-negative.
+     */
+    @discardableResult
+    public func minHeight(_ percent: FPercent) -> Flex {
+        view.yoga.minHeight = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
 
     /**
-     The value specifies the view's maximum height of the view in pixels. The value must be non-negative.
+     The value specifies the view's maximum height in pixels. The value must be non-negative.
      */
     @discardableResult
     public func maxHeight(_ value: CGFloat) -> Flex {
         view.yoga.maxHeight = YGValue(value)
+        return self
+    }
+    
+    /**
+     The value specifies the view's maximum height in percentage of its container height. The value must be non-negative.
+     */
+    @discardableResult
+    public func maxHeight(_ percent: FPercent) -> Flex {
+        view.yoga.maxHeight = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
     
