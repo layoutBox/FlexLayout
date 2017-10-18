@@ -990,6 +990,14 @@ The FlexLayout's Example App exposes some usage example of FlexLayout.
 *  **Q: How to keep the view size (width/height)?**  
    **A:** By default view's flex shrink value is set to 1, which reduce the size of the view if the view is bigger than its flex container in the main-axis direction. If the direction is column, the height is adjusted, if the direction is row, the width is adjusted. Setting this value to 0 will keep the view size in the main-axis direction.
 
+* **Q: How to apply percentage from a CGFloat, a Float or an Int value?**  
+  **R:** Few FlexLayout's method has a parameter of type `FPercent`. You can easily specify this type of parameter simply by adding the `%` operator to your value (eg: `view.flex.width(25%)`. It is similar if you have a value of type CGFloat, Float or Int, simply adds the `%` operator:  
+  
+	```swift
+	let percentageValue: CGFloat = 50
+	view.flex.height(percentageValue%)
+	``` 
+
 <br/>
 
 ## Flexbox interesting external links
