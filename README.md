@@ -1045,8 +1045,8 @@ github "lucdion/FlexLayout"
 ```
 
 2. Run `carthage update` to build frameworks.
-3. Add built `FlexLayout.framework` and `YogaKit.framework` frameworks in your Xcode project.
-4. Add the preprocessor macro `USE_YOGAKIT_PACKAGE` in your Xcode project. Target > Build Settings > Preprocessor Macros. add `USE_YOGAKIT_PACKAGE` in the **Debug** and the **Release** entry.
+3. Add built `FlexLayout.framework` and `YogaKit.framework` frameworks in your Xcode project in the **Embedded Binaries** section. You should have this once it is done: <img src="docs_markdown/images/carthage_frameworks.png" width="500"/>
+4. **Add the preprocessor macro `USE_YOGAKIT_PACKAGE` in your Xcode project**. Target > Build Settings > Preprocessor Macros. add `USE_YOGAKIT_PACKAGE` in the **Debug** and the **Release** entry.
 
 <br/>
 
