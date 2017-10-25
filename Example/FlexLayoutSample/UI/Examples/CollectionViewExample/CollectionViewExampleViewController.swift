@@ -14,6 +14,13 @@
 
 import UIKit
 
+struct House {
+    let name: String
+    let description: String
+    let distance: Int
+    let mainImageURL: URL
+}
+
 class CollectionViewExampleViewController: BaseViewController {
     fileprivate var mainView: CollectionViewExampleView {
         return self.view as! CollectionViewExampleView
@@ -31,21 +38,19 @@ class CollectionViewExampleViewController: BaseViewController {
     
     override func loadView() {
         view = CollectionViewExampleView()
-        mainView.configure(methods: [
-            Method(name: "direction(_: Direction)", description: "The direction property establishes the main-axis, thus defining the direction flex items are placed in the flex container."),
-            
-            Method(name: "wrap(_: Wrap)", description: "The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.\n\nBy default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in."),
-
-            Method(name: "justifyContent(_: JustifyContent)", description: "The `justifyContent` property defines the alignment along the main-axis of the current line of the flex container. It helps distribute extra free space leftover when either all the flex items on a line have reached their maximum size. "),
-            
-            Method(name: "alignItems(_: AlignItems)", description: "The `alignItems` property defines how flex items are laid out along the cross axis on the current line. Similar to `justifyContent` but for the cross-axis (perpendicular to the main-axis)."),
-            
-            Method(name: "alignSelf(_: AlignSelf)", description: "The `alignSelf` property controls how a child aligns in the cross direction, overriding the `alignItems` of the parent. For example, if children are flowing vertically, `alignSelf` will control how the flex item will align horizontally.\n\n The \"auto\" value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values."),
-            
-            Method(name: "alignContent(_: AlignContent)", description: "The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis, similar to how justifyContent aligns individual items within the main-axis.\n\nNote, alignContent has no effect when the flexbox has only a single line."),
-            
-            Method(name: "layoutDirection(_: LayoutDirection)", description: "The layoutDirection property controls the flex container layout direction.\n\nValues:\n-`.inherit`\n  Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the user’s preferred direction (most platforms have a standard way of doing this) and setting this direction on the root of your layout tree.\n-.ltr: Layout views from left to right. (Default)\n-.rtl: Layout views from right to left.")
-            
+        mainView.configure(houses: [
+            House(name: "Castlecrag House",
+                  description: "As in America, Europe continued to embrace modernism in residential architecture consistently throughout the rest of the 20th century.",
+                  distance: 12,
+                  mainImageURL: URL(string: "https://i.pinimg.com/736x/76/cc/b4/76ccb45bc61b098c7b9b75de62fcf533--house-design-campo-grande.jpg")!),
+            House(name: "Port Ludlow House",
+                  description: "In this Spanish house, a bold and dominating second level creates a porte cochere and an entrance cover.",
+                  distance: 15,
+                  mainImageURL: URL(string: "https://st.hzcdn.com/simgs/f271957f001074d1_4-3434/modern-exterior.jpg")!),
+            House(name: "Modern Facade boxes House",
+                  description: "Wood strips are fastened to the outer skin of the upper level of this Belarus house, which seems to float above the ribbon windows of the lower level.",
+                  distance: 22,
+                  mainImageURL: URL(string: "https://i.pinimg.com/originals/10/b2/cd/10b2cdbf28cef49281463998dda20796.jpg")!)
         ])
     }
 }

@@ -877,6 +877,11 @@ By applying Margin to an item you specify the offset a certain edge of the item 
 * `marginEnd(_ value: CGFloat)`
 * `marginHorizontal(_ value: CGFloat)`
 * `marginVertical(_ value: CGFloat)`
+* `margin(_ insets: UIEdgeInsets)`  
+Set all margins using an UIEdgeInsets. This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
+* `margin(_ insets: NSDirectionalEdgeInsets) ` 
+Set all margins using an NSDirectionalEdgeInsets. This method is useful to set all margins using iOS 11 `UIView. directionalLayoutMargins` when layouting a view supporting RTL/LTR languages.
+
 * `margin(_ value: CGFloat) `
 * `margin(_ vertical: CGFloat, _ horizontal: CGFloat)`
 * `margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`
@@ -887,6 +892,7 @@ By applying Margin to an item you specify the offset a certain edge of the item 
   view.flex.margin(20)
   view.flex.marginBottom(20)
   view.flex.marginHorizontal(20)
+  view.flex.margin(safeAreaInsets)
   view.flex.margin(10, 12, 0, 12)
 ```
 
