@@ -23,7 +23,7 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 
 
 ### Requirements
-* iOS 8.0+
+* iOS 9.0+
 * Xcode 8.0+ / Xcode 9.0
 * Swift 3.0+ / Swift 4.0
 
@@ -637,10 +637,12 @@ For example, if all items have `grow` set to 1, every child will set to an equal
 
 * **`shrink(_: CGFloat)`**  
 It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the main-axis.
-
+  
   When omitted, it is set to 0 and the flex shrink factor is multiplied by the flex `basis` when distributing negative space.
 
   A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to overflow its flex container.
+  
+  Shrink is about proportions. If an item has a shrink of 3, and the rest have a shrink of 1, the item will shrink 3x as fast as the rest.
 
 <br>
 
@@ -781,8 +783,12 @@ FlexLayout has methods to set the view’s height and width.
 
 * **`width(_ width: CGFloat)`**  
 The value specifies the view's width in pixels. The value must be non-negative.
+* **`width(_ percent: FPercent)`**  
+The value specifies the view's width in percentage of its container width. The value must be non-negative.
 * **`height(_ height: CGFloat)`**  
 The value specifies the view's height in pixels. The value must be non-negative.
+* **`height(_ percent: FPercent)`**  
+The value specifies the view's height in percentage of its container height. The value must be non-negative.
 * **`size(_ size: CGSize)`**  
 The value specifies view's width and the height in pixels. Values must be non-negative.
 * **`size(_ sideLength: CGFloat)`**  
@@ -792,6 +798,7 @@ The value specifies the width and the height of the view in pixels, creating a s
 ###### Usage examples:
 ```swift
   view.flex.width(100)	
+  view.flex.width(50%)	
   view.flex.height(200)
 	
   view.flex.size(250)
@@ -815,23 +822,29 @@ Another case where Min and Max dimension constraints are useful is when using `a
 
 * **`minWidth(_ width: CGFloat)`** 
 The value specifies the view's minimum width of the view in pixels. The value must be non-negative.
-
+* **`minWidth(_ percent: FPercent)`** 
+The value specifies the view's minimum width of the view in percentage of its container width. The value must be non-negative.
 * **`maxWidth(_ width: CGFloat)`**  
 The value specifies the view's maximum width of the view in pixels. The value must be non-negative.
-
+* **`maxWidth(_ percent: FPercent)`**  
+The value specifies the view's maximum width of the view in percentage of its container width. The value must be non-negative.
 * **`minHeight(_ height: CGFloat)`**
 The value specifies the view's minimum height of the view in pixels. The value must be non-negative.
-
+* **`minHeight(_ percent: FPercent)`**
+The value specifies the view's minimum height of the view in percentage of its container height. The value must be non-negative.
 * **`maxHeight(_ height: CGFloat)`**
 The value specifies the view's maximum height of the view in pixels. The value must be non-negative.
+* **`maxHeight(_ percent: FPercent)`**
+The value specifies the view's maximum height of the view in percentage of its container height. The value must be non-negative.
    
 ###### Usage examples:
 ```swift
   view.flex.maxWidth(200)
+  view.flex.maxWidth(50%)
   view.flex.width(of: view1).maxWidth(250)
 	
   view.flex.maxHeight(100)
-  view.flex.height(of: view1).maxHeight(200)
+  view.flex.height(of: view1).maxHeight(30%)
 ```
 <br>
 
@@ -976,6 +989,14 @@ The FlexLayout's Example App exposes some usage example of FlexLayout.
 
 *  **Q: How to keep the view size (width/height)?**  
    **A:** By default view's flex shrink value is set to 1, which reduce the size of the view if the view is bigger than its flex container in the main-axis direction. If the direction is column, the height is adjusted, if the direction is row, the width is adjusted. Setting this value to 0 will keep the view size in the main-axis direction.
+
+* **Q: How to apply percentage from a CGFloat, a Float or an Int value?**  
+  **R:** Few FlexLayout's method has a parameter of type `FPercent`. You can easily specify this type of parameter simply by adding the `%` operator to your value (eg: `view.flex.width(25%)`. It is similar if you have a value of type CGFloat, Float or Int, simply adds the `%` operator:  
+  
+	```swift
+	let percentageValue: CGFloat = 50
+	view.flex.height(percentageValue%)
+	``` 
 
 <br/>
 
