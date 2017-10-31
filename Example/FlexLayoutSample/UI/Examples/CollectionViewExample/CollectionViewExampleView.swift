@@ -30,6 +30,10 @@ class CollectionViewExampleView: BaseView {
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
         
+        if #available(iOS 11.0, *) {
+            flowLayout.sectionInsetReference = .fromSafeArea
+        }
+        
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -48,7 +52,7 @@ class CollectionViewExampleView: BaseView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        collectionView.pin.topLeft().bottomRight()
+        collectionView.pin.all()
     }
 }
 

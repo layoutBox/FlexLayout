@@ -187,9 +187,9 @@
 		24901F071F93D40F0025D11B /* CollectionViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				2461068B1FA007B20038165C /* HouseCell.swift */,
 				24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */,
 				24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */,
-				2461068B1FA007B20038165C /* HouseCell.swift */,
 			);
 			path = CollectionViewExample;
 			sourceTree = "<group>";

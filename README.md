@@ -914,7 +914,7 @@ Padding specify the **offset children should have** from a certain edge on the c
 * `padding(_ insets: UIEdgeInsets)`  
 Set all paddings using an UIEdgeInsets. This method is particularly useful to set all paddings using iOS 11 `UIView.safeAreaInsets`.
 * `padding(_ insets: NSDirectionalEdgeInsets)`  
-Set all paddings using an NSDirectionalEdgeInsets. This method is useful to set all padding using iOS 11 `UIView. directionalLayoutMargins` when layouting a view supporting RTL/LTR languages.
+Set all paddings using an NSDirectionalEdgeInsets. This method is particularly useful to set all padding using iOS 11 `UIView. directionalLayoutMargins` when layouting a view supporting RTL/LTR languages.
 * `padding(_ value: CGFloat) `
 * `padding(_ vertical: CGFloat, _ horizontal: CGFloat)`
 * `padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`
