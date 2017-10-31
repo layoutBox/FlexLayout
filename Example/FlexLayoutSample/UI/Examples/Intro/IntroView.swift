@@ -61,7 +61,7 @@ class IntroView: BaseView {
 
         // Layout the flexbox container using PinLayout 
         // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
-        rootFlexContainer.pin.top(topLayoutGuide).left().width(100%)
+        rootFlexContainer.pin.top().horizontally().margin(safeArea)
 
         // Then let the flexbox container layout itself
         rootFlexContainer.flex.layout(mode: .adjustHeight)

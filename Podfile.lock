@@ -1,8 +1,8 @@
 PODS:
   - FlexLayout (1.1.4):
-    - YogaKit (~> 1.6)
+    - YogaKit
   - Nimble (7.0.2)
-  - PinLayout (1.4.1)
+  - PinLayout (1.4.2)
   - Quick (1.2.0)
   - Reveal-SDK (10)
   - SwiftLint (0.23.1)
@@ -24,15 +24,15 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  FlexLayout: 6e4442e2dd7d6e306152f3a0e86db3b416082c77
+  FlexLayout: 02f49676fae9a14ac5bcf52d8d40712b2210b5ac
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
-  PinLayout: 8ba0036e31bcc509d4b5b61938f4675c52c78a20
+  PinLayout: f903b9b737fd6c051f046ba7de1ad849edbb5d21
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Reveal-SDK: 7869ddf1f902cabbb07a1f0dd06bd25861a126f7
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
 
-PODFILE CHECKSUM: 390cdfbe418f366ad9569999873ffab4a9e8b12b
+PODFILE CHECKSUM: c23eea51c5cf8ca40c7f3ba8caa5288170bd8ce0
 
 COCOAPODS: 1.3.1

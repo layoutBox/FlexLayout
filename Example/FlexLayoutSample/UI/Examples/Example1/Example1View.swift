@@ -44,7 +44,7 @@ class Example1View: BaseView {
 
         // Layout the flexbox container using PinLayout
         // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
-        rootFlexContainer.pin.top().bottom().width(100%)
+        rootFlexContainer.pin.all().margin(safeArea)
         
         // Then let the flexbox container layout itself
         rootFlexContainer.flex.layout()

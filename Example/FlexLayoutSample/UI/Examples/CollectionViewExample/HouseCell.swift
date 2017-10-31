@@ -1,10 +1,16 @@
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
 //
-//  HouseCell.swift
-//  FlexLayoutSample
-//
-//  Created by DION, Luc (MTL) on 2017-10-24.
-//  Copyright © 2017 Mirego. All rights reserved.
-//
+// Created by Luc Dion on 2017-10-31.
 
 import UIKit
 import FlexLayout
@@ -16,24 +22,33 @@ class HouseCell: UICollectionViewCell {
     fileprivate let priceLabel = UILabel()
     fileprivate let distanceLabel = UILabel()
     
-    fileprivate let padding: CGFloat = 12
+    fileprivate let padding: CGFloat = 8
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        let footerBackgroundColor = UIColor.flexLayoutColor.withAlphaComponent(0.2)
         backgroundColor = .white
     
         nameLabel.font = UIFont.systemFont(ofSize: 24)
-        
+        nameLabel.textColor = .white
+
         mainImage.backgroundColor = .black
         mainImage.contentMode = .scaleAspectFill
-
+        
+        distanceLabel.textAlignment = .right
+        
         contentView.flex.padding(padding).define { (flex) in
-            flex.addItem(nameLabel).grow(1)
+            flex.addItem().backgroundColor(.flexLayoutColor).paddingHorizontal(padding).define({ (flex) in
+                flex.addItem(nameLabel).grow(1)
+            })
+            
             flex.addItem(mainImage).height(300)
             
-            flex.addItem().direction(.row).justifyContent(.end).define({ (flex) in
-//                priceLabel
-                flex.addItem(distanceLabel)
+            flex.addItem().direction(.row).justifyContent(.spaceBetween).padding(6, padding, 6, padding).backgroundColor(footerBackgroundColor)
+                .define({ (flex) in
+                flex.addItem(priceLabel)
+                flex.addItem(distanceLabel).grow(1)
             })
         }
     }
@@ -48,8 +63,13 @@ class HouseCell: UICollectionViewCell {
         
         mainImage.download(url: house.mainImageURL)
         
+        priceLabel.text = house.price
+        priceLabel.flex.markDirty()
+        
         distanceLabel.text = "\(house.distance) KM"
         distanceLabel.flex.markDirty()
+        
+        setNeedsLayout()
     }
     
     override func layoutSubviews() {
@@ -60,7 +80,7 @@ class HouseCell: UICollectionViewCell {
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         contentView.pin.width(size.width)
         layout()
-        return contentView.frame.size //CGSize(width: contentView.frame.width, height: contentView.frame.height + padding)
+        return contentView.frame.size
     }
     private func layout() {
         contentView.flex.layout(mode: .adjustHeight)

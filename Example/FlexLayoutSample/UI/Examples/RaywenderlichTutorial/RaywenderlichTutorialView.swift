@@ -148,7 +148,7 @@ class RayWenderlichTutorialView: BaseView {
         super.layoutSubviews()
 
         // 1) Layout the contentView & rootFlexContainer using PinLayout
-        contentView.pin.top().bottom().left().right()
+        contentView.pin.all().margin(safeArea)
         rootFlexContainer.pin.top().left().right()
 
         // 2) Let the flexbox container layout itself and adjust the height

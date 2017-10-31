@@ -10,13 +10,13 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 //
-// Created by Luc Dion on 2017-07-17.
+// Created by Luc Dion on 2017-10-31.
 
 import UIKit
 
 struct House {
     let name: String
-    let description: String
+    let price: String
     let distance: Int
     let mainImageURL: URL
 }
@@ -40,17 +40,25 @@ class CollectionViewExampleViewController: BaseViewController {
         view = CollectionViewExampleView()
         mainView.configure(houses: [
             House(name: "Castlecrag House",
-                  description: "As in America, Europe continued to embrace modernism in residential architecture consistently throughout the rest of the 20th century.",
+                  price: "1,500,000$",
                   distance: 12,
                   mainImageURL: URL(string: "https://i.pinimg.com/736x/76/cc/b4/76ccb45bc61b098c7b9b75de62fcf533--house-design-campo-grande.jpg")!),
             House(name: "Port Ludlow House",
-                  description: "In this Spanish house, a bold and dominating second level creates a porte cochere and an entrance cover.",
+                  price: "1,240,000$",
                   distance: 15,
                   mainImageURL: URL(string: "https://st.hzcdn.com/simgs/f271957f001074d1_4-3434/modern-exterior.jpg")!),
             House(name: "Modern Facade boxes House",
-                  description: "Wood strips are fastened to the outer skin of the upper level of this Belarus house, which seems to float above the ribbon windows of the lower level.",
+                  price: "950,000$",
                   distance: 22,
-                  mainImageURL: URL(string: "https://i.pinimg.com/originals/10/b2/cd/10b2cdbf28cef49281463998dda20796.jpg")!)
+                  mainImageURL: URL(string: "https://i.pinimg.com/originals/10/b2/cd/10b2cdbf28cef49281463998dda20796.jpg")!),
+            House(name: "Contemporary Modern Home",
+                  price: "1,456,000$",
+                  distance: 32,
+                  mainImageURL: URL(string: "https://i.pinimg.com/736x/5e/8f/0b/5e8f0b24f19624754d2aa37968217d5d--architecture-house-design-modern-house-design.jpg")!),
+            House(name: "Angel House",
+                  price: "932,000$",
+                  distance: 82,
+                  mainImageURL: URL(string: "https://i.pinimg.com/736x/6d/6c/ab/6d6cab9db70117727e3eb2adf0dbc080--small-modern-house-plans-modern-houses.jpg")!)
         ])
     }
 }

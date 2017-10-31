@@ -16,5 +16,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/lucdion/FlexLayout.git", :tag => "#{s.version}" }
   s.source_files  = "Sources/**/*.swift"
 
-  s.dependency "YogaKit", "~> 1.6"
+  # Latest master commit id.
+  s.dependency "YogaKit"
 end

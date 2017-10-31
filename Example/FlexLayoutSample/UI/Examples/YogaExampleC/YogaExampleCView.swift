@@ -45,7 +45,7 @@ class YogaExampleCView: BaseView {
 
         // Layout the flexbox container using PinLayout
         // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
-        rootFlexContainer.pin.top(topLayoutGuide).left().width(100%).height(300)
+        rootFlexContainer.pin.top().horizontally().margin(safeArea).height(300)
 
         // Then let the flexbox container layout itself
         rootFlexContainer.flex.layout()

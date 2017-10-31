@@ -644,6 +644,35 @@ public class Flex {
         view.yoga.marginVertical = YGValue(value)
         return self
     }
+    
+    /**
+     Set all margins using UIEdgeInsets.
+     This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
+     */
+    @discardableResult
+    public func margin(_ insets: UIEdgeInsets) -> Flex {
+        view.yoga.marginTop = YGValue(insets.top)
+        view.yoga.marginLeft = YGValue(insets.left)
+        view.yoga.marginBottom = YGValue(insets.bottom)
+        view.yoga.marginRight = YGValue(insets.right)
+        return self
+    }
+    
+    /**
+     Set margins using NSDirectionalEdgeInsets.
+     This method is particularly to set all margins using iOS 11 `UIView.directionalLayoutMargins`.
+     
+     Available only on iOS 11 and higher.
+     */
+    @available(tvOS 11.0, iOS 11.0, *)
+    @discardableResult
+    func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
+        view.yoga.marginTop = YGValue(directionalInsets.top)
+        view.yoga.marginStart = YGValue(directionalInsets.leading)
+        view.yoga.marginBottom = YGValue(directionalInsets.bottom)
+        view.yoga.marginEnd = YGValue(directionalInsets.trailing)
+        return self
+    }
 
     /**
      Set all margins to the specified value.
