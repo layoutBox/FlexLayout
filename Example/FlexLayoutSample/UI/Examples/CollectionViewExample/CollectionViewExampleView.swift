@@ -27,7 +27,7 @@ class CollectionViewExampleView: BaseView {
         
         super.init()
         
-        flowLayout.minimumLineSpacing = 0
+        flowLayout.minimumLineSpacing = 8
         flowLayout.minimumInteritemSpacing = 0
         
         if #available(iOS 11.0, *) {

@@ -35,10 +35,11 @@ class HouseCell: UICollectionViewCell {
 
         mainImage.backgroundColor = .black
         mainImage.contentMode = .scaleAspectFill
+        mainImage.clipsToBounds = true
         
         distanceLabel.textAlignment = .right
         
-        contentView.flex.padding(padding).define { (flex) in
+        contentView.flex.define { (flex) in
             flex.addItem().backgroundColor(.flexLayoutColor).paddingHorizontal(padding).define({ (flex) in
                 flex.addItem(nameLabel).grow(1)
             })
