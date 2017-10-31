@@ -797,6 +797,36 @@ public class Flex {
         view.yoga.paddingVertical = YGValue(value)
         return self
     }
+    
+    /**
+     Set paddings using UIEdgeInsets.
+     This method is particularly useful to set all paddings using iOS 11 `UIView.safeAreaInsets`.
+     */
+    @discardableResult
+    public func padding(_ insets: UIEdgeInsets) -> Flex {
+        view.yoga.paddingTop = YGValue(insets.top)
+        view.yoga.paddingLeft = YGValue(insets.left)
+        view.yoga.paddingBottom = YGValue(insets.bottom)
+        view.yoga.paddingRight = YGValue(insets.right)
+        return self
+    }
+    
+    /**
+     Set paddings using NSDirectionalEdgeInsets.
+     This method is particularly to set all paddings using iOS 11 `UIView.directionalLayoutMargins`.
+     
+     Available only on iOS 11 and higher.
+     */
+    @available(tvOS 11.0, iOS 11.0, *)
+    @discardableResult
+    func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
+        view.yoga.paddingTop = YGValue(directionalInsets.top)
+        view.yoga.paddingStart = YGValue(directionalInsets.leading)
+        view.yoga.paddingBottom = YGValue(directionalInsets.bottom)
+        view.yoga.paddingEnd = YGValue(directionalInsets.trailing)
+        return self
+    }
+
 
     /**
      Set all paddings to the specified value.
