@@ -13,6 +13,7 @@ github_url: https://github.com/lucdion/FlexLayout
 github_file_prefix: https://github.com/lucdion/FlexLayout/tree/master
 xcodebuild_arguments: [-scheme,FlexLayout]
 theme: apple
+exclude: [Sources/Percent.swift]
 # exclude: README.md
 readme: docs_api/API.md
 # root_url:
