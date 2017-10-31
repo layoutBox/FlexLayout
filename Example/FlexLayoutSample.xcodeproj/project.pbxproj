@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2245F067A40DB6A13F97F202 /* Pods_FlexLayoutSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */; };
+		242AECE21FA011630024E7C2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECDE1FA011630024E7C2 /* BaseView.swift */; };
+		242AECE31FA011630024E7C2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECDF1FA011630024E7C2 /* BaseViewController.swift */; };
+		242AECE41FA011630024E7C2 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE01FA011630024E7C2 /* BasicView.swift */; };
+		242AECE51FA011630024E7C2 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE11FA011630024E7C2 /* Stylesheet.swift */; };
+		242AECE71FA0119F0024E7C2 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE61FA0119F0024E7C2 /* UIImageView+Download.swift */; };
+		2461068C1FA007B20038165C /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461068B1FA007B20038165C /* HouseCell.swift */; };
 		247D73451F6757B00001AE2C /* Example1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D73431F6757B00001AE2C /* Example1View.swift */; };
 		247D73461F6757B00001AE2C /* Example1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D73441F6757B00001AE2C /* Example1ViewController.swift */; };
 		24875E611F1F929600BB1C09 /* YogaExampleCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E601F1F929600BB1C09 /* YogaExampleCView.swift */; };
@@ -16,6 +22,8 @@
 		24875E671F1F92B500BB1C09 /* YogaExampleDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */; };
 		24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */; };
 		24875E6B1F1F92C000BB1C09 /* YogaExampleEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */; };
+		24901F0C1F93D40F0025D11B /* CollectionViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */; };
+		24901F0D1F93D40F0025D11B /* CollectionViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */; };
 		24AADD481F4E176A00CB77E6 /* Shows.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AADD471F4E176A00CB77E6 /* Shows.plist */; };
 		24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */; };
 		24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */; };
@@ -31,12 +39,8 @@
 		DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
 		DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
 		DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC331E665BF6003326FB /* MenuView.swift */; };
-		DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493268B1EEEEFF100BCB814 /* BaseViewController.swift */; };
-		DF1F2A0C1F17D11700BA1B97 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC381E665C6B003326FB /* BasicView.swift */; };
 		DF1F2A0E1F17D11700BA1B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EFE421E64FAFE00165E39 /* AppDelegate.swift */; };
 		DF1F2A0F1F17D11700BA1B97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC341E665BF6003326FB /* MenuViewController.swift */; };
-		DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249326881EEEEE3D00BCB814 /* Stylesheet.swift */; };
-		DF1F2A131F17D11700BA1B97 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493268D1EEEF02700BCB814 /* BaseView.swift */; };
 		DF1F2A191F17D11700BA1B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE4B1E64FAFE00165E39 /* LaunchScreen.storyboard */; };
 		DF1F2A1A1F17D11700BA1B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE491E64FAFE00165E39 /* Assets.xcassets */; };
 		DF91747F1F1F6F9A0034632D /* YogaExampleAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91747D1F1F6F9A0034632D /* YogaExampleAView.swift */; };
@@ -58,9 +62,14 @@
 
 /* Begin PBXFileReference section */
 		0D0595B5E0950936D037ECF2 /* Pods-FlexLayoutSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.release.xcconfig"; sourceTree = "<group>"; };
+		242AECDE1FA011630024E7C2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		242AECDF1FA011630024E7C2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		242AECE01FA011630024E7C2 /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
+		242AECE11FA011630024E7C2 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
+		242AECE61FA0119F0024E7C2 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		2439CC331E665BF6003326FB /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2439CC341E665BF6003326FB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		2439CC381E665C6B003326FB /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
+		2461068B1FA007B20038165C /* HouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
 		247D73431F6757B00001AE2C /* Example1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Example1View.swift; path = Example1/Example1View.swift; sourceTree = "<group>"; };
 		247D73441F6757B00001AE2C /* Example1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Example1ViewController.swift; path = Example1/Example1ViewController.swift; sourceTree = "<group>"; };
 		24875E601F1F929600BB1C09 /* YogaExampleCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleCView.swift; sourceTree = "<group>"; };
@@ -69,9 +78,8 @@
 		24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleDViewController.swift; sourceTree = "<group>"; };
 		24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleEView.swift; sourceTree = "<group>"; };
 		24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleEViewController.swift; sourceTree = "<group>"; };
-		249326881EEEEE3D00BCB814 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
-		2493268B1EEEEFF100BCB814 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		2493268D1EEEF02700BCB814 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExampleView.swift; sourceTree = "<group>"; };
+		24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExampleViewController.swift; sourceTree = "<group>"; };
 		249EFE421E64FAFE00165E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		249EFE491E64FAFE00165E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		249EFE4C1E64FAFE00165E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,10 +117,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242AECDD1FA011630024E7C2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				242AECDE1FA011630024E7C2 /* BaseView.swift */,
+				242AECDF1FA011630024E7C2 /* BaseViewController.swift */,
+				242AECE01FA011630024E7C2 /* BasicView.swift */,
+				242AECE11FA011630024E7C2 /* Stylesheet.swift */,
+				242AECE61FA0119F0024E7C2 /* UIImageView+Download.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		2439CC321E665BE3003326FB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2439CC5E1E665C71003326FB /* Common */,
+				242AECDD1FA011630024E7C2 /* Common */,
 				2439CC661E666128003326FB /* Menu */,
 				2439CC371E665C5E003326FB /* Examples */,
 			);
@@ -124,6 +144,7 @@
 			children = (
 				24B14C581F278CB400C90490 /* Intro */,
 				24E835131F4CC323009F95CC /* RaywenderlichTutorial */,
+				24901F071F93D40F0025D11B /* CollectionViewExample */,
 				24FB883A1F59CA7800615D33 /* TableViewExample */,
 				247D73421F6757A00001AE2C /* Example1 */,
 				DF91747C1F1F6F8B0034632D /* YogaExampleA */,
@@ -133,17 +154,6 @@
 				24CD0D1C1F1F90AF00D56FC3 /* YogaExampleE */,
 			);
 			path = Examples;
-			sourceTree = "<group>";
-		};
-		2439CC5E1E665C71003326FB /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				2493268D1EEEF02700BCB814 /* BaseView.swift */,
-				2493268B1EEEEFF100BCB814 /* BaseViewController.swift */,
-				2439CC381E665C6B003326FB /* BasicView.swift */,
-				249326881EEEEE3D00BCB814 /* Stylesheet.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		2439CC661E666128003326FB /* Menu */ = {
@@ -172,6 +182,16 @@
 				247D73441F6757B00001AE2C /* Example1ViewController.swift */,
 			);
 			name = Example1;
+			sourceTree = "<group>";
+		};
+		24901F071F93D40F0025D11B /* CollectionViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				2461068B1FA007B20038165C /* HouseCell.swift */,
+				24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */,
+				24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */,
+			);
+			path = CollectionViewExample;
 			sourceTree = "<group>";
 		};
 		249EFE361E64FAFE00165E39 = {
@@ -403,7 +423,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF1F2A1C1F17D11700BA1B97 /* [CP] Embed Pods Frameworks */ = {
@@ -468,20 +488,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24901F0D1F93D40F0025D11B /* CollectionViewExampleViewController.swift in Sources */,
 				24E835171F4CC336009F95CC /* RaywenderlichTutorialViewController.swift in Sources */,
 				24FB883D1F59CA8B00615D33 /* TableViewExampleView.swift in Sources */,
+				242AECE41FA011630024E7C2 /* BasicView.swift in Sources */,
+				242AECE21FA011630024E7C2 /* BaseView.swift in Sources */,
 				24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */,
+				242AECE31FA011630024E7C2 /* BaseViewController.swift in Sources */,
+				24901F0C1F93D40F0025D11B /* CollectionViewExampleView.swift in Sources */,
 				DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */,
 				DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */,
-				DF1F2A0A1F17D11700BA1B97 /* BaseViewController.swift in Sources */,
 				24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */,
 				DF91747F1F1F6F9A0034632D /* YogaExampleAView.swift in Sources */,
 				24FB88421F59CA9A00615D33 /* MethodGroupHeader.swift in Sources */,
-				DF1F2A0C1F17D11700BA1B97 /* BasicView.swift in Sources */,
 				DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */,
+				242AECE71FA0119F0024E7C2 /* UIImageView+Download.swift in Sources */,
 				DF9174801F1F6F9A0034632D /* YogaExampleAViewController.swift in Sources */,
 				24875E611F1F929600BB1C09 /* YogaExampleCView.swift in Sources */,
 				DF1F2A0E1F17D11700BA1B97 /* AppDelegate.swift in Sources */,
+				2461068C1FA007B20038165C /* HouseCell.swift in Sources */,
 				DF1F2A0F1F17D11700BA1B97 /* MenuViewController.swift in Sources */,
 				24E835161F4CC336009F95CC /* RaywenderlichTutorialView.swift in Sources */,
 				24875E6A1F1F92C000BB1C09 /* YogaExampleEView.swift in Sources */,
@@ -495,9 +520,8 @@
 				247D73451F6757B00001AE2C /* Example1View.swift in Sources */,
 				24B14C5B1F278CCE00C90490 /* IntroView.swift in Sources */,
 				24C0F2101F4EE9B20050BEE7 /* Show.swift in Sources */,
+				242AECE51FA011630024E7C2 /* Stylesheet.swift in Sources */,
 				24FB883E1F59CA8B00615D33 /* TableViewExampleViewController.swift in Sources */,
-				DF1F2A111F17D11700BA1B97 /* Stylesheet.swift in Sources */,
-				DF1F2A131F17D11700BA1B97 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -600,7 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

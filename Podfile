@@ -11,7 +11,6 @@ end
 target 'FlexLayoutTests' do
   project 'FlexLayout.xcodeproj'
   pod 'FlexLayout', :path => './'
-  pod 'YogaKit', '~> 1.6'
 
   pod 'Quick'
   pod 'Nimble', :inhibit_warnings => true
@@ -24,7 +23,7 @@ target 'FlexLayoutSample' do
   pod 'PinLayout'
 
   # Debug only
-  pod 'Reveal-SDK', :configurations => ['Debug']
+  pod 'Reveal-SDK', '~> 10', :configurations => ['Debug']
   pod 'SwiftLint'
 end
 
