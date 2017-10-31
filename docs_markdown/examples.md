@@ -36,6 +36,13 @@ This example show how FlexLayout can be used to layout UITableView cells that ha
 
 <a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample"><img src="images/examples/flexlayout_exampleapp_uitableview.png" width=120/></a>
 
+## UICollectionView with variable size cells
+This example show how FlexLayout can be used to layout UICollectionView cells that have variables sizes.  
+[Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/CollectionViewExample)
+
+<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/CollectionViewExample"><img src="images/examples/flexlayout_example_collectionview.png" width=120/></a>
+
+
 ## Yoga's examples Implementation 
 
 Implementation of all [Yoga's examples](https://facebook.github.io/yoga/)
