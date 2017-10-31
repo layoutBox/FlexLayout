@@ -8,6 +8,28 @@
 # Change Log
 
 ## [1.1.4](https://github.com/lucdion/FlexLayout/releases/tag/1.1.4)
+Released on 2017-10-31
+
+* Add new margin methods:
+  * `margin(_ insets: UIEdgeInsets)`: Set all margins using UIEdgeInsets.
+     This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`
+  * `margin(_ directionalInsets: NSDirectionalEdgeInsets)`: Set margins using NSDirectionalEdgeInsets.
+     This method is particularly to set all margins using iOS 11 `UIView.directionalLayoutMargins`
+
+* Add new padding methods:
+  * `padding(_ insets: UIEdgeInsets)`: Set all paddings using UIEdgeInsets.
+     This method is particularly useful using iOS 11 `UIView.safeAreaInsets`
+  * `padding(_ directionalInsets: NSDirectionalEdgeInsets)`: Set paddings using NSDirectionalEdgeInsets.
+     This method is particularly useful to set all paddings using iOS 11 `UIView.directionalLayoutMargins`
+
+* Update all examples to support iPhone X landscape orientation.
+
+* Add an example of UICollectionView using FlexLayout
+
+* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#33](https://github.com/lucdion/FlexLayout/pull/33) 
+
+
+## [1.1.4](https://github.com/lucdion/FlexLayout/releases/tag/1.1.4)
 Released on 2017-10-17
 
 * Add width/height methods taking percentage parameter
