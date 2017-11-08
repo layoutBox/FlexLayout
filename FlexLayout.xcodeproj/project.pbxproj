@@ -16,8 +16,6 @@
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* FlexLayout.swift */; };
 		24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */; };
-		928DBE383AC0F2F33D4DE9F3 /* Pods_FlexLayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F5BD8F7A88E73E3A55041 /* Pods_FlexLayoutTests.framework */; };
-		A5FCD9C583E5CD8E6B21CE53 /* Pods_FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626815604513D9C724DC10AF /* Pods_FlexLayout.framework */; };
 		DF9174771F1D6DC00034632D /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */; };
 		DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */; };
 		DF95D9C11F20BD06003073D5 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DF95D9BF1F20BD06003073D5 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,12 +43,6 @@
 		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DA37871EF8610400D1AB2F /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = SOURCE_ROOT; };
 		24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentSpec.swift; sourceTree = "<group>"; };
-		5F013C3B8AF537AFD8D82B10 /* Pods-FlexLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout/Pods-FlexLayout.release.xcconfig"; sourceTree = "<group>"; };
-		626815604513D9C724DC10AF /* Pods_FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F6959A73C059212ADFAB64 /* Pods-FlexLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8ABCDAB8A69BDF013F03519C /* Pods-FlexLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout/Pods-FlexLayout.debug.xcconfig"; sourceTree = "<group>"; };
-		92D2D982E468580E8EFE9861 /* Pods-FlexLayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.release.xcconfig"; sourceTree = "<group>"; };
-		B58F5BD8F7A88E73E3A55041 /* Pods_FlexLayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Enum.swift"; path = "Sources/Impl/FlexLayout+Enum.swift"; sourceTree = SOURCE_ROOT; };
 		DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = SOURCE_ROOT; };
 		DF95D9BF1F20BD06003073D5 /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/SupportingFiles/FlexLayout.h; sourceTree = SOURCE_ROOT; };
@@ -63,7 +55,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				240B3C791F819FCC00CB0107 /* YogaKit.framework in Frameworks */,
-				A5FCD9C583E5CD8E6B21CE53 /* Pods_FlexLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */,
-				928DBE383AC0F2F33D4DE9F3 /* Pods_FlexLayoutTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +85,6 @@
 				24DA37671EF843C500D1AB2F /* FlexLayoutTests */,
 				24DA375B1EF843C500D1AB2F /* Products */,
 				B5403C6F81C3814B69C05D0B /* Frameworks */,
-				E091DE30D52B6FA068B915E3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,8 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				244F4ABD1F8196E900460B54 /* YogaKit.framework */,
-				626815604513D9C724DC10AF /* Pods_FlexLayout.framework */,
-				B58F5BD8F7A88E73E3A55041 /* Pods_FlexLayoutTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,17 +136,6 @@
 				DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */,
 			);
 			name = Impl;
-			sourceTree = "<group>";
-		};
-		E091DE30D52B6FA068B915E3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8ABCDAB8A69BDF013F03519C /* Pods-FlexLayout.debug.xcconfig */,
-				5F013C3B8AF537AFD8D82B10 /* Pods-FlexLayout.release.xcconfig */,
-				65F6959A73C059212ADFAB64 /* Pods-FlexLayoutTests.debug.xcconfig */,
-				92D2D982E468580E8EFE9861 /* Pods-FlexLayoutTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,12 +156,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DA376E1EF843C500D1AB2F /* Build configuration list for PBXNativeTarget "FlexLayout" */;
 			buildPhases = (
-				9375742C5885A5E3D914A8DC /* [CP] Check Pods Manifest.lock */,
 				24DA37551EF843C500D1AB2F /* Sources */,
 				24DA37561EF843C500D1AB2F /* Frameworks */,
 				24DA37571EF843C500D1AB2F /* Headers */,
 				24DA37581EF843C500D1AB2F /* Resources */,
-				746BC7E7FF04DCE82B41D509 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,7 +204,7 @@
 					24DA37591EF843C500D1AB2F = {
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					24DA37621EF843C500D1AB2F = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -289,39 +263,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FlexLayoutTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		746BC7E7FF04DCE82B41D509 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayout/Pods-FlexLayout-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9375742C5885A5E3D914A8DC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FlexLayout-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
