@@ -433,9 +433,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga-iOS8.0/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit-iOS8.0/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout-iOS8.0/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-10/iOS/RevealServer.framework",
 			);

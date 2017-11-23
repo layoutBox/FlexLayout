@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		240B3C791F819FCC00CB0107 /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F4ABD1F8196E900460B54 /* YogaKit.framework */; };
+		24170ED81FC71484005AF96F /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170ED71FC71484005AF96F /* FlexLayout+Private.swift */; };
+		24170EDB1FC7178F005AF96F /* RectNimbleMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */; };
+		24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */; };
+		24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */; };
 		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
 		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
 		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24170ED71FC71484005AF96F /* FlexLayout+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Private.swift"; path = "Sources/Impl/FlexLayout+Private.swift"; sourceTree = SOURCE_ROOT; };
+		24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectNimbleMatcher.swift; sourceTree = "<group>"; };
+		24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentSpec.swift; sourceTree = "<group>"; };
+		24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsolutionPositionContentSpec.swift; sourceTree = "<group>"; };
 		244F4ABD1F8196E900460B54 /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
 		2458137E1F4A21CF00CD676B /* PaddingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingSpec.swift; sourceTree = "<group>"; };
 		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
@@ -114,8 +122,11 @@
 			children = (
 				24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */,
 				24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */,
+				24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */,
+				24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */,
 				24A91B271F45E24B00AC8B3E /* MarginSpec.swift */,
 				2458137E1F4A21CF00CD676B /* PaddingSpec.swift */,
+				24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */,
 				24DA376A1EF843C500D1AB2F /* Info.plist */,
 			);
 			path = FlexLayoutTests;
@@ -133,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */,
+				24170ED71FC71484005AF96F /* FlexLayout+Private.swift */,
 				DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */,
 			);
 			name = Impl;
@@ -276,9 +288,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga-iOS9.0/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit-iOS9.0/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout-iOS9.0/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -320,6 +332,7 @@
 				DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */,
 				24CC0E401F96807400BEE2CF /* Percent.swift in Sources */,
 				DF9174771F1D6DC00034632D /* FlexLayout+Enum.swift in Sources */,
+				24170ED81FC71484005AF96F /* FlexLayout+Private.swift in Sources */,
 				24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,8 +343,11 @@
 			files = (
 				24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */,
 				24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */,
+				24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */,
 				2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */,
+				24170EDB1FC7178F005AF96F /* RectNimbleMatcher.swift in Sources */,
 				24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */,
+				24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
