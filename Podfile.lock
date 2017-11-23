@@ -1,5 +1,5 @@
 PODS:
-  - FlexLayout (1.1.4):
+  - FlexLayout (1.1.5):
     - YogaKit
   - Nimble (7.0.2)
   - PinLayout (1.4.2)
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  FlexLayout: 02f49676fae9a14ac5bcf52d8d40712b2210b5ac
+  FlexLayout: d7d12029e03600bf58f8632da3066272015d7520
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   PinLayout: f903b9b737fd6c051f046ba7de1ad849edbb5d21
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08

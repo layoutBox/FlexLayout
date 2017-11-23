@@ -320,11 +320,7 @@ public class Flex {
     */
     @discardableResult
     public func basis(_ value: CGFloat?) -> Flex {
-        if let value = value {
-            view.yoga.flexBasis = YGValue(value)
-        } else {
-            view.yoga.flexBasis = YGValueAuto
-        }
+        view.yoga.flexBasis = valueOrAuto(float: value)
         return self
     }
 
@@ -471,8 +467,8 @@ public class Flex {
      - Returns:
     */
     @discardableResult
-    public func aspectRatio(_ value: CGFloat) -> Flex {
-        view.yoga.aspectRatio = value
+    public func aspectRatio(_ value: CGFloat?) -> Flex {
+        view.yoga.aspectRatio = value != nil ? value! : CGFloat(YGValueUndefined.value)
         return self
     }
     

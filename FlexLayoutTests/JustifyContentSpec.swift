@@ -103,10 +103,10 @@ class JustifyContentSpec: QuickSpec {
                     flex.addItem(dView).size(20)
                 }
                 rootFlexContainer.flex.layout()
-                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0)))
-                expect(bView.frame).to(equal(CGRect(x: 0.0, y: 126.5, width: 20.0, height: 20.0)))
-                expect(cView.frame).to(equal(CGRect(x: 0.0, y: 253.0, width: 20.0, height: 20.0)))
-                expect(dView.frame).to(equal(CGRect(x: 0.0, y: 380.0, width: 20.0, height: 20.0)))
+                expect(aView.frame).to(beCloseTo(CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0), within: 0.5))
+                expect(bView.frame).to(beCloseTo(CGRect(x: 0.0, y: 126.5, width: 20.0, height: 20.0), within: 0.5))
+                expect(cView.frame).to(beCloseTo(CGRect(x: 0.0, y: 253.0, width: 20.0, height: 20.0), within: 0.5))
+                expect(dView.frame).to(beCloseTo(CGRect(x: 0.0, y: 380.0, width: 20.0, height: 20.0), within: 0.5))
             }
             
             it("adjust view position") {
@@ -121,6 +121,19 @@ class JustifyContentSpec: QuickSpec {
                 expect(bView.frame).to(equal(CGRect(x: 0.0, y: 130.0, width: 20.0, height: 20.0)))
                 expect(cView.frame).to(equal(CGRect(x: 0.0, y: 250.0, width: 20.0, height: 20.0)))
                 expect(dView.frame).to(equal(CGRect(x: 0.0, y: 370.0, width: 20.0, height: 20.0)))
+            }
+        }
+        
+        describe("basis") {
+            it("adjust view position") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).basis(1)
+                    
+                    // Disable until my PR on YogaKit is merged!
+                    // https://github.com/facebook/yoga/pull/672
+                    //flex.addItem(bView).basis(nil)
+                }
+                rootFlexContainer.flex.layout()
             }
         }
     }
