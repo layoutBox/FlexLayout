@@ -288,9 +288,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Yoga-iOS9.0/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit-iOS9.0/YogaKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout-iOS9.0/FlexLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
