@@ -7,7 +7,7 @@
 
 # Change Log
 
-## [1.1.6](https://github.com/layoutBox/FlexLayout/releases/tag/1.1.6)
+## [1.1.8](https://github.com/layoutBox/FlexLayout/releases/tag/1.1.8)
 Released on 2017-11-23
 
 * AspectRatio can now be reset. Simply call `aspectRatio(nil)`.
