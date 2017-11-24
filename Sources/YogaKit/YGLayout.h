@@ -14,17 +14,17 @@
     #import "Yoga.h"
     #import "YGMacros.h"
 #else
-    #import <yoga/YGEnums.h>
-    #import <yoga/Yoga.h>
-    #import <yoga/YGMacros.h>
+//    #import <yoga/YGEnums.h>
+    #import <YogaFlex/Yoga.h>
+//    #import <yoga/YGMacros.h>
 #endif
 
 YG_EXTERN_C_BEGIN
 
-extern YGValue YGPointValue(CGFloat value)
-    NS_SWIFT_UNAVAILABLE("Use the swift Int and FloatingPoint extensions instead");
-extern YGValue YGPercentValue(CGFloat value)
-    NS_SWIFT_UNAVAILABLE("Use the swift Int and FloatingPoint extensions instead");
+//extern YGValue YGPointValue(CGFloat value)
+//    NS_SWIFT_UNAVAILABLE("Use the swift Int and FloatingPoint extensions instead");
+//extern YGValue YGPercentValue(CGFloat value)
+//    NS_SWIFT_UNAVAILABLE("Use the swift Int and FloatingPoint extensions instead");
 
 YG_EXTERN_C_END
 

@@ -11,6 +11,7 @@
 		24170EDB1FC7178F005AF96F /* RectNimbleMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */; };
 		24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */; };
 		24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */; };
+		241A4BCE1FC84344007FA777 /* YogaFlex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241A4BCD1FC84344007FA777 /* YogaFlex.framework */; };
 		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
 		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
 		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
@@ -47,6 +48,7 @@
 		24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectNimbleMatcher.swift; sourceTree = "<group>"; };
 		24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentSpec.swift; sourceTree = "<group>"; };
 		24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsolutionPositionContentSpec.swift; sourceTree = "<group>"; };
+		241A4BCD1FC84344007FA777 /* YogaFlex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaFlex.framework; path = Carthage/Build/iOS/YogaFlex.framework; sourceTree = "<group>"; };
 		2458137E1F4A21CF00CD676B /* PaddingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingSpec.swift; sourceTree = "<group>"; };
 		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
 		24C7D2611FC7A68200268DDA /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/YogaKit/YGLayout.h; sourceTree = SOURCE_ROOT; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241A4BCE1FC84344007FA777 /* YogaFlex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +164,7 @@
 		B5403C6F81C3814B69C05D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				241A4BCD1FC84344007FA777 /* YogaFlex.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,6 +322,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
@@ -325,6 +330,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",

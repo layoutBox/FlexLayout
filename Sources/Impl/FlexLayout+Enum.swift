@@ -13,7 +13,7 @@
 // Created by Luc Dion on 2017-07-17.
 
 import UIKit
-import yoga
+import YogaFlex
 
 extension Flex.Direction {
     var yogaValue: YGFlexDirection {
