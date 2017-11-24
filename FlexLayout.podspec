@@ -11,11 +11,11 @@ Pod::Spec.new do |s|
     "Luc Dion" => "ldion@mirego.com"
   }
   
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   s.source       = { :git => "https://github.com/lucdion/FlexLayout.git", :tag => "#{s.version}" }
-  s.source_files  = "Sources/**/*.swift"
+  s.source_files  = "Sources/**/*.{swift,h,m}"
 
   # Latest master commit id.
-  s.dependency "YogaKit"
+  s.dependency "Yoga"
 end

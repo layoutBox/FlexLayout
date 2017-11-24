@@ -56,7 +56,7 @@ class WidthSizeContentSpec: QuickSpec {
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 200.0, height: 100.0)))
             }
             
-            it("aspectRatio") {
+            it("aspectRatio reset") {
                 rootFlexContainer.flex.define { (flex) in
                     flex.addItem(aView).width(200).aspectRatio(2)
                 }
@@ -67,24 +67,105 @@ class WidthSizeContentSpec: QuickSpec {
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 200.0, height: 0.0)))
             }
             
+            it("width & height") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).width(200).minWidth(100).height(200).minHeight(100)
+                }
+                
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0)))
+            }
+            
+            it("width & height reset") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).width(200).minWidth(100).height(200).minHeight(100)
+                }
+                
+                // Later reset the width and the height
+                aView.flex.width(nil)
+                aView.flex.height(nil)
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0)))
+            }
+            
             it("minWidth") {
                 rootFlexContainer.flex.define { (flex) in
-                    flex.addItem(aView).width(20).minWidth(300).height(200)
+                    flex.addItem(aView).width(200).minWidth(300).height(200)
                 }
                 
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0)))
             }
             
-            it("minWidth") {
+            it("minWidth reset") {
                 rootFlexContainer.flex.define { (flex) in
-                    flex.addItem(aView).width(20).minWidth(300).height(200)
+                    flex.addItem(aView).width(200).maxWidth(300).height(200)
                 }
                 
-                // Later reset the aspectRatio
-                aView.flex.minWidth(0)
+                // Later reset the minWidth
+                aView.flex.minWidth(nil)
                 rootFlexContainer.flex.layout()
-                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 20.0, height: 200.0)))
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0)))
+            }
+            
+            it("maxWidth") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).maxWidth(300).height(200)
+                }
+                
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0)))
+            }
+            
+            it("maxWidth reset") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).maxWidth(300).height(200)
+                }
+                
+                // Later reset the width and the height
+                aView.flex.maxWidth(nil)
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0)))
+            }
+            
+            it("minHeight") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).height(200).minHeight(300)
+                }
+                
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 300.0)))
+            }
+            
+            it("minHeight reset") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).height(200).minHeight(300)
+                }
+                
+                // Later reset the minHeight
+                aView.flex.minHeight(nil)
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0)))
+            }
+            
+            it("maxHeight") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).height(200).maxHeight(100)
+                }
+                
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0)))
+            }
+            
+            it("maxHeight reset") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).height(200).maxHeight(100)
+                }
+                
+                // Later reset the maxHeight
+                aView.flex.maxHeight(nil)
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0)))
             }
         }
     }

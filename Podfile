@@ -4,7 +4,7 @@ workspace 'FlexLayout.xcworkspace'
 
 target 'FlexLayout' do
   project 'FlexLayout.xcodeproj'
-  pod 'YogaKit', '~> 1.6'
+  pod 'Yoga', :git => 'https://github.com/layoutBox/yoga.git', :branch => 'flexlayout_branch'
   pod 'SwiftLint'
 end
 

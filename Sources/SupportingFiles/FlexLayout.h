@@ -14,6 +14,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "YGLayout+Private.h"
+#import "UIView+Yoga.h"
+#import "YGLayout.h"
+#import "YogaKit.h"
+
 //! Project version number for FlexLayout.
 FOUNDATION_EXPORT double FlexLayoutVersionNumber;
 

@@ -13,6 +13,7 @@
 // Created by Luc Dion on 2017-07-17.
 
 import UIKit
+import yoga
 
 private var flexLayoutAssociatedObjectHandle = 72_399_923
 
