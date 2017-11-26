@@ -8,16 +8,32 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <YogaKit/Yoga.h>
 
-#if defined(XCODE_PROJECT_BUILD)
-    #import "YGEnums.h"
-    #import "Yoga.h"
-    #import "YGMacros.h"
-#else
-//    #import <yoga/YGEnums.h>
-    #import <YogaFlex/Yoga.h>
-//    #import <yoga/YGMacros.h>
-#endif
+//#if defined(XCODE_PROJECT_BUILD)
+//#import "YGEnums.h"
+//#import "Yoga.h"
+//#import "YGMacros.h"
+//#elif defined(USE_YOGAKIT_PACKAGE)
+#import <YogaKit/YGEnums.h>
+//#import <Yogakit/YGEnums.h>
+//#import <yogakit/Yoga.h>
+//#import <yogakit/YGMacros.h>
+//#else
+//#import <yoga/YGEnums.h>
+//#import <yoga/Yoga.h>
+//#import <yoga/YGMacros.h>
+//#endif
+
+//#if defined(XCODE_PROJECT_BUILD)
+//    #import "YGEnums.h"
+//    #import "Yoga.h"
+//    #import "YGMacros.h"
+//#else
+////    #import <yoga/YGEnums.h>
+//    #import <YogaFlex/Yoga.h>
+////    #import <yoga/YGMacros.h>
+//#endif
 
 YG_EXTERN_C_BEGIN
 

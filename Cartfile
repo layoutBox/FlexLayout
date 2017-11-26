@@ -1,2 +1,3 @@
 #github "layoutBox/yoga" "flexlayout_branch"
-github "layoutBox/yoga" "flexlayoutyoga"
+#github "layoutBox/yoga" "flexlayoutyoga"
+git "/Users/dionlu/dev/yoga_layoutbox" "move_yogakit_to_flexlayout"

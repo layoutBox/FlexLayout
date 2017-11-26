@@ -14,6 +14,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UIView+Yoga.h"
 #import "YGLayout+Private.h"
 
 //! Project version number for FlexLayout.
@@ -23,8 +24,12 @@ FOUNDATION_EXPORT double FlexLayoutVersionNumber;
 FOUNDATION_EXPORT const unsigned char FlexLayoutVersionString[];
 
 // In this header, you should import all the public headers of your framework using
-#import "UIView+Yoga.h"
-#import "YGLayout.h"
-#import "YogaKit.h"
+//#import "YGLayout.h"
+//#import "YogaKit.h"
+
+#import <YogaKit/Yoga.h>
+#import <YogaKit/YGEnums.h>
+#import <YogaKit/YGNodeList.h>
+#import <YogaKit/YGMacros.h>
 
 
