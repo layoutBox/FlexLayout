@@ -8,7 +8,11 @@
  */
 
 #import "YGLayout.h"
-#import <YogaKit/Yoga.h>
+
+//#if defined(XCODE_PROJECT_BUILD)
+//#else
+//#import <Yoga/Yoga.h>
+//#endif
 
 @interface YGLayout ()
 

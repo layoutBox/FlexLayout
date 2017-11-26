@@ -6,7 +6,11 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-import YogaKit
+#if XCODE_PROJECT_BUILD
+    import YogaKit
+#else
+    import yoga
+#endif
 
 postfix operator %
 

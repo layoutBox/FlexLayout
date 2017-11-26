@@ -1,10 +1,12 @@
 use_frameworks!
+platform :ios, '9.0'
 
 workspace 'FlexLayout.xcworkspace'
 
 target 'FlexLayout' do
   project 'FlexLayout.xcodeproj'
-  pod 'Yoga', :git => 'https://github.com/layoutBox/yoga.git', :branch => 'flexlayout_branch'
+  #pod 'YogaKit', :git => 'https://github.com/layoutBox/yoga.git', :branch => 'move_yogakit_to_flexlayout'
+  pod 'Yoga'
   pod 'SwiftLint'
 end
 

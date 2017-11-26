@@ -13,7 +13,12 @@
 // Created by Luc Dion on 2017-06-19.
 
 import UIKit
-import YogaKit
+
+#if XCODE_PROJECT_BUILD
+    import YogaKit
+#else
+    import yoga
+#endif
 
 /**
  FlexLayout interface.

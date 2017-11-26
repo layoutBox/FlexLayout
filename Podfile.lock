@@ -6,7 +6,7 @@ PODS:
   - Quick (1.2.0)
   - Reveal-SDK (10)
   - SwiftLint (0.24.0)
-  - Yoga (1.7.0)
+  - Yoga (1.6.0)
 
 DEPENDENCIES:
   - FlexLayout (from `./`)
@@ -15,19 +15,11 @@ DEPENDENCIES:
   - Quick
   - Reveal-SDK (~> 10)
   - SwiftLint
-  - Yoga (from `https://github.com/layoutBox/yoga.git`, branch `flexlayout_branch`)
+  - Yoga
 
 EXTERNAL SOURCES:
   FlexLayout:
     :path: ./
-  Yoga:
-    :branch: flexlayout_branch
-    :git: https://github.com/layoutBox/yoga.git
-
-CHECKOUT OPTIONS:
-  Yoga:
-    :commit: 7de5e71f7b9b85127b23fbbc12606fa066654bd9
-    :git: https://github.com/layoutBox/yoga.git
 
 SPEC CHECKSUMS:
   FlexLayout: 5bcb1069bd39173733d0eec0ac82cb813606010d
@@ -36,8 +28,8 @@ SPEC CHECKSUMS:
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Reveal-SDK: 7869ddf1f902cabbb07a1f0dd06bd25861a126f7
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
-  Yoga: b625f4a572569277500fde58967d027ff7c38f4f
+  Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
 
-PODFILE CHECKSUM: 0f9ccfb215d5e499702adc7a84ea23c31917ff6a
+PODFILE CHECKSUM: 15bd3dba3cae6c940a655fa94bab34531d1afc4e
 
 COCOAPODS: 1.3.1
