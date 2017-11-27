@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-#if defined(XCODE_PROJECT_BUILD)
+#if defined(XCODE_PROJECT_BUILD) || defined(FLEXLAYOUT_USE_CARTHAGE) || defined(USE_YOGAKIT_PACKAGE)
 #import <YogaKit/Yoga.h>
 #import <YogaKit/YGEnums.h>
 #else

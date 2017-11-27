@@ -24,7 +24,7 @@ FOUNDATION_EXPORT double FlexLayoutVersionNumber;
 FOUNDATION_EXPORT const unsigned char FlexLayoutVersionString[];
 
 // In this header, you should import all the public headers of your framework using
-#if defined(XCODE_PROJECT_BUILD)
+#if defined(XCODE_PROJECT_BUILD) || defined(FLEXLAYOUT_USE_CARTHAGE) || defined(USE_YOGAKIT_PACKAGE)
 #import <YogaKit/Yoga.h>
 #import <YogaKit/YGEnums.h>
 #import <YogaKit/YGNodeList.h>
