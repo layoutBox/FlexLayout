@@ -1,5 +1,5 @@
 #github "layoutBox/yoga" "flexlayout_branch"
-#github "layoutBox/yoga" "move_yogakit_to_flexlayout"
+github "layoutBox/yoga" "move_yogakit_to_flexlayout"
 #git "/Users/dionlu/dev/yoga_layoutbox" "move_yogakit_to_flexlayout"
 
 github "Quick/Quick"
