@@ -13,7 +13,7 @@
 
 static const void *kYGYogaAssociatedKey = &kYGYogaAssociatedKey;
 
-@implementation UIView (YogaKit)
+@implementation UIView (FlexLayout)
 
 - (YGLayout *)yoga
 {
