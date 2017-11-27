@@ -8,9 +8,7 @@
 
 import UIKit
 
-#if XCODE_PROJECT_BUILD
-//    import YogaKit
-#else
+#if !XCODE_PROJECT_BUILD
     import yoga
 #endif
 

@@ -9,11 +9,6 @@
 
 #import "YGLayout.h"
 
-//#if defined(XCODE_PROJECT_BUILD)
-//#else
-//#import <Yoga/Yoga.h>
-//#endif
-
 @interface YGLayout ()
 
 @property (nonatomic, assign, readonly) YGNodeRef node;
