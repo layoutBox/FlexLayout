@@ -16,7 +16,6 @@
 		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
 		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
 		24C7D2681FC7A68300268DDA /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C7D2611FC7A68200268DDA /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C7D2691FC7A68300268DDA /* YogaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C7D2621FC7A68200268DDA /* YogaKit.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		24C7D26B1FC7A68300268DDA /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C7D2641FC7A68200268DDA /* YGLayout.m */; };
 		24C7D26C1FC7A68300268DDA /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C7D2651FC7A68300268DDA /* YGLayoutExtensions.swift */; };
 		24C7D26D1FC7A68300268DDA /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C7D2661FC7A68300268DDA /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,7 +52,6 @@
 		2458D8EC1FCB54470015E2F5 /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
 		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
 		24C7D2611FC7A68200268DDA /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/YogaKit/YGLayout.h; sourceTree = SOURCE_ROOT; };
-		24C7D2621FC7A68200268DDA /* YogaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YogaKit.h; path = Sources/YogaKit/YogaKit.h; sourceTree = SOURCE_ROOT; };
 		24C7D2631FC7A68200268DDA /* YGLayout+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "Sources/YogaKit/YGLayout+Private.h"; sourceTree = SOURCE_ROOT; };
 		24C7D2641FC7A68200268DDA /* YGLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YGLayout.m; path = Sources/YogaKit/YGLayout.m; sourceTree = SOURCE_ROOT; };
 		24C7D2651FC7A68300268DDA /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = Sources/YogaKit/YGLayoutExtensions.swift; sourceTree = SOURCE_ROOT; };
@@ -110,7 +108,6 @@
 				24C7D2641FC7A68200268DDA /* YGLayout.m */,
 				24C7D2631FC7A68200268DDA /* YGLayout+Private.h */,
 				24C7D2651FC7A68300268DDA /* YGLayoutExtensions.swift */,
-				24C7D2621FC7A68200268DDA /* YogaKit.h */,
 			);
 			path = YogaKit;
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 				24C7D26D1FC7A68300268DDA /* UIView+Yoga.h in Headers */,
 				24C7D2731FC7B93400268DDA /* YGLayout+Private.h in Headers */,
 				24C7D2681FC7A68300268DDA /* YGLayout.h in Headers */,
-				24C7D2691FC7A68300268DDA /* YogaKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
