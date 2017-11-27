@@ -22,12 +22,12 @@ class MyTestView: BaseView {
     override init() {
         super.init()
         
-        backgroundColor = UIColor(red:0.90, green:0.97, blue:0.98, alpha:1.00)
+        backgroundColor = UIColor(red: 0.90, green: 0.97, blue: 0.98, alpha: 1.00)
         
         initCenteredButtons()
         
         rootFlexContainer.layer.borderWidth = 2
-        rootFlexContainer.layer.borderColor = UIColor(red:0.52, green:0.53, blue:0.55, alpha:1.00).cgColor
+        rootFlexContainer.layer.borderColor = UIColor(red: 0.52, green: 0.53, blue: 0.55, alpha: 1.00).cgColor
         addSubview(rootFlexContainer)
     }
     

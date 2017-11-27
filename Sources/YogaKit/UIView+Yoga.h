@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^YGLayoutConfigurationBlock)(YGLayout *);
 
-@interface UIView (Yoga)
+@interface UIView (FlexLayout)
 
 /**
  The YGLayout that is attached to this view. It is lazily created.
