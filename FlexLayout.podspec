@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources/**/*.{swift,h,m}"
 
   # Latest master commit id.
-  s.dependency "YogaKit"
+  s.dependency "Yoga"
 end

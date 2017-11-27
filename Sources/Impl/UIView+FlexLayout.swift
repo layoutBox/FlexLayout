@@ -15,7 +15,7 @@
 import UIKit
 
 #if XCODE_PROJECT_BUILD
-    import YogaKit
+//    import YogaKit
 #else
     import yoga
 #endif

@@ -12,13 +12,11 @@
 		24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */; };
 		24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */; };
 		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
-		2458D8ED1FCB54470015E2F5 /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2458D8EC1FCB54470015E2F5 /* YogaKit.framework */; };
 		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
 		2491CC601FCB933300F3A61C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2491CC5E1FCB932B00F3A61C /* Quick.framework */; };
 		2491CC611FCB933600F3A61C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2491CC5C1FCB931F00F3A61C /* Nimble.framework */; };
 		2491CC631FCB93AB00F3A61C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2491CC5E1FCB932B00F3A61C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2491CC641FCB93AB00F3A61C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2491CC5C1FCB931F00F3A61C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2491CC651FCB93C800F3A61C /* YogaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2458D8EC1FCB54470015E2F5 /* YogaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
 		24C7D2681FC7A68300268DDA /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C7D2611FC7A68200268DDA /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C7D26B1FC7A68300268DDA /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C7D2641FC7A68200268DDA /* YGLayout.m */; };
@@ -30,6 +28,8 @@
 		24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA375A1EF843C500D1AB2F /* FlexLayout.framework */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* FlexLayout.swift */; };
+		24DAEB991FCB9B0100066520 /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; };
+		24DAEB9B1FCB9B1600066520 /* YogaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */; };
 		DF9174771F1D6DC00034632D /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */; };
 		DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */; };
@@ -54,9 +54,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2491CC651FCB93C800F3A61C /* YogaKit.framework in CopyFiles */,
 				2491CC631FCB93AB00F3A61C /* Quick.framework in CopyFiles */,
 				2491CC641FCB93AB00F3A61C /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24DAEB9A1FCB9B0A00066520 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				24DAEB9B1FCB9B1600066520 /* YogaKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,9 +76,7 @@
 		24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectNimbleMatcher.swift; sourceTree = "<group>"; };
 		24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentSpec.swift; sourceTree = "<group>"; };
 		24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsolutionPositionContentSpec.swift; sourceTree = "<group>"; };
-		241A4BCD1FC84344007FA777 /* YogaFlex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaFlex.framework; path = Carthage/Build/iOS/YogaFlex.framework; sourceTree = "<group>"; };
 		2458137E1F4A21CF00CD676B /* PaddingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingSpec.swift; sourceTree = "<group>"; };
-		2458D8EC1FCB54470015E2F5 /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
 		2491CC5C1FCB931F00F3A61C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		2491CC5E1FCB932B00F3A61C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
@@ -85,6 +92,7 @@
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
 		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DA37871EF8610400D1AB2F /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = SOURCE_ROOT; };
+		24DAEB981FCB9B0100066520 /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
 		24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentSpec.swift; sourceTree = "<group>"; };
 		DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Enum.swift"; path = "Sources/Impl/FlexLayout+Enum.swift"; sourceTree = SOURCE_ROOT; };
 		DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = SOURCE_ROOT; };
@@ -97,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2458D8ED1FCB54470015E2F5 /* YogaKit.framework in Frameworks */,
+				24DAEB991FCB9B0100066520 /* YogaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +131,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		24C7D2601FC7A65700268DDA /* YogaKit */ = {
+		24C7D2601FC7A65700268DDA /* FlexLayoutYogaKit */ = {
 			isa = PBXGroup;
 			children = (
 				24C7D2661FC7A68300268DDA /* UIView+Yoga.h */,
@@ -133,7 +141,7 @@
 				24C7D2631FC7A68200268DDA /* YGLayout+Private.h */,
 				24C7D2651FC7A68300268DDA /* YGLayoutExtensions.swift */,
 			);
-			path = YogaKit;
+			path = FlexLayoutYogaKit;
 			sourceTree = "<group>";
 		};
 		24DA37501EF843C500D1AB2F = {
@@ -161,7 +169,7 @@
 				24DA37871EF8610400D1AB2F /* FlexLayout.swift */,
 				24CC0E3F1F96807400BEE2CF /* Percent.swift */,
 				DF9174751F1D6DA20034632D /* Impl */,
-				24C7D2601FC7A65700268DDA /* YogaKit */,
+				24C7D2601FC7A65700268DDA /* FlexLayoutYogaKit */,
 				2429E4BD1F19181F00BBC032 /* Supporting Files */,
 			);
 			name = Sources;
@@ -186,10 +194,9 @@
 		B5403C6F81C3814B69C05D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24DAEB981FCB9B0100066520 /* YogaKit.framework */,
 				2491CC5E1FCB932B00F3A61C /* Quick.framework */,
 				2491CC5C1FCB931F00F3A61C /* Nimble.framework */,
-				2458D8EC1FCB54470015E2F5 /* YogaKit.framework */,
-				241A4BCD1FC84344007FA777 /* YogaFlex.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,6 +236,7 @@
 				24DA37561EF843C500D1AB2F /* Frameworks */,
 				24DA37571EF843C500D1AB2F /* Headers */,
 				24DA37581EF843C500D1AB2F /* Resources */,
+				24DAEB9A1FCB9B0A00066520 /* CopyFiles */,
 			);
 			buildRules = (
 			);
