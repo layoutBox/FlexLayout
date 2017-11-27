@@ -2,7 +2,6 @@ language: objective-c
 osx_image: xcode9
 
 env:
-  - GITHUB_ACCESS_TOKEN 
   matrix:
     - SCHEME=FlexLayout       SDK=iphonesimulator11.0
     - SCHEME=FlexLayout       SDK=iphonesimulator10.3
