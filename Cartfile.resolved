@@ -1,1 +1,3 @@
-git "/Users/dionlu/dev/yoga_layoutbox" "2d931cfb00193d2d11b751169e4bc18aba946fe2"
+git "/Users/dionlu/dev/yoga_layoutbox" "8f9792b79ee44641f7d93176a3b58e89412a61e2"
+github "Quick/Nimble" "v7.0.3"
+github "Quick/Quick" "v1.2.0"
