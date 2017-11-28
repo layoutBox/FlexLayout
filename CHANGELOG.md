@@ -7,6 +7,24 @@
 
 # Change Log
 
+## [1.2.0](https://github.com/layoutBox/FlexLayout/releases/tag/1.2.0)
+Released on 2017-11-23
+
+* Many properties can be reset to their initial state. Specifying `nil` when calling these properties reset their value:
+	* `width(nil)`
+	* `height(nil)`
+	* `size(nil)`
+	* `minWidth(nil)`
+	* `maxWidth(nil)`
+	* `minHeight(nil)`
+	* `maxHeight(nil)`
+	* `aspectRatio(nil)`
+	
+* FlexLayout now integrates YogaKit source code, this was needed to improve efficiently the iOS's yoga interface.
+  
+* Added by [Luc Dion](https://github.com/layoutBox) in Pull Request [#40](https://github.com/layoutBox/FlexLayout/pull/40) 
+
+
 ## [1.1.8](https://github.com/layoutBox/FlexLayout/releases/tag/1.1.8)
 Released on 2017-11-23
 
