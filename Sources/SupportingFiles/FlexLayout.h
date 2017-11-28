@@ -14,12 +14,28 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UIView+Yoga.h"
+#import "YGLayout+Private.h"
+
 //! Project version number for FlexLayout.
 FOUNDATION_EXPORT double FlexLayoutVersionNumber;
 
 //! Project version string for FlexLayout.
 FOUNDATION_EXPORT const unsigned char FlexLayoutVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <FlexLayout/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using
+#if defined(XCODE_PROJECT_BUILD) || defined(FLEXLAYOUT_USE_CARTHAGE) || defined(USE_YOGAKIT_PACKAGE)
+    #import <YogaKit/Yoga.h>
+    #import <YogaKit/YGEnums.h>
+    #import <YogaKit/YGNodeList.h>
+    #import <YogaKit/YGMacros.h>
+#else
+    #import <Yoga/Yoga.h>
+    #import <Yoga/YGEnums.h>
+    #import <Yoga/YGNodeList.h>
+#import <Yoga/YGMacros.h>
+#endif
+
+
 
 

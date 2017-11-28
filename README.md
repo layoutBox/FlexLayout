@@ -781,18 +781,18 @@ FlexLayout has methods to set the view’s height and width.
 
 **Methods:**
 
-* **`width(_ width: CGFloat)`**  
-The value specifies the view's width in pixels. The value must be non-negative.
+* **`width(_ width: CGFloat?)`**  
+The value specifies the view's width in pixels. The value must be non-negative. Call `width(nil)` to reset the property.
 * **`width(_ percent: FPercent)`**  
-The value specifies the view's width in percentage of its container width. The value must be non-negative.
-* **`height(_ height: CGFloat)`**  
-The value specifies the view's height in pixels. The value must be non-negative.
+The value specifies the view's width in percentage of its container width. The value must be non-negative. Call `width(nil)` to reset the property.
+* **`height(_ height: CGFloat?)`**  
+The value specifies the view's height in pixels. The value must be non-negative. Call `height(nil)` to reset the property.
 * **`height(_ percent: FPercent)`**  
-The value specifies the view's height in percentage of its container height. The value must be non-negative.
-* **`size(_ size: CGSize)`**  
-The value specifies view's width and the height in pixels. Values must be non-negative.
-* **`size(_ sideLength: CGFloat)`**  
-The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.
+The value specifies the view's height in percentage of its container height. The value must be non-negative. Call `height(nil)` to reset the property.
+* **`size(_ size: CGSize?)`**  
+The value specifies view's width and the height in pixels. Values must be non-negative. Call `size(nil)` to reset the property.
+* **`size(_ sideLength: CGFloat?)`**  
+The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative. Call `size(nil)` to reset the property.
 
 
 ###### Usage examples:
@@ -820,22 +820,22 @@ Another case where Min and Max dimension constraints are useful is when using `a
 
 **Methods:**
 
-* **`minWidth(_ width: CGFloat)`** 
-The value specifies the view's minimum width of the view in pixels. The value must be non-negative.
-* **`minWidth(_ percent: FPercent)`** 
-The value specifies the view's minimum width of the view in percentage of its container width. The value must be non-negative.
-* **`maxWidth(_ width: CGFloat)`**  
-The value specifies the view's maximum width of the view in pixels. The value must be non-negative.
+* **`minWidth(_ width: CGFloat?)`**  
+The value specifies the view's minimum width of the view in pixels. The value must be non-negative. Call `minWidth(nil)` to reset the property.
+* **`minWidth(_ percent: FPercent)`**  
+The value specifies the view's minimum width of the view in percentage of its container width. The value must be non-negative. Call `minWidth(nil)` to reset the property..
+* **`maxWidth(_ width: CGFloat?)`**  
+The value specifies the view's maximum width of the view in pixels. The value must be non-negative. Call `maxWidth(nil)` to reset the property.
 * **`maxWidth(_ percent: FPercent)`**  
-The value specifies the view's maximum width of the view in percentage of its container width. The value must be non-negative.
-* **`minHeight(_ height: CGFloat)`**
-The value specifies the view's minimum height of the view in pixels. The value must be non-negative.
-* **`minHeight(_ percent: FPercent)`**
-The value specifies the view's minimum height of the view in percentage of its container height. The value must be non-negative.
-* **`maxHeight(_ height: CGFloat)`**
-The value specifies the view's maximum height of the view in pixels. The value must be non-negative.
-* **`maxHeight(_ percent: FPercent)`**
-The value specifies the view's maximum height of the view in percentage of its container height. The value must be non-negative.
+The value specifies the view's maximum width of the view in percentage of its container width. The value must be non-negative. Call `maxWidth(nil)` to reset the property.
+* **`minHeight(_ height: CGFloat?)`**  
+The value specifies the view's minimum height of the view in pixels. The value must be non-negative. Call `minHeight(nil)` to reset the property.
+* **`minHeight(_ percent: FPercent)`**  
+The value specifies the view's minimum height of the view in percentage of its container height. The value must be non-negative. Call `minHeight(nil)` to reset the property.
+* **`maxHeight(_ height: CGFloat?)`**  
+The value specifies the view's maximum height of the view in pixels. The value must be non-negative. Call `maxHeight(nil)` to reset the property.
+* **`maxHeight(_ percent: FPercent)`**  
+The value specifies the view's maximum height of the view in percentage of its container height. The value must be non-negative. Call `maxHeight(nil)` to reset the property.
    
 ###### Usage examples:
 ```swift
@@ -855,6 +855,7 @@ AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRati
 * AspectRatio respects the Min and Max dimensions of an item.
 * AspectRatio has higher priority than `grow`.
 * If AspectRatio, Width, and Height are set then the cross dimension is overridden
+* Call `aspectRatio(nil)` to reset the property.
 
    
 ###### Usage examples:
@@ -1056,7 +1057,7 @@ github "lucdion/FlexLayout"
 
 2. Run `carthage update` to build frameworks.
 3. Add built `FlexLayout.framework` and `YogaKit.framework` frameworks in your Xcode project in the **Embedded Binaries** section. You should have this once it is done: <img src="docs_markdown/images/carthage_frameworks.png" width="500"/>
-4. **Add the preprocessor macro `USE_YOGAKIT_PACKAGE` in your Xcode project**. Target > Build Settings > Preprocessor Macros. add `USE_YOGAKIT_PACKAGE` in the **Debug** and the **Release** entry.
+4. **Add the preprocessor macro `FLEXLAYOUT_USE_CARTHAGE` in your Xcode project**. Target > Build Settings > Preprocessor Macros. add `FLEXLAYOUT_USE_CARTHAGE` in the **Debug** and the **Release** entry.
 
 <br/>
 

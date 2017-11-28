@@ -18,8 +18,8 @@ class BasicView: UIView {
     init(text: String? = nil) {
         super.init(frame: .zero)
 
-        backgroundColor = UIColor(red:0.58, green:0.78, blue:0.95, alpha:1.00)
-        layer.borderColor = UIColor(red:0.37, green:0.67, blue:0.94, alpha:1.00).cgColor
+        backgroundColor = UIColor(red: 0.58, green: 0.78, blue: 0.95, alpha: 1.00)
+        layer.borderColor = UIColor(red: 0.37, green: 0.67, blue: 0.94, alpha: 1.00).cgColor
         layer.borderWidth = 2
                
         label.text = text

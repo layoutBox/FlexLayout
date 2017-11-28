@@ -13,7 +13,10 @@
 // Created by Luc Dion on 2017-06-19.
 
 import UIKit
-import YogaKit
+
+#if !XCODE_PROJECT_BUILD
+    import yoga
+#endif
 
 /**
  FlexLayout interface.
@@ -320,7 +323,7 @@ public class Flex {
     */
     @discardableResult
     public func basis(_ value: CGFloat?) -> Flex {
-        view.yoga.flexBasis = valueOrAuto(float: value)
+        view.yoga.flexBasis = valueOrAuto(value)
         return self
     }
 
@@ -332,8 +335,8 @@ public class Flex {
      The value specifies the view's width in pixels. The value must be non-negative.
     */
     @discardableResult
-    public func width(_ value: CGFloat) -> Flex {
-        view.yoga.width = YGValue(value)
+    public func width(_ value: CGFloat?) -> Flex {
+        view.yoga.width = valueOrAuto(value)
         return self
     }
     
@@ -351,8 +354,8 @@ public class Flex {
      The value specifies the view's height in pixels. The value must be non-negative.
      */
     @discardableResult
-    public func height(_ value: CGFloat) -> Flex {
-        view.yoga.height = YGValue(value)
+    public func height(_ value: CGFloat?) -> Flex {
+        view.yoga.height = valueOrAuto(value)
         return self
     }
     
@@ -370,9 +373,9 @@ public class Flex {
      The value specifies view's width and the height in pixels. Values must be non-negative.
      */
     @discardableResult
-    public func size(_ size: CGSize) -> Flex {
-        self.view.yoga.width = YGValue(size.width)
-        self.view.yoga.height = YGValue(size.height)
+    public func size(_ size: CGSize?) -> Flex {
+        view.yoga.width = valueOrAuto(size?.width)
+        view.yoga.height = valueOrAuto(size?.height)
         return self
     }
     
@@ -381,8 +384,8 @@ public class Flex {
      */
     @discardableResult
     public func size(_ sideLength: CGFloat) -> Flex {
-        self.view.yoga.width = YGValue(sideLength)
-        self.view.yoga.height = YGValue(sideLength)
+        view.yoga.width = YGValue(sideLength)
+        view.yoga.height = YGValue(sideLength)
         return self
     }
 
@@ -390,8 +393,8 @@ public class Flex {
      The value specifies the view's minimum width in pixels. The value must be non-negative.
      */
     @discardableResult
-    public func minWidth(_ value: CGFloat) -> Flex {
-        view.yoga.minWidth = YGValue(value)
+    public func minWidth(_ value: CGFloat?) -> Flex {
+        view.yoga.minWidth = valueOrUndefined(value)
         return self
     }
     
@@ -408,8 +411,8 @@ public class Flex {
      The value specifies the view's maximum width in pixels. The value must be non-negative.
      */
     @discardableResult
-    public func maxWidth(_ value: CGFloat) -> Flex {
-        view.yoga.maxWidth = YGValue(value)
+    public func maxWidth(_ value: CGFloat?) -> Flex {
+        view.yoga.maxWidth = valueOrUndefined(value)
         return self
     }
     
@@ -426,8 +429,8 @@ public class Flex {
      The value specifies the view's minimum height in pixels. The value must be non-negative.
      */
     @discardableResult
-    public func minHeight(_ value: CGFloat) -> Flex {
-        view.yoga.minHeight = YGValue(value)
+    public func minHeight(_ value: CGFloat?) -> Flex {
+        view.yoga.minHeight = valueOrUndefined(value)
         return self
     }
     
@@ -444,8 +447,9 @@ public class Flex {
      The value specifies the view's maximum height in pixels. The value must be non-negative.
      */
     @discardableResult
-    public func maxHeight(_ value: CGFloat) -> Flex {
-        view.yoga.maxHeight = YGValue(value)
+    public func maxHeight(_ value: CGFloat?) -> Flex {
+        view.yoga.maxHeight = valueOrUndefined(value)
+        
         return self
     }
     

@@ -7,10 +7,13 @@
 //
 
 import UIKit
-import YogaKit
+
+#if !XCODE_PROJECT_BUILD
+    import yoga
+#endif
 
 extension Flex {
-    func valueOrUndefined(float value: CGFloat?) -> YGValue {
+    func valueOrUndefined(_ value: CGFloat?) -> YGValue {
         if let value = value {
             return YGValue(value)
         } else {
@@ -18,7 +21,7 @@ extension Flex {
         }
     }
     
-    func valueOrAuto(float value: CGFloat?) -> YGValue {
+    func valueOrAuto(_ value: CGFloat?) -> YGValue {
         if let value = value {
             return YGValue(value)
         } else {
