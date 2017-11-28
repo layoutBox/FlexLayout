@@ -10,6 +10,12 @@
 ## [1.2.1](https://github.com/layoutBox/FlexLayout/releases/tag/1.2.1)
 Released on 2017-11-23
 
+* Update Carthage support  
+
+
+## [1.2.0](https://github.com/layoutBox/FlexLayout/releases/tag/1.2.0)
+Released on 2017-11-23
+
 * Many properties can be reset to their initial state. Specifying `nil` when calling these properties reset their value:
 	* `width(nil)`
 	* `height(nil)`
