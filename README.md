@@ -1,9 +1,7 @@
 <p align="center">
-  <a href="https://github.com/lucdion/FlexLayout"><img src="docs_markdown/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
+  <a href="https://github.com/lucdion/FlexLayout"><img src="docs_markdown/images/flexlayout-logo-text.png" alt="FlexLayout" width="210"/></a>
 </p>
 
-<h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
- 
 <p align="center">
   <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
   <a href="https://travis-ci.org/lucdion/FlexLayout"><img src="https://travis-ci.org/lucdion/FlexLayout.svg?branch=master" /></a>
@@ -470,35 +468,6 @@ This example center three views of 40 pixels tall with a padding of 10 pixels.
 
 <br/>
 
-### wrap()
-- Applies to: `flex containers`
-- Values: `noWrap` / `wrap` / `wrapReverse`
-- Default value: `noWrap`
-- CSS name: `flex-wrap` 
-
-**Method:**
-
-* **`wrap(_: Wrap)`**  
-The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
-
-By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in
-
-Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.
-
-
-|                     	| direction(.column) | direction(.row) | Description|
-|---------------------	|:------------------:|:---------------:|--------------|
-| **noWrap** (default) 	| <img src="docs_markdown/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-nowrap.png" width="180"/>| Single-line which may cause the container to overflow. NEW: Flex items are displayed in one row and by default they are shrunk to fit the flex container’s width |
-| **wrap** | <img src="docs_markdown/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrap.png" width="180"/>| Multi-lines, direction is defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and top-to-bottom  |
-| **wrapReverse**	| <img src="docs_markdown/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>| Multi-lines, opposite to direction defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and bottom-to-top |
-
-###### Usage examples:
-```swift
-  view.flex.wrap(.nowrap)  // Not required, defaut value. 
-  view.flex.wrap(.wrap)
-```
-<br/>
-
 ### justifyContent()
 - Applies to: `flex containers`
 - Values: `start` / `end` / `center` / `spaceBetween` / `spaceAround`
@@ -560,6 +529,35 @@ The `alignSelf` property controls how a child aligns in the cross direction, ove
 
 The `auto` value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values.
 
+<br/>
+
+### wrap()
+- Applies to: `flex containers`
+- Values: `noWrap` / `wrap` / `wrapReverse`
+- Default value: `noWrap`
+- CSS name: `flex-wrap` 
+
+**Method:**
+
+* **`wrap(_: Wrap)`**  
+The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
+
+By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in
+
+Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.
+
+
+|                     	| direction(.column) | direction(.row) | Description|
+|---------------------	|:------------------:|:---------------:|--------------|
+| **noWrap** (default) 	| <img src="docs_markdown/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-nowrap.png" width="180"/>| Single-line which may cause the container to overflow. NEW: Flex items are displayed in one row and by default they are shrunk to fit the flex container’s width |
+| **wrap** | <img src="docs_markdown/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrap.png" width="180"/>| Multi-lines, direction is defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and top-to-bottom  |
+| **wrapReverse**	| <img src="docs_markdown/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>| Multi-lines, opposite to direction defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and bottom-to-top |
+
+###### Usage examples:
+```swift
+  view.flex.wrap(.nowrap)  // Not required, defaut value. 
+  view.flex.wrap(.wrap)
+```
 <br/>
 
 ### alignContent()
