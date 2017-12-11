@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="https://github.com/lucdion/FlexLayout"><img src="docs_markdown/images/flexlayout-logo-text.png" alt="FlexLayout" width="210"/></a>
+  <a href="https://github.com/layoutBox/FlexLayout"><img src="docs_markdown/images/flexlayout-logo-text.png" alt="FlexLayout" width="210"/></a>
 </p>
 
 <p align="center">
   <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
-  <a href="https://travis-ci.org/lucdion/FlexLayout"><img src="https://travis-ci.org/lucdion/FlexLayout.svg?branch=master" /></a>
- <a href='https://coveralls.io/github/lucdion/FlexLayout?branch=master'><img src='https://coveralls.io/repos/github/lucdion/FlexLayout/badge.svg?branch=master' alt='Coverage Status' /></a>
+  <a href="https://travis-ci.org/layoutBox/FlexLayout"><img src="https://travis-ci.org/layoutBox/FlexLayout.svg?branch=master" /></a>
+ <a href='https://coveralls.io/github/layoutBox/FlexLayout?branch=master'><img src='https://coveralls.io/repos/github/layoutBox/FlexLayout/badge.svg?branch=master' alt='Coverage Status' /></a>
   <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
   <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
-  <a href="https://raw.githubusercontent.com/lucdion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
+  <a href="https://raw.githubusercontent.com/layoutBox/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
 </p>
 
 <br>
@@ -77,7 +77,7 @@ Two steps to use a flexbox container:
 	1. First you must layout the flexbox container, i.e. position it and optionally set its size. 
 	2. Then layout the flexbox children using Flex method `layout()`.
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a>
 
 ```swift
 fileprivate let rootFlexContainer = UIView()
@@ -120,14 +120,14 @@ override func layoutSubviews() {
 }
 ``` 
 
-:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
+:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
 
 </br>
 
 ###### Example 2: <a name="intro_usage_example_raywenderlich"></a>
 The example implements the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine) screen using FlexLayout. 
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=200/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=200/></a>
 
 ```swift
 init() {
@@ -195,7 +195,7 @@ override func layoutSubviews() {
 }
 ``` 
 
-:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift)
+:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift)
 
 <br>
 
@@ -213,7 +213,7 @@ NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) impleme
 
 # FlexLayout's Performance <a name="performance"></a>
 
-FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/lucdion/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
+FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/layoutBox/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
 
 As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 8x and 11x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
 
@@ -289,7 +289,7 @@ In the following sections we will see:
 3. Flexbox item's properties
 
 
-:pushpin: This document is a guide that explains how to use FlexLayout. You can also checks the [**FlexLayout's API documentation**](https://lucdion.github.io/FlexLayout/1.1/Classes/Flex.html).
+:pushpin: This document is a guide that explains how to use FlexLayout. You can also checks the [**FlexLayout's API documentation**](https://layoutBox.github.io/FlexLayout/1.1/Classes/Flex.html).
 
 <br>
 
@@ -454,7 +454,7 @@ The `direction` property establishes the main-axis, thus defining the direction 
 
 ###### Example 1:
 This example center three views of 40 pixels tall with a padding of 10 pixels.  
-[Example source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Example1/Example1View.swift)
+[Example source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Example1/Example1View.swift)
 
 <img src="docs_markdown/images/flexlayout_example_column_center.png" width="160"/>
 
@@ -767,7 +767,7 @@ Using these properties you can control the size and position of an absolute item
 ```swift
   view.flex.position(.absolute).top(10).right(10).width(100).height(50)
 ```
-:pushpin: See the "Yoga C" example in the [Examples App](#examples_app). [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift)
+:pushpin: See the "Yoga C" example in the [Examples App](#examples_app). [Source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift)
 
 <br>
 
@@ -966,7 +966,7 @@ Set the flex item's UIView background color.
 
 
 ## FlexLayout API Documentation <a name="api_documentation"></a>
-The [**complete FlexLayout API is available here**](https://lucdion.github.io/FlexLayout/1.1/Classes/Flex.html). 
+The [**complete FlexLayout API is available here**](https://layoutBox.github.io/FlexLayout/1.1/Classes/Flex.html). 
 
 <br>
 
@@ -974,15 +974,15 @@ The [**complete FlexLayout API is available here**](https://lucdion.github.io/Fl
 The FlexLayout's Example App exposes some usage example of FlexLayout.   
 [See the Example App section to get more information](docs_markdown/examples.md).
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_portrait.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample"><img src="docs_markdown/images/examples/flexlayout_exampleapp_uitableview.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/CollectionViewExample/HouseCell.swift"><img src="docs_markdown/images/examples/flexlayout_example_collectionview.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_c.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_objc.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_java.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_csharp.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_android.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_portrait.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample"><img src="docs_markdown/images/examples/flexlayout_exampleapp_uitableview.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/CollectionViewExample/HouseCell.swift"><img src="docs_markdown/images/examples/flexlayout_example_collectionview.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_c.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_objc.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_java.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_csharp.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_android.png" width=90/></a>
 
 <br>
 
@@ -1020,7 +1020,7 @@ The FlexLayout's Example App exposes some usage example of FlexLayout.
 
 
 ## Contributing, comments, ideas, suggestions, issues, .... <a name="comments"></a>
-For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/lucdion/FlexLayout/issues). 
+For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/layoutBox/FlexLayout/issues). 
 
 For **issues**, please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. If not, it may be a FlexLayout issue. In this case open an issue and we'll let you know if the issue is related to Yoga's implementation. 
 
@@ -1050,7 +1050,7 @@ To integrate FlexLayout into your Xcode project using Carthage:
 
 1. Specify in your `Cartfile`:  
 ```
-github "lucdion/FlexLayout"
+github "layoutBox/FlexLayout"
 ```
 
 2. Run `carthage update` to build frameworks.
@@ -1067,4 +1067,3 @@ FlexLayout recent history is available in the are documented in the [CHANGELOG](
 ## License
 BSD 3-Clause License 
 
-[![analytics](http://www.google-analytics.com/collect?v=1&t=pageview&_s=1&dl=https%3A%2F%2Fgithub.com%2Flucdion%2FFlexLayout&tid=UA-106565693-1)]()

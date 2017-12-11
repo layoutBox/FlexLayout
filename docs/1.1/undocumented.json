@@ -1,10 +1,73 @@
 {
   "warnings": [
     {
-      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/Impl/UIView+FlexLayout.swift",
-      "line": 20,
-      "symbol": "UIView.flex",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 581,
+      "symbol": "Flex.marginTop(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 596,
+      "symbol": "Flex.marginLeft(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 611,
+      "symbol": "Flex.marginBottom(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 626,
+      "symbol": "Flex.marginRight(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 645,
+      "symbol": "Flex.marginStart(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 664,
+      "symbol": "Flex.marginEnd(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 679,
+      "symbol": "Flex.marginHorizontal(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 694,
+      "symbol": "Flex.marginVertical(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 738,
+      "symbol": "Flex.margin(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dionlu/Dropbox (Personal)/devluc2/FlexLayout/Sources/FlexLayout.swift",
+      "line": 788,
+      "symbol": "Flex.margin(_:_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
