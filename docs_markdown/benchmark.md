@@ -14,13 +14,13 @@
 ## Methodology  <a name="methodology"></a>
 
 ### Layout Framework Benchmark
-FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) performance has been benchmarked using [Layout Framework Benchmark](https://github.com/lucdion/LayoutFrameworkBenchmark). 
+FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) performance has been benchmarked using [Layout Framework Benchmark](https://github.com/layoutBox/LayoutFrameworkBenchmark). 
 
 The benchmark include the following layout frameworks:
 
 * Auto layout
 * Manual layout (i.e. set UIView's frame directly)
-* [FlexLayout](https://github.com/lucdion/FlexLayout)
+* [FlexLayout](https://github.com/layoutBox/FlexLayout)
 * [PinLayout](https://github.com/mirego/PinLayout)
 * [LayoutKit](https://github.com/linkedin/LayoutKit)
 * UIStackViews
@@ -77,7 +77,7 @@ Remark how FlexLayout and PinLayout code is concise and clean compared to Manual
 
 ### FlexLayout source code
 
-[FlexLayout benchmark's source code](https://github.com/lucdion/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/FlexLayout/FeedItemFlexLayoutView.swift)
+[FlexLayout benchmark's source code](https://github.com/layoutBox/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/FlexLayout/FeedItemFlexLayoutView.swift)
 
 ```swift
 flex.addItem(contentView).padding(8).define { (flex) in
@@ -121,7 +121,7 @@ flex.addItem(contentView).padding(8).define { (flex) in
 
 ### PinLayout source code
 
-[PinLayout benchmark's source code](https://github.com/lucdion/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/PinLayout/FeedItemPinLayoutView.swift)
+[PinLayout benchmark's source code](https://github.com/layoutBox/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/PinLayout/FeedItemPinLayoutView.swift)
 
 ```swift
 override func layoutSubviews() {
@@ -159,7 +159,7 @@ override func layoutSubviews() {
 
 ### Manual layout source code
 
-[Manual layout benchmark's source code](https://github.com/lucdion/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/ManualLayout/FeedItemManualView.swift)
+[Manual layout benchmark's source code](https://github.com/layoutBox/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/ManualLayout/FeedItemManualView.swift)
 
 ```swift 
 override func layoutSubviews() {
@@ -234,6 +234,6 @@ override func layoutSubviews() {
 
 ### Auto layout source code
 
-[Auto layout benchmark's source code](https://github.com/lucdion/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/AutoLayout/FeedItemAutoLayoutView.swift)
+[Auto layout benchmark's source code](https://github.com/layoutBox/LayoutFrameworkBenchmark/blob/master/LayoutFrameworkBenchmark/Benchmarks/AutoLayout/FeedItemAutoLayoutView.swift)
 
 <br>
