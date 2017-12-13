@@ -27,8 +27,5 @@ script:
     fi
 
 after_success:
-  - |
-    if [[ $SCHEME = "FlexLayout" ]]; then
-      slather coverage -s --workspace FlexLayout.xcworkspace --scheme FlexLayout --coveralls --travis FlexLayout.xcodeproj
-    fi
-
+  - bash <(curl -s https://codecov.io/bash) -J 'FlexLayout' -J 'FlexLayoutTests'
+  

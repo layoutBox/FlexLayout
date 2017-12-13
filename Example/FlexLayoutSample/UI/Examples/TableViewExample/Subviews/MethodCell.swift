@@ -14,6 +14,7 @@
 
 import UIKit
 import PinLayout
+import FlexLayout
 
 class MethodCell: UITableViewCell {
     static let reuseIdentifier = "MethodCell"
