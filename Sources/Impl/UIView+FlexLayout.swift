@@ -22,11 +22,12 @@ private var flexLayoutAssociatedObjectHandle = 72_399_923
 
 public extension UIView {
     public var flex: Flex {
-        get {
-            return objc_getAssociatedObject(self, &flexLayoutAssociatedObjectHandle) as? Flex ?? Flex(view: self)
-        }
-        set {
-            objc_setAssociatedObject(self, &flexLayoutAssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        if let flex = objc_getAssociatedObject(self, &flexLayoutAssociatedObjectHandle) as? Flex {
+            return flex
+        } else {
+            let flex = Flex(view: self)
+            objc_setAssociatedObject(self, &flexLayoutAssociatedObjectHandle, flex, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            return flex
         }
     }
 }

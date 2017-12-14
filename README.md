@@ -8,7 +8,13 @@
  <a href='https://coveralls.io/github/layoutBox/FlexLayout?branch=master'><img src='https://coveralls.io/repos/github/layoutBox/FlexLayout/badge.svg?branch=master' alt='Coverage Status' /></a>
   <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
   <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
-  <a href="https://raw.githubusercontent.com/layoutBox/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
+<a href="https://github.com/layoutBox/FlexLayout/issues"><img src="https://img.shields.io/github/issues/layoutBox/FlexLayout.svg?style=flat" /></a>
+</p></p>
+
+<p align="center">
+  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
+  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/dm/FlexLayout.svg" /></a>
+  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/dt/FlexLayout.svg" /></a>
 </p>
 
 <br>
