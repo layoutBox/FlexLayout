@@ -577,12 +577,24 @@ public class Flex {
         return self
     }
     
+    @discardableResult
+    public func marginTop(_ percent: FPercent) -> Flex {
+        yoga.marginTop = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
     /**
      Set the left margin. Left margin specify the offset the left edge of the item should have from from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginLeft(_ value: CGFloat) -> Flex {
         yoga.marginLeft = YGValue(value)
+        return self
+    }
+    
+    @discardableResult
+    public func marginLeft(_ percent: FPercent) -> Flex {
+        yoga.marginLeft = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
 
@@ -595,12 +607,24 @@ public class Flex {
         return self
     }
     
+    @discardableResult
+    public func marginBottom(_ percent: FPercent) -> Flex {
+        yoga.marginBottom = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
     /**
      Set the right margin. Right margin specify the offset the right edge of the item should have from from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginRight(_ value: CGFloat) -> Flex {
         yoga.marginRight = YGValue(value)
+        return self
+    }
+    
+    @discardableResult
+    public func marginRight(_ percent: FPercent) -> Flex {
+        yoga.marginRight = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
 
@@ -617,6 +641,12 @@ public class Flex {
         return self
     }
     
+    @discardableResult
+    public func marginStart(_ percent: FPercent) -> Flex {
+        yoga.marginStart = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
     /**
      Set the end margin.
      
@@ -630,6 +660,12 @@ public class Flex {
         return self
     }
     
+    @discardableResult
+    public func marginEnd(_ percent: FPercent) -> Flex {
+        yoga.marginEnd = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
     /**
      Set the left, right, start and end margins to the specified value.
      */
@@ -639,12 +675,24 @@ public class Flex {
         return self
     }
     
+    @discardableResult
+    public func marginHorizontal(_ percent: FPercent) -> Flex {
+        yoga.marginHorizontal = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
     /**
      Set the top and bottom margins to the specified value.
      */
     @discardableResult
     public func marginVertical(_ value: CGFloat) -> Flex {
         yoga.marginVertical = YGValue(value)
+        return self
+    }
+    
+    @discardableResult
+    public func marginVertical(_ percent: FPercent) -> Flex {
+        yoga.marginVertical = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
     
@@ -686,12 +734,24 @@ public class Flex {
         return self
     }
     
+    @discardableResult
+    public func margin(_ percent: FPercent) -> Flex {
+        yoga.margin = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
     /**
      Set the individually vertical margins (top, bottom) and horizontal margins (left, right, start, end).
      */
     @discardableResult func margin(_ vertical: CGFloat, _ horizontal: CGFloat) -> Flex {
         yoga.marginVertical = YGValue(vertical)
         yoga.marginHorizontal = YGValue(horizontal)
+        return self
+    }
+    
+    @discardableResult func margin(_ vertical: FPercent, _ horizontal: FPercent) -> Flex {
+        yoga.marginVertical = YGValue(value: Float(vertical.value), unit: .percent)
+        yoga.marginHorizontal = YGValue(value: Float(horizontal.value), unit: .percent)
         return self
     }
     
@@ -704,6 +764,13 @@ public class Flex {
         yoga.marginBottom = YGValue(bottom)
         return self
     }
+    
+    @discardableResult func margin(_ top: FPercent, _ horizontal: FPercent, _ bottom: FPercent) -> Flex {
+        yoga.marginTop = YGValue(value: Float(top.value), unit: .percent)
+        yoga.marginHorizontal = YGValue(value: Float(horizontal.value), unit: .percent)
+        yoga.marginBottom = YGValue(value: Float(bottom.value), unit: .percent)
+        return self
+    }
 
     /**
      Set the individually top, left, bottom and right margins.
@@ -714,6 +781,15 @@ public class Flex {
         yoga.marginLeft = YGValue(left)
         yoga.marginBottom = YGValue(bottom)
         yoga.marginRight = YGValue(right)
+        return self
+    }
+    
+    @discardableResult
+    public func margin(_ top: FPercent, _ left: FPercent, _ bottom: FPercent, _ right: FPercent) -> Flex {
+        yoga.marginTop = YGValue(value: Float(top.value), unit: .percent)
+        yoga.marginLeft = YGValue(value: Float(left.value), unit: .percent)
+        yoga.marginBottom = YGValue(value: Float(bottom.value), unit: .percent)
+        yoga.marginRight = YGValue(value: Float(right.value), unit: .percent)
         return self
     }
 
@@ -915,6 +991,7 @@ public class Flex {
         case spaceBetween
         /// Items are positioned with space before, between, and after the lines
         case spaceAround
+        //case spaceEvenly
     }
     
     /**

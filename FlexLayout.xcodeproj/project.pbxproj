@@ -12,7 +12,6 @@
 		24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */; };
 		24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */; };
 		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
-		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
 		2491CC601FCB933300F3A61C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2491CC5E1FCB932B00F3A61C /* Quick.framework */; };
 		2491CC611FCB933600F3A61C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2491CC5C1FCB931F00F3A61C /* Nimble.framework */; };
 		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
@@ -28,6 +27,7 @@
 		24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* FlexLayout.swift */; };
 		24DAEB991FCB9B0100066520 /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; };
 		24DAEB9B1FCB9B1600066520 /* YogaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24EB77E61FE9C24E00C979AA /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; };
 		24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */; };
 		DF9174771F1D6DC00034632D /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */; };
 		DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */; };
@@ -72,6 +72,10 @@
 		24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectNimbleMatcher.swift; sourceTree = "<group>"; };
 		24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentSpec.swift; sourceTree = "<group>"; };
 		24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsolutionPositionContentSpec.swift; sourceTree = "<group>"; };
+		24515C241FE9BFE500C5E3BB /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24515C261FE9C02500C5E3BB /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24515C281FE9C14000C5E3BB /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
+		24515C2B1FE9C14E00C5E3BB /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2458137E1F4A21CF00CD676B /* PaddingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingSpec.swift; sourceTree = "<group>"; };
 		2491CC5C1FCB931F00F3A61C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		2491CC5E1FCB932B00F3A61C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -86,7 +90,6 @@
 		24DA375A1EF843C500D1AB2F /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
-		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DA37871EF8610400D1AB2F /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = SOURCE_ROOT; };
 		24DAEB981FCB9B0100066520 /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
 		24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentSpec.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EB77E61FE9C24E00C979AA /* YogaKit.framework in Frameworks */,
 				2491CC611FCB933600F3A61C /* Nimble.framework in Frameworks */,
 				2491CC601FCB933300F3A61C /* Quick.framework in Frameworks */,
 				24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */,
@@ -143,6 +147,7 @@
 		24DA37501EF843C500D1AB2F = {
 			isa = PBXGroup;
 			children = (
+				24515C281FE9C14000C5E3BB /* YogaKit.framework */,
 				24DA375C1EF843C500D1AB2F /* Sources */,
 				24DA37671EF843C500D1AB2F /* FlexLayoutTests */,
 				24DA375B1EF843C500D1AB2F /* Products */,
@@ -182,7 +187,6 @@
 				24A91B271F45E24B00AC8B3E /* MarginSpec.swift */,
 				2458137E1F4A21CF00CD676B /* PaddingSpec.swift */,
 				24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */,
-				24DA376A1EF843C500D1AB2F /* Info.plist */,
 			);
 			path = FlexLayoutTests;
 			sourceTree = "<group>";
@@ -190,6 +194,9 @@
 		B5403C6F81C3814B69C05D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24515C2B1FE9C14E00C5E3BB /* yoga.framework */,
+				24515C261FE9C02500C5E3BB /* yoga.framework */,
+				24515C241FE9BFE500C5E3BB /* yoga.framework */,
 				24DAEB981FCB9B0100066520 /* YogaKit.framework */,
 				2491CC5E1FCB932B00F3A61C /* Quick.framework */,
 				2491CC5C1FCB931F00F3A61C /* Nimble.framework */,
@@ -251,6 +258,7 @@
 				24DA37601EF843C500D1AB2F /* Frameworks */,
 				24DA37611EF843C500D1AB2F /* Resources */,
 				2491CC621FCB939300F3A61C /* CopyFiles */,
+				24EB77E71FE9C27000C979AA /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,7 +315,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				249008D41F165D4C00BBE9CD /* Info.plist in Resources */,
 				DF95D9C21F20BD06003073D5 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +327,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24EB77E71FE9C27000C979AA /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/YogaKit.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24DA37551EF843C500D1AB2F /* Sources */ = {
@@ -534,7 +561,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = FlexLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,7 +577,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = FlexLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

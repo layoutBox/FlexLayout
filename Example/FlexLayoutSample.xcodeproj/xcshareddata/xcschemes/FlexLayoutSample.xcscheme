@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "24DA37621EF843C500D1AB2F"
+               BuildableName = "FlexLayoutTests.xctest"
+               BlueprintName = "FlexLayoutTests"
+               ReferencedContainer = "container:../FlexLayout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
