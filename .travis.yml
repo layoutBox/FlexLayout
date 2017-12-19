@@ -3,9 +3,9 @@ osx_image: xcode9.2
 
 env:
   matrix:
-    - SCHEME=FlexLayout       SDK=iphonesimulator11.0
+    - SCHEME=FlexLayout       SDK=iphonesimulator11.2
     - SCHEME=FlexLayout       SDK=iphonesimulator10.3
-    - SCHEME=FlexLayoutSample SDK=iphonesimulator11.0
+    - SCHEME=FlexLayoutSample SDK=iphonesimulator11.2
 
 before_install:
   - rvm use $RVM_RUBY_VERSION
