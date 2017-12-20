@@ -6,4 +6,5 @@ build/
 xcuserdata
 Data/
 Pods/
-Carthage/
+#Carthage/Checkouts
+Carthage/Checkouts/

@@ -21,22 +21,11 @@ platform :ios do
       try_repo_update_on_error: true
     )
 
-    carthage(
-      #frameworks: ["MyFramework1", "MyFramework2"],   # Specify which frameworks to archive (only for the archive command)
-      #output: "MyFrameworkBundle.framework.zip",      # Specify the output archive name (only for the archive command)
-      command: "bootstrap",       # One of: build, bootstrap, update, archive. (default: bootstrap)
-      #dependencies: ["Alamofire", "Notice"],# Specify which dependencies to update or build (only for update and build commands)
-      use_ssh: true,   # Use SSH for downloading GitHub repositories.
-      #use_submodules: false,      # Add dependencies as Git submodules.
-      #use_binaries: true,         # Check out dependency repositories even when prebuilt frameworks exist
-      #no_build: false,  # When bootstrapping Carthage do not build
-      #no_skip_current: false,     # Don't skip building the current project (only for frameworks)
-      #verbose: false,   # Print xcodebuild output inline
-      platform: "iOS",  # Define which platform to build for (one of ‘all’, ‘Mac’, ‘iOS’, ‘watchOS’, ‘tvOS‘, or comma-separated values of the formers except for ‘all’)
-      #configuration: "Release",   # Build configuration to use when building
-      #cache_builds: true,         # By default Carthage will rebuild a dependency regardless of whether its the same resolved version as before.
-      #toolchain: "com.apple.dt.toolchain.Swift_2_3"   # Specify the xcodebuild toolchain
-    )
+    #carthage(
+    #  command: "bootstrap",       # One of: build, bootstrap, update, archive. (default: bootstrap)
+    #  use_ssh: true,   # Use SSH for downloading GitHub repositories.
+    #  platform: "iOS",  # Define which platform to build for (one of ‘all’, ‘Mac’, ‘iOS’, ‘watchOS’, ‘tvOS‘, or comma-separated values of the formers except for ‘all’)
+    #)
   end
 
   lane :build do
