@@ -31,14 +31,14 @@ platform :ios do
   lane :build do
     install
 
-    Dir.chdir("..") do
+    #Dir.chdir("..") do
       swiftlint(
         mode: :lint, 
         config_file: ".swiftlint.yml",
-        executable: "Pods/SwiftLint/swiftlint"
-        #ignore_exit_status: true
+        executable: "Pods/SwiftLint/swiftlint",
+        ignore_exit_status: true
       )
-    end
+    #end
 
     xcodebuild(
       workspace: "FlexLayout.xcworkspace",
