@@ -874,27 +874,36 @@ By applying Margin to an item you specify the offset a certain edge of the item 
 
 **Methods:**
 
-* `marginTop(_ value: CGFloat)`
-* `marginLeft(_ value: CGFloat)`
-* `marginBottom(_ value: CGFloat)`
-* `marginRight(_ value: CGFloat)`
-* `marginStart(_ value: CGFloat)`
-* `marginEnd(_ value: CGFloat)`
-* `marginHorizontal(_ value: CGFloat)`
-* `marginVertical(_ value: CGFloat)`
-* `margin(_ insets: UIEdgeInsets)`  
+* **`marginTop(_ value: CGFloat)`, `marginTop(_ percent: FPercent)`**  
+Top margin specify the offset the top edge of the item should have from it’s closest sibling (item) or parent (container).
+* **`marginLeft(_ value: CGFloat)`, `marginLeft(_ percent: FPercent)`**  
+Left margin specify the offset the left edge of the item should have from it’s closest sibling (item) or parent (container).
+* **`marginBottom(_ value: CGFloat)`, `marginBottom(_ percent: FPercent)`**  
+Bottom margin specify the offset the bottom edge of the item should have from it’s closest sibling (item) or parent (container)
+* **`marginRight(_ value: CGFloat)`, `marginRight(_ percent: FPercent)`**  
+Right margin specify the offset the right edge of the item should have from it’s closest sibling (item) or parent (container).
+* **`marginStart(_ value: CGFloat)`, `marginStart(_ percent: FPercent)`**  
+Set the start margin. In LTR direction, start margin specify the **left** margin. In RTL direction, start margin specify the **right** margin.
+* **`marginEnd(_ value: CGFloat)`, `marginEnd(_ percent: FPercent)`**  
+Set the end margin. In LTR direction, end margin specify the **right** margin. In RTL direction, end margin specify the **left** margin.
+* **`marginHorizontal(_ value: CGFloat)`, `marginHorizontal(_ value: CGFloat)`**  
+Set the left, right, start and end margins to the specified value.
+* **`marginVertical(_ value: CGFloat)`, `marginVertical(_ value: CGFloat)`**  
+Set the top and bottom margins to the specified value.
+* **`margin(_ insets: UIEdgeInsets)`**
 Set all margins using an UIEdgeInsets. This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
-* `margin(_ insets: NSDirectionalEdgeInsets)`  
+* **`margin(_ insets: NSDirectionalEdgeInsets)`**
 Set all margins using an NSDirectionalEdgeInsets. This method is useful to set all margins using iOS 11 `UIView. directionalLayoutMargins` when layouting a view supporting RTL/LTR languages.
-* `margin(_ value: CGFloat) `
-* `margin(_ vertical: CGFloat, _ horizontal: CGFloat)`
-* `margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`
-* `margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) `
+* **`margin(_ value: CGFloat) `**  
+Set all margins to the specified value.
+* **`margin(_ vertical: CGFloat, _ horizontal: CGFloat)`**
+* **`margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`**
+* **`margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat)`**
 
 ###### Usage examples:
 ```swift
   view.flex.margin(20)
-  view.flex.marginBottom(20)
+  view.flex.marginTop(20%).marginLeft(20%)
   view.flex.marginHorizontal(20)
   view.flex.margin(safeAreaInsets)
   view.flex.margin(10, 12, 0, 12)

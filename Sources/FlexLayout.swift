@@ -569,7 +569,7 @@ public class Flex {
     //
     
     /**
-     Set the top margin. Top margin specify the offset the top edge of the item should have from from it’s closest sibling (item) or parent (container).
+     Set the top margin. Top margin specify the offset the top edge of the item should have from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginTop(_ value: CGFloat) -> Flex {
@@ -584,7 +584,7 @@ public class Flex {
     }
     
     /**
-     Set the left margin. Left margin specify the offset the left edge of the item should have from from it’s closest sibling (item) or parent (container).
+     Set the left margin. Left margin specify the offset the left edge of the item should have from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginLeft(_ value: CGFloat) -> Flex {
@@ -599,7 +599,7 @@ public class Flex {
     }
 
     /**
-     Set the bottom margin. Bottom margin specify the offset the bottom edge of the item should have from from it’s closest sibling (item) or parent (container).
+     Set the bottom margin. Bottom margin specify the offset the bottom edge of the item should have from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginBottom(_ value: CGFloat) -> Flex {
@@ -614,7 +614,7 @@ public class Flex {
     }
     
     /**
-     Set the right margin. Right margin specify the offset the right edge of the item should have from from it’s closest sibling (item) or parent (container).
+     Set the right margin. Right margin specify the offset the right edge of the item should have from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginRight(_ value: CGFloat) -> Flex {
@@ -632,8 +632,8 @@ public class Flex {
      Set the start margin.
      
      Depends on the item `LayoutDirection`:
-     * In LTR direction, start margin specify the offset the **left** edge of the item should have from from it’s closest sibling (item) or parent (container).
-     * IN RTL direction, start margin specify the offset the **right** edge of the item should have from from it’s closest sibling (item) or parent (container).
+     * In LTR direction, start margin specify the offset the **left** edge of the item should have from it’s closest sibling (item) or parent (container).
+     * IN RTL direction, start margin specify the offset the **right** edge of the item should have from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginStart(_ value: CGFloat) -> Flex {
@@ -651,8 +651,8 @@ public class Flex {
      Set the end margin.
      
      Depends on the item `LayoutDirection`:
-     * In LTR direction, end margin specify the offset the **right** edge of the item should have from from it’s closest sibling (item) or parent (container).
-     * IN RTL direction, end margin specify the offset the **left** edge of the item should have from from it’s closest sibling (item) or parent (container).
+     * In LTR direction, end margin specify the offset the **right** edge of the item should have from it’s closest sibling (item) or parent (container).
+     * IN RTL direction, end margin specify the offset the **left** edge of the item should have from it’s closest sibling (item) or parent (container).
      */
     @discardableResult
     public func marginEnd(_ value: CGFloat) -> Flex {
