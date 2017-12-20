@@ -1,8 +1,6 @@
 opt_in_rules: # some rules are only opt-in
-  - attributes
   - closure_end_indentation
   - closure_spacing
-  - empty_count
   - explicit_init
   - number_separator
   - operator_usage_whitespace
@@ -16,18 +14,13 @@ disabled_rules: # rule identifiers to exclude from running
   - trailing_whitespace
   - force_cast
   - type_name
-#  - todo
-#  - file_length
-#  - type_body_length
-#  - valid_docs
-#  - cyclomatic_complexity
-#  - nesting
-#  - function_parameter_count
-#  - large_tuple
-#  - variable_name
-#  - empty_parentheses_with_trailing_closure
+  - file_length
+  - type_body_length
+  - cyclomatic_complexity
+  - identifier_name
   - line_length
 
 excluded: # paths to ignore during linting. overridden by `included`.
   - Pods
-  
+  - Carthage
+  - fastlane
