@@ -906,7 +906,6 @@ public class Flex {
         return self
     }
 
-
     /**
      Set all paddings to the specified value.
      */

@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (2.3.5)
+    CFPropertyList (2.3.6)
     activesupport (4.2.10)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -56,7 +56,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     escape (0.0.4)
-    excon (0.59.0)
+    excon (0.60.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     faraday-cookie_jar (0.0.6)
@@ -64,8 +64,8 @@ GEM
       http-cookie (~> 1.0.0)
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
-    fastimage (2.1.0)
-    fastlane (2.69.3)
+    fastimage (2.1.1)
+    fastlane (2.70.2)
       CFPropertyList (>= 2.3, < 3.0.0)
       addressable (>= 2.3, < 3.0.0)
       babosa (>= 1.0.2, < 2.0.0)
@@ -200,7 +200,7 @@ GEM
     word_wrap (1.0.0)
     xcinvoke (0.3.0)
       liferaft (~> 0.0.6)
-    xcodeproj (1.5.2)
+    xcodeproj (1.5.4)
       CFPropertyList (~> 2.3.3)
       claide (>= 1.0.2, < 2.0)
       colored2 (~> 3.1)

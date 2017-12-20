@@ -1,5 +1,5 @@
 # Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
+# All lines starting with a # are ignored when running fastlane
 
 # If you want to automatically update fastlane if a new version is available:
 # update_fastlane
@@ -22,9 +22,9 @@ platform :ios do
     )
 
     #carthage(
-    #  command: "bootstrap",       # One of: build, bootstrap, update, archive. (default: bootstrap)
-    #  use_ssh: true,   # Use SSH for downloading GitHub repositories.
-    #  platform: "iOS",  # Define which platform to build for (one of ‘all’, ‘Mac’, ‘iOS’, ‘watchOS’, ‘tvOS‘, or comma-separated values of the formers except for ‘all’)
+    #  command: "bootstrap",
+    #  use_ssh: true,   
+    #  platform: "iOS", 
     #)
   end
 
@@ -41,7 +41,7 @@ platform :ios do
     #end
 
     xcodebuild(
-      workspace: "FlexLayout.xcworkspace",
+      project: "FlexLayout.xcodeproj",
       scheme: "FlexLayout",
       configuration: "Debug",
       build: true,
