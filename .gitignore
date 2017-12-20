@@ -1,10 +1,16 @@
 # Xcode
 #
 
+.versions
 .build/
-build/
 xcuserdata
 Data/
 Pods/
-#Carthage/Checkouts
-Carthage/Checkouts/
+FlexLayout.xcodeproj/project.xcworkspace/xcuserdata
+
+# Carthage
+Carthage/Build/.*.version
+Carthage/Build/iOS/*.dSYM
+Carthage/Build/iOS/*.bcsymbolmap
+Carthage/Build/tvOS
+Carthage/Checkouts

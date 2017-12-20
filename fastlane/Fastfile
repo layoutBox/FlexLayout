@@ -9,6 +9,7 @@
 fastlane_version "2.29.0"
 
 default_platform :ios
+skip_docs
 
 platform :ios do
   before_all do
