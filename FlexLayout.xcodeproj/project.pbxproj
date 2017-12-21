@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24170ED81FC71484005AF96F /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170ED71FC71484005AF96F /* FlexLayout+Private.swift */; };
 		24170EDB1FC7178F005AF96F /* RectNimbleMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */; };
 		24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */; };
 		24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */; };
 		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
-		249008D41F165D4C00BBE9CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24DA376A1EF843C500D1AB2F /* Info.plist */; };
 		2491CC601FCB933300F3A61C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2491CC5E1FCB932B00F3A61C /* Quick.framework */; };
 		2491CC611FCB933600F3A61C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2491CC5C1FCB931F00F3A61C /* Nimble.framework */; };
 		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
-		24C7D2681FC7A68300268DDA /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C7D2611FC7A68200268DDA /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C7D26B1FC7A68300268DDA /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C7D2641FC7A68200268DDA /* YGLayout.m */; };
-		24C7D26C1FC7A68300268DDA /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C7D2651FC7A68300268DDA /* YGLayoutExtensions.swift */; };
-		24C7D26D1FC7A68300268DDA /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C7D2661FC7A68300268DDA /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C7D26E1FC7A68300268DDA /* UIView+Yoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C7D2671FC7A68300268DDA /* UIView+Yoga.m */; };
-		24C7D2731FC7B93400268DDA /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C7D2631FC7A68200268DDA /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24CC0E401F96807400BEE2CF /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC0E3F1F96807400BEE2CF /* Percent.swift */; };
+		24AE973E1FEAF30A00995987 /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE972E1FEAF30A00995987 /* FlexLayout.swift */; };
+		24AE973F1FEAF30A00995987 /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97301FEAF30A00995987 /* FlexLayout+Enum.swift */; };
+		24AE97401FEAF30A00995987 /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97311FEAF30A00995987 /* FlexLayout+Private.swift */; };
+		24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */; };
+		24AE97421FEAF30A00995987 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97331FEAF30A00995987 /* Percent.swift */; };
+		24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AE97441FEAF30A00995987 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AE97361FEAF30A00995987 /* Info.plist */; };
+		24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97381FEAF30A00995987 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AE97461FEAF30A00995987 /* UIView+Yoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97391FEAF30A00995987 /* UIView+Yoga.m */; };
+		24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973A1FEAF30A00995987 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AE97481FEAF30A00995987 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973B1FEAF30A00995987 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AE97491FEAF30A00995987 /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973C1FEAF30A00995987 /* YGLayout.m */; };
+		24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */; };
 		24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DA375A1EF843C500D1AB2F /* FlexLayout.framework */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
-		24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37871EF8610400D1AB2F /* FlexLayout.swift */; };
 		24DAEB991FCB9B0100066520 /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; };
 		24DAEB9B1FCB9B1600066520 /* YogaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24EB77E61FE9C24E00C979AA /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAEB981FCB9B0100066520 /* YogaKit.framework */; };
 		24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */; };
-		DF9174771F1D6DC00034632D /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */; };
-		DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */; };
-		DF95D9C11F20BD06003073D5 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DF95D9BF1F20BD06003073D5 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF95D9C21F20BD06003073D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF95D9C01F20BD06003073D5 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		24170ED71FC71484005AF96F /* FlexLayout+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Private.swift"; path = "Sources/Impl/FlexLayout+Private.swift"; sourceTree = SOURCE_ROOT; };
 		24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectNimbleMatcher.swift; sourceTree = "<group>"; };
 		24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentSpec.swift; sourceTree = "<group>"; };
 		24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsolutionPositionContentSpec.swift; sourceTree = "<group>"; };
@@ -76,24 +75,24 @@
 		2491CC5C1FCB931F00F3A61C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		2491CC5E1FCB932B00F3A61C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
-		24C7D2611FC7A68200268DDA /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/YogaKit/YGLayout.h; sourceTree = SOURCE_ROOT; };
-		24C7D2631FC7A68200268DDA /* YGLayout+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "Sources/YogaKit/YGLayout+Private.h"; sourceTree = SOURCE_ROOT; };
-		24C7D2641FC7A68200268DDA /* YGLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YGLayout.m; path = Sources/YogaKit/YGLayout.m; sourceTree = SOURCE_ROOT; };
-		24C7D2651FC7A68300268DDA /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = Sources/YogaKit/YGLayoutExtensions.swift; sourceTree = SOURCE_ROOT; };
-		24C7D2661FC7A68300268DDA /* UIView+Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Yoga.h"; path = "Sources/YogaKit/UIView+Yoga.h"; sourceTree = SOURCE_ROOT; };
-		24C7D2671FC7A68300268DDA /* UIView+Yoga.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Yoga.m"; path = "Sources/YogaKit/UIView+Yoga.m"; sourceTree = SOURCE_ROOT; };
-		24CC0E3F1F96807400BEE2CF /* Percent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = Sources/Percent.swift; sourceTree = SOURCE_ROOT; };
+		24AE972E1FEAF30A00995987 /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexLayout.swift; sourceTree = "<group>"; };
+		24AE97301FEAF30A00995987 /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlexLayout+Enum.swift"; sourceTree = "<group>"; };
+		24AE97311FEAF30A00995987 /* FlexLayout+Private.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlexLayout+Private.swift"; sourceTree = "<group>"; };
+		24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FlexLayout.swift"; sourceTree = "<group>"; };
+		24AE97331FEAF30A00995987 /* Percent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Percent.swift; sourceTree = "<group>"; };
+		24AE97351FEAF30A00995987 /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexLayout.h; sourceTree = "<group>"; };
+		24AE97361FEAF30A00995987 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24AE97381FEAF30A00995987 /* UIView+Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Yoga.h"; sourceTree = "<group>"; };
+		24AE97391FEAF30A00995987 /* UIView+Yoga.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Yoga.m"; sourceTree = "<group>"; };
+		24AE973A1FEAF30A00995987 /* YGLayout+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YGLayout+Private.h"; sourceTree = "<group>"; };
+		24AE973B1FEAF30A00995987 /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
+		24AE973C1FEAF30A00995987 /* YGLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGLayout.m; sourceTree = "<group>"; };
+		24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YGLayoutExtensions.swift; sourceTree = "<group>"; };
 		24DA375A1EF843C500D1AB2F /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
-		24DA376A1EF843C500D1AB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24DA37871EF8610400D1AB2F /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = SOURCE_ROOT; };
 		24DAEB981FCB9B0100066520 /* YogaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YogaKit.framework; path = Carthage/Build/iOS/YogaKit.framework; sourceTree = "<group>"; };
 		24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentSpec.swift; sourceTree = "<group>"; };
-		DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Enum.swift"; path = "Sources/Impl/FlexLayout+Enum.swift"; sourceTree = SOURCE_ROOT; };
-		DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = SOURCE_ROOT; };
-		DF95D9BF1F20BD06003073D5 /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/SupportingFiles/FlexLayout.h; sourceTree = SOURCE_ROOT; };
-		DF95D9C01F20BD06003073D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EB77E61FE9C24E00C979AA /* YogaKit.framework in Frameworks */,
 				2491CC611FCB933600F3A61C /* Nimble.framework in Frameworks */,
 				2491CC601FCB933300F3A61C /* Quick.framework in Frameworks */,
 				24DA37641EF843C500D1AB2F /* FlexLayout.framework in Frameworks */,
@@ -118,32 +118,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2429E4BD1F19181F00BBC032 /* Supporting Files */ = {
+		24AE972D1FEAF30A00995987 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DF95D9BF1F20BD06003073D5 /* FlexLayout.h */,
-				DF95D9C01F20BD06003073D5 /* Info.plist */,
+				24AE972E1FEAF30A00995987 /* FlexLayout.swift */,
+				24AE972F1FEAF30A00995987 /* Impl */,
+				24AE97331FEAF30A00995987 /* Percent.swift */,
+				24AE97341FEAF30A00995987 /* SupportingFiles */,
+				24AE97371FEAF30A00995987 /* YogaKit */,
 			);
-			name = "Supporting Files";
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		24C7D2601FC7A65700268DDA /* FlexLayoutYogaKit */ = {
+		24AE972F1FEAF30A00995987 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
-				24C7D2661FC7A68300268DDA /* UIView+Yoga.h */,
-				24C7D2671FC7A68300268DDA /* UIView+Yoga.m */,
-				24C7D2611FC7A68200268DDA /* YGLayout.h */,
-				24C7D2641FC7A68200268DDA /* YGLayout.m */,
-				24C7D2631FC7A68200268DDA /* YGLayout+Private.h */,
-				24C7D2651FC7A68300268DDA /* YGLayoutExtensions.swift */,
+				24AE97301FEAF30A00995987 /* FlexLayout+Enum.swift */,
+				24AE97311FEAF30A00995987 /* FlexLayout+Private.swift */,
+				24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */,
 			);
-			path = FlexLayoutYogaKit;
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		24AE97341FEAF30A00995987 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				24AE97351FEAF30A00995987 /* FlexLayout.h */,
+				24AE97361FEAF30A00995987 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		24AE97371FEAF30A00995987 /* YogaKit */ = {
+			isa = PBXGroup;
+			children = (
+				24AE97381FEAF30A00995987 /* UIView+Yoga.h */,
+				24AE97391FEAF30A00995987 /* UIView+Yoga.m */,
+				24AE973A1FEAF30A00995987 /* YGLayout+Private.h */,
+				24AE973B1FEAF30A00995987 /* YGLayout.h */,
+				24AE973C1FEAF30A00995987 /* YGLayout.m */,
+				24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */,
+			);
+			path = YogaKit;
 			sourceTree = "<group>";
 		};
 		24DA37501EF843C500D1AB2F = {
 			isa = PBXGroup;
 			children = (
-				24DA375C1EF843C500D1AB2F /* Sources */,
+				24AE972D1FEAF30A00995987 /* Sources */,
 				24DA37671EF843C500D1AB2F /* FlexLayoutTests */,
 				24DA375B1EF843C500D1AB2F /* Products */,
 				B5403C6F81C3814B69C05D0B /* Frameworks */,
@@ -159,19 +181,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		24DA375C1EF843C500D1AB2F /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				24DA37871EF8610400D1AB2F /* FlexLayout.swift */,
-				24CC0E3F1F96807400BEE2CF /* Percent.swift */,
-				DF9174751F1D6DA20034632D /* Impl */,
-				24C7D2601FC7A65700268DDA /* FlexLayoutYogaKit */,
-				2429E4BD1F19181F00BBC032 /* Supporting Files */,
-			);
-			name = Sources;
-			path = FlexLayout;
-			sourceTree = "<group>";
-		};
 		24DA37671EF843C500D1AB2F /* FlexLayoutTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +191,6 @@
 				24A91B271F45E24B00AC8B3E /* MarginSpec.swift */,
 				2458137E1F4A21CF00CD676B /* PaddingSpec.swift */,
 				24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */,
-				24DA376A1EF843C500D1AB2F /* Info.plist */,
 			);
 			path = FlexLayoutTests;
 			sourceTree = "<group>";
@@ -197,16 +205,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DF9174751F1D6DA20034632D /* Impl */ = {
-			isa = PBXGroup;
-			children = (
-				DF9174761F1D6DC00034632D /* FlexLayout+Enum.swift */,
-				24170ED71FC71484005AF96F /* FlexLayout+Private.swift */,
-				DF9174781F1D6DEA0034632D /* UIView+FlexLayout.swift */,
-			);
-			name = Impl;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -214,10 +212,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF95D9C11F20BD06003073D5 /* FlexLayout.h in Headers */,
-				24C7D26D1FC7A68300268DDA /* UIView+Yoga.h in Headers */,
-				24C7D2731FC7B93400268DDA /* YGLayout+Private.h in Headers */,
-				24C7D2681FC7A68300268DDA /* YGLayout.h in Headers */,
+				24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */,
+				24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */,
+				24AE97481FEAF30A00995987 /* YGLayout.h in Headers */,
+				24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +249,7 @@
 				24DA37601EF843C500D1AB2F /* Frameworks */,
 				24DA37611EF843C500D1AB2F /* Resources */,
 				2491CC621FCB939300F3A61C /* CopyFiles */,
+				24EB77E71FE9C27000C979AA /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,8 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				249008D41F165D4C00BBE9CD /* Info.plist in Resources */,
-				DF95D9C21F20BD06003073D5 /* Info.plist in Resources */,
+				24AE97441FEAF30A00995987 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,19 +319,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24EB77E71FE9C27000C979AA /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/YogaKit.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24DA37551EF843C500D1AB2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF9174791F1D6DEA0034632D /* UIView+FlexLayout.swift in Sources */,
-				24CC0E401F96807400BEE2CF /* Percent.swift in Sources */,
-				DF9174771F1D6DC00034632D /* FlexLayout+Enum.swift in Sources */,
-				24C7D26B1FC7A68300268DDA /* YGLayout.m in Sources */,
-				24C7D26E1FC7A68300268DDA /* UIView+Yoga.m in Sources */,
-				24C7D26C1FC7A68300268DDA /* YGLayoutExtensions.swift in Sources */,
-				24170ED81FC71484005AF96F /* FlexLayout+Private.swift in Sources */,
-				24DA37881EF8610400D1AB2F /* FlexLayout.swift in Sources */,
+				24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */,
+				24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */,
+				24AE97421FEAF30A00995987 /* Percent.swift in Sources */,
+				24AE97401FEAF30A00995987 /* FlexLayout+Private.swift in Sources */,
+				24AE973F1FEAF30A00995987 /* FlexLayout+Enum.swift in Sources */,
+				24AE97491FEAF30A00995987 /* YGLayout.m in Sources */,
+				24AE97461FEAF30A00995987 /* UIView+Yoga.m in Sources */,
+				24AE973E1FEAF30A00995987 /* FlexLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,8 +551,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(SRCROOT)/Carthage/Build/iOS/**",
 				);
-				INFOPLIST_FILE = FlexLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,8 +568,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(SRCROOT)/Carthage/Build/iOS/**",
 				);
-				INFOPLIST_FILE = FlexLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
