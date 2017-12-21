@@ -7,6 +7,39 @@
 
 # Change Log
 
+## [1.2.2](https://github.com/layoutBox/FlexLayout/releases/tag/1.2.2)
+Released on 2017-12-20
+
+* Add margins methods taking percentage parameters:
+
+	* **`marginTop(_ percent: FPercent)`**  
+	Top margin specify the offset the top edge of the item should have from it’s closest sibling (item) or parent (container).
+	* **`marginLeft(_ percent: FPercent)`**  
+	Left margin specify the offset the left edge of the item should have from it’s closest sibling (item) or parent (container).
+	* **`marginBottom(_ percent: FPercent)`**  
+	Bottom margin specify the offset the bottom edge of the item should have from it’s closest sibling (item) or parent (container)
+	* **`marginRight(_ percent: FPercent)`**  
+	Right margin specify the offset the right edge of the item should have from it’s closest sibling (item) or parent (container).
+	* **`marginStart(_ percent: FPercent)`**  
+	Set the start margin. In LTR direction, start margin specify the **left** margin. In RTL direction, start margin specify the **right** margin.
+	* **`marginEnd(_ percent: FPercent)`**  
+	Set the end margin. In LTR direction, end margin specify the **right** margin. In RTL direction, end margin specify the **left** margin.
+	* **`marginHorizontal(_ percent: FPercent)`**  
+	Set the left, right, start and end margins to the specified value.
+	* **`marginVertical(_ percent: FPercent)`**  
+	Set the top and bottom margins to the specified value.
+	
+	###### Usage examples:
+	```swift
+	  view.flex.margin(20%)
+	  view.flex.marginTop(20%).marginLeft(20%)
+	  view.flex.marginHorizontal(10%)
+	```
+  
+	* Added by [Luc Dion](https://github.com/layoutBox) in Pull Request [#49](https://github.com/layoutBox/FlexLayout/pull/49) 
+
+
+
 ## [1.2.1](https://github.com/layoutBox/FlexLayout/releases/tag/1.2.1)
 Released on 2017-11-23
 

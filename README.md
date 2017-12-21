@@ -886,9 +886,9 @@ Right margin specify the offset the right edge of the item should have from itâ€
 Set the start margin. In LTR direction, start margin specify the **left** margin. In RTL direction, start margin specify the **right** margin.
 * **`marginEnd(_ value: CGFloat)`, `marginEnd(_ percent: FPercent)`**  
 Set the end margin. In LTR direction, end margin specify the **right** margin. In RTL direction, end margin specify the **left** margin.
-* **`marginHorizontal(_ value: CGFloat)`, `marginHorizontal(_ value: CGFloat)`**  
+* **`marginHorizontal(_ value: CGFloat)`, `marginHorizontal(_ percent: FPercent)`**  
 Set the left, right, start and end margins to the specified value.
-* **`marginVertical(_ value: CGFloat)`, `marginVertical(_ value: CGFloat)`**  
+* **`marginVertical(_ value: CGFloat)`, `marginVertical(_ percent: FPercent)`**  
 Set the top and bottom margins to the specified value.
 * **`margin(_ insets: UIEdgeInsets)`**
 Set all margins using an UIEdgeInsets. This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
