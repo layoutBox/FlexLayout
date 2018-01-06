@@ -383,22 +383,22 @@ It is possible to access the flex items's UIView using `flex.view`. This is part
 This example creates a flexbox container and sets its alpha to 0.8.
 
 ```swift
-    flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
-        flex.createBox().width(50).height(50).define({ (flex) in
+    view.flex.direction(.row).padding(20).alignItems(.center).define { (flex) in
+        flex.createBox().width(50).height(50).define { (flex) in
             flex.view.alpha = 0.8
-        }}
-    })
+        }
+    }
 ``` 
 
 Another possible solution:
 
 ```swift
-    flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
+    view.flex.direction(.row).padding(20).alignItems(.center).define { (flex) in
         let container = UIView()
         container.alpha = 0.8
         
         flex.addChild(container).width(50).height(50)
-    })
+    }
 ``` 
 <br>
 
