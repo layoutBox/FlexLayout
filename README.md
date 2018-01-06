@@ -384,7 +384,7 @@ This example creates a flexbox container and sets its alpha to 0.8.
 
 ```swift
     view.flex.direction(.row).padding(20).alignItems(.center).define { (flex) in
-        flex.createBox().width(50).height(50).define { (flex) in
+        flex.addItem().width(50).height(50).define { (flex) in
             flex.view.alpha = 0.8
         }
     }
@@ -397,7 +397,7 @@ Another possible solution:
         let container = UIView()
         container.alpha = 0.8
         
-        flex.addChild(container).width(50).height(50)
+        flex.addItem(container).width(50).height(50)
     }
 ``` 
 <br>
