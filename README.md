@@ -144,42 +144,42 @@ init() {
         flex.addItem(episodeImageView).grow(1).backgroundColor(.gray)
         
         // Summary row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(summaryPopularityLabel).grow(1)
             
-            flex.addItem().direction(.row).justifyContent(.spaceBetween).grow(2).define({ (flex) in
+            flex.addItem().direction(.row).justifyContent(.spaceBetween).grow(2).define { (flex) in
                 flex.addItem(yearLabel)
                 flex.addItem(ratingLabel)
                 flex.addItem(lengthLabel)
-            })
+            }
             
             flex.addItem().width(100).height(1).grow(1)
-        })
+        }
         
         // Title row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(episodeIdLabel)
             flex.addItem(episodeTitleLabel).marginLeft(20)
-        })
+        }
         
         // Description section
-        flex.addItem().paddingHorizontal(paddingHorizontal).define({ (flex) in
+        flex.addItem().paddingHorizontal(paddingHorizontal).define { (flex) in
             flex.addItem(descriptionLabel)
             flex.addItem(castLabel)
             flex.addItem(creatorsLabel)
-        })
+        }
         
         // Action row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(addActionView)
             flex.addItem(shareActionView)
-        })
+        }
         
         // Tabs row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(episodesTabView)
             flex.addItem(moreTabView)
-        })
+        }
         
         // Shows TableView
         flex.addItem(showsTableView).grow(1)
