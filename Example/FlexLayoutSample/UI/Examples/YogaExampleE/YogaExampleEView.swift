@@ -29,10 +29,10 @@ class YogaExampleEView: BaseView {
         rootFlexContainer.flex.define { (flex) in
             flex.addItem(imageView).grow(1)
             
-            flex.addItem().direction(.row).padding(20).alignItems(.center).define({ (flex) in
+            flex.addItem().direction(.row).padding(20).alignItems(.center).define { (flex) in
                 flex.addItem().size(50).backgroundColor(.flexLayoutColor)
                 flex.addItem().height(25).marginStart(20).grow(1).backgroundColor(.black)
-            })
+            }
         }
         addSubview(rootFlexContainer)
     }

@@ -39,10 +39,10 @@ class MethodCell: UITableViewCell {
 
         // Use contentView as the root flex container
         contentView.flex.padding(8).define { (flex) in
-            flex.addItem().direction(.row).define({ (flex) in
+            flex.addItem().direction(.row).define { (flex) in
                 flex.addItem(iconImageView).size(30)
                 flex.addItem(nameLabel).marginLeft(padding).grow(1)
-            })
+            }
 
             flex.addItem(descriptionLabel).marginTop(padding)
         }
