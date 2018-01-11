@@ -291,7 +291,7 @@ The flex layout is constituted of parent container referred as **flex container*
 When working with StackViews you need to think in terms of two axes — the main axis and the cross axis. The main axis is defined by StackView's `direction` property, and the cross axis runs perpendicular to it.
 
 | StackView direction | Axes |
-|---------------------|:------------------:|---------|
+|---------------------|:------------------:|
 | **column** (default) 	| <img src="docs_markdown/images/axis-column.png" width="200"/> |
 | **row** | <img src="docs_markdown/images/axis-row.png" width="200"/>|
 
