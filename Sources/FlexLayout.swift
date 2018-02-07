@@ -26,7 +26,7 @@ import UIKit
     label.flex.margin(10)
  ```
  */
-public class Flex {
+public final class Flex {
     
     //
     // MARK: Properties
