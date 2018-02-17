@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "FlexLayout"
-  s.version      = "1.2.2"
+  s.version      = "1.2.3"
   s.summary      = "FlexLayout"
 
   s.homepage     = "https://github.com/lucdion/FlexLayout.git"
@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources/**/*.{swift,h,m}"
 
   # Latest master commit id.
-  s.dependency "Yoga"
+  s.dependency "Yoga", "1.6"
 end
