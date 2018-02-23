@@ -7,6 +7,22 @@
 
 # Change Log
 
+## [1.3.0](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.0)
+Released on 2018-02-23
+
+####Integrates Yoga's sources into FlexLayout:
+
+That was not my first choice, but Yoga's repository is diverging from our iOS needs.
+
+Reasons:
+
+* Yoga is now C++ and not C anymore. This was causing issues when built into frameworks.
+* FlexLayout Carthage support was not really great using Yoga's repository. The previous solution was already using a fork of Yoga's repo, but there was some issues while deploying app to the App store (embedding frameworks).
+  
+	* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#61](https://github.com/layoutBox/FlexLayout/pull/61) 
+
+
+
 ## [1.2.2](https://github.com/layoutBox/FlexLayout/releases/tag/1.2.2)
 Released on 2017-12-20
 
