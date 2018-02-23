@@ -636,7 +636,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -650,7 +649,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
