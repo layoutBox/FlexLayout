@@ -1,14 +1,16 @@
 PODS:
-  - FlexLayout (1.2.1):
-    - Yoga
-  - PinLayout (1.5.1)
+  - FlexLayout (1.2.4)
+  - Nimble (7.0.3)
+  - PinLayout (1.5.9)
+  - Quick (1.2.0)
   - Reveal-SDK (10)
-  - SwiftLint (0.24.0)
-  - Yoga (1.6.0)
+  - SwiftLint (0.25.0)
 
 DEPENDENCIES:
   - FlexLayout (from `./`)
+  - Nimble
   - PinLayout
+  - Quick
   - Reveal-SDK (~> 10)
   - SwiftLint
 
@@ -17,12 +19,13 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  FlexLayout: e9bbc0cb97e65fc6e70312b820a214cf27892486
-  PinLayout: 0838d31bf175263d1bf297ea2465a1e5cb2a40b0
+  FlexLayout: f274aa4829f3591fbbafffe79de155f44cb57862
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  PinLayout: b2ebf8622b28e82b6e1216ab4e4a0a8d082214fe
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Reveal-SDK: 7869ddf1f902cabbb07a1f0dd06bd25861a126f7
-  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
-  Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
+  SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: ce3a8df2d574988aef93ab8ab9d0f85040546eca
+PODFILE CHECKSUM: 17e434c5ea0e4a80a0221e86e99c1962e47f6a3d
 
 COCOAPODS: 1.3.1

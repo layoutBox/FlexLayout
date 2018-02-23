@@ -8,14 +8,9 @@
  */
 
 #import <UIKit/UIKit.h>
-
-#if defined(XCODE_PROJECT_BUILD) || defined(FLEXLAYOUT_USE_CARTHAGE) || defined(USE_YOGAKIT_PACKAGE)
-    #import <YogaKit/Yoga.h>
-    #import <YogaKit/YGEnums.h>
-#else
-    #import <Yoga/Yoga.h>
-    #import <Yoga/YGEnums.h>
-#endif
+#import "YGEnums.h"
+#import "Yoga.h"
+#import "YGMacros.h"
 
 YG_EXTERN_C_BEGIN
 
@@ -28,7 +23,7 @@ YG_EXTERN_C_END
 
 typedef NS_OPTIONS(NSInteger, YGDimensionFlexibility) {
   YGDimensionFlexibilityFlexibleWidth = 1 << 0,
-  YGDimensionFlexibilityFlexibleHeigth = 1 << 1,
+  YGDimensionFlexibilityFlexibleHeight = 1 << 1,
 };
 
 @interface YGLayout : NSObject

@@ -1,21 +1,27 @@
 
-Pod::Spec.new do |s|
-  s.name         = "FlexLayout"
-  s.version      = "1.2.3"
-  s.summary      = "FlexLayout"
+Pod::Spec.new do |spec|
+  spec.name         = "FlexLayout"
+  spec.version      = "1.2.4"
+  spec.summary      = "FlexLayout"
 
-  s.homepage     = "https://github.com/lucdion/FlexLayout.git"
-  s.license      = "BSD 3-clause"
+  spec.homepage     = "https://github.com/lucdion/FlexLayout.git"
+  spec.license      = "BSD 3-clause"
   
-  s.author             = { 
+  spec.author             = { 
     "Luc Dion" => "ldion@mirego.com"
   }
   
-  s.platform     = :ios, "9.0"
+  spec.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/lucdion/FlexLayout.git", :tag => "#{s.version}" }
-  s.source_files  = "Sources/**/*.{swift,h,m}"
+  spec.source       = { :git => "https://github.com/lucdion/FlexLayout.git", :tag => "#{spec.version}" }
+  spec.source_files  = "Sources/**/*.{swift,h,m,cpp,c}"
 
-  # Latest master commit id.
-  s.dependency "Yoga", "1.6"
+  #spec.compiler_flags = [
+  #    '-fno-omit-frame-pointer',
+  #    '-fexceptions',
+  #    '-Wall',
+  #    '-Werror',
+  #    '-std=c11',
+  #    '-fPIC'
+  #]
 end
