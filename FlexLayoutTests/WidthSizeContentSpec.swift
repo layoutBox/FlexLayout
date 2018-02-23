@@ -18,9 +18,6 @@ class WidthSizeContentSpec: QuickSpec {
         var viewController: UIViewController!
         var rootFlexContainer: UIView!
         var aView: UIView!
-        var bView: UIView!
-        var cView: UIView!
-        var dView: UIView!
 
         beforeSuite {
         }
@@ -33,9 +30,6 @@ class WidthSizeContentSpec: QuickSpec {
             viewController.view.addSubview(rootFlexContainer)
             
             aView = UIView()
-            bView = UIView()
-            cView = UIView()
-            dView = UIView()
         }
         
         describe("basis") {

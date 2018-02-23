@@ -7,7 +7,7 @@ before_install:
   - gem install xcpretty-travis-formatter;
   #- gem install cocoapods -v '1.3.1' --no-document --quiet;
   # - gem install slather --no-document --quiet;  
-  #- pod install --repo-update;
+  - bundle exec pod install --repo-update;
   # - carthage bootstrap --verbose --platform iOS --cache-builds --use-ssh 
 
 script:

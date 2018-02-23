@@ -291,7 +291,7 @@ The flex layout is constituted of parent container referred as **flex container*
 When working with StackViews you need to think in terms of two axes — the main axis and the cross axis. The main axis is defined by StackView's `direction` property, and the cross axis runs perpendicular to it.
 
 | StackView direction | Axes |
-|---------------------|:------------------:|
+|---------------------|:------------------:|---------|
 | **column** (default) 	| <img src="docs_markdown/images/axis-column.png" width="200"/> |
 | **row** | <img src="docs_markdown/images/axis-row.png" width="200"/>|
 
@@ -1094,8 +1094,8 @@ github "layoutBox/FlexLayout"
 ```
 
 2. Run `carthage update` to build frameworks.
-3. Add built `FlexLayout.framework` and `YogaKit.framework` frameworks in your Xcode project in the **Embedded Binaries** section. You should have this once it is done: <img src="docs_markdown/images/carthage_frameworks.png" width="500"/>
-4. **Add the preprocessor macro `FLEXLAYOUT_USE_CARTHAGE` in your Xcode project**. Target > Build Settings > Preprocessor Macros. add `FLEXLAYOUT_USE_CARTHAGE` in the **Debug** and the **Release** entry.
+3. Add built `FlexLayout.framework` in your Xcode project in the **Embedded Binaries** section. 
+
 
 <br/>
 

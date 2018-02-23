@@ -14,10 +14,6 @@
 
 import UIKit
 
-#if !XCODE_PROJECT_BUILD
-    import yoga
-#endif
-
 private var flexLayoutAssociatedObjectHandle = 72_399_923
 
 public extension UIView {

@@ -44,7 +44,7 @@ platform :ios do
     xcodebuild(
       project: "FlexLayout.xcodeproj",
       scheme: "FlexLayout",
-      configuration: "Debug",
+      configuration: "Release",
       build: true,
       clean: true
     )
@@ -52,7 +52,7 @@ platform :ios do
     #xcodebuild(
     #  workspace: "FlexLayout.xcworkspace",
     #  scheme: "FlexLayoutTVOS",
-    #  configuration: "Debug",
+    #  configuration: "Release",
     #  build: true,
     #  clean: true
     #)
@@ -60,7 +60,7 @@ platform :ios do
     xcodebuild(
       workspace: "FlexLayout.xcworkspace",
       scheme: "FlexLayoutSample",
-      configuration: "Debug",
+      configuration: "Release",
       build: true,
       clean: true,
       destination: "generic/platform=iOS\" CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=\""
@@ -69,7 +69,7 @@ platform :ios do
 
   lane :tests do
     scan(scheme: "FlexLayout", 
-         project: "FlexLayout.xcodeproj")
+         workspace: "FlexLayout.xcworkspace")
   end
 
   lane :doc do 

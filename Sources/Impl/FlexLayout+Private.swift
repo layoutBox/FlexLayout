@@ -8,10 +8,6 @@
 
 import UIKit
 
-#if !XCODE_PROJECT_BUILD
-    import yoga
-#endif
-
 extension Flex {
     func valueOrUndefined(_ value: CGFloat?) -> YGValue {
         if let value = value {

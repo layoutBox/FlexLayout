@@ -14,10 +14,6 @@
 
 import UIKit
 
-#if !XCODE_PROJECT_BUILD
-    import yoga
-#endif
-
 /**
  FlexLayout interface.
  
@@ -108,7 +104,7 @@ public final class Flex {
         if case .fitContainer = mode {
             yoga.applyLayout(preservingOrigin: true)
         } else {
-            yoga.applyLayout(preservingOrigin: true, dimensionFlexibility: mode == .adjustWidth ? YGDimensionFlexibility.flexibleWidth : YGDimensionFlexibility.flexibleHeigth)
+            yoga.applyLayout(preservingOrigin: true, dimensionFlexibility: mode == .adjustWidth ? YGDimensionFlexibility.flexibleWidth : YGDimensionFlexibility.flexibleHeight)
         }
     }
     
