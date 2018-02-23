@@ -1094,8 +1094,8 @@ github "layoutBox/FlexLayout"
 ```
 
 2. Run `carthage update` to build frameworks.
-3. Add built `FlexLayout.framework` and `YogaKit.framework` frameworks in your Xcode project in the **Embedded Binaries** section. You should have this once it is done: <img src="docs_markdown/images/carthage_frameworks.png" width="500"/>
-4. **Add the preprocessor macro `FLEXLAYOUT_USE_CARTHAGE` in your Xcode project**. Target > Build Settings > Preprocessor Macros. add `FLEXLAYOUT_USE_CARTHAGE` in the **Debug** and the **Release** entry.
+3. Add built `FlexLayout.framework` in your Xcode project in the **Embedded Binaries** section. 
+
 
 <br/>
 
