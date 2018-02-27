@@ -7,6 +7,25 @@
 
 # Change Log
 
+## [1.3.2](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.1)
+Released on 2018-02-27
+
+* Update Yoga core to latest master
+   * Yoga core updated to facebook/yoga@295d111
+   * Yoga core tests and their buck configuration added, see core-tests folder
+   * Add buck tests to CI config
+   * Added by [Alexey Zinchenko](https://github.com/zintus) in Pull Request [#62](https://github.com/layoutBox/FlexLayout/pull/62) 
+
+
+## [1.3.1](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.1)
+Released on 2018-02-23
+
+* Integrates Yoga's sources into FlexLayout
+
+	* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#61](https://github.com/layoutBox/FlexLayout/pull/61) 
+
+
+
 ## [1.2.2](https://github.com/layoutBox/FlexLayout/releases/tag/1.2.2)
 Released on 2017-12-20
 
