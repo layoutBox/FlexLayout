@@ -1,7 +1,14 @@
 language: objective-c
 osx_image: xcode9.2
 
+cache:
+  directories:
+  - buck-out/cache
+
 before_install:
+  # Update homebrew and ensure our bundle
+  - brew update && brew bundle
+
   # - rvm use $RVM_RUBY_VERSION
   - bundle install
   - gem install xcpretty-travis-formatter;
@@ -11,6 +18,7 @@ before_install:
   # - carthage bootstrap --verbose --platform iOS --cache-builds --use-ssh 
 
 script:
+  - buck test :yoga
   - set -o pipefail && bundle exec fastlane travis
 
 after_success:
