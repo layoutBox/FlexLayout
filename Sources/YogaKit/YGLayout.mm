@@ -1,10 +1,8 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 #import "YGLayout+Private.h"
@@ -118,12 +116,12 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
 
 YGValue YGPointValue(CGFloat value)
 {
-  return (YGValue) { .value = value, .unit = YGUnitPoint };
+  return (YGValue) { .value = (YGUnit) value, .unit = (YGUnit) YGUnitPoint };
 }
 
 YGValue YGPercentValue(CGFloat value)
 {
-  return (YGValue) { .value = value, .unit = YGUnitPercent };
+  return (YGValue) { .value = (YGUnit) value, .unit = YGUnitPercent };
 }
 
 static YGConfigRef globalConfig;
@@ -339,8 +337,8 @@ static YGSize YGMeasureView(
   }];
 
   return (YGSize) {
-    .width = YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode),
-    .height = YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode),
+    .width = (YGUnit) YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode),
+    .height = (YGUnit) YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode),
   };
 }
 
@@ -390,7 +388,7 @@ static void YGAttachNodesFromViewHierachy(UIView *const view)
 
     NSMutableArray<UIView *> *subviewsToInclude = [[NSMutableArray alloc] initWithCapacity:view.subviews.count];
     for (UIView *subview in view.subviews) {
-      if (subview.yoga.isIncludedInLayout) {
+      if (subview.yoga.isEnabled && subview.yoga.isIncludedInLayout) {
         [subviewsToInclude addObject:subview];
       }
     }
