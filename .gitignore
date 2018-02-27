@@ -14,3 +14,11 @@ Carthage/Build/iOS/*.dSYM
 Carthage/Build/iOS/*.bcsymbolmap
 Carthage/Build/tvOS
 Carthage/Checkouts
+
+# Buck
+/buck-cache/
+/buck-out/
+/.buckconfig.local
+/.buckd
+/gentest/test.html
+.buckversion
