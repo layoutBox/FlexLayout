@@ -34,7 +34,7 @@ cxx_library(
 
 cxx_test(
     name = "YogaTests",
-    srcs = glob(["Sources/yoga-tests/*.cpp"]),
+    srcs = glob(["core-tests/*.cpp"]),
     compiler_flags = TEST_COMPILER_FLAGS,
     contacts = ["emilsj@fb.com"],
     visibility = ["PUBLIC"],
