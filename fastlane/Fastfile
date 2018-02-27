@@ -68,7 +68,7 @@ platform :ios do
   end
 
   lane :tests do
-    scan(scheme: "FlexLayout", 
+    scan(scheme: "FlexLayoutSample", 
          workspace: "FlexLayout.xcworkspace")
   end
 
