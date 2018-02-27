@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "FlexLayout"
-  spec.version      = "1.2.4"
+  spec.version      = "1.3.1"
   spec.summary      = "FlexLayout"
 
   spec.homepage     = "https://github.com/lucdion/FlexLayout.git"
