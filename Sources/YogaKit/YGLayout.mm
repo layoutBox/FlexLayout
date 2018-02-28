@@ -116,12 +116,12 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
 
 YGValue YGPointValue(CGFloat value)
 {
-  return (YGValue) { .value = (YGUnit) value, .unit = (YGUnit) YGUnitPoint };
+  return (YGValue) { .value = (float) value, .unit = (YGUnit) YGUnitPoint };
 }
 
 YGValue YGPercentValue(CGFloat value)
 {
-  return (YGValue) { .value = (YGUnit) value, .unit = YGUnitPercent };
+  return (YGValue) { .value = (float) value, .unit = YGUnitPercent };
 }
 
 static YGConfigRef globalConfig;
@@ -337,8 +337,8 @@ static YGSize YGMeasureView(
   }];
 
   return (YGSize) {
-    .width = (YGUnit) YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode),
-    .height = (YGUnit) YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode),
+    .width = (float) YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode),
+    .height = (float) YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode),
   };
 }
 

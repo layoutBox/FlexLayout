@@ -788,11 +788,17 @@ bool YGLayoutNodeInternal(const YGNodeRef node,
                           const char *reason,
                           const YGConfigRef config);
 
-bool YGFloatsEqual(const float a, const float b) {
+bool YGFloatsEqualWithPrecision(const float a, const float b, const float precision) {
+  assert(precision > 0);
+
   if (YGFloatIsUndefined(a)) {
     return YGFloatIsUndefined(b);
   }
-  return fabs(a - b) < 0.0001f;
+  return fabs(a - b) < precision;
+}
+
+bool YGFloatsEqual(const float a, const float b) {
+  return YGFloatsEqualWithPrecision(a, b, 0.0001f);
 }
 
 static void YGNodePrintInternal(const YGNodeRef node,
@@ -3142,12 +3148,13 @@ float YGRoundValueToPixelGrid(const float value,
                               const float pointScaleFactor,
                               const bool forceCeil,
                               const bool forceFloor) {
+  const float roundingError = fmax(0.0001, 0.01 * pointScaleFactor);
   float scaledValue = value * pointScaleFactor;
   float fractial = fmodf(scaledValue, 1.0);
-  if (YGFloatsEqual(fractial, 0)) {
+  if (YGFloatsEqualWithPrecision(fractial, 0.0, roundingError)) {
     // First we check if the value is already rounded
     scaledValue = scaledValue - fractial;
-  } else if (YGFloatsEqual(fractial, 1.0)) {
+  } else if (YGFloatsEqualWithPrecision(fractial, 1.0, roundingError)) {
     scaledValue = scaledValue - fractial + 1.0;
   } else if (forceCeil) {
     // Next we check if we need to use forced rounding
@@ -3157,7 +3164,7 @@ float YGRoundValueToPixelGrid(const float value,
   } else {
     // Finally we just round the value
     scaledValue = scaledValue - fractial +
-        (fractial > 0.5f || YGFloatsEqual(fractial, 0.5f) ? 1.0f : 0.0f);
+        (fractial > 0.5f || YGFloatsEqualWithPrecision(fractial, 0.5f, roundingError) ? 1.0f : 0.0f);
   }
   return scaledValue / pointScaleFactor;
 }
