@@ -13,7 +13,7 @@ TEST(YogaTest, pixel_grid_rounding_table) {
   YGConfigSetPointScaleFactor(config, kPointScale);
 
   const float kSeparatorHeight = 1 / kPointScale;
-  const float kCellContentHeight = 100.5;
+  const float kCellContentHeight = 44.5;
   const int kCellsCount = 100;
 
   const YGNodeRef root = YGNodeNewWithConfig(config);
