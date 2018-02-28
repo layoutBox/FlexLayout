@@ -337,8 +337,8 @@ static YGSize YGMeasureView(
   }];
 
   return (YGSize) {
-    .width = (YGUnit) YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode),
-    .height = (YGUnit) YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode),
+    .width = (float) YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode),
+    .height = (float) YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode),
   };
 }
 
