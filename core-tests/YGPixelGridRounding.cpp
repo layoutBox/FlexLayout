@@ -1,7 +1,11 @@
 #include <gtest/gtest.h>
 #include <yoga/Yoga.h>
 
-// This tests
+// This test scrutinize next behaviours:
+// - pixel grid snapping in 1e4..0 coordinate range
+// - ability to layout nodes with smallest possible dimensions (one pixel separators)
+// - providing text node layout with bounds strictly larger than sized
+
 TEST(YogaTest, pixel_grid_rounding_table) {
   const float kPointScale = 3;
 
