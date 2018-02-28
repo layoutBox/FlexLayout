@@ -19,10 +19,15 @@ TEST(YogaTest, rounding_value) {
   ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(5.999999, 2.0, false, true));
 
   // Test that numbers with fraction are rounded correctly accounting for ceil/floor flags
-  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(6.01, 2.0, false, false));
-  ASSERT_FLOAT_EQ(6.5, YGRoundValueToPixelGrid(6.01, 2.0, true, false));
-  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(6.01, 2.0, false, true));
-  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(5.99, 2.0, false, false));
-  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(5.99, 2.0, true, false));
-  ASSERT_FLOAT_EQ(5.5, YGRoundValueToPixelGrid(5.99, 2.0, false, true));
+  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(6.1, 2.0, false, false));
+  ASSERT_FLOAT_EQ(6.5, YGRoundValueToPixelGrid(6.1, 2.0, true, false));
+  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(6.1, 2.0, false, true));
+  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(5.9, 2.0, false, false));
+  ASSERT_FLOAT_EQ(6.0, YGRoundValueToPixelGrid(5.9, 2.0, true, false));
+  ASSERT_FLOAT_EQ(5.5, YGRoundValueToPixelGrid(5.9, 2.0, false, true));
+
+  // Are we able to treat value as rounded for reasonably large number?
+  ASSERT_FLOAT_EQ(527.6666666, YGRoundValueToPixelGrid(527.666, 3.0, false, true));
+  ASSERT_FLOAT_EQ(527.6666666, YGRoundValueToPixelGrid(527.666, 3.0, true, false));
+  ASSERT_FLOAT_EQ(527.6666666, YGRoundValueToPixelGrid(527.666, 3.0, true, true));
 }
