@@ -31,7 +31,7 @@ public final class Flex {
     /**
      Flex items's UIView.
     */
-    private weak var view: UIView?
+    private(set) weak var view: UIView?
     private let yoga: YGLayout
     
     /**
