@@ -31,7 +31,7 @@ public final class Flex {
     /**
      Flex items's UIView.
     */
-    public let view: UIView
+    private(set) weak var view: UIView?
     private let yoga: YGLayout
     
     /**
@@ -73,8 +73,12 @@ public final class Flex {
      */
     @discardableResult
     public func addItem(_ view: UIView) -> Flex {
-        self.view.addSubview(view)
-        return view.flex
+        if let host = self.view {
+            host.addSubview(view)
+            return view.flex
+        } else {
+            preconditionFailure("Trying to modify deallocated host view")
+        }
     }
 
     /**
@@ -954,8 +958,12 @@ public final class Flex {
     */
     @discardableResult
     public func backgroundColor(_ color: UIColor) -> Flex {
-        view.backgroundColor = color
-        return self
+        if let host = self.view {
+            host.backgroundColor = color
+            return self
+        } else {
+            preconditionFailure("Trying to modify deallocated host view")
+        }
     }
     
     // MARK: Enums
