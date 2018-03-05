@@ -389,7 +389,7 @@ The same results can also be obtained without using the `define()` method, but t
  
 <a name="accessing_flexbox_view"></a>
 ### Accessing flex item's UIView 
-It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `flex.define()` method.
+It is possible to access the flex items's UIView using `flex.view`. This is particularly useful when using `flex.define()` method.
 
 ###### Example:
 This example creates a flexbox container and sets its alpha to 0.8.
@@ -397,7 +397,7 @@ This example creates a flexbox container and sets its alpha to 0.8.
 ```swift
     view.flex.direction(.row).padding(20).alignItems(.center).define { (flex) in
         flex.addItem().width(50).height(50).define { (flex) in
-            flex.view.alpha = 0.8
+            flex.view?.alpha = 0.8
         }
     }
 ``` 

@@ -7,13 +7,20 @@
 
 # Change Log
 
+## [1.3.4](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.3)
+Released on 2018-03-05
+
+* Fix retain cycle
+   * Now Flex's hosting view is kept using a weak reference.
+   * Fixed by [Alexey Zinchenko](https://github.com/zintus) in Pull Request [#64](https://github.com/layoutBox/FlexLayout/pull/64) 
+
 ## [1.3.3](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.3)
 Released on 2018-02-28
 
 * Fix Yoga's rounding issues
    * Integer truncation of sizes calculated by sizeThatFits:, and utility functions. Introduced by Obj-C -> Obj-C++ conversion in previous PR
    * Low coordinate rounding threshold, which results in flooring apparently valid values. Layout becomes very wrong with absolute coordinate values larger than 100 and having pointScaleFactor set to 3.
-   * Added by [Alexey Zinchenko](https://github.com/zintus) in Pull Request [#63](https://github.com/layoutBox/FlexLayout/pull/63) 
+   * Fixed by [Alexey Zinchenko](https://github.com/zintus) in Pull Request [#63](https://github.com/layoutBox/FlexLayout/pull/63) 
 
 ## [1.3.2](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.2)
 Released on 2018-02-27
