@@ -33,6 +33,7 @@ extension Flex.JustifyContent {
         case .end:          return YGJustify.flexEnd
         case .spaceBetween: return YGJustify.spaceBetween
         case .spaceAround:  return YGJustify.spaceAround
+        case .spaceEvenly:  return YGJustify.spaceEvenly
         }
     }
 }

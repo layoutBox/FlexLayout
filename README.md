@@ -489,7 +489,7 @@ This example center three buttons with a margin of 10 pixels between them.
 
 ### justifyContent()
 - Applies to: `flex containers`
-- Values: `start` / `end` / `center` / `spaceBetween` / `spaceAround`
+- Values: `start` / `end` / `center` / `spaceBetween` / `spaceAround` / `spaceEvenly`
 - Default value: `start`
 - CSS name: `justify-content` 
 
@@ -505,6 +505,7 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 | **center** 	| <img src="docs_markdown/images/flexlayout-justify-column-center.png" width="140"/>| <img src="docs_markdown/images/flexlayout-justify-row-center.png" width="160"/>| items are centered along the main-axis. |
 | **spaceBetween** 	| <img src="docs_markdown/images/flexlayout-justify-column-spacebetween.png" width="140"/>| <img src="docs_markdown/images/flexlayout-justify-row-spacebetween.png" width="160"/> | Items are evenly distributed in the main-axis; first item is at the beginning, last item at the end. |
 | **spaceAround** 	| <img src="docs_markdown/images/flexlayout-justify-column-spacearound.png" width="140"/> | <img src="docs_markdown/images/flexlayout-justify-row-spacearound.png" width="160"/> | Items are evenly distributed in the main-axis with equal space around them. |
+| **spaceEvenly** 	| <img src="docs_markdown/images/flexlayout-justify-column-spaceevenly.png" width="140"/> | <img src="docs_markdown/images/flexlayout-justify-row-spaceevenly.png" width="160"/> | Items are evenly distributed in the main-axis with equal space around them. |
 
 ###### Usage examples:
 ```swift

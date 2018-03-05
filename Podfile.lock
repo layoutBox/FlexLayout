@@ -1,5 +1,5 @@
 PODS:
-  - FlexLayout (1.3.1)
+  - FlexLayout (1.3.4)
   - Nimble (7.0.3)
   - PinLayout (1.5.9)
   - Quick (1.2.0)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  FlexLayout: 168842acc6c674a2324cbd09b09abe580381696f
+  FlexLayout: 62711e018d89ad30d61859e63ec3c7383f0edec4
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   PinLayout: b2ebf8622b28e82b6e1216ab4e4a0a8d082214fe
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
@@ -28,4 +28,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 17e434c5ea0e4a80a0221e86e99c1962e47f6a3d
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
