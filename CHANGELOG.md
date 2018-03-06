@@ -11,7 +11,10 @@
 Released on 2018-03-06
 
 * Add supports for `spaceEvenly` justifyContent mode
-* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#66](https://github.com/layoutBox/FlexLayout/pull/66) 
+	* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#66](https://github.com/layoutBox/FlexLayout/pull/66) 
+	
+* Flex view's getter is public once again.
+	* Added by [Alexander Guschin](https://github.com/Rag0n) in Pull Request [#68](https://github.com/layoutBox/FlexLayout/pull/68) 
 
 ## [1.3.4](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.3)
 Released on 2018-03-05
