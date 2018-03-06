@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [1.3.5](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.5)
+Released on 2018-03-06
+
+* Add supports for `spaceEvenly` justifyContent mode
+* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#66](https://github.com/layoutBox/FlexLayout/pull/66) 
+
 ## [1.3.4](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.3)
 Released on 2018-03-05
 

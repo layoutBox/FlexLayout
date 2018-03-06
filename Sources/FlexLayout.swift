@@ -994,7 +994,8 @@ public final class Flex {
         case spaceBetween
         /// Items are positioned with space before, between, and after the lines
         case spaceAround
-        //case spaceEvenly
+        /// Items are positioned with space distributed evenly, items have equal space around them.
+        case spaceEvenly
     }
     
     /**
