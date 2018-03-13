@@ -962,6 +962,28 @@ static float YGNodeBoundAxisWithinMinAndMax(const YGNodeRef node,
   return boundValue;
 }
 
+static inline float YGNodeMinAxisSizeWithChildren(const YGNodeRef node,
+                                                  const YGFlexDirection axis) {
+  auto children = node->getChildren();
+  float childMinSize = 0;
+  for (int i = 0; i < children.size(); i++) {
+    auto child = children[i];
+    if (i == 0) {
+      childMinSize += node->getLeadingPaddingAndBorder(axis, 0);
+    }
+    
+    childMinSize += child->getMarginForAxis(axis, 0);
+    childMinSize += YGNodeMinAxisSizeWithChildren(child, axis);
+
+    if (i == children.size() - 1) {
+      childMinSize += node->getTrailingPaddingAndBorder(axis, 0);
+    }
+  }
+
+  float minSize = YGNodeBoundAxisWithinMinAndMax(node, axis, childMinSize, 0);
+  return fmaxf(childMinSize, minSize);
+}
+
 // Like YGNodeBoundAxisWithinMinAndMax but also ensures that the value doesn't go
 // below the
 // padding and border amount.
@@ -1780,6 +1802,10 @@ static float YGDistributeFreeSpaceSecondPass(
             childSize,
             availableInnerMainDim,
             availableInnerWidth);
+        
+        if (!isNodeFlexWrap) {
+          updatedMainSize = fmaxf(updatedMainSize, YGNodeMinAxisSizeWithChildren(currentRelativeChild, mainAxis));
+        }
       }
     } else if (collectedFlexItemsValues.remainingFreeSpace > 0) {
       flexGrowFactor = currentRelativeChild->resolveFlexGrow();
@@ -1937,12 +1963,16 @@ static void YGDistributeFreeSpaceFirstPass(
             collectedFlexItemsValues.remainingFreeSpace /
                 collectedFlexItemsValues.totalFlexShrinkScaledFactors *
                 flexShrinkScaledFactor;
-        boundMainSize = YGNodeBoundAxis(
+
+        const float minAxisSize = YGNodeMinAxisSizeWithChildren(currentRelativeChild, mainAxis);
+
+        boundMainSize = fmaxf(minAxisSize, YGNodeBoundAxis(
             currentRelativeChild,
             mainAxis,
             baseMainSize,
             availableInnerMainDim,
-            availableInnerWidth);
+            availableInnerWidth));
+        
         if (baseMainSize != boundMainSize) {
           // By excluding this item's size and flex factor from remaining,
           // this item's
