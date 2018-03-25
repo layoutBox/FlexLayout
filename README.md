@@ -766,21 +766,21 @@ The position property tells Flexbox how you want your item to be positioned with
 ```
 
 ### top(), bottom(), left(), right(), start(), end()
-A flex item which is `position` is set to `.absolute` is positioned absolutely in regards to its parent. This is done through 6 properties:
+A flex item which is `position` is set to `.absolute` is positioned absolutely in regards to its parent. This is done through the following methods:
 
 **Methods:**
 
-* **`top( value: CGFloat)`**:  
-Controls the distance a child’s top edge is from the parent’s top edge
-* **`bottom( value: CGFloat)`**:  
-Controls the distance a child’s bottom edge is from the parent’s bottom edge
-* **`left( value: CGFloat)`**:  
-Controls the distance a child’s left edge is from the parent’s left edge
-* **`right( value: CGFloat)`**:  
-Controls the distance a child’s right edge is from the parent’s right edge
-* **`start( value: CGFloat)`**:  
+* **`top(: CGFloat)`** / **`top(: FPercent)`**:  
+Controls the distance a child’s top edge is from the parent’s top edge.
+* **`bottom(: CGFloat)`** / **`bottom(: FPercent)`**:  
+Controls the distance a child’s bottom edge is from the parent’s bottom edge.
+* **`left(: CGFloat)`** / **`left(: FPercent)`**:  
+Controls the distance a child’s left edge is from the parent’s left edge.
+* **`right(: CGFloat)`** / **`right(: FPercent)`**:  
+Controls the distance a child’s right edge is from the parent’s right edge.
+* **`start(: CGFloat)`** / **`start(: FPercent)`**:  
 Controls the distance a child’s start edge is from the parent’s start edge. In left-to-right direction (LTR), it corresponds to the `left()` property and in RTL to `right()` property.
-* **`end( value: CGFloat)`**:  
+* **`end(: CGFloat)`** / **`end(: FPercent)`**:  
 Controls the distance a child’s end edge is from the parent’s end edge. In left-to-right direction (LTR), it corresponds to the `right()` property and in RTL to `left()` property.
 
 Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t affect their sibling's layout. Absolute position can be used to create overlays and stack children in the Z axis.
@@ -788,6 +788,7 @@ Using these properties you can control the size and position of an absolute item
 ###### Usage examples:
 ```swift
   view.flex.position(.absolute).top(10).right(10).width(100).height(50)
+  view.flex.position(.absolute).left(20%).right(20%)
 ```
 :pushpin: See the "Yoga C" example in the [Examples App](#examples_app). [Source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift)
 
