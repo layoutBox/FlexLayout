@@ -518,6 +518,15 @@ public final class Flex {
         yoga.left = YGValue(value)
         return self
     }
+
+    /**
+     Set the left edge distance from the container left edge in percentage of its container width.
+     */
+    @discardableResult
+    public func left(_ percent: FPercent) -> Flex {
+        yoga.left = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
     
     /**
      Set the top edge distance from the container top edge in pixels.
@@ -525,6 +534,15 @@ public final class Flex {
     @discardableResult
     public func top(_ value: CGFloat) -> Flex {
         yoga.top = YGValue(value)
+        return self
+    }
+
+    /**
+     Set the top edge distance from the container top edge in percentage of its container height.
+     */
+    @discardableResult
+    public func top(_ percent: FPercent) -> Flex {
+        yoga.top = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
     
@@ -536,13 +554,31 @@ public final class Flex {
         yoga.right = YGValue(value)
         return self
     }
-    
+
+    /**
+     Set the right edge distance from the container right edge in percentage of its container width.
+     */
+    @discardableResult
+    public func right(_ percent: FPercent) -> Flex {
+        yoga.right = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     /**
      Set the bottom edge distance from the container bottom edge in pixels.
      */
     @discardableResult
     public func bottom(_ value: CGFloat) -> Flex {
         yoga.bottom = YGValue(value)
+        return self
+    }
+
+    /**
+     Set the bottom edge distance from the container bottom edge in percentage of its container height.
+     */
+    @discardableResult
+    public func bottom(_ percent: FPercent) -> Flex {
+        yoga.bottom = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
     
@@ -554,13 +590,33 @@ public final class Flex {
         yoga.start = YGValue(value)
         return self
     }
+
+    /**
+     Set the start edge (LTR=left, RTL=right) distance from the container start edge in
+     percentage of its container width.
+     */
+    @discardableResult
+    public func start(_ percent: FPercent) -> Flex {
+        yoga.start = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
     
     /**
-     Set the end edge (LTR=right, RTL=left) distance from the container start edge in pixels.
+     Set the end edge (LTR=right, RTL=left) distance from the container end edge in pixels.
      */
     @discardableResult
     public func end(_ value: CGFloat) -> Flex {
         yoga.end = YGValue(value)
+        return self
+    }
+
+    /**
+     Set the end edge (LTR=right, RTL=left) distance from the container end edge in
+     percentage of its container width.
+     */
+    @discardableResult
+    public func end(_ percent: FPercent) -> Flex {
+        yoga.end = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
     
