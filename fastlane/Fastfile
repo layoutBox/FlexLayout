@@ -68,6 +68,7 @@ platform :ios do
   end
 
   lane :tests do
+    # sh "buck test :yoga "
     scan(scheme: "FlexLayoutSample", 
          workspace: "FlexLayout.xcworkspace")
   end

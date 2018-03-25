@@ -224,16 +224,16 @@ NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) impleme
 
 FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/layoutBox/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
 
-As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 8x and 11x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
-
-These results also mean that **FlexLayout and PinLayout are by far faster than any layout frameworks built over auto layout**. 
+As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout and PinLayout are **between 8x and 12x faster than UIStackViews**, and this for all types of iPhone (5S/6/6S/7/8/X)
 
 [See here more complete details, results and explanation of the benchmark](docs_markdown/benchmark.md).
 
-<p align="center"> Tested on a iPhone 7 iOS 10.3.2</p>
 <p align="center">
-  <img src="docs_markdown/benchmark/benchmark_iphone7.png" alt="FlexLayout Performance" width=600/>
+	<a href="docs_markdown/benchmark.md">
+	  <img src="docs_markdown/benchmark/benchmark_comparison_all_small.png" width=660/>
+	  </a>
 </p>
+
 
 <br/>
 
