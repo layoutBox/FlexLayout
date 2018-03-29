@@ -41,14 +41,6 @@ class MethodGroupHeader: UITableViewHeaderFooterView {
         super.layoutSubviews()
         
         // Center the label vertically. Note that we don't need to specify the size, it has already be adjusted in init().
-        titleLabel.pin.horizontally().vCenter().margin(safeAreaInsets())
-    }
-    
-    private func safeAreaInsets() -> UIEdgeInsets {
-        if #available(iOS 11.0, *) {
-            return safeAreaInsets
-        } else {
-            return .zero
-        }
+        titleLabel.pin.horizontally(pin.safeArea.left + 12).vCenter()
     }
 }

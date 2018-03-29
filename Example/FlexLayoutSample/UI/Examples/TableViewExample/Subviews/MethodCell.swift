@@ -38,7 +38,7 @@ class MethodCell: UITableViewCell {
         descriptionLabel.numberOfLines = 0
 
         // Use contentView as the root flex container
-        contentView.flex.padding(8).define { (flex) in
+        contentView.flex.padding(12).define { (flex) in
             flex.addItem().direction(.row).define { (flex) in
                 flex.addItem(iconImageView).size(30)
                 flex.addItem(nameLabel).marginLeft(padding).grow(1)

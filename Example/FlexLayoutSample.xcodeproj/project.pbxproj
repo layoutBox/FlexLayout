@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2245F067A40DB6A13F97F202 /* Pods_FlexLayoutSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */; };
-		242AECE21FA011630024E7C2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECDE1FA011630024E7C2 /* BaseView.swift */; };
 		242AECE31FA011630024E7C2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECDF1FA011630024E7C2 /* BaseViewController.swift */; };
 		242AECE41FA011630024E7C2 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE01FA011630024E7C2 /* BasicView.swift */; };
 		242AECE51FA011630024E7C2 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE11FA011630024E7C2 /* Stylesheet.swift */; };
@@ -62,7 +61,6 @@
 
 /* Begin PBXFileReference section */
 		0D0595B5E0950936D037ECF2 /* Pods-FlexLayoutSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.release.xcconfig"; sourceTree = "<group>"; };
-		242AECDE1FA011630024E7C2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		242AECDF1FA011630024E7C2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		242AECE01FA011630024E7C2 /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
 		242AECE11FA011630024E7C2 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		242AECDD1FA011630024E7C2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				242AECDE1FA011630024E7C2 /* BaseView.swift */,
 				242AECDF1FA011630024E7C2 /* BaseViewController.swift */,
 				242AECE01FA011630024E7C2 /* BasicView.swift */,
 				242AECE11FA011630024E7C2 /* Stylesheet.swift */,
@@ -488,7 +485,6 @@
 				24E835171F4CC336009F95CC /* RaywenderlichTutorialViewController.swift in Sources */,
 				24FB883D1F59CA8B00615D33 /* TableViewExampleView.swift in Sources */,
 				242AECE41FA011630024E7C2 /* BasicView.swift in Sources */,
-				242AECE21FA011630024E7C2 /* BaseView.swift in Sources */,
 				24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */,
 				242AECE31FA011630024E7C2 /* BaseViewController.swift in Sources */,
 				24901F0C1F93D40F0025D11B /* CollectionViewExampleView.swift in Sources */,

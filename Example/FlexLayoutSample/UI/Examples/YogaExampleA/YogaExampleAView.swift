@@ -16,11 +16,11 @@ import UIKit
 import FlexLayout
 import PinLayout
 
-class YogaExampleAView: BaseView {
+class YogaExampleAView: UIView {
     fileprivate let rootFlexContainer = UIView()
 
-    override init() {
-        super.init()
+    init() {
+        super.init(frame: .zero)
 
         // Yoga's C Example
         rootFlexContainer.flex.direction(.row).padding(20).define { (flex) in
@@ -39,7 +39,7 @@ class YogaExampleAView: BaseView {
 
         // Layout the flexbox container using PinLayout
         // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
-        rootFlexContainer.pin.top().horizontally().margin(safeArea).height(120)
+        rootFlexContainer.pin.top(pin.safeArea).horizontally(pin.safeArea).height(120)
 
         // Then let the flexbox container layout itself
         rootFlexContainer.flex.layout()
