@@ -16,7 +16,7 @@ import UIKit
 import FlexLayout
 import PinLayout
 
-class RayWenderlichTutorialView: BaseView {
+class RayWenderlichTutorialView: UIView {
     fileprivate let contentView = UIScrollView()
     fileprivate let rootFlexContainer = UIView()
     fileprivate var showSelectedIndex = 0
@@ -28,12 +28,12 @@ class RayWenderlichTutorialView: BaseView {
     let episodeTitleLabel = UILabel()
     let descriptionLabel = UILabel()
     let showsTableView = ExpandedTableView()
-    
+
     init(series: Series) {
         self.series = series
         
-        super.init()
-        
+        super.init(frame: .zero)
+
         backgroundColor = .black
         
         let padding: CGFloat = 8
@@ -148,7 +148,7 @@ class RayWenderlichTutorialView: BaseView {
         super.layoutSubviews()
 
         // 1) Layout the contentView & rootFlexContainer using PinLayout
-        contentView.pin.all()
+        contentView.pin.all(pin.safeArea)
         rootFlexContainer.pin.top().left().right()
 
         // 2) Let the flexbox container layout itself and adjust the height

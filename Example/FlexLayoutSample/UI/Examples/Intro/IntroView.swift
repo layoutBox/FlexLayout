@@ -16,11 +16,11 @@ import UIKit
 import FlexLayout
 import PinLayout
 
-class IntroView: BaseView {
+class IntroView: UIView {
     fileprivate let rootFlexContainer = UIView()
 
-    override init() {
-        super.init()
+    init() {
+        super.init(frame: .zero)
 
         let imageView = UIImageView(image: UIImage(named: "flexlayout-logo"))
         
@@ -61,7 +61,7 @@ class IntroView: BaseView {
 
         // Layout the flexbox container using PinLayout 
         // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
-        rootFlexContainer.pin.top().horizontally().margin(safeArea)
+        rootFlexContainer.pin.top().horizontally().margin(pin.safeArea)
 
         // Then let the flexbox container layout itself
         rootFlexContainer.flex.layout(mode: .adjustHeight)

@@ -14,7 +14,7 @@
 
 import UIKit
 
-class CollectionViewExampleView: BaseView {
+class CollectionViewExampleView: UIView {
 
     fileprivate let collectionView: UICollectionView
     fileprivate let flowLayout = UICollectionViewFlowLayout()
@@ -22,10 +22,10 @@ class CollectionViewExampleView: BaseView {
     
     fileprivate var houses: [House] = []
     
-    override init() {
+    init() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         
-        super.init()
+        super.init(frame: .zero)
         
         flowLayout.minimumLineSpacing = 8
         flowLayout.minimumInteritemSpacing = 0
@@ -49,10 +49,14 @@ class CollectionViewExampleView: BaseView {
         self.houses = houses
         collectionView.reloadData()
     }
+
+    func viewOrientationDidChange() {
+        flowLayout.invalidateLayout()
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        collectionView.pin.all()
+        collectionView.pin.vertically().horizontally(pin.safeArea)
     }
 }
 
@@ -69,17 +73,7 @@ extension CollectionViewExampleView: UICollectionViewDelegateFlowLayout, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let adjustedWidth = adjustWidthWithSafeArea(collectionView.bounds.width)
-        
         cellTemplate.configure(house: houses[indexPath.row])
-        return cellTemplate.sizeThatFits(CGSize(width: adjustedWidth, height: .greatestFiniteMagnitude))
-    }
-    
-    private func adjustWidthWithSafeArea(_ width: CGFloat) -> CGFloat {
-        if #available(iOS 11.0, *) {
-            return width - safeAreaInsets.left - safeAreaInsets.right
-        } else {
-            return width
-        }
+        return cellTemplate.sizeThatFits(CGSize(width: collectionView.bounds.width, height: .greatestFiniteMagnitude))
     }
 }

@@ -14,15 +14,15 @@
 
 import UIKit
 
-class TableViewExampleView: BaseView {
+class TableViewExampleView: UIView {
 
     fileprivate let tableView = UITableView()
     fileprivate let methodCellTemplate = MethodCell()
     
     fileprivate var methods: [Method] = []
     
-    override init() {
-        super.init()
+    init() {
+        super.init(frame: .zero)
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -44,7 +44,7 @@ class TableViewExampleView: BaseView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        tableView.pin.topLeft().bottomRight()
+        tableView.pin.all()
     }
 }
 
