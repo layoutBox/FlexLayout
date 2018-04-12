@@ -21,6 +21,7 @@ class YogaExampleAView: UIView {
 
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
 
         // Yoga's C Example
         rootFlexContainer.flex.direction(.row).padding(20).define { (flex) in

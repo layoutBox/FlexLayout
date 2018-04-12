@@ -1052,6 +1052,7 @@ The FlexLayout's Example App exposes some usage example of FlexLayout.
 <br/>
 
 ## Flexbox interesting external links
+* [Introduction to Flexbox using Yoga](https://yogalayout.com/)
 * [THE flexbox CSS reference: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Raywenderlich interesting Yoga tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine)
 * [An Introduction to Flexbox CSS](https://slicejack.com/introduction-to-flexbox/)

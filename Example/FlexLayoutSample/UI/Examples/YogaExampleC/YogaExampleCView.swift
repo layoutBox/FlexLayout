@@ -21,6 +21,7 @@ class YogaExampleCView: UIView {
 
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
 
         let label = UIView()
         label.backgroundColor = .black

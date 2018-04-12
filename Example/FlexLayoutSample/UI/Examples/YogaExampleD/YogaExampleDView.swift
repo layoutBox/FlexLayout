@@ -21,6 +21,7 @@ class YogaExampleDView: UIView {
 
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
 
         let imageView = UIView()
         imageView.backgroundColor = .flexLayoutColor
