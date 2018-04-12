@@ -351,7 +351,6 @@
 				DF1F2A181F17D11700BA1B97 /* Resources */,
 				DF1F2A1B1F17D11700BA1B97 /* Embed Frameworks */,
 				DF1F2A1C1F17D11700BA1B97 /* [CP] Embed Pods Frameworks */,
-				DF1F2A1D1F17D11700BA1B97 /* [CP] Copy Pods Resources */,
 				DF1F2A1E1F17D11700BA1B97 /* Run Swiftlint */,
 			);
 			buildRules = (
@@ -443,21 +442,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF1F2A1D1F17D11700BA1B97 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF1F2A1E1F17D11700BA1B97 /* Run Swiftlint */ = {

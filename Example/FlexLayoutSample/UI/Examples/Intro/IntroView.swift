@@ -21,6 +21,7 @@ class IntroView: UIView {
 
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
 
         let imageView = UIImageView(image: UIImage(named: "flexlayout-logo"))
         

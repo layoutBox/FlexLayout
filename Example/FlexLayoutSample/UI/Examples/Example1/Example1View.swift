@@ -21,6 +21,7 @@ class Example1View: UIView {
 
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
 
         let view1 = BasicView(text: "View 1")
         let view2 = BasicView(text: "View 2")

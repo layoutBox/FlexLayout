@@ -22,3 +22,6 @@ Carthage/Checkouts
 /.buckd
 /gentest/test.html
 .buckversion
+
+fastlane/report.xml
+fastlane/test_output
