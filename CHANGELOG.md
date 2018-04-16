@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [1.3.6](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.6)
+Released on 2018-04-16
+
+* Update the Podspec minimum iOS platform to 8.0
+	* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#78](https://github.com/layoutBox/FlexLayout/pull/78) 
+
 ## [1.3.5](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.5)
 Released on 2018-03-06
 
