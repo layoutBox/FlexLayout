@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.3.6"
   spec.summary      = "FlexLayout"
   spec.homepage     = "https://github.com/lucdion/FlexLayout.git"
-  spec.license      = "BSD 3-clause"
+  spec.license      = "MIT license"
   spec.author       = { "Luc Dion" => "luc_dion@yahoo.com" }
   
   spec.platform     = :ios, "8.0"
