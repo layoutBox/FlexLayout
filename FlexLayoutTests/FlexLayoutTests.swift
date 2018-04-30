@@ -21,7 +21,7 @@ class FlexLayoutTests: XCTestCase {
             let strongView = UIView()
             strongView.flex.direction(.column)
             weakView = strongView
-        }()
+        }(())
         
         XCTAssertNil(weakView, "Creation of flex should not lead to retain cycle")
     }
