@@ -330,7 +330,7 @@
 				TargetAttributes = {
 					24DA37591EF843C500D1AB2F = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Manual;
 					};
 					24DA37621EF843C500D1AB2F = {
@@ -591,7 +591,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -620,7 +621,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
