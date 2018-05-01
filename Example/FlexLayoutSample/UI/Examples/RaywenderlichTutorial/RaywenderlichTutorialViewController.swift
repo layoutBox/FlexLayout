@@ -22,6 +22,9 @@ class RayWenderlichTutorialViewController: BaseViewController {
     init(pageType: PageType) {
         super.init()
         title = pageType.text
+
+        // This property is used only on iOS 7/8/9/10. See https://developer.apple.com/documentation/uikit/uiviewcontroller/1621372-automaticallyadjustsscrollviewin
+        automaticallyAdjustsScrollViewInsets = false
     }
     
     required init?(coder aDecoder: NSCoder) {
