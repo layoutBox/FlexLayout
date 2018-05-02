@@ -209,7 +209,7 @@ class RayWenderlichTutorialView: UIView {
         #if swift(>=4)
         let labelSize = text.size(withAttributes: [NSAttributedStringKey.font: tabLabelFont])
         #else
-        let labelSize = text.size(attributes: [NSFontAttributeName: tabLabelFont])
+        let labelSize = text.size(withAttributes: [NSAttributedStringKey.font: tabLabelFont])
         #endif
         
         let tabView = UIView()
