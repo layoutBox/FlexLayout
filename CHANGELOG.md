@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [1.3.7](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.7)
+Released on 2018-05-01
+
+* Upgrade to Swift 4.1
+	* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#85](https://github.com/layoutBox/FlexLayout/pull/85) 
+
 ## [1.3.6](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.6)
 Released on 2018-04-16
 
