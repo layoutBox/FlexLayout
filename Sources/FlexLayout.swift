@@ -1034,6 +1034,19 @@ public final class Flex {
         }
     }
     
+    //
+    // MARK: Display
+    //
+    
+    /**
+     Set the view display or not
+     */
+    @discardableResult
+    public func display(_ value: Display) -> Flex {
+        yoga.display = value.yogaValue
+        return self
+    }
+    
     // MARK: Enums
     
     /**
@@ -1157,6 +1170,13 @@ public final class Flex {
         case adjustHeight
         /// In this mode, children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
         case adjustWidth
+    }
+    
+    /**
+     */
+    public enum Display {
+        case flex
+        case none
     }
     
     /*public enum Overflow {
