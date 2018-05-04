@@ -1175,7 +1175,9 @@ public final class Flex {
     /**
      */
     public enum Display {
+        /// Default value
         case flex
+        /// With this value, the item will be hidden and not be calculated
         case none
     }
     
