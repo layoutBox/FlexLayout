@@ -693,6 +693,17 @@ FlexLayout automatically includes the UIView when:
 
 <br>
 
+### display
+- Applies to: `flex items`
+
+**Method:**
+
+* **`display(_: Display)`**  
+
+Set the item display or not, with `none` value, the item will be hidden and not be calculated
+
+<br>
+
 ### markDirty()
 - Applies to: `flex items`
 
