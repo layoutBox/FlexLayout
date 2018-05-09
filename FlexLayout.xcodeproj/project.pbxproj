@@ -20,7 +20,7 @@
 		24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97381FEAF30A00995987 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24AE97461FEAF30A00995987 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97391FEAF30A00995987 /* UIView+Yoga.mm */; };
-		24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973A1FEAF30A00995987 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973A1FEAF30A00995987 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		24AE97481FEAF30A00995987 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973B1FEAF30A00995987 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24AE97491FEAF30A00995987 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973C1FEAF30A00995987 /* YGLayout.mm */; };
 		24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */; };
@@ -263,12 +263,12 @@
 			files = (
 				C07B09F92045303000E03251 /* YGNode.h in Headers */,
 				24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */,
-				24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */,
 				C07B09FD2045303000E03251 /* Utils.h in Headers */,
+				24AE97481FEAF30A00995987 /* YGLayout.h in Headers */,
 				C07B09FE2045303000E03251 /* YGLayout.h in Headers */,
 				24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */,
-				24AE97481FEAF30A00995987 /* YGLayout.h in Headers */,
 				C07B09F62045303000E03251 /* YGMacros.h in Headers */,
+				24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */,
 				C07B0A012045303000E03251 /* YGStyle.h in Headers */,
 				C07B09F72045303000E03251 /* YGEnums.h in Headers */,
 				C07B09FF2045303000E03251 /* Yoga.h in Headers */,
