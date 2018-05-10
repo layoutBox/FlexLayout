@@ -105,6 +105,15 @@ extension Flex.LayoutDirection {
     }
 }
 
+extension Flex.Display {
+    var yogaValue: YGDisplay {
+        switch self {
+        case .flex: return YGDisplay.flex
+        case .none: return YGDisplay.none
+        }
+    }
+}
+
 /*extension Flex.Overflow {
     var yogaValue: YGOverflow {
         switch self {
