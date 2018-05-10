@@ -700,7 +700,7 @@ FlexLayout automatically includes the UIView when:
 
 * **`display(_: Display)`**  
 
-Set the item display or not, with `none` value, the item will be hidden and not be calculated
+Set the item display or not, with `none` value, the item will be hidden and not included in the layout.
 
 <br>
 

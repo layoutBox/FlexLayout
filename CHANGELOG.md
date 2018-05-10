@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [1.3.8](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.8)
+Released on 2018-05-09
+
+* Add `display(:Display)` method to set the Yoga's display property.
+	* Added by [cielpy](https://github.com/cielpy) in Pull Request [#87](https://github.com/layoutBox/FlexLayout/pull/87) 
+
 ## [1.3.7](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.7)
 Released on 2018-05-01
 
