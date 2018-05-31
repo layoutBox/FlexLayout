@@ -516,7 +516,7 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 
 ### alignItems()
 - Applies to: `flex containers`
-- Values: `stretch` / `start` / `end` / `center` / `baseline`
+- Values: `stretch` / `start` / `end` / `center`
 - Default value: `stretch `
 - CSS name: `align-items` 
 
@@ -532,7 +532,9 @@ The `alignItems` property defines how flex items are laid out along the cross ax
 | **start**	| <img src="docs_markdown/images/flexlayout-align-column-flexStart.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-flexStart.png" width="160"/>|
 | **end**	| <img src="docs_markdown/images/flexlayout-align-column-flexEnd.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-flexEnd.png" width="160"/>|
 | **center** 	| <img src="docs_markdown/images/flexlayout-align-column-center.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-center.png" width="160"/>|
-| **baseline** 	| | <img src="docs_markdown/images/flexlayout-align-row-baseline.png" width="160"/>|
+
+NOTE: alignItems `.baseline` is not currently supported by FlexLayout/Yoga.
+
 
 <br/>
 
