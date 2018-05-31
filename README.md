@@ -47,7 +47,6 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 		* [Aspect Ratio](#aspect_ratio)
 	* [Margins](#margins)
 	* [Paddings](#paddings)
-	* [Borders](#borders)
 * [API Documentation](#api_documentation)
 * [Examples App](#examples_app)
 * [FAQ](#faq)
@@ -980,23 +979,6 @@ Set all paddings using an NSDirectionalEdgeInsets. This method is particularly u
 ```
 
 <br>
-
-<a name="borders"></a>
-## 8. Borders 
-Border behaves nearly identically to Padding and is only separate from Padding to make it easier to implement border effect such as color.
-
-**Methods:**
-
-* `borderLeft(_ value: CGFloat)`
-* `borderTop(_ value: CGFloat)`
-* `borderRight(_ value: CGFloat)`
-* `borderBottom(_ value: CGFloat)`
-* `borderStart(_ value: CGFloat)`
-* `borderEnd(_ value: CGFloat)`
-* `border(_ value: CGFloat)`
-
-<br>
-
 
 <a name="uiview_methods"></a>
 ## 9. Extra UIView methods 
