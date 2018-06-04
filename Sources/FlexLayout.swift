@@ -1034,6 +1034,19 @@ public final class Flex {
         }
     }
     
+    //
+    // MARK: Display
+    //
+    
+    /**
+     Set the view display or not
+     */
+    @discardableResult
+    public func display(_ value: Display) -> Flex {
+        yoga.display = value.yogaValue
+        return self
+    }
+    
     // MARK: Enums
     
     /**
@@ -1095,7 +1108,8 @@ public final class Flex {
         /// Items are positioned at the end of the container
         case end
         /// Items are positioned at the baseline of the container
-        case baseline
+        // Not currently supported by Yoga.
+        //case baseline
     }
     
     /**
@@ -1157,6 +1171,15 @@ public final class Flex {
         case adjustHeight
         /// In this mode, children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
         case adjustWidth
+    }
+    
+    /**
+     */
+    public enum Display {
+        /// Default value
+        case flex
+        /// With this value, the item will be hidden and not be calculated
+        case none
     }
     
     /*public enum Overflow {

@@ -58,7 +58,7 @@ extension Flex.AlignItems {
         case .start:        return YGAlign.flexStart
         case .center:       return YGAlign.center
         case .end:          return YGAlign.flexEnd
-        case .baseline:     return YGAlign.baseline
+        //case .baseline:     return YGAlign.baseline
         }
     }
 }
@@ -101,6 +101,15 @@ extension Flex.LayoutDirection {
         case .ltr: return YGDirection.LTR
         case .rtl: return YGDirection.RTL
         default:   return YGDirection.inherit
+        }
+    }
+}
+
+extension Flex.Display {
+    var yogaValue: YGDisplay {
+        switch self {
+        case .flex: return YGDisplay.flex
+        case .none: return YGDisplay.none
         }
     }
 }

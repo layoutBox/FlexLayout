@@ -47,7 +47,6 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 		* [Aspect Ratio](#aspect_ratio)
 	* [Margins](#margins)
 	* [Paddings](#paddings)
-	* [Borders](#borders)
 * [API Documentation](#api_documentation)
 * [Examples App](#examples_app)
 * [FAQ](#faq)
@@ -516,7 +515,7 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 
 ### alignItems()
 - Applies to: `flex containers`
-- Values: `stretch` / `start` / `end` / `center` / `baseline`
+- Values: `stretch` / `start` / `end` / `center`
 - Default value: `stretch `
 - CSS name: `align-items` 
 
@@ -532,7 +531,9 @@ The `alignItems` property defines how flex items are laid out along the cross ax
 | **start**	| <img src="docs_markdown/images/flexlayout-align-column-flexStart.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-flexStart.png" width="160"/>|
 | **end**	| <img src="docs_markdown/images/flexlayout-align-column-flexEnd.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-flexEnd.png" width="160"/>|
 | **center** 	| <img src="docs_markdown/images/flexlayout-align-column-center.png" width="140"/>| <img src="docs_markdown/images/flexlayout-align-row-center.png" width="160"/>|
-| **baseline** 	| | <img src="docs_markdown/images/flexlayout-align-row-baseline.png" width="160"/>|
+
+NOTE: alignItems `.baseline` is not currently supported by FlexLayout/Yoga.
+
 
 <br/>
 
@@ -690,6 +691,17 @@ This property controls dynamically if a flexbox's UIView is included or not in t
 FlexLayout automatically includes the UIView when:
 * The first time `UIView.flex` property is accessed
 * When a child view is added to a flexbox container using `addItem(:UIView)` or `addItem()`
+
+<br>
+
+### display
+- Applies to: `flex items`
+
+**Method:**
+
+* **`display(_: Display)`**  
+
+Set the item display or not, with `none` value, the item will be hidden and not included in the layout.
 
 <br>
 
@@ -967,23 +979,6 @@ Set all paddings using an NSDirectionalEdgeInsets. This method is particularly u
 ```
 
 <br>
-
-<a name="borders"></a>
-## 8. Borders 
-Border behaves nearly identically to Padding and is only separate from Padding to make it easier to implement border effect such as color.
-
-**Methods:**
-
-* `borderLeft(_ value: CGFloat)`
-* `borderTop(_ value: CGFloat)`
-* `borderRight(_ value: CGFloat)`
-* `borderBottom(_ value: CGFloat)`
-* `borderStart(_ value: CGFloat)`
-* `borderEnd(_ value: CGFloat)`
-* `border(_ value: CGFloat)`
-
-<br>
-
 
 <a name="uiview_methods"></a>
 ## 9. Extra UIView methods 
