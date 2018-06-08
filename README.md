@@ -28,7 +28,7 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 
 ### Requirements
 * iOS 8.0+
-* Xcode 8.0+ / Xcode 9.0
+* Xcode 8.0+ / Xcode 9.0+
 * Swift 3.0+ / Swift 4.0
 
 ### Content
@@ -61,9 +61,9 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 
 ### FlexLayout + PinLayout
 
-<a href="https://github.com/mirego/PinLayout"><img src="docs_markdown/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
+<a href="https://github.com/layoutBox/PinLayout"><img src="docs_markdown/images/flexlayout_plus_pinlayout_small.png" alt="FlexLayout" width="250"/></a>
 
-**FlexLayout** is a companion of **[PinLayout](https://github.com/mirego/PinLayout)**. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positioning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug).
+**FlexLayout** is a companion of **[PinLayout](https://github.com/layoutBox/PinLayout)**. They share a similar syntax and method names. PinLayout is a layout framework greatly inspired by CSS absolute positioning, it is particularly useful for greater fine control and animations. It gives you full control by layouting one view at a time (simple to code and debug).
 
 * A view can be layouted using FlexLayout, PinLayout, or both!
 * PinLayout can layout anything, but in situations where you need to layout many views but don't require PinLayout's finest control nor complex animations, FlexLayout is best fitted. 
@@ -221,7 +221,7 @@ NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) impleme
 <a name="performance"></a>
 # FlexLayout's Performance 
 
-FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/layoutBox/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
+FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/layoutBox/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/layoutBox/PinLayout) has been added to this benchmark to compare their performance. 
 
 As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout and PinLayout are **between 8x and 12x faster than UIStackViews**, and this for all types of iPhone (5S/6/6S/7/8/X)
 
