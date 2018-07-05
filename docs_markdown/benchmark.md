@@ -32,7 +32,7 @@ As you can see in the following chart, PinLayout are faster or equal to manual l
 
 The benchmark layout UICollectionView and UITableView cells in multiple pass, each pass contains more cells than the previous one. 
 
-<img src="benchmark/benchmark_comparison_all.png" alt="PinLayout Performance"/></a>
+<img src="benchmark/benchmark_comparison_all_small.png" alt="PinLayout Performance"/></a>
 
 See [Layout Framework Benchmark](https://github.com/layoutBox/LayoutFrameworkBenchmark) for complete details and benchmarks charts for iPhone X/8/7/6S/...
 

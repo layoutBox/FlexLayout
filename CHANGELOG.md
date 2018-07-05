@@ -8,7 +8,7 @@
 # Change Log
 
 ## [1.3.9](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.9)
-Released on 2018-05-31
+Released on 2018-05-31 
 
 Removed alignItems `.baseline` mode which is not currently supported by Yoga. So we remove it from the list of supported mode until Yoga support it.
 
