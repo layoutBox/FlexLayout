@@ -11,6 +11,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/lucdion/FlexLayout.git", :tag => "#{spec.version}" }
   spec.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
   spec.public_header_files = "Sources/yoga/{Yoga,YGEnums,YGMacros}.h", "Sources/YogaKit/{UIView+Yoga,YGLayout}.h"
+  spec.libraries = 'c++'
 
   # Should match yoga_defs.bzl + BUCK configuration
   spec.compiler_flags = [
