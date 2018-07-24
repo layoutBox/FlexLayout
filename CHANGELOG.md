@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [1.3.10](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.10)
+Released on 2018-07-24 
+
+Add cocoapods c++ library dependency to the podspec file. Required to avoid possible linking errors.
+
+* Added by [Antoine Lamy](https://github.com/antoinelamy) in Pull Request [#103](https://github.com/layoutBox/FlexLayout/pull/103) 
+
 ## [1.3.9](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.9)
 Released on 2018-05-31 
 
