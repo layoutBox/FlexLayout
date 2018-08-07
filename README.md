@@ -1103,5 +1103,5 @@ FlexLayout recent history is available in the are documented in the [CHANGELOG](
 <br>
 
 ## License
-BSD 3-Clause License 
+MIT License 
 
