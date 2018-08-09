@@ -1007,7 +1007,7 @@ public final class Flex {
      */
     @discardableResult
     public func padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> Flex {
-        yoga.padding = YGValue(top)
+        yoga.paddingTop = YGValue(top)
         yoga.paddingLeft = YGValue(left)
         yoga.paddingBottom = YGValue(bottom)
         yoga.paddingRight = YGValue(right)
