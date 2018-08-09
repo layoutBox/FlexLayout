@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [1.3.11](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.10)
+Released on 2018-08-09 
+
+Fix top padding in method `padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat)`.
+
+* Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#107](https://github.com/layoutBox/FlexLayout/pull/107) 
+
 ## [1.3.10](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.10)
 Released on 2018-07-24 
 
