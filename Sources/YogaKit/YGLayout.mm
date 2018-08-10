@@ -116,12 +116,12 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
 
 YGValue YGPointValue(CGFloat value)
 {
-  return (YGValue) { .value = (float) value, .unit = (YGUnit) YGUnitPoint };
+    return (YGValue) { .value = static_cast<float>(value), .unit = YGUnitPoint };
 }
 
 YGValue YGPercentValue(CGFloat value)
 {
-  return (YGValue) { .value = (float) value, .unit = YGUnitPercent };
+    return (YGValue) { .value = static_cast<float>(value), .unit = YGUnitPercent };
 }
 
 static YGConfigRef globalConfig;
@@ -337,8 +337,8 @@ static YGSize YGMeasureView(
   }];
 
   return (YGSize) {
-    .width = (float) YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode),
-    .height = (float) YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode),
+      .width = static_cast<float>(YGSanitizeMeasurement(constrainedWidth, sizeThatFits.width, widthMode)),
+      .height = static_cast<float>(YGSanitizeMeasurement(constrainedHeight, sizeThatFits.height, heightMode)),
   };
 }
 
@@ -388,7 +388,7 @@ static void YGAttachNodesFromViewHierachy(UIView *const view)
 
     NSMutableArray<UIView *> *subviewsToInclude = [[NSMutableArray alloc] initWithCapacity:view.subviews.count];
     for (UIView *subview in view.subviews) {
-      if (subview.yoga.isIncludedInLayout) {
+      if (subview.yoga.isEnabled && subview.yoga.isIncludedInLayout) {
         [subviewsToInclude addObject:subview];
       }
     }
@@ -396,12 +396,7 @@ static void YGAttachNodesFromViewHierachy(UIView *const view)
     if (!YGNodeHasExactSameChildren(node, subviewsToInclude)) {
       YGRemoveAllChildren(node);
       for (int i=0; i<subviewsToInclude.count; i++) {
-        YGNodeRef child = subviewsToInclude[i].yoga.node;
-        YGNodeRef parent = YGNodeGetParent(child);
-        if (parent != NULL) {
-          YGNodeRemoveChild(parent, child);
-        }
-        YGNodeInsertChild(node, child, i);
+        YGNodeInsertChild(node, subviewsToInclude[i].yoga.node, i);
       }
     }
 

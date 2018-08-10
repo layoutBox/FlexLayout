@@ -1,5 +1,5 @@
 PODS:
-  - FlexLayout (1.3.10)
+  - FlexLayout (1.3.11)
   - Nimble (7.1.1)
   - PinLayout (1.7.3)
   - Quick (1.3.0)
@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  FlexLayout: 1f4e23de3e6b32cc75a9692ead73f7913a17a4a5
+  FlexLayout: 8c6f30391f0260dec3256f7a15ca3737bd735208
   Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
   PinLayout: 0c2e68dba036a291ca9278aa8b799f58506f2a6d
   Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
