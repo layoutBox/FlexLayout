@@ -2,10 +2,9 @@
 #
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
+load("//:yoga_defs.bzl", "ANDROID", "FBJNI_JAVA_TARGET", "JNI_TARGET", "YOGA_ROOTS", "subdir_glob", "yoga_cxx_library", "yoga_prebuilt_cxx_library")
 
-include_defs("//yoga_defs.bzl")
-
-prebuilt_cxx_library(
+yoga_prebuilt_cxx_library(
     name = "ndklog",
     exported_platform_linker_flags = [
         (
@@ -17,7 +16,7 @@ prebuilt_cxx_library(
     visibility = YOGA_ROOTS,
 )
 
-cxx_library(
+yoga_cxx_library(
     name = "fbjni",
     srcs = glob(["src/main/cpp/**/*.cpp"]),
     header_namespace = "",
@@ -35,6 +34,7 @@ cxx_library(
         "-Wno-unused-parameter",
         "-std=c++11",
     ],
+    platforms = (ANDROID,),
     visibility = ["PUBLIC"],
     deps = [
         ":ndklog",
