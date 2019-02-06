@@ -307,7 +307,7 @@ public final class Flex {
      A shrink value of 0 keeps the view's size in the main-axis direction. Note that this may cause the view to 
      overflow its flex container.
     
-     - Parameter value: Default value is 1
+     - Parameter value: Default value is 0
     */
     @discardableResult
     public func shrink(_ value: CGFloat) -> Flex {
