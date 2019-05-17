@@ -330,6 +330,21 @@ public final class Flex {
         return self
     }
 
+    /**
+     This property takes the same values as the width and height properties, and specifies the initial size of the
+     flex item, before free space is distributed according to the grow and shrink factors.
+    
+     Specifying `nil` set the basis as `auto`, which means the length is equal to the length of the item. If the 
+     item has no length specified, the length will be according to its content.
+    
+     - Parameter value: Default value is 0
+    */
+    @discardableResult
+    public func basis(_ percent: FPercent) -> Flex {
+        yoga.flexBasis = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     //
     // MARK: Width / height / height
     //
