@@ -16,7 +16,7 @@ import UIKit
 class ShowTableViewCell: UITableViewCell {
     static var reuseIdentifier = "ShowTableViewCell"
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         
         self.textLabel?.textColor = .white
