@@ -82,7 +82,7 @@ platform :ios do
   lane :travis do
     build
     tests
-    pod_lib_lint(allow_warnings: true, verbose: false)
+    #pod_lib_lint(allow_warnings: true, verbose: false)
   end
 
   lane :deploy do
