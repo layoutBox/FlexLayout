@@ -13,6 +13,8 @@ Released on 2019-05-17
 Add method: 
 * `basis(_ : FPercent)`: This method is similar to `basis(_ : CGFloat?)` but takes a percentage parameter.
 
+* Added by [Andreas Mattsson](https://github.com/AndreasMattsson) in Pull Request [#128](https://github.com/layoutBox/FlexLayout/pull/128) 
+
 ## [1.3.11](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.10)
 Released on 2018-08-09 
 
