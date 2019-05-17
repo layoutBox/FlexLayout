@@ -677,6 +677,10 @@ This property takes the same values as the width and height properties, and spec
 
   Specifying `nil` set the basis as `auto`, which means the length is equal to the length of the item. If the item has no length specified, the length will be according to its content 
 
+* **`basis(_ : FPercent)`**   
+This property takes the same values as the width and height properties, and specifies the initial size of the flex item, before free space is distributed according to the grow and shrink factors. 
+
+
 <br>
 
 ### isIncludedInLayout()

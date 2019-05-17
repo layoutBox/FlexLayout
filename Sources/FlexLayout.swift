@@ -336,8 +336,6 @@ public final class Flex {
     
      Specifying `nil` set the basis as `auto`, which means the length is equal to the length of the item. If the 
      item has no length specified, the length will be according to its content.
-    
-     - Parameter value: Default value is 0
     */
     @discardableResult
     public func basis(_ percent: FPercent) -> Flex {
