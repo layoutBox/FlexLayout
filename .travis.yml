@@ -13,6 +13,9 @@ cache:
 before_install:
   # - rvm use $RVM_RUBY_VERSION
   - bundle install
+  - brew tap caskroom/cask
+  - brew tap caskroom/versions
+  - brew cask install java8
   - gem install xcpretty-travis-formatter;
   #- gem install cocoapods -v '1.3.1' --no-document --quiet;
   # - gem install slather --no-document --quiet;  
