@@ -373,7 +373,7 @@
 				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
 					DF1F2A051F17D11700BA1B97 = {
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -436,13 +436,11 @@
 				"${SRCROOT}/../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-10/iOS/RevealServer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -643,8 +641,7 @@
 				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -657,8 +654,7 @@
 				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
