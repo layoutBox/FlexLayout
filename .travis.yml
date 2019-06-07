@@ -6,9 +6,9 @@ addons:
     update: true
     brewfile: true
 
-  apt:
-    packages:
-      - oracle-java8-installer
+  # apt:
+  #   packages:
+  #     - oracle-java8-installer
       # - openjdk-8-jre-headless
       # - oracle-java8-installer
 
@@ -43,6 +43,8 @@ before_install:
 
 script:
   # - jdk_switcher use openjdk8
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh && . ./install-jdk.sh -F 11 -L GPL
+  - install-jdk.sh -F 8
   - buck test :yoga
   - set -o pipefail && bundle exec fastlane travis
 
