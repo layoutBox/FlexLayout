@@ -11,8 +11,15 @@ addons:
       - openjdk-8-jre-headless
       # - oracle-java8-installer
 
+jdk:
+  # - oraclejdk8
+  # - oraclejdk11
+  - openjdk8
 # jdk:
 #   - oraclejdk8
+
+# env:
+#   - JAVA_HOME="1.0.*"
 
 cache:
   directories:
@@ -31,6 +38,7 @@ before_install:
   # - carthage bootstrap --verbose --platform iOS --cache-builds --use-ssh 
 
 script:
+  - jdk_switcher use openjdk8
   - buck test :yoga
   - set -o pipefail && bundle exec fastlane travis
 
