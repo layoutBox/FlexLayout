@@ -8,3 +8,4 @@ tap 'caskroom/versions'
 # brew 'oracle-jdk8'
 
 cask 'adoptopenjdk/openjdk/adoptopenjdk8'
+cask 'adoptopenjdk/openjdk/adoptopenjdk8-jre'
