@@ -3,7 +3,7 @@ PODS:
   - Nimble (8.0.1)
   - PinLayout (1.8.7)
   - Quick (2.1.0)
-  - SwiftLint (0.32.0)
+  - SwiftLint (0.33.0)
 
 DEPENDENCIES:
   - FlexLayout (from `./`)
@@ -28,7 +28,7 @@ SPEC CHECKSUMS:
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   PinLayout: a0722a5c8f0e0168a9c091ffe4930dabf0c8582c
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
-  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
 PODFILE CHECKSUM: 9c74b444ce1d9b0b90a0d90a353efb1f26fd93e2
 
