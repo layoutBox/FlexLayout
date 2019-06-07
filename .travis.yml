@@ -27,6 +27,7 @@ cache:
 
 before_install:
   # - rvm use $RVM_RUBY_VERSION
+  - export JAVA_HOME=$(/usr/libexec/java_home)
   - bundle install
   # - brew tap caskroom/cask
   # - brew tap caskroom/versions
@@ -38,7 +39,7 @@ before_install:
   # - carthage bootstrap --verbose --platform iOS --cache-builds --use-ssh 
 
 script:
-  - jdk_switcher use openjdk8
+  # - jdk_switcher use openjdk8
   - buck test :yoga
   - set -o pipefail && bundle exec fastlane travis
 
