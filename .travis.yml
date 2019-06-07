@@ -6,6 +6,14 @@ addons:
     update: true
     brewfile: true
 
+  apt:
+    packages:
+      - openjdk-8-jre-headless
+      # - oracle-java8-installer
+
+# jdk:
+#   - oraclejdk8
+
 cache:
   directories:
   - buck-out/cache
