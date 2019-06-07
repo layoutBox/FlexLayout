@@ -8,13 +8,14 @@ addons:
 
   apt:
     packages:
-      - openjdk-8-jre-headless
+      - oracle-java8-installer
+      # - openjdk-8-jre-headless
       # - oracle-java8-installer
 
-jdk:
+# jdk:
   # - oraclejdk8
   # - oraclejdk11
-  - openjdk8
+  # - openjdk8
 # jdk:
 #   - oraclejdk8
 
@@ -27,7 +28,9 @@ cache:
 
 before_install:
   # - rvm use $RVM_RUBY_VERSION
-  - export JAVA_HOME=$(/usr/libexec/java_home)
+  # - export JAVA_HOME=$(/usr/libexec/java_home)
+  # - export JAVA_HOME=$HOME/openjdk8
+  # - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME
   - bundle install
   # - brew tap caskroom/cask
   # - brew tap caskroom/versions
