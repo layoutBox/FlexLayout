@@ -1,6 +1,10 @@
 tap 'facebook/fb'
 brew 'buck'
 
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew cask install java8
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+# tap 'caskroom/core'
+# cask "caskroom/versions/oracle-jdk8"
+# brew 'oracle-jdk8'
+
+cask 'adoptopenjdk/openjdk/adoptopenjdk8'
