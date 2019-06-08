@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [1.3.15](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.15)
+Released on 2019-06-07
+
+* Fix public extension warning
+    * Added by [Levi McCallum](https://github.com/levi) in Pull Request [#131](https://github.com/layoutBox/FlexLayout/pull/131) 
+* Update to Swift 4.2
+* Update cocoapods to 1.7
+
 ## [1.3.14](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.14)
 Released on 2019-05-17
 
