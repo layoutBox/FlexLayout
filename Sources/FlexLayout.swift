@@ -116,9 +116,12 @@ public final class Flex {
      This property controls dynamically if a flexbox's UIView is included or not in the flexbox layouting. When a
      flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
     */
-    public var isIncludedInLayout: Bool = true {
-        didSet {
-            yoga.isIncludedInLayout = isIncludedInLayout
+    public var isIncludedInLayout: Bool {
+        get {
+            return yoga.isIncludedInLayout
+        }
+        set {
+            yoga.isIncludedInLayout = newValue
         }
     }
     
