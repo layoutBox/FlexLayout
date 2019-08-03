@@ -373,7 +373,7 @@
 				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
 					DF1F2A051F17D11700BA1B97 = {
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -644,7 +644,7 @@
 				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -657,7 +657,7 @@
 				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
