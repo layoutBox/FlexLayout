@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [1.3.16](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.16)
+Released on 2019-08-03
+
+* Delegate isIncludedInLayout to yoga vs using default value:  
+Previously the value of `isIncludedInLayout` may have not reflect what the underlying yoga value is as the developer may have manipulated the yoga value directly. This could potentially leave the Flex initial value out of sync. This change defers the get/set of this property to yoga.
+    * Added by [Dan Loman](https://github.com/namolnad) in Pull Request [#131](https://github.com/layoutBox/FlexLayout/pull/137) 
+
+
 ## [1.3.15](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.15)
 Released on 2019-06-07
 
