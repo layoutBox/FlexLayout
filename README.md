@@ -780,7 +780,7 @@ The position property tells Flexbox how you want your item to be positioned with
   view.flex.position(.absolute).top(10).left(10).size(50)
 ```
 
-### top(), bottom(), left(), right(), start(), end(), vertical(), vertically(), horizontally()
+### top(), bottom(), left(), right(), start(), end(), vertically(), horizontally()
 A flex item which is `position` is set to `.absolute` is positioned absolutely in regards to its parent. This is done through the following methods:
 
 **Methods:**
