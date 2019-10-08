@@ -58,6 +58,25 @@ class AbsolutionPositionContentSpec: QuickSpec {
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0)))
             }
+            
+            it("position(.absolute)") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).position(.absolute).horizontally(15).vertically(20)
+                }
+                
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 15.0, y: 20.0, width: 370.0, height: 360.0)))
+            }
+            
+            it("position(.absolute)") {
+                rootFlexContainer.flex.define { (flex) in
+                    flex.addItem(aView).position(.absolute).all(45)
+                }
+                
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 45.0, y: 45.0, width: 310.0, height: 310.0)))
+            }
+            
         }
     }
 }

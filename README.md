@@ -780,7 +780,7 @@ The position property tells Flexbox how you want your item to be positioned with
   view.flex.position(.absolute).top(10).left(10).size(50)
 ```
 
-### top(), bottom(), left(), right(), start(), end(), vertically(), horizontally()
+### top(), bottom(), left(), right(), start(), end(), vertically(), horizontally(), all()
 A flex item which is `position` is set to `.absolute` is positioned absolutely in regards to its parent. This is done through the following methods:
 
 **Methods:**
@@ -801,7 +801,8 @@ Controls the distance a child’s end edge is from the parent’s end edge. In l
 Controls the distance child’s top and bottom edges from the parent’s edges. Equal to `top().bottom()`.
 * **`horizontally(: CGFloat)`** / **`horizontally(: FPercent)`**:  
 Controls the distance child’s left and right edges from the parent’s edges. Equal to `left().right()`.
-
+* **`all(: CGFloat)`** / **`all(: FPercent)`**:  
+Controls the distance child’s edges from the parent’s edges. Equal to `top().bottom().left().right()`.
 
 Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t affect their sibling's layout. Absolute position can be used to create overlays and stack children in the Z axis.
 

@@ -692,6 +692,32 @@ public final class Flex {
         return self
     }
     
+    /**
+     Set all edges distance from the container edges in pixels.
+     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     */
+    @discardableResult
+    public func all(_ value: CGFloat) -> Flex {
+        yoga.top = YGValue(value)
+        yoga.left = YGValue(value)
+        yoga.bottom = YGValue(value)
+        yoga.right = YGValue(value)
+        return self
+    }
+    
+    /**
+     Set all edges distance from the container edges in percentage of its container size.
+     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     */
+    @discardableResult
+    public func all(_ percent: FPercent) -> Flex {
+        yoga.top = YGValue(value: Float(percent.value), unit: .percent)
+        yoga.left = YGValue(value: Float(percent.value), unit: .percent)
+        yoga.bottom = YGValue(value: Float(percent.value), unit: .percent)
+        yoga.right = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
     //
     // MARK: Margins
     //
