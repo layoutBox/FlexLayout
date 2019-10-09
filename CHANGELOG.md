@@ -7,6 +7,20 @@
 
 # Change Log
 
+## [1.3.17](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.17)
+Released on 2019-10-090
+
+Add new methods to position items in absolute positionning (https://github.com/layoutBox/FlexLayout#4-absolute-positioning):
+
+* **`vertically(: CGFloat)`** / **`vertically(: FPercent)`**:  
+Controls the distance child’s top and bottom edges from the parent’s edges. Equal to `top().bottom()`.
+* **`horizontally(: CGFloat)`** / **`horizontally(: FPercent)`**:  
+Controls the distance child’s left and right edges from the parent’s edges. Equal to `left().right()`.
+* **`all(: CGFloat)`** / **`all(: FPercent)`**:  
+Controls the distance child’s edges from the parent’s edges. Equal to `top().bottom().left().right()`.
+
+Added by [Kuluum](https://github.com/Kuluum) in Pull Request [#146](https://github.com/layoutBox/FlexLayout/pull/146) 
+
 ## [1.3.16](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.16)
 Released on 2019-08-03
 
