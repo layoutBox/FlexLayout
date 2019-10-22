@@ -531,7 +531,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func left(_ value: CGFloat) -> Flex {
+    public func left(_ value: CGFloat = 0) -> Flex {
         yoga.left = YGValue(value)
         return self
     }
@@ -541,7 +541,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func left(_ percent: FPercent) -> Flex {
+    public func left(_ percent: FPercent = 0%) -> Flex {
         yoga.left = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
@@ -551,7 +551,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func top(_ value: CGFloat) -> Flex {
+    public func top(_ value: CGFloat = 0) -> Flex {
         yoga.top = YGValue(value)
         return self
     }
@@ -561,7 +561,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func top(_ percent: FPercent) -> Flex {
+    public func top(_ percent: FPercent = 0%) -> Flex {
         yoga.top = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
@@ -571,7 +571,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func right(_ value: CGFloat) -> Flex {
+    public func right(_ value: CGFloat = 0) -> Flex {
         yoga.right = YGValue(value)
         return self
     }
@@ -581,7 +581,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func right(_ percent: FPercent) -> Flex {
+    public func right(_ percent: FPercent = 0%) -> Flex {
         yoga.right = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
@@ -591,7 +591,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func bottom(_ value: CGFloat) -> Flex {
+    public func bottom(_ value: CGFloat = 0) -> Flex {
         yoga.bottom = YGValue(value)
         return self
     }
@@ -601,7 +601,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func bottom(_ percent: FPercent) -> Flex {
+    public func bottom(_ percent: FPercent = 0%) -> Flex {
         yoga.bottom = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
@@ -611,7 +611,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func start(_ value: CGFloat) -> Flex {
+    public func start(_ value: CGFloat = 0) -> Flex {
         yoga.start = YGValue(value)
         return self
     }
@@ -622,7 +622,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func start(_ percent: FPercent) -> Flex {
+    public func start(_ percent: FPercent = 0%) -> Flex {
         yoga.start = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
@@ -632,7 +632,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func end(_ value: CGFloat) -> Flex {
+    public func end(_ value: CGFloat = 0) -> Flex {
         yoga.end = YGValue(value)
         return self
     }
@@ -643,7 +643,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func end(_ percent: FPercent) -> Flex {
+    public func end(_ percent: FPercent = 0%) -> Flex {
         yoga.end = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
@@ -653,7 +653,7 @@ public final class Flex {
       This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
       */
     @discardableResult
-    public func horizontally(_ value: CGFloat) -> Flex {
+    public func horizontally(_ value: CGFloat = 0) -> Flex {
         yoga.left = YGValue(value)
         yoga.right = YGValue(value)
         return self
@@ -664,7 +664,7 @@ public final class Flex {
       This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
       */
     @discardableResult
-    public func horizontally(_ percent: FPercent) -> Flex {
+    public func horizontally(_ percent: FPercent = 0%) -> Flex {
         yoga.left = YGValue(value: Float(percent.value), unit: .percent)
         yoga.right = YGValue(value: Float(percent.value), unit: .percent)
         return self
@@ -675,7 +675,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func vertically(_ value: CGFloat) -> Flex {
+    public func vertically(_ value: CGFloat = 0) -> Flex {
         yoga.top = YGValue(value)
         yoga.bottom = YGValue(value)
         return self
@@ -686,7 +686,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func vertically(_ percent: FPercent) -> Flex {
+    public func vertically(_ percent: FPercent = 0%) -> Flex {
         yoga.top = YGValue(value: Float(percent.value), unit: .percent)
         yoga.bottom = YGValue(value: Float(percent.value), unit: .percent)
         return self
@@ -697,7 +697,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func all(_ value: CGFloat) -> Flex {
+    public func all(_ value: CGFloat = 0) -> Flex {
         yoga.top = YGValue(value)
         yoga.left = YGValue(value)
         yoga.bottom = YGValue(value)
@@ -710,7 +710,7 @@ public final class Flex {
      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
-    public func all(_ percent: FPercent) -> Flex {
+    public func all(_ percent: FPercent = 0%) -> Flex {
         yoga.top = YGValue(value: Float(percent.value), unit: .percent)
         yoga.left = YGValue(value: Float(percent.value), unit: .percent)
         yoga.bottom = YGValue(value: Float(percent.value), unit: .percent)
