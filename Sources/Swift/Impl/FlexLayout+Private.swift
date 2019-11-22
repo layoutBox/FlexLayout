@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FlexLayoutYoga
 
 extension Flex {
     func valueOrUndefined(_ value: CGFloat?) -> YGValue {

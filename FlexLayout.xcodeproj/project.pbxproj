@@ -135,10 +135,8 @@
 		24AE972D1FEAF30A00995987 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				24AE972E1FEAF30A00995987 /* FlexLayout.swift */,
-				24AE972F1FEAF30A00995987 /* Impl */,
-				24AE97331FEAF30A00995987 /* Percent.swift */,
 				24AE97341FEAF30A00995987 /* SupportingFiles */,
+				B9EAD87E238884C90058E0CB /* Swift */,
 				DFAD4C3820409165008F79CD /* yoga */,
 				24AE97371FEAF30A00995987 /* YogaKit */,
 			);
@@ -167,12 +165,9 @@
 		24AE97371FEAF30A00995987 /* YogaKit */ = {
 			isa = PBXGroup;
 			children = (
-				24AE97381FEAF30A00995987 /* UIView+Yoga.h */,
+				B9EAD87C2388849D0058E0CB /* include */,
 				24AE97391FEAF30A00995987 /* UIView+Yoga.mm */,
-				24AE973A1FEAF30A00995987 /* YGLayout+Private.h */,
-				24AE973B1FEAF30A00995987 /* YGLayout.h */,
 				24AE973C1FEAF30A00995987 /* YGLayout.mm */,
-				24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */,
 			);
 			path = YogaKit;
 			sourceTree = "<group>";
@@ -230,25 +225,70 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B9EAD87A238884680058E0CB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B9EAD87B2388846F0058E0CB /* yoga */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B9EAD87B2388846F0058E0CB /* yoga */ = {
+			isa = PBXGroup;
+			children = (
+				C07B09E72045303000E03251 /* YGEnums.h */,
+				C07B09EE2045303000E03251 /* YGLayout.h */,
+				C07B09E62045303000E03251 /* YGMacros.h */,
+				C07B09EA2045303000E03251 /* Yoga-internal.h */,
+				C07B09EF2045303000E03251 /* Yoga.h */,
+			);
+			path = yoga;
+			sourceTree = "<group>";
+		};
+		B9EAD87C2388849D0058E0CB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B9EAD87D238884A20058E0CB /* YogaKit */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B9EAD87D238884A20058E0CB /* YogaKit */ = {
+			isa = PBXGroup;
+			children = (
+				24AE97381FEAF30A00995987 /* UIView+Yoga.h */,
+				24AE973A1FEAF30A00995987 /* YGLayout+Private.h */,
+				24AE973B1FEAF30A00995987 /* YGLayout.h */,
+			);
+			path = YogaKit;
+			sourceTree = "<group>";
+		};
+		B9EAD87E238884C90058E0CB /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				24AE972E1FEAF30A00995987 /* FlexLayout.swift */,
+				24AE972F1FEAF30A00995987 /* Impl */,
+				24AE97331FEAF30A00995987 /* Percent.swift */,
+				24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		DFAD4C3820409165008F79CD /* yoga */ = {
 			isa = PBXGroup;
 			children = (
+				B9EAD87A238884680058E0CB /* include */,
 				C07B09E82045303000E03251 /* Utils.cpp */,
 				C07B09ED2045303000E03251 /* Utils.h */,
 				C07B09F02045303000E03251 /* YGEnums.cpp */,
-				C07B09E72045303000E03251 /* YGEnums.h */,
 				C07B09EB2045303000E03251 /* YGLayout.cpp */,
-				C07B09EE2045303000E03251 /* YGLayout.h */,
-				C07B09E62045303000E03251 /* YGMacros.h */,
 				C07B09E32045302F00E03251 /* YGNode.cpp */,
 				C07B09E92045303000E03251 /* YGNode.h */,
 				C07B09EC2045303000E03251 /* YGNodePrint.cpp */,
 				C07B09F22045303000E03251 /* YGNodePrint.h */,
 				C07B09E42045303000E03251 /* YGStyle.cpp */,
 				C07B09F12045303000E03251 /* YGStyle.h */,
-				C07B09EA2045303000E03251 /* Yoga-internal.h */,
 				C07B09E52045303000E03251 /* Yoga.cpp */,
-				C07B09EF2045303000E03251 /* Yoga.h */,
 			);
 			name = yoga;
 			path = Sources/yoga;
