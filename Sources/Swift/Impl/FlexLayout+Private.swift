@@ -7,7 +7,9 @@
 //
 
 import UIKit
+#if SPM_BUILD
 import FlexLayoutYoga
+#endif
 
 extension Flex {
     func valueOrUndefined(_ value: CGFloat?) -> YGValue {

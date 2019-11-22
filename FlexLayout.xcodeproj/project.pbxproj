@@ -27,6 +27,8 @@
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */; };
 		9A9B18660F5E719FC58A540D /* Pods_FlexLayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FAE3C0113906CFA58353F5 /* Pods_FlexLayoutTests.framework */; };
+		B9EAD884238896C50058E0CB /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = B9EAD883238896C50058E0CB /* Yoga-internal.h */; };
+		B9EAD886238896D10058E0CB /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B9EAD885238896D10058E0CB /* YGLayout.h */; };
 		C07B09F32045303000E03251 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E32045302F00E03251 /* YGNode.cpp */; };
 		C07B09F42045303000E03251 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E42045303000E03251 /* YGStyle.cpp */; };
 		C07B09F52045303000E03251 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E52045303000E03251 /* Yoga.cpp */; };
@@ -34,11 +36,9 @@
 		C07B09F72045303000E03251 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09E72045303000E03251 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C07B09F82045303000E03251 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E82045303000E03251 /* Utils.cpp */; };
 		C07B09F92045303000E03251 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09E92045303000E03251 /* YGNode.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C07B09FA2045303000E03251 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09EA2045303000E03251 /* Yoga-internal.h */; };
 		C07B09FB2045303000E03251 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09EB2045303000E03251 /* YGLayout.cpp */; };
 		C07B09FC2045303000E03251 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09EC2045303000E03251 /* YGNodePrint.cpp */; };
 		C07B09FD2045303000E03251 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09ED2045303000E03251 /* Utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C07B09FE2045303000E03251 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09EE2045303000E03251 /* YGLayout.h */; };
 		C07B09FF2045303000E03251 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09EF2045303000E03251 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C07B0A002045303000E03251 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09F02045303000E03251 /* YGEnums.cpp */; };
 		C07B0A012045303000E03251 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09F12045303000E03251 /* YGStyle.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -95,6 +95,8 @@
 		24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentSpec.swift; sourceTree = "<group>"; };
 		37FAE3C0113906CFA58353F5 /* Pods_FlexLayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72993EF1EA5C10B379712194 /* Pods-FlexLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9EAD883238896C50058E0CB /* Yoga-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
+		B9EAD885238896D10058E0CB /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
 		C07B09E32045302F00E03251 /* YGNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
 		C07B09E42045303000E03251 /* YGStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
 		C07B09E52045303000E03251 /* Yoga.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
@@ -102,11 +104,9 @@
 		C07B09E72045303000E03251 /* YGEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
 		C07B09E82045303000E03251 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
 		C07B09E92045303000E03251 /* YGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
-		C07B09EA2045303000E03251 /* Yoga-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
 		C07B09EB2045303000E03251 /* YGLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
 		C07B09EC2045303000E03251 /* YGNodePrint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
 		C07B09ED2045303000E03251 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		C07B09EE2045303000E03251 /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
 		C07B09EF2045303000E03251 /* Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
 		C07B09F02045303000E03251 /* YGEnums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
 		C07B09F12045303000E03251 /* YGStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
@@ -237,9 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				C07B09E72045303000E03251 /* YGEnums.h */,
-				C07B09EE2045303000E03251 /* YGLayout.h */,
 				C07B09E62045303000E03251 /* YGMacros.h */,
-				C07B09EA2045303000E03251 /* Yoga-internal.h */,
 				C07B09EF2045303000E03251 /* Yoga.h */,
 			);
 			path = yoga;
@@ -289,6 +287,8 @@
 				C07B09E42045303000E03251 /* YGStyle.cpp */,
 				C07B09F12045303000E03251 /* YGStyle.h */,
 				C07B09E52045303000E03251 /* Yoga.cpp */,
+				B9EAD885238896D10058E0CB /* YGLayout.h */,
+				B9EAD883238896C50058E0CB /* Yoga-internal.h */,
 			);
 			name = yoga;
 			path = Sources/yoga;
@@ -305,15 +305,15 @@
 				24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */,
 				24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */,
 				C07B09FD2045303000E03251 /* Utils.h in Headers */,
-				C07B09FE2045303000E03251 /* YGLayout.h in Headers */,
 				24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */,
 				24AE97481FEAF30A00995987 /* YGLayout.h in Headers */,
 				C07B09F62045303000E03251 /* YGMacros.h in Headers */,
+				B9EAD884238896C50058E0CB /* Yoga-internal.h in Headers */,
 				C07B0A012045303000E03251 /* YGStyle.h in Headers */,
 				C07B09F72045303000E03251 /* YGEnums.h in Headers */,
+				B9EAD886238896D10058E0CB /* YGLayout.h in Headers */,
 				C07B09FF2045303000E03251 /* Yoga.h in Headers */,
 				C07B0A022045303000E03251 /* YGNodePrint.h in Headers */,
-				C07B09FA2045303000E03251 /* Yoga-internal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +645,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sources/yoga/**";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -674,6 +675,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sources/yoga/**";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

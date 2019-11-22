@@ -6,7 +6,11 @@
  */
 
 #import "YGLayout.h"
+#if SPM_BUILD
 #import <yoga/Yoga.h>
+#else
+#import "Yoga.h"
+#endif
 
 @interface YGLayout ()
 

@@ -13,8 +13,9 @@
 // Created by Luc Dion on 2017-07-17.
 
 import UIKit
+#if SPM_BUILD
 import FlexLayoutYoga
-
+#endif
 extension Flex.Direction {
     var yogaValue: YGFlexDirection {
         switch self {
