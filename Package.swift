@@ -19,13 +19,7 @@ let package = Package(
     .target(
       name: "FlexLayout",
       dependencies: ["FlexLayoutYoga", "FlexLayoutYogaKit"],
-      path: "Sources/Swift",
-      cxxSettings: [
-      .define("SPM_BUILD")
-      ],
-      swiftSettings: [
-      .define("SPM_BUILD")
-      ]
+      path: "Sources/Swift"
     ),
     .target(
       name: "FlexLayoutYoga",
@@ -33,8 +27,7 @@ let package = Package(
       path: "Sources/yoga",
       cxxSettings: [
       .headerSearchPath("include/yoga/"),
-      .headerSearchPath("./"),
-      .define("SPM_BUILD")
+      .headerSearchPath("./")
       ]
     ),
     .target(
@@ -43,8 +36,7 @@ let package = Package(
       path: "Sources/YogaKit",
       cxxSettings: [
       .headerSearchPath("include/YogaKit/"),
-      .headerSearchPath("./"),
-      .define("SPM_BUILD")
+      .headerSearchPath("./")
       ]
     )
   ],

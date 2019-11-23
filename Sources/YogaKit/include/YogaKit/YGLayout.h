@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-#if SPM_BUILD
+#if SWIFT_PACKAGE
 #import <yoga/YGEnums.h>
 #import <yoga/Yoga.h>
 #import <yoga/YGMacros.h>

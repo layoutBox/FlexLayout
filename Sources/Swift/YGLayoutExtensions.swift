@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#if SPM_BUILD
+#if SWIFT_PACKAGE
 import CoreGraphics
 import FlexLayoutYoga
 #endif

@@ -6,7 +6,7 @@
  */
 
 #import "YGLayout.h"
-#if SPM_BUILD
+#if SWIFT_PACKAGE
 #import <yoga/Yoga.h>
 #else
 #import "Yoga.h"
