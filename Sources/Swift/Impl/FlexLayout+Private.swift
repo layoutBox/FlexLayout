@@ -7,7 +7,7 @@
 //
 
 import UIKit
-#if SWIFT_PACKAGE
+#if YG_SWIFT_PACKAGE
 import FlexLayoutYoga
 #endif
 
