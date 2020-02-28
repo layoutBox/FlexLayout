@@ -19,13 +19,25 @@ let package = Package(
     .target(
       name: "FlexLayout",
       dependencies: ["FlexLayoutYoga", "FlexLayoutYogaKit"],
-      path: "Sources/Swift"
+      path: "Sources/Swift",
+      cSettings: [
+        .define("SWIFT_PACKAGE")
+      ],
+      cxxSettings: [
+        .define("SWIFT_PACKAGE"),
+        .headerSearchPath("include/yoga/"),
+        .headerSearchPath("./")
+      ]
     ),
     .target(
       name: "FlexLayoutYoga",
       dependencies: [],
       path: "Sources/yoga",
+      cSettings: [
+        .define("SWIFT_PACKAGE")
+      ],
       cxxSettings: [
+        .define("SWIFT_PACKAGE"),
         .headerSearchPath("include/yoga/"),
         .headerSearchPath("./")
       ]
@@ -35,10 +47,10 @@ let package = Package(
       dependencies: ["FlexLayoutYoga"],
       path: "Sources/YogaKit",
       cSettings: [
-        .define("SWIFT_PACKAGE", to: "1")
+        .define("SWIFT_PACKAGE")
       ],
       cxxSettings: [
-        .define("SWIFT_PACKAGE", to: "1"),
+        .define("SWIFT_PACKAGE"),
         .headerSearchPath("include/YogaKit/"),
         .headerSearchPath("./")
       ]
