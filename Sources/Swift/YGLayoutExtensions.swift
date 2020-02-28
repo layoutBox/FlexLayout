@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#if YG_SWIFT_PACKAGE
+#if FLEXLAYOUT_SWIFT_PACKAGE
 import CoreGraphics
 import FlexLayoutYoga
 #endif
