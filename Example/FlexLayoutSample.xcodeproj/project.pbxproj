@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,46 @@
 		24FB883E1F59CA8B00615D33 /* TableViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB883C1F59CA8B00615D33 /* TableViewExampleViewController.swift */; };
 		24FB88411F59CA9A00615D33 /* MethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB883F1F59CA9A00615D33 /* MethodCell.swift */; };
 		24FB88421F59CA9A00615D33 /* MethodGroupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88401F59CA9A00615D33 /* MethodGroupHeader.swift */; };
+		B9BDD93E240A70C3005298B3 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B9BDD93D240A70C3005298B3 /* FlexLayout */; };
+		B9BDD940240A70C3005298B3 /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = B9BDD93F240A70C3005298B3 /* FlexLayoutYoga */; };
+		B9BDD942240A70C3005298B3 /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BDD941240A70C3005298B3 /* FlexLayoutYogaKit */; };
+		B9EA7C662409B7B5000D8E35 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECDF1FA011630024E7C2 /* BaseViewController.swift */; };
+		B9EA7C672409B7B5000D8E35 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE01FA011630024E7C2 /* BasicView.swift */; };
+		B9EA7C682409B7B5000D8E35 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE11FA011630024E7C2 /* Stylesheet.swift */; };
+		B9EA7C692409B7B5000D8E35 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AECE61FA0119F0024E7C2 /* UIImageView+Download.swift */; };
+		B9EA7C6A2409B7B5000D8E35 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC331E665BF6003326FB /* MenuView.swift */; };
+		B9EA7C6B2409B7B5000D8E35 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC341E665BF6003326FB /* MenuViewController.swift */; };
+		B9EA7C6C2409B7C2000D8E35 /* YogaExampleEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E681F1F92C000BB1C09 /* YogaExampleEView.swift */; };
+		B9EA7C6D2409B7C2000D8E35 /* YogaExampleEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E691F1F92C000BB1C09 /* YogaExampleEViewController.swift */; };
+		B9EA7C6E2409B7C5000D8E35 /* YogaExampleDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E641F1F92B500BB1C09 /* YogaExampleDView.swift */; };
+		B9EA7C6F2409B7C5000D8E35 /* YogaExampleDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E651F1F92B500BB1C09 /* YogaExampleDViewController.swift */; };
+		B9EA7C702409B7C8000D8E35 /* YogaExampleCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E601F1F929600BB1C09 /* YogaExampleCView.swift */; };
+		B9EA7C712409B7C8000D8E35 /* YogaExampleCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24875E621F1F92A100BB1C09 /* YogaExampleCViewController.swift */; };
+		B9EA7C722409B7CB000D8E35 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
+		B9EA7C732409B7CB000D8E35 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
+		B9EA7C742409B7CE000D8E35 /* YogaExampleAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91747D1F1F6F9A0034632D /* YogaExampleAView.swift */; };
+		B9EA7C752409B7CE000D8E35 /* YogaExampleAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91747E1F1F6F9A0034632D /* YogaExampleAViewController.swift */; };
+		B9EA7C762409B7D0000D8E35 /* Example1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D73431F6757B00001AE2C /* Example1View.swift */; };
+		B9EA7C772409B7D0000D8E35 /* Example1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D73441F6757B00001AE2C /* Example1ViewController.swift */; };
+		B9EA7C782409B7D3000D8E35 /* MethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB883F1F59CA9A00615D33 /* MethodCell.swift */; };
+		B9EA7C792409B7D3000D8E35 /* MethodGroupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88401F59CA9A00615D33 /* MethodGroupHeader.swift */; };
+		B9EA7C7A2409B7D3000D8E35 /* TableViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB883B1F59CA8B00615D33 /* TableViewExampleView.swift */; };
+		B9EA7C7B2409B7D3000D8E35 /* TableViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB883C1F59CA8B00615D33 /* TableViewExampleViewController.swift */; };
+		B9EA7C7C2409B7D7000D8E35 /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461068B1FA007B20038165C /* HouseCell.swift */; };
+		B9EA7C7D2409B7D7000D8E35 /* CollectionViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901F081F93D40F0025D11B /* CollectionViewExampleView.swift */; };
+		B9EA7C7E2409B7D7000D8E35 /* CollectionViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901F091F93D40F0025D11B /* CollectionViewExampleViewController.swift */; };
+		B9EA7C7F2409B7DB000D8E35 /* ExpandedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD4A1F4E177700CB77E6 /* ExpandedTableView.swift */; };
+		B9EA7C802409B7DB000D8E35 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADD491F4E177700CB77E6 /* ShowTableViewCell.swift */; };
+		B9EA7C812409B7DB000D8E35 /* RaywenderlichTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E835141F4CC336009F95CC /* RaywenderlichTutorialView.swift */; };
+		B9EA7C822409B7DB000D8E35 /* RaywenderlichTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E835151F4CC336009F95CC /* RaywenderlichTutorialViewController.swift */; };
+		B9EA7C832409B7E0000D8E35 /* Shows.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AADD471F4E176A00CB77E6 /* Shows.plist */; };
+		B9EA7C842409B7E2000D8E35 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0F20F1F4EE9B20050BEE7 /* Show.swift */; };
+		B9EA7C852409B7E7000D8E35 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B14C591F278CCE00C90490 /* IntroView.swift */; };
+		B9EA7C862409B7E7000D8E35 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B14C5A1F278CCE00C90490 /* IntroViewController.swift */; };
+		B9EA7C922409BAE1000D8E35 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B9EA7C912409BAE1000D8E35 /* PinLayout */; };
+		B9EA7C932409BB0C000D8E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE491E64FAFE00165E39 /* Assets.xcassets */; };
+		B9EA7C942409BB13000D8E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE4B1E64FAFE00165E39 /* LaunchScreen.storyboard */; };
+		B9EA7C952409BB30000D8E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EFE421E64FAFE00165E39 /* AppDelegate.swift */; };
 		DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
 		DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
 		DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC331E665BF6003326FB /* MenuView.swift */; };
@@ -96,6 +136,8 @@
 		24FB88401F59CA9A00615D33 /* MethodGroupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodGroupHeader.swift; sourceTree = "<group>"; };
 		82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8561ACDBCFFA1B4B9ABEAB16 /* Pods-FlexLayoutSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.debug.xcconfig"; sourceTree = "<group>"; };
+		B9EA7C522409B79B000D8E35 /* FlexLayoutSampleSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutSampleSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9EA7C96240A6C24000D8E35 /* FlexLayout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FlexLayout; path = ..; sourceTree = "<group>"; };
 		DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleBView.swift; sourceTree = "<group>"; };
 		DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleBViewController.swift; sourceTree = "<group>"; };
 		DF1F2A221F17D11700BA1B97 /* FlexLayoutSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +146,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B9EA7C4F2409B79B000D8E35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9EA7C922409BAE1000D8E35 /* PinLayout in Frameworks */,
+				B9BDD93E240A70C3005298B3 /* FlexLayout in Frameworks */,
+				B9BDD942240A70C3005298B3 /* FlexLayoutYogaKit in Frameworks */,
+				B9BDD940240A70C3005298B3 /* FlexLayoutYoga in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF1F2A141F17D11700BA1B97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +247,7 @@
 		249EFE361E64FAFE00165E39 = {
 			isa = PBXGroup;
 			children = (
+				B9EA7C96240A6C24000D8E35 /* FlexLayout */,
 				249EFE411E64FAFE00165E39 /* FlexLayoutSample */,
 				461884C59B72ACEAFC912B8A /* Frameworks */,
 				85CAAE97812075333AF3E88F /* Pods */,
@@ -205,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				DF1F2A221F17D11700BA1B97 /* FlexLayoutSample.app */,
+				B9EA7C522409B79B000D8E35 /* FlexLayoutSampleSPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -341,6 +396,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B9EA7C512409B79B000D8E35 /* FlexLayoutSampleSPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9EA7C652409B79C000D8E35 /* Build configuration list for PBXNativeTarget "FlexLayoutSampleSPM" */;
+			buildPhases = (
+				B9EA7C4E2409B79B000D8E35 /* Sources */,
+				B9EA7C4F2409B79B000D8E35 /* Frameworks */,
+				B9EA7C502409B79B000D8E35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlexLayoutSampleSPM;
+			packageProductDependencies = (
+				B9EA7C912409BAE1000D8E35 /* PinLayout */,
+				B9BDD93D240A70C3005298B3 /* FlexLayout */,
+				B9BDD93F240A70C3005298B3 /* FlexLayoutYoga */,
+				B9BDD941240A70C3005298B3 /* FlexLayoutYogaKit */,
+			);
+			productName = FlexLayoutSampleSPM;
+			productReference = B9EA7C522409B79B000D8E35 /* FlexLayoutSampleSPM.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DF1F2A051F17D11700BA1B97 /* FlexLayoutSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF1F2A1F1F17D11700BA1B97 /* Build configuration list for PBXNativeTarget "FlexLayoutSample" */;
@@ -368,10 +446,13 @@
 		249EFE371E64FAFE00165E39 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
+					B9EA7C512409B79B000D8E35 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					DF1F2A051F17D11700BA1B97 = {
 						LastSwiftMigration = 1030;
 					};
@@ -387,16 +468,31 @@
 				Base,
 			);
 			mainGroup = 249EFE361E64FAFE00165E39;
+			packageReferences = (
+				B9EA7C892409B986000D8E35 /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				B9EA7C902409BAE1000D8E35 /* XCRemoteSwiftPackageReference "PinLayout" */,
+			);
 			productRefGroup = 249EFE401E64FAFE00165E39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DF1F2A051F17D11700BA1B97 /* FlexLayoutSample */,
+				B9EA7C512409B79B000D8E35 /* FlexLayoutSampleSPM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B9EA7C502409B79B000D8E35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9EA7C942409BB13000D8E35 /* LaunchScreen.storyboard in Resources */,
+				B9EA7C932409BB0C000D8E35 /* Assets.xcassets in Resources */,
+				B9EA7C832409B7E0000D8E35 /* Shows.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF1F2A181F17D11700BA1B97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +561,46 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B9EA7C4E2409B79B000D8E35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9EA7C952409BB30000D8E35 /* AppDelegate.swift in Sources */,
+				B9EA7C702409B7C8000D8E35 /* YogaExampleCView.swift in Sources */,
+				B9EA7C6F2409B7C5000D8E35 /* YogaExampleDViewController.swift in Sources */,
+				B9EA7C7E2409B7D7000D8E35 /* CollectionViewExampleViewController.swift in Sources */,
+				B9EA7C762409B7D0000D8E35 /* Example1View.swift in Sources */,
+				B9EA7C742409B7CE000D8E35 /* YogaExampleAView.swift in Sources */,
+				B9EA7C712409B7C8000D8E35 /* YogaExampleCViewController.swift in Sources */,
+				B9EA7C7F2409B7DB000D8E35 /* ExpandedTableView.swift in Sources */,
+				B9EA7C6A2409B7B5000D8E35 /* MenuView.swift in Sources */,
+				B9EA7C6B2409B7B5000D8E35 /* MenuViewController.swift in Sources */,
+				B9EA7C782409B7D3000D8E35 /* MethodCell.swift in Sources */,
+				B9EA7C7D2409B7D7000D8E35 /* CollectionViewExampleView.swift in Sources */,
+				B9EA7C692409B7B5000D8E35 /* UIImageView+Download.swift in Sources */,
+				B9EA7C722409B7CB000D8E35 /* YogaExampleBView.swift in Sources */,
+				B9EA7C6E2409B7C5000D8E35 /* YogaExampleDView.swift in Sources */,
+				B9EA7C822409B7DB000D8E35 /* RaywenderlichTutorialViewController.swift in Sources */,
+				B9EA7C662409B7B5000D8E35 /* BaseViewController.swift in Sources */,
+				B9EA7C802409B7DB000D8E35 /* ShowTableViewCell.swift in Sources */,
+				B9EA7C7C2409B7D7000D8E35 /* HouseCell.swift in Sources */,
+				B9EA7C842409B7E2000D8E35 /* Show.swift in Sources */,
+				B9EA7C672409B7B5000D8E35 /* BasicView.swift in Sources */,
+				B9EA7C792409B7D3000D8E35 /* MethodGroupHeader.swift in Sources */,
+				B9EA7C732409B7CB000D8E35 /* YogaExampleBViewController.swift in Sources */,
+				B9EA7C6C2409B7C2000D8E35 /* YogaExampleEView.swift in Sources */,
+				B9EA7C6D2409B7C2000D8E35 /* YogaExampleEViewController.swift in Sources */,
+				B9EA7C852409B7E7000D8E35 /* IntroView.swift in Sources */,
+				B9EA7C7B2409B7D3000D8E35 /* TableViewExampleViewController.swift in Sources */,
+				B9EA7C752409B7CE000D8E35 /* YogaExampleAViewController.swift in Sources */,
+				B9EA7C7A2409B7D3000D8E35 /* TableViewExampleView.swift in Sources */,
+				B9EA7C682409B7B5000D8E35 /* Stylesheet.swift in Sources */,
+				B9EA7C812409B7DB000D8E35 /* RaywenderlichTutorialView.swift in Sources */,
+				B9EA7C772409B7D0000D8E35 /* Example1ViewController.swift in Sources */,
+				B9EA7C862409B7E7000D8E35 /* IntroViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF1F2A071F17D11700BA1B97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,11 +763,62 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9EA7C632409B79C000D8E35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"FLEXLAYOUT_SWIFT_PACKAGE=1",
+				);
+				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSampleSPM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9EA7C642409B79C000D8E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FlexLayoutSample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSampleSPM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -673,6 +860,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B9EA7C652409B79C000D8E35 /* Build configuration list for PBXNativeTarget "FlexLayoutSampleSPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EA7C632409B79C000D8E35 /* Debug */,
+				B9EA7C642409B79C000D8E35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DF1F2A1F1F17D11700BA1B97 /* Build configuration list for PBXNativeTarget "FlexLayoutSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -683,6 +879,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9EA7C892409B986000D8E35 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Tundaware/FlexLayout";
+			requirement = {
+				branch = "spm-10";
+				kind = branch;
+			};
+		};
+		B9EA7C902409BAE1000D8E35 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.13;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9BDD93D240A70C3005298B3 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlexLayout;
+		};
+		B9BDD93F240A70C3005298B3 /* FlexLayoutYoga */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlexLayoutYoga;
+		};
+		B9BDD941240A70C3005298B3 /* FlexLayoutYogaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlexLayoutYogaKit;
+		};
+		B9EA7C912409BAE1000D8E35 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EA7C902409BAE1000D8E35 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 249EFE371E64FAFE00165E39 /* Project object */;
 }
