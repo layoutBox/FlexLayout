@@ -13,6 +13,9 @@
 // Created by Luc Dion on 2017-06-19.
 
 import UIKit
+#if FLEXLAYOUT_SWIFT_PACKAGE
+import FlexLayoutYogaKit
+#endif
 
 /**
  FlexLayout interface.

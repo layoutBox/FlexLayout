@@ -14,6 +14,64 @@
 
 import UIKit
 
+#if FLEXLAYOUT_SWIFT_PACKAGE
+import FlexLayoutYoga
+
+extension YGFlexDirection {
+    static let column = YGFlexDirectionColumn
+    static let columnReverse = YGFlexDirectionColumnReverse
+    static let row = YGFlexDirectionRow
+    static let rowReverse = YGFlexDirectionRowReverse
+}
+
+extension YGJustify {
+    static let flexStart = YGJustifyFlexStart
+    static let center = YGJustifyCenter
+    static let flexEnd = YGJustifyFlexEnd
+    static let spaceBetween = YGJustifySpaceBetween
+    static let spaceAround = YGJustifySpaceAround
+    static let spaceEvenly = YGJustifySpaceEvenly
+}
+
+extension YGAlign {
+    static let auto = YGAlignAuto
+    static let baseline = YGAlignBaseline
+    static let stretch = YGAlignStretch
+    static let flexStart = YGAlignFlexStart
+    static let center = YGAlignCenter
+    static let flexEnd = YGAlignFlexEnd
+    static let spaceBetween = YGAlignSpaceBetween
+    static let spaceAround = YGAlignSpaceAround
+}
+
+extension YGWrap {
+    static let noWrap = YGWrapNoWrap
+    static let wrap = YGWrapWrap
+    static let wrapReverse = YGWrapWrapReverse
+}
+
+extension YGPositionType {
+    static let relative = YGPositionTypeRelative
+    static let absolute = YGPositionTypeAbsolute
+}
+
+extension YGDirection {
+    static let LTR = YGDirectionLTR
+    static let RTL = YGDirectionRTL
+    static let inherit = YGDirectionInherit
+}
+
+extension YGDisplay {
+    static let flex = YGDisplayFlex
+    static let none = YGDisplayNone
+}
+
+extension YGUnit {
+    static let percent = YGUnitPercent
+    static let point = YGUnitPoint
+}
+#endif
+
 extension Flex.Direction {
     var yogaValue: YGFlexDirection {
         switch self {
