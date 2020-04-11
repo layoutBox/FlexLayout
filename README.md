@@ -1104,6 +1104,22 @@ github "layoutBox/FlexLayout"
 3. Add built `FlexLayout.framework` in your Xcode project in the **Embedded Binaries** section. 
 
 
+### Swift Package Manager
+
+#### Another Swift Package
+
+To integrate FlexLayout into another Swift Package, add it as a dependency:
+
+```
+.package(url: "https://github.com/layoutBox/FlexLayout.git", from: "1.3.18")
+```
+
+#### In an Xcode target
+
+1. To integrate FlexLayout into an Xcode target, use the `File -> Swift Packages -> Add Package Dependency` menu item.
+2. Add "FLEXLAYOUT_SWIFT_PACKAGE=1" to the Xcode target's `GCC_PREPROCESSOR_DEFINITIONS` build setting.
+
+
 <br/>
 
 ## Changelog

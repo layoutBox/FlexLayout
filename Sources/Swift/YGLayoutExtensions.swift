@@ -5,6 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+#if FLEXLAYOUT_SWIFT_PACKAGE
+import CoreGraphics
+import FlexLayoutYoga
+#endif
+
 postfix operator %
 
 extension Int {

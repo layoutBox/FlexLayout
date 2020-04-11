@@ -25,3 +25,6 @@ Carthage/Checkouts
 
 fastlane/report.xml
 fastlane/test_output
+
+# SwiftPM
+swiftpm/
