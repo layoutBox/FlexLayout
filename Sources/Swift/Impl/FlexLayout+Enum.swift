@@ -116,7 +116,7 @@ extension Flex.AlignItems {
         case .start:        return YGAlign.flexStart
         case .center:       return YGAlign.center
         case .end:          return YGAlign.flexEnd
-        //case .baseline:     return YGAlign.baseline
+        case .baseline:     return YGAlign.baseline
         }
     }
 }

@@ -1197,8 +1197,7 @@ public final class Flex {
         /// Items are positioned at the end of the container
         case end
         /// Items are positioned at the baseline of the container
-        // Not currently supported by Yoga.
-        //case baseline
+        case baseline
     }
     
     /**
