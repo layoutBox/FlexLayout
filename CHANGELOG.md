@@ -7,7 +7,7 @@
 
 # Change Log
 
-## [1.3.19](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.19)
+## [1.3.20](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.20)
 Released on 2020-05-29
 
 Add baseline item support. 
