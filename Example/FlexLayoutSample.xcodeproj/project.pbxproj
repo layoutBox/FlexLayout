@@ -35,6 +35,8 @@
 		24FB883E1F59CA8B00615D33 /* TableViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB883C1F59CA8B00615D33 /* TableViewExampleViewController.swift */; };
 		24FB88411F59CA9A00615D33 /* MethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB883F1F59CA9A00615D33 /* MethodCell.swift */; };
 		24FB88421F59CA9A00615D33 /* MethodGroupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88401F59CA9A00615D33 /* MethodGroupHeader.swift */; };
+		60BAE156247DF4120020119C /* YogaExampleFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAE155247DF4120020119C /* YogaExampleFView.swift */; };
+		60BAE158247DF4CE0020119C /* YogaExampleFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAE157247DF4CE0020119C /* YogaExampleFViewController.swift */; };
 		B9BDD93E240A70C3005298B3 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B9BDD93D240A70C3005298B3 /* FlexLayout */; };
 		B9BDD940240A70C3005298B3 /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = B9BDD93F240A70C3005298B3 /* FlexLayoutYoga */; };
 		B9BDD942240A70C3005298B3 /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BDD941240A70C3005298B3 /* FlexLayoutYogaKit */; };
@@ -134,6 +136,8 @@
 		24FB883C1F59CA8B00615D33 /* TableViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExampleViewController.swift; sourceTree = "<group>"; };
 		24FB883F1F59CA9A00615D33 /* MethodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodCell.swift; sourceTree = "<group>"; };
 		24FB88401F59CA9A00615D33 /* MethodGroupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodGroupHeader.swift; sourceTree = "<group>"; };
+		60BAE155247DF4120020119C /* YogaExampleFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaExampleFView.swift; sourceTree = "<group>"; };
+		60BAE157247DF4CE0020119C /* YogaExampleFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaExampleFViewController.swift; sourceTree = "<group>"; };
 		82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8561ACDBCFFA1B4B9ABEAB16 /* Pods-FlexLayoutSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutSample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample.debug.xcconfig"; sourceTree = "<group>"; };
 		B9EA7C522409B79B000D8E35 /* FlexLayoutSampleSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutSampleSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,16 +196,17 @@
 		2439CC371E665C5E003326FB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				24901F071F93D40F0025D11B /* CollectionViewExample */,
+				247D73421F6757A00001AE2C /* Example1 */,
 				24B14C581F278CB400C90490 /* Intro */,
 				24E835131F4CC323009F95CC /* RaywenderlichTutorial */,
-				24901F071F93D40F0025D11B /* CollectionViewExample */,
 				24FB883A1F59CA7800615D33 /* TableViewExample */,
-				247D73421F6757A00001AE2C /* Example1 */,
 				DF91747C1F1F6F8B0034632D /* YogaExampleA */,
 				DF0E85281F1F742C00AB1956 /* YogaExampleB */,
 				24CD0D121F1F8D1100D56FC3 /* YogaExampleC */,
 				24CD0D171F1F8E3D00D56FC3 /* YogaExampleD */,
 				24CD0D1C1F1F90AF00D56FC3 /* YogaExampleE */,
+				60BAE154247DF3F40020119C /* YogaExampleF */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -364,6 +369,15 @@
 				82FCE524E22C2FF5BC4DFBAB /* Pods_FlexLayoutSample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60BAE154247DF3F40020119C /* YogaExampleF */ = {
+			isa = PBXGroup;
+			children = (
+				60BAE155247DF4120020119C /* YogaExampleFView.swift */,
+				60BAE157247DF4CE0020119C /* YogaExampleFViewController.swift */,
+			);
+			path = YogaExampleF;
 			sourceTree = "<group>";
 		};
 		85CAAE97812075333AF3E88F /* Pods */ = {
@@ -529,15 +543,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -610,10 +621,12 @@
 				24FB883D1F59CA8B00615D33 /* TableViewExampleView.swift in Sources */,
 				242AECE41FA011630024E7C2 /* BasicView.swift in Sources */,
 				24AADD4B1F4E177700CB77E6 /* ShowTableViewCell.swift in Sources */,
+				60BAE158247DF4CE0020119C /* YogaExampleFViewController.swift in Sources */,
 				242AECE31FA011630024E7C2 /* BaseViewController.swift in Sources */,
 				24901F0C1F93D40F0025D11B /* CollectionViewExampleView.swift in Sources */,
 				DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */,
 				DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */,
+				60BAE156247DF4120020119C /* YogaExampleFView.swift in Sources */,
 				24AADD4C1F4E177700CB77E6 /* ExpandedTableView.swift in Sources */,
 				DF91747F1F1F6F9A0034632D /* YogaExampleAView.swift in Sources */,
 				24FB88421F59CA9A00615D33 /* MethodGroupHeader.swift in Sources */,
