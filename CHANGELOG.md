@@ -7,6 +7,21 @@
 
 # Change Log
 
+## [1.3.20](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.20)
+Released on 2020-05-29
+
+Add baseline item support. 
+Note that for now baseline support is only for the first baseline. 
+
+Added by [Michael Ong](https://github.com/rantingmong) in Pull Request [#159](https://github.com/layoutBox/FlexLayout/pull/159)
+
+## [1.3.18](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.18)
+Released on 2020-05-01
+
+Adds Swift Package Manager Support
+
+Added by [gcox](https://github.com/gcox) in Pull Request [#150](https://github.com/layoutBox/FlexLayout/pull/150)
+
 ## [1.3.17](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.17)
 Released on 2019-10-090
 
