@@ -1114,8 +1114,7 @@ To integrate FlexLayout into another Swift Package, add it as a dependency:
 
 #### In an Xcode target
 
-1. To integrate FlexLayout into an Xcode target, use the `File -> Swift Packages -> Add Package Dependency` menu item.
-2. Add "FLEXLAYOUT_SWIFT_PACKAGE=1" to the Xcode target's `GCC_PREPROCESSOR_DEFINITIONS` build setting.
+To integrate FlexLayout into an Xcode target, use the `File -> Swift Packages -> Add Package Dependency` menu item.
 
 
 <br/>
