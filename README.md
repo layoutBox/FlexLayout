@@ -746,7 +746,7 @@ Returns the item size when layouted in the specified frame size.
 Get the size of view when layouted in a container with a width of 200 pixels.
 
 ```swift
-    let layoutSize = viewA.flex.sizeThatFits(CGSize(width: 200, height: CGFloat.greatestFiniteMagnitude)
+    let layoutSize = viewA.flex.sizeThatFits(size: CGSize(width: 200, height: CGFloat.greatestFiniteMagnitude))
 ```
 
 <br>
