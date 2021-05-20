@@ -1,5 +1,6 @@
+source 'https://cdn.cocoapods.org/'
 use_frameworks!
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 workspace 'FlexLayout.xcworkspace'
 
