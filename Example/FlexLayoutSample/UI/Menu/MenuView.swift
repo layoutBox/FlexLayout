@@ -12,7 +12,7 @@
 
 import UIKit
 
-protocol MenuViewDelegate: class {
+protocol MenuViewDelegate: AnyObject {
     func didSelect(pageType: PageType)
 }
 
