@@ -26,4 +26,8 @@ extension UIView {
             return flex
         }
     }
+
+    public var isFlexEnabled: Bool {
+        (objc_getAssociatedObject(self, &flexLayoutAssociatedObjectHandle) as? Flex) != nil
+    }
 }
