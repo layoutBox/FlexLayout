@@ -982,7 +982,7 @@ public final class Flex {
     }
 
     /**
-     Set the top padding. Top padding specify the **offset children should have** from the container's top edge.
+     Set the right padding. Right padding specify the **offset children should have** from the container's right edge.
      */
     @discardableResult
     public func paddingRight(_ value: CGFloat) -> Flex {
