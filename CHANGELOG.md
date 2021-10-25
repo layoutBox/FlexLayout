@@ -7,6 +7,9 @@
 
 # Change Log
 
+## [1.3.22](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.20)
+Released on 2021-10-25
+
 ## [1.3.20](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.20)
 Released on 2020-05-29
 
