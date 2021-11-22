@@ -7,7 +7,26 @@
 
 # Change Log
 
-## [1.3.22](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.20)
+## [1.3.23](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.23)
+Released on 2021-11-22
+
+#### Percent padding support.
+New methods:
+
+* `paddingTop(_ percent: FPercent)`**
+* `paddingLeft(_ percent: FPercent)`**
+* `paddingBottom(_ percent: FPercent)`**
+* `paddingRight(_ percent: FPercent)`**
+* `paddingStart(_ percent: FPercent)`**
+* `paddingEnd(_ percent: FPercent)`**
+* `paddingHorizontal(_ percent: FPercent)`**
+* `paddingVertical(_ percent: FPercent)`**
+
+Added by [albertocs-noma](https://github.com/albertocs-noma) in Pull Request [#159](https://github.com/layoutBox/FlexLayout/pull/187)
+
+
+
+## [1.3.22](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.22)
 Released on 2021-10-25
 
 ## [1.3.20](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.20)
