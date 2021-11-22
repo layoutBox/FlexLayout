@@ -963,12 +963,24 @@ public final class Flex {
         return self
     }
 
+    @discardableResult
+    public func paddingTop(_ percent: FPercent) -> Flex {
+        yoga.paddingTop = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     /**
      Set the left padding. Left padding specify the **offset children should have** from the container's left edge.
      */
     @discardableResult
     public func paddingLeft(_ value: CGFloat) -> Flex {
         yoga.paddingLeft = YGValue(value)
+        return self
+    }
+
+    @discardableResult
+    public func paddingLeft(_ percent: FPercent) -> Flex {
+        yoga.paddingLeft = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
 
@@ -981,12 +993,24 @@ public final class Flex {
         return self
     }
 
+    @discardableResult
+    public func paddingBottom(_ percent: FPercent) -> Flex {
+        yoga.paddingBottom = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     /**
      Set the top padding. Top padding specify the **offset children should have** from the container's top edge.
      */
     @discardableResult
     public func paddingRight(_ value: CGFloat) -> Flex {
         yoga.paddingRight = YGValue(value)
+        return self
+    }
+
+    @discardableResult
+    public func paddingRight(_ percent: FPercent) -> Flex {
+        yoga.paddingRight = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
 
@@ -1003,6 +1027,12 @@ public final class Flex {
         return self
     }
 
+    @discardableResult
+    public func paddingStart(_ percent: FPercent) -> Flex {
+        yoga.paddingStart = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     /**
      Set the end padding.
      
@@ -1016,6 +1046,12 @@ public final class Flex {
         return self
     }
 
+    @discardableResult
+    public func paddingEnd(_ percent: FPercent) -> Flex {
+        yoga.paddingEnd = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     /**
      Set the left, right, start and end paddings to the specified value.
      */
@@ -1025,12 +1061,24 @@ public final class Flex {
         return self
     }
 
+    @discardableResult
+    public func paddingHorizontal(_ percent: FPercent) -> Flex {
+        yoga.paddingHorizontal = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     /**
      Set the top and bottom paddings to the specified value.
      */
     @discardableResult
     public func paddingVertical(_ value: CGFloat) -> Flex {
         yoga.paddingVertical = YGValue(value)
+        return self
+    }
+
+    @discardableResult
+    public func paddingVertical(_ percent: FPercent) -> Flex {
+        yoga.paddingVertical = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
     
@@ -1072,12 +1120,25 @@ public final class Flex {
         return self
     }
 
+    @discardableResult
+    public func padding(_ percent: FPercent) -> Flex {
+        yoga.padding = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
     /**
      Set the individually vertical paddings (top, bottom) and horizontal paddings (left, right, start, end).
      */
     @discardableResult func padding(_ vertical: CGFloat, _ horizontal: CGFloat) -> Flex {
         yoga.paddingVertical = YGValue(vertical)
         yoga.paddingHorizontal = YGValue(horizontal)
+        return self
+    }
+
+    @discardableResult
+    public func padding(_ vertical: FPercent, _ horizontal: FPercent) -> Flex {
+        yoga.paddingVertical = YGValue(value: Float(vertical.value), unit: .percent)
+        yoga.paddingHorizontal = YGValue(value: Float(horizontal.value), unit: .percent)
         return self
     }
     
@@ -1090,6 +1151,13 @@ public final class Flex {
         yoga.paddingBottom = YGValue(bottom)
         return self
     }
+
+    @discardableResult func padding(_ top: FPercent, _ horizontal: FPercent, _ bottom: FPercent) -> Flex {
+        yoga.paddingTop = YGValue(value: Float(top.value), unit: .percent)
+        yoga.paddingHorizontal = YGValue(value: Float(horizontal.value), unit: .percent)
+        yoga.paddingBottom = YGValue(value: Float(bottom.value), unit: .percent)
+        return self
+    }
     
     /**
      Set the individually top, left, bottom and right paddings.
@@ -1100,6 +1168,15 @@ public final class Flex {
         yoga.paddingLeft = YGValue(left)
         yoga.paddingBottom = YGValue(bottom)
         yoga.paddingRight = YGValue(right)
+        return self
+    }
+
+    @discardableResult
+    public func padding(_ top: FPercent, _ left: FPercent, _ bottom: FPercent, _ right: FPercent) -> Flex {
+        yoga.paddingTop = YGValue(value: Float(top.value), unit: .percent)
+        yoga.paddingLeft = YGValue(value: Float(left.value), unit: .percent)
+        yoga.paddingBottom = YGValue(value: Float(bottom.value), unit: .percent)
+        yoga.paddingRight = YGValue(value: Float(right.value), unit: .percent)
         return self
     }
     
