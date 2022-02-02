@@ -34,7 +34,6 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     babosa (1.0.4)
     claide (1.1.0)
-    clamp (0.6.5)
     cocoapods (1.11.2)
       addressable (~> 2.8)
       claide (>= 1.0.2, < 2.0)
@@ -74,7 +73,6 @@ GEM
     cocoapods-try (1.2.0)
     colored (1.2)
     colored2 (3.1.2)
-    colorize (0.8.1)
     commander (4.6.0)
       highline (~> 2.0.0)
     concurrent-ruby (1.1.9)
@@ -243,10 +241,6 @@ GEM
     simctl (1.6.8)
       CFPropertyList
       naturally
-    synx (0.2.1)
-      clamp (~> 0.6)
-      colorize (~> 0.7)
-      xcodeproj (~> 1.0)
     terminal-notifier (2.0.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
@@ -283,9 +277,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods (~> 1.7)
+  cocoapods
   fastlane
-  synx
 
 BUNDLED WITH
    2.2.33
