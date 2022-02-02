@@ -77,6 +77,8 @@
 		B9EA7C932409BB0C000D8E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE491E64FAFE00165E39 /* Assets.xcassets */; };
 		B9EA7C942409BB13000D8E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249EFE4B1E64FAFE00165E39 /* LaunchScreen.storyboard */; };
 		B9EA7C952409BB30000D8E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EFE421E64FAFE00165E39 /* AppDelegate.swift */; };
+		DA9F7723277329C600FC4DF1 /* YogaExampleFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAE157247DF4CE0020119C /* YogaExampleFViewController.swift */; };
+		DA9F7724277329D000FC4DF1 /* YogaExampleFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAE155247DF4120020119C /* YogaExampleFView.swift */; };
 		DF0E852B1F1F749C00AB1956 /* YogaExampleBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */; };
 		DF0E852C1F1F749C00AB1956 /* YogaExampleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */; };
 		DF1F2A091F17D11700BA1B97 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439CC331E665BF6003326FB /* MenuView.swift */; };
@@ -582,8 +584,10 @@
 				B9EA7C702409B7C8000D8E35 /* YogaExampleCView.swift in Sources */,
 				B9EA7C6F2409B7C5000D8E35 /* YogaExampleDViewController.swift in Sources */,
 				B9EA7C7E2409B7D7000D8E35 /* CollectionViewExampleViewController.swift in Sources */,
+				DA9F7724277329D000FC4DF1 /* YogaExampleFView.swift in Sources */,
 				B9EA7C762409B7D0000D8E35 /* Example1View.swift in Sources */,
 				B9EA7C742409B7CE000D8E35 /* YogaExampleAView.swift in Sources */,
+				DA9F7723277329C600FC4DF1 /* YogaExampleFViewController.swift in Sources */,
 				B9EA7C712409B7C8000D8E35 /* YogaExampleCViewController.swift in Sources */,
 				B9EA7C7F2409B7DB000D8E35 /* ExpandedTableView.swift in Sources */,
 				B9EA7C6A2409B7B5000D8E35 /* MenuView.swift in Sources */,
