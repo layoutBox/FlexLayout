@@ -959,27 +959,29 @@ Padding specify the **offset children should have** from a certain edge on the c
 
 **Methods:**
 
-* `paddingTop(_ value: CGFloat)`
-* `paddingLeft(_ value: CGFloat)`
-* `paddingBottom(_ value: CGFloat)`
-* `paddingRight(_ value: CGFloat)`
-* `paddingStart(_ value: CGFloat)`
-* `paddingEnd(_ value: CGFloat)`
-* `paddingHorizontal(_ value: CGFloat)`
-* `paddingVertical(_ value: CGFloat)`
-* `padding(_ insets: UIEdgeInsets)`  
+* **`paddingTop(_ value: CGFloat)`, `paddingTop(_ percent: FPercent)`**
+* **`paddingLeft(_ value: CGFloat)`, `paddingLeft(_ percent: FPercent)`**
+* **`paddingBottom(_ value: CGFloat)`, `paddingBottom(_ percent: FPercent)`**
+* **`paddingRight(_ value: CGFloat)`, `paddingRight(_ percent: FPercent)`**
+* **`paddingStart(_ value: CGFloat)`, `paddingStart(_ percent: FPercent)`**
+* **`paddingEnd(_ value: CGFloat)`, `paddingEnd(_ percent: FPercent)`**
+* **`paddingHorizontal(_ value: CGFloat)`, `paddingHorizontal(_ percent: FPercent)`**
+* **`paddingVertical(_ value: CGFloat)`, `paddingVertical(_ percent: FPercent)`**
+* **`padding(_ insets: UIEdgeInsets)`** 
 Set all paddings using an UIEdgeInsets. This method is particularly useful to set all paddings using iOS 11 `UIView.safeAreaInsets`.
-* `padding(_ insets: NSDirectionalEdgeInsets)`  
+* **`padding(_ insets: NSDirectionalEdgeInsets)`**  
 Set all paddings using an NSDirectionalEdgeInsets. This method is particularly useful to set all padding using iOS 11 `UIView. directionalLayoutMargins` when layouting a view supporting RTL/LTR languages.
-* `padding(_ value: CGFloat) `
-* `padding(_ vertical: CGFloat, _ horizontal: CGFloat)`
-* `padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`
-* `padding(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) `
+* **`padding(_ value: CGFloat)`, `padding(_ percent: FPercent)`**
+* **`padding(_ vertical: CGFloat, _ horizontal: CGFloat)`, `padding(_ vertical: FPercent, horizontal: FPercent`**
+* **`padding(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`,  `padding(_ top: FPercent, _ horizontal: FPercent, _ bottom: FPercent)`**
+* **`padding(_ top: CGFloat, _ left: FPercent, _ bottom: FPercent, _ right: FPercent)`, `padding(_ top: FPercent, _ left: FPercent, _ bottom: FPercent, _ right: FPercent)`**
+
 
 
 ###### Usage examples:
 ```swift
   view.flex.padding(20)
+  view.flex.paddingTop(20%).paddingLeft(20%)
   view.flex.paddingBottom(20)
   view.flex.paddingHorizontal(20)
   view.flex.padding(10, 12, 0, 12)
