@@ -11,12 +11,6 @@
 <a href="https://github.com/layoutBox/FlexLayout/issues"><img src="https://img.shields.io/github/issues/layoutBox/FlexLayout.svg?style=flat" /></a>
 </p></p>
 
-<p align="center">
-  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
-  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/dm/FlexLayout.svg" /></a>
-  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/dt/FlexLayout.svg" /></a>
-</p>
-
 <br>
 
 FlexLayout adds a nice Swift interface to the highly optimized [Yoga](https://github.com/facebook/yoga) flexbox implementation. Concise, intuitive & chainable syntax.
