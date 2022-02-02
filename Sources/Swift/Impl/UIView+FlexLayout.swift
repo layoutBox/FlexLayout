@@ -10,7 +10,7 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 //
-// Created by Luc Dion on 2017-07-17.
+// Created by Luc Dion on 2017-07-17. 
 
 import UIKit
 
