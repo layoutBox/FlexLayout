@@ -12,6 +12,7 @@
 
 import Quick
 import Nimble
+import FlexLayout
 
 class PaddingSpec: QuickSpec {
     override func spec() {
@@ -41,6 +42,15 @@ class PaddingSpec: QuickSpec {
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 10.0, width: 400.0, height: 390.0)))
             }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingTop(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 40.0, width: 400.0, height: 360.0)))
+            }
             
             it("adjust the aView size and position") {
                 rootFlexContainer.flex.paddingLeft(10).define { (flex) in
@@ -48,6 +58,14 @@ class PaddingSpec: QuickSpec {
                 }
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
+            }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingLeft(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 40.0, y: 0.0, width: 360.0, height: 400.0)))
             }
             
             it("adjust the aView size and position") {
@@ -57,6 +75,14 @@ class PaddingSpec: QuickSpec {
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 390.0)))
             }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingBottom(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 400.0, height: 360.0)))
+            }
             
             it("adjust the aView size and position") {
                 rootFlexContainer.flex.paddingRight(10).define { (flex) in
@@ -64,6 +90,14 @@ class PaddingSpec: QuickSpec {
                 }
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0)))
+            }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingRight(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 360.0, height: 400.0)))
             }
             
             it("adjust the aView size and position") {
@@ -73,6 +107,14 @@ class PaddingSpec: QuickSpec {
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 10.0, y: 10.0, width: 380.0, height: 380.0)))
             }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.padding(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 40.0, y: 40.0, width: 320.0, height: 320.0)))
+            }
             
             it("adjust the aView size and position") {
                 rootFlexContainer.flex.padding(10, 20, 30, 40).define { (flex) in
@@ -80,6 +122,14 @@ class PaddingSpec: QuickSpec {
                 }
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 20.0, y: 10.0, width: 340.0, height: 360.0)))
+            }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.padding(10%, 20%, 30%, 40%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 80.0, y: 40.0, width: 160.0, height: 240.0)))
             }
             
             it("adjust the aView size and position") {
@@ -89,6 +139,14 @@ class PaddingSpec: QuickSpec {
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0)))
             }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingStart(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 40.0, y: 0.0, width: 360.0, height: 400.0)))
+            }
             
             it("adjust the aView size and position") {
                 rootFlexContainer.flex.paddingEnd(10).define { (flex) in
@@ -96,6 +154,14 @@ class PaddingSpec: QuickSpec {
                 }
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0)))
+            }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingEnd(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 0.0, width: 360.0, height: 400.0)))
             }
             
             it("adjust the aView size and position") {
@@ -105,6 +171,14 @@ class PaddingSpec: QuickSpec {
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 0.0, y: 10.0, width: 400.0, height: 380.0)))
             }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingVertical(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 0.0, y: 40.0, width: 400.0, height: 320.0)))
+            }
             
             it("adjust the aView size and position") {
                 rootFlexContainer.flex.paddingHorizontal(10).define { (flex) in
@@ -113,6 +187,15 @@ class PaddingSpec: QuickSpec {
                 rootFlexContainer.flex.layout()
                 expect(aView.frame).to(equal(CGRect(x: 10.0, y: 0.0, width: 380.0, height: 400.0)))
             }
+
+            it("adjust the aView size and position") {
+                rootFlexContainer.flex.paddingHorizontal(10%).define { (flex) in
+                    flex.addItem(aView).grow(1)
+                }
+                rootFlexContainer.flex.layout()
+                expect(aView.frame).to(equal(CGRect(x: 40.0, y: 0.0, width: 320.0, height: 400.0)))
+            }
+            
         }
     }
 }
