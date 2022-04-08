@@ -874,7 +874,7 @@ public final class Flex {
      */
     @available(tvOS 11.0, iOS 11.0, *)
     @discardableResult
-    func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
+    public func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
         yoga.marginTop = YGValue(directionalInsets.top)
         yoga.marginStart = YGValue(directionalInsets.leading)
         yoga.marginBottom = YGValue(directionalInsets.bottom)
@@ -1103,7 +1103,7 @@ public final class Flex {
      */
     @available(tvOS 11.0, iOS 11.0, *)
     @discardableResult
-    func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
+    public func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
         yoga.paddingTop = YGValue(directionalInsets.top)
         yoga.paddingStart = YGValue(directionalInsets.leading)
         yoga.paddingBottom = YGValue(directionalInsets.bottom)
