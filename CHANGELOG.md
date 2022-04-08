@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [1.3.24](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.24)
+Released on 2022-04-08
+
+####Change the access control of margin padding functions
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#199](https://github.com/layoutBox/FlexLayout/pull/199)
+
+
 ## [1.3.23](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.23)
 Released on 2021-11-22
 
