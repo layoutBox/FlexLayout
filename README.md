@@ -718,7 +718,7 @@ In the case where a UILabel's text is updated, it is needed to mark the label as
     label.text = "I love FlexLayout"
      
     // 2) Mark the UILabel as dirty
-    label.flex. markDirty()
+    label.flex.markDirty()
     
     // 3) Then force a relayout of the flex container.
     rootFlexContainer.flex.layout()
