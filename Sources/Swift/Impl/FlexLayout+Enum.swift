@@ -13,6 +13,8 @@
 // Created by Luc Dion on 2017-07-17.
 
 import UIKit
+import yoga
+import YogaKit
 
 #if FLEXLAYOUT_SWIFT_PACKAGE
 import FlexLayoutYoga

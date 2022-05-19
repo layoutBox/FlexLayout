@@ -9,17 +9,8 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/lucdion/FlexLayout.git", :tag => "#{spec.version}" }
-  spec.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
-  spec.public_header_files = "Sources/yoga/include/yoga/*.h", "Sources/YogaKit/include/YogaKit/*.h"
+  spec.source_files = "Sources/Swift/**/*.{swift,h,m,mm,cpp,c}"
+  spec.dependency 'YogaKit', '~> 1.18.1'
   spec.libraries    = 'c++'
-
-  # Should match yoga_defs.bzl + BUCK configuration
-  spec.compiler_flags = [
-     '-fno-omit-frame-pointer',
-     '-fexceptions',
-     '-Wall',
-     '-Werror',
-     '-std=c++1y',
-     '-fPIC'
-  ]
+  
 end
