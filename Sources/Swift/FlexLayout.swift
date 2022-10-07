@@ -43,6 +43,17 @@ public final class Flex {
     public var intrinsicSize: CGSize {
         return yoga.intrinsicSize
     }
+  
+    /**
+     root of flex chain, it can force layout all subviews in chain
+     */
+    public var rootView: UIView?{
+      var current = self.view
+      while current?.isFlexEnabled == true{
+        current = current?.superview
+      }
+      return current
+    }
     
     init(view: UIView) {
         self.view = view
