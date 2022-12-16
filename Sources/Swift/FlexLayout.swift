@@ -49,7 +49,7 @@ public final class Flex {
      */
     public var rootView: UIView?{
       var current = self.view
-      while current?.isFlexEnabled == true{
+      while current?.isFlexEnabled == true && current?.flex.isIncludedInLayout == true {
         current = current?.superview
       }
       return current
