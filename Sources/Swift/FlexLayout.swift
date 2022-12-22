@@ -1207,6 +1207,23 @@ public final class Flex {
         }
     }
     
+  
+    /**
+     Set the view to rounded corner
+     
+     - Parameter value: value specifies the view's layer cornerRadius.
+     - Returns: flex interface
+     */
+    @discardableResult
+    public func cornerRadius(_ value: CGFloat) -> Flex {
+        if let host = self.view {
+            host.layer.cornerRadius = value
+            return self
+        } else {
+            preconditionFailure("Trying to modify deallocated host view")
+        }
+    }
+    
     //
     // MARK: Display
     //
