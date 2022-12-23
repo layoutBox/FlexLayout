@@ -7,10 +7,17 @@
 
 # Change Log
 
+## [1.3.25](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.25)
+Released on 2022-12-23
+
+#### Add `flex.cornerRadius(_ value: CGFloat)` function
+
+Added by [minhaaan](https://github.com/minhaaan) in Pull Request [#209](https://github.com/layoutBox/FlexLayout/pull/209)
+
 ## [1.3.24](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.24)
 Released on 2022-04-08
 
-####Change the access control of margin padding functions
+#### Change the access control of margin padding functions
 
 Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#199](https://github.com/layoutBox/FlexLayout/pull/199)
 
