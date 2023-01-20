@@ -502,11 +502,17 @@ static void YGApplyLayoutToViewHierarchy(UIView *view, BOOL preserveOrigin)
     YGNodeLayoutGetLeft(node),
     YGNodeLayoutGetTop(node),
   };
-
-  const CGPoint bottomRight = {
+  CGPoint bottomRight = {
     topLeft.x + YGNodeLayoutGetWidth(node),
     topLeft.y + YGNodeLayoutGetHeight(node),
   };
+	
+  if (isnan(bottomRight.x)) {
+    bottomRight.x = 0;
+  }
+  if (isnan(bottomRight.y)) {
+    bottomRight.y = 0;
+  }
 
   const CGPoint origin = preserveOrigin ? view.frame.origin : CGPointZero;
   view.frame = (CGRect) {
@@ -515,8 +521,8 @@ static void YGApplyLayoutToViewHierarchy(UIView *view, BOOL preserveOrigin)
       .y = YGRoundPixelValue(topLeft.y + origin.y),
     },
     .size = {
-      .width = YGRoundPixelValue(bottomRight.x) - YGRoundPixelValue(topLeft.x),
-      .height = YGRoundPixelValue(bottomRight.y) - YGRoundPixelValue(topLeft.y),
+      .width = MAX(0, YGRoundPixelValue(bottomRight.x) - YGRoundPixelValue(topLeft.x)),
+      .height = MAX(0, YGRoundPixelValue(bottomRight.y) - YGRoundPixelValue(topLeft.y)),
     },
   };
 
