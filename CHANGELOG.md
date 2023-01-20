@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [1.3.26](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.26)
+Released on 2023-01-20
+
+#### Fixed crash with nan dimensions
+
+Added by [iohin](https://github.com/iohin) in Pull Request [#211](https://github.com/layoutBox/FlexLayout/pull/211)
+
 ## [1.3.25](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.25)
 Released on 2022-12-23
 
