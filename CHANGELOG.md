@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [1.3.27](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.27)
+Released on 2023-01-20
+
+#### Round pixel values of intrinsicSize with YGRoundPixelValue
+
+Added by [Dongkyu Kim](https://github.com/stleamist) in Pull Request [#210](https://github.com/layoutBox/FlexLayout/pull/210)
+
+
 ## [1.3.26](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.26)
 Released on 2023-01-20
 
