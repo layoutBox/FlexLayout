@@ -43,19 +43,6 @@ public final class Flex {
     public var intrinsicSize: CGSize {
         return yoga.intrinsicSize
     }
-
-    /**
-     This`direction` property is get the direction flex items are placed in the flex container.
-     */
-    public var direction: Direction? {
-        switch yoga.flexDirection {
-        case .column:           return Flex.Direction.column
-        case .columnReverse:    return Flex.Direction.columnReverse
-        case .row:              return Flex.Direction.row
-        case .rowReverse:       return Flex.Direction.rowReverse
-        @unknown default:       return nil
-        }
-    }
     
     init(view: UIView) {
         self.view = view
@@ -182,7 +169,34 @@ public final class Flex {
     //
     // MARK: Direction, wrap, flow
     //
-    
+
+    /**
+     The `direction` property establishes the main-axis, thus defining the direction flex items are placed in the flex container.
+
+     The `direction` property specifies how flex items are laid out in the flex container, by setting the direction of the flex
+     container’s main axis. They can be laid out in two main directions,  like columns vertically or like rows horizontally.
+
+     Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container.
+     If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse
+     from right to left; if the direction is rtl, it's the opposite.
+
+     - Parameter value: Default value is .column
+    */
+    public var direction: Direction? {
+        get {
+            switch yoga.flexDirection {
+            case .column:           return Flex.Direction.column
+            case .columnReverse:    return Flex.Direction.columnReverse
+            case .row:              return Flex.Direction.row
+            case .rowReverse:       return Flex.Direction.rowReverse
+            @unknown default:       return nil
+            }
+        }
+        set {
+            direction(newValue ?? .column)
+        }
+    }
+
     /**
      The `direction` property establishes the main-axis, thus defining the direction flex items are placed in the flex container.
     

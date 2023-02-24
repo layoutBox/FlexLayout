@@ -439,6 +439,10 @@ This section describes all flex container's properties.
 - Default value: `column`
 - CSS name: `flex-direction` 
 
+**Property:**
+
+* **`direction: Direction?`**  
+
 **Method:**
 
 * **`direction(_: Direction)`**  
@@ -752,16 +756,6 @@ Get the size of view when layouted in a container with a width of 200 pixels.
 
 * **`intrinsicSize`**  
 Item natural size, considering only properties of the view itself. Independent of the item frame.
-
-<br>
-
-### direction
-- Applies to: `flex items`
-
-**Property:**
-
-* **`direction`**  
-This `direction` property is get the direction flex items are placed in the flex container.
 
 <br>
 
