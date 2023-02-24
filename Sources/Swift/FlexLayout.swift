@@ -43,6 +43,19 @@ public final class Flex {
     public var intrinsicSize: CGSize {
         return yoga.intrinsicSize
     }
+
+    /**
+     This`direction` property is get the direction flex items are placed in the flex container.
+     */
+    public var direction: Direction? {
+        switch yoga.flexDirection {
+        case .column:           return Flex.Direction.column
+        case .columnReverse:    return Flex.Direction.columnReverse
+        case .row:              return Flex.Direction.row
+        case .rowReverse:       return Flex.Direction.rowReverse
+        @unknown default:       return nil
+        }
+    }
     
     init(view: UIView) {
         self.view = view

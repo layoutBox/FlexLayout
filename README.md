@@ -755,6 +755,16 @@ Item natural size, considering only properties of the view itself. Independent o
 
 <br>
 
+### direction
+- Applies to: `flex items`
+
+**Property:**
+
+* **`direction`**  
+This `direction` property is get the direction flex items are placed in the flex container.
+
+<br>
+
 <a name="absolute_positioning"></a>
 ## 4. Absolute positioning  
 - Applies to: `flex items`
