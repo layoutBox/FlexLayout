@@ -439,6 +439,10 @@ This section describes all flex container's properties.
 - Default value: `column`
 - CSS name: `flex-direction` 
 
+**Property:**
+
+* **`direction: Direction?`**  
+
 **Method:**
 
 * **`direction(_: Direction)`**  
