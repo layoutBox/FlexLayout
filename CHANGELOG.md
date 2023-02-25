@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [1.3.28](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.28)
+Released on 2023-02-25
+
+#### Add `Flex.direction` property
+
+Added by [gyuchan](https://github.com/gyuchan) in Pull Request [#213](https://github.com/layoutBox/FlexLayout/pull/213)
+
+
 ## [1.3.27](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.27)
 Released on 2023-01-20
 
