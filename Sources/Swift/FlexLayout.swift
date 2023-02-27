@@ -179,8 +179,6 @@ public final class Flex {
      Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container.
      If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse
      from right to left; if the direction is rtl, it's the opposite.
-
-     - Parameter value: Default value is .column
     */
     public var direction: Direction? {
         get {
