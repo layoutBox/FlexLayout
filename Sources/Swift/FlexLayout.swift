@@ -1248,6 +1248,25 @@ public final class Flex {
             preconditionFailure("Trying to modify deallocated host view")
         }
     }
+
+    /**
+     Set the view to border width and color
+
+     - Parameters:
+       - width: border width
+       - color: border color
+     - Returns: flex interface
+     */
+    @discardableResult
+    public func border(_ width: CGFloat, _ color: UIColor) -> Flex {
+        if let host = self.view {
+            host.layer.borderWidth = width
+            host.layer.borderColor = color.cgColor
+            return self
+        } else {
+            preconditionFailure("Trying to modify deallocated host view")
+        }
+    }
     
     //
     // MARK: Display
