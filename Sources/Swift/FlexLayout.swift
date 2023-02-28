@@ -187,7 +187,7 @@ public final class Flex {
             case .columnReverse:    return Flex.Direction.columnReverse
             case .row:              return Flex.Direction.row
             case .rowReverse:       return Flex.Direction.rowReverse
-            @unknown default:       return nil
+            default:                return nil
             }
         }
         set {

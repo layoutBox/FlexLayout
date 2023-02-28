@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [1.3.29](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.29)
+Released on 2023-02-28
+
+#### Add `border(_ width: CGFloat, _ color: UIColor)` 
+
+Added by [gyuchan](https://github.com/gyuchan) in Pull Request [#216](https://github.com/layoutBox/FlexLayout/pull/216)
+
 ## [1.3.28](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.28)
 Released on 2023-02-25
 
