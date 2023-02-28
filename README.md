@@ -997,6 +997,8 @@ FlexLayout also adds methods to set common UIView properties.
 Set the flex item's UIView background color. 
 * **`cornerRadius(_ value: CGFloat)`**  
 Set the flex item's UIView rounded corner radius.
+* **`border(_ width: CGFloat, _ color: UIColor)`**  
+Set the flex item's UIView border.
 
 ###### Usage examples:
 ```swift
@@ -1006,6 +1008,8 @@ Set the flex item's UIView rounded corner radius.
   }
   // Set rounded corner
   flex.addItem().cornerRadius(12)
+  // Set border
+  flex.addItem().border(1, .black)
 ```
 
 <br>

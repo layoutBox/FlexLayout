@@ -179,8 +179,6 @@ public final class Flex {
      Note that row and row-reverse are affected by the layout direction (see `layoutDirection` property) of the flex container.
      If its text direction is LTR (left to right), row represents the horizontal axis oriented from left to right, and row-reverse
      from right to left; if the direction is rtl, it's the opposite.
-
-     - Parameter value: Default value is .column
     */
     public var direction: Direction? {
         get {
@@ -1245,6 +1243,25 @@ public final class Flex {
     public func cornerRadius(_ value: CGFloat) -> Flex {
         if let host = self.view {
             host.layer.cornerRadius = value
+            return self
+        } else {
+            preconditionFailure("Trying to modify deallocated host view")
+        }
+    }
+
+    /**
+     Set the view to border width and color
+
+     - Parameters:
+       - width: border width
+       - color: border color
+     - Returns: flex interface
+     */
+    @discardableResult
+    public func border(_ width: CGFloat, _ color: UIColor) -> Flex {
+        if let host = self.view {
+            host.layer.borderWidth = width
+            host.layer.borderColor = color.cgColor
             return self
         } else {
             preconditionFailure("Trying to modify deallocated host view")
