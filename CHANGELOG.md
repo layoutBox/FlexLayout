@@ -7,6 +7,16 @@
 
 # Change Log
 
+## [1.3.30](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.30)
+Released on 2023-02-28
+
+#### Fixes issue while including FlexLayout as a dependency of another Swift Package
+
+Fixes issue [#219](https://github.com/layoutBox/FlexLayout/issues/219) where including FlexLayout as a dependency of another swift package would fail to build - because it isn't possible to set the preprocessor definition `FLEXLAYOUT_SWIFT_PACKAGE` without an Xcode project.
+
+Added by [Luke Wakeford](https://github.com/lukewakeford) in Pull Request [#221](https://github.com/layoutBox/FlexLayout/pull/221)
+
+
 ## [1.3.29](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.29)
 Released on 2023-02-28
 
