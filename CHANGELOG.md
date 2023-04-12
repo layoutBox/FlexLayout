@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [1.3.31](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.30)
+Released on 2023-04-12
+
+#### Fix for Swift 5.8 
+
+Added by [Rachik Abidi](https://github.com/RachikAbidi) in Pull Request [#223](https://github.com/layoutBox/FlexLayout/pull/223)
+
 ## [1.3.30](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.30)
 Released on 2023-02-28
 
