@@ -7,7 +7,15 @@
 
 # Change Log
 
-## [1.3.31](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.30)
+## [1.3.32](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.32)
+Released on 2023-05-10
+
+#### Fixes an issue where YGApplyLayoutToViewHierarchy assigns a value to frame.size that does not rounded to the pixel grid
+
+Added by [Dongkyu Kim](https://github.com/stleamist) in Pull Request [#225](https://github.com/layoutBox/FlexLayout/pull/225)
+
+
+## [1.3.31](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.31)
 Released on 2023-04-12
 
 #### Fix for Swift 5.8 
