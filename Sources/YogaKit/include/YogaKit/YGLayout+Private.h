@@ -6,7 +6,7 @@
  */
 
 #import "YGLayout.h"
-#if FLEXLAYOUT_SWIFT_PACKAGE || SWIFT_PACKAGE
+#if FLEXLAYOUT_SWIFT_PACKAGE
 #import <yoga/Yoga.h>
 #else
 #import "Yoga.h"
