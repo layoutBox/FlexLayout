@@ -7,6 +7,44 @@
 
 # Change Log
 
+## [1.3.33](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.33)
+Released on 2023-06-24
+
+#### Resolve lldb debug issue when using CocoaPods
+
+## Background
+
+- Since #219 was merged, LLDB problems have occurred in environments where CocoaPods and SPM are used together.
+- This reverts commit f36c766865df29ac70f31b604dde54c5a975819c. (#219)
+
+## Changes
+
+- Revert f36c766865df29ac70f31b604dde54c5a975819c commit to resolve
+- The existing problem is solved by writing each package.swift like the code below
+
+
+```swift
+// in Package.swift
+.target(
+  name: "SomeTarget",
+  dependencies: [
+    "FlexLayout",
+  ],
+  cSettings: [
+    .define("FLEXLAYOUT_SWIFT_PACKAGE"),
+  ],
+  cxxSettings: [
+    .define("FLEXLAYOUT_SWIFT_PACKAGE"),
+  ],
+  swiftSettings: [
+    .define("FLEXLAYOUT_SWIFT_PACKAGE"),
+  ]
+)
+```
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#226](https://github.com/layoutBox/FlexLayout/pull/226)
+
+
 ## [1.3.32](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.32)
 Released on 2023-05-10
 
