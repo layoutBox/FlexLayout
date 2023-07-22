@@ -7,6 +7,7 @@ let package = Package(
   name: "FlexLayout",
   products: [
     .library(name: "FlexLayout", targets: ["FlexLayout"]),
+    .library(name: "FlexLayoutBinary", targets: ["FlexLayoutBinary"]),
     .library(name: "FlexLayoutYoga", targets: ["FlexLayoutYoga"]),
     .library(name: "FlexLayoutYogaKit", targets: ["FlexLayoutYogaKit"])
   ],
@@ -28,6 +29,11 @@ let package = Package(
       swiftSettings: [
         .define("FLEXLAYOUT_SWIFT_PACKAGE")
       ]
+    ),
+    .binaryTarget(
+      name: "FlexLayoutBinary",
+      url: "https://github.com/woohyunjin06/FlexLayout/releases/download/1.3.33/FlexLayout.xcframework.zip",
+      checksum: "9e81b4565e20cfed0d1c15ebfda181cd068f568fb1a2d627b407e96349eafe76"
     ),
     .target(
       name: "FlexLayoutYoga",
