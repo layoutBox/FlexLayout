@@ -187,6 +187,24 @@ static YGConfigRef globalConfig;
     _isEnabled = NO;
     _isIncludedInLayout = YES;
     _isUIView = [view isMemberOfClass:[UIView class]];
+
+    if ([view isKindOfClass:[UILabel class]]) {
+      if (!YGNodeHasBaselineFunc(_node)) {
+        YGNodeSetBaselineFunc(_node, YGMeasureBaselineLabel);
+      }
+    }
+
+    if ([view isKindOfClass:[UITextView class]]) {
+      if (!YGNodeHasBaselineFunc(_node)) {
+        YGNodeSetBaselineFunc(_node, YGMeasureBaselineTextView);
+      }
+    }
+
+    if ([view isKindOfClass:[UITextField class]]) {
+      if (!YGNodeHasBaselineFunc(_node)) {
+        YGNodeSetBaselineFunc(_node, YGMeasureBaselineTextField);
+      }
+    }
   }
 
   return self;
@@ -345,6 +363,42 @@ YG_EDGE_PROPERTY(gap, Gap, Gap, YGGutterAll)
 }
 
 #pragma mark - Private
+
+static float YGMeasureBaselineLabel(
+    YGNodeRef node,
+    const float width,
+    const float height) {
+
+    UILabel* view = (__bridge UILabel*) YGNodeGetContext(node);
+    return view.font.ascender; // height + view.font.ascender for lastBaseline
+}
+
+static float YGMeasureBaselineTextView(
+    YGNodeRef node,
+    const float width,
+    const float height) {
+
+    UITextView* view = (__bridge UITextView*) YGNodeGetContext(node);
+    return view.font.ascender + view.contentInset.top + view.textContainerInset.top;
+}
+
+static float YGMeasureBaselineTextField(
+    YGNodeRef node,
+    const float width,
+    const float height) {
+
+    UITextField* view = (__bridge UITextField*) YGNodeGetContext(node);
+
+    switch (view.borderStyle) {
+        case UITextBorderStyleNone:
+            return view.font.ascender;
+        case UITextBorderStyleLine:
+            return view.font.ascender + 4;
+        case UITextBorderStyleBezel:
+        case UITextBorderStyleRoundedRect:
+            return view.font.ascender + 7;
+    }
+}
 
 static YGSize YGMeasureView(
     YGNodeRef node,
