@@ -19,30 +19,42 @@
 		24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */; };
 		24AE97421FEAF30A00995987 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97331FEAF30A00995987 /* Percent.swift */; };
 		24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97381FEAF30A00995987 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24AE97461FEAF30A00995987 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97391FEAF30A00995987 /* UIView+Yoga.mm */; };
-		24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973A1FEAF30A00995987 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24AE97491FEAF30A00995987 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973C1FEAF30A00995987 /* YGLayout.mm */; };
 		24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
 		24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */; };
-		B9EAD884238896C50058E0CB /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = B9EAD883238896C50058E0CB /* Yoga-internal.h */; };
-		B9EAD888238947B00058E0CB /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B9EAD887238947B00058E0CB /* YGLayout.h */; };
-		B9EAD88A238947C70058E0CB /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B9EAD889238947C70058E0CB /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C07B09F32045303000E03251 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E32045302F00E03251 /* YGNode.cpp */; };
-		C07B09F42045303000E03251 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E42045303000E03251 /* YGStyle.cpp */; };
-		C07B09F52045303000E03251 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E52045303000E03251 /* Yoga.cpp */; };
-		C07B09F62045303000E03251 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09E62045303000E03251 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C07B09F72045303000E03251 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09E72045303000E03251 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C07B09F82045303000E03251 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09E82045303000E03251 /* Utils.cpp */; };
-		C07B09F92045303000E03251 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09E92045303000E03251 /* YGNode.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C07B09FB2045303000E03251 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09EB2045303000E03251 /* YGLayout.cpp */; };
-		C07B09FC2045303000E03251 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09EC2045303000E03251 /* YGNodePrint.cpp */; };
-		C07B09FD2045303000E03251 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09ED2045303000E03251 /* Utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C07B09FF2045303000E03251 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09EF2045303000E03251 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C07B0A002045303000E03251 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07B09F02045303000E03251 /* YGEnums.cpp */; };
-		C07B0A012045303000E03251 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09F12045303000E03251 /* YGStyle.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C07B0A022045303000E03251 /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = C07B09F22045303000E03251 /* YGNodePrint.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		715C61502ABEDE1900D5A2E0 /* YGFloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61312ABEDE1900D5A2E0 /* YGFloatOptional.h */; };
+		715C61512ABEDE1900D5A2E0 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61322ABEDE1900D5A2E0 /* Utils.h */; };
+		715C61522ABEDE1900D5A2E0 /* CompactValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61332ABEDE1900D5A2E0 /* CompactValue.h */; };
+		715C61532ABEDE1900D5A2E0 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61342ABEDE1900D5A2E0 /* Yoga-internal.h */; };
+		715C61542ABEDE1900D5A2E0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61352ABEDE1900D5A2E0 /* YGLayout.h */; };
+		715C61552ABEDE1900D5A2E0 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61362ABEDE1900D5A2E0 /* log.cpp */; };
+		715C61562ABEDE1900D5A2E0 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61372ABEDE1900D5A2E0 /* Utils.cpp */; };
+		715C61572ABEDE1900D5A2E0 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 715C61382ABEDE1900D5A2E0 /* CMakeLists.txt */; };
+		715C61582ABEDE1900D5A2E0 /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61392ABEDE1900D5A2E0 /* YGNodePrint.h */; };
+		715C61592ABEDE1900D5A2E0 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C613A2ABEDE1900D5A2E0 /* YGLayout.cpp */; };
+		715C615A2ABEDE1900D5A2E0 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C613B2ABEDE1900D5A2E0 /* YGNode.h */; };
+		715C615B2ABEDE1900D5A2E0 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C613C2ABEDE1900D5A2E0 /* Yoga.cpp */; };
+		715C615C2ABEDE1900D5A2E0 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C613D2ABEDE1900D5A2E0 /* YGStyle.cpp */; };
+		715C615D2ABEDE1900D5A2E0 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61402ABEDE1900D5A2E0 /* YGEnums.h */; };
+		715C615E2ABEDE1900D5A2E0 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61412ABEDE1900D5A2E0 /* YGMacros.h */; };
+		715C615F2ABEDE1900D5A2E0 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61422ABEDE1900D5A2E0 /* Yoga.h */; };
+		715C61602ABEDE1900D5A2E0 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61432ABEDE1900D5A2E0 /* YGValue.h */; };
+		715C61612ABEDE1900D5A2E0 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61442ABEDE1900D5A2E0 /* YGNodePrint.cpp */; };
+		715C61622ABEDE1900D5A2E0 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61452ABEDE1900D5A2E0 /* YGStyle.h */; };
+		715C61632ABEDE1900D5A2E0 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61462ABEDE1900D5A2E0 /* YGEnums.cpp */; };
+		715C61642ABEDE1900D5A2E0 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61472ABEDE1900D5A2E0 /* log.h */; };
+		715C61652ABEDE1900D5A2E0 /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61482ABEDE1900D5A2E0 /* YGValue.cpp */; };
+		715C61662ABEDE1900D5A2E0 /* BitUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61492ABEDE1900D5A2E0 /* BitUtils.h */; };
+		715C61672ABEDE1900D5A2E0 /* YGConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C614A2ABEDE1900D5A2E0 /* YGConfig.h */; };
+		715C61682ABEDE1900D5A2E0 /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C614B2ABEDE1900D5A2E0 /* YGConfig.cpp */; };
+		715C61692ABEDE1900D5A2E0 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C614C2ABEDE1900D5A2E0 /* YGNode.cpp */; };
+		715C616A2ABEDE1900D5A2E0 /* event.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C614E2ABEDE1900D5A2E0 /* event.h */; };
+		715C616B2ABEDE1900D5A2E0 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C614F2ABEDE1900D5A2E0 /* event.cpp */; };
+		715C61812ABEE4B600D5A2E0 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 715C617A2ABEE4B600D5A2E0 /* UIView+Yoga.mm */; };
+		715C61822ABEE4B600D5A2E0 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617D2ABEE4B600D5A2E0 /* YGLayout+Private.h */; };
+		715C61832ABEE4B600D5A2E0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617E2ABEE4B600D5A2E0 /* YGLayout.h */; };
+		715C61842ABEE4B600D5A2E0 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */; };
+		715C61852ABEE4B600D5A2E0 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 715C61802ABEE4B600D5A2E0 /* YGLayout.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +95,6 @@
 		24AE97331FEAF30A00995987 /* Percent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Percent.swift; sourceTree = "<group>"; };
 		24AE97351FEAF30A00995987 /* FlexLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexLayout.h; sourceTree = "<group>"; };
 		24AE97361FEAF30A00995987 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24AE97381FEAF30A00995987 /* UIView+Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Yoga.h"; sourceTree = "<group>"; };
-		24AE97391FEAF30A00995987 /* UIView+Yoga.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIView+Yoga.mm"; sourceTree = "<group>"; tabWidth = 2; };
-		24AE973A1FEAF30A00995987 /* YGLayout+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YGLayout+Private.h"; sourceTree = "<group>"; };
-		24AE973C1FEAF30A00995987 /* YGLayout.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.objcpp; path = YGLayout.mm; sourceTree = "<group>"; tabWidth = 2; };
 		24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YGLayoutExtensions.swift; sourceTree = "<group>"; };
 		24DA375A1EF843C500D1AB2F /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,23 +102,39 @@
 		24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentSpec.swift; sourceTree = "<group>"; };
 		2B210ECFE9D7665DACB8E8A7 /* Pods-FlexLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38E690AA4AF8EDFC95DB6626 /* Pods-FlexLayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.release.xcconfig"; sourceTree = "<group>"; };
-		B9EAD883238896C50058E0CB /* Yoga-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
-		B9EAD887238947B00058E0CB /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
-		B9EAD889238947C70058E0CB /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
-		C07B09E32045302F00E03251 /* YGNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
-		C07B09E42045303000E03251 /* YGStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
-		C07B09E52045303000E03251 /* Yoga.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
-		C07B09E62045303000E03251 /* YGMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
-		C07B09E72045303000E03251 /* YGEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
-		C07B09E82045303000E03251 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
-		C07B09E92045303000E03251 /* YGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
-		C07B09EB2045303000E03251 /* YGLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
-		C07B09EC2045303000E03251 /* YGNodePrint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
-		C07B09ED2045303000E03251 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		C07B09EF2045303000E03251 /* Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
-		C07B09F02045303000E03251 /* YGEnums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
-		C07B09F12045303000E03251 /* YGStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
-		C07B09F22045303000E03251 /* YGNodePrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
+		715C61312ABEDE1900D5A2E0 /* YGFloatOptional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
+		715C61322ABEDE1900D5A2E0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		715C61332ABEDE1900D5A2E0 /* CompactValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompactValue.h; sourceTree = "<group>"; };
+		715C61342ABEDE1900D5A2E0 /* Yoga-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
+		715C61352ABEDE1900D5A2E0 /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
+		715C61362ABEDE1900D5A2E0 /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
+		715C61372ABEDE1900D5A2E0 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		715C61382ABEDE1900D5A2E0 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		715C61392ABEDE1900D5A2E0 /* YGNodePrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
+		715C613A2ABEDE1900D5A2E0 /* YGLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
+		715C613B2ABEDE1900D5A2E0 /* YGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
+		715C613C2ABEDE1900D5A2E0 /* Yoga.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
+		715C613D2ABEDE1900D5A2E0 /* YGStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
+		715C61402ABEDE1900D5A2E0 /* YGEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
+		715C61412ABEDE1900D5A2E0 /* YGMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
+		715C61422ABEDE1900D5A2E0 /* Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
+		715C61432ABEDE1900D5A2E0 /* YGValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGValue.h; sourceTree = "<group>"; };
+		715C61442ABEDE1900D5A2E0 /* YGNodePrint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
+		715C61452ABEDE1900D5A2E0 /* YGStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
+		715C61462ABEDE1900D5A2E0 /* YGEnums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
+		715C61472ABEDE1900D5A2E0 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		715C61482ABEDE1900D5A2E0 /* YGValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGValue.cpp; sourceTree = "<group>"; };
+		715C61492ABEDE1900D5A2E0 /* BitUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitUtils.h; sourceTree = "<group>"; };
+		715C614A2ABEDE1900D5A2E0 /* YGConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGConfig.h; sourceTree = "<group>"; };
+		715C614B2ABEDE1900D5A2E0 /* YGConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGConfig.cpp; sourceTree = "<group>"; };
+		715C614C2ABEDE1900D5A2E0 /* YGNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
+		715C614E2ABEDE1900D5A2E0 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		715C614F2ABEDE1900D5A2E0 /* event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		715C617A2ABEE4B600D5A2E0 /* UIView+Yoga.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIView+Yoga.mm"; sourceTree = "<group>"; };
+		715C617D2ABEE4B600D5A2E0 /* YGLayout+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YGLayout+Private.h"; sourceTree = "<group>"; };
+		715C617E2ABEE4B600D5A2E0 /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
+		715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Yoga.h"; sourceTree = "<group>"; };
+		715C61802ABEE4B600D5A2E0 /* YGLayout.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.objcpp; path = YGLayout.mm; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +170,8 @@
 			children = (
 				24AE97341FEAF30A00995987 /* SupportingFiles */,
 				B9EAD87E238884C90058E0CB /* Swift */,
-				DFAD4C3820409165008F79CD /* yoga */,
-				24AE97371FEAF30A00995987 /* YogaKit */,
+				715C61302ABEDE1900D5A2E0 /* yoga */,
+				715C61792ABEE4B600D5A2E0 /* YogaKit */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -169,16 +193,6 @@
 				24AE97361FEAF30A00995987 /* Info.plist */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		24AE97371FEAF30A00995987 /* YogaKit */ = {
-			isa = PBXGroup;
-			children = (
-				B9EAD87C2388849D0058E0CB /* include */,
-				24AE97391FEAF30A00995987 /* UIView+Yoga.mm */,
-				24AE973C1FEAF30A00995987 /* YGLayout.mm */,
-			);
-			path = YogaKit;
 			sourceTree = "<group>";
 		};
 		24DA37501EF843C500D1AB2F = {
@@ -215,6 +229,93 @@
 			path = FlexLayoutTests;
 			sourceTree = "<group>";
 		};
+		715C61302ABEDE1900D5A2E0 /* yoga */ = {
+			isa = PBXGroup;
+			children = (
+				715C61492ABEDE1900D5A2E0 /* BitUtils.h */,
+				715C61382ABEDE1900D5A2E0 /* CMakeLists.txt */,
+				715C61332ABEDE1900D5A2E0 /* CompactValue.h */,
+				715C614D2ABEDE1900D5A2E0 /* event */,
+				715C613E2ABEDE1900D5A2E0 /* include */,
+				715C61362ABEDE1900D5A2E0 /* log.cpp */,
+				715C61472ABEDE1900D5A2E0 /* log.h */,
+				715C61372ABEDE1900D5A2E0 /* Utils.cpp */,
+				715C61322ABEDE1900D5A2E0 /* Utils.h */,
+				715C614B2ABEDE1900D5A2E0 /* YGConfig.cpp */,
+				715C614A2ABEDE1900D5A2E0 /* YGConfig.h */,
+				715C61462ABEDE1900D5A2E0 /* YGEnums.cpp */,
+				715C61312ABEDE1900D5A2E0 /* YGFloatOptional.h */,
+				715C613A2ABEDE1900D5A2E0 /* YGLayout.cpp */,
+				715C61352ABEDE1900D5A2E0 /* YGLayout.h */,
+				715C614C2ABEDE1900D5A2E0 /* YGNode.cpp */,
+				715C613B2ABEDE1900D5A2E0 /* YGNode.h */,
+				715C61442ABEDE1900D5A2E0 /* YGNodePrint.cpp */,
+				715C61392ABEDE1900D5A2E0 /* YGNodePrint.h */,
+				715C613D2ABEDE1900D5A2E0 /* YGStyle.cpp */,
+				715C61452ABEDE1900D5A2E0 /* YGStyle.h */,
+				715C61482ABEDE1900D5A2E0 /* YGValue.cpp */,
+				715C61342ABEDE1900D5A2E0 /* Yoga-internal.h */,
+				715C613C2ABEDE1900D5A2E0 /* Yoga.cpp */,
+			);
+			path = yoga;
+			sourceTree = "<group>";
+		};
+		715C613E2ABEDE1900D5A2E0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				715C613F2ABEDE1900D5A2E0 /* yoga */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		715C613F2ABEDE1900D5A2E0 /* yoga */ = {
+			isa = PBXGroup;
+			children = (
+				715C61402ABEDE1900D5A2E0 /* YGEnums.h */,
+				715C61412ABEDE1900D5A2E0 /* YGMacros.h */,
+				715C61432ABEDE1900D5A2E0 /* YGValue.h */,
+				715C61422ABEDE1900D5A2E0 /* Yoga.h */,
+			);
+			path = yoga;
+			sourceTree = "<group>";
+		};
+		715C614D2ABEDE1900D5A2E0 /* event */ = {
+			isa = PBXGroup;
+			children = (
+				715C614E2ABEDE1900D5A2E0 /* event.h */,
+				715C614F2ABEDE1900D5A2E0 /* event.cpp */,
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
+		715C61792ABEE4B600D5A2E0 /* YogaKit */ = {
+			isa = PBXGroup;
+			children = (
+				715C617B2ABEE4B600D5A2E0 /* include */,
+				715C617A2ABEE4B600D5A2E0 /* UIView+Yoga.mm */,
+				715C61802ABEE4B600D5A2E0 /* YGLayout.mm */,
+			);
+			path = YogaKit;
+			sourceTree = "<group>";
+		};
+		715C617B2ABEE4B600D5A2E0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				715C617C2ABEE4B600D5A2E0 /* YogaKit */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		715C617C2ABEE4B600D5A2E0 /* YogaKit */ = {
+			isa = PBXGroup;
+			children = (
+				715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */,
+				715C617E2ABEE4B600D5A2E0 /* YGLayout.h */,
+				715C617D2ABEE4B600D5A2E0 /* YGLayout+Private.h */,
+			);
+			path = YogaKit;
+			sourceTree = "<group>";
+		};
 		B5403C6F81C3814B69C05D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,42 +324,6 @@
 				1F69C581A2C68BBBD1B64F21 /* Pods_FlexLayoutTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B9EAD87A238884680058E0CB /* include */ = {
-			isa = PBXGroup;
-			children = (
-				B9EAD87B2388846F0058E0CB /* yoga */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		B9EAD87B2388846F0058E0CB /* yoga */ = {
-			isa = PBXGroup;
-			children = (
-				C07B09E72045303000E03251 /* YGEnums.h */,
-				C07B09E62045303000E03251 /* YGMacros.h */,
-				C07B09EF2045303000E03251 /* Yoga.h */,
-			);
-			path = yoga;
-			sourceTree = "<group>";
-		};
-		B9EAD87C2388849D0058E0CB /* include */ = {
-			isa = PBXGroup;
-			children = (
-				B9EAD87D238884A20058E0CB /* YogaKit */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		B9EAD87D238884A20058E0CB /* YogaKit */ = {
-			isa = PBXGroup;
-			children = (
-				24AE97381FEAF30A00995987 /* UIView+Yoga.h */,
-				B9EAD889238947C70058E0CB /* YGLayout.h */,
-				24AE973A1FEAF30A00995987 /* YGLayout+Private.h */,
-			);
-			path = YogaKit;
 			sourceTree = "<group>";
 		};
 		B9EAD87E238884C90058E0CB /* Swift */ = {
@@ -272,28 +337,6 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
-		DFAD4C3820409165008F79CD /* yoga */ = {
-			isa = PBXGroup;
-			children = (
-				B9EAD87A238884680058E0CB /* include */,
-				C07B09E82045303000E03251 /* Utils.cpp */,
-				C07B09ED2045303000E03251 /* Utils.h */,
-				C07B09F02045303000E03251 /* YGEnums.cpp */,
-				B9EAD887238947B00058E0CB /* YGLayout.h */,
-				C07B09EB2045303000E03251 /* YGLayout.cpp */,
-				C07B09E92045303000E03251 /* YGNode.h */,
-				C07B09E32045302F00E03251 /* YGNode.cpp */,
-				C07B09F22045303000E03251 /* YGNodePrint.h */,
-				C07B09EC2045303000E03251 /* YGNodePrint.cpp */,
-				C07B09F12045303000E03251 /* YGStyle.h */,
-				C07B09E42045303000E03251 /* YGStyle.cpp */,
-				B9EAD883238896C50058E0CB /* Yoga-internal.h */,
-				C07B09E52045303000E03251 /* Yoga.cpp */,
-			);
-			name = yoga;
-			path = Sources/yoga;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -301,19 +344,26 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07B09F92045303000E03251 /* YGNode.h in Headers */,
+				715C61622ABEDE1900D5A2E0 /* YGStyle.h in Headers */,
+				715C61672ABEDE1900D5A2E0 /* YGConfig.h in Headers */,
+				715C61512ABEDE1900D5A2E0 /* Utils.h in Headers */,
 				24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */,
-				B9EAD888238947B00058E0CB /* YGLayout.h in Headers */,
-				24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */,
-				C07B09FD2045303000E03251 /* Utils.h in Headers */,
-				24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */,
-				C07B09F62045303000E03251 /* YGMacros.h in Headers */,
-				B9EAD884238896C50058E0CB /* Yoga-internal.h in Headers */,
-				C07B0A012045303000E03251 /* YGStyle.h in Headers */,
-				C07B09F72045303000E03251 /* YGEnums.h in Headers */,
-				B9EAD88A238947C70058E0CB /* YGLayout.h in Headers */,
-				C07B09FF2045303000E03251 /* Yoga.h in Headers */,
-				C07B0A022045303000E03251 /* YGNodePrint.h in Headers */,
+				715C61582ABEDE1900D5A2E0 /* YGNodePrint.h in Headers */,
+				715C615F2ABEDE1900D5A2E0 /* Yoga.h in Headers */,
+				715C615E2ABEDE1900D5A2E0 /* YGMacros.h in Headers */,
+				715C61642ABEDE1900D5A2E0 /* log.h in Headers */,
+				715C61662ABEDE1900D5A2E0 /* BitUtils.h in Headers */,
+				715C61832ABEE4B600D5A2E0 /* YGLayout.h in Headers */,
+				715C61602ABEDE1900D5A2E0 /* YGValue.h in Headers */,
+				715C61522ABEDE1900D5A2E0 /* CompactValue.h in Headers */,
+				715C61502ABEDE1900D5A2E0 /* YGFloatOptional.h in Headers */,
+				715C61532ABEDE1900D5A2E0 /* Yoga-internal.h in Headers */,
+				715C61542ABEDE1900D5A2E0 /* YGLayout.h in Headers */,
+				715C61842ABEE4B600D5A2E0 /* UIView+Yoga.h in Headers */,
+				715C615A2ABEDE1900D5A2E0 /* YGNode.h in Headers */,
+				715C615D2ABEDE1900D5A2E0 /* YGEnums.h in Headers */,
+				715C61822ABEE4B600D5A2E0 /* YGLayout+Private.h in Headers */,
+				715C616A2ABEDE1900D5A2E0 /* event.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				715C61572ABEDE1900D5A2E0 /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,20 +513,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				715C61552ABEDE1900D5A2E0 /* log.cpp in Sources */,
 				24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */,
-				C07B09F42045303000E03251 /* YGStyle.cpp in Sources */,
 				24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */,
+				715C615C2ABEDE1900D5A2E0 /* YGStyle.cpp in Sources */,
+				715C61562ABEDE1900D5A2E0 /* Utils.cpp in Sources */,
 				24AE97421FEAF30A00995987 /* Percent.swift in Sources */,
+				715C61852ABEE4B600D5A2E0 /* YGLayout.mm in Sources */,
+				715C616B2ABEDE1900D5A2E0 /* event.cpp in Sources */,
 				24AE97401FEAF30A00995987 /* FlexLayout+Private.swift in Sources */,
-				C07B09F52045303000E03251 /* Yoga.cpp in Sources */,
+				715C61692ABEDE1900D5A2E0 /* YGNode.cpp in Sources */,
 				24AE973F1FEAF30A00995987 /* FlexLayout+Enum.swift in Sources */,
-				C07B09F82045303000E03251 /* Utils.cpp in Sources */,
-				C07B09FB2045303000E03251 /* YGLayout.cpp in Sources */,
-				24AE97491FEAF30A00995987 /* YGLayout.mm in Sources */,
-				C07B0A002045303000E03251 /* YGEnums.cpp in Sources */,
-				24AE97461FEAF30A00995987 /* UIView+Yoga.mm in Sources */,
-				C07B09FC2045303000E03251 /* YGNodePrint.cpp in Sources */,
-				C07B09F32045303000E03251 /* YGNode.cpp in Sources */,
+				715C61812ABEE4B600D5A2E0 /* UIView+Yoga.mm in Sources */,
+				715C61652ABEDE1900D5A2E0 /* YGValue.cpp in Sources */,
+				715C61682ABEDE1900D5A2E0 /* YGConfig.cpp in Sources */,
+				715C61632ABEDE1900D5A2E0 /* YGEnums.cpp in Sources */,
+				715C615B2ABEDE1900D5A2E0 /* Yoga.cpp in Sources */,
+				715C61612ABEDE1900D5A2E0 /* YGNodePrint.cpp in Sources */,
+				715C61592ABEDE1900D5A2E0 /* YGLayout.cpp in Sources */,
 				24AE973E1FEAF30A00995987 /* FlexLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
