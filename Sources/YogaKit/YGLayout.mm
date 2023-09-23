@@ -339,8 +339,8 @@ YG_EDGE_PROPERTY(gap, Gap, Gap, YGGutterAll)
       node, size.width, size.height, YGNodeStyleGetDirection(node));
 
   return (CGSize){
-      .width = YGNodeLayoutGetWidth(node),
-      .height = YGNodeLayoutGetHeight(node),
+      .width = YGRoundPixelValue(YGNodeLayoutGetWidth(node)),
+      .height = YGRoundPixelValue(YGNodeLayoutGetHeight(node)),
   };
 }
 
@@ -494,10 +494,8 @@ static void YGApplyLayoutToViewHierarchy(UIView* view, BOOL preserveOrigin) {
           },
       .size =
           {
-              .width = YGRoundPixelValue(bottomRight.x) -
-                  YGRoundPixelValue(topLeft.x),
-              .height = YGRoundPixelValue(bottomRight.y) -
-                  YGRoundPixelValue(topLeft.y),
+              .width = MAX(0, YGRoundPixelValue(bottomRight.x - topLeft.x)),
+              .height = MAX(0, YGRoundPixelValue(bottomRight.y - topLeft.y)),
           },
   };
 
