@@ -480,10 +480,17 @@ static void YGApplyLayoutToViewHierarchy(UIView* view, BOOL preserveOrigin) {
       YGNodeLayoutGetTop(node),
   };
 
-  const CGPoint bottomRight = {
+  CGPoint bottomRight = {
       topLeft.x + YGNodeLayoutGetWidth(node),
       topLeft.y + YGNodeLayoutGetHeight(node),
   };
+
+  if (isnan(bottomRight.x)) {
+    bottomRight.x = 0;
+  }
+  if (isnan(bottomRight.y)) {
+    bottomRight.y = 0;
+  }
 
   const CGPoint origin = preserveOrigin ? view.frame.origin : CGPointZero;
   view.frame = (CGRect){
