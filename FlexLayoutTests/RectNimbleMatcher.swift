@@ -20,7 +20,7 @@
 import Nimble
 import UIKit
 
-public func beCloseTo(_ expectedValue: CGRect, within delta: CGFloat = 0.000_01) -> Predicate<CGRect> {
+public func beCloseTo(_ expectedValue: CGRect, within delta: CGFloat = 0.000_01) -> Nimble.Predicate<CGRect> {
     let errorMessage = "be close to <\(stringify(expectedValue))> (each within \(stringify(delta)))"
     return Predicate.simple(errorMessage) { actualExpression in
         if let actual = try actualExpression.evaluate() {
