@@ -1,58 +1,45 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 #pragma once
-
 #include <algorithm>
 #include <array>
 #include <cmath>
 #include <vector>
-
-#include "CompactValue.h"
 #include "Yoga.h"
 
 using YGVector = std::vector<YGNodeRef>;
 
 YG_EXTERN_C_BEGIN
 
-void YGNodeCalculateLayoutWithContext(
-    YGNodeRef node,
-    float availableWidth,
-    float availableHeight,
-    YGDirection ownerDirection,
-    void* layoutContext);
-
-// Deallocates a Yoga Node. Unlike YGNodeFree, does not remove the node from
-// its parent or children.
-void YGNodeDeallocate(YGNodeRef node);
+WIN_EXPORT float YGRoundValueToPixelGrid(const float value,
+                                         const float pointScaleFactor,
+                                         const bool forceCeil,
+                                         const bool forceFloor);
 
 YG_EXTERN_C_END
 
-namespace facebook {
-namespace yoga {
-
-inline bool isUndefined(float value) {
-  return std::isnan(value);
-}
-
-inline bool isUndefined(double value) {
-  return std::isnan(value);
-}
-
-void throwLogicalErrorWithMessage(const char* message);
-
-} // namespace yoga
-} // namespace facebook
-
 extern const std::array<YGEdge, 4> trailing;
 extern const std::array<YGEdge, 4> leading;
+extern bool YGValueEqual(const YGValue a, const YGValue b);
 extern const YGValue YGValueUndefined;
 extern const YGValue YGValueAuto;
 extern const YGValue YGValueZero;
+
+template <std::size_t size>
+bool YGValueArrayEqual(
+    const std::array<YGValue, size> val1,
+    const std::array<YGValue, size> val2) {
+  bool areEqual = true;
+  for (uint32_t i = 0; i < size && areEqual; ++i) {
+    areEqual = YGValueEqual(val1[i], val2[i]);
+  }
+  return areEqual;
+}
 
 struct YGCachedMeasurement {
   float availableWidth;
@@ -64,33 +51,30 @@ struct YGCachedMeasurement {
   float computedHeight;
 
   YGCachedMeasurement()
-      : availableWidth(-1),
-        availableHeight(-1),
-        widthMeasureMode(YGMeasureModeUndefined),
-        heightMeasureMode(YGMeasureModeUndefined),
+      : availableWidth(0),
+        availableHeight(0),
+        widthMeasureMode((YGMeasureMode)-1),
+        heightMeasureMode((YGMeasureMode)-1),
         computedWidth(-1),
         computedHeight(-1) {}
 
   bool operator==(YGCachedMeasurement measurement) const {
-    using namespace facebook;
-
     bool isEqual = widthMeasureMode == measurement.widthMeasureMode &&
         heightMeasureMode == measurement.heightMeasureMode;
 
-    if (!yoga::isUndefined(availableWidth) ||
-        !yoga::isUndefined(measurement.availableWidth)) {
+    if (!std::isnan(availableWidth) ||
+        !std::isnan(measurement.availableWidth)) {
       isEqual = isEqual && availableWidth == measurement.availableWidth;
     }
-    if (!yoga::isUndefined(availableHeight) ||
-        !yoga::isUndefined(measurement.availableHeight)) {
+    if (!std::isnan(availableHeight) ||
+        !std::isnan(measurement.availableHeight)) {
       isEqual = isEqual && availableHeight == measurement.availableHeight;
     }
-    if (!yoga::isUndefined(computedWidth) ||
-        !yoga::isUndefined(measurement.computedWidth)) {
+    if (!std::isnan(computedWidth) || !std::isnan(measurement.computedWidth)) {
       isEqual = isEqual && computedWidth == measurement.computedWidth;
     }
-    if (!yoga::isUndefined(computedHeight) ||
-        !yoga::isUndefined(measurement.computedHeight)) {
+    if (!std::isnan(computedHeight) ||
+        !std::isnan(measurement.computedHeight)) {
       isEqual = isEqual && computedHeight == measurement.computedHeight;
     }
 
@@ -98,62 +82,28 @@ struct YGCachedMeasurement {
   }
 };
 
-// This value was chosen based on empirical data:
-// 98% of analyzed layouts require less than 8 entries.
-#define YG_MAX_CACHED_RESULT_COUNT 8
+// This value was chosen based on empiracle data. Even the most complicated
+// layouts should not require more than 16 entries to fit within the cache.
+#define YG_MAX_CACHED_RESULT_COUNT 16
 
-namespace facebook {
-namespace yoga {
-namespace detail {
-
-template <size_t Size>
-class Values {
-private:
-  std::array<CompactValue, Size> values_;
-
-public:
-  Values() = default;
-  Values(const Values& other) = default;
-
-  explicit Values(const YGValue& defaultValue) noexcept {
-    values_.fill(defaultValue);
-  }
-
-  const CompactValue& operator[](size_t i) const noexcept { return values_[i]; }
-  CompactValue& operator[](size_t i) noexcept { return values_[i]; }
-
-  template <size_t I>
-  YGValue get() const noexcept {
-    return std::get<I>(values_);
-  }
-
-  template <size_t I>
-  void set(YGValue& value) noexcept {
-    std::get<I>(values_) = value;
-  }
-
-  template <size_t I>
-  void set(YGValue&& value) noexcept {
-    set<I>(value);
-  }
-
-  bool operator==(const Values& other) const noexcept {
-    for (size_t i = 0; i < Size; ++i) {
-      if (values_[i] != other.values_[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  Values& operator=(const Values& other) = default;
+struct YGConfig {
+  bool experimentalFeatures[YGExperimentalFeatureCount + 1];
+  bool useWebDefaults;
+  bool useLegacyStretchBehaviour;
+  bool shouldDiffLayoutWithoutLegacyStretchBehaviour;
+  float pointScaleFactor;
+  YGLogger logger;
+  YGNodeClonedFunc cloneNodeCallback;
+  void* context;
 };
-} // namespace detail
-} // namespace yoga
-} // namespace facebook
 
 static const float kDefaultFlexGrow = 0.0f;
 static const float kDefaultFlexShrink = 0.0f;
 static const float kWebDefaultFlexShrink = 1.0f;
 
 extern bool YGFloatsEqual(const float a, const float b);
+extern bool YGValueEqual(const YGValue a, const YGValue b);
+extern const YGValue* YGComputedEdgeValue(
+    const std::array<YGValue, YGEdgeCount>& edges,
+    const YGEdge edge,
+    const YGValue* const defaultValue);

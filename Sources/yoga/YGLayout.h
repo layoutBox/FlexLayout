@@ -1,63 +1,42 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ * All rights reserved.
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
  */
-
 #pragma once
-
-#include "BitUtils.h"
-#include "YGFloatOptional.h"
 #include "Yoga-internal.h"
 
 struct YGLayout {
-  std::array<float, 4> position = {};
-  std::array<float, 2> dimensions = {{YGUndefined, YGUndefined}};
-  std::array<float, 4> margin = {};
-  std::array<float, 4> border = {};
-  std::array<float, 4> padding = {};
+  std::array<float, 4> position;
+  std::array<float, 2> dimensions;
+  std::array<float, 6> margin;
+  std::array<float, 6> border;
+  std::array<float, 6> padding;
+  YGDirection direction;
 
-private:
-  static constexpr size_t directionOffset = 0;
-  static constexpr size_t hadOverflowOffset =
-      directionOffset + facebook::yoga::detail::bitWidthFn<YGDirection>();
-  uint8_t flags = 0;
+  uint32_t computedFlexBasisGeneration;
+  float computedFlexBasis;
+  bool hadOverflow;
 
-public:
-  uint32_t computedFlexBasisGeneration = 0;
-  YGFloatOptional computedFlexBasis = {};
+  // Instead of recomputing the entire layout every single time, we
+  // cache some information to break early when nothing changed
+  uint32_t generationCount;
+  YGDirection lastParentDirection;
 
-  // Instead of recomputing the entire layout every single time, we cache some
-  // information to break early when nothing changed
-  uint32_t generationCount = 0;
-  YGDirection lastOwnerDirection = YGDirectionInherit;
-
-  uint32_t nextCachedMeasurementsIndex = 0;
+  uint32_t nextCachedMeasurementsIndex;
   std::array<YGCachedMeasurement, YG_MAX_CACHED_RESULT_COUNT>
-      cachedMeasurements = {};
-  std::array<float, 2> measuredDimensions = {{YGUndefined, YGUndefined}};
+      cachedMeasurements;
+  std::array<float, 2> measuredDimensions;
 
-  YGCachedMeasurement cachedLayout = YGCachedMeasurement();
+  YGCachedMeasurement cachedLayout;
+  bool didUseLegacyFlag;
+  bool doesLegacyStretchFlagAffectsLayout;
 
-  YGDirection direction() const {
-    return facebook::yoga::detail::getEnumData<YGDirection>(
-        flags, directionOffset);
-  }
-
-  void setDirection(YGDirection direction) {
-    facebook::yoga::detail::setEnumData<YGDirection>(
-        flags, directionOffset, direction);
-  }
-
-  bool hadOverflow() const {
-    return facebook::yoga::detail::getBooleanData(flags, hadOverflowOffset);
-  }
-  void setHadOverflow(bool hadOverflow) {
-    facebook::yoga::detail::setBooleanData(
-        flags, hadOverflowOffset, hadOverflow);
-  }
+  YGLayout();
 
   bool operator==(YGLayout layout) const;
-  bool operator!=(YGLayout layout) const { return !(*this == layout); }
+  bool operator!=(YGLayout layout) const;
 };
