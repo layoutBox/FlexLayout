@@ -7,6 +7,16 @@
 
 # Change Log
 
+## [2.0.01](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.01)
+Released on 2023-10-01
+
+#### Update Yoga core to 2.0
+
+FlexLayout version has been increased to reflect the new Yoga core version.
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#230](https://github.com/layoutBox/FlexLayout/pull/230)
+
+
 ## [1.3.33](https://github.com/layoutBox/FlexLayout/releases/tag/1.3.33)
 Released on 2023-06-24
 
