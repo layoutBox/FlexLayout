@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1207ABCE834615F650234676 /* Pods_FlexLayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F69C581A2C68BBBD1B64F21 /* Pods_FlexLayoutTests.framework */; };
-		24170EDB1FC7178F005AF96F /* RectNimbleMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */; };
-		24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */; };
-		24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */; };
-		2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458137E1F4A21CF00CD676B /* PaddingSpec.swift */; };
-		24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A91B271F45E24B00AC8B3E /* MarginSpec.swift */; };
 		24AE973E1FEAF30A00995987 /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE972E1FEAF30A00995987 /* FlexLayout.swift */; };
 		24AE973F1FEAF30A00995987 /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97301FEAF30A00995987 /* FlexLayout+Enum.swift */; };
 		24AE97401FEAF30A00995987 /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97311FEAF30A00995987 /* FlexLayout+Private.swift */; };
@@ -20,8 +15,12 @@
 		24AE97421FEAF30A00995987 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97331FEAF30A00995987 /* Percent.swift */; };
 		24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */; };
-		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
-		24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */; };
+		711F2EE62ACC727000DDDD67 /* AbsolutionPositionContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE02ACC727000DDDD67 /* AbsolutionPositionContentTests.swift */; };
+		711F2EE72ACC727000DDDD67 /* WidthSizeContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE12ACC727000DDDD67 /* WidthSizeContentTests.swift */; };
+		711F2EE82ACC727000DDDD67 /* PaddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE22ACC727000DDDD67 /* PaddingTests.swift */; };
+		711F2EE92ACC727000DDDD67 /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE32ACC727000DDDD67 /* FlexLayoutTests.swift */; };
+		711F2EEA2ACC727000DDDD67 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE42ACC727000DDDD67 /* MarginTests.swift */; };
+		711F2EEB2ACC727000DDDD67 /* JustifyContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE52ACC727000DDDD67 /* JustifyContentTests.swift */; };
 		715C61502ABEDE1900D5A2E0 /* YGFloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61312ABEDE1900D5A2E0 /* YGFloatOptional.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C61512ABEDE1900D5A2E0 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61322ABEDE1900D5A2E0 /* Utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C61522ABEDE1900D5A2E0 /* CompactValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61332ABEDE1900D5A2E0 /* CompactValue.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -81,13 +80,8 @@
 
 /* Begin PBXFileReference section */
 		1F69C581A2C68BBBD1B64F21 /* Pods_FlexLayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectNimbleMatcher.swift; sourceTree = "<group>"; };
-		24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentSpec.swift; sourceTree = "<group>"; };
-		24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsolutionPositionContentSpec.swift; sourceTree = "<group>"; };
-		2458137E1F4A21CF00CD676B /* PaddingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingSpec.swift; sourceTree = "<group>"; };
 		2491CC5C1FCB931F00F3A61C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		2491CC5E1FCB932B00F3A61C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		24A91B271F45E24B00AC8B3E /* MarginSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginSpec.swift; sourceTree = "<group>"; };
 		24AE972E1FEAF30A00995987 /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexLayout.swift; sourceTree = "<group>"; };
 		24AE97301FEAF30A00995987 /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlexLayout+Enum.swift"; sourceTree = "<group>"; };
 		24AE97311FEAF30A00995987 /* FlexLayout+Private.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlexLayout+Private.swift"; sourceTree = "<group>"; };
@@ -98,10 +92,14 @@
 		24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YGLayoutExtensions.swift; sourceTree = "<group>"; };
 		24DA375A1EF843C500D1AB2F /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
-		24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentSpec.swift; sourceTree = "<group>"; };
 		2B210ECFE9D7665DACB8E8A7 /* Pods-FlexLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38E690AA4AF8EDFC95DB6626 /* Pods-FlexLayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.release.xcconfig"; sourceTree = "<group>"; };
+		711F2EE02ACC727000DDDD67 /* AbsolutionPositionContentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsolutionPositionContentTests.swift; sourceTree = "<group>"; };
+		711F2EE12ACC727000DDDD67 /* WidthSizeContentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentTests.swift; sourceTree = "<group>"; };
+		711F2EE22ACC727000DDDD67 /* PaddingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTests.swift; sourceTree = "<group>"; };
+		711F2EE32ACC727000DDDD67 /* FlexLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
+		711F2EE42ACC727000DDDD67 /* MarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginTests.swift; sourceTree = "<group>"; };
+		711F2EE52ACC727000DDDD67 /* JustifyContentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustifyContentTests.swift; sourceTree = "<group>"; };
 		715C61312ABEDE1900D5A2E0 /* YGFloatOptional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
 		715C61322ABEDE1900D5A2E0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		715C61332ABEDE1900D5A2E0 /* CompactValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompactValue.h; sourceTree = "<group>"; };
@@ -199,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				24AE972D1FEAF30A00995987 /* Sources */,
-				24DA37671EF843C500D1AB2F /* FlexLayoutTests */,
+				711F2EDE2ACC727000DDDD67 /* Tests */,
 				24DA375B1EF843C500D1AB2F /* Products */,
 				B5403C6F81C3814B69C05D0B /* Frameworks */,
 				11B7D0626353A881C6A3705D /* Pods */,
@@ -215,16 +213,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		24DA37671EF843C500D1AB2F /* FlexLayoutTests */ = {
+		711F2EDE2ACC727000DDDD67 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */,
-				24FB88581F5ED2B800615D33 /* JustifyContentSpec.swift */,
-				24170EDC1FC72ABC005AF96F /* WidthSizeContentSpec.swift */,
-				24170EDE1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift */,
-				24A91B271F45E24B00AC8B3E /* MarginSpec.swift */,
-				2458137E1F4A21CF00CD676B /* PaddingSpec.swift */,
-				24170EDA1FC7178E005AF96F /* RectNimbleMatcher.swift */,
+				711F2EDF2ACC727000DDDD67 /* FlexLayoutTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		711F2EDF2ACC727000DDDD67 /* FlexLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				711F2EE02ACC727000DDDD67 /* AbsolutionPositionContentTests.swift */,
+				711F2EE12ACC727000DDDD67 /* WidthSizeContentTests.swift */,
+				711F2EE22ACC727000DDDD67 /* PaddingTests.swift */,
+				711F2EE32ACC727000DDDD67 /* FlexLayoutTests.swift */,
+				711F2EE42ACC727000DDDD67 /* MarginTests.swift */,
+				711F2EE52ACC727000DDDD67 /* JustifyContentTests.swift */,
 			);
 			path = FlexLayoutTests;
 			sourceTree = "<group>";
@@ -470,14 +475,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -539,13 +540,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A91B281F45E24B00AC8B3E /* MarginSpec.swift in Sources */,
-				24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */,
-				24170EDD1FC72ABC005AF96F /* WidthSizeContentSpec.swift in Sources */,
-				2458137F1F4A21CF00CD676B /* PaddingSpec.swift in Sources */,
-				24170EDB1FC7178F005AF96F /* RectNimbleMatcher.swift in Sources */,
-				24FB88591F5ED2B800615D33 /* JustifyContentSpec.swift in Sources */,
-				24170EDF1FC72EDA005AF96F /* AbsolutionPositionContentSpec.swift in Sources */,
+				711F2EEA2ACC727000DDDD67 /* MarginTests.swift in Sources */,
+				711F2EE92ACC727000DDDD67 /* FlexLayoutTests.swift in Sources */,
+				711F2EE82ACC727000DDDD67 /* PaddingTests.swift in Sources */,
+				711F2EE62ACC727000DDDD67 /* AbsolutionPositionContentTests.swift in Sources */,
+				711F2EEB2ACC727000DDDD67 /* JustifyContentTests.swift in Sources */,
+				711F2EE72ACC727000DDDD67 /* WidthSizeContentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

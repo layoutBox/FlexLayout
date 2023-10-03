@@ -34,6 +34,12 @@ let package = Package(
         .headerSearchPath("."),
       ]
     ),
+    .testTarget(
+      name: "FlexLayoutTests",
+      dependencies: [
+        "FlexLayout"
+      ]
+    )
   ],
   cLanguageStandard: .gnu99,
   cxxLanguageStandard: .gnucxx11
