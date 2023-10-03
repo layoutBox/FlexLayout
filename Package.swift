@@ -7,10 +7,6 @@ let package = Package(
   name: "FlexLayout",
   products: [
     .library(name: "FlexLayout", targets: ["FlexLayout"]),
-    .library(name: "FlexLayoutYoga", targets: ["FlexLayoutYoga"]),
-    .library(name: "FlexLayoutYogaKit", targets: ["FlexLayoutYogaKit"])
-  ],
-  dependencies: [
   ],
   targets: [
     .target(
