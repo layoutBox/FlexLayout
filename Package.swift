@@ -36,10 +36,11 @@ let package = Package(
       cSettings: [
         .define("FLEXLAYOUT_SWIFT_PACKAGE")
       ],
+      publicHeadersPath: "include/yoga/",
       cxxSettings: [
         .define("FLEXLAYOUT_SWIFT_PACKAGE"),
         .headerSearchPath("include/yoga/"),
-        .headerSearchPath("./")
+        .headerSearchPath("."),
       ]
     ),
     .target(
@@ -49,10 +50,11 @@ let package = Package(
       cSettings: [
         .define("FLEXLAYOUT_SWIFT_PACKAGE")
       ],
+      publicHeadersPath: "include/YogaKit/",
       cxxSettings: [
         .define("FLEXLAYOUT_SWIFT_PACKAGE"),
         .headerSearchPath("include/YogaKit/"),
-        .headerSearchPath("./")
+        .headerSearchPath("."),
       ]
     )
   ],
