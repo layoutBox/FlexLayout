@@ -14,7 +14,7 @@
 
 import UIKit
 
-#if FLEXLAYOUT_SWIFT_PACKAGE
+#if SWIFT_PACKAGE
 import FlexLayoutYoga
 
 extension YGFlexDirection {
