@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [2.0.03](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.03)
+Released on 2023-10-15
+
+#### Fix crashes that occurs when the node's topLeft position is nan
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#230](https://github.com/layoutBox/FlexLayout/pull/234)
+
+
 ## [2.0.01](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.01)
 Released on 2023-10-01
 
