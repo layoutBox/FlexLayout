@@ -10,4 +10,7 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Example/cocoapods/FlexLayoutSample.xcodeproj">
+   </FileRef>
 </Workspace>
