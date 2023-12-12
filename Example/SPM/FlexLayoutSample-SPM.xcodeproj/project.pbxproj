@@ -85,7 +85,7 @@
 		24FB88401F59CA9A00615D33 /* MethodGroupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodGroupHeader.swift; sourceTree = "<group>"; };
 		60BAE155247DF4120020119C /* YogaExampleFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaExampleFView.swift; sourceTree = "<group>"; };
 		60BAE157247DF4CE0020119C /* YogaExampleFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaExampleFViewController.swift; sourceTree = "<group>"; };
-		B9EA7C522409B79B000D8E35 /* FlexLayoutSampleSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutSampleSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9EA7C522409B79B000D8E35 /* FlexLayoutSample-SPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlexLayoutSample-SPM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0E85291F1F749C00AB1956 /* YogaExampleBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleBView.swift; sourceTree = "<group>"; };
 		DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleBViewController.swift; sourceTree = "<group>"; };
 		DF91747D1F1F6F9A0034632D /* YogaExampleAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleAView.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		249EFE401E64FAFE00165E39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9EA7C522409B79B000D8E35 /* FlexLayoutSampleSPM.app */,
+				B9EA7C522409B79B000D8E35 /* FlexLayoutSample-SPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,9 +322,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9EA7C512409B79B000D8E35 /* FlexLayoutSampleSPM */ = {
+		B9EA7C512409B79B000D8E35 /* FlexLayoutSample-SPM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9EA7C652409B79C000D8E35 /* Build configuration list for PBXNativeTarget "FlexLayoutSampleSPM" */;
+			buildConfigurationList = B9EA7C652409B79C000D8E35 /* Build configuration list for PBXNativeTarget "FlexLayoutSample-SPM" */;
 			buildPhases = (
 				B9EA7C4E2409B79B000D8E35 /* Sources */,
 				B9EA7C4F2409B79B000D8E35 /* Frameworks */,
@@ -335,13 +335,13 @@
 			);
 			dependencies = (
 			);
-			name = FlexLayoutSampleSPM;
+			name = "FlexLayoutSample-SPM";
 			packageProductDependencies = (
 				B9EA7C912409BAE1000D8E35 /* PinLayout */,
 				7173B6812ACC6DD600EB0092 /* FlexLayout */,
 			);
 			productName = FlexLayoutSampleSPM;
-			productReference = B9EA7C522409B79B000D8E35 /* FlexLayoutSampleSPM.app */;
+			productReference = B9EA7C522409B79B000D8E35 /* FlexLayoutSample-SPM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -377,7 +377,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9EA7C512409B79B000D8E35 /* FlexLayoutSampleSPM */,
+				B9EA7C512409B79B000D8E35 /* FlexLayoutSample-SPM */,
 			);
 		};
 /* End PBXProject section */
@@ -657,7 +657,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9EA7C652409B79C000D8E35 /* Build configuration list for PBXNativeTarget "FlexLayoutSampleSPM" */ = {
+		B9EA7C652409B79C000D8E35 /* Build configuration list for PBXNativeTarget "FlexLayoutSample-SPM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9EA7C632409B79C000D8E35 /* Debug */,
