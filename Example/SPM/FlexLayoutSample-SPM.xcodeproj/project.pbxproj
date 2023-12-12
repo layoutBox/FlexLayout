@@ -606,7 +606,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"FLEXLAYOUT_SWIFT_PACKAGE=1",
 				);
 				INFOPLIST_FILE = "../FlexLayoutSample/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
