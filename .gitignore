@@ -28,3 +28,6 @@ fastlane/test_output
 
 # SwiftPM
 swiftpm/
+
+# Mac
+.DS_Store
