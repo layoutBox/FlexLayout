@@ -409,7 +409,7 @@ Another possible solution:
 ### layout()
 - Applies to: `flex containers`
 - Values: `fitContainer` / `adjustWidth` / `adjustHeight`
-- Default value: `fitContainer `
+- Default value: `fitContainer`
 
 **Method:**
 
@@ -419,8 +419,8 @@ The method will layout the flex container's children.
   Layout modes:
 
   * **`fitContainer`**: This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height). 
-  * **`adjustHeight `**: In this mode, children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
-  * **`adjustWidth `**: In this mode, children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
+  * **`adjustHeight`**: In this mode, children are layouted **using only the container's width**. The container's height will be adjusted to fit the flexbox's children
+  * **`adjustWidth`**: In this mode, children are layouted **using only the container's height**. The container's width will be adjusted to fit the flexbox's children
 
 ###### Usage examples:
 ```swift
@@ -513,7 +513,7 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 ### alignItems()
 - Applies to: `flex containers`
 - Values: `stretch` / `start` / `end` / `center` / `baseline`
-- Default value: `stretch `
+- Default value: `stretch`
 - CSS name: `align-items` 
 
 **Method:**
@@ -662,7 +662,7 @@ It specifies the "flex shrink factor", which determines how much the flex item w
 <br>
 
 ### basis
-- Applies to: `flex items `
+- Applies to: `flex items`
 - Default value: 0
 - CSS name: `flex-basis` 
 

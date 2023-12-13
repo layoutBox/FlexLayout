@@ -48,7 +48,7 @@ platform :ios do
       configuration: "Release",
       build: true,
       clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.0"
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17."
     )
 
     # FlexLayoutSample from FlexLayout.xcworkspace

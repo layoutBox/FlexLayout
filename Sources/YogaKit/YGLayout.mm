@@ -517,6 +517,18 @@ static CGFloat YGRoundPixelValue(CGFloat value) {
   return roundf(value * scale) / scale;
 }
 
+static CGPoint YGPointReplacingNanWithZero(CGPoint const value) {
+  CGPoint result = value;
+
+  if (isnan(result.x)) {
+    result.x = 0;
+  }
+  if (isnan(result.y)) {
+    result.y = 0;
+  }
+  return result;
+}
+
 static void YGApplyLayoutToViewHierarchy(UIView* view, BOOL preserveOrigin) {
   NSCAssert(
       [NSThread isMainThread],
@@ -529,22 +541,15 @@ static void YGApplyLayoutToViewHierarchy(UIView* view, BOOL preserveOrigin) {
   }
 
   YGNodeRef node = yoga.node;
-  const CGPoint topLeft = {
+  const CGPoint topLeft = YGPointReplacingNanWithZero({
       YGNodeLayoutGetLeft(node),
       YGNodeLayoutGetTop(node),
-  };
+  });
 
-  CGPoint bottomRight = {
+  const CGPoint bottomRight = YGPointReplacingNanWithZero({
       topLeft.x + YGNodeLayoutGetWidth(node),
       topLeft.y + YGNodeLayoutGetHeight(node),
-  };
-
-  if (isnan(bottomRight.x)) {
-    bottomRight.x = 0;
-  }
-  if (isnan(bottomRight.y)) {
-    bottomRight.y = 0;
-  }
+  });
 
   const CGPoint origin = preserveOrigin ? view.frame.origin : CGPointZero;
   view.frame = (CGRect){
