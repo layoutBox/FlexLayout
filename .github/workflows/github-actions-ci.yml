@@ -12,9 +12,6 @@ jobs:
       - run: bundle install
       - run: pod install --repo-update
 
-      - name: Set Xcode Version 13.2.1
-        run: sudo xcode-select -s /Applications/Xcode_13.2.1.app
-
       - name: fastlane
         run: set -o pipefail && bundle exec fastlane travis
 

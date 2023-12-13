@@ -47,7 +47,7 @@ platform :ios do
       configuration: "Release",
       build: true,
       clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 8,OS=15.2"
+      destination: "platform=iOS Simulator,name=iPhone 14,OS=16.2"
     )
 
     #xcodebuild(
@@ -56,7 +56,7 @@ platform :ios do
     #  configuration: "Release",
     #  build: true,
     #  clean: true
-    #  destination: "platform=iOS Simulator,name=iPhone X,OS=15.2"
+    #  destination: "platform=iOS Simulator,name=iPhone 14,OS=16.2"
     #)
 
     xcodebuild(
@@ -65,7 +65,7 @@ platform :ios do
       configuration: "Release",
       build: true,
       clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 8,OS=15.2"
+      destination: "platform=iOS Simulator,name=iPhone 14,OS=16.2"
     )
   end
 
