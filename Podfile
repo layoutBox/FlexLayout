@@ -10,7 +10,7 @@ target 'FlexLayoutTests' do
 end
 
 target 'FlexLayoutSample' do
-  project 'Example/FlexLayoutSample.xcodeproj'
+  project 'Example/cocoapods/FlexLayoutSample.xcodeproj'
 
   pod 'FlexLayout', path: './'
   pod 'PinLayout'
