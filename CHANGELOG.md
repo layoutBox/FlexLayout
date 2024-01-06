@@ -7,6 +7,29 @@
 
 # Change Log
 
+## [2.0.04](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.04)
+Released on 2024-01-06
+
+#### Enhance Swift Package experience
+
+- Change the Swift Package Manager to be available without `FLEXLAYOUT_SWIFT_PACKAGE` flag
+- add public header path
+- remove `FLEXLAYOUT_SWIFT_PACKAGE`
+- remove library for internal (FlexLayoutYoga, FlexLayoutYogaKit)
+- move the unit test to the swift package with XCTest
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#232](https://github.com/layoutBox/FlexLayout/pull/232)
+
+#### Split the Example project in 2 projects (Cocoapods & SPM)
+
+Split the Example project in 2 projects:
+
+* `FlexLayoutSample`: Use cocoapods dependency manager
+* `FlexLayoutSample-SPM`: Use SPM (Swift Packager Manager) dependency manager
+
+Added by [Luc Dion](https://github.com/lucdion) in Pull Request [#240](https://github.com/layoutBox/FlexLayout/pull/240) 
+
+
 ## [2.0.03](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.03)
 Released on 2023-10-15
 
