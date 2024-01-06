@@ -6,19 +6,15 @@ workspace 'FlexLayout.xcworkspace'
 
 target 'FlexLayoutTests' do
   project 'FlexLayout.xcodeproj'
-  pod 'FlexLayout', :path => './'
-
-  pod 'Quick'
-  pod 'Nimble', :inhibit_warnings => true
+  pod 'FlexLayout', path: './'
 end
 
 target 'FlexLayoutSample' do
   project 'Example/FlexLayoutSample.xcodeproj'
 
-  pod 'FlexLayout', :path => './'
+  pod 'FlexLayout', path: './'
   pod 'PinLayout'
 
   # Debug only
   pod 'SwiftLint'
 end
-

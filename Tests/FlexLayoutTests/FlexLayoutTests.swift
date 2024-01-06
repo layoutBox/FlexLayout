@@ -13,8 +13,8 @@
 import XCTest
 @testable import FlexLayout
 
-class FlexLayoutTests: XCTestCase {
-    
+final class FlexLayoutTests: XCTestCase {
+
     func testRetainCycle() {
         weak var weakView: UIView? = nil
         _ = { _ in
@@ -22,8 +22,8 @@ class FlexLayoutTests: XCTestCase {
             strongView.flex.direction(.column)
             weakView = strongView
         }(())
-        
+
         XCTAssertNil(weakView, "Creation of flex should not lead to retain cycle")
     }
-    
+
 }

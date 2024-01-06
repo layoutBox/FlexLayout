@@ -1,22 +1,16 @@
 PODS:
-  - FlexLayout (2.0.01)
-  - Nimble (10.0.0)
+  - FlexLayout (2.0.02)
   - PinLayout (1.10.4)
-  - Quick (5.0.1)
   - SwiftLint (0.53.0)
 
 DEPENDENCIES:
   - FlexLayout (from `./`)
-  - Nimble
   - PinLayout
-  - Quick
   - SwiftLint
 
 SPEC REPOS:
   trunk:
-    - Nimble
     - PinLayout
-    - Quick
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -24,12 +18,10 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  FlexLayout: c7a8d036bb9ca2fc79f4ced41fd93a55691c70a4
-  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  FlexLayout: bd1d1738d67a455205e14c42492fe5450e3c1554
   PinLayout: f8a677ce0cd1cfe96b58435d029b4ceb4ce9c04c
-  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
   SwiftLint: 5ce4d6a8ff83f1b5fd5ad5dbf30965d35af65e44
 
-PODFILE CHECKSUM: 0be37cb7e189fd6f408603b8354f9ef92b64a46c
+PODFILE CHECKSUM: a6cf185e30e28e92d335118da8b7cfcbe601ea01
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.13.0

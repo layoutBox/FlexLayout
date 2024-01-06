@@ -7,15 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-#if FLEXLAYOUT_SWIFT_PACKAGE
-#import <yoga/YGEnums.h>
-#import <yoga/YGMacros.h>
-#import <yoga/Yoga.h>
-#else
 #import "YGEnums.h"
 #import "YGMacros.h"
 #import "Yoga.h"
-#endif
 
 YG_EXTERN_C_BEGIN
 
