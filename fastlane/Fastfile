@@ -48,7 +48,7 @@ platform :ios do
       configuration: "Release",
       build: true,
       clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 15,OS=17."
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
     )
 
     # FlexLayoutSample from FlexLayout.xcworkspace
@@ -58,7 +58,7 @@ platform :ios do
       configuration: "Release",
       build: true,
       # clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.0"
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
     )
 
     # Example Cocoapods
@@ -68,7 +68,7 @@ platform :ios do
       configuration: "Release",
       build: true,
       # clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.0"
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
     )
 
     # Example SPM (Swift Package Manager)
@@ -78,7 +78,7 @@ platform :ios do
       configuration: "Release",
       build: true,
       clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.0"
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
     )
   end
 
