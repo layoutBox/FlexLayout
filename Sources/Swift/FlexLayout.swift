@@ -1214,6 +1214,26 @@ public final class Flex {
     }
     
     //
+    // MARK: Gap
+    //
+    
+    /**
+     Set paddings between views.
+    */
+    @discardableResult
+    public func setGap(_ gutter: Gutter, _ value: CGFloat) -> Flex {
+        switch gutter {
+        case .column:               
+            yoga.columnGap = value
+        case .row:                  
+            yoga.rowGap = value
+        case .all:
+            yoga.gap = value
+        }
+        return self
+    }
+    
+    //
     // MARK: UIView Visual properties
     //
 
@@ -1414,6 +1434,12 @@ public final class Flex {
         case flex
         /// With this value, the item will be hidden and not be calculated
         case none
+    }
+    
+    public enum Gutter {
+        case column
+        case row
+        case all
     }
     
     /*public enum Overflow {
