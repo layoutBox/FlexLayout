@@ -18,6 +18,7 @@ final class WidthSizeContentTests: XCTestCase {
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
     var aView: UIView!
+    var bView: UIView!
 
     override func setUp() {
         super.setUp()
@@ -29,6 +30,7 @@ final class WidthSizeContentTests: XCTestCase {
         viewController.view.addSubview(rootFlexContainer)
 
         aView = UIView()
+        bView = UIView()
     }
 
     func test_basis_adjust_aView_size_and_position() {
@@ -158,5 +160,18 @@ final class WidthSizeContentTests: XCTestCase {
         aView.flex.maxHeight(nil)
         rootFlexContainer.flex.layout()
         XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
+    }
+    
+    func test_gap() {
+        rootFlexContainer.flex.direction(.row).define { flex in
+            flex.addItem(aView).height(100).width(100)
+            flex.addItem(bView).height(100).width(100)
+            flex.alignItems(.start)
+            
+            flex.setGap(.row, 50)
+        }
+
+        rootFlexContainer.flex.layout()
+        XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
     }
 }
