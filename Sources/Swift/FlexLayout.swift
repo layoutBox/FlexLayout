@@ -1218,6 +1218,18 @@ public final class Flex {
     //
     
     /**
+     Get paddings between views.
+    */
+    @discardableResult
+    public func getGap(_ gutter: Gutter) -> CGFloat {
+        switch gutter {
+        case .column:   return yoga.columnGap
+        case .row:      return yoga.rowGap
+        case .all:      return yoga.gap
+        }
+    }
+
+    /**
      Set paddings between views.
     */
     @discardableResult
