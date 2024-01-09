@@ -1218,7 +1218,10 @@ public final class Flex {
     //
     
     /**
-     Get paddings between views.
+     Get setted value through func `setGap(_ gutter: Gutter, _ value: CGFloat)`.
+     
+     - Parameter gutter: directions
+     - Returns: distance
     */
     @discardableResult
     public func getGap(_ gutter: Gutter) -> CGFloat {
@@ -1230,7 +1233,12 @@ public final class Flex {
     }
 
     /**
-     Set paddings between views.
+     Set distance between rows and columns.
+     
+     - Parameters:
+       - gutter: directions
+       - value: distance
+     - Returns: flex interface
     */
     @discardableResult
     public func setGap(_ gutter: Gutter, _ value: CGFloat) -> Flex {
