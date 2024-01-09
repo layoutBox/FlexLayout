@@ -170,7 +170,7 @@ final class WidthSizeContentTests: XCTestCase {
             flex.addItem(bView).height(100).width(100)
             flex.alignItems(.start)
             
-            flex.setGap(.row, 50)
+            flex.setGap(.column, 50)
         }
 
         rootFlexContainer.flex.layout()
@@ -183,7 +183,7 @@ final class WidthSizeContentTests: XCTestCase {
             flex.addItem(bView).height(100).width(100)
             flex.alignItems(.start)
             
-            flex.setGap(.column, 50)
+            flex.setGap(.row, 50)
         }
 
         rootFlexContainer.flex.layout()
@@ -192,20 +192,21 @@ final class WidthSizeContentTests: XCTestCase {
     
     func test_set_gap_in_all_direction() {
         rootFlexContainer.flex.direction(.column).define { flex in
-            flex.addItem(aView).height(100).width(100)
-            flex.addItem(bView).height(100).width(100)
             flex.addItem().direction(.row).define { flex in
-                flex.addItem(cView).height(100).width(100)
+                flex.addItem(aView).height(100).width(100)
+                flex.addItem(bView).height(100).width(100)
+                flex.setGap(.all, 50)
             }
-            flex.alignItems(.start)
+            flex.addItem(cView).height(100).width(100)
             
+            flex.alignItems(.start)
             flex.setGap(.all, 50)
         }
 
         rootFlexContainer.flex.layout()
 
-        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
-        XCTAssertEqual(cView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
+        XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
+        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
     }
     
     func test_get_gap_in_row_direction() {
@@ -242,16 +243,17 @@ final class WidthSizeContentTests: XCTestCase {
     
     func test_get_gap_in_all_direction() {
         rootFlexContainer.flex.direction(.column).define { flex in
-            flex.addItem(aView).height(100).width(100)
-            flex.addItem(bView).height(100).width(100)
             flex.addItem().direction(.row).define { flex in
-                flex.addItem(cView).height(100).width(100)
+                flex.addItem(aView).height(100).width(100)
+                flex.addItem(bView).height(100).width(100)
+                flex.setGap(.all, 20)
             }
-            flex.alignItems(.start)
+            flex.addItem(cView).height(100).width(100)
             
+            flex.alignItems(.start)
             flex.setGap(.all, 20)
         }
-
+        
         rootFlexContainer.flex.layout()
         
         let allGap = rootFlexContainer.flex.getGap(.all)
