@@ -76,19 +76,12 @@ public final class Flex {
     
      This method enables flexbox for `view` and adds it as a subview of the receiver's associated host view.
     
-     Just as views can only have one superview, Yoga nodes should only have one parent node. If `view`
-     already has a superview, this method removes `view`'s associated yoga node as a child from the superview's
-     associated yoga node.
-    
      - Parameter view: The view to be added.
      - Returns: The flex interface corresponding to the added view.
      */
     @discardableResult
     public func addItem(_ view: UIView) -> Flex {
         if let host = self.view {
-            if let superview = view.superview, superview != host && superview.isYogaEnabled {
-                YGNodeRemoveChild(superview.yoga.node, view.yoga.node)
-            }
             host.addSubview(view)
             return view.flex
         } else {
