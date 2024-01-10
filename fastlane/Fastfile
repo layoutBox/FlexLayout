@@ -83,7 +83,7 @@ platform :ios do
   end
 
   lane :tests do
-    scan(scheme: "FlexLayout", workspace: "FlexLayout.xcworkspace")
+    scan(scheme: "FlexLayout", workspace: "FlexLayout.xcworkspace", device: "iPhone 15")
   end
 
   lane :doc do 
