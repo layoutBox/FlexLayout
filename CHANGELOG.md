@@ -7,6 +7,33 @@
 
 # Change Log
 
+## [2.0.05](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.05)
+Released on 2024-01-11
+
+#### 1) Add `Gap` support
+
+Add `Gap` methods: 
+
+- `columnGap(_ value: CGFloat) -> Flex`
+- `rowGap(_ value: CGFloat) -> Flex`
+- `gap(_ value: CGFloat) -> Flex`
+
+##### background
+After [Yoga layout updated to 2.0.0](https://github.com/layoutBox/FlexLayout/pull/230) the gap func added. and as needed by [this issue](https://github.com/layoutBox/FlexLayout/issues/235) and my company's product, me and my partner @TaekH made feature to use. 🙇‍♂️
+
+Added by [Buseong Kim](https://github.com/Skyline-23) in Pull Request [#241](https://github.com/layoutBox/FlexLayout/pull/241) 
+
+
+#### 2) Fix "Child already has a owner" Assert
+
+Upgrading to the latest version of Yoga introduced an assert in YGNodeInsertChild() that was previously removed accidentally (see relevant commit). This assert will throw an error if the node we are trying to add already has an owner. Unfortunately, we can fall into this case quite easily if we move a view between different superviews (as demonstrated in the following contrived example).
+
+Restoring the changes from this old commit [c303faa](https://github.com/layoutBox/FlexLayout/commit/c303faae7b7b441872f8d49dbd1424db6ec7953f) should ensure that any lingering parent references are cleaned up before we call YGNodeInsertChild()
+
+Added by [kennethpu](https://github.com/kennethpu) in Pull Request [#242](https://github.com/layoutBox/FlexLayout/pull/242)
+
+
+
 ## [2.0.04](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.04)
 Released on 2024-01-06
 
