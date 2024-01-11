@@ -18,6 +18,8 @@ final class WidthSizeContentTests: XCTestCase {
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
     var aView: UIView!
+    var bView: UIView!
+    var cView: UIView!
 
     override func setUp() {
         super.setUp()
@@ -29,6 +31,8 @@ final class WidthSizeContentTests: XCTestCase {
         viewController.view.addSubview(rootFlexContainer)
 
         aView = UIView()
+        bView = UIView()
+        cView = UIView()
     }
 
     func test_basis_adjust_aView_size_and_position() {
@@ -158,5 +162,50 @@ final class WidthSizeContentTests: XCTestCase {
         aView.flex.maxHeight(nil)
         rootFlexContainer.flex.layout()
         XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
+    }
+    
+    func test_row_gap() {
+        rootFlexContainer.flex.direction(.row).define { flex in
+            flex.addItem(aView).height(100).width(100)
+            flex.addItem(bView).height(100).width(100)
+            flex.alignItems(.start)
+            
+            flex.columnGap(50)
+        }
+
+        rootFlexContainer.flex.layout()
+        XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
+    }
+
+    func test_column_gap() {
+        rootFlexContainer.flex.direction(.column).define { flex in
+            flex.addItem(aView).height(100).width(100)
+            flex.addItem(bView).height(100).width(100)
+            flex.alignItems(.start)
+            
+            flex.rowGap(50)
+        }
+
+        rootFlexContainer.flex.layout()
+        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
+    }
+    
+    func test_gap() {
+        rootFlexContainer.flex.direction(.column).define { flex in
+            flex.addItem().direction(.row).define { flex in
+                flex.addItem(aView).height(100).width(100)
+                flex.addItem(bView).height(100).width(100)
+                flex.gap(50)
+            }
+            flex.addItem(cView).height(100).width(100)
+            
+            flex.alignItems(.start)
+            flex.gap(50)
+        }
+
+        rootFlexContainer.flex.layout()
+
+        XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
+        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
     }
 }

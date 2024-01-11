@@ -115,6 +115,10 @@ typedef NS_OPTIONS(NSInteger, YGDimensionFlexibility) {
 // Yoga specific properties, not compatible with flexbox specification
 @property(nonatomic, readwrite, assign) CGFloat aspectRatio;
 
+@property(nonatomic, readwrite, assign) CGFloat columnGap;
+@property(nonatomic, readwrite, assign) CGFloat rowGap;
+@property(nonatomic, readwrite, assign) CGFloat gap;
+
 /**
  Get the resolved direction of this node. This won't be YGDirectionInherit
  */

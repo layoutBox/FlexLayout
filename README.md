@@ -681,6 +681,23 @@ This property takes the same values as the width and height properties, and spec
 
 <br>
 
+### gap
+- Applies to: `flex containers`
+- CSS name: `gap`
+
+**Method:**
+
+* **`columnGap(_ value: CGFloat)`**
+This property set distance between columns.
+
+* **`rowGap(_ value: CGFloat)`**
+This property set distance between rows.
+
+* **`gap(_ value: CGFloat)`**
+This property set distance between both of rows and columns.
+
+<br/>
+
 ### isIncludedInLayout()
 - Applies to: `flex items`
 
