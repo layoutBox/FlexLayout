@@ -49,35 +49,35 @@ platform :ios do
       destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
     )
 
-    # # FlexLayoutSample from FlexLayout.xcworkspace
-    # xcodebuild(
-    #   workspace: "FlexLayout.xcworkspace",
-    #   scheme: "FlexLayoutSample",
-    #   configuration: "Release",
-    #   build: true,
-    #   # clean: true,
-    #   destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
-    # )
+    # FlexLayoutSample from FlexLayout.xcworkspace
+    xcodebuild(
+      workspace: "FlexLayout.xcworkspace",
+      scheme: "FlexLayoutSample",
+      configuration: "Release",
+      build: true,
+      # clean: true,
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
+    )
 
-    # # Example Cocoapods
-    # xcodebuild(
-    #   workspace: "Example/cocoapods/FlexLayoutSample.xcworkspace",
-    #   scheme: "FlexLayoutSample",
-    #   configuration: "Release",
-    #   build: true,
-    #   # clean: true,
-    #   destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
-    # )
+    # Example Cocoapods
+    xcodebuild(
+      workspace: "Example/cocoapods/FlexLayoutSample.xcworkspace",
+      scheme: "FlexLayoutSample",
+      configuration: "Release",
+      build: true,
+      # clean: true,
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
+    )
 
-    # # Example SPM (Swift Package Manager)
-    # xcodebuild(
-    #   project: "Example/SPM/FlexLayoutSample-SPM.xcodeproj",
-    #   scheme: "FlexLayoutSample-SPM",
-    #   configuration: "Release",
-    #   build: true,
-    #   clean: true,
-    #   destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
-    # )
+    # Example SPM (Swift Package Manager)
+    xcodebuild(
+      project: "Example/SPM/FlexLayoutSample-SPM.xcodeproj",
+      scheme: "FlexLayoutSample-SPM",
+      configuration: "Release",
+      build: true,
+      clean: true,
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
+    )
   end
 
   lane :tests do
