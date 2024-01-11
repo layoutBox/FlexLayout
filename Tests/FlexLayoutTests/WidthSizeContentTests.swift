@@ -164,100 +164,48 @@ final class WidthSizeContentTests: XCTestCase {
         XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
     }
     
-    func test_set_gap_in_row_direction() {
+    func test_row_gap() {
         rootFlexContainer.flex.direction(.row).define { flex in
             flex.addItem(aView).height(100).width(100)
             flex.addItem(bView).height(100).width(100)
             flex.alignItems(.start)
             
-            flex.setGap(.column, 50)
+            flex.columnGap(50)
         }
 
         rootFlexContainer.flex.layout()
         XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
     }
 
-    func test_set_gap_in_column_direction() {
+    func test_column_gap() {
         rootFlexContainer.flex.direction(.column).define { flex in
             flex.addItem(aView).height(100).width(100)
             flex.addItem(bView).height(100).width(100)
             flex.alignItems(.start)
             
-            flex.setGap(.row, 50)
+            flex.rowGap(50)
         }
 
         rootFlexContainer.flex.layout()
         XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
     }
     
-    func test_set_gap_in_all_direction() {
+    func test_gap() {
         rootFlexContainer.flex.direction(.column).define { flex in
             flex.addItem().direction(.row).define { flex in
                 flex.addItem(aView).height(100).width(100)
                 flex.addItem(bView).height(100).width(100)
-                flex.setGap(.all, 50)
+                flex.gap(50)
             }
             flex.addItem(cView).height(100).width(100)
             
             flex.alignItems(.start)
-            flex.setGap(.all, 50)
+            flex.gap(50)
         }
 
         rootFlexContainer.flex.layout()
 
         XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
         XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
-    }
-    
-    func test_get_gap_in_row_direction() {
-        rootFlexContainer.flex.direction(.row).define { flex in
-            flex.addItem(aView).height(100).width(100)
-            flex.addItem(bView).height(100).width(100)
-            flex.alignItems(.start)
-            
-            flex.setGap(.row, 20)
-        }
-
-        rootFlexContainer.flex.layout()
-        
-        let rowGap = rootFlexContainer.flex.getGap(.row)
-        
-        XCTAssertEqual(rowGap, 20)
-    }
-
-    func test_get_gap_in_column_direction() {
-        rootFlexContainer.flex.direction(.column).define { flex in
-            flex.addItem(aView).height(100).width(100)
-            flex.addItem(bView).height(100).width(100)
-            flex.alignItems(.start)
-            
-            flex.setGap(.column, 20)
-        }
-
-        rootFlexContainer.flex.layout()
-        
-        let columnGap = rootFlexContainer.flex.getGap(.column)
-        
-        XCTAssertEqual(columnGap, 20)
-    }
-    
-    func test_get_gap_in_all_direction() {
-        rootFlexContainer.flex.direction(.column).define { flex in
-            flex.addItem().direction(.row).define { flex in
-                flex.addItem(aView).height(100).width(100)
-                flex.addItem(bView).height(100).width(100)
-                flex.setGap(.all, 20)
-            }
-            flex.addItem(cView).height(100).width(100)
-            
-            flex.alignItems(.start)
-            flex.setGap(.all, 20)
-        }
-        
-        rootFlexContainer.flex.layout()
-        
-        let allGap = rootFlexContainer.flex.getGap(.all)
-        
-        XCTAssertEqual(allGap, 20)
     }
 }
