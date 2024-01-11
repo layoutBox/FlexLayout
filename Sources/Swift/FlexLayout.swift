@@ -1216,40 +1216,43 @@ public final class Flex {
     //
     // MARK: Gap
     //
-    
-    /**
-     Get setted value through func `setGap(_ gutter: Gutter, _ value: CGFloat)`.
-     
-     - Parameter gutter: directions
-     - Returns: distance
-    */
-    @discardableResult
-    public func getGap(_ gutter: Gutter) -> CGFloat {
-        switch gutter {
-        case .column:   return yoga.columnGap
-        case .row:      return yoga.rowGap
-        case .all:      return yoga.gap
-        }
-    }
 
     /**
-     Set distance between rows and columns.
+     Set distance between columns.
      
      - Parameters:
-       - gutter: directions
        - value: distance
      - Returns: flex interface
     */
     @discardableResult
-    public func setGap(_ gutter: Gutter, _ value: CGFloat) -> Flex {
-        switch gutter {
-        case .column:               
-            yoga.columnGap = value
-        case .row:                  
-            yoga.rowGap = value
-        case .all:
-            yoga.gap = value
-        }
+    public func columnGap(_ value: CGFloat) -> Flex {
+        yoga.columnGap = value
+        return self
+    }
+    
+    /**
+     Set distance between rows.
+     
+     - Parameters:
+       - value: distance
+     - Returns: flex interface
+    */
+    @discardableResult
+    public func rowGap(_ value: CGFloat) -> Flex {
+        yoga.rowGap = value
+        return self
+    }
+    
+    /**
+     Set distance between both of rows and columns.
+     
+     - Parameters:
+       - value: distance
+     - Returns: flex interface
+    */
+    @discardableResult
+    public func gap(_ value: CGFloat) -> Flex {
+        yoga.gap = value
         return self
     }
     
@@ -1454,12 +1457,6 @@ public final class Flex {
         case flex
         /// With this value, the item will be hidden and not be calculated
         case none
-    }
-    
-    public enum Gutter {
-        case column
-        case row
-        case all
     }
     
     /*public enum Overflow {
