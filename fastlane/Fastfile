@@ -34,22 +34,22 @@ platform :ios do
   lane :build do
     install
 
-    # swiftlint(
-    #   mode: :lint, 
-    #   config_file: ".swiftlint.yml",
-    #   executable: "Pods/SwiftLint/swiftlint",
-    #   ignore_exit_status: true
-    # )
+    swiftlint(
+      mode: :lint, 
+      config_file: ".swiftlint.yml",
+      executable: "Pods/SwiftLint/swiftlint",
+      ignore_exit_status: true
+    )
 
-    # # FlexLayout
-    # xcodebuild(
-    #   project: "FlexLayout.xcodeproj",
-    #   scheme: "FlexLayout",
-    #   configuration: "Release",
-    #   build: true,
-    #   clean: true,
-    #   destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
-    # )
+    # FlexLayout
+    xcodebuild(
+      project: "FlexLayout.xcodeproj",
+      scheme: "FlexLayout",
+      configuration: "Release",
+      build: true,
+      clean: true,
+      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.2"
+    )
 
     # # FlexLayoutSample from FlexLayout.xcworkspace
     # xcodebuild(
