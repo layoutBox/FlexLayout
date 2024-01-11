@@ -1218,6 +1218,49 @@ public final class Flex {
     }
     
     //
+    // MARK: Gap
+    //
+
+    /**
+     Set distance between columns.
+     
+     - Parameters:
+       - value: distance
+     - Returns: flex interface
+    */
+    @discardableResult
+    public func columnGap(_ value: CGFloat) -> Flex {
+        yoga.columnGap = value
+        return self
+    }
+    
+    /**
+     Set distance between rows.
+     
+     - Parameters:
+       - value: distance
+     - Returns: flex interface
+    */
+    @discardableResult
+    public func rowGap(_ value: CGFloat) -> Flex {
+        yoga.rowGap = value
+        return self
+    }
+    
+    /**
+     Set distance between both of rows and columns.
+     
+     - Parameters:
+       - value: distance
+     - Returns: flex interface
+    */
+    @discardableResult
+    public func gap(_ value: CGFloat) -> Flex {
+        yoga.gap = value
+        return self
+    }
+    
+    //
     // MARK: UIView Visual properties
     //
 
