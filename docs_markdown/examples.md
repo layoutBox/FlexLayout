@@ -7,10 +7,20 @@
 
 The FlexLayout's Example exposes some usage example of FlexLayout.
 
-The Example App is available in the [`Example`](https://github.com/layoutBox/FlexLayout/tree/master/Example) folder. 
+The Example App is available in 2 versions:
 
-### Running the Example app
-1. Do a `pod install` from the FlexLayout root directory.
+* [SPM (using Swift Package Manager)](https://github.com/layoutBox/FlexLayout/tree/master/Example/SPM)
+* [Cocoapods](https://github.com/layoutBox/FlexLayout/tree/master/Example/cocoapods) 
+
+### Running the SPM (Swift Package Manager) Example app
+1. Open the Xcode project `Example/SPM/FlexLayoutSample-SPM.xcodeproj`.
+3. Select the `FlexLayoutSample-SPM` target.
+4. Run the app on your device or simulator.
+
+</br>
+
+### Running the Cocoapods Example app
+1. Do a `pod install` from the `Example/cocoapods` directory.
 2. Open the newly generated `FlexLayout.xcworkspace` Xcode workspace.
 3. Select the `FlexLayoutSample` target.
 4. Run the app on your device or simulator.

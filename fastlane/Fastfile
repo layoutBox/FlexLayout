@@ -32,8 +32,6 @@ platform :ios do
 
 
   lane :build do
-    install
-
     swiftlint(
       mode: :lint, 
       config_file: ".swiftlint.yml",
@@ -83,7 +81,7 @@ platform :ios do
   end
 
   lane :tests do
-    scan(scheme: "FlexLayout", workspace: "FlexLayout.xcworkspace")
+    scan(scheme: "FlexLayout", workspace: "FlexLayout.xcworkspace", device: "iPhone 15")
   end
 
   lane :doc do 
@@ -91,8 +89,9 @@ platform :ios do
   end
 
   lane :travis do
-    build
+    install
     tests
+    build
     #pod_lib_lint(allow_warnings: true, verbose: false)
   end
 
