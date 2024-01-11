@@ -690,7 +690,7 @@ This property takes the same values as the width and height properties, and spec
 * **`columnGap(_ value: CGFloat)`**
 This property set distance between columns.
 
-* **`rownGap(_ value: CGFloat)`**
+* **`rowGap(_ value: CGFloat)`**
 This property set distance between rows.
 
 * **`gap(_ value: CGFloat)`**
