@@ -58,9 +58,12 @@ public final class Flex {
     //
     
     /**
-     This method adds a flex item (UIView) to a flex container. Internally the methods adds the UIView has subviews and enables flexbox.
+     Adds a flex item (`UIView`) to the receiver and returns the item's flex interface.
+     
+     This method internally creates a new `UIView` instance corresponding to the flex item,
+     and is useful for adding a flex item/container when you don't need to refer to it later.
     
-     - Returns: The added view flex interface
+     - Returns: The flex interface corresponding to the added view.
      */
     @discardableResult
     public func addItem() -> Flex {
@@ -69,11 +72,12 @@ public final class Flex {
     }
     
     /**
-     This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates an
-     UIView, adds it has subviews and enables flexbox. This is useful to add a flex item/container easily when you don't need to refer to it later.
+     Adds a flex item (`UIView`) to the receiver and returns the item's flex interface.
     
-     - Parameter view: view to add to the flex container
-     - Returns: The added view flex interface
+     This method enables flexbox for `view` and adds it as a subview of the receiver's associated host view.
+    
+     - Parameter view: The view to be added.
+     - Returns: The flex interface corresponding to the added view.
      */
     @discardableResult
     public func addItem(_ view: UIView) -> Flex {
