@@ -687,11 +687,14 @@ This property takes the same values as the width and height properties, and spec
 
 **Method:**
 
-* **`setGap(_ gutter: Gutter, _value: CGFloat)`**  
-This property set distance between rows and columns. 
+* **`columnGap(_ value: CGFloat)`**
+This property set distance between columns.
 
-* **`getGap(_ gutter: Gutter)`**  
-This property return setted value through `setGap(_ gutter: Gutter, _value: CGFloat)`
+* **`rownGap(_ value: CGFloat)`**
+This property set distance between rows.
+
+* **`gap(_ value: CGFloat)`**
+This property set distance between both of rows and columns.
 
 <br/>
 
