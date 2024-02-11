@@ -13,7 +13,6 @@
 		24AE97401FEAF30A00995987 /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97311FEAF30A00995987 /* FlexLayout+Private.swift */; };
 		24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */; };
 		24AE97421FEAF30A00995987 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97331FEAF30A00995987 /* Percent.swift */; };
-		24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */; };
 		711F2EE62ACC727000DDDD67 /* AbsolutionPositionContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE02ACC727000DDDD67 /* AbsolutionPositionContentTests.swift */; };
 		711F2EE72ACC727000DDDD67 /* WidthSizeContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE12ACC727000DDDD67 /* WidthSizeContentTests.swift */; };
@@ -21,38 +20,27 @@
 		711F2EE92ACC727000DDDD67 /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE32ACC727000DDDD67 /* FlexLayoutTests.swift */; };
 		711F2EEA2ACC727000DDDD67 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE42ACC727000DDDD67 /* MarginTests.swift */; };
 		711F2EEB2ACC727000DDDD67 /* JustifyContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE52ACC727000DDDD67 /* JustifyContentTests.swift */; };
-		715C61502ABEDE1900D5A2E0 /* YGFloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61312ABEDE1900D5A2E0 /* YGFloatOptional.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		715C61512ABEDE1900D5A2E0 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61322ABEDE1900D5A2E0 /* Utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		715C61522ABEDE1900D5A2E0 /* CompactValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61332ABEDE1900D5A2E0 /* CompactValue.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		715C61532ABEDE1900D5A2E0 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61342ABEDE1900D5A2E0 /* Yoga-internal.h */; };
-		715C61542ABEDE1900D5A2E0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61352ABEDE1900D5A2E0 /* YGLayout.h */; };
+		71332C262B794826000667C9 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71332C272B794935000667C9 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71332C282B794935000667C9 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617E2ABEE4B600D5A2E0 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71332C292B794935000667C9 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617D2ABEE4B600D5A2E0 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71332C2A2B79493E000667C9 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61402ABEDE1900D5A2E0 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71332C2B2B79493E000667C9 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61412ABEDE1900D5A2E0 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71332C2C2B79493E000667C9 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61432ABEDE1900D5A2E0 /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71332C2D2B79493E000667C9 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61422ABEDE1900D5A2E0 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		715C61552ABEDE1900D5A2E0 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61362ABEDE1900D5A2E0 /* log.cpp */; };
 		715C61562ABEDE1900D5A2E0 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61372ABEDE1900D5A2E0 /* Utils.cpp */; };
 		715C61572ABEDE1900D5A2E0 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 715C61382ABEDE1900D5A2E0 /* CMakeLists.txt */; };
-		715C61582ABEDE1900D5A2E0 /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61392ABEDE1900D5A2E0 /* YGNodePrint.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C61592ABEDE1900D5A2E0 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C613A2ABEDE1900D5A2E0 /* YGLayout.cpp */; };
-		715C615A2ABEDE1900D5A2E0 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C613B2ABEDE1900D5A2E0 /* YGNode.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C615B2ABEDE1900D5A2E0 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C613C2ABEDE1900D5A2E0 /* Yoga.cpp */; };
 		715C615C2ABEDE1900D5A2E0 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C613D2ABEDE1900D5A2E0 /* YGStyle.cpp */; };
-		715C615D2ABEDE1900D5A2E0 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61402ABEDE1900D5A2E0 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		715C615E2ABEDE1900D5A2E0 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61412ABEDE1900D5A2E0 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		715C615F2ABEDE1900D5A2E0 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61422ABEDE1900D5A2E0 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		715C61602ABEDE1900D5A2E0 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61432ABEDE1900D5A2E0 /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		715C61612ABEDE1900D5A2E0 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61442ABEDE1900D5A2E0 /* YGNodePrint.cpp */; };
-		715C61622ABEDE1900D5A2E0 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61452ABEDE1900D5A2E0 /* YGStyle.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C61632ABEDE1900D5A2E0 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61462ABEDE1900D5A2E0 /* YGEnums.cpp */; };
-		715C61642ABEDE1900D5A2E0 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61472ABEDE1900D5A2E0 /* log.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C61652ABEDE1900D5A2E0 /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C61482ABEDE1900D5A2E0 /* YGValue.cpp */; };
-		715C61662ABEDE1900D5A2E0 /* BitUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C61492ABEDE1900D5A2E0 /* BitUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		715C61672ABEDE1900D5A2E0 /* YGConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C614A2ABEDE1900D5A2E0 /* YGConfig.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C61682ABEDE1900D5A2E0 /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C614B2ABEDE1900D5A2E0 /* YGConfig.cpp */; };
 		715C61692ABEDE1900D5A2E0 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C614C2ABEDE1900D5A2E0 /* YGNode.cpp */; };
-		715C616A2ABEDE1900D5A2E0 /* event.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C614E2ABEDE1900D5A2E0 /* event.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		715C616B2ABEDE1900D5A2E0 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C614F2ABEDE1900D5A2E0 /* event.cpp */; };
 		715C61812ABEE4B600D5A2E0 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 715C617A2ABEE4B600D5A2E0 /* UIView+Yoga.mm */; };
-		715C61822ABEE4B600D5A2E0 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617D2ABEE4B600D5A2E0 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		715C61832ABEE4B600D5A2E0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617E2ABEE4B600D5A2E0 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		715C61842ABEE4B600D5A2E0 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		715C61852ABEE4B600D5A2E0 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 715C61802ABEE4B600D5A2E0 /* YGLayout.mm */; };
 /* End PBXBuildFile section */
 
@@ -349,26 +337,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				715C615F2ABEDE1900D5A2E0 /* Yoga.h in Headers */,
-				715C615E2ABEDE1900D5A2E0 /* YGMacros.h in Headers */,
-				715C61832ABEE4B600D5A2E0 /* YGLayout.h in Headers */,
-				715C61602ABEDE1900D5A2E0 /* YGValue.h in Headers */,
-				715C61842ABEE4B600D5A2E0 /* UIView+Yoga.h in Headers */,
-				715C615D2ABEDE1900D5A2E0 /* YGEnums.h in Headers */,
-				715C61822ABEE4B600D5A2E0 /* YGLayout+Private.h in Headers */,
-				715C61622ABEDE1900D5A2E0 /* YGStyle.h in Headers */,
-				715C61672ABEDE1900D5A2E0 /* YGConfig.h in Headers */,
-				715C61512ABEDE1900D5A2E0 /* Utils.h in Headers */,
-				715C61582ABEDE1900D5A2E0 /* YGNodePrint.h in Headers */,
-				715C61642ABEDE1900D5A2E0 /* log.h in Headers */,
-				715C61662ABEDE1900D5A2E0 /* BitUtils.h in Headers */,
-				715C61522ABEDE1900D5A2E0 /* CompactValue.h in Headers */,
-				715C61502ABEDE1900D5A2E0 /* YGFloatOptional.h in Headers */,
-				715C615A2ABEDE1900D5A2E0 /* YGNode.h in Headers */,
-				715C616A2ABEDE1900D5A2E0 /* event.h in Headers */,
-				24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */,
-				715C61542ABEDE1900D5A2E0 /* YGLayout.h in Headers */,
-				715C61532ABEDE1900D5A2E0 /* Yoga-internal.h in Headers */,
+				71332C262B794826000667C9 /* FlexLayout.h in Headers */,
+				71332C272B794935000667C9 /* UIView+Yoga.h in Headers */,
+				71332C282B794935000667C9 /* YGLayout.h in Headers */,
+				71332C292B794935000667C9 /* YGLayout+Private.h in Headers */,
+				71332C2A2B79493E000667C9 /* YGEnums.h in Headers */,
+				71332C2B2B79493E000667C9 /* YGMacros.h in Headers */,
+				71332C2C2B79493E000667C9 /* YGValue.h in Headers */,
+				71332C2D2B79493E000667C9 /* Yoga.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,16 +678,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Sources/yoga",
-					"$(PROJECT_DIR)/Sources/yoga/include/yoga",
-					"$(PROJECT_DIR)/Sources/YogaKit",
-					"$(PROJECT_DIR)/Sources/YogaKit/include/YogaKit",
-				);
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -737,16 +703,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Sources/yoga",
-					"$(PROJECT_DIR)/Sources/yoga/include/yoga",
-					"$(PROJECT_DIR)/Sources/YogaKit",
-					"$(PROJECT_DIR)/Sources/YogaKit/include/YogaKit",
-				);
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
