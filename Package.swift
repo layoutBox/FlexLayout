@@ -12,34 +12,27 @@ let package = Package(
     .target(
       name: "FlexLayout",
       dependencies: ["FlexLayoutYoga", "FlexLayoutYogaKit"],
-      path: "Sources/Swift"
+      path: "Sources/Swift",
+      publicHeadersPath: "Public"
     ),
     .target(
       name: "FlexLayoutYoga",
       dependencies: [],
       path: "Sources/yoga",
-      publicHeadersPath: "include/yoga/",
-      cxxSettings: [
-        .headerSearchPath("include/yoga/"),
-        .headerSearchPath("."),
-      ]
+      publicHeadersPath: "include/yoga"
     ),
     .target(
       name: "FlexLayoutYogaKit",
       dependencies: ["FlexLayoutYoga"],
       path: "Sources/YogaKit",
-      publicHeadersPath: "include/YogaKit/",
-      cxxSettings: [
-        .headerSearchPath("include/YogaKit/"),
-        .headerSearchPath("."),
-      ]
+      publicHeadersPath: "include/YogaKit"
     ),
     .testTarget(
       name: "FlexLayoutTests",
       dependencies: [
-        "FlexLayout"
+        "FlexLayout",
       ]
-    )
+    ),
   ],
   cLanguageStandard: .gnu99,
   cxxLanguageStandard: .gnucxx11

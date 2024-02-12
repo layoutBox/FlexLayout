@@ -153,7 +153,6 @@
 		24AE972D1FEAF30A00995987 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				24AE97341FEAF30A00995987 /* SupportingFiles */,
 				B9EAD87E238884C90058E0CB /* Swift */,
 				715C61302ABEDE1900D5A2E0 /* yoga */,
 				715C61792ABEE4B600D5A2E0 /* YogaKit */,
@@ -169,14 +168,6 @@
 				24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */,
 			);
 			path = Impl;
-			sourceTree = "<group>";
-		};
-		24AE97341FEAF30A00995987 /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				24AE97351FEAF30A00995987 /* FlexLayout.h */,
-			);
-			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		24DA37501EF843C500D1AB2F = {
@@ -307,6 +298,14 @@
 			path = YogaKit;
 			sourceTree = "<group>";
 		};
+		71CE1DE72B79E81500FD1037 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				24AE97351FEAF30A00995987 /* FlexLayout.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
 		B5403C6F81C3814B69C05D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +319,7 @@
 		B9EAD87E238884C90058E0CB /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				71CE1DE72B79E81500FD1037 /* Public */,
 				24AE972E1FEAF30A00995987 /* FlexLayout.swift */,
 				24AE972F1FEAF30A00995987 /* Impl */,
 				24AE97331FEAF30A00995987 /* Percent.swift */,
