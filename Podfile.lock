@@ -1,5 +1,5 @@
 PODS:
-  - FlexLayout (2.0.04)
+  - FlexLayout (2.0.05)
   - PinLayout (1.10.5)
   - SwiftLint (0.54.0)
 
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  FlexLayout: 222177b4cd0c7e57b662ba05314a64c122958dac
+  FlexLayout: 1cdf0b71a0d06669a497c5a80a355e76129a1025
   PinLayout: f6c2b63a5a5b24864064e1d15c67de41b4e74748
   SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
