@@ -7,6 +7,30 @@
 
 # Change Log
 
+
+## [2.0.06](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.06)
+Released on 2023-10-15
+
+#### Fix error that occur when creating XCFramework
+
+Background
+
+- Public header issue occurs when using Objective-C package in [Tuist](https://github.com/tuist/tuist)'s Dependency. To resolve this issue, I want to provide xcframework.
+- Resolve the issue that occurs when creating xcframework due to duplicate 'postfix operator %'.
+
+Contents
+
+- remove unnecessary files and headers
+  - Modified to manage yoga directly in FlexLayout. Buck dependency is now unnecessary.
+- remove duplicated postfix operator
+- update Podfile.lock
+- remove Info.plist
+- move `FlexLayout.h` to public header directory
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#244](https://github.com/layoutBox/FlexLayout/pull/244)
+
+
+
 ## [2.0.05](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.05)
 Released on 2024-01-11
 
