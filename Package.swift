@@ -11,7 +11,7 @@ let package = Package(
   targets: [
     .target(
       name: "FlexLayout",
-      dependencies: ["FlexLayoutYoga", "FlexLayoutYogaKit"],
+      dependencies: ["FlexLayoutYogaKit"],
       path: "Sources/Swift",
       publicHeadersPath: "Public"
     ),
