@@ -8,8 +8,14 @@
 # Change Log
 
 
+## [2.0.06](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.07)
+
+#### Remove FlexLayoutYoga duplicate dependency in Swift Package
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#245](https://github.com/layoutBox/FlexLayout/pull/245)
+
+
 ## [2.0.06](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.06)
-Released on 2023-10-15
 
 #### Fix error that occur when creating XCFramework
 
