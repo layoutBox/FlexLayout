@@ -365,7 +365,7 @@ YG_EDGE_PROPERTY(gap, Gap, Gap, YGGutterAll)
 #pragma mark - Private
 
 static float YGMeasureBaselineLabel(
-    YGNodeRef node,
+    YGNodeConstRef node,
     const float width,
     const float height) {
 
@@ -374,7 +374,7 @@ static float YGMeasureBaselineLabel(
 }
 
 static float YGMeasureBaselineTextView(
-    YGNodeRef node,
+    YGNodeConstRef node,
     const float width,
     const float height) {
 
@@ -383,7 +383,7 @@ static float YGMeasureBaselineTextView(
 }
 
 static float YGMeasureBaselineTextField(
-    YGNodeRef node,
+    YGNodeConstRef node,
     const float width,
     const float height) {
 
@@ -401,7 +401,7 @@ static float YGMeasureBaselineTextField(
 }
 
 static YGSize YGMeasureView(
-    YGNodeRef node,
+    YGNodeConstRef node,
     float width,
     YGMeasureMode widthMode,
     float height,
