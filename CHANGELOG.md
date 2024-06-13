@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [2.0.7](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.7)
+
+#### Update yoga to version 3.0.4
+
+Added by [heoblitz](https://github.com/heoblitz) in Pull Request [#245](https://github.com/layoutBox/FlexLayout/pull/252)
+
 
 ## [2.0.06](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.07)
 
