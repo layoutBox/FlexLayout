@@ -6,7 +6,15 @@
  */
 
 #include "YGValue.h"
+#include "Numeric_Comparison.h"
+
+using namespace facebook;
+using namespace facebook::yoga;
 
 const YGValue YGValueZero = {0, YGUnitPoint};
 const YGValue YGValueUndefined = {YGUndefined, YGUnitUndefined};
 const YGValue YGValueAuto = {YGUndefined, YGUnitAuto};
+
+bool YGFloatIsUndefined(const float value) {
+  return yoga::isUndefined(value);
+}

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "FlexLayout"
-  spec.version      = "2.0.07"
+  spec.version      = "2.0.7"
   spec.summary      = "FlexLayout"
   spec.homepage     = "https://github.com/lucdion/FlexLayout.git"
   spec.license      = "MIT license"
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
      '-fexceptions',
      '-Wall',
      '-Werror',
-     '-std=c++1y',
+     '-std=c++20',
      '-fPIC'
   ]
 end
