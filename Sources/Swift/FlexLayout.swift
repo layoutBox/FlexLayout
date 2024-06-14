@@ -1424,10 +1424,12 @@ public final class Flex {
     /**
      */
     public enum Position {
-        /// Default value.
+        /// Default value. Positioned according to the flex container's flow. The item offset is positioned using properties top, bottom, left, right, start, end.
         case relative
-        /// Positioned absolutely in regards to its container. The item is positionned using properties top, bottom, left, right, start, end.
+        /// Positioned absolutely, removed from the flex container's flow. The item is positioned using properties top, bottom, left, right, start, end.
         case absolute
+        /// Positioned like relative but ignores insets.
+        case `static`
     }
     
     /**

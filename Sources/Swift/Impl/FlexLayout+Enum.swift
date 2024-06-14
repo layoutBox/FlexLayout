@@ -53,6 +53,7 @@ extension YGWrap {
 extension YGPositionType {
     static let relative = YGPositionTypeRelative
     static let absolute = YGPositionTypeAbsolute
+    static let `static` = YGPositionTypeStatic
 }
 
 extension YGDirection {
@@ -149,6 +150,7 @@ extension Flex.Position {
         switch self {
         case .relative: return YGPositionType.relative
         case .absolute: return YGPositionType.absolute
+        case .static: return YGPositionType.static
         }
     }
 }
