@@ -545,7 +545,7 @@ public final class Flex {
     }
     
     //
-    // MARK: Absolute positionning
+    // MARK: Position / Insets
     //
     
     /**
@@ -581,7 +581,6 @@ public final class Flex {
     
     /**
      Set the top edge distance from the container top edge in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
      */
     @discardableResult
     public func top(_ value: CGFloat) -> Flex {
@@ -1424,11 +1423,11 @@ public final class Flex {
     /**
      */
     public enum Position {
-        /// Default value. Positioned according to the flex container's flow. The item offset is positioned using properties top, bottom, left, right, start, end.
+        /// Default value. Positioned according to the flex container's flow. The item is positioned using Insets properties (top, bottom, left, right, start, end) from its normal position within its flex container and will take up space within the flex container. This node will always form a containing block.
         case relative
-        /// Positioned absolutely, removed from the flex container's flow. The item is positioned using properties top, bottom, left, right, start, end.
+        /// Positioned absolutely, removed from the flex container's flow. The item is positioned using Insets properties (top, bottom, left, right, start, end). Insets will offset the node from its containing block.
         case absolute
-        /// Positioned like relative but ignores insets.
+        /// Positioned like relative but ignores insets and will not form a containing block.
         case `static`
     }
     
