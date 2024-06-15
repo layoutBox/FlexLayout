@@ -545,7 +545,7 @@ public final class Flex {
     }
     
     //
-    // MARK: Position / Insets
+    // MARK: Position / Inset
     //
     
     /**
@@ -561,7 +561,7 @@ public final class Flex {
     
     /**
      Set the left edge distance from the container left edge in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func left(_ value: CGFloat) -> Flex {
@@ -571,7 +571,7 @@ public final class Flex {
 
     /**
      Set the left edge distance from the container left edge in percentage of its container width.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func left(_ percent: FPercent) -> Flex {
@@ -581,6 +581,7 @@ public final class Flex {
     
     /**
      Set the top edge distance from the container top edge in pixels.
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func top(_ value: CGFloat) -> Flex {
@@ -590,7 +591,7 @@ public final class Flex {
 
     /**
      Set the top edge distance from the container top edge in percentage of its container height.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func top(_ percent: FPercent) -> Flex {
@@ -600,7 +601,7 @@ public final class Flex {
     
     /**
      Set the right edge distance from the container right edge in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func right(_ value: CGFloat) -> Flex {
@@ -610,7 +611,7 @@ public final class Flex {
 
     /**
      Set the right edge distance from the container right edge in percentage of its container width.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func right(_ percent: FPercent) -> Flex {
@@ -620,7 +621,7 @@ public final class Flex {
 
     /**
      Set the bottom edge distance from the container bottom edge in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func bottom(_ value: CGFloat) -> Flex {
@@ -630,7 +631,7 @@ public final class Flex {
 
     /**
      Set the bottom edge distance from the container bottom edge in percentage of its container height.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func bottom(_ percent: FPercent) -> Flex {
@@ -640,7 +641,7 @@ public final class Flex {
     
     /**
      Set the start edge (LTR=left, RTL=right) distance from the container start edge in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func start(_ value: CGFloat) -> Flex {
@@ -651,7 +652,7 @@ public final class Flex {
     /**
      Set the start edge (LTR=left, RTL=right) distance from the container start edge in
      percentage of its container width.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func start(_ percent: FPercent) -> Flex {
@@ -661,7 +662,7 @@ public final class Flex {
     
     /**
      Set the end edge (LTR=right, RTL=left) distance from the container end edge in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func end(_ value: CGFloat) -> Flex {
@@ -672,7 +673,7 @@ public final class Flex {
     /**
      Set the end edge (LTR=right, RTL=left) distance from the container end edge in
      percentage of its container width.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
      */
     @discardableResult
     public func end(_ percent: FPercent) -> Flex {
@@ -681,9 +682,10 @@ public final class Flex {
     }
     
     /**
-      Set the left and right edges distance from the container edges in pixels.
-      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
-      */
+     Set the left and right edges distance from the container edges in pixels.
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
+     For relative position, the right edge will be ignored.
+     */
     @discardableResult
     public func horizontally(_ value: CGFloat) -> Flex {
         yoga.left = YGValue(value)
@@ -691,10 +693,11 @@ public final class Flex {
         return self
      }
 
-     /**
-      Set the left and right edges distance from the container edges in percentage of its container width.
-      This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
-      */
+    /**
+     Set the left and right edges distance from the container edges in percentage of its container width.
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
+     For relative position, the right edge will be ignored.
+     */
     @discardableResult
     public func horizontally(_ percent: FPercent) -> Flex {
         yoga.left = YGValue(value: Float(percent.value), unit: .percent)
@@ -704,7 +707,8 @@ public final class Flex {
     
     /**
      Set the top and bottom edges distance from the container edges in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
+     For relative position, the bottom edge will be ignored.
      */
     @discardableResult
     public func vertically(_ value: CGFloat) -> Flex {
@@ -715,7 +719,8 @@ public final class Flex {
     
     /**
      Set the top and bottom edges distance from the container edges in percentage of its container height.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
+     For relative position, the bottom edge will be ignored.
      */
     @discardableResult
     public func vertically(_ percent: FPercent) -> Flex {
@@ -726,7 +731,8 @@ public final class Flex {
     
     /**
      Set all edges distance from the container edges in pixels.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
+     For relative position, the bottom and right edges will be ignored.
      */
     @discardableResult
     public func all(_ value: CGFloat) -> Flex {
@@ -739,7 +745,8 @@ public final class Flex {
     
     /**
      Set all edges distance from the container edges in percentage of its container size.
-     This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
+     This method is valid only when the item position is absolute or relative. It is not valid when the position is static.
+     For relative position, the bottom and right edges will be ignored.
      */
     @discardableResult
     public func all(_ percent: FPercent) -> Flex {
