@@ -21,13 +21,13 @@ final class InsetTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-
+        
         viewController = UIViewController()
-
+        
         rootFlexContainer = UIView()
         rootFlexContainer.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
         viewController.view.addSubview(rootFlexContainer)
-
+        
         aView = UIView()
     }
     
@@ -77,5 +77,43 @@ final class InsetTests: XCTestCase {
         }
         rootFlexContainer.flex.layout()
         XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 400.0, height: 400.0))
+    }
+    
+    func test_adjust_the_aView_size_absolute_position_with_left_right() {
+        rootFlexContainer.flex.define { flex in
+            flex.addItem(aView).position(.absolute).left(10).right(10).width(300).height(200)
+        }
+        
+        rootFlexContainer.flex.layout()
+        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 300.0, height: 200.0))
+    }
+    
+    func test_adjust_the_aView_size_absolute_position_with_right() {
+        rootFlexContainer.flex.define { flex in
+            flex.addItem(aView).position(.absolute).left(10).right(10).width(300).height(200)
+        }
+        
+        // Later reset the aspectRatio
+        aView.flex.left(0)
+        rootFlexContainer.flex.layout()
+        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
+    }
+    
+    func test_adjust_the_aView_size_absolute_position_with_horizontally_vertically() {
+        rootFlexContainer.flex.define { flex in
+            flex.addItem(aView).position(.absolute).horizontally(15).vertically(20)
+        }
+        
+        rootFlexContainer.flex.layout()
+        XCTAssertEqual(aView.frame, CGRect(x: 15.0, y: 20.0, width: 370.0, height: 360.0))
+    }
+    
+    func test_adjust_the_aView_size_absolute_position_with_horizontally_all() {
+        rootFlexContainer.flex.define { flex in
+            flex.addItem(aView).position(.absolute).all(45)
+        }
+        
+        rootFlexContainer.flex.layout()
+        XCTAssertEqual(aView.frame, CGRect(x: 45.0, y: 45.0, width: 310.0, height: 310.0))
     }
 }
