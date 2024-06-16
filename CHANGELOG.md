@@ -11,8 +11,6 @@
 
 #### Add `static` position feature
 
-## What is this PR for?
-
 Add feature for the static position supported in Yoga version 3.0.0.
 - Due to the default behavior of Yoga, insets like top, left, bottom, and right also affect relative position view. Accordingly, the README, docs and comments have been updated to match the Yoga specifications.
 - Added static case to position and unit tests.
