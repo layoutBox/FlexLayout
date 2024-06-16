@@ -36,7 +36,7 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 	* [Creation, modification and definition of flexbox containers](#create_modify_define_containers)
 	* [Flexbox containers properties](#containers_properties)
 	* [Flexbox items properties](#intems_properties)
-	* [Absolute positioning](#absolute_positioning)
+	* [Positioning](#positioning)
 	* [Adjusting the size](#adjusting_size)
 		* [Width, height and size](#width_height_size)
 		* [minWidth, maxWidth, minHeight, maxHeight](#minmax_width_height_size)
@@ -778,8 +778,8 @@ Item natural size, considering only properties of the view itself. Independent o
 
 <br>
 
-<a name="absolute_positioning"></a>
-## 4. Absolute positioning  
+<a name="positioning"></a>
+## 4. Positioning  
 - Applies to: `flex items`
 - Parameter: CGFloat
 
@@ -787,16 +787,23 @@ Item natural size, considering only properties of the view itself. Independent o
 
 * **`position(_: Position)`**   
 The position property tells Flexbox how you want your item to be positioned within its parent. Position values:
-  * **`relative (default)`**
-  * **`absolute`**: The view is positioned using properties: top(), bottom(), left(), right(), start(), end().
+  * **`relative (default)`** The view is positioned using Insets properties (top, bottom, left, right, start, end) from its normal position within its flex container and will take up space within the flex container. This node will always form a containing block.
+  * **`absolute`**: The view is removed from the flex container's flow and is positioned using Insets properties (top, bottom, left, right, start, end). Insets will offset the node from its containing block.
+  * **`static`**: The view ignores insets and will not form a containing block.
 
 ###### Usage examples:
 ```swift
+  view.flex.position(.relative).top(10).left(10).size(50)
+
   view.flex.position(.absolute).top(10).left(10).size(50)
 ```
 
 ### top(), bottom(), left(), right(), start(), end(), vertically(), horizontally(), all()
-A flex item which is `position` is set to `.absolute` is positioned absolutely in regards to its parent. This is done through the following methods:
+A flex item with position set to .relative is positioned relative to its normal position within its flex container. Only one property can be applied in each direction, either vertical or horizontal. If both `top` and `bottom` properties are set, `top` takes precedence. If both `left` and `right` properties are set, `left` takes precedence.
+
+A flex item with position set to .absolute is positioned absolutely with respect to its containing block. Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t affect their sibling's layout. Absolute position can be used to create overlays and stack children in the Z axis. 
+
+This is done through the following methods:
 
 **Methods:**
 
@@ -819,10 +826,10 @@ Controls the distance child’s left and right edges from the parent’s edges. 
 * **`all(: CGFloat)`** / **`all(: FPercent)`**:  
 Controls the distance child’s edges from the parent’s edges. Equal to `top().bottom().left().right()`.
 
-Using these properties you can control the size and position of an absolute item within its parent. Because absolutely positioned children don’t affect their sibling's layout. Absolute position can be used to create overlays and stack children in the Z axis.
-
 ###### Usage examples:
 ```swift
+  view.flex.position(.relative).top(10).right(10).width(100).height(50)
+
   view.flex.position(.absolute).top(10).right(10).width(100).height(50)
   view.flex.position(.absolute).left(20%).right(20%)
 ```
