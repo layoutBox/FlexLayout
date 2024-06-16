@@ -88,7 +88,7 @@ final class InsetTests: XCTestCase {
         XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 300.0, height: 200.0))
     }
     
-    func test_adjust_the_aView_size_absolute_position_with_right() {
+    func test_adjust_the_aView_size_absolute_position_with_right_and_reset_left_later() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.absolute).left(10).right(10).width(300).height(200)
         }
@@ -108,7 +108,7 @@ final class InsetTests: XCTestCase {
         XCTAssertEqual(aView.frame, CGRect(x: 15.0, y: 20.0, width: 370.0, height: 360.0))
     }
     
-    func test_adjust_the_aView_size_absolute_position_with_horizontally_all() {
+    func test_adjust_the_aView_size_absolute_position_with_all() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.absolute).all(45)
         }
