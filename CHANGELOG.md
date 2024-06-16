@@ -7,6 +7,21 @@
 
 # Change Log
 
+## [2.0.9](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.9)
+
+#### Add `static` position feature
+
+## What is this PR for?
+
+Add feature for the static position supported in Yoga version 3.0.0.
+- Due to the default behavior of Yoga, insets like top, left, bottom, and right also affect relative position view. Accordingly, the README, docs and comments have been updated to match the Yoga specifications.
+- Added static case to position and unit tests.
+
+https://www.yogalayout.dev/docs/styling/position
+https://www.yogalayout.dev/docs/styling/insets
+
+Added by [heoblitz](https://github.com/heoblitz) in Pull Request [#245](https://github.com/layoutBox/FlexLayout/pull/254)
+
 ## [2.0.7](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.7)
 
 #### Update yoga to version 3.0.4
