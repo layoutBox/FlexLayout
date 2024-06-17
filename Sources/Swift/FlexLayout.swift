@@ -1382,6 +1382,9 @@ public final class Flex {
         case spaceBetween
         /// Lines are evenly distributed in the flex container, with half-size spaces on either end	Play it »
         case spaceAround
+        /// Lines are evenly distributed in the flex container
+        /// The size of gaps between children and between the parent's edges and the first/last child will all be equal
+        case spaceEvenly
     }
     
     /**
