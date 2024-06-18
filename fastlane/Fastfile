@@ -42,7 +42,7 @@ platform :ios do
     # FlexLayout
     xcodebuild(
       project: "FlexLayout.xcodeproj",
-      scheme: "FlexLayout",
+      scheme: "FlexLayoutInner",
       configuration: "Release",
       build: true,
       clean: true,
@@ -81,7 +81,7 @@ platform :ios do
   end
 
   lane :tests do
-    scan(scheme: "FlexLayout", workspace: "FlexLayout.xcworkspace", device: "iPhone 15")
+    scan(scheme: "FlexLayoutInner", workspace: "FlexLayout.xcworkspace", device: "iPhone 15")
   end
 
   lane :doc do 
