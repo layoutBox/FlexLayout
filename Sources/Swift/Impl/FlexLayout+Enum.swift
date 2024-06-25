@@ -42,6 +42,7 @@ extension YGAlign {
     static let flexEnd = YGAlignFlexEnd
     static let spaceBetween = YGAlignSpaceBetween
     static let spaceAround = YGAlignSpaceAround
+    static let spaceEvenly = YGAlignSpaceEvenly
 }
 
 extension YGWrap {
@@ -106,6 +107,7 @@ extension Flex.AlignContent {
         case .end:          return YGAlign.flexEnd
         case .spaceBetween: return YGAlign.spaceBetween
         case .spaceAround:  return YGAlign.spaceAround
+        case .spaceEvenly:  return YGAlign.spaceEvenly
         }
     }
 }

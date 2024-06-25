@@ -580,7 +580,7 @@ Reminder: the cross axis is the axis perpendicular to the main axis. Its directi
 
 ### alignContent()
 - Applies to: `flex containers`
-- Values: `start` / `end` / `center` / `stretch` / `spaceBetween` / `spaceAround`
+- Values: `start` / `end` / `center` / `stretch` / `spaceBetween` / `spaceAround` / `spaceEvenly`
 - Default value: `start`
 - CSS name: `align-content`  
 
@@ -600,6 +600,7 @@ Note, `alignContent` has no effect when the flexbox has only a single line.
 | **stretch**	| <img src="docs_markdown/images/flexlayout-alignItems-column-stretch.png" width="140"/>| <img src="docs_markdown/images/flexlayout-alignItems-row-stretch.png" width="160"/>|
 | **spaceBetween** | <img src="docs_markdown/images/flexlayout-alignItems-column-spaceBetween.png" width="160"/> | <img src="docs_markdown/images/flexlayout-alignItems-row-spaceBetween.png" width="160"/>|
 | **spaceAround** | <img src="docs_markdown/images/flexlayout-alignItems-column-spaceAround.png" width="160"/> | <img src="docs_markdown/images/flexlayout-alignItems-row-spaceAround.png" width="160"/>|
+| **spaceEvenly** | | |
 
 <br/>
 
