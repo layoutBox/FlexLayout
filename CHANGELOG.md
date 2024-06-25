@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [2.0.10](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.10)
+
+#### Support `align-content`: `space-evenly`
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#255](https://github.com/layoutBox/FlexLayout/pull/255)
+
+
 ## [2.0.9](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.9)
 
 #### Add `static` position feature
