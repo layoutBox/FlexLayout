@@ -172,7 +172,7 @@ class YogaExampleFView: UIView {
 
         // Layout the flexbox container using PinLayout
         // NOTE: Could be also layouted by setting directly rootFlexContainer.frame
-        rootFlexContainer.pin.top(pin.safeArea).horizontally(pin.safeArea).height(300)
+        rootFlexContainer.pin.all(pin.safeArea)
 
         // Then let the flexbox container layout itself
         rootFlexContainer.flex.layout()
