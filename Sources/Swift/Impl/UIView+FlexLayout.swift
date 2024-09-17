@@ -16,12 +16,15 @@ import UIKit
 
 private var flexLayoutAssociatedObjectHandle = 72_399_923
 
-extension UIView {
-    public var flex: Flex {
-        if let flex = objc_getAssociatedObject(self, &flexLayoutAssociatedObjectHandle) as? Flex {
+public protocol FlexLayoutCompatible: UIView { }
+
+extension FlexLayoutCompatible {
+
+    public var flex: Flex<Self> {
+        if let flex = objc_getAssociatedObject(self, &flexLayoutAssociatedObjectHandle) as? Flex<Self> {
             return flex
         } else {
-            let flex = Flex(view: self)
+            let flex = Flex(self)
             objc_setAssociatedObject(self, &flexLayoutAssociatedObjectHandle, flex, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return flex
         }
@@ -31,3 +34,5 @@ extension UIView {
         (objc_getAssociatedObject(self, &flexLayoutAssociatedObjectHandle) as? Flex) != nil
     }
 }
+
+extension UIView: FlexLayoutCompatible { }
