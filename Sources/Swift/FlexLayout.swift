@@ -26,7 +26,7 @@ import FlexLayoutYogaKit
     label.flex.margin(10)
  ```
  */
-public final class Flex {
+public final class Flex<Base: UIView> {
     
     //
     // MARK: Properties
@@ -35,8 +35,10 @@ public final class Flex {
     /**
      Flex items's UIView.
     */
-    public private(set) weak var view: UIView?
+    public private(set) weak var base: Base?
     private let yoga: YGLayout
+    
+    public var view: UIView? { base }
     
     /**
      Item natural size, considering only properties of the view itself. Independent of the item frame.
@@ -45,10 +47,10 @@ public final class Flex {
         return yoga.intrinsicSize
     }
     
-    init(view: UIView) {
-        self.view = view
-        self.yoga = view.yoga
-        
+    init(_ base: Base) {
+        self.base = base
+        self.yoga = base.yoga
+
         // Enable flexbox and overwrite Yoga default values.
         yoga.isEnabled = true
     }
@@ -66,7 +68,7 @@ public final class Flex {
      - Returns: The flex interface corresponding to the added view.
      */
     @discardableResult
-    public func addItem() -> Flex {
+    public func addItem() -> Flex<UIView> {
         let view = UIView()
         return addItem(view)
     }
@@ -80,8 +82,8 @@ public final class Flex {
      - Returns: The flex interface corresponding to the added view.
      */
     @discardableResult
-    public func addItem(_ view: UIView) -> Flex {
-        if let host = self.view {
+    public func addItem<Item: UIView>(_ view: Item) -> Flex<Item> {
+        if let host = base {
             host.addSubview(view)
             return view.flex
         } else {
@@ -1278,7 +1280,7 @@ public final class Flex {
     */
     @discardableResult
     public func backgroundColor(_ color: UIColor) -> Flex {
-        if let host = self.view {
+        if let host = base {
             host.backgroundColor = color
             return self
         } else {
@@ -1295,7 +1297,7 @@ public final class Flex {
      */
     @discardableResult
     public func cornerRadius(_ value: CGFloat) -> Flex {
-        if let host = self.view {
+        if let host = base {
             host.layer.cornerRadius = value
             return self
         } else {
@@ -1313,7 +1315,7 @@ public final class Flex {
      */
     @discardableResult
     public func border(_ width: CGFloat, _ color: UIColor) -> Flex {
-        if let host = self.view {
+        if let host = base {
             host.layer.borderWidth = width
             host.layer.borderColor = color.cgColor
             return self
