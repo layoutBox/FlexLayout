@@ -6,10 +6,13 @@ import PackageDescription
 let package = Package(
   name: "FlexLayout",
   platforms: [
-    .iOS(.v12)
+    .iOS(.v12),
   ],
   products: [
     .library(name: "FlexLayout", targets: ["FlexLayout"]),
+  ],
+  dependencies: [
+    .package(url: "https://github.com/facebook/yoga.git", from: "3.1.0"),
   ],
   targets: [
     .target(
@@ -19,14 +22,8 @@ let package = Package(
       publicHeadersPath: "Public"
     ),
     .target(
-      name: "FlexLayoutYoga",
-      dependencies: [],
-      path: "Sources/yoga",
-      publicHeadersPath: "include/yoga"
-    ),
-    .target(
       name: "FlexLayoutYogaKit",
-      dependencies: ["FlexLayoutYoga"],
+      dependencies: ["yoga"],
       path: "Sources/YogaKit",
       publicHeadersPath: "include/YogaKit"
     ),

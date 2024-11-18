@@ -22,4 +22,6 @@ Pod::Spec.new do |spec|
      '-std=c++20',
      '-fPIC'
   ]
+
+  spec.dependency 'Yoga'
 end
