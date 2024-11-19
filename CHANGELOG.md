@@ -7,6 +7,13 @@
 
 # Change Log
 
+## [2.1.0](https://github.com/layoutBox/FlexLayout/releases/tag/2.1.0)
+
+#### Upgrade yoga to v3.1.0
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#255](https://github.com/layoutBox/FlexLayout/pull/266)
+
+
 ## [2.0.10](https://github.com/layoutBox/FlexLayout/releases/tag/2.0.10)
 
 #### Support `align-content`: `space-evenly`
