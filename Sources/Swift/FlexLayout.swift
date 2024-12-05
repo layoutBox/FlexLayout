@@ -891,7 +891,6 @@ public final class Flex {
     
     /**
      Set all margins using UIEdgeInsets.
-     This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
      */
     @discardableResult
     public func margin(_ insets: UIEdgeInsets) -> Flex {
@@ -904,7 +903,6 @@ public final class Flex {
     
     /**
      Set margins using NSDirectionalEdgeInsets.
-     This method is particularly to set all margins using iOS 11 `UIView.directionalLayoutMargins`.
      */
     @discardableResult
     public func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
