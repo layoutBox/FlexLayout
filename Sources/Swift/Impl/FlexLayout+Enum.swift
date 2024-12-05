@@ -19,10 +19,10 @@ import yoga
 extension Flex.Direction {
     var yogaValue: YGFlexDirection {
         switch self {
-        case .column:        return YGFlexDirection.column
-        case .columnReverse: return YGFlexDirection.columnReverse
-        case .row:           return YGFlexDirection.row
-        case .rowReverse:    return YGFlexDirection.rowReverse
+        case .column: .column
+        case .columnReverse: .columnReverse
+        case .row: .row
+        case .rowReverse: .rowReverse
         }
     }
 }
@@ -30,12 +30,12 @@ extension Flex.Direction {
 extension Flex.JustifyContent {
     var yogaValue: YGJustify {
         switch self {
-        case .start:        return YGJustify.flexStart
-        case .center:       return YGJustify.center
-        case .end:          return YGJustify.flexEnd
-        case .spaceBetween: return YGJustify.spaceBetween
-        case .spaceAround:  return YGJustify.spaceAround
-        case .spaceEvenly:  return YGJustify.spaceEvenly
+        case .start: .flexStart
+        case .center: .center
+        case .end: .flexEnd
+        case .spaceBetween: .spaceBetween
+        case .spaceAround: .spaceAround
+        case .spaceEvenly: .spaceEvenly
         }
     }
 }
@@ -43,13 +43,13 @@ extension Flex.JustifyContent {
 extension Flex.AlignContent {
     var yogaValue: YGAlign {
         switch self {
-        case .stretch:      return YGAlign.stretch
-        case .start:        return YGAlign.flexStart
-        case .center:       return YGAlign.center
-        case .end:          return YGAlign.flexEnd
-        case .spaceBetween: return YGAlign.spaceBetween
-        case .spaceAround:  return YGAlign.spaceAround
-        case .spaceEvenly:  return YGAlign.spaceEvenly
+        case .stretch: .stretch
+        case .start: .flexStart
+        case .center: .center
+        case .end: .flexEnd
+        case .spaceBetween: .spaceBetween
+        case .spaceAround: .spaceAround
+        case .spaceEvenly: .spaceEvenly
         }
     }
 }
@@ -57,11 +57,11 @@ extension Flex.AlignContent {
 extension Flex.AlignItems {
     var yogaValue: YGAlign {
         switch self {
-        case .stretch:      return YGAlign.stretch
-        case .start:        return YGAlign.flexStart
-        case .center:       return YGAlign.center
-        case .end:          return YGAlign.flexEnd
-        case .baseline:     return YGAlign.baseline
+        case .stretch: .stretch
+        case .start: .flexStart
+        case .center: .center
+        case .end: .flexEnd
+        case .baseline: .baseline
         }
     }
 }
@@ -69,12 +69,12 @@ extension Flex.AlignItems {
 extension Flex.AlignSelf {
     var yogaValue: YGAlign {
         switch self {
-        case .auto:         return YGAlign.auto
-        case .stretch:      return YGAlign.stretch
-        case .start:        return YGAlign.flexStart
-        case .center:       return YGAlign.center
-        case .end:          return YGAlign.flexEnd
-        case .baseline:     return YGAlign.baseline
+        case .auto: .auto
+        case .stretch: .stretch
+        case .start: .flexStart
+        case .center: .center
+        case .end: .flexEnd
+        case .baseline: .baseline
         }
     }
 }
@@ -82,9 +82,9 @@ extension Flex.AlignSelf {
 extension Flex.Wrap {
     var yogaValue: YGWrap {
         switch self {
-        case .noWrap:      return YGWrap.noWrap
-        case .wrap:        return YGWrap.wrap
-        case .wrapReverse: return YGWrap.wrapReverse
+        case .noWrap: .noWrap
+        case .wrap: .wrap
+        case .wrapReverse: .wrapReverse
         }
     }
 }
@@ -92,9 +92,9 @@ extension Flex.Wrap {
 extension Flex.Position {
     var yogaValue: YGPositionType {
         switch self {
-        case .relative: return YGPositionType.relative
-        case .absolute: return YGPositionType.absolute
-        case .static: return YGPositionType.static
+        case .relative: .relative
+        case .absolute: .absolute
+        case .static: .static
         }
     }
 }
@@ -102,9 +102,9 @@ extension Flex.Position {
 extension Flex.LayoutDirection {
     var yogaValue: YGDirection {
         switch self {
-        case .ltr: return YGDirection.LTR
-        case .rtl: return YGDirection.RTL
-        default:   return YGDirection.inherit
+        case .ltr: .LTR
+        case .rtl: .RTL
+        default: .inherit
         }
     }
 }
@@ -112,9 +112,9 @@ extension Flex.LayoutDirection {
 extension Flex.Display {
     var yogaValue: YGDisplay {
         switch self {
-        case .flex: YGDisplay.flex
-        case .none: YGDisplay.none
-        case .contents: YGDisplay.contents
+        case .flex: .flex
+        case .none: .none
+        case .contents: .contents
         }
     }
 }
@@ -122,19 +122,18 @@ extension Flex.Display {
 extension Flex.BoxSizing {
     var yogaValue: YGBoxSizing {
         switch self {
-        case .borderBox: YGBoxSizing.borderBox
-        case .contentBox: YGBoxSizing.contentBox
+        case .borderBox: .borderBox
+        case .contentBox: .contentBox
         }
     }
 }
 
-
-/*extension Flex.Overflow {
-    var yogaValue: YGOverflow {
-        switch self {
-        case .visible: return YGOverflow.visible
-        case .hidden:  return YGOverflow.hidden
-        case .scroll:  return YGOverflow.scroll
-        }
-    }
-}*/
+/* extension Flex.Overflow {
+     var yogaValue: YGOverflow {
+         switch self {
+         case .visible:  YGOverflow.visible
+         case .hidden:   YGOverflow.hidden
+         case .scroll:   YGOverflow.scroll
+         }
+     }
+ } */

@@ -1486,7 +1486,7 @@ public final class Flex {
         case contents
     }
     
-    /// allowing sizing values to influence the content box instead of the border box.
+    /// Allowing sizing values to influence the content box instead of the border box.
     public enum BoxSizing {
         /// Default value: If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.
         case borderBox
