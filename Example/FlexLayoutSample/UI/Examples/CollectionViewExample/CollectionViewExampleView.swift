@@ -29,10 +29,7 @@ class CollectionViewExampleView: UIView {
         
         flowLayout.minimumLineSpacing = 8
         flowLayout.minimumInteritemSpacing = 0
-        
-        if #available(iOS 11.0, *) {
-            flowLayout.sectionInsetReference = .fromSafeArea
-        }
+        flowLayout.sectionInsetReference = .fromSafeArea
         
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
