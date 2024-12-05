@@ -27,7 +27,7 @@ extension CGFloat {
     }
 }
 
-extension YGValue : @retroactive ExpressibleByIntegerLiteral, @retroactive ExpressibleByFloatLiteral {
+extension YGValue : ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
     public init(integerLiteral value: Int) {
         self = YGValue(value: Float(value), unit: .point)
     }
