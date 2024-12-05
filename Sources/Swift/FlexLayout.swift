@@ -1335,6 +1335,16 @@ public final class Flex {
         return self
     }
     
+    //
+    // MARK: BoxSizing
+    //
+    
+    @discardableResult
+    public func boxSizing(_ boxSizing: BoxSizing) -> Self {
+        yoga.boxSizing = boxSizing.yogaValue
+        return self
+    }
+    
     // MARK: Enums
     
     /**
@@ -1472,6 +1482,14 @@ public final class Flex {
         case flex
         /// With this value, the item will be hidden and not be calculated
         case none
+        /// Yoga nodes may now be set to display: contents to remove them from the layout flow, while preserving and hoisting the node's children. This may be used by the higher level UI framework to allow more easily composing wrapper components (such as those which may need to handle events, without influencing child layout)
+        case contents
+    }
+    
+    /// allowing sizing values to influence the content box instead of the border box.
+    public enum BoxSizing {
+        case borderBox
+        case contentBox
     }
     
     /*public enum Overflow {

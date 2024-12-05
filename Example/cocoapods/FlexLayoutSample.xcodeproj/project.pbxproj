@@ -199,7 +199,7 @@
 		249EFE361E64FAFE00165E39 = {
 			isa = PBXGroup;
 			children = (
-				249EFE411E64FAFE00165E39 /* FlexLayoutSample */,
+				249EFE411E64FAFE00165E39 /* ../FlexLayoutSample */,
 				461884C59B72ACEAFC912B8A /* Frameworks */,
 				85CAAE97812075333AF3E88F /* Pods */,
 				249EFE401E64FAFE00165E39 /* Products */,
@@ -214,7 +214,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		249EFE411E64FAFE00165E39 /* FlexLayoutSample */ = {
+		249EFE411E64FAFE00165E39 /* ../FlexLayoutSample */ = {
 			isa = PBXGroup;
 			children = (
 				2439CC671E66614D003326FB /* Supporting Files */,
@@ -664,7 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "../FlexLayoutSample/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -678,7 +678,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "../FlexLayoutSample/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

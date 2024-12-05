@@ -5,7 +5,7 @@ platform :ios, '14.0'
 workspace 'FlexLayout.xcworkspace'
 
 target 'FlexLayout' do
-  pod 'Yoga', git: 'https://github.com/facebook/yoga.git', tag: 'v3.1.0'
+  pod 'Yoga', git: 'https://github.com/facebook/yoga.git', tag: 'v3.2.0'
 end
 
 target 'FlexLayoutTests' do

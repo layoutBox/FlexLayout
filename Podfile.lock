@@ -1,15 +1,15 @@
 PODS:
-  - FlexLayout (2.0.10):
+  - FlexLayout (2.2.0):
     - Yoga
   - PinLayout (1.10.5)
   - SwiftLint (0.55.1)
-  - Yoga (3.1.0)
+  - Yoga (3.2.0)
 
 DEPENDENCIES:
   - FlexLayout (from `./`)
   - PinLayout
   - SwiftLint
-  - Yoga (from `https://github.com/facebook/yoga.git`, tag `v3.1.0`)
+  - Yoga (from `https://github.com/facebook/yoga.git`, tag `v3.2.0`)
 
 SPEC REPOS:
   trunk:
@@ -21,19 +21,19 @@ EXTERNAL SOURCES:
     :path: "./"
   Yoga:
     :git: https://github.com/facebook/yoga.git
-    :tag: v3.1.0
+    :tag: v3.2.0
 
 CHECKOUT OPTIONS:
   Yoga:
     :git: https://github.com/facebook/yoga.git
-    :tag: v3.1.0
+    :tag: v3.2.0
 
 SPEC CHECKSUMS:
-  FlexLayout: aaf305c1f3203be3d8694c3835773d1e7a912b72
+  FlexLayout: 8780755eda402e29eddd4b45a72018c8811ed78d
   PinLayout: f6c2b63a5a5b24864064e1d15c67de41b4e74748
   SwiftLint: 3fe909719babe5537c552ee8181c0031392be933
-  Yoga: 955c6d6390d5b00fb54d02151e67d69b3ac6f2d8
+  Yoga: 05f97d1ab7a72d84edff52f6699fe7bd58332c43
 
-PODFILE CHECKSUM: 616cb577f11ab8498737680dedeed47c6fae4b64
+PODFILE CHECKSUM: 83806357f78a79818dc54f3a63b5b2677be70533
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.15.2

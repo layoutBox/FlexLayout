@@ -112,11 +112,22 @@ extension Flex.LayoutDirection {
 extension Flex.Display {
     var yogaValue: YGDisplay {
         switch self {
-        case .flex: return YGDisplay.flex
-        case .none: return YGDisplay.none
+        case .flex: YGDisplay.flex
+        case .none: YGDisplay.none
+        case .contents: YGDisplay.contents
         }
     }
 }
+
+extension Flex.BoxSizing {
+    var yogaValue: YGBoxSizing {
+        switch self {
+        case .borderBox: YGBoxSizing.borderBox
+        case .contentBox: YGBoxSizing.contentBox
+        }
+    }
+}
+
 
 /*extension Flex.Overflow {
     var yogaValue: YGOverflow {
