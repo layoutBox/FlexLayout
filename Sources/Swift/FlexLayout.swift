@@ -891,7 +891,7 @@ public final class Flex {
     
     /**
      Set all margins using UIEdgeInsets.
-     This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
+     This method is particularly useful to set all margins using `UIView.safeAreaInsets`.
      */
     @discardableResult
     public func margin(_ insets: UIEdgeInsets) -> Flex {
@@ -904,11 +904,8 @@ public final class Flex {
     
     /**
      Set margins using NSDirectionalEdgeInsets.
-     This method is particularly to set all margins using iOS 11 `UIView.directionalLayoutMargins`.
-     
-     Available only on iOS 11 and higher.
+     This method is particularly to set all margins using `UIView.directionalLayoutMargins`.
      */
-    @available(tvOS 11.0, iOS 11.0, *)
     @discardableResult
     public func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
         yoga.marginTop = YGValue(directionalInsets.top)
@@ -1124,7 +1121,7 @@ public final class Flex {
     
     /**
      Set paddings using UIEdgeInsets.
-     This method is particularly useful to set all paddings using iOS 11 `UIView.safeAreaInsets`.
+     This method is particularly useful to set all paddings using `UIView.safeAreaInsets`.
      */
     @discardableResult
     public func padding(_ insets: UIEdgeInsets) -> Flex {
@@ -1137,11 +1134,8 @@ public final class Flex {
     
     /**
      Set paddings using NSDirectionalEdgeInsets.
-     This method is particularly to set all paddings using iOS 11 `UIView.directionalLayoutMargins`.
-     
-     Available only on iOS 11 and higher.
+     This method is particularly to set all paddings using `UIView.directionalLayoutMargins`.
      */
-    @available(tvOS 11.0, iOS 11.0, *)
     @discardableResult
     public func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
         yoga.paddingTop = YGValue(directionalInsets.top)
