@@ -24,5 +24,5 @@ Pod::Spec.new do |spec|
      '-fPIC'
   ]
 
-  spec.dependency 'Yoga'
+  spec.dependency 'Yoga', '3.2.1'
 end
