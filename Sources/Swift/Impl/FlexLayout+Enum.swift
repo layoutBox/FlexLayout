@@ -119,6 +119,15 @@ extension Flex.Display {
     }
 }
 
+extension Flex.BoxSizing {
+    var yogaValue: YGBoxSizing {
+        switch self {
+        case .borderBox: return YGBoxSizing.borderBox
+        case .contentBox: return YGBoxSizing.contentBox
+        }
+    }
+}
+
 /*extension Flex.Overflow {
     var yogaValue: YGOverflow {
         switch self {

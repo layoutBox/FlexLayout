@@ -1328,7 +1328,20 @@ public final class Flex {
         yoga.display = value.yogaValue
         return self
     }
-    
+
+    //
+    // MARK: Box Sizing
+    //
+  
+    /**
+     Set the box sizing
+     */
+    @discardableResult
+    public func boxSizing(_ value: BoxSizing) -> Flex {
+        yoga.boxSizing = value.yogaValue
+        return self
+    }
+
     // MARK: Enums
     
     /**
@@ -1471,7 +1484,17 @@ public final class Flex {
         /// without influencing the layout of child nodes.
         case contents
     }
-    
+
+    public enum BoxSizing {
+        /// Default value.
+        /// With `borderBox`, the specified dimensions (e.g., width, height) include the content, padding, and border.
+        /// This means the overall size of the element is as defined, with padding and border accounted for inside.
+        case borderBox
+        /// With `contentBox`, the specified dimensions refer only to the content area.
+        /// Padding and borders are added outside these dimensions, potentially increasing the total size of the element.
+        case contentBox
+    }
+
     /*public enum Overflow {
      /// Items that overflow
         case visible
