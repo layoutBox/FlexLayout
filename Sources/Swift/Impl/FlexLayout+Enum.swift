@@ -114,6 +114,7 @@ extension Flex.Display {
         switch self {
         case .flex: return YGDisplay.flex
         case .none: return YGDisplay.none
+        case .contents: return YGDisplay.contents
         }
     }
 }

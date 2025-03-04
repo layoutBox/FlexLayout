@@ -1466,6 +1466,10 @@ public final class Flex {
         case flex
         /// With this value, the item will be hidden and not be calculated
         case none
+        /// With this value, the node is removed from the layout flow, while its children are preserved and hoisted.
+        /// This allows higher-level UI frameworks to compose wrapper components (e.g., to handle events)
+        /// without influencing the layout of child nodes.
+        case contents
     }
     
     /*public enum Overflow {
