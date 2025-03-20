@@ -114,6 +114,16 @@ extension Flex.Display {
         switch self {
         case .flex: return YGDisplay.flex
         case .none: return YGDisplay.none
+        case .contents: return YGDisplay.contents
+        }
+    }
+}
+
+extension Flex.BoxSizing {
+    var yogaValue: YGBoxSizing {
+        switch self {
+        case .borderBox: return YGBoxSizing.borderBox
+        case .contentBox: return YGBoxSizing.contentBox
         }
     }
 }

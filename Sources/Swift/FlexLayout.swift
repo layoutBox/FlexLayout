@@ -891,7 +891,7 @@ public final class Flex {
     
     /**
      Set all margins using UIEdgeInsets.
-     This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
+     This method is particularly useful to set all margins using `UIView.safeAreaInsets`.
      */
     @discardableResult
     public func margin(_ insets: UIEdgeInsets) -> Flex {
@@ -904,11 +904,8 @@ public final class Flex {
     
     /**
      Set margins using NSDirectionalEdgeInsets.
-     This method is particularly to set all margins using iOS 11 `UIView.directionalLayoutMargins`.
-     
-     Available only on iOS 11 and higher.
+     This method is particularly to set all margins using `UIView.directionalLayoutMargins`.
      */
-    @available(tvOS 11.0, iOS 11.0, *)
     @discardableResult
     public func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
         yoga.marginTop = YGValue(directionalInsets.top)
@@ -1124,7 +1121,7 @@ public final class Flex {
     
     /**
      Set paddings using UIEdgeInsets.
-     This method is particularly useful to set all paddings using iOS 11 `UIView.safeAreaInsets`.
+     This method is particularly useful to set all paddings using `UIView.safeAreaInsets`.
      */
     @discardableResult
     public func padding(_ insets: UIEdgeInsets) -> Flex {
@@ -1137,11 +1134,8 @@ public final class Flex {
     
     /**
      Set paddings using NSDirectionalEdgeInsets.
-     This method is particularly to set all paddings using iOS 11 `UIView.directionalLayoutMargins`.
-     
-     Available only on iOS 11 and higher.
+     This method is particularly to set all paddings using `UIView.directionalLayoutMargins`.
      */
-    @available(tvOS 11.0, iOS 11.0, *)
     @discardableResult
     public func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Flex {
         yoga.paddingTop = YGValue(directionalInsets.top)
@@ -1334,7 +1328,20 @@ public final class Flex {
         yoga.display = value.yogaValue
         return self
     }
-    
+
+    //
+    // MARK: Box Sizing
+    //
+  
+    /**
+     Set the box sizing
+     */
+    @discardableResult
+    public func boxSizing(_ value: BoxSizing) -> Flex {
+        yoga.boxSizing = value.yogaValue
+        return self
+    }
+
     // MARK: Enums
     
     /**
@@ -1472,8 +1479,22 @@ public final class Flex {
         case flex
         /// With this value, the item will be hidden and not be calculated
         case none
+        /// With this value, the node is removed from the layout flow, while its children are preserved and hoisted.
+        /// This allows higher-level UI frameworks to compose wrapper components (e.g., to handle events)
+        /// without influencing the layout of child nodes.
+        case contents
     }
-    
+
+    public enum BoxSizing {
+        /// Default value.
+        /// With `borderBox`, the specified dimensions (e.g., width, height) include the content, padding, and border.
+        /// This means the overall size of the element is as defined, with padding and border accounted for inside.
+        case borderBox
+        /// With `contentBox`, the specified dimensions refer only to the content area.
+        /// Padding and borders are added outside these dimensions, potentially increasing the total size of the element.
+        case contentBox
+    }
+
     /*public enum Overflow {
      /// Items that overflow
         case visible

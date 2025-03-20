@@ -722,6 +722,26 @@ FlexLayout automatically includes the UIView when:
 
 Set the item display or not, with `none` value, the item will be hidden and not included in the layout.
 
+Values:
+* **`flex`**: Default value. The item is displayed normally and included in the layout.
+* **`none`**: The item will be hidden and not included in the layout.
+* **`contents`**: The node is removed from the layout flow, while its children are preserved and hoisted. This allows higher-level UI frameworks to compose wrapper components (e.g., to handle events) without influencing the layout of child nodes.
+
+<br>
+
+### boxSizing
+- Applies to: `flex items`
+
+**Method:**
+
+* **`boxSizing(_: BoxSizing)`**  
+
+Set the box sizing mode for the item. This determines how the width and height of an element are calculated.
+
+Values:
+* **`borderBox`**: Default value. With `borderBox`, the specified dimensions (width, height) include the content, padding, and border. This means the overall size of the element is as defined, with padding and border accounted for inside.
+* **`contentBox`**: With `contentBox`, the specified dimensions refer only to the content area. Padding and borders are added outside these dimensions, potentially increasing the total size of the element.
+
 <br>
 
 ### markDirty()

@@ -273,6 +273,7 @@ YG_PROPERTY(YGAlign, alignSelf, AlignSelf)
 YG_PROPERTY(YGWrap, flexWrap, FlexWrap)
 YG_PROPERTY(YGOverflow, overflow, Overflow)
 YG_PROPERTY(YGDisplay, display, Display)
+YG_PROPERTY(YGBoxSizing, boxSizing, BoxSizing)
 
 YG_PROPERTY(CGFloat, flex, Flex)
 YG_PROPERTY(CGFloat, flexGrow, FlexGrow)
