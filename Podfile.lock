@@ -1,27 +1,32 @@
 PODS:
-  - FlexLayout (2.0.10)
+  - FlexLayout (2.1.0):
+    - Yoga (= 3.2.1)
   - PinLayout (1.10.5)
   - SwiftLint (0.55.1)
+  - Yoga (3.2.1)
 
 DEPENDENCIES:
   - FlexLayout (from `./`)
   - PinLayout
   - SwiftLint
+  - Yoga
 
 SPEC REPOS:
   trunk:
     - PinLayout
     - SwiftLint
+    - Yoga
 
 EXTERNAL SOURCES:
   FlexLayout:
     :path: "./"
 
 SPEC CHECKSUMS:
-  FlexLayout: ea94491c923485f7f28891cb5b10245d22df380b
+  FlexLayout: 4832b2e2069002e7d3f48dffbb20cc773a1813be
   PinLayout: f6c2b63a5a5b24864064e1d15c67de41b4e74748
   SwiftLint: 3fe909719babe5537c552ee8181c0031392be933
+  Yoga: 636ce73bd247407928a7df089f3bc3675916b3ff
 
-PODFILE CHECKSUM: a0f152e938c551fd661bee3ffe26ccc6175f088b
+PODFILE CHECKSUM: de7bb13eccf1a1ff875980af83b7d4a0cba2ca59
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

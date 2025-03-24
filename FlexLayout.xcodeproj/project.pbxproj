@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1207ABCE834615F650234676 /* Pods_FlexLayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F69C581A2C68BBBD1B64F21 /* Pods_FlexLayoutTests.framework */; };
 		24AE973E1FEAF30A00995987 /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE972E1FEAF30A00995987 /* FlexLayout.swift */; };
-		24AE973F1FEAF30A00995987 /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97301FEAF30A00995987 /* FlexLayout+Enum.swift */; };
 		24AE97401FEAF30A00995987 /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97311FEAF30A00995987 /* FlexLayout+Private.swift */; };
 		24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */; };
 		24AE97421FEAF30A00995987 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97331FEAF30A00995987 /* Percent.swift */; };
@@ -19,85 +18,14 @@
 		711F2EE92ACC727000DDDD67 /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE32ACC727000DDDD67 /* FlexLayoutTests.swift */; };
 		711F2EEA2ACC727000DDDD67 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE42ACC727000DDDD67 /* MarginTests.swift */; };
 		711F2EEB2ACC727000DDDD67 /* JustifyContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711F2EE52ACC727000DDDD67 /* JustifyContentTests.swift */; };
-		71332C262B794826000667C9 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71332C272B794935000667C9 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71332C282B794935000667C9 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617E2ABEE4B600D5A2E0 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71332C292B794935000667C9 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617D2ABEE4B600D5A2E0 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		715C61812ABEE4B600D5A2E0 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 715C617A2ABEE4B600D5A2E0 /* UIView+Yoga.mm */; };
 		715C61852ABEE4B600D5A2E0 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 715C61802ABEE4B600D5A2E0 /* YGLayout.mm */; };
-		EF0E61302C1A811100DF30F6 /* YGConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60E32C1A811100DF30F6 /* YGConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61312C1A811100DF30F6 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60E42C1A811100DF30F6 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61322C1A811100DF30F6 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60E52C1A811100DF30F6 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61332C1A811100DF30F6 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60E62C1A811100DF30F6 /* YGNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61342C1A811100DF30F6 /* YGNodeLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60E72C1A811100DF30F6 /* YGNodeLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61352C1A811100DF30F6 /* YGNodeStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60E82C1A811100DF30F6 /* YGNodeStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61362C1A811100DF30F6 /* YGPixelGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60E92C1A811100DF30F6 /* YGPixelGrid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61372C1A811100DF30F6 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60EA2C1A811100DF30F6 /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61382C1A811100DF30F6 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60EB2C1A811100DF30F6 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF0E61392C1A811100DF30F6 /* Algorithm_AbsoluteLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E60EE2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.cpp */; };
-		EF0E613A2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60EF2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.h */; };
-		EF0E613B2C1A811100DF30F6 /* Algorithm_Align.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60F02C1A811100DF30F6 /* Algorithm_Align.h */; };
-		EF0E613C2C1A811100DF30F6 /* Algorithm_Baseline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E60F12C1A811100DF30F6 /* Algorithm_Baseline.cpp */; };
-		EF0E613D2C1A811100DF30F6 /* Algorithm_Baseline.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60F22C1A811100DF30F6 /* Algorithm_Baseline.h */; };
-		EF0E613E2C1A811100DF30F6 /* Algorithm_BoundAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60F32C1A811100DF30F6 /* Algorithm_BoundAxis.h */; };
-		EF0E613F2C1A811100DF30F6 /* Algorithm_Cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E60F42C1A811100DF30F6 /* Algorithm_Cache.cpp */; };
-		EF0E61402C1A811100DF30F6 /* Algorithm_Cache.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60F52C1A811100DF30F6 /* Algorithm_Cache.h */; };
-		EF0E61412C1A811100DF30F6 /* Algorithm_CalculateLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E60F62C1A811100DF30F6 /* Algorithm_CalculateLayout.cpp */; };
-		EF0E61422C1A811100DF30F6 /* Algorithm_CalculateLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60F72C1A811100DF30F6 /* Algorithm_CalculateLayout.h */; };
-		EF0E61432C1A811100DF30F6 /* Algorithm_FlexDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60F82C1A811100DF30F6 /* Algorithm_FlexDirection.h */; };
-		EF0E61442C1A811100DF30F6 /* Algorithm_FlexLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E60F92C1A811100DF30F6 /* Algorithm_FlexLine.cpp */; };
-		EF0E61452C1A811100DF30F6 /* Algorithm_FlexLine.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60FA2C1A811100DF30F6 /* Algorithm_FlexLine.h */; };
-		EF0E61462C1A811100DF30F6 /* Algorithm_PixelGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E60FB2C1A811100DF30F6 /* Algorithm_PixelGrid.cpp */; };
-		EF0E61472C1A811100DF30F6 /* Algorithm_PixelGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60FC2C1A811100DF30F6 /* Algorithm_PixelGrid.h */; };
-		EF0E61482C1A811100DF30F6 /* Algorithm_SizingMode.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60FD2C1A811100DF30F6 /* Algorithm_SizingMode.h */; };
-		EF0E61492C1A811100DF30F6 /* Algorithm_TrailingPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E60FE2C1A811100DF30F6 /* Algorithm_TrailingPosition.h */; };
-		EF0E614A2C1A811100DF30F6 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF0E60FF2C1A811100DF30F6 /* CMakeLists.txt */; };
-		EF0E614B2C1A811100DF30F6 /* Config_Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E61002C1A811100DF30F6 /* Config_Config.cpp */; };
-		EF0E614C2C1A811100DF30F6 /* Config_Config.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61012C1A811100DF30F6 /* Config_Config.h */; };
-		EF0E614D2C1A811100DF30F6 /* Debug_AssertFatal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E61022C1A811100DF30F6 /* Debug_AssertFatal.cpp */; };
-		EF0E614E2C1A811100DF30F6 /* Debug_AssertFatal.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61032C1A811100DF30F6 /* Debug_AssertFatal.h */; };
-		EF0E614F2C1A811100DF30F6 /* Debug_Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E61042C1A811100DF30F6 /* Debug_Log.cpp */; };
-		EF0E61502C1A811100DF30F6 /* Debug_Log.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61052C1A811100DF30F6 /* Debug_Log.h */; };
-		EF0E61512C1A811100DF30F6 /* Enums_Align.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61062C1A811100DF30F6 /* Enums_Align.h */; };
-		EF0E61522C1A811100DF30F6 /* Enums_Dimension.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61072C1A811100DF30F6 /* Enums_Dimension.h */; };
-		EF0E61532C1A811100DF30F6 /* Enums_Direction.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61082C1A811100DF30F6 /* Enums_Direction.h */; };
-		EF0E61542C1A811100DF30F6 /* Enums_Display.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61092C1A811100DF30F6 /* Enums_Display.h */; };
-		EF0E61552C1A811100DF30F6 /* Enums_Edge.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E610A2C1A811100DF30F6 /* Enums_Edge.h */; };
-		EF0E61562C1A811100DF30F6 /* Enums_Errata.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E610B2C1A811100DF30F6 /* Enums_Errata.h */; };
-		EF0E61572C1A811100DF30F6 /* Enums_ExperimentalFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E610C2C1A811100DF30F6 /* Enums_ExperimentalFeature.h */; };
-		EF0E61582C1A811100DF30F6 /* Enums_FlexDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E610D2C1A811100DF30F6 /* Enums_FlexDirection.h */; };
-		EF0E61592C1A811100DF30F6 /* Enums_Gutter.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E610E2C1A811100DF30F6 /* Enums_Gutter.h */; };
-		EF0E615A2C1A811100DF30F6 /* Enums_Justify.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E610F2C1A811100DF30F6 /* Enums_Justify.h */; };
-		EF0E615B2C1A811100DF30F6 /* Enums_LogLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61102C1A811100DF30F6 /* Enums_LogLevel.h */; };
-		EF0E615C2C1A811100DF30F6 /* Enums_MeasureMode.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61112C1A811100DF30F6 /* Enums_MeasureMode.h */; };
-		EF0E615D2C1A811100DF30F6 /* Enums_NodeType.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61122C1A811100DF30F6 /* Enums_NodeType.h */; };
-		EF0E615E2C1A811100DF30F6 /* Enums_Overflow.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61132C1A811100DF30F6 /* Enums_Overflow.h */; };
-		EF0E615F2C1A811100DF30F6 /* Enums_PhysicalEdge.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61142C1A811100DF30F6 /* Enums_PhysicalEdge.h */; };
-		EF0E61602C1A811100DF30F6 /* Enums_PositionType.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61152C1A811100DF30F6 /* Enums_PositionType.h */; };
-		EF0E61612C1A811100DF30F6 /* Enums_Unit.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61162C1A811100DF30F6 /* Enums_Unit.h */; };
-		EF0E61622C1A811100DF30F6 /* Enums_Wrap.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61172C1A811100DF30F6 /* Enums_Wrap.h */; };
-		EF0E61632C1A811100DF30F6 /* Enums_YogaEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61182C1A811100DF30F6 /* Enums_YogaEnums.h */; };
-		EF0E61642C1A811100DF30F6 /* Event_event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E61192C1A811100DF30F6 /* Event_event.cpp */; };
-		EF0E61652C1A811100DF30F6 /* Event_event.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E611A2C1A811100DF30F6 /* Event_event.h */; };
-		EF0E61662C1A811100DF30F6 /* Node_CachedMeasurement.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E611C2C1A811100DF30F6 /* Node_CachedMeasurement.h */; };
-		EF0E61672C1A811100DF30F6 /* Node_LayoutResults.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E611D2C1A811100DF30F6 /* Node_LayoutResults.cpp */; };
-		EF0E61682C1A811100DF30F6 /* Node_LayoutResults.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E611E2C1A811100DF30F6 /* Node_LayoutResults.h */; };
-		EF0E61692C1A811100DF30F6 /* Node_Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E611F2C1A811100DF30F6 /* Node_Node.cpp */; };
-		EF0E616A2C1A811100DF30F6 /* Node_Node.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61202C1A811100DF30F6 /* Node_Node.h */; };
-		EF0E616B2C1A811100DF30F6 /* Numeric_Comparison.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61212C1A811100DF30F6 /* Numeric_Comparison.h */; };
-		EF0E616C2C1A811100DF30F6 /* Numeric_FloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61222C1A811100DF30F6 /* Numeric_FloatOptional.h */; };
-		EF0E616D2C1A811100DF30F6 /* Style_SmallValueBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61232C1A811100DF30F6 /* Style_SmallValueBuffer.h */; };
-		EF0E616E2C1A811100DF30F6 /* Style_Style.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61242C1A811100DF30F6 /* Style_Style.h */; };
-		EF0E616F2C1A811100DF30F6 /* Style_StyleLength.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61252C1A811100DF30F6 /* Style_StyleLength.h */; };
-		EF0E61702C1A811100DF30F6 /* Style_StyleValueHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61262C1A811100DF30F6 /* Style_StyleValueHandle.h */; };
-		EF0E61712C1A811100DF30F6 /* Style_StyleValuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E61272C1A811100DF30F6 /* Style_StyleValuePool.h */; };
-		EF0E61722C1A811100DF30F6 /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E61282C1A811100DF30F6 /* YGConfig.cpp */; };
-		EF0E61732C1A811100DF30F6 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E61292C1A811100DF30F6 /* YGEnums.cpp */; };
-		EF0E61742C1A811100DF30F6 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E612A2C1A811100DF30F6 /* YGNode.cpp */; };
-		EF0E61752C1A811100DF30F6 /* YGNodeLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E612B2C1A811100DF30F6 /* YGNodeLayout.cpp */; };
-		EF0E61762C1A811100DF30F6 /* YGNodeStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E612C2C1A811100DF30F6 /* YGNodeStyle.cpp */; };
-		EF0E61772C1A811100DF30F6 /* YGPixelGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E612D2C1A811100DF30F6 /* YGPixelGrid.cpp */; };
-		EF0E61782C1A811100DF30F6 /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0E612E2C1A811100DF30F6 /* YGValue.cpp */; };
+		71A5522D2CEAED24005D9FBF /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97301FEAF30A00995987 /* FlexLayout+Enum.swift */; };
+		71A5522E2CEAED47005D9FBF /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71A5522F2CEAED47005D9FBF /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617E2ABEE4B600D5A2E0 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71A552302CEAED47005D9FBF /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C617D2ABEE4B600D5A2E0 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71A552312CEAEDC1005D9FBF /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9421472A1695AFD38FAEBD72 /* Pods_FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F893AE16F96F495E91B6D58 /* Pods_FlexLayout.framework */; };
 		EF5445402C1D607100BF4A33 /* InsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54453F2C1D607100BF4A33 /* InsetTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		1F69C581A2C68BBBD1B64F21 /* Pods_FlexLayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		224171C69665A229D0A217EF /* Pods-FlexLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayout/Pods-FlexLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		2491CC5C1FCB931F00F3A61C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		2491CC5E1FCB932B00F3A61C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		24AE972E1FEAF30A00995987 /* FlexLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexLayout.swift; sourceTree = "<group>"; };
@@ -138,6 +67,8 @@
 		24DA37631EF843C500D1AB2F /* FlexLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B210ECFE9D7665DACB8E8A7 /* Pods-FlexLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38E690AA4AF8EDFC95DB6626 /* Pods-FlexLayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutTests.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests.release.xcconfig"; sourceTree = "<group>"; };
+		3F893AE16F96F495E91B6D58 /* Pods_FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B9A88E410DD5E3EA6C308DD /* Pods-FlexLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout.release.xcconfig"; path = "Target Support Files/Pods-FlexLayout/Pods-FlexLayout.release.xcconfig"; sourceTree = "<group>"; };
 		711F2EE12ACC727000DDDD67 /* WidthSizeContentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthSizeContentTests.swift; sourceTree = "<group>"; };
 		711F2EE22ACC727000DDDD67 /* PaddingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTests.swift; sourceTree = "<group>"; };
 		711F2EE32ACC727000DDDD67 /* FlexLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexLayoutTests.swift; sourceTree = "<group>"; };
@@ -148,80 +79,6 @@
 		715C617E2ABEE4B600D5A2E0 /* YGLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
 		715C617F2ABEE4B600D5A2E0 /* UIView+Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Yoga.h"; sourceTree = "<group>"; };
 		715C61802ABEE4B600D5A2E0 /* YGLayout.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.objcpp; path = YGLayout.mm; sourceTree = "<group>"; tabWidth = 2; };
-		EF0E60E32C1A811100DF30F6 /* YGConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGConfig.h; sourceTree = "<group>"; };
-		EF0E60E42C1A811100DF30F6 /* YGEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
-		EF0E60E52C1A811100DF30F6 /* YGMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
-		EF0E60E62C1A811100DF30F6 /* YGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
-		EF0E60E72C1A811100DF30F6 /* YGNodeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNodeLayout.h; sourceTree = "<group>"; };
-		EF0E60E82C1A811100DF30F6 /* YGNodeStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNodeStyle.h; sourceTree = "<group>"; };
-		EF0E60E92C1A811100DF30F6 /* YGPixelGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPixelGrid.h; sourceTree = "<group>"; };
-		EF0E60EA2C1A811100DF30F6 /* YGValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGValue.h; sourceTree = "<group>"; };
-		EF0E60EB2C1A811100DF30F6 /* Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
-		EF0E60EE2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm_AbsoluteLayout.cpp; sourceTree = "<group>"; };
-		EF0E60EF2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_AbsoluteLayout.h; sourceTree = "<group>"; };
-		EF0E60F02C1A811100DF30F6 /* Algorithm_Align.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_Align.h; sourceTree = "<group>"; };
-		EF0E60F12C1A811100DF30F6 /* Algorithm_Baseline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm_Baseline.cpp; sourceTree = "<group>"; };
-		EF0E60F22C1A811100DF30F6 /* Algorithm_Baseline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_Baseline.h; sourceTree = "<group>"; };
-		EF0E60F32C1A811100DF30F6 /* Algorithm_BoundAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_BoundAxis.h; sourceTree = "<group>"; };
-		EF0E60F42C1A811100DF30F6 /* Algorithm_Cache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm_Cache.cpp; sourceTree = "<group>"; };
-		EF0E60F52C1A811100DF30F6 /* Algorithm_Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_Cache.h; sourceTree = "<group>"; };
-		EF0E60F62C1A811100DF30F6 /* Algorithm_CalculateLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm_CalculateLayout.cpp; sourceTree = "<group>"; };
-		EF0E60F72C1A811100DF30F6 /* Algorithm_CalculateLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_CalculateLayout.h; sourceTree = "<group>"; };
-		EF0E60F82C1A811100DF30F6 /* Algorithm_FlexDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_FlexDirection.h; sourceTree = "<group>"; };
-		EF0E60F92C1A811100DF30F6 /* Algorithm_FlexLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm_FlexLine.cpp; sourceTree = "<group>"; };
-		EF0E60FA2C1A811100DF30F6 /* Algorithm_FlexLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_FlexLine.h; sourceTree = "<group>"; };
-		EF0E60FB2C1A811100DF30F6 /* Algorithm_PixelGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm_PixelGrid.cpp; sourceTree = "<group>"; };
-		EF0E60FC2C1A811100DF30F6 /* Algorithm_PixelGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_PixelGrid.h; sourceTree = "<group>"; };
-		EF0E60FD2C1A811100DF30F6 /* Algorithm_SizingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_SizingMode.h; sourceTree = "<group>"; };
-		EF0E60FE2C1A811100DF30F6 /* Algorithm_TrailingPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm_TrailingPosition.h; sourceTree = "<group>"; };
-		EF0E60FF2C1A811100DF30F6 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
-		EF0E61002C1A811100DF30F6 /* Config_Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config_Config.cpp; sourceTree = "<group>"; };
-		EF0E61012C1A811100DF30F6 /* Config_Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config_Config.h; sourceTree = "<group>"; };
-		EF0E61022C1A811100DF30F6 /* Debug_AssertFatal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debug_AssertFatal.cpp; sourceTree = "<group>"; };
-		EF0E61032C1A811100DF30F6 /* Debug_AssertFatal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug_AssertFatal.h; sourceTree = "<group>"; };
-		EF0E61042C1A811100DF30F6 /* Debug_Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debug_Log.cpp; sourceTree = "<group>"; };
-		EF0E61052C1A811100DF30F6 /* Debug_Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug_Log.h; sourceTree = "<group>"; };
-		EF0E61062C1A811100DF30F6 /* Enums_Align.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Align.h; sourceTree = "<group>"; };
-		EF0E61072C1A811100DF30F6 /* Enums_Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Dimension.h; sourceTree = "<group>"; };
-		EF0E61082C1A811100DF30F6 /* Enums_Direction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Direction.h; sourceTree = "<group>"; };
-		EF0E61092C1A811100DF30F6 /* Enums_Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Display.h; sourceTree = "<group>"; };
-		EF0E610A2C1A811100DF30F6 /* Enums_Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Edge.h; sourceTree = "<group>"; };
-		EF0E610B2C1A811100DF30F6 /* Enums_Errata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Errata.h; sourceTree = "<group>"; };
-		EF0E610C2C1A811100DF30F6 /* Enums_ExperimentalFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_ExperimentalFeature.h; sourceTree = "<group>"; };
-		EF0E610D2C1A811100DF30F6 /* Enums_FlexDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_FlexDirection.h; sourceTree = "<group>"; };
-		EF0E610E2C1A811100DF30F6 /* Enums_Gutter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Gutter.h; sourceTree = "<group>"; };
-		EF0E610F2C1A811100DF30F6 /* Enums_Justify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Justify.h; sourceTree = "<group>"; };
-		EF0E61102C1A811100DF30F6 /* Enums_LogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_LogLevel.h; sourceTree = "<group>"; };
-		EF0E61112C1A811100DF30F6 /* Enums_MeasureMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_MeasureMode.h; sourceTree = "<group>"; };
-		EF0E61122C1A811100DF30F6 /* Enums_NodeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_NodeType.h; sourceTree = "<group>"; };
-		EF0E61132C1A811100DF30F6 /* Enums_Overflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Overflow.h; sourceTree = "<group>"; };
-		EF0E61142C1A811100DF30F6 /* Enums_PhysicalEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_PhysicalEdge.h; sourceTree = "<group>"; };
-		EF0E61152C1A811100DF30F6 /* Enums_PositionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_PositionType.h; sourceTree = "<group>"; };
-		EF0E61162C1A811100DF30F6 /* Enums_Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Unit.h; sourceTree = "<group>"; };
-		EF0E61172C1A811100DF30F6 /* Enums_Wrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_Wrap.h; sourceTree = "<group>"; };
-		EF0E61182C1A811100DF30F6 /* Enums_YogaEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums_YogaEnums.h; sourceTree = "<group>"; };
-		EF0E61192C1A811100DF30F6 /* Event_event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event_event.cpp; sourceTree = "<group>"; };
-		EF0E611A2C1A811100DF30F6 /* Event_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event_event.h; sourceTree = "<group>"; };
-		EF0E611B2C1A811100DF30F6 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		EF0E611C2C1A811100DF30F6 /* Node_CachedMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node_CachedMeasurement.h; sourceTree = "<group>"; };
-		EF0E611D2C1A811100DF30F6 /* Node_LayoutResults.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node_LayoutResults.cpp; sourceTree = "<group>"; };
-		EF0E611E2C1A811100DF30F6 /* Node_LayoutResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node_LayoutResults.h; sourceTree = "<group>"; };
-		EF0E611F2C1A811100DF30F6 /* Node_Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node_Node.cpp; sourceTree = "<group>"; };
-		EF0E61202C1A811100DF30F6 /* Node_Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node_Node.h; sourceTree = "<group>"; };
-		EF0E61212C1A811100DF30F6 /* Numeric_Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Numeric_Comparison.h; sourceTree = "<group>"; };
-		EF0E61222C1A811100DF30F6 /* Numeric_FloatOptional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Numeric_FloatOptional.h; sourceTree = "<group>"; };
-		EF0E61232C1A811100DF30F6 /* Style_SmallValueBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style_SmallValueBuffer.h; sourceTree = "<group>"; };
-		EF0E61242C1A811100DF30F6 /* Style_Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style_Style.h; sourceTree = "<group>"; };
-		EF0E61252C1A811100DF30F6 /* Style_StyleLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style_StyleLength.h; sourceTree = "<group>"; };
-		EF0E61262C1A811100DF30F6 /* Style_StyleValueHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style_StyleValueHandle.h; sourceTree = "<group>"; };
-		EF0E61272C1A811100DF30F6 /* Style_StyleValuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Style_StyleValuePool.h; sourceTree = "<group>"; };
-		EF0E61282C1A811100DF30F6 /* YGConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGConfig.cpp; sourceTree = "<group>"; };
-		EF0E61292C1A811100DF30F6 /* YGEnums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
-		EF0E612A2C1A811100DF30F6 /* YGNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
-		EF0E612B2C1A811100DF30F6 /* YGNodeLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodeLayout.cpp; sourceTree = "<group>"; };
-		EF0E612C2C1A811100DF30F6 /* YGNodeStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodeStyle.cpp; sourceTree = "<group>"; };
-		EF0E612D2C1A811100DF30F6 /* YGPixelGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGPixelGrid.cpp; sourceTree = "<group>"; };
-		EF0E612E2C1A811100DF30F6 /* YGValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGValue.cpp; sourceTree = "<group>"; };
 		EF54453F2C1D607100BF4A33 /* InsetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9421472A1695AFD38FAEBD72 /* Pods_FlexLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +107,8 @@
 			children = (
 				2B210ECFE9D7665DACB8E8A7 /* Pods-FlexLayoutTests.debug.xcconfig */,
 				38E690AA4AF8EDFC95DB6626 /* Pods-FlexLayoutTests.release.xcconfig */,
+				224171C69665A229D0A217EF /* Pods-FlexLayout.debug.xcconfig */,
+				6B9A88E410DD5E3EA6C308DD /* Pods-FlexLayout.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -256,7 +116,6 @@
 		24AE972D1FEAF30A00995987 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EF0E612F2C1A811100DF30F6 /* yoga */,
 				B9EAD87E238884C90058E0CB /* Swift */,
 				715C61792ABEE4B600D5A2E0 /* YogaKit */,
 			);
@@ -356,6 +215,7 @@
 				2491CC5E1FCB932B00F3A61C /* Quick.framework */,
 				2491CC5C1FCB931F00F3A61C /* Nimble.framework */,
 				1F69C581A2C68BBBD1B64F21 /* Pods_FlexLayoutTests.framework */,
+				3F893AE16F96F495E91B6D58 /* Pods_FlexLayout.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -372,103 +232,6 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
-		EF0E60EC2C1A811100DF30F6 /* yoga */ = {
-			isa = PBXGroup;
-			children = (
-				EF0E60E32C1A811100DF30F6 /* YGConfig.h */,
-				EF0E60E42C1A811100DF30F6 /* YGEnums.h */,
-				EF0E60E52C1A811100DF30F6 /* YGMacros.h */,
-				EF0E60E62C1A811100DF30F6 /* YGNode.h */,
-				EF0E60E72C1A811100DF30F6 /* YGNodeLayout.h */,
-				EF0E60E82C1A811100DF30F6 /* YGNodeStyle.h */,
-				EF0E60E92C1A811100DF30F6 /* YGPixelGrid.h */,
-				EF0E60EA2C1A811100DF30F6 /* YGValue.h */,
-				EF0E60EB2C1A811100DF30F6 /* Yoga.h */,
-			);
-			path = yoga;
-			sourceTree = "<group>";
-		};
-		EF0E60ED2C1A811100DF30F6 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				EF0E60EC2C1A811100DF30F6 /* yoga */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		EF0E612F2C1A811100DF30F6 /* yoga */ = {
-			isa = PBXGroup;
-			children = (
-				EF0E60ED2C1A811100DF30F6 /* include */,
-				EF0E60EE2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.cpp */,
-				EF0E60EF2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.h */,
-				EF0E60F02C1A811100DF30F6 /* Algorithm_Align.h */,
-				EF0E60F12C1A811100DF30F6 /* Algorithm_Baseline.cpp */,
-				EF0E60F22C1A811100DF30F6 /* Algorithm_Baseline.h */,
-				EF0E60F32C1A811100DF30F6 /* Algorithm_BoundAxis.h */,
-				EF0E60F42C1A811100DF30F6 /* Algorithm_Cache.cpp */,
-				EF0E60F52C1A811100DF30F6 /* Algorithm_Cache.h */,
-				EF0E60F62C1A811100DF30F6 /* Algorithm_CalculateLayout.cpp */,
-				EF0E60F72C1A811100DF30F6 /* Algorithm_CalculateLayout.h */,
-				EF0E60F82C1A811100DF30F6 /* Algorithm_FlexDirection.h */,
-				EF0E60F92C1A811100DF30F6 /* Algorithm_FlexLine.cpp */,
-				EF0E60FA2C1A811100DF30F6 /* Algorithm_FlexLine.h */,
-				EF0E60FB2C1A811100DF30F6 /* Algorithm_PixelGrid.cpp */,
-				EF0E60FC2C1A811100DF30F6 /* Algorithm_PixelGrid.h */,
-				EF0E60FD2C1A811100DF30F6 /* Algorithm_SizingMode.h */,
-				EF0E60FE2C1A811100DF30F6 /* Algorithm_TrailingPosition.h */,
-				EF0E60FF2C1A811100DF30F6 /* CMakeLists.txt */,
-				EF0E61002C1A811100DF30F6 /* Config_Config.cpp */,
-				EF0E61012C1A811100DF30F6 /* Config_Config.h */,
-				EF0E61022C1A811100DF30F6 /* Debug_AssertFatal.cpp */,
-				EF0E61032C1A811100DF30F6 /* Debug_AssertFatal.h */,
-				EF0E61042C1A811100DF30F6 /* Debug_Log.cpp */,
-				EF0E61052C1A811100DF30F6 /* Debug_Log.h */,
-				EF0E61062C1A811100DF30F6 /* Enums_Align.h */,
-				EF0E61072C1A811100DF30F6 /* Enums_Dimension.h */,
-				EF0E61082C1A811100DF30F6 /* Enums_Direction.h */,
-				EF0E61092C1A811100DF30F6 /* Enums_Display.h */,
-				EF0E610A2C1A811100DF30F6 /* Enums_Edge.h */,
-				EF0E610B2C1A811100DF30F6 /* Enums_Errata.h */,
-				EF0E610C2C1A811100DF30F6 /* Enums_ExperimentalFeature.h */,
-				EF0E610D2C1A811100DF30F6 /* Enums_FlexDirection.h */,
-				EF0E610E2C1A811100DF30F6 /* Enums_Gutter.h */,
-				EF0E610F2C1A811100DF30F6 /* Enums_Justify.h */,
-				EF0E61102C1A811100DF30F6 /* Enums_LogLevel.h */,
-				EF0E61112C1A811100DF30F6 /* Enums_MeasureMode.h */,
-				EF0E61122C1A811100DF30F6 /* Enums_NodeType.h */,
-				EF0E61132C1A811100DF30F6 /* Enums_Overflow.h */,
-				EF0E61142C1A811100DF30F6 /* Enums_PhysicalEdge.h */,
-				EF0E61152C1A811100DF30F6 /* Enums_PositionType.h */,
-				EF0E61162C1A811100DF30F6 /* Enums_Unit.h */,
-				EF0E61172C1A811100DF30F6 /* Enums_Wrap.h */,
-				EF0E61182C1A811100DF30F6 /* Enums_YogaEnums.h */,
-				EF0E61192C1A811100DF30F6 /* Event_event.cpp */,
-				EF0E611A2C1A811100DF30F6 /* Event_event.h */,
-				EF0E611B2C1A811100DF30F6 /* module.modulemap */,
-				EF0E611C2C1A811100DF30F6 /* Node_CachedMeasurement.h */,
-				EF0E611D2C1A811100DF30F6 /* Node_LayoutResults.cpp */,
-				EF0E611E2C1A811100DF30F6 /* Node_LayoutResults.h */,
-				EF0E611F2C1A811100DF30F6 /* Node_Node.cpp */,
-				EF0E61202C1A811100DF30F6 /* Node_Node.h */,
-				EF0E61212C1A811100DF30F6 /* Numeric_Comparison.h */,
-				EF0E61222C1A811100DF30F6 /* Numeric_FloatOptional.h */,
-				EF0E61232C1A811100DF30F6 /* Style_SmallValueBuffer.h */,
-				EF0E61242C1A811100DF30F6 /* Style_Style.h */,
-				EF0E61252C1A811100DF30F6 /* Style_StyleLength.h */,
-				EF0E61262C1A811100DF30F6 /* Style_StyleValueHandle.h */,
-				EF0E61272C1A811100DF30F6 /* Style_StyleValuePool.h */,
-				EF0E61282C1A811100DF30F6 /* YGConfig.cpp */,
-				EF0E61292C1A811100DF30F6 /* YGEnums.cpp */,
-				EF0E612A2C1A811100DF30F6 /* YGNode.cpp */,
-				EF0E612B2C1A811100DF30F6 /* YGNodeLayout.cpp */,
-				EF0E612C2C1A811100DF30F6 /* YGNodeStyle.cpp */,
-				EF0E612D2C1A811100DF30F6 /* YGPixelGrid.cpp */,
-				EF0E612E2C1A811100DF30F6 /* YGValue.cpp */,
-			);
-			path = yoga;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -476,63 +239,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0E61562C1A811100DF30F6 /* Enums_Errata.h in Headers */,
-				EF0E61382C1A811100DF30F6 /* Yoga.h in Headers */,
-				EF0E614E2C1A811100DF30F6 /* Debug_AssertFatal.h in Headers */,
-				EF0E615B2C1A811100DF30F6 /* Enums_LogLevel.h in Headers */,
-				EF0E61652C1A811100DF30F6 /* Event_event.h in Headers */,
-				71332C262B794826000667C9 /* FlexLayout.h in Headers */,
-				EF0E615D2C1A811100DF30F6 /* Enums_NodeType.h in Headers */,
-				EF0E61632C1A811100DF30F6 /* Enums_YogaEnums.h in Headers */,
-				EF0E614C2C1A811100DF30F6 /* Config_Config.h in Headers */,
-				EF0E61522C1A811100DF30F6 /* Enums_Dimension.h in Headers */,
-				EF0E61602C1A811100DF30F6 /* Enums_PositionType.h in Headers */,
-				71332C272B794935000667C9 /* UIView+Yoga.h in Headers */,
-				EF0E613D2C1A811100DF30F6 /* Algorithm_Baseline.h in Headers */,
-				EF0E61572C1A811100DF30F6 /* Enums_ExperimentalFeature.h in Headers */,
-				71332C282B794935000667C9 /* YGLayout.h in Headers */,
-				71332C292B794935000667C9 /* YGLayout+Private.h in Headers */,
-				EF0E61532C1A811100DF30F6 /* Enums_Direction.h in Headers */,
-				EF0E61352C1A811100DF30F6 /* YGNodeStyle.h in Headers */,
-				EF0E616E2C1A811100DF30F6 /* Style_Style.h in Headers */,
-				EF0E61492C1A811100DF30F6 /* Algorithm_TrailingPosition.h in Headers */,
-				EF0E61682C1A811100DF30F6 /* Node_LayoutResults.h in Headers */,
-				EF0E616F2C1A811100DF30F6 /* Style_StyleLength.h in Headers */,
-				EF0E61342C1A811100DF30F6 /* YGNodeLayout.h in Headers */,
-				EF0E61452C1A811100DF30F6 /* Algorithm_FlexLine.h in Headers */,
-				EF0E613A2C1A811100DF30F6 /* Algorithm_AbsoluteLayout.h in Headers */,
-				EF0E61512C1A811100DF30F6 /* Enums_Align.h in Headers */,
-				EF0E61592C1A811100DF30F6 /* Enums_Gutter.h in Headers */,
-				EF0E615F2C1A811100DF30F6 /* Enums_PhysicalEdge.h in Headers */,
-				EF0E616D2C1A811100DF30F6 /* Style_SmallValueBuffer.h in Headers */,
-				EF0E61432C1A811100DF30F6 /* Algorithm_FlexDirection.h in Headers */,
-				EF0E61472C1A811100DF30F6 /* Algorithm_PixelGrid.h in Headers */,
-				EF0E61612C1A811100DF30F6 /* Enums_Unit.h in Headers */,
-				EF0E61402C1A811100DF30F6 /* Algorithm_Cache.h in Headers */,
-				EF0E613E2C1A811100DF30F6 /* Algorithm_BoundAxis.h in Headers */,
-				EF0E61622C1A811100DF30F6 /* Enums_Wrap.h in Headers */,
-				EF0E61332C1A811100DF30F6 /* YGNode.h in Headers */,
-				EF0E61422C1A811100DF30F6 /* Algorithm_CalculateLayout.h in Headers */,
-				EF0E61712C1A811100DF30F6 /* Style_StyleValuePool.h in Headers */,
-				EF0E61662C1A811100DF30F6 /* Node_CachedMeasurement.h in Headers */,
-				EF0E61502C1A811100DF30F6 /* Debug_Log.h in Headers */,
-				EF0E61582C1A811100DF30F6 /* Enums_FlexDirection.h in Headers */,
-				EF0E61482C1A811100DF30F6 /* Algorithm_SizingMode.h in Headers */,
-				EF0E61542C1A811100DF30F6 /* Enums_Display.h in Headers */,
-				EF0E615C2C1A811100DF30F6 /* Enums_MeasureMode.h in Headers */,
-				EF0E61302C1A811100DF30F6 /* YGConfig.h in Headers */,
-				EF0E615A2C1A811100DF30F6 /* Enums_Justify.h in Headers */,
-				EF0E616B2C1A811100DF30F6 /* Numeric_Comparison.h in Headers */,
-				EF0E616A2C1A811100DF30F6 /* Node_Node.h in Headers */,
-				EF0E61372C1A811100DF30F6 /* YGValue.h in Headers */,
-				EF0E61702C1A811100DF30F6 /* Style_StyleValueHandle.h in Headers */,
-				EF0E61322C1A811100DF30F6 /* YGMacros.h in Headers */,
-				EF0E613B2C1A811100DF30F6 /* Algorithm_Align.h in Headers */,
-				EF0E61362C1A811100DF30F6 /* YGPixelGrid.h in Headers */,
-				EF0E615E2C1A811100DF30F6 /* Enums_Overflow.h in Headers */,
-				EF0E61552C1A811100DF30F6 /* Enums_Edge.h in Headers */,
-				EF0E61312C1A811100DF30F6 /* YGEnums.h in Headers */,
-				EF0E616C2C1A811100DF30F6 /* Numeric_FloatOptional.h in Headers */,
+				71A5522E2CEAED47005D9FBF /* UIView+Yoga.h in Headers */,
+				71A5522F2CEAED47005D9FBF /* YGLayout.h in Headers */,
+				71A552302CEAED47005D9FBF /* YGLayout+Private.h in Headers */,
+				71A552312CEAEDC1005D9FBF /* FlexLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DA376E1EF843C500D1AB2F /* Build configuration list for PBXNativeTarget "FlexLayout" */;
 			buildPhases = (
+				296ABF4DC2205E5C45A6CE32 /* [CP] Check Pods Manifest.lock */,
 				24DA37551EF843C500D1AB2F /* Sources */,
 				24DA37561EF843C500D1AB2F /* Frameworks */,
 				24DA37571EF843C500D1AB2F /* Headers */,
@@ -624,7 +335,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0E614A2C1A811100DF30F6 /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,15 +348,39 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutTests/Pods-FlexLayoutTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		296ABF4DC2205E5C45A6CE32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlexLayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		780CC5362B9779C60FF80C2D /* [CP] Check Pods Manifest.lock */ = {
@@ -679,31 +413,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */,
-				EF0E614B2C1A811100DF30F6 /* Config_Config.cpp in Sources */,
 				24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */,
-				EF0E614F2C1A811100DF30F6 /* Debug_Log.cpp in Sources */,
 				24AE97421FEAF30A00995987 /* Percent.swift in Sources */,
-				EF0E61782C1A811100DF30F6 /* YGValue.cpp in Sources */,
 				715C61852ABEE4B600D5A2E0 /* YGLayout.mm in Sources */,
 				24AE97401FEAF30A00995987 /* FlexLayout+Private.swift in Sources */,
-				EF0E614D2C1A811100DF30F6 /* Debug_AssertFatal.cpp in Sources */,
-				EF0E61442C1A811100DF30F6 /* Algorithm_FlexLine.cpp in Sources */,
-				EF0E61462C1A811100DF30F6 /* Algorithm_PixelGrid.cpp in Sources */,
-				EF0E61772C1A811100DF30F6 /* YGPixelGrid.cpp in Sources */,
-				EF0E61392C1A811100DF30F6 /* Algorithm_AbsoluteLayout.cpp in Sources */,
-				24AE973F1FEAF30A00995987 /* FlexLayout+Enum.swift in Sources */,
 				715C61812ABEE4B600D5A2E0 /* UIView+Yoga.mm in Sources */,
-				EF0E61752C1A811100DF30F6 /* YGNodeLayout.cpp in Sources */,
-				EF0E61692C1A811100DF30F6 /* Node_Node.cpp in Sources */,
-				EF0E61742C1A811100DF30F6 /* YGNode.cpp in Sources */,
-				EF0E61722C1A811100DF30F6 /* YGConfig.cpp in Sources */,
-				EF0E61412C1A811100DF30F6 /* Algorithm_CalculateLayout.cpp in Sources */,
-				EF0E61732C1A811100DF30F6 /* YGEnums.cpp in Sources */,
-				EF0E613F2C1A811100DF30F6 /* Algorithm_Cache.cpp in Sources */,
-				EF0E61642C1A811100DF30F6 /* Event_event.cpp in Sources */,
-				EF0E613C2C1A811100DF30F6 /* Algorithm_Baseline.cpp in Sources */,
-				EF0E61762C1A811100DF30F6 /* YGNodeStyle.cpp in Sources */,
-				EF0E61672C1A811100DF30F6 /* Node_LayoutResults.cpp in Sources */,
+				71A5522D2CEAED24005D9FBF /* FlexLayout+Enum.swift in Sources */,
 				24AE973E1FEAF30A00995987 /* FlexLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +579,7 @@
 		};
 		24DA376F1EF843C500D1AB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224171C69665A229D0A217EF /* Pods-FlexLayout.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
@@ -878,6 +594,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -891,6 +608,7 @@
 		};
 		24DA37701EF843C500D1AB2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B9A88E410DD5E3EA6C308DD /* Pods-FlexLayout.release.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
@@ -905,6 +623,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -923,6 +642,7 @@
 				DEVELOPMENT_TEAM = F37Y9H9E46;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutTests;
@@ -939,6 +659,7 @@
 				DEVELOPMENT_TEAM = F37Y9H9E46;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucdion.FlexLayoutTests;

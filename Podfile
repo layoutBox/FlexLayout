@@ -1,8 +1,12 @@
 source 'https://cdn.cocoapods.org/'
 use_frameworks!
-platform :ios, '12.0'
+platform :ios, '13.4'
 
 workspace 'FlexLayout.xcworkspace'
+
+target 'FlexLayout' do
+  pod 'Yoga'
+end
 
 target 'FlexLayoutTests' do
   project 'FlexLayout.xcodeproj'

@@ -7,9 +7,7 @@
 
 import CoreGraphics
 
-#if SWIFT_PACKAGE
-import FlexLayoutYoga
-#endif
+import yoga
 
 extension Int {
     public static postfix func %(value: Int) -> YGValue {
