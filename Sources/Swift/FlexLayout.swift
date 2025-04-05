@@ -138,7 +138,7 @@ public final class Flex {
      flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
     
      - Parameter included: true to layout the view
-     - Returns:
+     - Returns: Flex interface
      */
     @discardableResult
     public func isIncludedInLayout(_ included: Bool) -> Flex {
