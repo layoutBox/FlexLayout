@@ -520,7 +520,7 @@ public final class Flex {
      media types. AspectRatio accepts any floating point value > 0, the default is undefined.
     
      - Parameter value:
-     - Returns:
+     - Returns: Flex interface
     */
     @discardableResult
     public func aspectRatio(_ value: CGFloat?) -> Flex {
@@ -534,7 +534,7 @@ public final class Flex {
      media types. AspectRatio accepts any floating point value > 0, the default is undefined.
     
      - Parameter value:
-     - Returns:
+     - Returns: Flex interface
     */
     @discardableResult
     public func aspectRatio(of imageView: UIImageView) -> Flex {
