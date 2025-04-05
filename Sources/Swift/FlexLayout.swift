@@ -235,7 +235,7 @@ public final class Flex {
      root of your layout tree.
     
      - Parameter value: new LayoutDirection
-     - Returns:
+     - Returns: Flex interface
     */
     @discardableResult
     public func layoutDirection(_ value: LayoutDirection) -> Flex {
