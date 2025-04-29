@@ -138,7 +138,7 @@ public final class Flex {
      flexbox's UIView is excluded, FlexLayout won't layout the view and its children views.
     
      - Parameter included: true to layout the view
-     - Returns:
+     - Returns: Flex interface
      */
     @discardableResult
     public func isIncludedInLayout(_ included: Bool) -> Flex {
@@ -235,7 +235,7 @@ public final class Flex {
      root of your layout tree.
     
      - Parameter value: new LayoutDirection
-     - Returns:
+     - Returns: Flex interface
     */
     @discardableResult
     public func layoutDirection(_ value: LayoutDirection) -> Flex {
@@ -520,7 +520,7 @@ public final class Flex {
      media types. AspectRatio accepts any floating point value > 0, the default is undefined.
     
      - Parameter value:
-     - Returns:
+     - Returns: Flex interface
     */
     @discardableResult
     public func aspectRatio(_ value: CGFloat?) -> Flex {
@@ -534,7 +534,7 @@ public final class Flex {
      media types. AspectRatio accepts any floating point value > 0, the default is undefined.
     
      - Parameter value:
-     - Returns:
+     - Returns: Flex interface
     */
     @discardableResult
     public func aspectRatio(of imageView: UIImageView) -> Flex {
