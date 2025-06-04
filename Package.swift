@@ -25,7 +25,13 @@ let package = Package(
       name: "FlexLayoutYogaKit",
       dependencies: ["yoga"],
       path: "Sources/YogaKit",
-      publicHeadersPath: "include/YogaKit"
+      publicHeadersPath: "include/YogaKit",
+      cSettings: [
+        .headerSearchPath("include/YogaKit")
+      ],
+      linkerSettings: [
+          .unsafeFlags(["-ObjC"])
+      ]
     ),
     .testTarget(
       name: "FlexLayoutTests",
