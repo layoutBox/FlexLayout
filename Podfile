@@ -1,5 +1,5 @@
 source 'https://cdn.cocoapods.org/'
-use_frameworks!
+use_frameworks! :linkage => :static
 platform :ios, '13.4'
 
 workspace 'FlexLayout.xcworkspace'
