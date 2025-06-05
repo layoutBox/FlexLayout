@@ -1160,7 +1160,7 @@ carthage update --no-build
 carthage build --use-xcframeworks
 ```
 
-3. Add the built `FlexLayout.framework` from the `Carthage/Build` folder to the **Embedded Binaries** section of your Xcode project.
+3. Add built `FlexLayout.xcframework` in your Xcode project in the **Embedded Binaries** section.
 
 
 ### Swift Package Manager
