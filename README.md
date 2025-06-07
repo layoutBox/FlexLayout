@@ -1153,8 +1153,14 @@ To integrate FlexLayout into your Xcode project using Carthage:
 github "layoutBox/FlexLayout"
 ```
 
-2. Run `carthage update` to build frameworks.
-3. Add built `FlexLayout.framework` in your Xcode project in the **Embedded Binaries** section. 
+2. Run the following commands to resolve dependencies and build:
+```bash
+carthage update --no-build
+(cd ./Carthage/Checkouts/FlexLayout && pod install)
+carthage build --use-xcframeworks
+```
+
+3. Add built `FlexLayout.xcframework` in your Xcode project in the **Embedded Binaries** section.
 
 
 ### Swift Package Manager

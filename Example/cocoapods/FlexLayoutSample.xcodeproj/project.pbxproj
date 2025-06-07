@@ -199,7 +199,7 @@
 		249EFE361E64FAFE00165E39 = {
 			isa = PBXGroup;
 			children = (
-				249EFE411E64FAFE00165E39 /* ../FlexLayoutSample */,
+				249EFE411E64FAFE00165E39 /* FlexLayoutSample */,
 				461884C59B72ACEAFC912B8A /* Frameworks */,
 				85CAAE97812075333AF3E88F /* Pods */,
 				249EFE401E64FAFE00165E39 /* Products */,
@@ -214,7 +214,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		249EFE411E64FAFE00165E39 /* ../FlexLayoutSample */ = {
+		249EFE411E64FAFE00165E39 /* FlexLayoutSample */ = {
 			isa = PBXGroup;
 			children = (
 				2439CC671E66614D003326FB /* Supporting Files */,
@@ -364,7 +364,6 @@
 				DF1F2A141F17D11700BA1B97 /* Frameworks */,
 				DF1F2A181F17D11700BA1B97 /* Resources */,
 				DF1F2A1B1F17D11700BA1B97 /* Embed Frameworks */,
-				DF1F2A1C1F17D11700BA1B97 /* [CP] Embed Pods Frameworks */,
 				DF1F2A1E1F17D11700BA1B97 /* Run Swiftlint */,
 			);
 			buildRules = (
@@ -440,28 +439,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF1F2A1C1F17D11700BA1B97 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutSample/Pods-FlexLayoutSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF1F2A1E1F17D11700BA1B97 /* Run Swiftlint */ = {
