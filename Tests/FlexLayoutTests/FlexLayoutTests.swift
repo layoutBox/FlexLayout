@@ -13,6 +13,7 @@
 import XCTest
 @testable import FlexLayout
 
+@MainActor
 final class FlexLayoutTests: XCTestCase {
 
     func testRetainCycle() {

@@ -13,7 +13,8 @@
 import FlexLayout
 import XCTest
 
-final class JustifyContentTests: XCTestCase {
+@MainActor
+final class JustifyContentTests: XCTestCase, Sendable {
 
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
@@ -22,8 +23,8 @@ final class JustifyContentTests: XCTestCase {
     var cView: UIView!
     var dView: UIView!
 
-    override func setUp() {
-        super.setUp()
+    override func setUp() async throws {
+        try await super.setUp()
 
         viewController = UIViewController()
 
