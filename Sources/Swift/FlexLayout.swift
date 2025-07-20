@@ -26,6 +26,7 @@ import FlexLayoutYogaKit
     label.flex.margin(10)
  ```
  */
+@MainActor
 public final class Flex {
     
     //
