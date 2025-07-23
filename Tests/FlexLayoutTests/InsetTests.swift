@@ -13,14 +13,15 @@
 import FlexLayout
 import XCTest
 
-final class InsetTests: XCTestCase {
+@MainActor
+final class InsetTests: XCTestCase, Sendable {
     
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
     var aView: UIView!
     
-    override func setUp() {
-        super.setUp()
+    override func setUp() async throws {
+        try await super.setUp()
         
         viewController = UIViewController()
         

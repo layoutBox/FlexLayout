@@ -13,7 +13,8 @@
 import FlexLayout
 import XCTest
 
-final class WidthSizeContentTests: XCTestCase {
+@MainActor
+final class WidthSizeContentTests: XCTestCase, Sendable {
 
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
@@ -21,8 +22,8 @@ final class WidthSizeContentTests: XCTestCase {
     var bView: UIView!
     var cView: UIView!
 
-    override func setUp() {
-        super.setUp()
+    override func setUp() async throws {
+        try await super.setUp()
 
         viewController = UIViewController()
 

@@ -23,9 +23,9 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 
 
 ### Requirements
-* iOS 12.0+
-* Xcode 12.0+
-* Swift Swift 4.0
+* iOS 13.0+
+* Xcode 13.0+
+* Swift 5.5
 
 ### Content
 

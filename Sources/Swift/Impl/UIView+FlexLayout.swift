@@ -14,6 +14,7 @@
 
 import UIKit
 
+@MainActor
 private var flexLayoutAssociatedObjectHandle = 72_399_923
 
 extension UIView {
