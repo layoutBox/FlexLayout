@@ -11,7 +11,7 @@
 
 #### Support Swift 6
 
-Added by [heoblitz](https://github.com/heoblitz) in Pull Request [#271](https://github.com/layoutBox/FlexLayout/pull/277)
+Added by [heoblitz](https://github.com/heoblitz) in Pull Request [#277](https://github.com/layoutBox/FlexLayout/pull/277)
 
 
 ## [2.2.0](https://github.com/layoutBox/FlexLayout/releases/tag/2.2.0)
