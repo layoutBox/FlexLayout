@@ -40,4 +40,97 @@ final class FlexLayoutTests: XCTestCase {
 
         XCTAssertTrue(rootFlexContainer.subviews.isEmpty)
     }
+
+    func testLayoutPreservesNonFlexViewFrameAcrossLayouts() {
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        let originalFrame = CGRect(x: 30, y: 40, width: 50, height: 60)
+        let overlay = UIView(frame: originalFrame)
+        container.addSubview(overlay)
+
+        // An enabled Flex sibling makes the container non-leaf.
+        let flexView = UIView()
+        container.flex.addItem(flexView).width(100%).height(20)
+
+        container.flex.layout()
+
+        XCTAssertEqual(overlay.frame, originalFrame)
+        XCTAssertFalse(overlay.isFlexEnabled)
+        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 200, height: 20))
+
+        let updatedFrame = CGRect(x: 45, y: 55, width: 65, height: 75)
+        overlay.frame = updatedFrame
+        container.frame.size.width = 300
+
+        container.flex.layout()
+
+        XCTAssertEqual(overlay.frame, updatedFrame)
+        XCTAssertFalse(overlay.isFlexEnabled)
+        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 300, height: 20))
+    }
+
+    func testLayoutPreservesNonFlexSubtreeFrames() {
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        container.flex.addItem().width(20).height(20)
+
+        let overlayFrame = CGRect(x: 30, y: 40, width: 50, height: 60)
+        let overlay = UIView(frame: overlayFrame)
+        let childFrame = CGRect(x: 5, y: 6, width: 7, height: 8)
+        let child = UIView(frame: childFrame)
+        child.flex.width(10).height(10)
+        overlay.addSubview(child)
+        container.addSubview(overlay)
+
+        container.flex.layout()
+
+        XCTAssertEqual(overlay.frame, overlayFrame)
+        XCTAssertEqual(child.frame, childFrame)
+        XCTAssertFalse(overlay.isFlexEnabled)
+    }
+
+    func testLayoutUpdatesSubtreeWhenInclusionChanges() {
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        let excludedFrame = CGRect(x: 30, y: 40, width: 50, height: 60)
+        let excludedView = UIView(frame: excludedFrame)
+        container.flex.addItem(excludedView).width(100).height(100).isIncludedInLayout(false)
+        let childFrame = CGRect(x: 5, y: 6, width: 7, height: 8)
+        let child = UIView(frame: childFrame)
+        excludedView.flex.addItem(child).width(10).height(10)
+        let flexView = UIView()
+        container.flex.addItem(flexView).width(20).height(20)
+
+        container.flex.layout()
+
+        XCTAssertEqual(excludedView.frame, excludedFrame)
+        XCTAssertEqual(child.frame, childFrame)
+        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 20, height: 20))
+
+        excludedView.flex.isIncludedInLayout = true
+        container.flex.layout()
+
+        XCTAssertEqual(excludedView.frame, CGRect(x: 0, y: 0, width: 100, height: 100))
+        XCTAssertEqual(child.frame, CGRect(x: 0, y: 0, width: 10, height: 10))
+        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 100, width: 20, height: 20))
+
+        excludedView.flex.isIncludedInLayout = false
+        excludedView.frame = excludedFrame
+        child.frame = childFrame
+        container.flex.layout()
+
+        XCTAssertEqual(excludedView.frame, excludedFrame)
+        XCTAssertEqual(child.frame, childFrame)
+        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 20, height: 20))
+    }
+
+    func testLayoutAppliesFramesToIncludedFlexDescendants() {
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        let nestedContainer = UIView()
+        let child = UIView()
+        container.flex.addItem(nestedContainer).width(100).height(100).padding(10)
+        nestedContainer.flex.addItem(child).width(20).height(30)
+
+        container.flex.layout()
+
+        XCTAssertEqual(nestedContainer.frame, CGRect(x: 0, y: 0, width: 100, height: 100))
+        XCTAssertEqual(child.frame, CGRect(x: 10, y: 10, width: 20, height: 30))
+    }
 }
