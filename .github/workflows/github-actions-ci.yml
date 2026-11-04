@@ -5,14 +5,16 @@ jobs:
   CI:
     # ℹ️ Available GitHub Actions Runner Images 
     #    https://github.com/actions/runner-images
-    runs-on: macos-15
+    runs-on: xcode-27
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set Xcode Version 16.4.0
-        run: sudo xcode-select -s /Applications/Xcode_16.4.0.app
+      - name: Set Xcode Version 27.2
+        run: |
+          sudo xcode-select -s /Applications/Xcode_27.2.app
+          xcodebuild -version
 
       - name: Install SwiftLint
         run: brew install swiftlint
