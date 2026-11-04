@@ -6,15 +6,15 @@ jobs:
     # ℹ️ Available GitHub Actions Runner Images 
     #    https://github.com/actions/runner-images
     runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
 
     steps:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Set Xcode Version 27.2
-        run: |
-          sudo xcode-select -s /Applications/Xcode_27.2.app
-          xcodebuild -version
+      - name: Show Xcode version
+        run: xcodebuild -version
 
       - name: Install SwiftLint
         run: brew install swiftlint
