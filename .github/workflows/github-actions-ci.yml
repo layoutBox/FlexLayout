@@ -16,6 +16,9 @@ jobs:
       - name: Set Xcode Version 16.4.0
         run: sudo xcode-select -s /Applications/Xcode_16.4.0.app
 
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
       - name: fastlane
         run: set -o pipefail && fastlane travis
 

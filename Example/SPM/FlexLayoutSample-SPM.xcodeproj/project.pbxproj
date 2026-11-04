@@ -413,7 +413,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "../../Pods/SwiftLint/swiftlint ../FlexLayoutSample\n";
+			shellScript = "if [ \"$(uname -m)\" = \"arm64\" ]; then\n  export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1; then\n  swiftlint lint ../FlexLayoutSample\nelse\n  echo \"warning: SwiftLint is not installed. Install it with 'brew install swiftlint'.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

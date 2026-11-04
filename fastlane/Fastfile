@@ -31,7 +31,6 @@ platform :ios do
     swiftlint(
       mode: :lint,
       config_file: '.swiftlint.yml',
-      executable: 'Pods/SwiftLint/swiftlint',
       ignore_exit_status: true
     )
 
