@@ -18,40 +18,19 @@ platform :ios do
   DEVICE_NAME = 'iPhone 17'
   DESTINATION = "platform=iOS Simulator,name=#{DEVICE_NAME}"
 
-  lane :install do
-    bundle_install
-
-    cocoapods(
-      use_bundle_exec: true,
-      try_repo_update_on_error: true
-    )
-  end
-
   lane :build do
     swiftlint(
       mode: :lint,
       config_file: '.swiftlint.yml',
-      executable: 'Pods/SwiftLint/swiftlint',
       ignore_exit_status: true
     )
 
-    # FlexLayout
+    # FlexLayout (Swift Package)
     xcodebuild(
-      workspace: 'FlexLayout.xcworkspace',
-      scheme: 'FlexLayoutInner',
+      scheme: 'FlexLayout',
       configuration: 'Release',
       build: true,
       clean: true,
-      destination: DESTINATION
-    )
-
-    # FlexLayoutSample from FlexLayout.xcworkspace
-    xcodebuild(
-      workspace: 'FlexLayout.xcworkspace',
-      scheme: 'FlexLayoutSample',
-      configuration: 'Release',
-      build: true,
-      # clean: true,
       destination: DESTINATION
     )
 
@@ -67,7 +46,12 @@ platform :ios do
   end
 
   lane :tests do
-    scan(scheme: 'FlexLayoutInner', workspace: 'FlexLayout.xcworkspace', device: DEVICE_NAME)
+    scan(
+      package_path: '.',
+      scheme: 'FlexLayout-Package',
+      device: DEVICE_NAME,
+      result_bundle: true
+    )
   end
 
   lane :doc do
@@ -75,19 +59,19 @@ platform :ios do
   end
 
   lane :travis do
-    install
     tests
     build
-    # pod_lib_lint(allow_warnings: true, verbose: false)
   end
 
-  lane :deploy do
+  # Usage: fastlane deploy version:x.y.z
+  lane :deploy do |options|
+    version = options[:version]
+    UI.user_error!('Missing version. Usage: fastlane deploy version:x.y.z') if version.to_s.empty?
+
     ensure_git_branch
-    version = version_bump_podspec(path: 'FlexLayout.podspec')
-    git_commit(path: ['./FlexLayout.podspec'], message: "Bumped to version #{version}")
     push_to_git_remote(remote_branch: 'master', force: false, tags: true)
     changelog = changelog_from_git_commits
-    github_release = set_github_release(
+    set_github_release(
       repository_name: 'layoutBox/FlexLayout',
       api_token: ENV['GITHUB_TOKEN'],
       name: version,
@@ -96,6 +80,5 @@ platform :ios do
       commitish: 'master'
     )
     sh('git fetch --tags')
-    pod_push(allow_warnings: true, verbose: true)
   end
 end

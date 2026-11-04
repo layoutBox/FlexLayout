@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
+  <a href=""><img src="https://img.shields.io/badge/platform-iOS-lightgrey.svg?style=flat" /></a>
   <a href="https://github.com/layoutBox/FlexLayout/actions/workflows/github-actions-ci.yml"><img src="https://github.com/layoutBox/FlexLayout/actions/workflows/github-actions-ci.yml/badge.svg?branch=master" /></a>
 <!-- <a href='https://coveralls.io/github/layoutBox/FlexLayout?branch=master'><img src='https://coveralls.io/repos/github/layoutBox/FlexLayout/badge.svg?branch=master' alt='Coverage Status' /></a>-->
-  <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
-  <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
+  <a href="https://github.com/layoutBox/FlexLayout/releases"><img src="https://img.shields.io/github/v/release/layoutBox/FlexLayout.svg" /></a>
+  <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat" /></a>
 <a href="https://github.com/layoutBox/FlexLayout/issues"><img src="https://img.shields.io/github/issues/layoutBox/FlexLayout.svg?style=flat" /></a>
 </p></p>
 
@@ -1133,35 +1133,9 @@ If you'd like to contribute, you're welcome!
 <a name="installation"></a>
 ## Installation 
 
-### CocoaPods
+FlexLayout is distributed with Swift Package Manager.
 
-To integrate FlexLayout into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-  pod 'FlexLayout'
-```
-
-Then, run `pod install`.
-
-
-### Carthage
-
-To integrate FlexLayout into your Xcode project using Carthage:
-
-1. Specify in your `Cartfile`:  
-```
-github "layoutBox/FlexLayout"
-```
-
-2. Run the following commands to resolve dependencies and build:
-```bash
-carthage update --no-build
-(cd ./Carthage/Checkouts/FlexLayout && pod install)
-carthage build --use-xcframeworks
-```
-
-3. Add built `FlexLayout.xcframework` in your Xcode project in the **Embedded Binaries** section.
-
+> **Note:** Following the [CocoaPods trunk read-only plan](https://blog.cocoapods.org/CocoaPods-Specs-Repo/), FlexLayout is no longer published to CocoaPods, and Carthage is no longer supported. Versions up to 2.2.3 remain available on CocoaPods trunk, but new versions are only available through Swift Package Manager.
 
 ### Swift Package Manager
 
@@ -1170,7 +1144,7 @@ carthage build --use-xcframeworks
 To integrate FlexLayout into another Swift Package, add it as a dependency:
 
 ```
-.package(url: "https://github.com/layoutBox/FlexLayout.git", from: "1.3.18")
+.package(url: "https://github.com/layoutBox/FlexLayout.git", from: "2.2.3")
 ```
 
 #### In an Xcode target

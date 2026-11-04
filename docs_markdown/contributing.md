@@ -9,6 +9,11 @@
 
 To execute Unit Tests you must:
 
-* Install carthage modules:  
-`carthage bootstrap --use-ssh --platform iOS`
-* Run Unit Test from Xcode by selecting the FlexLayout target.
+* Open `Package.swift` with Xcode.
+* Run Unit Test from Xcode by selecting the `FlexLayout-Package` scheme.
+
+Or run them from the command line:
+
+```bash
+xcodebuild test -scheme FlexLayout-Package -destination 'platform=iOS Simulator,name=iPhone 17'
+```
