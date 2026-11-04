@@ -6,7 +6,6 @@
 xcuserdata
 Data/
 Pods/
-FlexLayout.xcodeproj/project.xcworkspace/xcuserdata
 
 # Carthage
 Carthage/Build/.*.version

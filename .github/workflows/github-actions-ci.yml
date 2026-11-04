@@ -11,8 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - run: pod install --repo-update
-
       - name: Set Xcode Version 16.4.0
         run: sudo xcode-select -s /Applications/Xcode_16.4.0.app
 
