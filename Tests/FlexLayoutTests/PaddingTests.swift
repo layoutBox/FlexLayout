@@ -11,17 +11,17 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 import FlexLayout
-import XCTest
+import Testing
+import UIKit
 
 @MainActor
-final class PaddingTests: XCTestCase, Sendable {
+struct PaddingTests {
 
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
     var aView: UIView!
 
-    override func setUp() async throws {
-        try await super.setUp()
+    init() {
 
         viewController = UIViewController()
 
@@ -32,165 +32,185 @@ final class PaddingTests: XCTestCase, Sendable {
         aView = UIView()
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingTop() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingTop() {
         rootFlexContainer.flex.paddingTop(10).define { flex in
             flex.addItem(aView).grow(1)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 400.0, height: 390.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 10.0, width: 400.0, height: 390.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingTop_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingTopPercent() {
         rootFlexContainer.flex.paddingTop(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 40.0, width: 400.0, height: 360.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 40.0, width: 400.0, height: 360.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingLeft() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingLeft() {
         rootFlexContainer.flex.paddingLeft(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingLeft_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingLeftPercent() {
         rootFlexContainer.flex.paddingLeft(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 40.0, y: 0.0, width: 360.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 40.0, y: 0.0, width: 360.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingBottom() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingBottom() {
         rootFlexContainer.flex.paddingBottom(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 390.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 390.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingBottom_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingBottomPercent() {
         rootFlexContainer.flex.paddingBottom(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 360.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 360.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingRight() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingRight() {
         rootFlexContainer.flex.paddingRight(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingRight_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingRightPercent() {
         rootFlexContainer.flex.paddingRight(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 360.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 360.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_padding_all() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingAll() {
         rootFlexContainer.flex.padding(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 10.0, width: 380.0, height: 380.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 10.0, width: 380.0, height: 380.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_padding_all_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingAllPercent() {
         rootFlexContainer.flex.padding(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 40.0, y: 40.0, width: 320.0, height: 320.0))
+        #expect(aView.frame == CGRect(x: 40.0, y: 40.0, width: 320.0, height: 320.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_padding() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPadding() {
         rootFlexContainer.flex.padding(10, 20, 30, 40).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 20.0, y: 10.0, width: 340.0, height: 360.0))
+        #expect(aView.frame == CGRect(x: 20.0, y: 10.0, width: 340.0, height: 360.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_padding_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingPercent() {
         rootFlexContainer.flex.padding(10%, 20%, 30%, 40%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 80.0, y: 40.0, width: 160.0, height: 240.0))
+        #expect(aView.frame == CGRect(x: 80.0, y: 40.0, width: 160.0, height: 240.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingStart() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingStart() {
         rootFlexContainer.flex.paddingStart(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingStart_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingStartPercent() {
         rootFlexContainer.flex.paddingStart(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 40.0, y: 0.0, width: 360.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 40.0, y: 0.0, width: 360.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingEnd() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingEnd() {
         rootFlexContainer.flex.paddingEnd(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingEnd_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingEndPercent() {
         rootFlexContainer.flex.paddingEnd(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 360.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 360.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingVertical() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingVertical() {
         rootFlexContainer.flex.paddingVertical(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 400.0, height: 380.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 10.0, width: 400.0, height: 380.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingVertical_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingVerticalPercent() {
         rootFlexContainer.flex.paddingVertical(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 40.0, width: 400.0, height: 320.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 40.0, width: 400.0, height: 320.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingHorizontal() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingHorizontal() {
         rootFlexContainer.flex.paddingHorizontal(10).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 380.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 380.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_paddingHorizontal_percent() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithPaddingHorizontalPercent() {
         rootFlexContainer.flex.paddingHorizontal(10%).define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 40.0, y: 0.0, width: 320.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 40.0, y: 0.0, width: 320.0, height: 400.0))
     }
 }
