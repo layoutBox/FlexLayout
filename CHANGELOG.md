@@ -7,7 +7,30 @@
 
 # Change Log
 
-## [2.2.3](https://github.com/layoutBox/FlexLayout/releases/tag/2.2.2)
+## [2.3.0](https://github.com/layoutBox/FlexLayout/releases/tag/2.3.0)
+
+#### Remove CocoaPods and Carthage support
+
+Following the [CocoaPods trunk read-only plan](https://blog.cocoapods.org/CocoaPods-Specs-Repo/), FlexLayout is now distributed only through Swift Package Manager. Versions up to 2.2.3 remain available on CocoaPods trunk. CI now runs on Xcode 27.
+
+Added by [OhKanghoon](https://github.com/OhKanghoon) in Pull Request [#288](https://github.com/layoutBox/FlexLayout/pull/288)
+
+
+#### Fix text truncation by updating Yoga to 3.2.2
+
+Yoga 3.2.1 can shrink a measured text node by one physical pixel at a fractional offset, causing a UILabel to truncate text that should fit. The minimum Yoga version is now 3.2.2, which backports [react/yoga#2040](https://github.com/react/yoga/pull/2040).
+
+Added by [stleamist](https://github.com/stleamist) in Pull Request [#289](https://github.com/layoutBox/FlexLayout/pull/289)
+
+
+#### Preserve non-Flex view frames during layout
+
+Applying the layout no longer overwrites the manually managed frames of non-Flex views when they share a container with enabled Flex children.
+
+Added by [heoblitz](https://github.com/heoblitz) in Pull Request [#287](https://github.com/layoutBox/FlexLayout/pull/287)
+
+
+## [2.2.3](https://github.com/layoutBox/FlexLayout/releases/tag/2.2.3)
 
 #### Add support for SPM dynamic linking
 
