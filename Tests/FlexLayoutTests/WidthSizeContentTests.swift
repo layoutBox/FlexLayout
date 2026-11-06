@@ -11,10 +11,11 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 import FlexLayout
-import XCTest
+import Testing
+import UIKit
 
 @MainActor
-final class WidthSizeContentTests: XCTestCase, Sendable {
+struct WidthSizeContentTests {
 
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
@@ -22,8 +23,7 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
     var bView: UIView!
     var cView: UIView!
 
-    override func setUp() async throws {
-        try await super.setUp()
+    init() {
 
         viewController = UIViewController()
 
@@ -36,24 +36,27 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         cView = UIView()
     }
 
-    func test_basis_adjust_aView_size_and_position() {
+    @Test
+    func basisAdjustAViewSizeAndPosition() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).width(100).height(200)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 100.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 100.0, height: 200.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_aspectRatio() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithAspectRatio() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).width(200).aspectRatio(2)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 200.0, height: 100.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 200.0, height: 100.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_aspectRatio_reset() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithAspectRatioReset() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).width(200).aspectRatio(2)
         }
@@ -61,19 +64,21 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         // Later reset the aspectRatio
         aView.flex.aspectRatio(nil)
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 200.0, height: 0.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 200.0, height: 0.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_width_height() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithWidthHeight() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).width(200).minWidth(100).height(200).minHeight(100)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_width_height_reset() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithWidthHeightReset() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).width(200).minWidth(100).height(200).minHeight(100)
         }
@@ -82,19 +87,21 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         aView.flex.width(nil)
         aView.flex.height(nil)
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_minWidth() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMinWidth() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).width(200).minWidth(300).height(200)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_minWidth_reset() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMinWidthReset() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).width(200).maxWidth(300).height(200)
         }
@@ -102,19 +109,21 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         // Later reset the minWidth
         aView.flex.minWidth(nil)
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_maxWidth() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMaxWidth() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).maxWidth(300).height(200)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_maxWidth_reset() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMaxWidthReset() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).maxWidth(300).height(200)
         }
@@ -122,19 +131,21 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         // Later reset the width and the height
         aView.flex.maxWidth(nil)
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_minHeight() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMinHeight() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).height(200).minHeight(300)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 300.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 300.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_minHeight_reset() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMinHeightReset() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).height(200).minHeight(300)
         }
@@ -142,19 +153,21 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         // Later reset the minHeight
         aView.flex.minHeight(nil)
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_maxHeight() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMaxHeight() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).height(200).maxHeight(100)
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0))
     }
 
-    func test_basis_adjust_aView_size_and_position_with_maxHeight_reset() {
+    @Test
+    func basisAdjustAViewSizeAndPositionWithMaxHeightReset() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).height(200).maxHeight(100)
         }
@@ -162,10 +175,11 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         // Later reset the maxHeight
         aView.flex.maxHeight(nil)
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 200.0))
     }
     
-    func test_row_gap() {
+    @Test
+    func rowGap() {
         rootFlexContainer.flex.direction(.row).define { flex in
             flex.addItem(aView).height(100).width(100)
             flex.addItem(bView).height(100).width(100)
@@ -175,10 +189,11 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
+        #expect(bView.frame == CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
     }
 
-    func test_column_gap() {
+    @Test
+    func columnGap() {
         rootFlexContainer.flex.direction(.column).define { flex in
             flex.addItem(aView).height(100).width(100)
             flex.addItem(bView).height(100).width(100)
@@ -188,10 +203,11 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
         }
 
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
+        #expect(bView.frame == CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
     }
     
-    func test_gap() {
+    @Test
+    func gap() {
         rootFlexContainer.flex.direction(.column).define { flex in
             flex.addItem().direction(.row).define { flex in
                 flex.addItem(aView).height(100).width(100)
@@ -206,7 +222,7 @@ final class WidthSizeContentTests: XCTestCase, Sendable {
 
         rootFlexContainer.flex.layout()
 
-        XCTAssertEqual(bView.frame, CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
-        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
+        #expect(bView.frame == CGRect(x: 150.0, y: 0.0, width: 100.0, height: 100.0))
+        #expect(cView.frame == CGRect(x: 0.0, y: 150.0, width: 100.0, height: 100.0))
     }
 }
