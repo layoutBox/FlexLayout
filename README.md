@@ -1144,7 +1144,7 @@ FlexLayout is distributed with Swift Package Manager.
 To integrate FlexLayout into another Swift Package, add it as a dependency:
 
 ```
-.package(url: "https://github.com/layoutBox/FlexLayout.git", from: "2.2.3")
+.package(url: "https://github.com/layoutBox/FlexLayout.git", from: "2.3.0")
 ```
 
 #### In an Xcode target
