@@ -11,17 +11,17 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 import FlexLayout
-import XCTest
+import Testing
+import UIKit
 
 @MainActor
-final class MarginTests: XCTestCase, Sendable {
+struct MarginTests {
 
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
     var aView: UIView!
 
-    override func setUp() async throws {
-        try await super.setUp()
+    init() {
 
         viewController = UIViewController()
 
@@ -32,90 +32,101 @@ final class MarginTests: XCTestCase, Sendable {
         aView = UIView()
     }
 
-    func test_adjust_the_rootFlexContainer_size_and_position() {
+    @Test
+    func adjustTheRootFlexContainerSizeAndPosition() {
         rootFlexContainer.flex.define { _ in
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(rootFlexContainer.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(rootFlexContainer.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position() {
+    @Test
+    func adjustTheAViewSizeAndPosition() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_marginLeft() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginLeft() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).marginLeft(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_marginTop() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginTop() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).marginTop(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 400.0, height: 390.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 10.0, width: 400.0, height: 390.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_marginBottom() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginBottom() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).marginBottom(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 390.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 390.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_marginStart() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginStart() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).marginStart(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 390.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_marginEnd() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginEnd() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).marginEnd(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 390.0, height: 400.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_margin() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMargin() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).margin(10, 20, 30, 40)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 20.0, y: 10.0, width: 340.0, height: 360.0))
+        #expect(aView.frame == CGRect(x: 20.0, y: 10.0, width: 340.0, height: 360.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_margin_all() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginAll() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).margin(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 10.0, width: 380.0, height: 380.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 10.0, width: 380.0, height: 380.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_marginVertical() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginVertical() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).marginVertical(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 400.0, height: 380.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 10.0, width: 400.0, height: 380.0))
     }
 
-    func test_adjust_the_aView_size_and_position_with_marginHorizontal() {
+    @Test
+    func adjustTheAViewSizeAndPositionWithMarginHorizontal() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).grow(1).marginHorizontal(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 380.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 380.0, height: 400.0))
     }
 }

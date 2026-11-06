@@ -11,10 +11,11 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 import FlexLayout
-import XCTest
+import Testing
+import UIKit
 
 @MainActor
-final class JustifyContentTests: XCTestCase, Sendable {
+struct JustifyContentTests {
 
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
@@ -23,8 +24,7 @@ final class JustifyContentTests: XCTestCase, Sendable {
     var cView: UIView!
     var dView: UIView!
 
-    override func setUp() async throws {
-        try await super.setUp()
+    init() {
 
         viewController = UIViewController()
 
@@ -39,7 +39,8 @@ final class JustifyContentTests: XCTestCase, Sendable {
     }
 
 
-    func test_justifyContent_adjust_view_position_default() {
+    @Test
+    func justifyContentAdjustViewPositionDefault() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).size(20)
             flex.addItem(bView).size(20)
@@ -47,13 +48,14 @@ final class JustifyContentTests: XCTestCase, Sendable {
             flex.addItem(dView).size(20)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 20.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 40.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(dView.frame, CGRect(x: 0.0, y: 60.0, width: 20.0, height: 20.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0))
+        #expect(bView.frame == CGRect(x: 0.0, y: 20.0, width: 20.0, height: 20.0))
+        #expect(cView.frame == CGRect(x: 0.0, y: 40.0, width: 20.0, height: 20.0))
+        #expect(dView.frame == CGRect(x: 0.0, y: 60.0, width: 20.0, height: 20.0))
     }
 
-    func test_justifyContent_adjust_view_position_start() {
+    @Test
+    func justifyContentAdjustViewPositionStart() {
         rootFlexContainer.flex.justifyContent(.start).define { flex in
             flex.addItem(aView).size(20)
             flex.addItem(bView).size(20)
@@ -61,13 +63,14 @@ final class JustifyContentTests: XCTestCase, Sendable {
             flex.addItem(dView).size(20)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 20.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 40.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(dView.frame, CGRect(x: 0.0, y: 60.0, width: 20.0, height: 20.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0))
+        #expect(bView.frame == CGRect(x: 0.0, y: 20.0, width: 20.0, height: 20.0))
+        #expect(cView.frame == CGRect(x: 0.0, y: 40.0, width: 20.0, height: 20.0))
+        #expect(dView.frame == CGRect(x: 0.0, y: 60.0, width: 20.0, height: 20.0))
     }
 
-    func test_justifyContent_adjust_view_position_center() {
+    @Test
+    func justifyContentAdjustViewPositionCenter() {
         rootFlexContainer.flex.justifyContent(.center).define { flex in
             flex.addItem(aView).size(20)
             flex.addItem(bView).size(20)
@@ -75,13 +78,14 @@ final class JustifyContentTests: XCTestCase, Sendable {
             flex.addItem(dView).size(20)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 160.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 180.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 200.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(dView.frame, CGRect(x: 0.0, y: 220.0, width: 20.0, height: 20.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 160.0, width: 20.0, height: 20.0))
+        #expect(bView.frame == CGRect(x: 0.0, y: 180.0, width: 20.0, height: 20.0))
+        #expect(cView.frame == CGRect(x: 0.0, y: 200.0, width: 20.0, height: 20.0))
+        #expect(dView.frame == CGRect(x: 0.0, y: 220.0, width: 20.0, height: 20.0))
     }
 
-    func test_justifyContent_adjust_view_position_spaceAround() {
+    @Test
+    func justifyContentAdjustViewPositionSpaceAround() {
         rootFlexContainer.flex.justifyContent(.spaceAround).define { flex in
             flex.addItem(aView).size(20)
             flex.addItem(bView).size(20)
@@ -89,13 +93,14 @@ final class JustifyContentTests: XCTestCase, Sendable {
             flex.addItem(dView).size(20)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 40.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 140.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 240.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(dView.frame, CGRect(x: 0.0, y: 340.0, width: 20.0, height: 20.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 40.0, width: 20.0, height: 20.0))
+        #expect(bView.frame == CGRect(x: 0.0, y: 140.0, width: 20.0, height: 20.0))
+        #expect(cView.frame == CGRect(x: 0.0, y: 240.0, width: 20.0, height: 20.0))
+        #expect(dView.frame == CGRect(x: 0.0, y: 340.0, width: 20.0, height: 20.0))
     }
 
-    func test_justifyContent_adjust_view_position_spaceBetween() {
+    @Test
+    func justifyContentAdjustViewPositionSpaceBetween() {
         rootFlexContainer.flex.justifyContent(.spaceBetween).define { flex in
             flex.addItem(aView).size(20)
             flex.addItem(bView).size(20)
@@ -104,13 +109,14 @@ final class JustifyContentTests: XCTestCase, Sendable {
         }
         rootFlexContainer.flex.layout()
 
-        XCTAssertTrue(aView.frame.beCloseTo(CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0), within: 0.5))
-        XCTAssertTrue(bView.frame.beCloseTo(CGRect(x: 0.0, y: 126.5, width: 20.0, height: 20.0), within: 0.5))
-        XCTAssertTrue(cView.frame.beCloseTo(CGRect(x: 0.0, y: 253.0, width: 20.0, height: 20.0), within: 0.5))
-        XCTAssertTrue(dView.frame.beCloseTo(CGRect(x: 0.0, y: 380.0, width: 20.0, height: 20.0), within: 0.5))
+        #expect(aView.frame.beCloseTo(CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0), within: 0.5))
+        #expect(bView.frame.beCloseTo(CGRect(x: 0.0, y: 126.5, width: 20.0, height: 20.0), within: 0.5))
+        #expect(cView.frame.beCloseTo(CGRect(x: 0.0, y: 253.0, width: 20.0, height: 20.0), within: 0.5))
+        #expect(dView.frame.beCloseTo(CGRect(x: 0.0, y: 380.0, width: 20.0, height: 20.0), within: 0.5))
     }
 
-    func test_justifyContent_adjust_view_position_spaceBetween_with_margin() {
+    @Test
+    func justifyContentAdjustViewPositionSpaceBetweenWithMargin() {
         rootFlexContainer.flex.justifyContent(.spaceBetween).define { flex in
             flex.addItem(aView).size(20).marginTop(10)
             flex.addItem(bView).size(20)
@@ -118,10 +124,10 @@ final class JustifyContentTests: XCTestCase, Sendable {
             flex.addItem(dView).size(20).marginBottom(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(bView.frame, CGRect(x: 0.0, y: 130.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(cView.frame, CGRect(x: 0.0, y: 250.0, width: 20.0, height: 20.0))
-        XCTAssertEqual(dView.frame, CGRect(x: 0.0, y: 370.0, width: 20.0, height: 20.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 10.0, width: 20.0, height: 20.0))
+        #expect(bView.frame == CGRect(x: 0.0, y: 130.0, width: 20.0, height: 20.0))
+        #expect(cView.frame == CGRect(x: 0.0, y: 250.0, width: 20.0, height: 20.0))
+        #expect(dView.frame == CGRect(x: 0.0, y: 370.0, width: 20.0, height: 20.0))
     }
 }
 
