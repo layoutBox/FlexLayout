@@ -11,17 +11,17 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 import FlexLayout
-import XCTest
+import Testing
+import UIKit
 
 @MainActor
-final class InsetTests: XCTestCase, Sendable {
+struct InsetTests {
     
     var viewController: UIViewController!
     var rootFlexContainer: UIView!
     var aView: UIView!
     
-    override func setUp() async throws {
-        try await super.setUp()
+    init() {
         
         viewController = UIViewController()
         
@@ -32,64 +32,72 @@ final class InsetTests: XCTestCase, Sendable {
         aView = UIView()
     }
     
-    func test_adjust_the_aView_size_and_relative_position_with_left() {
+    @Test
+    func adjustTheAViewSizeAndRelativePositionWithLeft() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.relative).grow(1).left(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_relative_position_with_top() {
+    @Test
+    func adjustTheAViewSizeAndRelativePositionWithTop() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.relative).grow(1).top(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 10.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_relative_position_with_right() {
+    @Test
+    func adjustTheAViewSizeAndRelativePositionWithRight() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.relative).grow(1).right(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: -10.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: -10.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_relative_position_with_bottom() {
+    @Test
+    func adjustTheAViewSizeAndRelativePositionWithBottom() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.relative).grow(1).bottom(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: -10.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: -10.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_relative_position_with_horizontally() {
+    @Test
+    func adjustTheAViewSizeAndRelativePositionWithHorizontally() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.relative).grow(1).horizontally(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_relative_position_with_vertically() {
+    @Test
+    func adjustTheAViewSizeAndRelativePositionWithVertically() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.relative).grow(1).vertically(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 10.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 10.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_absolute_position_with_left_right() {
+    @Test
+    func adjustTheAViewSizeAbsolutePositionWithLeftRight() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.absolute).left(10).right(10).width(300).height(200)
         }
         
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 10.0, y: 0.0, width: 300.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 10.0, y: 0.0, width: 300.0, height: 200.0))
     }
     
-    func test_adjust_the_aView_size_absolute_position_with_right_and_reset_left_later() {
+    @Test
+    func adjustTheAViewSizeAbsolutePositionWithRightAndResetLeftLater() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.absolute).left(10).right(10).width(300).height(200)
         }
@@ -97,72 +105,80 @@ final class InsetTests: XCTestCase, Sendable {
         // Later reset the aspectRatio
         aView.flex.left(0)
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
     }
     
-    func test_adjust_the_aView_size_absolute_position_with_horizontally_vertically() {
+    @Test
+    func adjustTheAViewSizeAbsolutePositionWithHorizontallyVertically() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.absolute).horizontally(15).vertically(20)
         }
         
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 15.0, y: 20.0, width: 370.0, height: 360.0))
+        #expect(aView.frame == CGRect(x: 15.0, y: 20.0, width: 370.0, height: 360.0))
     }
     
-    func test_adjust_the_aView_size_absolute_position_with_all() {
+    @Test
+    func adjustTheAViewSizeAbsolutePositionWithAll() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.absolute).all(45)
         }
         
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 45.0, y: 45.0, width: 310.0, height: 310.0))
+        #expect(aView.frame == CGRect(x: 45.0, y: 45.0, width: 310.0, height: 310.0))
     }
     
-    func test_adjust_the_aView_size_and_relative_static_with_left() {
+    @Test
+    func adjustTheAViewSizeAndRelativeStaticWithLeft() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.static).grow(1).left(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_static_position_with_top() {
+    @Test
+    func adjustTheAViewSizeAndStaticPositionWithTop() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.static).grow(1).top(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_static_position_with_right() {
+    @Test
+    func adjustTheAViewSizeAndStaticPositionWithRight() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.static).grow(1).right(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_static_position_with_bottom() {
+    @Test
+    func adjustTheAViewSizeAndStaticPositionWithBottom() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.static).grow(1).bottom(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_static_position_with_horizontally() {
+    @Test
+    func adjustTheAViewSizeAndStaticPositionWithHorizontally() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.static).grow(1).horizontally(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
     
-    func test_adjust_the_aView_size_and_static_position_with_vertically() {
+    @Test
+    func adjustTheAViewSizeAndStaticPositionWithVertically() {
         rootFlexContainer.flex.define { flex in
             flex.addItem(aView).position(.static).grow(1).vertically(10)
         }
         rootFlexContainer.flex.layout()
-        XCTAssertEqual(aView.frame, CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
+        #expect(aView.frame == CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
     }
 }

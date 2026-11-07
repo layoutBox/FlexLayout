@@ -10,13 +10,15 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import XCTest
+import Testing
+import UIKit
 @testable import FlexLayout
 
 @MainActor
-final class FlexLayoutTests: XCTestCase {
+struct FlexLayoutTests {
 
-    func testRetainCycle() {
+    @Test
+    func flexDoesNotCreateRetainCycle() {
         weak var weakView: UIView? = nil
         _ = { _ in
             let strongView = UIView()
@@ -24,11 +26,12 @@ final class FlexLayoutTests: XCTestCase {
             weakView = strongView
         }(())
 
-        XCTAssertNil(weakView, "Creation of flex should not lead to retain cycle")
+        #expect(weakView == nil, "Creation of flex should not lead to retain cycle")
     }
   
     
-    func testRemoveViewDynamically() {
+    @Test
+    func removeViewDynamically() {
         let rootFlexContainer = UIView()
         rootFlexContainer.flex.addItem(UIView())
         rootFlexContainer.flex.define { _ in }
@@ -38,10 +41,11 @@ final class FlexLayoutTests: XCTestCase {
         rootFlexContainer.flex.markDirty()
         rootFlexContainer.flex.layout()
 
-        XCTAssertTrue(rootFlexContainer.subviews.isEmpty)
+        #expect(rootFlexContainer.subviews.isEmpty)
     }
 
-    func testLayoutPreservesNonFlexViewFrameAcrossLayouts() {
+    @Test
+    func layoutPreservesNonFlexViewFrameAcrossLayouts() {
         let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         let originalFrame = CGRect(x: 30, y: 40, width: 50, height: 60)
         let overlay = UIView(frame: originalFrame)
@@ -53,9 +57,9 @@ final class FlexLayoutTests: XCTestCase {
 
         container.flex.layout()
 
-        XCTAssertEqual(overlay.frame, originalFrame)
-        XCTAssertFalse(overlay.isFlexEnabled)
-        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 200, height: 20))
+        #expect(overlay.frame == originalFrame)
+        #expect(!overlay.isFlexEnabled)
+        #expect(flexView.frame == CGRect(x: 0, y: 0, width: 200, height: 20))
 
         let updatedFrame = CGRect(x: 45, y: 55, width: 65, height: 75)
         overlay.frame = updatedFrame
@@ -63,12 +67,13 @@ final class FlexLayoutTests: XCTestCase {
 
         container.flex.layout()
 
-        XCTAssertEqual(overlay.frame, updatedFrame)
-        XCTAssertFalse(overlay.isFlexEnabled)
-        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 300, height: 20))
+        #expect(overlay.frame == updatedFrame)
+        #expect(!overlay.isFlexEnabled)
+        #expect(flexView.frame == CGRect(x: 0, y: 0, width: 300, height: 20))
     }
 
-    func testLayoutPreservesNonFlexSubtreeFrames() {
+    @Test
+    func layoutPreservesNonFlexSubtreeFrames() {
         let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         container.flex.addItem().width(20).height(20)
 
@@ -82,12 +87,13 @@ final class FlexLayoutTests: XCTestCase {
 
         container.flex.layout()
 
-        XCTAssertEqual(overlay.frame, overlayFrame)
-        XCTAssertEqual(child.frame, childFrame)
-        XCTAssertFalse(overlay.isFlexEnabled)
+        #expect(overlay.frame == overlayFrame)
+        #expect(child.frame == childFrame)
+        #expect(!overlay.isFlexEnabled)
     }
 
-    func testLayoutUpdatesSubtreeWhenInclusionChanges() {
+    @Test
+    func layoutUpdatesSubtreeWhenInclusionChanges() {
         let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         let excludedFrame = CGRect(x: 30, y: 40, width: 50, height: 60)
         let excludedView = UIView(frame: excludedFrame)
@@ -100,28 +106,29 @@ final class FlexLayoutTests: XCTestCase {
 
         container.flex.layout()
 
-        XCTAssertEqual(excludedView.frame, excludedFrame)
-        XCTAssertEqual(child.frame, childFrame)
-        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 20, height: 20))
+        #expect(excludedView.frame == excludedFrame)
+        #expect(child.frame == childFrame)
+        #expect(flexView.frame == CGRect(x: 0, y: 0, width: 20, height: 20))
 
         excludedView.flex.isIncludedInLayout = true
         container.flex.layout()
 
-        XCTAssertEqual(excludedView.frame, CGRect(x: 0, y: 0, width: 100, height: 100))
-        XCTAssertEqual(child.frame, CGRect(x: 0, y: 0, width: 10, height: 10))
-        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 100, width: 20, height: 20))
+        #expect(excludedView.frame == CGRect(x: 0, y: 0, width: 100, height: 100))
+        #expect(child.frame == CGRect(x: 0, y: 0, width: 10, height: 10))
+        #expect(flexView.frame == CGRect(x: 0, y: 100, width: 20, height: 20))
 
         excludedView.flex.isIncludedInLayout = false
         excludedView.frame = excludedFrame
         child.frame = childFrame
         container.flex.layout()
 
-        XCTAssertEqual(excludedView.frame, excludedFrame)
-        XCTAssertEqual(child.frame, childFrame)
-        XCTAssertEqual(flexView.frame, CGRect(x: 0, y: 0, width: 20, height: 20))
+        #expect(excludedView.frame == excludedFrame)
+        #expect(child.frame == childFrame)
+        #expect(flexView.frame == CGRect(x: 0, y: 0, width: 20, height: 20))
     }
 
-    func testLayoutAppliesFramesToIncludedFlexDescendants() {
+    @Test
+    func layoutAppliesFramesToIncludedFlexDescendants() {
         let container = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         let nestedContainer = UIView()
         let child = UIView()
@@ -130,7 +137,7 @@ final class FlexLayoutTests: XCTestCase {
 
         container.flex.layout()
 
-        XCTAssertEqual(nestedContainer.frame, CGRect(x: 0, y: 0, width: 100, height: 100))
-        XCTAssertEqual(child.frame, CGRect(x: 10, y: 10, width: 20, height: 30))
+        #expect(nestedContainer.frame == CGRect(x: 0, y: 0, width: 100, height: 100))
+        #expect(child.frame == CGRect(x: 10, y: 10, width: 20, height: 30))
     }
 }
